@@ -1,0 +1,21 @@
+
+=== class ROLE
+
+[tabs]
+======
+Diff::
++
+include::ROLE.adoc[]
+
+Flat::
++
+include::ROLE-flat.adoc[]
+
+Props(diff)::
++
+include::ROLE-properties.adoc[]
+
+Props(flat)::
++
+include::ROLE-properties-flat.adoc[]
+======

@@ -1,0 +1,41 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|builtin  abstract  *class Ordered*
+
+h|*Description*
+2+a|Abstract parent of ordered types, which includes all numeric and temporal types.
+
+h|
+2+^h|*Feature Group "operators"*
+
+h| func
+|*less_than* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+  *alias* <
+
+a|Arithmetic value comparison. Returns True if current object is less than other.
+
+h| func
+|*less_than_or_equal* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+  *alias* <=, ≤
+
+a|True if current object is less than or equal to other.
+
+h| func
+|*greater_than* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+  *alias* >
+
+a|True if current object is greater than other.
+
+h| func
+|*greater_than_or_equal* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+  *alias* >=, ≥
+
+a|True if current object is greater than or equal to other.
+
+|===

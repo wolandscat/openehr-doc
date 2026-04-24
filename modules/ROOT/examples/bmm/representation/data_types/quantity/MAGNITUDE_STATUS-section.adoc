@@ -1,0 +1,21 @@
+
+=== enum MAGNITUDE_STATUS
+
+[tabs]
+======
+Diff::
++
+include::MAGNITUDE_STATUS.adoc[]
+
+Flat::
++
+include::MAGNITUDE_STATUS-flat.adoc[]
+
+Props(diff)::
++
+include::MAGNITUDE_STATUS-properties.adoc[]
+
+Props(flat)::
++
+include::MAGNITUDE_STATUS-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class FEEDER_AUDIT_DETAILS
+
+[tabs]
+======
+Diff::
++
+include::FEEDER_AUDIT_DETAILS.adoc[]
+
+Flat::
++
+include::FEEDER_AUDIT_DETAILS-flat.adoc[]
+
+Props(diff)::
++
+include::FEEDER_AUDIT_DETAILS-properties.adoc[]
+
+Props(flat)::
++
+include::FEEDER_AUDIT_DETAILS-properties-flat.adoc[]
+======

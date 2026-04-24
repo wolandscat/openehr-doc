@@ -1,0 +1,21 @@
+
+=== class ORGANISATION
+
+[tabs]
+======
+Diff::
++
+include::ORGANISATION.adoc[]
+
+Flat::
++
+include::ORGANISATION-flat.adoc[]
+
+Props(diff)::
++
+include::ORGANISATION-properties.adoc[]
+
+Props(flat)::
++
+include::ORGANISATION-properties-flat.adoc[]
+======

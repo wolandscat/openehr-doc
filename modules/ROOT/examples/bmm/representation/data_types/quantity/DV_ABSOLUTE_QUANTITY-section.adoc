@@ -1,0 +1,21 @@
+
+=== class DV_ABSOLUTE_QUANTITY
+
+[tabs]
+======
+Diff::
++
+include::DV_ABSOLUTE_QUANTITY.adoc[]
+
+Flat::
++
+include::DV_ABSOLUTE_QUANTITY-flat.adoc[]
+
+Props(diff)::
++
+include::DV_ABSOLUTE_QUANTITY-properties.adoc[]
+
+Props(flat)::
++
+include::DV_ABSOLUTE_QUANTITY-properties-flat.adoc[]
+======

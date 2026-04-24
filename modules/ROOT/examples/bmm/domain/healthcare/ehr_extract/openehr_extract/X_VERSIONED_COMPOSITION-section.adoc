@@ -1,0 +1,21 @@
+
+=== class X_VERSIONED_COMPOSITION
+
+[tabs]
+======
+Diff::
++
+include::X_VERSIONED_COMPOSITION.adoc[]
+
+Flat::
++
+include::X_VERSIONED_COMPOSITION-flat.adoc[]
+
+Props(diff)::
++
+include::X_VERSIONED_COMPOSITION-properties.adoc[]
+
+Props(flat)::
++
+include::X_VERSIONED_COMPOSITION-properties-flat.adoc[]
+======

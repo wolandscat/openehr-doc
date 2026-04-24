@@ -1,0 +1,21 @@
+
+=== class LOCATABLE_REF
+
+[tabs]
+======
+Diff::
++
+include::LOCATABLE_REF.adoc[]
+
+Flat::
++
+include::LOCATABLE_REF-flat.adoc[]
+
+Props(diff)::
++
+include::LOCATABLE_REF-properties.adoc[]
+
+Props(flat)::
++
+include::LOCATABLE_REF-properties-flat.adoc[]
+======

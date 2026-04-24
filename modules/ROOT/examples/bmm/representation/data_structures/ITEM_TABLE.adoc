@@ -1,0 +1,78 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class ITEM_TABLE*
+
+h|*Description*
+2+a|Logical relational database style table data structure, in which columns are named and ordered.
+Implemented using Cluster-per-row encoding.
+
+h|*Inherit*
+2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*rows*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]>
+a|Physical representation of the table as a list of CLUSTERs, each containing one row.
+
+h| func
+|*row_count* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Number of rows in the table.
+
+h| func
+|*column_count* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Return number of columns in the table.
+
+h| func
+|*row_names* : xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]>
+a|Return set of row names.
+
+h| func
+|*column_names* : xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]>
+a|Return set of column names.
+
+h| func
+|*ith_row* ( +
+i: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]): xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
+a|Return i-th row.
+
+h| func
+|*has_row_with_name* ( +
+a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a|Return True if there is a row with name = a_key.
+
+h| func
+|*has_column_with_name* ( +
+a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a|Return True if there is a column with name = a_key.
+
+h| func
+|*named_row* ( +
+a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
+a|Return row with name = a_key.
+
+h| func
+|*has_row_with_key* ( +
+keys: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a|Return True if there is a row with key keys.
+
+h| func
+|*row_with_key* ( +
+keys: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>): xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
+a|Return rows with particular keys.
+
+h| func
+|*element_at_cell_ij* ( +
+i: xref:representation:representation-builtin_types.adoc#_class_integer[Integer], +
+j: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]): xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]
+a|Return cell at a particular location.
+
+h| func
+|*as_hierarchy* : xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
+a|Generate a CEN EN13606-compatible hierarchy.
+
+|===

@@ -1,0 +1,21 @@
+
+=== class ITEM_SINGLE
+
+[tabs]
+======
+Diff::
++
+include::ITEM_SINGLE.adoc[]
+
+Flat::
++
+include::ITEM_SINGLE-flat.adoc[]
+
+Props(diff)::
++
+include::ITEM_SINGLE-properties.adoc[]
+
+Props(flat)::
++
+include::ITEM_SINGLE-properties-flat.adoc[]
+======

@@ -1,0 +1,64 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class ELEMENT*
+
+h|*Description*
+2+a|The leaf variant of ITEM, to which a DATA_VALUE instance is attached.
+
+h|*Inherit*
+2+|xref:representation:representation-data_structures.adoc#_class_item[ITEM]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*value*: xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
+a|Property representing leaf value object of ELEMENT.
+
+h|prop +
+  0..1
+|*null_flavour*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|Flavour of null value, e.g. unknown, no information, masked, not applicable.
+
+h|prop +
+  0..1
+|*null_reason*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+a|Optional specific reason for null value; if set, null_flavour must be set.
+
+h|prop +
+  
+|*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+a|Runtime name of this fragment, used to build runtime paths.
+
+h|prop +
+  0..1
+|*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
+a|Links to other archetyped structures.
+
+h|prop +
+  0..1
+|*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
+a|Audit trail from non-openEHR system of original commit of information.
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+h|prop +
+  0..1
+|*uid*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
+a|Optional globally unique object identifier for root points of archetyped structures.
+
+h|prop +
+  
+|*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Design-time archetype identifier of this node, used to build archetype paths.
+
+h|prop +
+  0..1
+|*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
+a|Details of archetyping used on this node.
+
+|===

@@ -1,0 +1,21 @@
+
+=== class List
+
+[tabs]
+======
+Diff::
++
+include::List.adoc[]
+
+Flat::
++
+include::List-flat.adoc[]
+
+Props(diff)::
++
+include::List-properties.adoc[]
+
+Props(flat)::
++
+include::List-properties-flat.adoc[]
+======

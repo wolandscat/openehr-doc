@@ -1,0 +1,21 @@
+
+=== class String
+
+[tabs]
+======
+Diff::
++
+include::String.adoc[]
+
+Flat::
++
+include::String-flat.adoc[]
+
+Props(diff)::
++
+include::String-properties.adoc[]
+
+Props(flat)::
++
+include::String-properties-flat.adoc[]
+======

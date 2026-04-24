@@ -1,0 +1,21 @@
+
+=== class ARCHETYPED
+
+[tabs]
+======
+Diff::
++
+include::ARCHETYPED.adoc[]
+
+Flat::
++
+include::ARCHETYPED-flat.adoc[]
+
+Props(diff)::
++
+include::ARCHETYPED-properties.adoc[]
+
+Props(flat)::
++
+include::ARCHETYPED-properties-flat.adoc[]
+======

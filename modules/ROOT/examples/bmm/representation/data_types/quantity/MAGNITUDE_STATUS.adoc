@@ -1,0 +1,36 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *enum MAGNITUDE_STATUS*
+
+h|*Description*
+2+a|Enumeration of magnitude status indicators: =, <, >, <=, >=.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*eq* = "="
+a|
+
+h|
+|*lt* = "<"
+a|
+
+h|
+|*gt* = ">"
+a|
+
+h|
+|*le* = "<="
+a|
+
+h|
+|*ge* = ">="
+a|
+
+|===

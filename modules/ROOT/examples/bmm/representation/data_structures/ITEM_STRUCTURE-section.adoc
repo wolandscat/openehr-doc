@@ -1,0 +1,21 @@
+
+=== class ITEM_STRUCTURE
+
+[tabs]
+======
+Diff::
++
+include::ITEM_STRUCTURE.adoc[]
+
+Flat::
++
+include::ITEM_STRUCTURE-flat.adoc[]
+
+Props(diff)::
++
+include::ITEM_STRUCTURE-properties.adoc[]
+
+Props(flat)::
++
+include::ITEM_STRUCTURE-properties-flat.adoc[]
+======

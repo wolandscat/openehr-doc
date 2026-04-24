@@ -1,0 +1,21 @@
+
+=== class ATTESTATION
+
+[tabs]
+======
+Diff::
++
+include::ATTESTATION.adoc[]
+
+Flat::
++
+include::ATTESTATION-flat.adoc[]
+
+Props(diff)::
++
+include::ATTESTATION-properties.adoc[]
+
+Props(flat)::
++
+include::ATTESTATION-properties-flat.adoc[]
+======

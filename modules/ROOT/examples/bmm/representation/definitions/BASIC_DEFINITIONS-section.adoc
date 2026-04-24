@@ -1,0 +1,21 @@
+
+=== class BASIC_DEFINITIONS
+
+[tabs]
+======
+Diff::
++
+include::BASIC_DEFINITIONS.adoc[]
+
+Flat::
++
+include::BASIC_DEFINITIONS-flat.adoc[]
+
+Props(diff)::
++
+include::BASIC_DEFINITIONS-properties.adoc[]
+
+Props(flat)::
++
+include::BASIC_DEFINITIONS-properties-flat.adoc[]
+======

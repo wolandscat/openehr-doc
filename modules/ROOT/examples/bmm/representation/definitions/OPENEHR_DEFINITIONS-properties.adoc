@@ -1,0 +1,16 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class OPENEHR_DEFINITIONS*
+
+h|*Description*
+2+a|Inheritance class to provide access to constants defined in other packages.
+
+h|*Inherit*
+2+|xref:representation:representation-definitions.adoc#_class_basic_definitions[BASIC_DEFINITIONS]
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+|===

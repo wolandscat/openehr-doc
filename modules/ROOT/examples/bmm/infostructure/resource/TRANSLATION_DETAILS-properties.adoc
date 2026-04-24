@@ -1,0 +1,44 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class TRANSLATION_DETAILS*
+
+h|*Description*
+2+a|Class providing details of a natural language translation of a resource.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*language*: xref:representation:representation-builtin_types.adoc#_class_terminology_code[Terminology_code]
+a|Language of the translation, encoded using ISO 639-1 language codes.
+
+h|prop +
+  
+|*author*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>
+a|Primary translator name and other demographic details.
+
+h|prop +
+  0..1
+|*accreditation*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Accreditation of primary translator or group, usually a national translator's
+registration or association membership id.
+
+h|prop +
+  0..1
+|*version_last_translated*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Version of this resource last time it was translated into this language.
+
+h|prop +
+  0..1
+|*other_contributors*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>
+a|Additional contributors to this translation.
+
+h|prop +
+  0..1
+|*other_details*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>
+a|Any other meta-data about this translation.
+
+|===

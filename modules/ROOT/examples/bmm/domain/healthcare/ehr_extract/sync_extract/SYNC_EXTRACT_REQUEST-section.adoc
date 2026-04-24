@@ -1,0 +1,21 @@
+
+=== class SYNC_EXTRACT_REQUEST
+
+[tabs]
+======
+Diff::
++
+include::SYNC_EXTRACT_REQUEST.adoc[]
+
+Flat::
++
+include::SYNC_EXTRACT_REQUEST-flat.adoc[]
+
+Props(diff)::
++
+include::SYNC_EXTRACT_REQUEST-properties.adoc[]
+
+Props(flat)::
++
+include::SYNC_EXTRACT_REQUEST-properties-flat.adoc[]
+======

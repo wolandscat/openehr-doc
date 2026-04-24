@@ -1,0 +1,21 @@
+
+=== class AUDIT_DETAILS
+
+[tabs]
+======
+Diff::
++
+include::AUDIT_DETAILS.adoc[]
+
+Flat::
++
+include::AUDIT_DETAILS-flat.adoc[]
+
+Props(diff)::
++
+include::AUDIT_DETAILS-properties.adoc[]
+
+Props(flat)::
++
+include::AUDIT_DETAILS-properties-flat.adoc[]
+======

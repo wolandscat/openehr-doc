@@ -1,0 +1,21 @@
+
+=== enum TEXT_FORMAT_TYPES
+
+[tabs]
+======
+Diff::
++
+include::TEXT_FORMAT_TYPES.adoc[]
+
+Flat::
++
+include::TEXT_FORMAT_TYPES-flat.adoc[]
+
+Props(diff)::
++
+include::TEXT_FORMAT_TYPES-properties.adoc[]
+
+Props(flat)::
++
+include::TEXT_FORMAT_TYPES-properties-flat.adoc[]
+======

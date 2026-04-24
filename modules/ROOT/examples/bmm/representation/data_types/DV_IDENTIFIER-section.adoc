@@ -1,0 +1,21 @@
+
+=== class DV_IDENTIFIER
+
+[tabs]
+======
+Diff::
++
+include::DV_IDENTIFIER.adoc[]
+
+Flat::
++
+include::DV_IDENTIFIER-flat.adoc[]
+
+Props(diff)::
++
+include::DV_IDENTIFIER-properties.adoc[]
+
+Props(flat)::
++
+include::DV_IDENTIFIER-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Double
+
+[tabs]
+======
+Diff::
++
+include::Double.adoc[]
+
+Flat::
++
+include::Double-flat.adoc[]
+
+Props(diff)::
++
+include::Double-properties.adoc[]
+
+Props(flat)::
++
+include::Double-properties-flat.adoc[]
+======

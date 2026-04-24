@@ -1,0 +1,21 @@
+
+=== class DV_BOOLEAN
+
+[tabs]
+======
+Diff::
++
+include::DV_BOOLEAN.adoc[]
+
+Flat::
++
+include::DV_BOOLEAN-flat.adoc[]
+
+Props(diff)::
++
+include::DV_BOOLEAN-properties.adoc[]
+
+Props(flat)::
++
+include::DV_BOOLEAN-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class ACTIVITY
+
+[tabs]
+======
+Diff::
++
+include::ACTIVITY.adoc[]
+
+Flat::
++
+include::ACTIVITY-flat.adoc[]
+
+Props(diff)::
++
+include::ACTIVITY-properties.adoc[]
+
+Props(flat)::
++
+include::ACTIVITY-properties-flat.adoc[]
+======

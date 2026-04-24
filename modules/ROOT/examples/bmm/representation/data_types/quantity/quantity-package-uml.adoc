@@ -1,0 +1,250 @@
+
+.quantity Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class DV_TIME_SPECIFICATION [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_time_specification]] {
+        .. access ..
+        value: DV_PARSABLE
+        calendar_alignment:String
+        event_alignment:String
+        institution_specified:Boolean
+}
+
+DATA_VALUE <|-[#gray]- DV_TIME_SPECIFICATION
+
+
+class DV_PROPORTION [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_proportion]] {
+        .. access ..
+        numerator: Real
+        denominator: Real
+        type: Integer
+        precision: Integer
+        magnitude:Real
+        is_integral:Boolean
+}
+
+DV_AMOUNT <|-[#gray]- DV_PROPORTION
+
+
+DV_PROPORTION *--> "0..1 normal_range" DV_INTERVAL
+
+DV_PROPORTION *--> "0..* other_reference_ranges" REFERENCE_RANGE
+
+class DV_COUNT [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_count]] {
+        .. access ..
+        magnitude: Integer64
+}
+
+DV_AMOUNT <|-[#gray]- DV_COUNT
+
+
+DV_COUNT *--> "0..1 normal_range" DV_INTERVAL
+
+DV_COUNT *--> "0..* other_reference_ranges" REFERENCE_RANGE
+
+class REFERENCE_RANGE<T> [[/splashlang-doc/latest/representation/representation-data_types.html#_class_reference_range]] {
+        .. access ..
+        meaning: DV_TEXT
+}
+
+REFERENCE_RANGE *--> "1 range" DV_INTERVAL
+
+abstract class DV_ORDERED [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_ordered]] {
+        .. access ..
+        normal_status: CODE_PHRASE
+        is_strictly_comparable_to(other: DV_ORDERED):Boolean
+        less_than(other: DV_ORDERED):Boolean
+        is_simple:Boolean
+        is_normal:Boolean
+}
+
+DATA_VALUE <|-[#gray]- DV_ORDERED
+
+
+Ordered <|-[#gray]- DV_ORDERED
+
+
+DV_ORDERED *--> "0..1 normal_range" DV_INTERVAL
+
+DV_ORDERED *--> "0..* other_reference_ranges" REFERENCE_RANGE
+
+class DV_PERIODIC_TIME_SPECIFICATION [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_periodic_time_specification]] {
+        .. access ..
+        period:DV_DURATION
+        calendar_alignment:String
+        event_alignment:String
+        institution_specified:Boolean
+}
+
+DV_TIME_SPECIFICATION <|-[#gray]- DV_PERIODIC_TIME_SPECIFICATION
+
+
+abstract class DV_QUANTIFIED [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_quantified]] {
+        .. access ..
+        magnitude_status: String
+        accuracy: Any
+        magnitude:Ordered_Numeric
+        accuracy_unknown:Boolean
+}
+
+DV_ORDERED <|-[#gray]- DV_QUANTIFIED
+
+
+class DV_SCALE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_scale]] {
+        .. access ..
+        symbol: DV_CODED_TEXT
+        value: Real
+        is_strictly_comparable_to(other: DV_SCALE):Boolean
+}
+
+DV_ORDERED <|-[#gray]- DV_SCALE
+
+
+class DV_INTERVAL<T:DV_ORDERED> [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_interval]] {
+}
+
+DATA_VALUE <|-[#gray]- DV_INTERVAL
+
+
+Interval <|-[#gray]- DV_INTERVAL
+
+
+abstract class DV_AMOUNT [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_amount]] {
+        .. access ..
+        accuracy: Real
+        accuracy_is_percent: Boolean
+}
+
+DV_QUANTIFIED <|-[#gray]- DV_AMOUNT
+
+
+class DV_DURATION [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_duration]] {
+        .. access ..
+        value: String
+        magnitude:Double
+        add(other: DV_DURATION):DV_DURATION
+        subtract(other: DV_DURATION):DV_DURATION
+        multiply(factor: Real):DV_DURATION
+        negative:DV_DURATION
+}
+
+DV_AMOUNT <|-[#gray]- DV_DURATION
+
+
+enum MAGNITUDE_STATUS [[/splashlang-doc/latest/representation/representation-data_types.html#_class_magnitude_status]] {
+        .. values ..
+        eq = "="
+        lt = "<"
+        gt = ">"
+        le = "<="
+        ge = ">="
+}
+
+class DV_DATE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_date]] {
+        .. access ..
+        value: String
+        magnitude:Integer
+        add(a_diff: DV_DURATION):DV_DATE
+        subtract(a_diff: DV_DURATION):DV_DATE
+        diff(other: DV_DATE):DV_DURATION
+}
+
+DV_TEMPORAL <|-[#gray]- DV_DATE
+
+
+class DV_DATE_TIME [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_date_time]] {
+        .. access ..
+        value: String
+        magnitude:Double
+        add(a_diff: DV_DURATION):DV_DATE_TIME
+        subtract(a_diff: DV_DURATION):DV_DATE_TIME
+        diff(other: DV_DATE_TIME):DV_DURATION
+}
+
+DV_TEMPORAL <|-[#gray]- DV_DATE_TIME
+
+
+abstract class DV_ABSOLUTE_QUANTITY [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_absolute_quantity]] {
+        .. access ..
+}
+
+DV_QUANTIFIED <|-[#gray]- DV_ABSOLUTE_QUANTITY
+
+
+DV_ABSOLUTE_QUANTITY *--> "0..1 accuracy" DV_AMOUNT
+
+class DV_GENERAL_TIME_SPECIFICATION [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_general_time_specification]] {
+        .. access ..
+        calendar_alignment:String
+        event_alignment:String
+        institution_specified:Boolean
+}
+
+DV_TIME_SPECIFICATION <|-[#gray]- DV_GENERAL_TIME_SPECIFICATION
+
+
+class DV_QUANTITY [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_quantity]] {
+        .. access ..
+        magnitude: Real
+        units: String
+        precision: Integer
+        units_system: String
+        units_display_name: String
+        is_integral:Boolean
+}
+
+DV_AMOUNT <|-[#gray]- DV_QUANTITY
+
+
+DV_QUANTITY *--> "0..1 normal_range" DV_INTERVAL
+
+DV_QUANTITY *--> "0..* other_reference_ranges" REFERENCE_RANGE
+
+enum PROPORTION_KIND [[/splashlang-doc/latest/representation/representation-data_types.html#_class_proportion_kind]] {
+        .. values ..
+        pk_ratio = 0
+        pk_unitary = 1
+        pk_percent = 2
+        pk_fraction = 3
+        pk_integer_fraction = 4
+}
+
+abstract class DV_TEMPORAL [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_temporal]] {
+        .. access ..
+}
+
+DV_ABSOLUTE_QUANTITY <|-[#gray]- DV_TEMPORAL
+
+
+DV_TEMPORAL *--> "0..1 accuracy" DV_DURATION
+
+class DV_ORDINAL [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_ordinal]] {
+        .. access ..
+        value: Integer
+        symbol: DV_CODED_TEXT
+}
+
+DV_ORDERED <|-[#gray]- DV_ORDINAL
+
+
+class DV_TIME [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_time]] {
+        .. access ..
+        value: String
+        magnitude:Real
+        add(a_diff: DV_DURATION):DV_TIME
+        subtract(a_diff: DV_DURATION):DV_TIME
+        diff(other: DV_TIME):DV_DURATION
+}
+
+DV_TEMPORAL <|-[#gray]- DV_TIME
+
+abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] #FDFDFD {
+}
+abstract class "representation.builtin_types.interval.\nInterval" as Interval  [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_interval]] #FDFDFD {
+}
+
+....

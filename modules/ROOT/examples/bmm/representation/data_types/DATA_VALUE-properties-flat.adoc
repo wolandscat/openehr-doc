@@ -1,0 +1,10 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h| abstract  *class DATA_VALUE*
+
+h|*Description*
+2+a|Abstract parent of all DV_ data value types.
+
+|===

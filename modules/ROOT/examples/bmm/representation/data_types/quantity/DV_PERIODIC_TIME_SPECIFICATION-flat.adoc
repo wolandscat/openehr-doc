@@ -1,0 +1,38 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class DV_PERIODIC_TIME_SPECIFICATION*
+
+h|*Description*
+2+a|Specifies periodic points in time, linked to the calendar or a real world repeating event such
+as breakfast. Based on HL7v3 PIVL<T> and EIVL<T>.
+
+h|*Inherit*
+2+|xref:representation:representation-data_types.adoc#_class_dv_time_specification[DV_TIME_SPECIFICATION]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*period* : xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+a|The period of the repetition, computationally derived from the syntax representation.
+
+h| func
+|*calendar_alignment* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Calendar alignment extracted from value.
+
+h| func
+|*event_alignment* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Event alignment extracted from value.
+
+h| func
+|*institution_specified* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a|Extracted from value.
+
+h|prop +
+  
+|*value*: xref:representation:representation-data_types.adoc#_class_dv_parsable[DV_PARSABLE]
+a|The specification, in the HL7v3 syntax for PIVL or EIVL types.
+
+|===

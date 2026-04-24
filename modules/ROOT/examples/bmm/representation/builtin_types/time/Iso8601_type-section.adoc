@@ -1,0 +1,21 @@
+
+=== class Iso8601_type
+
+[tabs]
+======
+Diff::
++
+include::Iso8601_type.adoc[]
+
+Flat::
++
+include::Iso8601_type-flat.adoc[]
+
+Props(diff)::
++
+include::Iso8601_type-properties.adoc[]
+
+Props(flat)::
++
+include::Iso8601_type-properties-flat.adoc[]
+======

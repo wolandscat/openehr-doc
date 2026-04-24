@@ -1,0 +1,38 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class EXTRACT_PARTICIPATION*
+
+h|*Description*
+2+a|Model of a participation of a Party in an activity within an Extract. Used to
+represent any participation of a Party in some activity, which is not explicitly in
+the model. Should not be used in place of permanent relationships between demographic
+entities.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*time*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]>
+a|The time interval during which the participation took place, or the intended time
+interval when used in future contexts.
+
+h|prop +
+  
+|*function*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+a|The function of the Party in this participation.
+
+h|prop +
+  0..1
+|*mode*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|The mode of the performer / activity interaction, e.g. present, by telephone,
+by email.
+
+h|prop +
+  
+|*performer*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|UID of demographic entity within Extract who performed this participation.
+
+|===

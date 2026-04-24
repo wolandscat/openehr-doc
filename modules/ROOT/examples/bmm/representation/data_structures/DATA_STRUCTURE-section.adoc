@@ -1,0 +1,21 @@
+
+=== class DATA_STRUCTURE
+
+[tabs]
+======
+Diff::
++
+include::DATA_STRUCTURE.adoc[]
+
+Flat::
++
+include::DATA_STRUCTURE-flat.adoc[]
+
+Props(diff)::
++
+include::DATA_STRUCTURE-properties.adoc[]
+
+Props(flat)::
++
+include::DATA_STRUCTURE-properties-flat.adoc[]
+======

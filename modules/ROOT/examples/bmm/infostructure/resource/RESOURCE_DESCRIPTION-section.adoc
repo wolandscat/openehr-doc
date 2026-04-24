@@ -1,0 +1,21 @@
+
+=== class RESOURCE_DESCRIPTION
+
+[tabs]
+======
+Diff::
++
+include::RESOURCE_DESCRIPTION.adoc[]
+
+Flat::
++
+include::RESOURCE_DESCRIPTION-flat.adoc[]
+
+Props(diff)::
++
+include::RESOURCE_DESCRIPTION-properties.adoc[]
+
+Props(flat)::
++
+include::RESOURCE_DESCRIPTION-properties-flat.adoc[]
+======

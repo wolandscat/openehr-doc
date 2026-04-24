@@ -1,0 +1,12 @@
+
+.builtin_types Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class Any [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_any]] {
+}
+
+....

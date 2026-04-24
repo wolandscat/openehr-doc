@@ -1,0 +1,21 @@
+
+=== class OBJECT_REF
+
+[tabs]
+======
+Diff::
++
+include::OBJECT_REF.adoc[]
+
+Flat::
++
+include::OBJECT_REF-flat.adoc[]
+
+Props(diff)::
++
+include::OBJECT_REF-properties.adoc[]
+
+Props(flat)::
++
+include::OBJECT_REF-properties-flat.adoc[]
+======

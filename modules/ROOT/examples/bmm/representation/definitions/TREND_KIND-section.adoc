@@ -1,0 +1,21 @@
+
+=== enum TREND_KIND
+
+[tabs]
+======
+Diff::
++
+include::TREND_KIND.adoc[]
+
+Flat::
++
+include::TREND_KIND-flat.adoc[]
+
+Props(diff)::
++
+include::TREND_KIND-properties.adoc[]
+
+Props(flat)::
++
+include::TREND_KIND-properties-flat.adoc[]
+======

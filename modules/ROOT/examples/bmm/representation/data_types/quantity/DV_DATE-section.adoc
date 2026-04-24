@@ -1,0 +1,21 @@
+
+=== class DV_DATE
+
+[tabs]
+======
+Diff::
++
+include::DV_DATE.adoc[]
+
+Flat::
++
+include::DV_DATE-flat.adoc[]
+
+Props(diff)::
++
+include::DV_DATE-properties.adoc[]
+
+Props(flat)::
++
+include::DV_DATE-properties-flat.adoc[]
+======

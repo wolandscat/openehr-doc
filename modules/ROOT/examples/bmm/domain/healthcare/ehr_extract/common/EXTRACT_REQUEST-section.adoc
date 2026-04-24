@@ -1,0 +1,21 @@
+
+=== class EXTRACT_REQUEST
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_REQUEST.adoc[]
+
+Flat::
++
+include::EXTRACT_REQUEST-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_REQUEST-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_REQUEST-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Character
+
+[tabs]
+======
+Diff::
++
+include::Character.adoc[]
+
+Flat::
++
+include::Character-flat.adoc[]
+
+Props(diff)::
++
+include::Character-properties.adoc[]
+
+Props(flat)::
++
+include::Character-properties-flat.adoc[]
+======

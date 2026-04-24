@@ -1,0 +1,21 @@
+
+=== class PATHABLE
+
+[tabs]
+======
+Diff::
++
+include::PATHABLE.adoc[]
+
+Flat::
++
+include::PATHABLE-flat.adoc[]
+
+Props(diff)::
++
+include::PATHABLE-properties.adoc[]
+
+Props(flat)::
++
+include::PATHABLE-properties-flat.adoc[]
+======

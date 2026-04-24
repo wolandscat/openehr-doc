@@ -1,0 +1,21 @@
+
+=== class Iso8601_duration
+
+[tabs]
+======
+Diff::
++
+include::Iso8601_duration.adoc[]
+
+Flat::
++
+include::Iso8601_duration-flat.adoc[]
+
+Props(diff)::
++
+include::Iso8601_duration-properties.adoc[]
+
+Props(flat)::
++
+include::Iso8601_duration-properties-flat.adoc[]
+======

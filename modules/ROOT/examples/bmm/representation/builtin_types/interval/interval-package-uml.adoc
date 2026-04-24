@@ -1,0 +1,57 @@
+
+.interval Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class Proper_Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_proper_interval]] {
+}
+
+Interval <|-[#gray]- Proper_Interval
+
+
+class Multiplicity_Interval [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_multiplicity_interval]] {
+        .. access ..
+        is_open:Boolean
+        is_optional:Boolean
+        is_mandatory:Boolean
+        is_prohibited:Boolean
+}
+
+Proper_Interval <|-[#gray]- Multiplicity_Interval
+
+
+class Cardinality [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_cardinality]] {
+        .. access ..
+        is_ordered: Boolean
+        is_unique: Boolean
+        is_bag:Boolean
+        is_list:Boolean
+        is_set:Boolean
+}
+
+Cardinality *--> "1 interval" Multiplicity_Interval
+
+class Point_Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_point_interval]] {
+}
+
+Interval <|-[#gray]- Point_Interval
+
+
+abstract class Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_interval]] {
+        .. access ..
+        lower: T
+        upper: T
+        lower_unbounded: Boolean
+        upper_unbounded: Boolean
+        lower_included: Boolean
+        upper_included: Boolean
+        has:Boolean
+        intersects:Boolean
+        contains:Boolean
+}
+
+
+....

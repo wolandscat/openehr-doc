@@ -1,0 +1,21 @@
+
+=== class LINK
+
+[tabs]
+======
+Diff::
++
+include::LINK.adoc[]
+
+Flat::
++
+include::LINK-flat.adoc[]
+
+Props(diff)::
++
+include::LINK-properties.adoc[]
+
+Props(flat)::
++
+include::LINK-properties-flat.adoc[]
+======

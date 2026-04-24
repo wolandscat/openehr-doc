@@ -1,0 +1,21 @@
+
+=== enum VERSION_STATUS
+
+[tabs]
+======
+Diff::
++
+include::VERSION_STATUS.adoc[]
+
+Flat::
++
+include::VERSION_STATUS-flat.adoc[]
+
+Props(diff)::
++
+include::VERSION_STATUS-properties.adoc[]
+
+Props(flat)::
++
+include::VERSION_STATUS-properties-flat.adoc[]
+======

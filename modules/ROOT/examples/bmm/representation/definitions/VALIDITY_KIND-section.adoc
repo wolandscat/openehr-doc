@@ -1,0 +1,21 @@
+
+=== enum VALIDITY_KIND
+
+[tabs]
+======
+Diff::
++
+include::VALIDITY_KIND.adoc[]
+
+Flat::
++
+include::VALIDITY_KIND-flat.adoc[]
+
+Props(diff)::
++
+include::VALIDITY_KIND-properties.adoc[]
+
+Props(flat)::
++
+include::VALIDITY_KIND-properties-flat.adoc[]
+======

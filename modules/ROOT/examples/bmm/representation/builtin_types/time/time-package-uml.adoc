@@ -1,0 +1,103 @@
+
+.time Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class Iso8601_timezone [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_timezone]] {
+        .. access ..
+        hour:Integer
+        minute:Integer
+        sign:Integer
+        minute_unknown:Boolean
+        is_gmt:Boolean
+        as_string:String
+}
+
+Iso8601_type <|-[#gray]- Iso8601_timezone
+
+
+class Iso8601_date [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_date]] {
+        .. access ..
+        year:Integer
+        month:Integer
+        day:Integer
+        timezone:Iso8601_timezone
+        month_unknown:Boolean
+        day_unknown:Boolean
+        as_string:String
+}
+
+Iso8601_type <|-[#gray]- Iso8601_date
+
+
+abstract class Temporal [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_temporal]] {
+}
+
+Ordered <|-[#gray]- Temporal
+
+
+class Iso8601_time [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_time]] {
+        .. access ..
+        hour:Integer
+        minute:Integer
+        second:Integer
+        fractional_second:Real
+        timezone:Iso8601_timezone
+        minute_unknown:Boolean
+        second_unknown:Boolean
+        as_string:String
+}
+
+Iso8601_type <|-[#gray]- Iso8601_time
+
+
+class Iso8601_duration [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_duration]] {
+        .. access ..
+        years:Integer
+        months:Integer
+        weeks:Integer
+        days:Integer
+        hours:Integer
+        minutes:Integer
+        seconds:Integer
+        fractional_seconds:Real
+        to_seconds:Real
+        as_string:String
+}
+
+Iso8601_type <|-[#gray]- Iso8601_duration
+
+
+abstract class Iso8601_type [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_type]] {
+        .. access ..
+        value: String
+        is_partial:Boolean
+        is_extended:Boolean
+}
+
+Temporal <|-[#gray]- Iso8601_type
+
+
+Time_Definitions <|-[#gray]- Iso8601_type
+
+
+class Iso8601_date_time [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_date_time]] {
+        .. access ..
+        year:Integer
+        month:Integer
+        day:Integer
+        hour:Integer
+        minute:Integer
+        second:Integer
+        fractional_second:Real
+        timezone:Iso8601_timezone
+        as_string:String
+}
+
+Iso8601_type <|-[#gray]- Iso8601_date_time
+
+
+....

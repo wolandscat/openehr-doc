@@ -1,0 +1,14 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h| abstract  *class PATHABLE*
+
+h|*Description*
+2+a|Defines the pathing capabilities used by nearly all classes in the openEHR reference model.
+PATHABLE objects can locate child objects using paths and know their parent object.
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+|===

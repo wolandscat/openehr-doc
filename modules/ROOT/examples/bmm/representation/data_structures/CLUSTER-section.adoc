@@ -1,0 +1,21 @@
+
+=== class CLUSTER
+
+[tabs]
+======
+Diff::
++
+include::CLUSTER.adoc[]
+
+Flat::
++
+include::CLUSTER-flat.adoc[]
+
+Props(diff)::
++
+include::CLUSTER-properties.adoc[]
+
+Props(flat)::
++
+include::CLUSTER-properties-flat.adoc[]
+======

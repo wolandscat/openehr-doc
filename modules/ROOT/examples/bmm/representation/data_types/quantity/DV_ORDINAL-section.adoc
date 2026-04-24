@@ -1,0 +1,21 @@
+
+=== class DV_ORDINAL
+
+[tabs]
+======
+Diff::
++
+include::DV_ORDINAL.adoc[]
+
+Flat::
++
+include::DV_ORDINAL-flat.adoc[]
+
+Props(diff)::
++
+include::DV_ORDINAL-properties.adoc[]
+
+Props(flat)::
++
+include::DV_ORDINAL-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class REFERENCE_RANGE
+
+[tabs]
+======
+Diff::
++
+include::REFERENCE_RANGE.adoc[]
+
+Flat::
++
+include::REFERENCE_RANGE-flat.adoc[]
+
+Props(diff)::
++
+include::REFERENCE_RANGE-properties.adoc[]
+
+Props(flat)::
++
+include::REFERENCE_RANGE-properties-flat.adoc[]
+======

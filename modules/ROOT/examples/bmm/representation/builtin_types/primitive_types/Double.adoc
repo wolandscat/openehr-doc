@@ -1,0 +1,72 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|builtin   *class Double*
+
+h|*Description*
+2+a|Type used to represent double-precision decimal numbers. Corresponds to a
+double-precision floating point value in most languages.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_ordered_numeric[Ordered_Numeric]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*floor* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|The greatest integer no greater than the value of this object.
+
+h|
+2+^h|*Feature Group "operators"*
+
+h| func
+|*add* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* +
+
+a|Double-precision addition.
+
+h| func
+|*subtract* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* -
+
+a|Double-precision subtraction.
+
+h| func
+|*multiply* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* *
+
+a|Double-precision multiplication.
+
+h| func
+|*divide* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* /
+
+a|Double-precision division.
+
+h| func
+|*exponent* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* ^
+
+a|Double-precision exponentiation.
+
+h| func
+|*less_than* ( +
+other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+  *alias* <
+
+a|Returns True if current Double is less than other.
+
+h| func
+|*negative* : xref:representation:representation-builtin_types.adoc#_class_double[Double] +
+  *alias* -
+
+a|Unary negation of current Double value.
+
+|===

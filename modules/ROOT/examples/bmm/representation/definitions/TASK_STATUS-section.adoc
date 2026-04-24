@@ -1,0 +1,21 @@
+
+=== enum TASK_STATUS
+
+[tabs]
+======
+Diff::
++
+include::TASK_STATUS.adoc[]
+
+Flat::
++
+include::TASK_STATUS-flat.adoc[]
+
+Props(diff)::
++
+include::TASK_STATUS-properties.adoc[]
+
+Props(flat)::
++
+include::TASK_STATUS-properties-flat.adoc[]
+======

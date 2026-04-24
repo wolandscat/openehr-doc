@@ -1,0 +1,21 @@
+
+=== class ORIGINAL_VERSION
+
+[tabs]
+======
+Diff::
++
+include::ORIGINAL_VERSION.adoc[]
+
+Flat::
++
+include::ORIGINAL_VERSION-flat.adoc[]
+
+Props(diff)::
++
+include::ORIGINAL_VERSION-properties.adoc[]
+
+Props(flat)::
++
+include::ORIGINAL_VERSION-properties-flat.adoc[]
+======

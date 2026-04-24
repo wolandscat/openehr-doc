@@ -1,0 +1,21 @@
+
+=== class DV_EHR_URI
+
+[tabs]
+======
+Diff::
++
+include::DV_EHR_URI.adoc[]
+
+Flat::
++
+include::DV_EHR_URI-flat.adoc[]
+
+Props(diff)::
++
+include::DV_EHR_URI-properties.adoc[]
+
+Props(flat)::
++
+include::DV_EHR_URI-properties-flat.adoc[]
+======

@@ -1,0 +1,58 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class SECTION*
+
+h|*Description*
+2+a|Represents a heading in a heading structure, or section tree. Created according to
+archetyped structures for typical headings such as SOAP, physical examination, but
+also pathology result heading structures. Should not be used instead of ENTRY
+hierarchical structures.
+
+h|*Inherit*
+2+|xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]>
+a|Ordered list of content items under this section, which may include more SECTIONs
+or ENTRYs.
+
+h|prop +
+  
+|*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+a|Runtime name of this fragment, used to build runtime paths.
+
+h|prop +
+  0..1
+|*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
+a|Links to other archetyped structures.
+
+h|prop +
+  0..1
+|*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
+a|Audit trail from non-openEHR system of original commit of information.
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+h|prop +
+  0..1
+|*uid*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
+a|Optional globally unique object identifier for root points of archetyped structures.
+
+h|prop +
+  
+|*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Design-time archetype identifier of this node, used to build archetype paths.
+
+h|prop +
+  0..1
+|*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
+a|Details of archetyping used on this node.
+
+|===

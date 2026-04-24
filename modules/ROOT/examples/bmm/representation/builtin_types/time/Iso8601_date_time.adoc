@@ -1,0 +1,53 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class Iso8601_date_time*
+
+h|*Description*
+2+a|Represents an ISO 8601 date/time, including partial and extended forms. Value may
+be YYYY-MM-DDThh:mm:ss (extended, preferred) or compact, or partial variants.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*year* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the year part of the date/time as an Integer.
+
+h| func
+|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the month part of the date/time as an Integer, or return 0 if not present.
+
+h| func
+|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the day part of the date/time as an Integer, or return 0 if not present.
+
+h| func
+|*hour* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the hour part of the date/time as an Integer, or return 0 if not present.
+
+h| func
+|*minute* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the minute part of the date/time as an Integer, or return 0 if not present.
+
+h| func
+|*second* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Extract the integral seconds part of the date/time as an Integer, or return 0.
+
+h| func
+|*fractional_second* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+a|Extract the fractional seconds part of the date/time as a Real.
+
+h| func
+|*timezone* : xref:representation:representation-builtin_types.adoc#_class_iso8601_timezone[Iso8601_timezone]
+a|Timezone; may be Void.
+
+h| func
+|*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Return string value in extended format.
+
+|===

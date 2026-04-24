@@ -1,0 +1,21 @@
+
+=== class IMPORTED_VERSION
+
+[tabs]
+======
+Diff::
++
+include::IMPORTED_VERSION.adoc[]
+
+Flat::
++
+include::IMPORTED_VERSION-flat.adoc[]
+
+Props(diff)::
++
+include::IMPORTED_VERSION-properties.adoc[]
+
+Props(flat)::
++
+include::IMPORTED_VERSION-properties-flat.adoc[]
+======

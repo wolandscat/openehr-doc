@@ -1,0 +1,21 @@
+
+=== class Set
+
+[tabs]
+======
+Diff::
++
+include::Set.adoc[]
+
+Flat::
++
+include::Set-flat.adoc[]
+
+Props(diff)::
++
+include::Set-properties.adoc[]
+
+Props(flat)::
++
+include::Set-properties-flat.adoc[]
+======

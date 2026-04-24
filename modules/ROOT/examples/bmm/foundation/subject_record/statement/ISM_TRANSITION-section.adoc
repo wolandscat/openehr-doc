@@ -1,0 +1,21 @@
+
+=== class ISM_TRANSITION
+
+[tabs]
+======
+Diff::
++
+include::ISM_TRANSITION.adoc[]
+
+Flat::
++
+include::ISM_TRANSITION-flat.adoc[]
+
+Props(diff)::
++
+include::ISM_TRANSITION-properties.adoc[]
+
+Props(flat)::
++
+include::ISM_TRANSITION-properties-flat.adoc[]
+======

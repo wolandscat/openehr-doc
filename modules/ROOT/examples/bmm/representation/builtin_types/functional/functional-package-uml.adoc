@@ -1,0 +1,39 @@
+
+.functional Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class TUPLE2<A:Any,B:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple2]] {
+}
+
+TUPLE <|-[#gray]- TUPLE2
+
+
+class TUPLE [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple]] {
+}
+
+class ROUTINE<V:TUPLE> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_routine]] {
+}
+
+class FUNCTION<V:TUPLE,R:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_function]] {
+}
+
+ROUTINE <|-[#gray]- FUNCTION
+
+
+class PROCEDURE<V:TUPLE> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_procedure]] {
+}
+
+ROUTINE <|-[#gray]- PROCEDURE
+
+
+class TUPLE1<A:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple1]] {
+}
+
+TUPLE <|-[#gray]- TUPLE1
+
+
+....

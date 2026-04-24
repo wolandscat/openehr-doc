@@ -1,0 +1,56 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *enum MATH_FUNCTION_KIND*
+
+h|*Description*
+2+a|Enumeration of mathematical functions applicable to interval event data, e.g. maximum, mean, total.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*actual* = "actual"
+a|
+
+h|
+|*minimum* = "minimum"
+a|
+
+h|
+|*maximum* = "maximum"
+a|
+
+h|
+|*mean* = "mean"
+a|
+
+h|
+|*mode* = "mode"
+a|
+
+h|
+|*median* = "median"
+a|
+
+h|
+|*increase* = "increase"
+a|
+
+h|
+|*decrease* = "decrease"
+a|
+
+h|
+|*change* = "change"
+a|
+
+h|
+|*total* = "total"
+a|
+
+|===

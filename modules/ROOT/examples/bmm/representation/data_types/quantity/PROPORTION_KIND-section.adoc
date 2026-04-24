@@ -1,0 +1,21 @@
+
+=== enum PROPORTION_KIND
+
+[tabs]
+======
+Diff::
++
+include::PROPORTION_KIND.adoc[]
+
+Flat::
++
+include::PROPORTION_KIND-flat.adoc[]
+
+Props(diff)::
++
+include::PROPORTION_KIND-properties.adoc[]
+
+Props(flat)::
++
+include::PROPORTION_KIND-properties-flat.adoc[]
+======

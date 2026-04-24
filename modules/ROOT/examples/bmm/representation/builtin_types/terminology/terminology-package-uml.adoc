@@ -1,0 +1,26 @@
+
+.terminology Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class Terminology_term [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_terminology_term]] {
+        .. access ..
+        text: String
+}
+
+
+Terminology_term *--> "1 concept" Terminology_code
+
+class Terminology_code [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_terminology_code]] {
+        .. access ..
+        terminology_id: String
+        terminology_version: String
+        code_string: String
+        uri: Uri
+}
+
+
+....

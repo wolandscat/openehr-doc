@@ -1,0 +1,21 @@
+
+=== class TERMINOLOGY_ID
+
+[tabs]
+======
+Diff::
++
+include::TERMINOLOGY_ID.adoc[]
+
+Flat::
++
+include::TERMINOLOGY_ID-flat.adoc[]
+
+Props(diff)::
++
+include::TERMINOLOGY_ID-properties.adoc[]
+
+Props(flat)::
++
+include::TERMINOLOGY_ID-properties-flat.adoc[]
+======

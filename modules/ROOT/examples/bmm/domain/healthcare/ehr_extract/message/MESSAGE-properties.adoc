@@ -1,0 +1,36 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class MESSAGE*
+
+h|*Description*
+2+a|An authored, possibly signed, piece of content intended for one or more recipients.
+Since the recipient may or may not be known directly, recipients are specified in
+the ADDRESSED_MESSAGE class.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*author*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+a|Party responsible for the message content, who may or may not be technically
+responsible for its creation.
+
+h|prop +
+  
+|*audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
+a|Details of who actually created the message and when.
+
+h|prop +
+  
+|*content*: xref:domain:domain-healthcare-ehr_extract.adoc#_class_message_content[MESSAGE_CONTENT]
+a|Content of the message.
+
+h|prop +
+  0..1
+|*signature*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Optional signature by the author of message content in openPGP format.
+
+|===

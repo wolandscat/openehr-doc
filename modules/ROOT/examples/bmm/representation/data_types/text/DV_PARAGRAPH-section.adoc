@@ -1,0 +1,21 @@
+
+=== class DV_PARAGRAPH
+
+[tabs]
+======
+Diff::
++
+include::DV_PARAGRAPH.adoc[]
+
+Flat::
++
+include::DV_PARAGRAPH-flat.adoc[]
+
+Props(diff)::
++
+include::DV_PARAGRAPH-properties.adoc[]
+
+Props(flat)::
++
+include::DV_PARAGRAPH-properties-flat.adoc[]
+======

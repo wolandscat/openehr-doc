@@ -1,0 +1,21 @@
+
+=== class CARE_ENTRY
+
+[tabs]
+======
+Diff::
++
+include::CARE_ENTRY.adoc[]
+
+Flat::
++
+include::CARE_ENTRY-flat.adoc[]
+
+Props(diff)::
++
+include::CARE_ENTRY-properties.adoc[]
+
+Props(flat)::
++
+include::CARE_ENTRY-properties-flat.adoc[]
+======

@@ -1,0 +1,75 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class HISTORY<T:ITEM_STRUCTURE>*
+
+h|*Description*
+2+a|Root object of a linear history, i.e. time series structure. Generic class whose type parameter
+must be a descendant of ITEM_STRUCTURE.
+
+h|*Inherit*
+2+|xref:representation:representation-data_structures.adoc#_class_data_structure[DATA_STRUCTURE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*origin*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
+a|Time origin of this event history.
+
+h|prop +
+  0..1
+|*period*: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+a|Period between samples in this segment if periodic.
+
+h|prop +
+  0..1
+|*duration*: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+a|Duration of the entire History.
+
+h|prop +
+  0..1
+|*summary*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+a|Optional summary data that aggregates, organizes, reduces and transforms the event series.
+
+h|prop +
+  0..1
+|*events*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_event[EVENT]<T>>
+a|The events in the series.
+
+h|prop +
+  
+|*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+a|Runtime name of this fragment, used to build runtime paths.
+
+h|prop +
+  0..1
+|*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
+a|Links to other archetyped structures.
+
+h|prop +
+  0..1
+|*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
+a|Audit trail from non-openEHR system of original commit of information.
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+h|prop +
+  0..1
+|*uid*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
+a|Optional globally unique object identifier for root points of archetyped structures.
+
+h|prop +
+  
+|*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Design-time archetype identifier of this node, used to build archetype paths.
+
+h|prop +
+  0..1
+|*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
+a|Details of archetyping used on this node.
+
+|===

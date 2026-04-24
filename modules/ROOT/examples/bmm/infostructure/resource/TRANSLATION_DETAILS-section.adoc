@@ -1,0 +1,21 @@
+
+=== class TRANSLATION_DETAILS
+
+[tabs]
+======
+Diff::
++
+include::TRANSLATION_DETAILS.adoc[]
+
+Flat::
++
+include::TRANSLATION_DETAILS-flat.adoc[]
+
+Props(diff)::
++
+include::TRANSLATION_DETAILS-properties.adoc[]
+
+Props(flat)::
++
+include::TRANSLATION_DETAILS-properties-flat.adoc[]
+======

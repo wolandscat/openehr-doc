@@ -1,0 +1,21 @@
+
+=== class VERSION_TREE_ID
+
+[tabs]
+======
+Diff::
++
+include::VERSION_TREE_ID.adoc[]
+
+Flat::
++
+include::VERSION_TREE_ID-flat.adoc[]
+
+Props(diff)::
++
+include::VERSION_TREE_ID-properties.adoc[]
+
+Props(flat)::
++
+include::VERSION_TREE_ID-properties-flat.adoc[]
+======

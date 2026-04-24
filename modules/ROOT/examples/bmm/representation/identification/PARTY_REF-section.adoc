@@ -1,0 +1,21 @@
+
+=== class PARTY_REF
+
+[tabs]
+======
+Diff::
++
+include::PARTY_REF.adoc[]
+
+Flat::
++
+include::PARTY_REF-flat.adoc[]
+
+Props(diff)::
++
+include::PARTY_REF-properties.adoc[]
+
+Props(flat)::
++
+include::PARTY_REF-properties-flat.adoc[]
+======

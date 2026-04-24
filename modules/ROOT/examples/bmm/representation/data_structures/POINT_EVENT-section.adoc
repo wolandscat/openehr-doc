@@ -1,0 +1,21 @@
+
+=== class POINT_EVENT
+
+[tabs]
+======
+Diff::
++
+include::POINT_EVENT.adoc[]
+
+Flat::
++
+include::POINT_EVENT-flat.adoc[]
+
+Props(diff)::
++
+include::POINT_EVENT-properties.adoc[]
+
+Props(flat)::
++
+include::POINT_EVENT-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Integer64
+
+[tabs]
+======
+Diff::
++
+include::Integer64.adoc[]
+
+Flat::
++
+include::Integer64-flat.adoc[]
+
+Props(diff)::
++
+include::Integer64-properties.adoc[]
+
+Props(flat)::
++
+include::Integer64-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class ENTRY
+
+[tabs]
+======
+Diff::
++
+include::ENTRY.adoc[]
+
+Flat::
++
+include::ENTRY-flat.adoc[]
+
+Props(diff)::
++
+include::ENTRY-properties.adoc[]
+
+Props(flat)::
++
+include::ENTRY-properties-flat.adoc[]
+======

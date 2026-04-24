@@ -1,0 +1,21 @@
+
+=== class CONTRIBUTION
+
+[tabs]
+======
+Diff::
++
+include::CONTRIBUTION.adoc[]
+
+Flat::
++
+include::CONTRIBUTION-flat.adoc[]
+
+Props(diff)::
++
+include::CONTRIBUTION-properties.adoc[]
+
+Props(flat)::
++
+include::CONTRIBUTION-properties-flat.adoc[]
+======

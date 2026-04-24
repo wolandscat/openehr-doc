@@ -1,0 +1,156 @@
+
+.statement Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_entry]] {
+        .. access ..
+        subject: PARTY_PROXY
+        provider: PARTY_PROXY
+        language: CODE_PHRASE «iso.iso_639-1»
+        encoding: CODE_PHRASE «iana.character-sets»
+        other_participations: List<PARTICIPATION>
+        workflow_id: OBJECT_REF
+        subject_is_self:Boolean
+}
+
+CONTENT_ITEM <|-[#gray]- ENTRY
+
+
+class ISM_TRANSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_ism_transition]] {
+        .. access ..
+        current_state: DV_CODED_TEXT
+        transition: DV_CODED_TEXT
+        careflow_step: DV_CODED_TEXT
+        reason: List<DV_TEXT>
+}
+
+PATHABLE <|-[#gray]- ISM_TRANSITION
+
+
+enum INSTRUCTION_EXECUTION_TRANSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_execution_transition]] {
+        .. values ..
+        ism_t_initiate = "initiate"
+        ism_t_start = "start"
+        ism_t_schedule = "schedule"
+        ism_t_plan_step = "plan_step"
+        ism_t_cancel = "cancel"
+        ism_t_do = "do"
+        ism_t_resume = "resume"
+        ism_t_suspend = "suspend"
+        ism_t_suspended_step = "suspended_step"
+        ism_t_active_step = "active_step"
+        ism_t_scheduled_step = "scheduled_step"
+        ism_t_postponed_step = "postponed_step"
+        ism_t_abort = "abort"
+        ism_t_restore = "restore"
+        ism_t_postpone = "postpone"
+        ism_t_time_out = "time_out"
+        ism_t_notify_completed = "notify_completed"
+        ism_t_notify_aborted = "notify_aborted"
+}
+
+class ADMIN_ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_admin_entry]] {
+        .. access ..
+        data: ITEM_STRUCTURE
+}
+
+ENTRY <|-[#gray]- ADMIN_ENTRY
+
+
+class INSTRUCTION_DETAILS [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_details]] {
+        .. access ..
+        instruction_id: LOCATABLE_REF
+        activity_id: String
+        wf_details: ITEM_STRUCTURE
+}
+
+PATHABLE <|-[#gray]- INSTRUCTION_DETAILS
+
+
+class INSTRUCTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction]] {
+        .. access ..
+        narrative: DV_TEXT
+        expiry_time: DV_DATE_TIME
+        wf_definition: DV_PARSABLE
+}
+
+CARE_ENTRY <|-[#gray]- INSTRUCTION
+
+
+INSTRUCTION *--> "0..* activities" ACTIVITY
+
+enum INSTRUCTION_EXECUTION_STATE [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_execution_state]] {
+        .. values ..
+        initial = "initial"
+        planned = "planned"
+        postponed = "postponed"
+        cancelled = "cancelled"
+        active = "active"
+        suspended = "suspended"
+        completed = "completed"
+        aborted = "aborted"
+        expired = "expired"
+}
+
+class ACTIVITY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_activity]] {
+        .. access ..
+        description: ITEM_STRUCTURE
+        timing: DV_PARSABLE
+        action_archetype_id: String
+}
+
+LOCATABLE <|-[#gray]- ACTIVITY
+
+
+class ACTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_action]] {
+        .. access ..
+        time: DV_DATE_TIME
+        description: ITEM_STRUCTURE
+}
+
+CARE_ENTRY <|-[#gray]- ACTION
+
+
+ACTION *--> "1 ism_transition" ISM_TRANSITION
+
+ACTION *--> "0..1 instruction_details" INSTRUCTION_DETAILS
+
+class EVALUATION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_evaluation]] {
+        .. access ..
+        data: ITEM_STRUCTURE
+}
+
+CARE_ENTRY <|-[#gray]- EVALUATION
+
+
+class OBSERVATION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_observation]] {
+        .. access ..
+        data: HISTORY<ITEM_STRUCTURE>
+        state: HISTORY<ITEM_STRUCTURE>
+}
+
+CARE_ENTRY <|-[#gray]- OBSERVATION
+
+
+abstract class CARE_ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_care_entry]] {
+        .. access ..
+        protocol: ITEM_STRUCTURE
+        guideline_id: OBJECT_REF
+}
+
+ENTRY <|-[#gray]- CARE_ENTRY
+
+abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_content_item]] #FDFDFD {
+}
+abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_pathable]] #FDFDFD {
+}
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+}
+
+LOCATABLE <|-[#gray]- CONTENT_ITEM
+
+....

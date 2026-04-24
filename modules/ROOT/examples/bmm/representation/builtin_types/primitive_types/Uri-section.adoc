@@ -1,0 +1,21 @@
+
+=== class Uri
+
+[tabs]
+======
+Diff::
++
+include::Uri.adoc[]
+
+Flat::
++
+include::Uri-flat.adoc[]
+
+Props(diff)::
++
+include::Uri-properties.adoc[]
+
+Props(flat)::
++
+include::Uri-properties-flat.adoc[]
+======

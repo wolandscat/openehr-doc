@@ -1,0 +1,21 @@
+
+=== class DV_DURATION
+
+[tabs]
+======
+Diff::
++
+include::DV_DURATION.adoc[]
+
+Flat::
++
+include::DV_DURATION-flat.adoc[]
+
+Props(diff)::
++
+include::DV_DURATION-properties.adoc[]
+
+Props(flat)::
++
+include::DV_DURATION-properties-flat.adoc[]
+======

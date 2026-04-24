@@ -1,0 +1,13 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class PARTY_REF*
+
+h|*Description*
+2+a|Identifier for parties in a demographic or identity service.
+
+h|*Inherit*
+2+|xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+
+|===

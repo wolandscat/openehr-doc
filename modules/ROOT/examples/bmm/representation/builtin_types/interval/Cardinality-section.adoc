@@ -1,0 +1,21 @@
+
+=== class Cardinality
+
+[tabs]
+======
+Diff::
++
+include::Cardinality.adoc[]
+
+Flat::
++
+include::Cardinality-flat.adoc[]
+
+Props(diff)::
++
+include::Cardinality-properties.adoc[]
+
+Props(flat)::
++
+include::Cardinality-properties-flat.adoc[]
+======

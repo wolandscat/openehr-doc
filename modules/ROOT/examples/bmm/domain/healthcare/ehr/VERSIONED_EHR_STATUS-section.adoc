@@ -1,0 +1,21 @@
+
+=== class VERSIONED_EHR_STATUS
+
+[tabs]
+======
+Diff::
++
+include::VERSIONED_EHR_STATUS.adoc[]
+
+Flat::
++
+include::VERSIONED_EHR_STATUS-flat.adoc[]
+
+Props(diff)::
++
+include::VERSIONED_EHR_STATUS-properties.adoc[]
+
+Props(flat)::
++
+include::VERSIONED_EHR_STATUS-properties-flat.adoc[]
+======

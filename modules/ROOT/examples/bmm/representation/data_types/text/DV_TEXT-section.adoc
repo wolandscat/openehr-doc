@@ -1,0 +1,21 @@
+
+=== class DV_TEXT
+
+[tabs]
+======
+Diff::
++
+include::DV_TEXT.adoc[]
+
+Flat::
++
+include::DV_TEXT-flat.adoc[]
+
+Props(diff)::
++
+include::DV_TEXT-properties.adoc[]
+
+Props(flat)::
++
+include::DV_TEXT-properties-flat.adoc[]
+======

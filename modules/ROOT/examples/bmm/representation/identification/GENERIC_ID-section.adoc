@@ -1,0 +1,21 @@
+
+=== class GENERIC_ID
+
+[tabs]
+======
+Diff::
++
+include::GENERIC_ID.adoc[]
+
+Flat::
++
+include::GENERIC_ID-flat.adoc[]
+
+Props(diff)::
++
+include::GENERIC_ID-properties.adoc[]
+
+Props(flat)::
++
+include::GENERIC_ID-properties-flat.adoc[]
+======

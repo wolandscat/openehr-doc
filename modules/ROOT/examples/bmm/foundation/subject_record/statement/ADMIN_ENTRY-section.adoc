@@ -1,0 +1,21 @@
+
+=== class ADMIN_ENTRY
+
+[tabs]
+======
+Diff::
++
+include::ADMIN_ENTRY.adoc[]
+
+Flat::
++
+include::ADMIN_ENTRY-flat.adoc[]
+
+Props(diff)::
++
+include::ADMIN_ENTRY-properties.adoc[]
+
+Props(flat)::
++
+include::ADMIN_ENTRY-properties-flat.adoc[]
+======

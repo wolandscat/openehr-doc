@@ -1,0 +1,21 @@
+
+=== class CAPABILITY
+
+[tabs]
+======
+Diff::
++
+include::CAPABILITY.adoc[]
+
+Flat::
++
+include::CAPABILITY-flat.adoc[]
+
+Props(diff)::
++
+include::CAPABILITY-properties.adoc[]
+
+Props(flat)::
++
+include::CAPABILITY-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class ITEM_TAG
+
+[tabs]
+======
+Diff::
++
+include::ITEM_TAG.adoc[]
+
+Flat::
++
+include::ITEM_TAG-flat.adoc[]
+
+Props(diff)::
++
+include::ITEM_TAG-properties.adoc[]
+
+Props(flat)::
++
+include::ITEM_TAG-properties-flat.adoc[]
+======

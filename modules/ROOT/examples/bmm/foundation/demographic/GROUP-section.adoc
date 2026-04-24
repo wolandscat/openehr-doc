@@ -1,0 +1,21 @@
+
+=== class GROUP
+
+[tabs]
+======
+Diff::
++
+include::GROUP.adoc[]
+
+Flat::
++
+include::GROUP-flat.adoc[]
+
+Props(diff)::
++
+include::GROUP-properties.adoc[]
+
+Props(flat)::
++
+include::GROUP-properties-flat.adoc[]
+======

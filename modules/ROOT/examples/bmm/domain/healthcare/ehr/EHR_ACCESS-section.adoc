@@ -1,0 +1,21 @@
+
+=== class EHR_ACCESS
+
+[tabs]
+======
+Diff::
++
+include::EHR_ACCESS.adoc[]
+
+Flat::
++
+include::EHR_ACCESS-flat.adoc[]
+
+Props(diff)::
++
+include::EHR_ACCESS-properties.adoc[]
+
+Props(flat)::
++
+include::EHR_ACCESS-properties-flat.adoc[]
+======

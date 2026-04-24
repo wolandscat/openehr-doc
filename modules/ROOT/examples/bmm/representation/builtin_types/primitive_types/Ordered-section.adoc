@@ -1,0 +1,21 @@
+
+=== class Ordered
+
+[tabs]
+======
+Diff::
++
+include::Ordered.adoc[]
+
+Flat::
++
+include::Ordered-flat.adoc[]
+
+Props(diff)::
++
+include::Ordered-properties.adoc[]
+
+Props(flat)::
++
+include::Ordered-properties-flat.adoc[]
+======

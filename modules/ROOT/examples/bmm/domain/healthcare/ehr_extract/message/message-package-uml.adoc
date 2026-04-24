@@ -1,0 +1,36 @@
+
+.message Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class MESSAGE_CONTENT [[/splashlang-doc/latest/domain/domain-healthcare-ehr_extract.html#_class_message_content]] {
+}
+
+LOCATABLE <|-[#gray]- MESSAGE_CONTENT
+
+
+class ADDRESSED_MESSAGE [[/splashlang-doc/latest/domain/domain-healthcare-ehr_extract.html#_class_addressed_message]] {
+        .. access ..
+        sender: String
+        sender_reference: String
+        addressees: List<String>
+        urgency: Integer
+}
+
+ADDRESSED_MESSAGE *--> "1 message" MESSAGE
+
+class MESSAGE [[/splashlang-doc/latest/domain/domain-healthcare-ehr_extract.html#_class_message]] {
+        .. access ..
+        author: PARTY_PROXY
+        audit: AUDIT_DETAILS
+        signature: String
+}
+
+MESSAGE *--> "1 content" MESSAGE_CONTENT
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+}
+
+....

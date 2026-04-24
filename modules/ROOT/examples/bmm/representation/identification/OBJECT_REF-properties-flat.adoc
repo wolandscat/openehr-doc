@@ -1,0 +1,29 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class OBJECT_REF*
+
+h|*Description*
+2+a|Class describing a reference to another object, which may exist locally or be maintained outside
+the current namespace.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*namespace*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Namespace to which this identifier belongs in the local system context, e.g. terminology, demographic.
+
+h|prop +
+  
+|*type*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Name of the class of object to which this identifier type refers, e.g. PARTY, PERSON, GUIDELINE.
+
+h|prop +
+  
+|*id*: xref:representation:representation-identification.adoc#_class_object_id[OBJECT_ID]
+a|Globally unique id of an object, regardless of where it is stored.
+
+|===

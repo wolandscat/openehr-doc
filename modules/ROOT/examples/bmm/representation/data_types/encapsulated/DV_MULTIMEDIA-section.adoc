@@ -1,0 +1,21 @@
+
+=== class DV_MULTIMEDIA
+
+[tabs]
+======
+Diff::
++
+include::DV_MULTIMEDIA.adoc[]
+
+Flat::
++
+include::DV_MULTIMEDIA-flat.adoc[]
+
+Props(diff)::
++
+include::DV_MULTIMEDIA-properties.adoc[]
+
+Props(flat)::
++
+include::DV_MULTIMEDIA-properties-flat.adoc[]
+======

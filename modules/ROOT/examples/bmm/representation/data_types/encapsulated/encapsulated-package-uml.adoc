@@ -1,0 +1,51 @@
+
+.encapsulated Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class DV_ENCAPSULATED [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_encapsulated]] {
+        .. access ..
+        charset: CODE_PHRASE «iana.character-sets»
+        language: CODE_PHRASE «iso.iso_639-1»
+}
+
+DATA_VALUE <|-[#gray]- DV_ENCAPSULATED
+
+
+class DV_MULTIMEDIA [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_multimedia]] {
+        .. access ..
+        alternate_text: String
+        uri: DV_URI
+        data: Array<Octet>
+        media_type: CODE_PHRASE «iana.media-types»
+        compression_algorithm: CODE_PHRASE «iana.compression-algorithms»
+        integrity_check: Array<Octet>
+        integrity_check_algorithm: CODE_PHRASE «iana.integrity-check-algorithms»
+        size: Integer
+        is_external:Boolean
+        is_inline:Boolean
+        is_compressed:Boolean
+        has_integrity_check:Boolean
+}
+
+DV_ENCAPSULATED <|-[#gray]- DV_MULTIMEDIA
+
+
+DV_MULTIMEDIA *--> "0..1 thumbnail" DV_MULTIMEDIA
+
+class DV_PARSABLE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_parsable]] {
+        .. access ..
+        value: String
+        formalism: String
+        size:Integer
+}
+
+DV_ENCAPSULATED <|-[#gray]- DV_PARSABLE
+
+abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] #FDFDFD {
+}
+
+....

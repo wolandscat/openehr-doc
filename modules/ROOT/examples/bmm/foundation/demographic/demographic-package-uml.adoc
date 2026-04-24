@@ -1,0 +1,129 @@
+
+.demographic Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class CONTACT [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_contact]] {
+        .. access ..
+        time_validity: DV_INTERVAL<DV_DATE>
+        purpose:DV_TEXT
+}
+
+LOCATABLE <|-[#gray]- CONTACT
+
+
+CONTACT *--> "0..* addresses" ADDRESS
+
+class PARTY_RELATIONSHIP [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_party_relationship]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        target: PARTY_REF
+        time_validity: DV_INTERVAL<DV_DATE>
+        source: PARTY_REF
+        type:DV_TEXT
+}
+
+LOCATABLE <|-[#gray]- PARTY_RELATIONSHIP
+
+
+class CAPABILITY [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_capability]] {
+        .. access ..
+        credentials: ITEM_STRUCTURE
+        time_validity: DV_INTERVAL<DV_DATE>
+}
+
+LOCATABLE <|-[#gray]- CAPABILITY
+
+
+class ROLE [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_role]] {
+        .. access ..
+        time_validity: DV_INTERVAL<DV_DATE>
+        performer: PARTY_REF
+}
+
+PARTY <|-[#gray]- ROLE
+
+
+ROLE *--> "0..* capabilities" CAPABILITY
+
+class AGENT [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_agent]] {
+}
+
+ACTOR <|-[#gray]- AGENT
+
+
+class ORGANISATION [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_organisation]] {
+}
+
+ACTOR <|-[#gray]- ORGANISATION
+
+
+class PARTY_IDENTITY [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_party_identity]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        purpose:DV_TEXT
+}
+
+LOCATABLE <|-[#gray]- PARTY_IDENTITY
+
+
+abstract class PARTY [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_party]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        type:DV_TEXT
+        reverse_relationships:List<LOCATABLE_REF>
+}
+
+LOCATABLE <|-[#gray]- PARTY
+
+
+PARTY *--> "0..* identities" PARTY_IDENTITY
+
+PARTY *--> "0..* contacts" CONTACT
+
+PARTY *--> "0..* relationships" PARTY_RELATIONSHIP
+
+class PERSON [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_person]] {
+}
+
+ACTOR <|-[#gray]- PERSON
+
+
+class ADDRESS [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_address]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        type:DV_TEXT
+}
+
+LOCATABLE <|-[#gray]- ADDRESS
+
+
+class VERSIONED_PARTY [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_versioned_party]] {
+}
+
+VERSIONED_OBJECT <|-[#gray]- VERSIONED_PARTY
+
+
+abstract class ACTOR [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_actor]] {
+        .. access ..
+        languages: List<DV_TEXT>
+        roles: List<PARTY_REF>
+}
+
+PARTY <|-[#gray]- ACTOR
+
+
+class GROUP [[/splashlang-doc/latest/foundation/foundation-demographic.html#_class_group]] {
+}
+
+ACTOR <|-[#gray]- GROUP
+
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+}
+class "infostructure.versioning.\nVERSIONED_OBJECT" as VERSIONED_OBJECT  [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_versioned_object]] #FDFDFD {
+}
+
+....

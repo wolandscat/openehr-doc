@@ -1,0 +1,21 @@
+
+=== class PERSON
+
+[tabs]
+======
+Diff::
++
+include::PERSON.adoc[]
+
+Flat::
++
+include::PERSON-flat.adoc[]
+
+Props(diff)::
++
+include::PERSON-properties.adoc[]
+
+Props(flat)::
++
+include::PERSON-properties-flat.adoc[]
+======

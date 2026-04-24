@@ -1,0 +1,21 @@
+
+=== class DV_AMOUNT
+
+[tabs]
+======
+Diff::
++
+include::DV_AMOUNT.adoc[]
+
+Flat::
++
+include::DV_AMOUNT-flat.adoc[]
+
+Props(diff)::
++
+include::DV_AMOUNT-properties.adoc[]
+
+Props(flat)::
++
+include::DV_AMOUNT-properties-flat.adoc[]
+======

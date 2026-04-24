@@ -1,0 +1,29 @@
+
+.uri Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class DV_URI [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_uri]] {
+        .. access ..
+        value: String
+        scheme:String
+        path:String
+        fragment_id:String
+        query:String
+}
+
+DATA_VALUE <|-[#gray]- DV_URI
+
+
+class DV_EHR_URI [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_ehr_uri]] {
+}
+
+DV_URI <|-[#gray]- DV_EHR_URI
+
+abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] #FDFDFD {
+}
+
+....

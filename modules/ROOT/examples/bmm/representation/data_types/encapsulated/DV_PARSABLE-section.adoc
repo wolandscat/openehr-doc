@@ -1,0 +1,21 @@
+
+=== class DV_PARSABLE
+
+[tabs]
+======
+Diff::
++
+include::DV_PARSABLE.adoc[]
+
+Flat::
++
+include::DV_PARSABLE-flat.adoc[]
+
+Props(diff)::
++
+include::DV_PARSABLE-properties.adoc[]
+
+Props(flat)::
++
+include::DV_PARSABLE-properties-flat.adoc[]
+======

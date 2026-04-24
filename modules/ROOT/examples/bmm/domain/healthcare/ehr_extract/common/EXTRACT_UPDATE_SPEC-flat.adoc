@@ -1,0 +1,37 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class EXTRACT_UPDATE_SPEC*
+
+h|*Description*
+2+a|Specification of how a request should be processed by server. The request can be
+persisted in the server to enable re-activation and changes-only pattern of Extract
+updates.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*persist_in_server*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a|If True, this Request is persisted in the server until further notice.
+
+h|prop +
+  0..1
+|*repeat_period*: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+a|Period for resending update Extracts in response to original Request.
+
+h|prop +
+  0..1
+|*trigger_events*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]>
+a|Set of Event names that will cause sending of update Extracts, e.g. any_change,
+correction, update.
+
+h|prop +
+  
+|*update_method*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Indicate mode of update: send only items that are changed or new since last send.
+For persist_in_server Requests only.
+
+|===

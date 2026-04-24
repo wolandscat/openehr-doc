@@ -1,0 +1,21 @@
+
+=== class RESOURCE_ANNOTATIONS
+
+[tabs]
+======
+Diff::
++
+include::RESOURCE_ANNOTATIONS.adoc[]
+
+Flat::
++
+include::RESOURCE_ANNOTATIONS-flat.adoc[]
+
+Props(diff)::
++
+include::RESOURCE_ANNOTATIONS-properties.adoc[]
+
+Props(flat)::
++
+include::RESOURCE_ANNOTATIONS-properties-flat.adoc[]
+======

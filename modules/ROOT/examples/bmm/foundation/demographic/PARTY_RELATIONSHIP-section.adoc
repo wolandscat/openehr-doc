@@ -1,0 +1,21 @@
+
+=== class PARTY_RELATIONSHIP
+
+[tabs]
+======
+Diff::
++
+include::PARTY_RELATIONSHIP.adoc[]
+
+Flat::
++
+include::PARTY_RELATIONSHIP-flat.adoc[]
+
+Props(diff)::
++
+include::PARTY_RELATIONSHIP-properties.adoc[]
+
+Props(flat)::
++
+include::PARTY_RELATIONSHIP-properties-flat.adoc[]
+======

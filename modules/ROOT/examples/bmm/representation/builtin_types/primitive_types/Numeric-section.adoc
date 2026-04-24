@@ -1,0 +1,21 @@
+
+=== class Numeric
+
+[tabs]
+======
+Diff::
++
+include::Numeric.adoc[]
+
+Flat::
++
+include::Numeric-flat.adoc[]
+
+Props(diff)::
++
+include::Numeric-properties.adoc[]
+
+Props(flat)::
++
+include::Numeric-properties-flat.adoc[]
+======

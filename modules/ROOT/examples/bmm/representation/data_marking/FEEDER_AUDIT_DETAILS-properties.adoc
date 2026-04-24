@@ -1,0 +1,49 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class FEEDER_AUDIT_DETAILS*
+
+h|*Description*
+2+a|Audit details for any system in a feeder system chain. Records who/where/when the information
+item was created.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*system_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Identifier of the system which handled the information item.
+
+h|prop +
+  0..1
+|*location*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
+a|Identifier of the particular site/facility within an organisation which handled the item.
+
+h|prop +
+  0..1
+|*subject*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+a|Identifiers for subject of the received information item.
+
+h|prop +
+  0..1
+|*provider*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
+a|Optional provider(s) who created, committed, forwarded or otherwise handled the item.
+
+h|prop +
+  0..1
+|*time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
+a|Time of handling the item.
+
+h|prop +
+  0..1
+|*version_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Any identifier used in the system such as interim, final, or numeric versions if available.
+
+h|prop +
+  0..1
+|*other_details*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+a|Optional attribute to carry any custom meta-data. May be archetyped.
+
+|===

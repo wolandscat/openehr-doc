@@ -1,0 +1,21 @@
+
+=== class Integer
+
+[tabs]
+======
+Diff::
++
+include::Integer.adoc[]
+
+Flat::
++
+include::Integer-flat.adoc[]
+
+Props(diff)::
++
+include::Integer-properties.adoc[]
+
+Props(flat)::
++
+include::Integer-properties-flat.adoc[]
+======

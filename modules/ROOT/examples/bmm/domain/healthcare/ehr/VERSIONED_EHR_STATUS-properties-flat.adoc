@@ -1,0 +1,32 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class VERSIONED_EHR_STATUS*
+
+h|*Description*
+2+a|Version container for EHR_STATUS instance.
+
+h|*Inherit*
+2+|xref:infostructure:infostructure-versioning.adoc#_class_versioned_object[VERSIONED_OBJECT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
+a|Unique identifier of this version container as a UID with no extension; the same
+in all instances of the same container in a distributed environment.
+
+h|prop +
+  
+|*owner_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+a|Reference to object to which this version container belongs, e.g. the containing EHR.
+
+h|prop +
+  
+|*time_created*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
+a|Time of initial creation of this versioned object.
+
+|===

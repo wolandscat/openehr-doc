@@ -1,0 +1,143 @@
+
+.primitive_types Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class Boolean [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_boolean]] {
+        .. operators ..
+        conjunction(other: Boolean):Boolean
+        semistrict_conjunction(other: Boolean):Boolean
+        disjunction(other: Boolean):Boolean
+        semistrict_disjunction(other: Boolean):Boolean
+        exclusive_disjunction(other: Boolean):Boolean
+        implication(other: Boolean):Boolean
+        negation:Boolean
+}
+
+
+class Uri [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_uri]] {
+}
+
+String <|-[#gray]- Uri
+
+
+class Integer64 [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_integer64]] {
+        .. operators ..
+        add(other: Integer64):Integer64
+        subtract(other: Integer64):Integer64
+        multiply(other: Integer64):Integer64
+        divide(other: Integer64):Double
+        exponent(other: Double):Double
+        modulo(mod: Integer64):Integer64
+        less_than(other: Integer64):Boolean
+        negative:Integer64
+}
+
+Ordered_Numeric <|-[#gray]- Integer64
+
+
+class Real [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_real]] {
+        .. access ..
+        floor:Integer
+        .. operators ..
+        add(other: Real):Real
+        subtract(other: Real):Real
+        multiply(other: Real):Real
+        divide(other: Real):Double
+        exponent(other: Double):Double
+        less_than(other: Real):Boolean
+        negative:Real
+}
+
+Ordered_Numeric <|-[#gray]- Real
+
+
+class Integer [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_integer]] {
+        .. operators ..
+        add(other: Integer):Integer
+        subtract(other: Integer):Integer
+        multiply(other: Integer):Integer
+        divide(other: Integer):Double
+        exponent(other: Double):Double
+        modulo(mod: Integer):Integer
+        less_than(other: Integer):Boolean
+        negative:Integer
+}
+
+Ordered_Numeric <|-[#gray]- Integer
+
+
+abstract class Ordered_Numeric [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_ordered_numeric]] {
+}
+
+Ordered <|-[#gray]- Ordered_Numeric
+
+
+Numeric <|-[#gray]- Ordered_Numeric
+
+
+class Character [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_character]] {
+}
+
+Ordered <|-[#gray]- Character
+
+
+class Double [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_double]] {
+        .. access ..
+        floor:Integer
+        .. operators ..
+        add(other: Double):Double
+        subtract(other: Double):Double
+        multiply(other: Double):Double
+        divide(other: Double):Double
+        exponent(other: Double):Double
+        less_than(other: Double):Boolean
+        negative:Double
+}
+
+Ordered_Numeric <|-[#gray]- Double
+
+
+class String [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_string]] {
+        .. access ..
+        is_empty:Boolean
+        is_integer:Boolean
+        as_integer:Integer
+        contains(other: String):Boolean
+        .. operators ..
+        append(other: String):String
+        less_than(other: String):Boolean
+}
+
+Ordered <|-[#gray]- String
+
+
+class Octet [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_octet]] {
+}
+
+Ordered <|-[#gray]- Octet
+
+
+abstract class Ordered [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_ordered]] {
+        .. operators ..
+        less_than(other: Ordered):Boolean
+        less_than_or_equal(other: Ordered):Boolean
+        greater_than(other: Ordered):Boolean
+        greater_than_or_equal(other: Ordered):Boolean
+}
+
+abstract class Numeric [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_numeric]] {
+        .. operators ..
+        add(other: Numeric):Numeric
+        subtract(other: Numeric):Numeric
+        multiply(other: Numeric):Numeric
+        divide(other: Numeric):Numeric
+        exponent(other: Numeric):Numeric
+        negative:Numeric
+}
+
+
+....

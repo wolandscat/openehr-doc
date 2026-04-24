@@ -1,0 +1,21 @@
+
+=== class Iso8601_timezone
+
+[tabs]
+======
+Diff::
++
+include::Iso8601_timezone.adoc[]
+
+Flat::
++
+include::Iso8601_timezone-flat.adoc[]
+
+Props(diff)::
++
+include::Iso8601_timezone-properties.adoc[]
+
+Props(flat)::
++
+include::Iso8601_timezone-properties-flat.adoc[]
+======

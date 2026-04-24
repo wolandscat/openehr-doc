@@ -1,0 +1,21 @@
+
+=== class DV_PROPORTION
+
+[tabs]
+======
+Diff::
++
+include::DV_PROPORTION.adoc[]
+
+Flat::
++
+include::DV_PROPORTION-flat.adoc[]
+
+Props(diff)::
++
+include::DV_PROPORTION-properties.adoc[]
+
+Props(flat)::
++
+include::DV_PROPORTION-properties-flat.adoc[]
+======

@@ -1,0 +1,30 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class CONTRIBUTION*
+
+h|*Description*
+2+a|Documents a Contribution (change set) of one or more versions added to a
+change-controlled repository.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
+a|Unique identifier for this Contribution.
+
+h|prop +
+  
+|*versions*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]>
+a|Set of references to Versions causing changes to this EHR. May include paths
+pointing to any number of versionable items such as COMPOSITIONs and FOLDERs.
+
+h|prop +
+  
+|*audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
+a|Audit trail corresponding to the committal of this Contribution.
+
+|===

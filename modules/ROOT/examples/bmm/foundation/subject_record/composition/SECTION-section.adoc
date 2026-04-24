@@ -1,0 +1,21 @@
+
+=== class SECTION
+
+[tabs]
+======
+Diff::
++
+include::SECTION.adoc[]
+
+Flat::
++
+include::SECTION-flat.adoc[]
+
+Props(diff)::
++
+include::SECTION-properties.adoc[]
+
+Props(flat)::
++
+include::SECTION-properties-flat.adoc[]
+======

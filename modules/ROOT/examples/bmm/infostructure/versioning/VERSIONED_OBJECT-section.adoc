@@ -1,0 +1,21 @@
+
+=== class VERSIONED_OBJECT
+
+[tabs]
+======
+Diff::
++
+include::VERSIONED_OBJECT.adoc[]
+
+Flat::
++
+include::VERSIONED_OBJECT-flat.adoc[]
+
+Props(diff)::
++
+include::VERSIONED_OBJECT-properties.adoc[]
+
+Props(flat)::
++
+include::VERSIONED_OBJECT-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class AUTHORED_RESOURCE
+
+[tabs]
+======
+Diff::
++
+include::AUTHORED_RESOURCE.adoc[]
+
+Flat::
++
+include::AUTHORED_RESOURCE-flat.adoc[]
+
+Props(diff)::
++
+include::AUTHORED_RESOURCE-properties.adoc[]
+
+Props(flat)::
++
+include::AUTHORED_RESOURCE-properties-flat.adoc[]
+======

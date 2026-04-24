@@ -1,0 +1,13 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h| abstract  *class ITEM_STRUCTURE*
+
+h|*Description*
+2+a|Abstract ancestor of all item structure types.
+
+h|*Inherit*
+2+|xref:representation:representation-data_structures.adoc#_class_data_structure[DATA_STRUCTURE]
+
+|===

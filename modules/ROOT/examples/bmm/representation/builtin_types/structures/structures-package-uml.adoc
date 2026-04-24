@@ -1,0 +1,47 @@
+
+.structures Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class Array<T:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_array]] {
+}
+
+Container <|-[#gray]- Array
+
+
+abstract class Container<T:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_container]] {
+        .. access ..
+        has:Boolean
+        count:Integer
+        is_empty:Boolean
+}
+
+
+class List<T:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_list]] {
+        .. access ..
+        first:T
+        last:T
+}
+
+Container <|-[#gray]- List
+
+
+class Hash<K:Ordered,V> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_hash]] {
+        .. access ..
+        has_key:Boolean
+        item:V
+}
+
+Container <|-[#gray]- Hash
+
+
+class Set<T:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_set]] {
+}
+
+Container <|-[#gray]- Set
+
+
+....

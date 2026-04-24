@@ -1,0 +1,21 @@
+
+=== class INTERNET_ID
+
+[tabs]
+======
+Diff::
++
+include::INTERNET_ID.adoc[]
+
+Flat::
++
+include::INTERNET_ID-flat.adoc[]
+
+Props(diff)::
++
+include::INTERNET_ID-properties.adoc[]
+
+Props(flat)::
++
+include::INTERNET_ID-properties-flat.adoc[]
+======

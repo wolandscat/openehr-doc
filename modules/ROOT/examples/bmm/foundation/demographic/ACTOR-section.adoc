@@ -1,0 +1,21 @@
+
+=== class ACTOR
+
+[tabs]
+======
+Diff::
++
+include::ACTOR.adoc[]
+
+Flat::
++
+include::ACTOR-flat.adoc[]
+
+Props(diff)::
++
+include::ACTOR-properties.adoc[]
+
+Props(flat)::
++
+include::ACTOR-properties-flat.adoc[]
+======

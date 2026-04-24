@@ -1,0 +1,21 @@
+
+=== class Ordered_Numeric
+
+[tabs]
+======
+Diff::
++
+include::Ordered_Numeric.adoc[]
+
+Flat::
++
+include::Ordered_Numeric-flat.adoc[]
+
+Props(diff)::
++
+include::Ordered_Numeric-properties.adoc[]
+
+Props(flat)::
++
+include::Ordered_Numeric-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Boolean
+
+[tabs]
+======
+Diff::
++
+include::Boolean.adoc[]
+
+Flat::
++
+include::Boolean-flat.adoc[]
+
+Props(diff)::
++
+include::Boolean-properties.adoc[]
+
+Props(flat)::
++
+include::Boolean-properties-flat.adoc[]
+======

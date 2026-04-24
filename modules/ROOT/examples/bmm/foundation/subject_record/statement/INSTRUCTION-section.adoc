@@ -1,0 +1,21 @@
+
+=== class INSTRUCTION
+
+[tabs]
+======
+Diff::
++
+include::INSTRUCTION.adoc[]
+
+Flat::
++
+include::INSTRUCTION-flat.adoc[]
+
+Props(diff)::
++
+include::INSTRUCTION-properties.adoc[]
+
+Props(flat)::
++
+include::INSTRUCTION-properties-flat.adoc[]
+======

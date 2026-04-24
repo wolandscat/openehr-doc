@@ -1,0 +1,21 @@
+
+=== class Temporal
+
+[tabs]
+======
+Diff::
++
+include::Temporal.adoc[]
+
+Flat::
++
+include::Temporal-flat.adoc[]
+
+Props(diff)::
++
+include::Temporal-properties.adoc[]
+
+Props(flat)::
++
+include::Temporal-properties-flat.adoc[]
+======

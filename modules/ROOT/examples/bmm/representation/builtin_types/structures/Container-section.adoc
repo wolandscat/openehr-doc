@@ -1,0 +1,21 @@
+
+=== class Container
+
+[tabs]
+======
+Diff::
++
+include::Container.adoc[]
+
+Flat::
++
+include::Container-flat.adoc[]
+
+Props(diff)::
++
+include::Container-properties.adoc[]
+
+Props(flat)::
++
+include::Container-properties-flat.adoc[]
+======

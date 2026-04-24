@@ -1,0 +1,17 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|builtin  abstract  *class Numeric*
+
+h|*Description*
+2+a|Abstract parent class of numeric types, which have arithmetic and comparison
+operators defined.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "operators"*
+
+|===

@@ -1,0 +1,21 @@
+
+=== class DV_QUANTIFIED
+
+[tabs]
+======
+Diff::
++
+include::DV_QUANTIFIED.adoc[]
+
+Flat::
++
+include::DV_QUANTIFIED-flat.adoc[]
+
+Props(diff)::
++
+include::DV_QUANTIFIED-properties.adoc[]
+
+Props(flat)::
++
+include::DV_QUANTIFIED-properties-flat.adoc[]
+======

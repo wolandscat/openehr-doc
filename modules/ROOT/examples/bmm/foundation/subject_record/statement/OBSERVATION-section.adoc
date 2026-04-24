@@ -1,0 +1,21 @@
+
+=== class OBSERVATION
+
+[tabs]
+======
+Diff::
++
+include::OBSERVATION.adoc[]
+
+Flat::
++
+include::OBSERVATION-flat.adoc[]
+
+Props(diff)::
++
+include::OBSERVATION-properties.adoc[]
+
+Props(flat)::
++
+include::OBSERVATION-properties-flat.adoc[]
+======

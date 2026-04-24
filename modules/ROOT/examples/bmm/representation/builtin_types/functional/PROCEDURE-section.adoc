@@ -1,0 +1,21 @@
+
+=== class PROCEDURE
+
+[tabs]
+======
+Diff::
++
+include::PROCEDURE.adoc[]
+
+Flat::
++
+include::PROCEDURE-flat.adoc[]
+
+Props(diff)::
++
+include::PROCEDURE-properties.adoc[]
+
+Props(flat)::
++
+include::PROCEDURE-properties-flat.adoc[]
+======

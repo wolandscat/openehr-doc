@@ -1,0 +1,136 @@
+
+.identification Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class TEMPLATE_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_template_id]] {
+        .. access ..
+        name:String
+        version_id:String
+}
+
+OBJECT_ID <|-[#gray]- TEMPLATE_ID
+
+
+class TERMINOLOGY_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_terminology_id]] {
+}
+
+OBJECT_ID <|-[#gray]- TERMINOLOGY_ID
+
+
+class INTERNET_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_internet_id]] {
+}
+
+UID <|-[#gray]- INTERNET_ID
+
+
+class GENERIC_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_generic_id]] {
+        .. access ..
+        scheme: String
+}
+
+OBJECT_ID <|-[#gray]- GENERIC_ID
+
+
+class ISO_OID [[/splashlang-doc/latest/representation/representation-identification.html#_class_iso_oid]] {
+}
+
+UID <|-[#gray]- ISO_OID
+
+
+class PARTY_REF [[/splashlang-doc/latest/representation/representation-identification.html#_class_party_ref]] {
+}
+
+OBJECT_REF <|-[#gray]- PARTY_REF
+
+
+class OBJECT_REF [[/splashlang-doc/latest/representation/representation-identification.html#_class_object_ref]] {
+        .. access ..
+        namespace: String
+        type: String
+}
+
+OBJECT_REF *--> "1 id" OBJECT_ID
+
+abstract class OBJECT_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_object_id]] {
+        .. access ..
+        value: String
+}
+
+class LOCATABLE_REF [[/splashlang-doc/latest/representation/representation-identification.html#_class_locatable_ref]] {
+        .. access ..
+        path: String
+        as_uri:String
+}
+
+OBJECT_REF <|-[#gray]- LOCATABLE_REF
+
+
+LOCATABLE_REF *--> "1 id" UID_BASED_ID
+
+class VERSION_TREE_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_version_tree_id]] {
+        .. access ..
+        value: String
+        trunk_version:String
+        is_branch:Boolean
+        is_first:Boolean
+        branch_number:String
+        branch_version:String
+}
+
+class OBJECT_VERSION_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_object_version_id]] {
+        .. access ..
+        object_id:UID
+        creating_system_id:UID
+        version_tree_id:VERSION_TREE_ID
+        is_branch:Boolean
+}
+
+UID_BASED_ID <|-[#gray]- OBJECT_VERSION_ID
+
+
+class UUID [[/splashlang-doc/latest/representation/representation-identification.html#_class_uuid]] {
+}
+
+UID <|-[#gray]- UUID
+
+
+abstract class UID [[/splashlang-doc/latest/representation/representation-identification.html#_class_uid]] {
+        .. access ..
+        value: String
+}
+
+abstract class UID_BASED_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_uid_based_id]] {
+        .. access ..
+        root:UID
+        extension:String
+        has_extension:Boolean
+}
+
+OBJECT_ID <|-[#gray]- UID_BASED_ID
+
+
+class HIER_OBJECT_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_hier_object_id]] {
+}
+
+UID_BASED_ID <|-[#gray]- HIER_OBJECT_ID
+
+
+class ARCHETYPE_ID [[/splashlang-doc/latest/representation/representation-identification.html#_class_archetype_id]] {
+        .. access ..
+        qualified_rm_entity:String
+        domain_concept:String
+        rm_originator:String
+        rm_name:String
+        rm_entity:String
+        specialisation:String
+        version_id:String
+}
+
+OBJECT_ID <|-[#gray]- ARCHETYPE_ID
+
+
+....

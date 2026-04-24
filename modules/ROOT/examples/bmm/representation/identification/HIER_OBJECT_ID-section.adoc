@@ -1,0 +1,21 @@
+
+=== class HIER_OBJECT_ID
+
+[tabs]
+======
+Diff::
++
+include::HIER_OBJECT_ID.adoc[]
+
+Flat::
++
+include::HIER_OBJECT_ID-flat.adoc[]
+
+Props(diff)::
++
+include::HIER_OBJECT_ID-properties.adoc[]
+
+Props(flat)::
++
+include::HIER_OBJECT_ID-properties-flat.adoc[]
+======

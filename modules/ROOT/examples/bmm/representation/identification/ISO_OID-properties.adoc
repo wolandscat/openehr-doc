@@ -1,0 +1,13 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class ISO_OID*
+
+h|*Description*
+2+a|Model of ISO's Object Identifier (OID) as defined by standard ISO/IEC 8824.
+
+h|*Inherit*
+2+|xref:representation:representation-identification.adoc#_class_uid[UID]
+
+|===

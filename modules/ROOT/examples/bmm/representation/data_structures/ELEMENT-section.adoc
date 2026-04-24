@@ -1,0 +1,21 @@
+
+=== class ELEMENT
+
+[tabs]
+======
+Diff::
++
+include::ELEMENT.adoc[]
+
+Flat::
++
+include::ELEMENT-flat.adoc[]
+
+Props(diff)::
++
+include::ELEMENT-properties.adoc[]
+
+Props(flat)::
++
+include::ELEMENT-properties-flat.adoc[]
+======

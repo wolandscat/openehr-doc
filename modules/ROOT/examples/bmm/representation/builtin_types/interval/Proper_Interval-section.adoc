@@ -1,0 +1,21 @@
+
+=== class Proper_Interval
+
+[tabs]
+======
+Diff::
++
+include::Proper_Interval.adoc[]
+
+Flat::
++
+include::Proper_Interval-flat.adoc[]
+
+Props(diff)::
++
+include::Proper_Interval-properties.adoc[]
+
+Props(flat)::
++
+include::Proper_Interval-properties-flat.adoc[]
+======

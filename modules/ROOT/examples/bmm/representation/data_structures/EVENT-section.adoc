@@ -1,0 +1,21 @@
+
+=== class EVENT
+
+[tabs]
+======
+Diff::
++
+include::EVENT.adoc[]
+
+Flat::
++
+include::EVENT-flat.adoc[]
+
+Props(diff)::
++
+include::EVENT-properties.adoc[]
+
+Props(flat)::
++
+include::EVENT-properties-flat.adoc[]
+======

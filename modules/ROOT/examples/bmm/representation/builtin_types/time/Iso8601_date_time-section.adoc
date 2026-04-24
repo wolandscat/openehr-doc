@@ -1,0 +1,21 @@
+
+=== class Iso8601_date_time
+
+[tabs]
+======
+Diff::
++
+include::Iso8601_date_time.adoc[]
+
+Flat::
++
+include::Iso8601_date_time-flat.adoc[]
+
+Props(diff)::
++
+include::Iso8601_date_time-properties.adoc[]
+
+Props(flat)::
++
+include::Iso8601_date_time-properties-flat.adoc[]
+======

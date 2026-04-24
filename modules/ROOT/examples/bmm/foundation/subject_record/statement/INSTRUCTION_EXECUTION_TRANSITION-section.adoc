@@ -1,0 +1,21 @@
+
+=== enum INSTRUCTION_EXECUTION_TRANSITION
+
+[tabs]
+======
+Diff::
++
+include::INSTRUCTION_EXECUTION_TRANSITION.adoc[]
+
+Flat::
++
+include::INSTRUCTION_EXECUTION_TRANSITION-flat.adoc[]
+
+Props(diff)::
++
+include::INSTRUCTION_EXECUTION_TRANSITION-properties.adoc[]
+
+Props(flat)::
++
+include::INSTRUCTION_EXECUTION_TRANSITION-properties-flat.adoc[]
+======

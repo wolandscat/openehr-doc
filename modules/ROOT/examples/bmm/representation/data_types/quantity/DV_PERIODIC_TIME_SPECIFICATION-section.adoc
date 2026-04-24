@@ -1,0 +1,21 @@
+
+=== class DV_PERIODIC_TIME_SPECIFICATION
+
+[tabs]
+======
+Diff::
++
+include::DV_PERIODIC_TIME_SPECIFICATION.adoc[]
+
+Flat::
++
+include::DV_PERIODIC_TIME_SPECIFICATION-flat.adoc[]
+
+Props(diff)::
++
+include::DV_PERIODIC_TIME_SPECIFICATION-properties.adoc[]
+
+Props(flat)::
++
+include::DV_PERIODIC_TIME_SPECIFICATION-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Point_Interval
+
+[tabs]
+======
+Diff::
++
+include::Point_Interval.adoc[]
+
+Flat::
++
+include::Point_Interval-flat.adoc[]
+
+Props(diff)::
++
+include::Point_Interval-properties.adoc[]
+
+Props(flat)::
++
+include::Point_Interval-properties-flat.adoc[]
+======

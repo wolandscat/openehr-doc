@@ -1,0 +1,21 @@
+
+=== class CODE_PHRASE
+
+[tabs]
+======
+Diff::
++
+include::CODE_PHRASE.adoc[]
+
+Flat::
++
+include::CODE_PHRASE-flat.adoc[]
+
+Props(diff)::
++
+include::CODE_PHRASE-properties.adoc[]
+
+Props(flat)::
++
+include::CODE_PHRASE-properties-flat.adoc[]
+======

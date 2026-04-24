@@ -1,0 +1,21 @@
+
+=== class FOLDER
+
+[tabs]
+======
+Diff::
++
+include::FOLDER.adoc[]
+
+Flat::
++
+include::FOLDER-flat.adoc[]
+
+Props(diff)::
++
+include::FOLDER-properties.adoc[]
+
+Props(flat)::
++
+include::FOLDER-properties-flat.adoc[]
+======

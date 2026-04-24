@@ -1,0 +1,21 @@
+
+=== class ITEM_TREE
+
+[tabs]
+======
+Diff::
++
+include::ITEM_TREE.adoc[]
+
+Flat::
++
+include::ITEM_TREE-flat.adoc[]
+
+Props(diff)::
++
+include::ITEM_TREE-properties.adoc[]
+
+Props(flat)::
++
+include::ITEM_TREE-properties-flat.adoc[]
+======

@@ -1,0 +1,13 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|builtin   *class Uri*
+
+h|*Description*
+2+a|A kind of String constrained to obey the syntax of RFC 3986.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
+
+|===

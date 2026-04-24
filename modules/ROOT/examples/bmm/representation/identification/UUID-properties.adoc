@@ -1,0 +1,14 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class UUID*
+
+h|*Description*
+2+a|Model of the DCE Universal Unique Identifier (UUID) in 8-4-4-4-12 hexadecimal format. Also
+known as a GUID.
+
+h|*Inherit*
+2+|xref:representation:representation-identification.adoc#_class_uid[UID]
+
+|===

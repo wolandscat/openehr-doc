@@ -1,0 +1,21 @@
+
+=== class CONTACT
+
+[tabs]
+======
+Diff::
++
+include::CONTACT.adoc[]
+
+Flat::
++
+include::CONTACT-flat.adoc[]
+
+Props(diff)::
++
+include::CONTACT-properties.adoc[]
+
+Props(flat)::
++
+include::CONTACT-properties-flat.adoc[]
+======

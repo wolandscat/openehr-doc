@@ -1,0 +1,21 @@
+
+=== class ROUTINE
+
+[tabs]
+======
+Diff::
++
+include::ROUTINE.adoc[]
+
+Flat::
++
+include::ROUTINE-flat.adoc[]
+
+Props(diff)::
++
+include::ROUTINE-properties.adoc[]
+
+Props(flat)::
++
+include::ROUTINE-properties-flat.adoc[]
+======

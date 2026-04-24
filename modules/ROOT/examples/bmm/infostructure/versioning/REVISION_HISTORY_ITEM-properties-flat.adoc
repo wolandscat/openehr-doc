@@ -1,0 +1,25 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class REVISION_HISTORY_ITEM*
+
+h|*Description*
+2+a|An entry in a revision history, corresponding to a version from a versioned
+container. Consists of AUDIT_DETAILS instances with the revision identifier.
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*version_id*: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
+a|Version identifier for this revision.
+
+h|prop +
+  
+|*audits*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]>
+a|The audits for this revision; includes at least one commit audit, and optionally
+further attestations.
+
+|===

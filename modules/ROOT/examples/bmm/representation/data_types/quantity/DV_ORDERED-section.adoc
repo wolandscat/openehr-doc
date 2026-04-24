@@ -1,0 +1,21 @@
+
+=== class DV_ORDERED
+
+[tabs]
+======
+Diff::
++
+include::DV_ORDERED.adoc[]
+
+Flat::
++
+include::DV_ORDERED-flat.adoc[]
+
+Props(diff)::
++
+include::DV_ORDERED-properties.adoc[]
+
+Props(flat)::
++
+include::DV_ORDERED-properties-flat.adoc[]
+======

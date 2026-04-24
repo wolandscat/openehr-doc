@@ -1,0 +1,21 @@
+
+=== class ADDRESS
+
+[tabs]
+======
+Diff::
++
+include::ADDRESS.adoc[]
+
+Flat::
++
+include::ADDRESS-flat.adoc[]
+
+Props(diff)::
++
+include::ADDRESS-properties.adoc[]
+
+Props(flat)::
++
+include::ADDRESS-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class Array
+
+[tabs]
+======
+Diff::
++
+include::Array.adoc[]
+
+Flat::
++
+include::Array-flat.adoc[]
+
+Props(diff)::
++
+include::Array-properties.adoc[]
+
+Props(flat)::
++
+include::Array-properties-flat.adoc[]
+======

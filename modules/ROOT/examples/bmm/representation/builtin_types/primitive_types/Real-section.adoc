@@ -1,0 +1,21 @@
+
+=== class Real
+
+[tabs]
+======
+Diff::
++
+include::Real.adoc[]
+
+Flat::
++
+include::Real-flat.adoc[]
+
+Props(diff)::
++
+include::Real-properties.adoc[]
+
+Props(flat)::
++
+include::Real-properties-flat.adoc[]
+======

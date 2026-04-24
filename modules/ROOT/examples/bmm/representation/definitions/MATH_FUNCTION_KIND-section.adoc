@@ -1,0 +1,21 @@
+
+=== enum MATH_FUNCTION_KIND
+
+[tabs]
+======
+Diff::
++
+include::MATH_FUNCTION_KIND.adoc[]
+
+Flat::
++
+include::MATH_FUNCTION_KIND-flat.adoc[]
+
+Props(diff)::
++
+include::MATH_FUNCTION_KIND-properties.adoc[]
+
+Props(flat)::
++
+include::MATH_FUNCTION_KIND-properties-flat.adoc[]
+======

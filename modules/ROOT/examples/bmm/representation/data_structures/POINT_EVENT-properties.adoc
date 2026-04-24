@@ -1,0 +1,13 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class POINT_EVENT<T>*
+
+h|*Description*
+2+a|Defines a single point event in a series.
+
+h|*Inherit*
+2+|xref:representation:representation-data_structures.adoc#_class_event[EVENT]
+
+|===

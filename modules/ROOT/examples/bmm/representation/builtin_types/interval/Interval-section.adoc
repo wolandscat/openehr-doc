@@ -1,0 +1,21 @@
+
+=== class Interval
+
+[tabs]
+======
+Diff::
++
+include::Interval.adoc[]
+
+Flat::
++
+include::Interval-flat.adoc[]
+
+Props(diff)::
++
+include::Interval-properties.adoc[]
+
+Props(flat)::
++
+include::Interval-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class HISTORY
+
+[tabs]
+======
+Diff::
++
+include::HISTORY.adoc[]
+
+Flat::
++
+include::HISTORY-flat.adoc[]
+
+Props(diff)::
++
+include::HISTORY-properties.adoc[]
+
+Props(flat)::
++
+include::HISTORY-properties-flat.adoc[]
+======

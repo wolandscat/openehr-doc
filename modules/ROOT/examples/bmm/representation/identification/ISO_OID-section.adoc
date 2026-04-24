@@ -1,0 +1,21 @@
+
+=== class ISO_OID
+
+[tabs]
+======
+Diff::
++
+include::ISO_OID.adoc[]
+
+Flat::
++
+include::ISO_OID-flat.adoc[]
+
+Props(diff)::
++
+include::ISO_OID-properties.adoc[]
+
+Props(flat)::
++
+include::ISO_OID-properties-flat.adoc[]
+======

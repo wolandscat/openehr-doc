@@ -1,0 +1,21 @@
+
+=== class Octet
+
+[tabs]
+======
+Diff::
++
+include::Octet.adoc[]
+
+Flat::
++
+include::Octet-flat.adoc[]
+
+Props(diff)::
++
+include::Octet-properties.adoc[]
+
+Props(flat)::
++
+include::Octet-properties-flat.adoc[]
+======

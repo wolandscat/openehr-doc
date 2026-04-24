@@ -1,0 +1,21 @@
+
+=== class UID
+
+[tabs]
+======
+Diff::
++
+include::UID.adoc[]
+
+Flat::
++
+include::UID-flat.adoc[]
+
+Props(diff)::
++
+include::UID-properties.adoc[]
+
+Props(flat)::
++
+include::UID-properties-flat.adoc[]
+======

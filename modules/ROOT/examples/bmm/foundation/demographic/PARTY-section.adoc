@@ -1,0 +1,21 @@
+
+=== class PARTY
+
+[tabs]
+======
+Diff::
++
+include::PARTY.adoc[]
+
+Flat::
++
+include::PARTY-flat.adoc[]
+
+Props(diff)::
++
+include::PARTY-properties.adoc[]
+
+Props(flat)::
++
+include::PARTY-properties-flat.adoc[]
+======

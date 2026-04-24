@@ -1,0 +1,21 @@
+
+=== class EVALUATION
+
+[tabs]
+======
+Diff::
++
+include::EVALUATION.adoc[]
+
+Flat::
++
+include::EVALUATION-flat.adoc[]
+
+Props(diff)::
++
+include::EVALUATION-properties.adoc[]
+
+Props(flat)::
++
+include::EVALUATION-properties-flat.adoc[]
+======

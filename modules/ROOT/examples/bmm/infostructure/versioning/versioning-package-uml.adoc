@@ -1,0 +1,115 @@
+
+.versioning Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class VERSIONED_OBJECT<T> [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_versioned_object]] {
+        .. access ..
+        uid: HIER_OBJECT_ID
+        owner_id: OBJECT_REF
+        time_created: DV_DATE_TIME
+        version_count:Integer
+        all_version_ids:List<OBJECT_VERSION_ID>
+        all_versions:List<VERSION<>>
+        has_version_at_time(a_time: DV_DATE_TIME):Boolean
+        has_version_id(a_version_uid: OBJECT_VERSION_ID):Boolean
+        version_with_id(a_version_uid: OBJECT_VERSION_ID):VERSION<T>
+        version_at_time(a_time: DV_DATE_TIME):VERSION<T>
+        is_original_version(a_version_uid: OBJECT_VERSION_ID):Boolean
+        revision_history:REVISION_HISTORY
+        latest_version:VERSION<T>
+        latest_trunk_version:VERSION<T>
+        trunk_lifecycle_state:DV_CODED_TEXT
+}
+
+class ATTESTATION [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_attestation]] {
+        .. access ..
+        attested_view: DV_MULTIMEDIA
+        proof: String
+        items: List<DV_EHR_URI>
+        reason: DV_TEXT
+        is_pending: Boolean
+}
+
+AUDIT_DETAILS <|-[#gray]- ATTESTATION
+
+
+class REVISION_HISTORY_ITEM [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_revision_history_item]] {
+        .. access ..
+        version_id: OBJECT_VERSION_ID
+}
+
+REVISION_HISTORY_ITEM *--> "0..* audits" AUDIT_DETAILS
+
+class REVISION_HISTORY [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_revision_history]] {
+        .. access ..
+        most_recent_version:String
+        most_recent_version_time_committed:String
+}
+
+REVISION_HISTORY *--> "0..* items" REVISION_HISTORY_ITEM
+
+abstract class VERSION<T> [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_version]] {
+        .. access ..
+        contribution: OBJECT_REF
+        signature: String
+        uid:OBJECT_VERSION_ID
+        preceding_version_uid:OBJECT_VERSION_ID
+        data:T
+        lifecycle_state:DV_CODED_TEXT
+        canonical_form:String
+        owner_id:HIER_OBJECT_ID
+        is_branch:Boolean
+}
+
+VERSION *--> "1 commit_audit" AUDIT_DETAILS
+
+class AUDIT_DETAILS [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_audit_details]] {
+        .. access ..
+        system_id: String
+        time_committed: DV_DATE_TIME
+        change_type: DV_CODED_TEXT
+        description: DV_TEXT
+        committer: PARTY_PROXY
+}
+
+class CONTRIBUTION [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_contribution]] {
+        .. access ..
+        uid: HIER_OBJECT_ID
+        versions: List<OBJECT_REF>
+}
+
+CONTRIBUTION *--> "1 audit" AUDIT_DETAILS
+
+class ORIGINAL_VERSION<T> [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_original_version]] {
+        .. access ..
+        uid: OBJECT_VERSION_ID
+        preceding_version_uid: OBJECT_VERSION_ID
+        other_input_version_uids: List<OBJECT_VERSION_ID>
+        lifecycle_state: DV_CODED_TEXT
+        data: T
+        is_merged:Boolean
+}
+
+VERSION <|-[#gray]- ORIGINAL_VERSION
+
+
+ORIGINAL_VERSION *--> "0..* attestations" ATTESTATION
+
+class IMPORTED_VERSION<T> [[/splashlang-doc/latest/infostructure/infostructure-versioning.html#_class_imported_version]] {
+        .. access ..
+        uid:OBJECT_VERSION_ID
+        preceding_version_uid:OBJECT_VERSION_ID
+        lifecycle_state:DV_CODED_TEXT
+        data:T
+}
+
+VERSION <|-[#gray]- IMPORTED_VERSION
+
+
+IMPORTED_VERSION *--> "1 item" ORIGINAL_VERSION
+
+....

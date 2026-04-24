@@ -1,0 +1,21 @@
+
+=== class TUPLE2
+
+[tabs]
+======
+Diff::
++
+include::TUPLE2.adoc[]
+
+Flat::
++
+include::TUPLE2-flat.adoc[]
+
+Props(diff)::
++
+include::TUPLE2-properties.adoc[]
+
+Props(flat)::
++
+include::TUPLE2-properties-flat.adoc[]
+======

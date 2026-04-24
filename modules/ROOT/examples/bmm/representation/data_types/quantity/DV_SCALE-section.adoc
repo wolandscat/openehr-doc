@@ -1,0 +1,21 @@
+
+=== class DV_SCALE
+
+[tabs]
+======
+Diff::
++
+include::DV_SCALE.adoc[]
+
+Flat::
++
+include::DV_SCALE-flat.adoc[]
+
+Props(diff)::
++
+include::DV_SCALE-properties.adoc[]
+
+Props(flat)::
++
+include::DV_SCALE-properties-flat.adoc[]
+======

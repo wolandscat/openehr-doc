@@ -1,0 +1,21 @@
+
+=== class Any
+
+[tabs]
+======
+Diff::
++
+include::Any.adoc[]
+
+Flat::
++
+include::Any-flat.adoc[]
+
+Props(diff)::
++
+include::Any-properties.adoc[]
+
+Props(flat)::
++
+include::Any-properties-flat.adoc[]
+======

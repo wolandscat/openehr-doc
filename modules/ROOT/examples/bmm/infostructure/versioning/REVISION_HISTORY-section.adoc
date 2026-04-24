@@ -1,0 +1,21 @@
+
+=== class REVISION_HISTORY
+
+[tabs]
+======
+Diff::
++
+include::REVISION_HISTORY.adoc[]
+
+Flat::
++
+include::REVISION_HISTORY-flat.adoc[]
+
+Props(diff)::
++
+include::REVISION_HISTORY-properties.adoc[]
+
+Props(flat)::
++
+include::REVISION_HISTORY-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== class DV_ENCAPSULATED
+
+[tabs]
+======
+Diff::
++
+include::DV_ENCAPSULATED.adoc[]
+
+Flat::
++
+include::DV_ENCAPSULATED-flat.adoc[]
+
+Props(diff)::
++
+include::DV_ENCAPSULATED-properties.adoc[]
+
+Props(flat)::
++
+include::DV_ENCAPSULATED-properties-flat.adoc[]
+======

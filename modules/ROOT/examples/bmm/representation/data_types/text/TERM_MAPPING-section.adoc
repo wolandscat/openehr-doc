@@ -1,0 +1,21 @@
+
+=== class TERM_MAPPING
+
+[tabs]
+======
+Diff::
++
+include::TERM_MAPPING.adoc[]
+
+Flat::
++
+include::TERM_MAPPING-flat.adoc[]
+
+Props(diff)::
++
+include::TERM_MAPPING-properties.adoc[]
+
+Props(flat)::
++
+include::TERM_MAPPING-properties-flat.adoc[]
+======

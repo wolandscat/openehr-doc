@@ -1,0 +1,21 @@
+
+=== class DV_INTERVAL
+
+[tabs]
+======
+Diff::
++
+include::DV_INTERVAL.adoc[]
+
+Flat::
++
+include::DV_INTERVAL-flat.adoc[]
+
+Props(diff)::
++
+include::DV_INTERVAL-properties.adoc[]
+
+Props(flat)::
++
+include::DV_INTERVAL-properties-flat.adoc[]
+======

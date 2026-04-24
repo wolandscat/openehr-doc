@@ -1,0 +1,40 @@
+
+.data_types Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class DATA_VALUE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] {
+}
+
+class DV_IDENTIFIER [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_identifier]] {
+        .. access ..
+        id: String
+        issuer: String
+        assigner: String
+        type: String
+}
+
+DATA_VALUE <|-[#gray]- DV_IDENTIFIER
+
+
+class DV_STATE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_state]] {
+        .. access ..
+        value: DV_CODED_TEXT
+        is_terminal: Boolean
+}
+
+DATA_VALUE <|-[#gray]- DV_STATE
+
+
+class DV_BOOLEAN [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_boolean]] {
+        .. access ..
+        value: Boolean
+}
+
+DATA_VALUE <|-[#gray]- DV_BOOLEAN
+
+
+....

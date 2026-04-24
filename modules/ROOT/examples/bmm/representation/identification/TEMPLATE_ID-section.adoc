@@ -1,0 +1,21 @@
+
+=== class TEMPLATE_ID
+
+[tabs]
+======
+Diff::
++
+include::TEMPLATE_ID.adoc[]
+
+Flat::
++
+include::TEMPLATE_ID-flat.adoc[]
+
+Props(diff)::
++
+include::TEMPLATE_ID-properties.adoc[]
+
+Props(flat)::
++
+include::TEMPLATE_ID-properties-flat.adoc[]
+======

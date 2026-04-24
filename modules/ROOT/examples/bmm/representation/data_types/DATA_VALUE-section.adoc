@@ -1,0 +1,21 @@
+
+=== class DATA_VALUE
+
+[tabs]
+======
+Diff::
++
+include::DATA_VALUE.adoc[]
+
+Flat::
++
+include::DATA_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::DATA_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::DATA_VALUE-properties-flat.adoc[]
+======

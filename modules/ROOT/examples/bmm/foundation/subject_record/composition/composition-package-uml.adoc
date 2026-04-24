@@ -1,0 +1,58 @@
+
+.composition Package
+[plantuml,opts=interactive]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class COMPOSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_composition]] {
+        .. access ..
+        language: CODE_PHRASE «iso.iso_639-1»
+        territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
+        category: DV_CODED_TEXT
+        composer: PARTY_PROXY
+        is_persistent:Boolean
+}
+
+LOCATABLE <|-[#gray]- COMPOSITION
+
+
+COMPOSITION *--> "0..1 context" EVENT_CONTEXT
+
+COMPOSITION *--> "0..* content" CONTENT_ITEM
+
+class SECTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_section]] {
+        .. access ..
+}
+
+CONTENT_ITEM <|-[#gray]- SECTION
+
+
+SECTION *--> "0..* items" CONTENT_ITEM
+
+class EVENT_CONTEXT [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_event_context]] {
+        .. access ..
+        start_time: DV_DATE_TIME
+        end_time: DV_DATE_TIME
+        location: String
+        setting: DV_CODED_TEXT
+        other_context: ITEM_STRUCTURE
+        health_care_facility: PARTY_IDENTIFIED
+        participations: List<PARTICIPATION>
+}
+
+PATHABLE <|-[#gray]- EVENT_CONTEXT
+
+
+abstract class CONTENT_ITEM [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_content_item]] {
+}
+
+LOCATABLE <|-[#gray]- CONTENT_ITEM
+
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+}
+abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_pathable]] #FDFDFD {
+}
+
+....

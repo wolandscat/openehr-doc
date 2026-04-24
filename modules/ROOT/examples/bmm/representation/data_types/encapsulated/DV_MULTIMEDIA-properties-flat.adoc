@@ -1,0 +1,71 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class DV_MULTIMEDIA*
+
+h|*Description*
+2+a|A specialisation of DV_ENCAPSULATED for audiovisual and bio-signal types.
+
+h|*Inherit*
+2+|xref:representation:representation-data_types.adoc#_class_dv_encapsulated[DV_ENCAPSULATED]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*alternate_text*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Text to display in lieu of multimedia display/replay.
+
+h|prop +
+  0..1
+|*uri*: xref:representation:representation-data_types.adoc#_class_dv_uri[DV_URI]
+a|URI reference to electronic information stored outside the record.
+
+h|prop +
+  0..1
+|*data*: xref:representation:representation-builtin_types.adoc#_class_array[Array]<xref:representation:representation-builtin_types.adoc#_class_octet[Octet]>
+a|The actual data found at uri, if supplied inline.
+
+h|prop +
+  
+|*media_type*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Data media type coded from openEHR code set media types (IANA MIME types).
+
+h|prop +
+  0..1
+|*compression_algorithm*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Compression type, a coded value. Void means no compression.
+
+h|prop +
+  0..1
+|*integrity_check*: xref:representation:representation-builtin_types.adoc#_class_array[Array]<xref:representation:representation-builtin_types.adoc#_class_octet[Octet]>
+a|Binary cryptographic integrity checksum.
+
+h|prop +
+  0..1
+|*integrity_check_algorithm*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Type of integrity check.
+
+h|prop +
+  0..1
+|*thumbnail*: xref:representation:representation-data_types.adoc#_class_dv_multimedia[DV_MULTIMEDIA]
+a|The thumbnail for this item, if one exists; mainly for graphics formats.
+
+h|prop +
+  
+|*size*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Original size in bytes of unencoded encapsulated data.
+
+h|prop +
+  0..1
+|*charset*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Name of character encoding scheme. Unicode/UTF-8 is the default assumption.
+
+h|prop +
+  0..1
+|*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+a|Optional indicator of the localised language in which the data is written.
+
+|===

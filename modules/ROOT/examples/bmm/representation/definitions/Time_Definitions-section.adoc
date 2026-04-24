@@ -1,0 +1,21 @@
+
+=== class Time_Definitions
+
+[tabs]
+======
+Diff::
++
+include::Time_Definitions.adoc[]
+
+Flat::
++
+include::Time_Definitions-flat.adoc[]
+
+Props(diff)::
++
+include::Time_Definitions-properties.adoc[]
+
+Props(flat)::
++
+include::Time_Definitions-properties-flat.adoc[]
+======

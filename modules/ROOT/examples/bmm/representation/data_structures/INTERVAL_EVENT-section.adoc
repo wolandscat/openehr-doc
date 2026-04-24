@@ -1,0 +1,21 @@
+
+=== class INTERVAL_EVENT
+
+[tabs]
+======
+Diff::
++
+include::INTERVAL_EVENT.adoc[]
+
+Flat::
++
+include::INTERVAL_EVENT-flat.adoc[]
+
+Props(diff)::
++
+include::INTERVAL_EVENT-properties.adoc[]
+
+Props(flat)::
++
+include::INTERVAL_EVENT-properties-flat.adoc[]
+======

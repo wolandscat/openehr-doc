@@ -1,0 +1,21 @@
+
+=== class DV_STATE
+
+[tabs]
+======
+Diff::
++
+include::DV_STATE.adoc[]
+
+Flat::
++
+include::DV_STATE-flat.adoc[]
+
+Props(diff)::
++
+include::DV_STATE-properties.adoc[]
+
+Props(flat)::
++
+include::DV_STATE-properties-flat.adoc[]
+======

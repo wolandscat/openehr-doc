@@ -1,0 +1,21 @@
+
+=== class FUNCTION
+
+[tabs]
+======
+Diff::
++
+include::FUNCTION.adoc[]
+
+Flat::
++
+include::FUNCTION-flat.adoc[]
+
+Props(diff)::
++
+include::FUNCTION-properties.adoc[]
+
+Props(flat)::
++
+include::FUNCTION-properties-flat.adoc[]
+======

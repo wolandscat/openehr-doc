@@ -1,0 +1,21 @@
+
+=== class DV_URI
+
+[tabs]
+======
+Diff::
++
+include::DV_URI.adoc[]
+
+Flat::
++
+include::DV_URI-flat.adoc[]
+
+Props(diff)::
++
+include::DV_URI-properties.adoc[]
+
+Props(flat)::
++
+include::DV_URI-properties-flat.adoc[]
+======

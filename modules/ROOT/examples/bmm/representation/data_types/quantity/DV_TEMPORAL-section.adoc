@@ -1,0 +1,21 @@
+
+=== class DV_TEMPORAL
+
+[tabs]
+======
+Diff::
++
+include::DV_TEMPORAL.adoc[]
+
+Flat::
++
+include::DV_TEMPORAL-flat.adoc[]
+
+Props(diff)::
++
+include::DV_TEMPORAL-properties.adoc[]
+
+Props(flat)::
++
+include::DV_TEMPORAL-properties-flat.adoc[]
+======

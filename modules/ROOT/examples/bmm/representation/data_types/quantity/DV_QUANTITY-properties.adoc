@@ -1,0 +1,52 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *class DV_QUANTITY*
+
+h|*Description*
+2+a|Quantified type representing scientific quantities expressed as a magnitude and units. Units
+expressed in UCUM syntax by default.
+
+h|*Inherit*
+2+|xref:representation:representation-data_types.adoc#_class_dv_amount[DV_AMOUNT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*magnitude*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+a|Numeric magnitude of the quantity.
+
+h|prop +
+  
+|*units*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Quantity units, expressed as a code or syntax string from UCUM or specified units system.
+
+h|prop +
+  0..1
+|*precision*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+a|Precision to which the value is expressed in decimal places. 0 = integral; -1 = no limit.
+
+h|prop +
+  0..1
+|*units_system*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Optional field to specify a units system from which codes in units are defined.
+
+h|prop +
+  0..1
+|*units_display_name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+a|Optional field containing the displayable form of the units field.
+
+h|prop +
+  0..1
+|*normal_range*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_quantity[DV_QUANTITY]>
+a|Optional normal range.
+
+h|prop +
+  0..1
+|*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_quantity[DV_QUANTITY]>>
+a|Optional tagged other reference ranges.
+
+|===

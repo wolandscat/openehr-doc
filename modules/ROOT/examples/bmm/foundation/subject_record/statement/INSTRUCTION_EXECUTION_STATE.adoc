@@ -1,0 +1,80 @@
+
+[cols="^1,3,5"]
+|===
+
+3+^h|  *enum INSTRUCTION_EXECUTION_STATE*
+
+h|*Description*
+2+a|Enumeration of states in the Instruction State Machine (ISM) used to track the
+lifecycle of an Instruction execution.
+
+h|*Inherit*
+2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*initial* = "initial"
+a|
+Instruction created but not yet activated.
+
+
+
+h|
+|*planned* = "planned"
+a|
+Instruction has been planned.
+
+
+
+h|
+|*postponed* = "postponed"
+a|
+Instruction execution has been postponed.
+
+
+
+h|
+|*cancelled* = "cancelled"
+a|
+Instruction has been cancelled prior to start.
+
+
+
+h|
+|*active* = "active"
+a|
+Instruction is currently being executed.
+
+
+
+h|
+|*suspended* = "suspended"
+a|
+Instruction execution has been suspended.
+
+
+
+h|
+|*completed* = "completed"
+a|
+Instruction has been completed.
+
+
+
+h|
+|*aborted* = "aborted"
+a|
+Instruction execution has been aborted.
+
+
+
+h|
+|*expired* = "expired"
+a|
+Instruction has expired without completion.
+
+
+
+|===

@@ -1,0 +1,21 @@
+
+=== class ITEM_LIST
+
+[tabs]
+======
+Diff::
++
+include::ITEM_LIST.adoc[]
+
+Flat::
++
+include::ITEM_LIST-flat.adoc[]
+
+Props(diff)::
++
+include::ITEM_LIST-properties.adoc[]
+
+Props(flat)::
++
+include::ITEM_LIST-properties-flat.adoc[]
+======
