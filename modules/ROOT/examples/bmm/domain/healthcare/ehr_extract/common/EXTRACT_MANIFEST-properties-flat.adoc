@@ -14,6 +14,7 @@ h|
 h|prop +
   
 |*entities*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_entity_manifest[EXTRACT_ENTITY_MANIFEST]>
-a|List of entity manifests; UIDs of items included in the Extract.
+a|List of entity manifests uids of items included in the Extract; for openEHR data, these
+are uids identifying the version containers.
 
 |===

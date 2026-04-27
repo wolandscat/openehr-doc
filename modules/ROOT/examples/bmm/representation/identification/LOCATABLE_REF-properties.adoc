@@ -16,11 +16,13 @@ h|
 h|prop +
   0..1
 |*path*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional path from object root to final target.
+a|The path to an instance, as an absolute path with respect to the object found at
+`VERSION._data_`. An empty path means that the object referred to by `_id_` is being
+specified.
 
 h|prop +
   
 |*id*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
-a|Globally unique id of the target object (redefined to UID_BASED_ID).
+a|Globally unique id of an object, regardless of where it is stored.
 
 |===

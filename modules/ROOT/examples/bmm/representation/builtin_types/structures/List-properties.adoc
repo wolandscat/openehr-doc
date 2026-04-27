@@ -10,7 +10,14 @@ h|*Description*
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_container[Container]
 
+h|*Invariants*
+2+a|
+
 h|
-2+^h|*Feature Group "access"*
+2+a|first_validity: ¬ is_empty ⇒ ∃ first;
+
+h|
+2+a|last_validity: ¬ is_empty ⇒ ∃ last;
+
 
 |===

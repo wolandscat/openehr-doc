@@ -16,12 +16,18 @@ h|
 h|prop +
   
 |*addresses*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-demographic.adoc#_class_address[ADDRESS]>
-a|A set of address alternatives for this contact purpose and time validity
-combination.
+a|A set of address alternatives for this contact purpose and time validity combination.
 
 h|prop +
   0..1
 |*time_validity*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_date[DV_DATE]>
 a|Valid time interval for this contact descriptor.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|purpose_valid: purpose = name;
+
 
 |===

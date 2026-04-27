@@ -10,4 +10,11 @@ h|*Description*
 h|*Inherit*
 2+|xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|type_validity: type.is_equal("PERSON") ∨ type.is_equal("ORGANISATION") ∨ type.is_equal("GROUP") ∨ type.is_equal("AGENT") ∨ type.is_equal("ROLE") ∨ type.is_equal("PARTY") ∨ type.is_equal("ACTOR");
+
+
 |===

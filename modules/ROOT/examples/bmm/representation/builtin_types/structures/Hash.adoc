@@ -16,10 +16,10 @@ h|
 
 h| func
 |*has_key* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Test for presence of a key.
+a|Test for presence of `_a_key_`.
 
 h| func
 |*item* : V
-a|Return item for key.
+a|Return item for key `_a_key_`.
 
 |===

@@ -27,10 +27,20 @@ a|Test for membership of a value.
 
 h| func
 |*count* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of items in the container.
+a|Number of items in container.
 
 h| func
 |*is_empty* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the container is empty.
+a|True if container is empty.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|first_validity: ¬ is_empty ⇒ ∃ first;
+
+h|
+2+a|last_validity: ¬ is_empty ⇒ ∃ last;
+
 
 |===

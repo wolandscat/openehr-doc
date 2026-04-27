@@ -16,6 +16,14 @@ h|
 h|prop +
   
 |*relationship*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Relationship of subject of this ENTRY to the subject of the record. May be coded.
+a|Relationship of subject of this ENTRY to the subject of the record. May be coded. If it is
+the patient, coded as self.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|relationship_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_subject_relationship, relationship.defining_code);
+
 
 |===

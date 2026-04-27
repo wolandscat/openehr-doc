@@ -11,7 +11,4 @@ the equivalent CEN EN13606 single hierarchy for each subtype.
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
 
-h|
-2+^h|*Feature Group "access"*
-
 |===

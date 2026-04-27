@@ -17,16 +17,17 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Representation of all descendants as a single String.
+a|Representation of all descendants is a single String.
 
 h| func
 |*is_partial* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this date time is partial, i.e. if trailing end values are missing.
+a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
+missing.
 
 h| func
 |*is_extended* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this ISO8601 string is in the 'extended' form, i.e. uses '-' and
-or ':' separators.
+a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
+separators. This is the preferred format.
 
 h|
 2+^h|*Feature Group "operators"*

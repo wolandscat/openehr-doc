@@ -16,60 +16,68 @@ h|
 
 h| func
 |*is_open* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval imposes no constraints, i.e. is set to 0..*.
+a|True if this interval imposes no constraints, i.e. is set to `0..*`.
 
 h| func
 |*is_optional* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval expresses optionality, i.e. 0..1.
+a|True if this interval expresses optionality, i.e. `0..1`.
 
 h| func
 |*is_mandatory* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval expresses mandation, i.e. 1..1.
+a|True if this interval expresses mandation, i.e. `1..1`.
 
 h| func
 |*is_prohibited* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval is set to 0..0.
+a|True if this interval is set to `0..0`.
 
 h|prop +
   0..1
 |*lower*: T
-a|Lower bound.
+a|Lower bound. lower bound.
 
 h|prop +
   0..1
 |*upper*: T
-a|Upper bound.
+a|Upper bound. Upper bound.
 
 h|prop +
   
 |*lower_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if lower boundary is open (i.e. = -infinity).
+a|True if `_lower_` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
+-infinity)
 
 h|prop +
   
 |*upper_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if upper boundary is open (i.e. = +infinity).
+a|True if `_upper_` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
++infinity)
 
 h|prop +
   
 |*lower_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if lower boundary value is included in range, if not lower_unbounded.
+a|True if `_lower_` boundary value included in range, if `not _lower_unbounded_`. lower
+boundary value included in range if not lower_unbounded.
 
 h|prop +
   
 |*upper_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if upper boundary value is included in range, if not upper_unbounded.
+a|True if `_upper_` boundary value included in range if `not _upper_unbounded_`. upper
+boundary value included in range if not upper_unbounded.
 
 h| func
 |*has* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the value is properly contained in this Interval.
+a|True if the value `e` is properly contained in this Interval. True if (lower_unbounded or
+((lower_included and v >= lower) or v > lower)) and (upper_unbounded or ((upper_included
+and v \<= upper or v < upper)))
 
 h| func
 |*intersects* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if there is any overlap between intervals.
+a|True if there is any overlap between intervals represented by Current and `_other_`. True
+if at least one limit of `_other_` is strictly inside the limits of this interval.
 
 h| func
 |*contains* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if current interval properly contains other.
+a|True if current interval properly contains `_other_`? True if all points of `_other_` are
+inside the current interval.
 
 |===

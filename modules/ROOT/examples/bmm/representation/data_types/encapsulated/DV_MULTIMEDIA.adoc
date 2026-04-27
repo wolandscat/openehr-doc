@@ -21,22 +21,25 @@ a|Text to display in lieu of multimedia display/replay.
 h|prop +
   0..1
 |*uri*: xref:representation:representation-data_types.adoc#_class_dv_uri[DV_URI]
-a|URI reference to electronic information stored outside the record.
+a|URI reference to electronic information stored outside the record as a file, database
+entry etc, if supplied as a reference.
 
 h|prop +
   0..1
 |*data*: xref:representation:representation-builtin_types.adoc#_class_array[Array]<xref:representation:representation-builtin_types.adoc#_class_octet[Octet]>
-a|The actual data found at uri, if supplied inline.
+a|The actual data found at `_uri_`, if supplied inline.
 
 h|prop +
   
 |*media_type*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Data media type coded from openEHR code set media types (IANA MIME types).
+a|Data media type coded from openEHR code set media types (interface for the IANA MIME types
+code set).
 
 h|prop +
   0..1
 |*compression_algorithm*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Compression type, a coded value. Void means no compression.
+a|Compression type, a coded value from the openEHR Integrity check code set. Void means no
+compression.
 
 h|prop +
   0..1
@@ -46,7 +49,7 @@ a|Binary cryptographic integrity checksum.
 h|prop +
   0..1
 |*integrity_check_algorithm*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Type of integrity check.
+a|Type of integrity check, a coded value from the openEHR `Integrity check` code set.
 
 h|prop +
   0..1
@@ -56,22 +59,50 @@ a|The thumbnail for this item, if one exists; mainly for graphics formats.
 h|prop +
   
 |*size*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Original size in bytes of unencoded encapsulated data.
+a|Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64,
+hexadecimal etc do not change the value of this attribute.
 
 h| func
 |*is_external* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if data is stored externally to the record, as indicated by uri.
+a|Computed from the value of the `_uri_` attribute: True if the data is stored externally to
+the record, as indicated by `_uri_`. A copy may also be stored internally, in which case
+`_is_expanded_` is also true.
 
 h| func
 |*is_inline* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if data is stored in expanded form within the EHR itself.
+a|Computed from the value of the data attribute. True if the data is stored in expanded
+form, ie within the EHR itself.
 
 h| func
 |*is_compressed* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if data is stored in compressed form.
+a|Computed from the value of the `_compression_algorithm_` attribute: True if the data is
+stored in compressed form.
 
 h| func
 |*has_integrity_check* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if an integrity check has been computed.
+a|Computed from the value of the `_integrity_check_algorithm_` attribute: True if an
+integrity check has been computed.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|not_empty: is_inline ∨ is_external;
+
+h|
+2+a|media_type_valid: ∃ media_type ∧ code_set(Code_set_id_media_types).has_code(media_type);
+
+h|
+2+a|compression_algorithm_validity: ∃ compression_algorithm ⇒ code_set(Code_set_id_compression_algorithms).has_code(compression_algorithm);
+
+h|
+2+a|integrity_check_validity: ∃ integrity_check ⇒ ∃ integrity_check_algorithm;
+
+h|
+2+a|integrity_check_algorithm_validity: ∃ integrity_check_algorithm ⇒ code_set(Code_set_id_integrity_check_algorithms).has_code(integrity_check_algorithm);
+
+h|
+2+a|size_valid: size >= 0;
+
 
 |===

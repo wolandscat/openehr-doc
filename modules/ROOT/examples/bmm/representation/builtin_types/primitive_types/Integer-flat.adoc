@@ -66,7 +66,7 @@ h| func
 |*negative* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
   *alias* -
 
-a|Unary negation of current Integer value.
+a|Generate negative of current Integer value.
 
 h| func
 |*less_than_or_equal* ( +

@@ -18,34 +18,64 @@ h|
 h|prop +
   
 |*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Mandatory indicator of the localised language in which this Composition is written.
-Coded from openEHR Code Set languages.
+a|Mandatory indicator of the localised language in which this Composition is written. Coded
+from openEHR Code Set `languages`. The language of an Entry if different from the
+Composition is indicated in `ENTRY._language_`.
 
 h|prop +
   
 |*territory*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Name of territory in which this Composition was written. Coded from openEHR
-countries code set, which is an expression of the ISO 3166 standard.
+a|Name of territory in which this Composition was written. Coded from openEHR countries code
+set, which is an expression of the ISO 3166 standard.
 
 h|prop +
   
 |*category*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Temporal category of this Composition, e.g. persistent, episodic, event.
+a|Temporal category of this Composition, i.e.
+
+* `431\|persistent\|` - of potential life-time validity;
+* `451\|episodic\|` - valid over the life of a care episode;
+* `433\|event\|` - valid at the time of recording (long-term validity requires
+subsequent clinical assessment).
+
+or any other code defined in the openEHR terminology group 'category'.
 
 h|prop +
   
 |*composer*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
-a|The person primarily responsible for the content of the Composition.
+a|The person primarily responsible for the content of the Composition (but not necessarily
+its committal into the EHR system). This is the identifier which should appear on the
+screen. It may or may not be the person who entered the data. When it is the patient, the
+special self instance of `PARTY_PROXY` will be used.
 
 h|prop +
   0..1
 |*context*: xref:foundation:foundation-subject_record.adoc#_class_event_context[EVENT_CONTEXT]
-a|The clinical session context of this Composition, i.e. the contextual attributes
-of the clinical session.
+a|The clinical session context of this Composition, i.e. the contextual attributes of the
+clinical session.
 
 h|prop +
   0..1
 |*content*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]>
 a|The content of this Composition.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|category_validity: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_composition_category, category.defining_code);
+
+h|
+2+a|territory_valid: code_set(Code_set_id_countries).has_code(territory);
+
+h|
+2+a|language_valid: code_set(Code_set_id_languages).has_code(language);
+
+h|
+2+a|content_valid: ∃ content ⇒ ¬ content.is_empty();
+
+h|
+2+a|is_archetype_root: is_archetype_root;
+
 
 |===

@@ -16,6 +16,6 @@ h|
 h|prop +
   
 |*item*: xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]
-a|The single item in this structure.
+a|
 
 |===

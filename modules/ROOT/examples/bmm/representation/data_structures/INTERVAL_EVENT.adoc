@@ -16,7 +16,8 @@ h|
 h|prop +
   
 |*width*: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
-a|Duration of the time interval during which the values recorded under data are true.
+a|Duration of the time interval during which the values recorded under `data` are true and,
+if set, the values recorded under `state` are true. Void if an instantaneous event.
 
 h|prop +
   0..1
@@ -26,10 +27,23 @@ a|Optional count of original samples to which this event corresponds.
 h|prop +
   
 |*math_function*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Mathematical function of the data of this event, e.g. maximum, mean etc.
+a|Mathematical function of the data of this event, e.g. maximum, mean etc. Coded using https
+://github.com/openEHR/terminology/blob/master/openEHR_RM/en/openehr_terminology.xml[openEH
+R vocabulary `event math function`]. Default value `640\|actual\|`, meaning
+'actual value'.
 
 h| func
 |*interval_start_time* : xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Start time of the interval of this event.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|math_function_validity: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_event_math_function, math_function.defining_code);
+
+h|
+2+a|interval_start_time_valid: interval_start_time = time - width;
+
 
 |===

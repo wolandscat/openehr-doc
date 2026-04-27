@@ -38,6 +38,7 @@ a|Any audit information for the information item from the originating system.
 h|prop +
   0..1
 |*feeder_system_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit_details[FEEDER_AUDIT_DETAILS]
-a|Audit information from gateway system, if any.
+a|Any audit information for the information item from the feeder system, if different from
+the originating system.
 
 |===

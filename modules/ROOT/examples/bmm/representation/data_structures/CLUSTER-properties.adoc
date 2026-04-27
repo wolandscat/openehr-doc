@@ -16,6 +16,6 @@ h|
 h|prop +
   
 |*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_item[ITEM]>
-a|Ordered list of CLUSTER or ELEMENT items under this CLUSTER.
+a|Ordered list of items - `CLUSTER` or `ELEMENT` objects - under this `CLUSTER`.
 
 |===

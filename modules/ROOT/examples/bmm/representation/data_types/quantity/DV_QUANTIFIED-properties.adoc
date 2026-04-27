@@ -17,11 +17,27 @@ h|
 h|prop +
   0..1
 |*magnitude_status*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional status of magnitude with values: =, <, >, <=, >=, ~.
+a|Optional status of magnitude with values:
+
+* `"="` : magnitude is a point value
+* `"<"` : value is < magnitude
+* `">"` : value is > magnitude
+* `"\<="` : value is \<= magnitude
+* `">="` : value is >= magnitude
+* `"~"` : value is approximately magnitude
+
+If not present, assumed meaning is `"="` .
 
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|Accuracy of measurement. Exact form determined in descendants.
+a|Accuracy of measurement. Exact form of expression determined in descendants.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|magnitude_status_valid: ∃ magnitude_status ⇒ valid_magnitude_status(magnitude_status);
+
 
 |===

@@ -9,6 +9,12 @@ h|*Description*
 is any entity which can participate in an activity. The name attribute inherited from
 LOCATABLE is used to indicate the actual type of party.
 
+NOTE: It is strongly recommended that the inherited attribute uid be populated in `PARTY` objects,
+      using the UID copied from the `object_id()` of the `uid` field of the enclosing `VERSION`
+      object.
+      For example, the `ORIGINAL_VERSION.uid 87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2`
+      would be copied to the `uid` field of the `PARTY` object.
+
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
 
@@ -18,8 +24,8 @@ h|
 h|prop +
   
 |*identities*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-demographic.adoc#_class_party_identity[PARTY_IDENTITY]>
-a|Identities used by the party to identify itself, such as legal name, stage names,
-aliases, nicknames and so on.
+a|Identities used by the party to identify itself, such as legal name, stage names, aliases,
+nicknames and so on.
 
 h|prop +
   0..1
@@ -35,5 +41,27 @@ h|prop +
   0..1
 |*relationships*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-demographic.adoc#_class_party_relationship[PARTY_RELATIONSHIP]>
 a|Relationships in which this Party takes part as source.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|type_valid: type = name;
+
+h|
+2+a|contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
+
+h|
+2+a|relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
+
+h|
+2+a|reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);
+
+h|
+2+a|is_archetype_root: is_archetype_root;
+
+h|
+2+a|uid_mandatory: ∃ uid;
+
 
 |===

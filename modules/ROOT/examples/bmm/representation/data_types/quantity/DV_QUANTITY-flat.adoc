@@ -22,22 +22,45 @@ a|Numeric magnitude of the quantity.
 h|prop +
   
 |*units*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Quantity units, expressed as a code or syntax string from UCUM or specified units system.
+a|Quantity units, expressed as a code or syntax string from either UCUM (the default) or the
+units system specified in `_units_system_`, when set.
+
+In either case, the value is the code or syntax - normally formed of standard ASCII -
+which is in principal not the same as the display string, although in simple cases such as
+'m' (for meters) it will be.
+
+If the `_units_display_name_` field is set, this may be used for display. If not, the
+implementations must effect the resolution of the `_units_` value to a display form
+locally, e.g. by lookup of reference tables, request to a terminology service etc.
+
+Example values from UCUM: "kg/m^2", “mm[Hg]", "ms-1", "km/h".
 
 h|prop +
   0..1
 |*precision*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Precision to which the value is expressed in decimal places. 0 = integral; -1 = no limit.
+a|Precision to which the value of the quantity is expressed, in terms of number of decimal
+places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any
+number of decimal places.
 
 h|prop +
   0..1
 |*units_system*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional field to specify a units system from which codes in units are defined.
+a|Optional field used to specify a units system from which codes in `_units_` are defined.
+Value is a URI identifying a terminology containing units concepts from the
+(https://www.hl7.org/fhir/terminologies-systems.html[HL7 FHIR terminologies list]).
+
+If not set, the UCUM standard (case-sensitive codes) is assumed as the units system.
 
 h|prop +
   0..1
 |*units_display_name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional field containing the displayable form of the units field.
+a|Optional field containing the displayable form of the `_units_` field, e.g. `'°C'`.
+
+If not set, the application environment needs to determine the displayable form.
+
+NOTE: The display name may be language-dependent for various older and non-systematic
+units. For this reason, it is not recommended to add unit display names to archetypes,
+only to templates (for localisation purposes).
 
 h|prop +
   0..1
@@ -47,36 +70,53 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_quantity[DV_QUANTITY]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 h| func
 |*is_integral* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if precision = 0, meaning magnitude is a whole number.
+a|True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number.
 
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Accuracy of measurement, expressed either as a half-range percent value or a half-range quantity.
+a|Accuracy of measurement, expressed either as a half-range percent value
+(`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that
+accuracy is 100%, i.e. no error.
+
+A value of `_unknown_accuracy_value_` means that accuracy was not recorded.
 
 h|prop +
   0..1
 |*accuracy_is_percent*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|If True, accuracy was recorded as a percent value; if False, as an absolute quantity.
+a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a
+percent value; if `False`, as an absolute quantity value.
 
 h|prop +
   0..1
 |*magnitude_status*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional status of magnitude with values: =, <, >, <=, >=, ~.
+a|Optional status of magnitude with values:
+
+* `"="` : magnitude is a point value
+* `"<"` : value is < magnitude
+* `">"` : value is > magnitude
+* `"\<="` : value is \<= magnitude
+* `">="` : value is >= magnitude
+* `"~"` : value is approximately magnitude
+
+If not present, assumed meaning is `"="` .
 
 h| func
 |*accuracy_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if accuracy is not known.
+a|True if accuracy is not known, e.g. due to not being recorded or discernable.
 
 h|prop +
   0..1
 |*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional normal status indicator of value with respect to normal range. Coded as HHH, HH, H,
-(nothing), L, LL, LLL.
+a|Optional normal status indicator of value with respect to normal range for this value.
+Often included by lab, even if the normal range itself is not included. Coded by ordinals
+in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
+`normal_status`.
 
 h| func
 |*is_strictly_comparable_to* ( +
@@ -94,7 +134,8 @@ a|True if this quantity has no reference ranges.
 
 h| func
 |*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if value is in the normal range.
+a|Value is in the normal range, determined by comparison of the value to `_normal_range_` if
+present, or by the `_normal_status_` marker if present.
 
 h|
 2+^h|*Feature Group "operators"*

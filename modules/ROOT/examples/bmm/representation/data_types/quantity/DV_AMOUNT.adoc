@@ -17,11 +17,26 @@ h|
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Accuracy of measurement, expressed either as a half-range percent value or a half-range quantity.
+a|Accuracy of measurement, expressed either as a half-range percent value
+(`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that
+accuracy is 100%, i.e. no error.
+
+A value of `_unknown_accuracy_value_` means that accuracy was not recorded.
 
 h|prop +
   0..1
 |*accuracy_is_percent*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|If True, accuracy was recorded as a percent value; if False, as an absolute quantity.
+a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a
+percent value; if `False`, as an absolute quantity value.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|accuracy_is_percent_validity: accuracy = 0 ⇒ ¬ accuracy_is_percent;
+
+h|
+2+a|accuracy_validity: accuracy_is_percent ⇒ valid_percentage(accuracy);
+
 
 |===

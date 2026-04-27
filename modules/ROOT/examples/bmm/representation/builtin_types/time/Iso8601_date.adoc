@@ -32,14 +32,31 @@ a|Timezone; may be Void.
 
 h| func
 |*month_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether month in year is unknown.
+a|Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.
 
 h| func
 |*day_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether day in month is unknown.
+a|Indicates whether day in month is unknown. If so, and month is known, the date is of the
+form `"YYYY-MM"` or `"YYYYMM"`.
 
 h| func
 |*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|Return string value in extended format.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|year_valid: valid_year(year);
+
+h|
+2+a|month_valid: ¬ month_unknown ⇒ valid_month(month);
+
+h|
+2+a|day_valid: ¬ day_unknown ⇒ valid_day(year, month, day);
+
+h|
+2+a|partial_validity: month_unknown ⇒ day_unknown;
+
 
 |===

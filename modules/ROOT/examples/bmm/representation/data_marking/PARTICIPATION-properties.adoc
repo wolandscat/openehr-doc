@@ -17,24 +17,37 @@ h|
 h|prop +
   
 |*function*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Function of performer in participation, e.g. 'resuscitation/CPR' in emergency situation
+a|The function of the Party in this participation (note that a given party might participate
+in more than one way in a particular activity). This attribute should be coded, but cannot
+be limited to the HL7v3:ParticipationFunction vocabulary, since it is too limited and
+hospital-oriented.
 
 h|prop +
   0..1
 |*mode*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Optional field for recording the 'mode' of the performer / activity interaction,
-e.g. present, by telephone, by email etc.
+a|Optional field for recording the 'mode' of the performer / activity interaction, e.g.
+present, by telephone, by email etc.
 
 h|prop +
   0..1
 |*time*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]>
 a|The time interval during which the participation took place, if it is used in an
-observational context (i.e. recording facts about the past); or the intended time
-interval of the participation when used in future contexts, such as EHR Instructions.
+observational context (i.e. recording facts about the past); or the intended time interval
+of the participation when used in future contexts, such as EHR Instructions.
 
 h|prop +
   
 |*performer*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
 a|The id and possibly demographic system link of the party participating in the activity.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|function_valid: function.generating_type.is_equal("DV_CODED_TEXT") ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_function, function.defining_code);
+
+h|
+2+a|mode_valid: ∃ mode ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_mode, mode.defining_code);
+
 
 |===

@@ -17,11 +17,11 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|ISO8601 time string.
+a|ISO8601 time string
 
 h| func
 |*magnitude* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Numeric value of the time as seconds since start of day (00:00:00).
+a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
 h| func
 |*add* ( +
@@ -37,5 +37,12 @@ h| func
 |*diff* ( +
 other: xref:representation:representation-data_types.adoc#_class_dv_time[DV_TIME]): xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Time and other.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: valid_iso8601_time(value);
+
 
 |===

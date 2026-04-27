@@ -18,40 +18,46 @@ h|
 h|prop +
   
 |*subject*: xref:representation:representation-data_marking.adoc#_class_party_self[PARTY_SELF]
-a|The subject of this EHR. The external_ref attribute can be used to contain a
-direct reference to the subject in a demographic or identity service.
+a|The subject of this EHR. The `_external_ref_` attribute can be used to contain a direct
+reference to the subject in a demographic or identity service. Alternatively, the
+association between patients and their records may be done elsewhere for security reasons.
 
 h|prop +
   
 |*is_queryable*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this EHR should be included in population queries, i.e. if this EHR is
-considered active in the population.
+a|True if this EHR should be included in population queries, i.e. if this EHR is considered
+active in the population.
 
 h|prop +
   
 |*is_modifiable*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the EHR, other than the EHR_STATUS object, is allowed to be written to.
+a|True if the EHR, other than the `EHR_STATUS` object, is allowed to be written to. The
+`EHR_STATUS` object itself can always be written to.
 
 h|prop +
   0..1
 |*other_details*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Any other details of the EHR summary object, in the form of an archetyped
-ITEM_STRUCTURE.
+`ITEM_STRUCTURE`.
 
 h|prop +
   
 |*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Runtime name of this fragment, used to build runtime paths.
+a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
+a clinical application or batch process to name this EHR construct: its retention in the
+EHR faithfully preserves the original label by which this entry was known to end users.
 
 h|prop +
   0..1
 |*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
-a|Links to other archetyped structures.
+a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
+such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
 
 h|prop +
   0..1
 |*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
-a|Audit trail from non-openEHR system of original commit of information.
+a|Audit trail from non-openEHR system of original commit of information forming the content
+of this node, or from a conversion gateway which has synthesised this node.
 
 h|
 2+^h|*Feature Group "infrastructure"*
@@ -64,11 +70,24 @@ a|Optional globally unique object identifier for root points of archetyped struc
 h|prop +
   
 |*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Design-time archetype identifier of this node, used to build archetype paths.
+a|Design-time archetype identifier of this node taken from its generating archetype; used to
+build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
+a 'standardised' name for this node to be generated, by referring to the generating
+archetype local terminology.
+
+At an archetype root point, the value of this attribute is always the stringified form of
+the `_archetype_id_` found in the `_archetype_details_` object.
 
 h|prop +
   0..1
 |*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|is_archetype_root: is_archetype_root;
+
 
 |===

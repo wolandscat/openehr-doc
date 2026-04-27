@@ -21,4 +21,14 @@ h| func
 |*last* : T
 a|Return last element.
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|first_validity: ¬ is_empty ⇒ ∃ first;
+
+h|
+2+a|last_validity: ¬ is_empty ⇒ ∃ last;
+
+
 |===

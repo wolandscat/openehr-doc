@@ -17,21 +17,30 @@ h|
 h|prop +
   
 |*id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|The identifier value.
+a|The identifier value. Often structured, according to the definition of the issuing
+authority's rules.
 
 h|prop +
   0..1
 |*issuer*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional authority which issues the kind of id.
+a|Optional authority which issues the kind of id used in the id field of this object.
 
 h|prop +
   0..1
 |*assigner*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional organisation that assigned the id.
+a|Optional organisation that assigned the id to the item being identified.
 
 h|prop +
   0..1
 |*type*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional identifier type, such as prescription or Social Security Number.
+a|Optional identifier type, such as prescription , or Social Security Number . One day a
+controlled vocabulary might be possible for this.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|id_valid: ¬ id.is_empty();
+
 
 |===

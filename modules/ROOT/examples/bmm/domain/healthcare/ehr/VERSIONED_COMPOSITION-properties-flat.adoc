@@ -17,17 +17,29 @@ h|
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Unique identifier of this version container as a UID with no extension; the same
-in all instances of the same container in a distributed environment.
+a|Unique identifier of this version container in the form of a UID with no extension. This
+id will be the same in all instances of the same container in a distributed environment,
+meaning that it can be understood as the uid of the virtual version tree.
 
 h|prop +
   
 |*owner_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
-a|Reference to object to which this version container belongs, e.g. the containing EHR.
+a|Reference to object to which this version container belongs, e.g. the id of the containing
+EHR or other relevant owning entity.
 
 h|prop +
   
 |*time_created*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time of initial creation of this versioned object.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+
+h|
+2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
 
 |===

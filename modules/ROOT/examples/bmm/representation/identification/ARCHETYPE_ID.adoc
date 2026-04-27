@@ -16,31 +16,34 @@ h|
 
 h| func
 |*qualified_rm_entity* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Globally qualified reference model entity, e.g. "openehr-EHR-OBSERVATION".
+a|Globally qualified reference model entity, e.g. `"openehr-EHR-OBSERVATION"`.
 
 h| func
 |*domain_concept* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of the concept represented by this archetype, including specialisation, e.g. "Biochemistry_result-cholesterol".
+a|Name of the concept represented by this archetype, including specialisation, e.g.
+`"Biochemistry_result-cholesterol"`.
 
 h| func
 |*rm_originator* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Organisation originating the reference model on which this archetype is based, e.g. "openEHR", "CEN", "HL7".
+a|Organisation originating the reference model on which this archetype is based, e.g.
+`"openEHR"`, `"CEN"`, `"HL7"`.
 
 h| func
 |*rm_name* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of the reference model, e.g. "RIM", "EHR", "EN13606".
+a|Name of the reference model, e.g. `"RIM"`, `"EHR"`, `"EN13606"`.
 
 h| func
 |*rm_entity* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of the ontological level within the reference model to which this archetype is targeted, e.g.
-for openEHR: "FOLDER", "COMPOSITION", "SECTION", "OBSERVATION".
+a|Name of the ontological level within the reference model to which this archetype is
+targeted, e.g. for openEHR: `"FOLDER"`, `"COMPOSITION"`, `"SECTION"`, `"OBSERVATION"`.
 
 h| func
 |*specialisation* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of specialisation of concept, if this archetype is a specialisation of another archetype, e.g. "cholesterol".
+a|Name of specialisation of concept, if this archetype is a specialisation of another
+archetype, e.g. `"cholesterol"`.
 
 h| func
 |*version_id* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Version of this archetype.
+a|Version identification of this archetype, representing the major version, e.g. `"1"`.
 
 |===

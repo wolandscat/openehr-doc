@@ -17,6 +17,7 @@ h|
 h|prop +
   0..1
 |*rows*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]>
-a|Physical representation of the table as a list of CLUSTERs, each containing one row.
+a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of
+one row of the table.
 
 |===

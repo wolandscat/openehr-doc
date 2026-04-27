@@ -15,8 +15,9 @@ h|
 h|prop +
   0..1
 |*version_spec*: xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_version_spec[EXTRACT_VERSION_SPEC]
-a|Specification of which versions of information items to include in the Extract.
-If Void, the default is latest versions only.
+a|Specification of which versions of information items to include in the Extract. If Void,
+the default is latest versions only (which is reasonable for non-versioning systems as
+well).
 
 h|prop +
   
@@ -26,25 +27,43 @@ a|Specification of entities (e.g. records) to include in the Extract.
 h|prop +
   
 |*extract_type*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Coded term indicating the type of content required, e.g. openehr-ehr,
-openehr-demographic, generic-emr.
+a|Coded term indicating the type of content required, e.g.
+
+* `\|openehr-ehr\|`
+* `\|openehr-demographic\|`
+* `\|generic-emr\|`
+* `\|other\|`
+
+Coded by openEHR Terminology group `'extract content type'`.
 
 h|prop +
   
 |*include_multimedia*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether in-line instances of DV_MULTIMEDIA in the source data are
-included or not.
+a|Indicates whether in-line instances of `DV_MULTIMEDIA` in the source data are included or
+not.
 
 h|prop +
   
 |*priority*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Requested priority of this request to be handled by server.
+a|Requested priority of this request to be handled by server. Priority schemes are likely to
+be local, and use values agreed by both ends.
+
+TBD: alternative is standard coded terms
 
 h|prop +
   
 |*link_depth*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Degree of links to follow emanating from content items specified for inclusion.
-0 = don't follow; 1 = follow first degree links; n = follow nth degree links.
+a|Degree of links to follow emanating from content items specified for inclusion. The kind
+of links to follow is dependent on the type of Extract.
+
+All items at the target end of followed links at the given depth are also included in the
+extract; `EXTRACT_CONTENT_ITEM._is_primary_` is used to differentiate.
+
+* 0 = don't follow;
+* 1 = follow first degree links;
+* 2 = follow 2nd degree links;
+* ....
+* n = follow nth degree links
 
 h|prop +
   0..1

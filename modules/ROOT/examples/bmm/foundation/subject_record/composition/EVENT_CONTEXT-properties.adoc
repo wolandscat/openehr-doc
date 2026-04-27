@@ -19,8 +19,8 @@ h|
 h|prop +
   
 |*start_time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
-a|Start time of the clinical session or other kind of event during which a provider
-performs a service of any kind for the patient.
+a|Start time of the clinical session or other kind of event during which a provider performs
+a service of any kind for the patient.
 
 h|prop +
   0..1
@@ -30,14 +30,14 @@ a|Optional end time of the clinical session.
 h|prop +
   0..1
 |*location*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|The actual location where the session occurred, e.g. microbiology lab 2, home,
-ward A3.
+a|The actual location where the session occurred, e.g. 'microbiology lab 2', 'home', 'ward
+A3' and so on.
 
 h|prop +
   
 |*setting*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|The setting in which the clinical session took place. Coded using the openEHR
-Terminology, setting group.
+a|The setting in which the clinical session took place. Coded using the openEHR Terminology,
+setting group.
 
 h|prop +
   0..1
@@ -47,11 +47,28 @@ a|Other optional context which will be archetyped.
 h|prop +
   0..1
 |*health_care_facility*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
-a|The health care facility under whose care the event took place.
+a|The health care facility under whose care the event took place. This is the most specific
+workgroup or delivery unit within a care delivery enterprise that has an official
+identifier in the health system, and can be used to ensure medico-legal accountability.
 
 h|prop +
   0..1
 |*participations*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_participation[PARTICIPATION]>
-a|Parties involved in the healthcare event.
+a|Parties involved in the healthcare event. These would normally include the physician(s)
+and often the patient (but not the latter if the clinical session is a pathology test for
+example).
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|setting_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_setting, setting.defining_code);
+
+h|
+2+a|participations_validity: ∃ participations ⇒ ¬ participations.is_empty();
+
+h|
+2+a|location_valid: ∃ location ⇒ ¬ location.is_empty();
+
 
 |===

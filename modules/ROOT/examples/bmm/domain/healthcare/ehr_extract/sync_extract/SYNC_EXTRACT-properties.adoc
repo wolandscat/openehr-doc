@@ -21,6 +21,6 @@ a|Details of specification of this Extract.
 h|prop +
   0..1
 |*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:domain:domain-healthcare-ehr_extract.adoc#_class_x_contribution[X_CONTRIBUTION]>
-a|Content, in the form of serialised Contributions.
+a|Content, in the form of a serialised Contributions.
 
 |===

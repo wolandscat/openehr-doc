@@ -7,7 +7,4 @@
 h|*Description*
 2+a|Defines globally used constant values.
 
-h|
-2+^h|*Feature Group "infrastructure"*
-
 |===

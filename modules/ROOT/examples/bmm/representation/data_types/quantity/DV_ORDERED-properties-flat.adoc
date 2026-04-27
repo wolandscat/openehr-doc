@@ -16,8 +16,10 @@ h|
 h|prop +
   0..1
 |*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional normal status indicator of value with respect to normal range. Coded as HHH, HH, H,
-(nothing), L, LL, LLL.
+a|Optional normal status indicator of value with respect to normal range for this value.
+Often included by lab, even if the normal range itself is not included. Coded by ordinals
+in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
+`normal_status`.
 
 h|prop +
   0..1
@@ -27,9 +29,23 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
+
+h|*Invariants*
+2+a|
 
 h|
-2+^h|*Feature Group "operators"*
+2+a|other_reference_ranges_validity: ∃ other_reference_ranges ⇒ ¬ other_reference_ranges.is_empty();
+
+h|
+2+a|is_simple_validity: (¬ ∃ normal_range ∧ ¬ ∃ other_reference_ranges) ⇒ is_simple;
+
+h|
+2+a|normal_status_validity: ∃ normal_status ⇒ code_set(Code_set_id_normal_statuses).has_code(normal_status);
+
+h|
+2+a|normal_range_and_status_consistency: (∃ normal_range ∧ ∃ normal_status) ⇒ (normal_status.code_string.is_equal("N") ⊻ ¬ normal_range.has(self));
+
 
 |===

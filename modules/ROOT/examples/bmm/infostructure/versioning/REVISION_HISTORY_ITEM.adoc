@@ -19,7 +19,7 @@ a|Version identifier for this revision.
 h|prop +
   
 |*audits*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]>
-a|The audits for this revision; includes at least one commit audit, and optionally
-further attestations.
+a|The audits for this revision; there will always be at least one commit audit (which may
+itself be an `ATTESTATION`), there may also be further attestations.
 
 |===

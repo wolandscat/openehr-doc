@@ -35,7 +35,19 @@ a|Source of relationship.
 
 h| func
 |*type* : xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Type of relationship, such as employment, authority, health provision. Taken from
-value of inherited name attribute.
+a|Type of relationship, such as employment, authority, health provision
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|source_valid: ∃ source ∧ source.relationships.has(self);
+
+h|
+2+a|target_valid: ∃ target ∧ ¬ target.reverse_relationships.has(self);
+
+h|
+2+a|type_validity: type = name;
+
 
 |===

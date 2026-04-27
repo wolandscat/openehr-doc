@@ -22,21 +22,22 @@ a|The ISM current state. Coded by openEHR terminology group Instruction states.
 h|prop +
   0..1
 |*transition*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|The ISM transition which occurred to arrive in the current_state. Coded by
-openEHR terminology group Instruction transitions.
+a|The ISM transition which occurred to arrive in the current_state. Coded by openEHR
+terminology group Instruction transitions.
 
 h|prop +
   0..1
 |*careflow_step*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|The step in the careflow process which occurred as part of generating this action,
-e.g. dispense, start_administration. Represents the clinical label for the
-activity, as opposed to current_state which represents the ISM computable form.
+a|The step in the careflow process which occurred as part of generating this action, e.g.
+dispense , start_administration. This attribute represents the clinical label for the
+activity, as opposed to current_state which represents the state machine (ISM) computable
+form. Defined in archetype.
 
 h|prop +
   0..1
 |*reason*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]>
-a|Optional possibility of adding one or more reasons for this careflow step having
-been taken.
+a|Optional possibility of adding one or more reasons for this careflow step having been
+taken. Multiple reasons may occur in medication management for example.
 
 h|
 2+^h|*Feature Group "infrastructure"*
@@ -69,5 +70,15 @@ h| func
 |*path_of_item* ( +
 a_loc: xref:representation:representation-data_marking.adoc#_class_pathable[PATHABLE]): xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|The path to an item relative to the root of this archetyped structure.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|current_state_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_instruction_states, current_state.defining_code);
+
+h|
+2+a|transition_valid: ∃ transition ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_instruction_transitions, transition.defining_code);
+
 
 |===

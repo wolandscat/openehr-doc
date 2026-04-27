@@ -16,21 +16,30 @@ h|
 h|prop +
   
 |*relationship*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Relationship of subject of this ENTRY to the subject of the record. May be coded.
+a|Relationship of subject of this ENTRY to the subject of the record. May be coded. If it is
+the patient, coded as self.
 
 h|prop +
   0..1
 |*name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional human-readable name.
+a|Optional human-readable name (in String form).
 
 h|prop +
   0..1
 |*identifiers*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_identifier[DV_IDENTIFIER]>
-a|One or more formal identifiers.
+a|One or more formal identifiers (possibly computable).
 
 h|prop +
   0..1
 |*external_ref*: xref:representation:representation-identification.adoc#_class_party_ref[PARTY_REF]
-a|Optional reference to more detailed demographic or identification information for this party.
+a|Optional reference to more detailed demographic or identification information for this
+party, in an external system.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|relationship_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_subject_relationship, relationship.defining_code);
+
 
 |===

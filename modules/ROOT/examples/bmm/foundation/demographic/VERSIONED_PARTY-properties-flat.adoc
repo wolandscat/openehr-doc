@@ -16,13 +16,15 @@ h|
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Unique identifier of this version container as a UID with no extension; the same
-in all instances of the same container in a distributed environment.
+a|Unique identifier of this version container in the form of a UID with no extension. This
+id will be the same in all instances of the same container in a distributed environment,
+meaning that it can be understood as the uid of the virtual version tree.
 
 h|prop +
   
 |*owner_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
-a|Reference to object to which this version container belongs, e.g. the containing EHR.
+a|Reference to object to which this version container belongs, e.g. the id of the containing
+EHR or other relevant owning entity.
 
 h|prop +
   

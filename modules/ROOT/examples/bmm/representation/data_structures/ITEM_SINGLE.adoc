@@ -16,10 +16,10 @@ h|
 h|prop +
   
 |*item*: xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]
-a|The single item in this structure.
+a|
 
 h| func
 |*as_hierarchy* : xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]
-a|Generate a CEN EN13606-compatible hierarchy consisting of a single ELEMENT.
+a|Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.
 
 |===

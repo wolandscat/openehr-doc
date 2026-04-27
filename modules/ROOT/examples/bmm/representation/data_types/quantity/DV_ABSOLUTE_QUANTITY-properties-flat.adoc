@@ -17,18 +17,29 @@ h|
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-data_types.adoc#_class_dv_amount[DV_AMOUNT]
-a|Optional accuracy of measurement, expressed as a DV_AMOUNT.
+a|
 
 h|prop +
   0..1
 |*magnitude_status*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional status of magnitude with values: =, <, >, <=, >=, ~.
+a|Optional status of magnitude with values:
+
+* `"="` : magnitude is a point value
+* `"<"` : value is < magnitude
+* `">"` : value is > magnitude
+* `"\<="` : value is \<= magnitude
+* `">="` : value is >= magnitude
+* `"~"` : value is approximately magnitude
+
+If not present, assumed meaning is `"="` .
 
 h|prop +
   0..1
 |*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional normal status indicator of value with respect to normal range. Coded as HHH, HH, H,
-(nothing), L, LL, LLL.
+a|Optional normal status indicator of value with respect to normal range for this value.
+Often included by lab, even if the normal range itself is not included. Coded by ordinals
+in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
+`normal_status`.
 
 h|prop +
   0..1
@@ -38,9 +49,7 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
-a|Optional tagged other reference ranges.
-
-h|
-2+^h|*Feature Group "operators"*
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 |===

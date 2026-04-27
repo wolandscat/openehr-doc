@@ -11,4 +11,11 @@ representation substitutable for Interval<T> where needed.
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_interval[Interval]
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_point: lower = upper;
+
+
 |===

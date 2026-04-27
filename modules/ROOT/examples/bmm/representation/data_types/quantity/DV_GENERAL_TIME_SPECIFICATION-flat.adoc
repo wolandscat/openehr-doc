@@ -28,6 +28,6 @@ a|Extracted from value.
 h|prop +
   
 |*value*: xref:representation:representation-data_types.adoc#_class_dv_parsable[DV_PARSABLE]
-a|The specification, in the HL7v3 syntax for PIVL or EIVL types.
+a|The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types.
 
 |===

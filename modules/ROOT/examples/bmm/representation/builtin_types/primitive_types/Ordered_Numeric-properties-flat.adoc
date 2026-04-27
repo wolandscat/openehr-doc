@@ -11,7 +11,4 @@ less_than() and arithmetic functions defined.
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered],xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]
 
-h|
-2+^h|*Feature Group "operators"*
-
 |===

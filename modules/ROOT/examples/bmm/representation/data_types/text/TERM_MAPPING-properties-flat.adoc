@@ -14,16 +14,38 @@ h|
 h|prop +
   
 |*match*: xref:representation:representation-builtin_types.adoc#_class_character[Character]
-a|The relative match of the target term: > (broader), = (equivalent), < (narrower), ? (unknown).
+a|The relative match of the target term with respect to the mapped text item. Result
+meanings:
+
+* `'>'`: the mapping is to a broader term e.g. orginal text = arbovirus infection , target
+= viral infection
+* `'='`: the mapping is to a (supposedly) equivalent to the original item
+* `'<'`: the mapping is to a narrower term. e.g. original text = diabetes , mapping =
+diabetes mellitus .
+* `'?'`: the kind of mapping is unknown.
+
+The first three values are taken from the ISO standards 2788 ( Guide to Establishment and
+development of monolingual thesauri) and 5964 (Guide to Establishment and development of
+multilingual thesauri).
 
 h|prop +
   0..1
 |*purpose*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Purpose of the mapping e.g. automated data mining, billing, interoperability.
+a|Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'.
 
 h|prop +
   
 |*target*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
 a|The target term of the mapping.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|purpose_valid: ∃ purpose ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_term_mapping_purpose, purpose.defining_code);
+
+h|
+2+a|match_valid: is_valid_match_code(match);
+
 
 |===

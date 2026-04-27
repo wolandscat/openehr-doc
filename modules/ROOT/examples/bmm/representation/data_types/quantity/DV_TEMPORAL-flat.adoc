@@ -21,21 +21,32 @@ a|Time accuracy, expressed as a duration.
 h|prop +
   0..1
 |*magnitude_status*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional status of magnitude with values: =, <, >, <=, >=, ~.
+a|Optional status of magnitude with values:
+
+* `"="` : magnitude is a point value
+* `"<"` : value is < magnitude
+* `">"` : value is > magnitude
+* `"\<="` : value is \<= magnitude
+* `">="` : value is >= magnitude
+* `"~"` : value is approximately magnitude
+
+If not present, assumed meaning is `"="` .
 
 h| func
 |*magnitude* : xref:representation:representation-builtin_types.adoc#_class_ordered_numeric[Ordered_Numeric]
-a|The magnitude of this quantity.
+a|
 
 h| func
 |*accuracy_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if accuracy is not known.
+a|True if accuracy is not known, e.g. due to not being recorded or discernable.
 
 h|prop +
   0..1
 |*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional normal status indicator of value with respect to normal range. Coded as HHH, HH, H,
-(nothing), L, LL, LLL.
+a|Optional normal status indicator of value with respect to normal range for this value.
+Often included by lab, even if the normal range itself is not included. Coded by ordinals
+in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
+`normal_status`.
 
 h|prop +
   0..1
@@ -45,7 +56,8 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 h| func
 |*is_strictly_comparable_to* ( +
@@ -63,7 +75,8 @@ a|True if this quantity has no reference ranges.
 
 h| func
 |*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if value is in the normal range.
+a|Value is in the normal range, determined by comparison of the value to `_normal_range_` if
+present, or by the `_normal_status_` marker if present.
 
 h|
 2+^h|*Feature Group "operators"*

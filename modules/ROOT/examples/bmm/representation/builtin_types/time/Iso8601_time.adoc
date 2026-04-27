@@ -16,7 +16,7 @@ h|
 
 h| func
 |*hour* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Extract the hour part of the time as an Integer.
+a|Extract the hour part of the date/time as an Integer.
 
 h| func
 |*minute* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
@@ -24,12 +24,13 @@ a|Extract the minute part of the time as an Integer, or return 0 if not present.
 
 h| func
 |*second* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Extract the integral seconds part of the time as an Integer, or return 0 if
-not present.
+a|Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an
+Integer, or return 0 if not present.
 
 h| func
 |*fractional_second* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Extract the fractional seconds part of the time as a Real.
+a|Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a
+Real, or return 0.0 if not present.
 
 h| func
 |*timezone* : xref:representation:representation-builtin_types.adoc#_class_iso8601_timezone[Iso8601_timezone]
@@ -37,14 +38,34 @@ a|Timezone; may be Void.
 
 h| func
 |*minute_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether minute is unknown.
+a|Indicates whether minute is unknown. If so, the time is of the form “hh”.
 
 h| func
 |*second_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether second is unknown.
+a|Indicates whether second is unknown. If so and month is known, the time is of the form
+`"hh:mm"` or `"hhmm"`.
 
 h| func
 |*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|Return string value in extended format.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|hour_valid: valid_hour(hour, minute, second);
+
+h|
+2+a|minute_valid: ¬ minute_unknown ⇒ valid_minute(minute);
+
+h|
+2+a|second_valid: ¬ second_unknown ⇒ valid_second(second);
+
+h|
+2+a|fractional_second_valid: has_fractional_second ⇒ (¬ second_unknown ∧ valid_fractional_second(fractional_second));
+
+h|
+2+a|partial_validity: minute_unknown ⇒ second_unknown;
+
 
 |===

@@ -17,31 +17,51 @@ h|
 h|prop +
   0..1
 |*lower*: T
-a|Lower bound.
+a|Lower bound. lower bound.
 
 h|prop +
   0..1
 |*upper*: T
-a|Upper bound.
+a|Upper bound. Upper bound.
 
 h|prop +
   
 |*lower_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if lower boundary is open (i.e. = -infinity).
+a|True if `_lower_` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
+-infinity)
 
 h|prop +
   
 |*upper_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if upper boundary is open (i.e. = +infinity).
+a|True if `_upper_` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
++infinity)
 
 h|prop +
   
 |*lower_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if lower boundary value is included in range, if not lower_unbounded.
+a|True if `_lower_` boundary value included in range, if `not _lower_unbounded_`. lower
+boundary value included in range if not lower_unbounded.
 
 h|prop +
   
 |*upper_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if upper boundary value is included in range, if not upper_unbounded.
+a|True if `_upper_` boundary value included in range if `not _upper_unbounded_`. upper
+boundary value included in range if not upper_unbounded.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|lower_included_valid: lower_unbounded ⇒ ¬ lower_included;
+
+h|
+2+a|upper_included_valid: upper_unbounded ⇒ ¬ upper_included;
+
+h|
+2+a|limits_consistent: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower <= upper;
+
+h|
+2+a|limits_comparable: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower.strictly_comparable_to(upper);
+
 
 |===

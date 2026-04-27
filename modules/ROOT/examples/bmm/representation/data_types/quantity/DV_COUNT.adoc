@@ -16,7 +16,7 @@ h|
 h|prop +
   
 |*magnitude*: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]
-a|The count value.
+a|
 
 h|prop +
   0..1
@@ -26,6 +26,7 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_count[DV_COUNT]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 |===

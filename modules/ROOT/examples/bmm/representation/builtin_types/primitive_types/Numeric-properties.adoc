@@ -11,7 +11,4 @@ operators defined.
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
 
-h|
-2+^h|*Feature Group "operators"*
-
 |===

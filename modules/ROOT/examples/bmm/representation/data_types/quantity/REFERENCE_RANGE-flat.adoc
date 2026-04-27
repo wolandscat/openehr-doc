@@ -14,11 +14,19 @@ h|
 h|prop +
   
 |*meaning*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Term whose value indicates the meaning of this range, e.g. normal, critical, therapeutic.
+a|Term whose value indicates the meaning of this range, e.g. normal, critical, therapeutic
+etc.
 
 h|prop +
   
 |*range*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<T>
-a|The data range for this meaning.
+a|The data range for this meaning, e.g. critical etc.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|range_is_simple: (range.lower_unbounded ∨ range.lower.is_simple) ∧ (range.upper_unbounded ∨ range.upper.is_simple);
+
 
 |===

@@ -11,7 +11,4 @@ object_id '::' creating_system_id '::' version_tree_id.
 h|*Inherit*
 2+|xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
 
-h|
-2+^h|*Feature Group "access"*
-
 |===

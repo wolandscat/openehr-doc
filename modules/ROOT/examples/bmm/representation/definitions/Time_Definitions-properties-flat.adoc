@@ -9,7 +9,4 @@ h|*Description*
 where the international dateline is. Thus, time in New Zealand is quoted
 using +12:00, not -12:00.
 
-h|
-2+^h|*Feature Group "definitions"*
-
 |===

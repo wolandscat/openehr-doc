@@ -17,16 +17,30 @@ h|
 h|prop +
   0..1
 |*name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional human-readable name.
+a|Optional human-readable name (in String form).
 
 h|prop +
   0..1
 |*identifiers*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_dv_identifier[DV_IDENTIFIER]>
-a|One or more formal identifiers.
+a|One or more formal identifiers (possibly computable).
 
 h|prop +
   0..1
 |*external_ref*: xref:representation:representation-identification.adoc#_class_party_ref[PARTY_REF]
-a|Optional reference to more detailed demographic or identification information for this party.
+a|Optional reference to more detailed demographic or identification information for this
+party, in an external system.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|basic_validity: ∃ name ∨ ∃ identifiers ∨ ∃ external_ref;
+
+h|
+2+a|name_valid: ∃ name ⇒ ¬ name.is_empty();
+
+h|
+2+a|identifiers_valid: ∃ identifiers ⇒ ¬ identifiers.is_empty();
+
 
 |===

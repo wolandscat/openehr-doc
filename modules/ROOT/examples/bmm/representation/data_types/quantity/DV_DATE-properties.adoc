@@ -19,4 +19,11 @@ h|prop +
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|ISO8601 date string.
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: valid_iso8601_date(value);
+
+
 |===

@@ -18,8 +18,8 @@ a|Party sending the message.
 h|prop +
   
 |*sender_reference*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Identification of message used by sender. This will be the same no matter how
-many times this message is sent to these recipients.
+a|Identification of message used by sender. This will be the same no matter how many times
+this message is sent to these recipients.
 
 h|prop +
   
@@ -29,8 +29,11 @@ a|Intended recipients, in the form of internet addresses.
 h|prop +
   0..1
 |*urgency*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Urgency with which destination should deal with message: -1 = low, 0 = normal,
-1 = high.
+a|Urgency with which destination should deal with message:
+
+* -1 - low
+* 0 - normal
+* 1 - high
 
 h|prop +
   

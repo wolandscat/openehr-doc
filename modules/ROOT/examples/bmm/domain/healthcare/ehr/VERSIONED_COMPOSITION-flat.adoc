@@ -21,13 +21,15 @@ a|Indicates whether this composition set is persistent; derived from first versi
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Unique identifier of this version container as a UID with no extension; the same
-in all instances of the same container in a distributed environment.
+a|Unique identifier of this version container in the form of a UID with no extension. This
+id will be the same in all instances of the same container in a distributed environment,
+meaning that it can be understood as the uid of the virtual version tree.
 
 h|prop +
   
 |*owner_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
-a|Reference to object to which this version container belongs, e.g. the containing EHR.
+a|Reference to object to which this version container belongs, e.g. the id of the containing
+EHR or other relevant owning entity.
 
 h|prop +
   
@@ -77,7 +79,7 @@ a|History of all audits and attestations in this versioned repository.
 
 h| func
 |*latest_version* : xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T>
-a|Return the most recently added version (on trunk or any branch).
+a|Return the most recently added version (i.e. on trunk or any branch).
 
 h| func
 |*latest_trunk_version* : xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T>
@@ -85,6 +87,17 @@ a|Return the most recently added trunk version.
 
 h| func
 |*trunk_lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Return the lifecycle state from the latest trunk version.
+a|Return the lifecycle state from the latest trunk version. Useful for determining if the
+version container is logically deleted.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+
+h|
+2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
 
 |===

@@ -14,8 +14,8 @@ h|
 h|prop +
   
 |*includes_versions*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the Versions from the Contribution are included; False if just the
-Contribution and its Audit are included.
+a|True if the Versions from the Contribution are included; False if just the Contribution
+and its Audit are included.
 
 h|prop +
   0..1

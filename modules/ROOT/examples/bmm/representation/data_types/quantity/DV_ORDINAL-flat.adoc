@@ -22,13 +22,17 @@ a|Value in ordered enumeration of values. Any integer value can be used.
 h|prop +
   
 |*symbol*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Coded textual representation of this value in the enumeration.
+a|Coded textual representation of this value in the enumeration, which may be strings made
+from + symbols, or other enumerations of terms such as `mild`, `moderate`, `severe`, or
+even the same number series as the values, e.g. 1, 2, 3.
 
 h|prop +
   0..1
 |*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional normal status indicator of value with respect to normal range. Coded as HHH, HH, H,
-(nothing), L, LL, LLL.
+a|Optional normal status indicator of value with respect to normal range for this value.
+Often included by lab, even if the normal range itself is not included. Coded by ordinals
+in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
+`normal_status`.
 
 h|prop +
   0..1
@@ -38,7 +42,8 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 h| func
 |*is_strictly_comparable_to* ( +
@@ -56,7 +61,8 @@ a|True if this quantity has no reference ranges.
 
 h| func
 |*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if value is in the normal range.
+a|Value is in the normal range, determined by comparison of the value to `_normal_range_` if
+present, or by the `_normal_status_` marker if present.
 
 h|
 2+^h|*Feature Group "operators"*

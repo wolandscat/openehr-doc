@@ -16,11 +16,24 @@ h|
 h|prop +
   0..1
 |*charset*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Name of character encoding scheme. Unicode/UTF-8 is the default assumption.
+a|Name of character encoding scheme in which this value is encoded. Coded from openEHR Code
+Set character sets . Unicode is the default assumption in openEHR, with UTF-8 being the
+assumed encoding. This attribute allows for variations from these assumptions.
 
 h|prop +
   0..1
 |*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional indicator of the localised language in which the data is written.
+a|Optional indicator of the localised language in which the data is written, if relevant.
+Coded from openEHR Code Set `languages`.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|language_valid: ∃ language ⇒ code_set(Code_set_id_languages).has_code(language);
+
+h|
+2+a|charset_valid: ∃ charset ⇒ code_set(Code_set_id_character_sets).has_code(charset);
+
 
 |===

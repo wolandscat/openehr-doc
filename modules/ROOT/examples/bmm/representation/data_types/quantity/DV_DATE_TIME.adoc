@@ -20,7 +20,8 @@ a|ISO8601 date/time string.
 
 h| func
 |*magnitude* : xref:representation:representation-builtin_types.adoc#_class_double[Double]
-a|Numeric value of the date/time as seconds since 0001-01-01T00:00:00Z.
+a|Numeric value of the date/time as seconds since the calendar origin date/time
+`0001-01-01T00:00:00Z`.
 
 h| func
 |*add* ( +
@@ -36,5 +37,12 @@ h| func
 |*diff* ( +
 other: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Date/time and other.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: valid_iso8601_date_time(value);
+
 
 |===

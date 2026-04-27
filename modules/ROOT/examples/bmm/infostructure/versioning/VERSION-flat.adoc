@@ -24,36 +24,50 @@ a|OpenPGP digital signature or digest of content committed in this Version.
 h|prop +
   
 |*commit_audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
-a|Audit trail corresponding to the committal of this version to the VERSIONED_OBJECT.
+a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
 h| func
 |*uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Unique identifier of this VERSION as a {object_id, version_tree_id, creating_system_id} triple.
+a|Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id,
+creating_system_id}` triple, where the `_object_id_` has the same value as the containing
+`VERSIONED_OBJECT _uid_`.
 
 h| func
 |*preceding_version_uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Unique identifier of the version of which this version is a modification;
-Void if this is the first version.
+a|Unique identifier of the version of which this version is a modification; Void if this is
+the first version.
 
 h| func
 |*data* : T
-a|The data of this Version.
+a|The data of this Version. Original content of this Version.
 
 h| func
 |*lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Lifecycle state of this version; coded by openEHR vocabulary version lifecycle state.
+a|Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.
 
 h| func
 |*canonical_form* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|A canonical serial form of this Version, suitable for generating reliable hashes
-and signatures.
+a|A canonical serial form of this Version, suitable for generating reliable hashes and
+signatures. Canonical form of Version object, created by serialising all attributes except
+signature.
 
 h| func
 |*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Copy of the owning VERSIONED_OBJECT uid value; extracted from the local uid property.
+a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_`
+property's `_object_id_`.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Version represents a branch. Derived from uid attribute.
+a|True if this Version represents a branch. Derived from `_uid_` attribute.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|preceding_version_uid_validity: uid.version_tree_id.is_first ⊻ ∃ preceding_version_uid;
+
+h|
+2+a|lifecycle_state__valid: ∃ lifecycle_state ∧ terminology(Term_id_openehr).has_code_for_group_id(Group_id_version_lifecycle_state, lifecycle_state.defining_code);
+
 
 |===

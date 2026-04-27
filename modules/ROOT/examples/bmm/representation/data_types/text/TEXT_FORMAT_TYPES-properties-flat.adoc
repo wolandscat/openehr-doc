@@ -25,7 +25,4 @@ h|
 |*markdown* = 2
 a|
 
-h|
-2+^h|*Feature Group "operators"*
-
 |===

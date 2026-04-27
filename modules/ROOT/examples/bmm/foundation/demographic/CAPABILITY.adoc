@@ -17,9 +17,8 @@ h|
 h|prop +
   
 |*credentials*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
-a|The qualifications of the performer of the role for this capability. This might
-include professional qualifications and official identifications such as provider
-numbers.
+a|The qualifications of the performer of the role for this capability. This might include
+professional qualifications and official identifications such as provider numbers etc.
 
 h|prop +
   0..1

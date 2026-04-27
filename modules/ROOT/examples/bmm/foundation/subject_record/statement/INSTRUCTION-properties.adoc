@@ -23,8 +23,9 @@ a|Mandatory human-readable version of what the Instruction is about.
 h|prop +
   0..1
 |*expiry_time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
-a|Optional expiry date/time to assist determination of when an Instruction can be
-assumed to have expired.
+a|Optional expiry date/time to assist determination of when an Instruction can be assumed to
+have expired. This helps prevent false listing of Instructions as Active when they clearly
+must have been terminated in some way or other.
 
 h|prop +
   0..1
@@ -35,5 +36,12 @@ h|prop +
   0..1
 |*activities*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-subject_record.adoc#_class_activity[ACTIVITY]>
 a|List of all activities in Instruction.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|activities_valid: ∃ activities ⇒ ¬ activities.is_empty();
+
 
 |===

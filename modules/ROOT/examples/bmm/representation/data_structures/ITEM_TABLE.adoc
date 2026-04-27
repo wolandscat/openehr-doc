@@ -17,7 +17,8 @@ h|
 h|prop +
   0..1
 |*rows*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]>
-a|Physical representation of the table as a list of CLUSTERs, each containing one row.
+a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of
+one row of the table.
 
 h| func
 |*row_count* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
@@ -73,6 +74,7 @@ a|Return cell at a particular location.
 
 h| func
 |*as_hierarchy* : xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
-a|Generate a CEN EN13606-compatible hierarchy.
+a|Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing
+the `CLUSTERs` representing the columns of this table.
 
 |===

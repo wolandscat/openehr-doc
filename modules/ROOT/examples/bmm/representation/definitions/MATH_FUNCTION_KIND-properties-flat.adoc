@@ -53,10 +53,4 @@ h|
 |*total* = "total"
 a|
 
-h|
-2+^h|*Feature Group "access"*
-
-h|
-2+^h|*Feature Group "operators"*
-
 |===

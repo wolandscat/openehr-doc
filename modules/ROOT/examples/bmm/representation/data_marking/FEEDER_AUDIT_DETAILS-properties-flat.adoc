@@ -14,12 +14,16 @@ h|
 h|prop +
   
 |*system_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Identifier of the system which handled the information item.
+a|Identifier of the system which handled the information item. This is the IT system owned
+by the organisation legally responsible for handling the data, and at which the data were
+previously created or passed by an earlier system.
 
 h|prop +
   0..1
 |*location*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
 a|Identifier of the particular site/facility within an organisation which handled the item.
+For computability, this identifier needs to be e.g. a PKI identifier which can be included
+in the identifier list of the `PARTY_IDENTIFIED` object.
 
 h|prop +
   0..1
@@ -34,16 +38,26 @@ a|Optional provider(s) who created, committed, forwarded or otherwise handled th
 h|prop +
   0..1
 |*time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
-a|Time of handling the item.
+a|Time of handling the item. For an originating system, this will be time of creation, for
+an intermediate feeder system, this will be a time of accession or other time of handling,
+where available.
 
 h|prop +
   0..1
 |*version_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Any identifier used in the system such as interim, final, or numeric versions if available.
+a|Any identifier used in the system such as "interim" , "final" , or numeric versions if
+available.
 
 h|prop +
   0..1
 |*other_details*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Optional attribute to carry any custom meta-data. May be archetyped.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|system_id_valid: ¬ system_id.is_empty();
+
 
 |===

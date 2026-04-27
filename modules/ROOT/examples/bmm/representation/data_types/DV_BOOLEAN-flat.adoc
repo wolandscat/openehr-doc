@@ -16,6 +16,6 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Boolean value of this item.
+a|Boolean value of this item. Actual values may be language or implementation dependent.
 
 |===

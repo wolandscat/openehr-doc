@@ -21,10 +21,20 @@ a|The string, which may validly be empty in some syntaxes.
 h|prop +
   
 |*formalism*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of the formalism, e.g. GLIF 1.0, Proforma etc.
+a|Name of the formalism, e.g. GLIF 1.0 , Proforma etc.
 
 h| func
 |*size* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
 a|Size in bytes of value.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|formalism_valid: ¬ formalism.is_empty();
+
+h|
+2+a|size_valid: size >= 0;
+
 
 |===

@@ -19,7 +19,16 @@ h|
 h|prop +
   0..1
 |*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]>
-a|Ordered list of content items under this section, which may include more SECTIONs
-or ENTRYs.
+a|Ordered list of content items under this section, which may include:
+
+* more `SECTIONs`;
+* `ENTRYs`.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|items_valid: ∃ items ⇒ ¬ items.is_empty();
+
 
 |===

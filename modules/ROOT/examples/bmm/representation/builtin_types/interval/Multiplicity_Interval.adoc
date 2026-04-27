@@ -16,18 +16,18 @@ h|
 
 h| func
 |*is_open* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval imposes no constraints, i.e. is set to 0..*.
+a|True if this interval imposes no constraints, i.e. is set to `0..*`.
 
 h| func
 |*is_optional* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval expresses optionality, i.e. 0..1.
+a|True if this interval expresses optionality, i.e. `0..1`.
 
 h| func
 |*is_mandatory* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval expresses mandation, i.e. 1..1.
+a|True if this interval expresses mandation, i.e. `1..1`.
 
 h| func
 |*is_prohibited* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this interval is set to 0..0.
+a|True if this interval is set to `0..0`.
 
 |===

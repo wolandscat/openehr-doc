@@ -21,8 +21,8 @@ a|The content extracted and serialised from the source repository for this Extra
 h|prop +
   0..1
 |*specification*: xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_spec[EXTRACT_SPEC]
-a|The specification that this Extract actually conforms to; might not be identical
-with the specification of the corresponding request.
+a|The specification that this Extract actually conforms to; might not be identical with the
+specification of the corresponding request.
 
 h|prop +
   0..1
@@ -32,7 +32,7 @@ a|Reference to causing Request, if any.
 h|prop +
   
 |*time_created*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
-a|Creation time of this Extract.
+a|Creation time of this Extract
 
 h|prop +
   
@@ -42,13 +42,19 @@ a|Identifier of creating system.
 h|prop +
   
 |*sequence_nr*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of this Extract response in sequence of responses to Extract request
-identified by request_id. If this is the sole response, or there was no request,
-value is 1.
+a|Number of this Extract response in sequence of responses to Extract request identified by
+`_request_id_`. If this is the sole response, or there was no request, value is 1.
 
 h|prop +
   0..1
 |*participations*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_participation[EXTRACT_PARTICIPATION]>
 a|Participations relevant to the creation of this Extract.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|sequence_nr_valid: sequence_nr >= 1;
+
 
 |===

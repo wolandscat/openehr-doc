@@ -11,7 +11,32 @@ to seconds. Value format: P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]].
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
 
+h|*Invariants*
+2+a|
+
 h|
-2+^h|*Feature Group "access"*
+2+a|years_valid: years >= 0;
+
+h|
+2+a|months_valid: months >= 0;
+
+h|
+2+a|weeks_valid: weeks >= 0;
+
+h|
+2+a|days_valid: days >= 0;
+
+h|
+2+a|hours_valid: hours >= 0;
+
+h|
+2+a|minutes_valid: minutes >= 0;
+
+h|
+2+a|seconds_valid: seconds >= 0;
+
+h|
+2+a|fractional_second_valid: fractional_second >= 0.0 ∧ fractional_second < 1.0;
+
 
 |===

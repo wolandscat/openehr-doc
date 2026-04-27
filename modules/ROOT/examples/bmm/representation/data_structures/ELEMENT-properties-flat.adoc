@@ -16,32 +16,39 @@ h|
 h|prop +
   0..1
 |*value*: xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
-a|Property representing leaf value object of ELEMENT.
+a|Property representing leaf value object of `ELEMENT`. In real data, any concrete subtype
+of `DATA_VALUE` can be used.
 
 h|prop +
   0..1
 |*null_flavour*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Flavour of null value, e.g. unknown, no information, masked, not applicable.
+a|Flavour of null value, e.g. `253\|unknown\|`, `271\|no information\|`,
+`272\|masked\|`, and `273\|not applicable\|`.
 
 h|prop +
   0..1
 |*null_reason*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Optional specific reason for null value; if set, null_flavour must be set.
+a|Optional specific reason for null value; if set, `_null_flavour_` must be set. Null reason
+may apply only to a minority of clinical data, commonly needed in reporting contexts.
 
 h|prop +
   
 |*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Runtime name of this fragment, used to build runtime paths.
+a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
+a clinical application or batch process to name this EHR construct: its retention in the
+EHR faithfully preserves the original label by which this entry was known to end users.
 
 h|prop +
   0..1
 |*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
-a|Links to other archetyped structures.
+a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
+such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
 
 h|prop +
   0..1
 |*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
-a|Audit trail from non-openEHR system of original commit of information.
+a|Audit trail from non-openEHR system of original commit of information forming the content
+of this node, or from a conversion gateway which has synthesised this node.
 
 h|
 2+^h|*Feature Group "infrastructure"*
@@ -54,11 +61,33 @@ a|Optional globally unique object identifier for root points of archetyped struc
 h|prop +
   
 |*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Design-time archetype identifier of this node, used to build archetype paths.
+a|Design-time archetype identifier of this node taken from its generating archetype; used to
+build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
+a 'standardised' name for this node to be generated, by referring to the generating
+archetype local terminology.
+
+At an archetype root point, the value of this attribute is always the stringified form of
+the `_archetype_id_` found in the `_archetype_details_` object.
 
 h|prop +
   0..1
 |*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_is_null_valid: is_null() = (¬ ∃ value);
+
+h|
+2+a|inv_null_flavour_indicated: is_null() ⊻ ¬ ∃ null_flavour;
+
+h|
+2+a|inv_null_flavour_valid: is_null ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_null_flavour, null_flavour.defining_code);
+
+h|
+2+a|inv_null_reason_valid: ∃ null_reason ⇒ is_null();
+
 
 |===

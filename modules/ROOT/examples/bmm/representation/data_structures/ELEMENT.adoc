@@ -16,20 +16,39 @@ h|
 h|prop +
   0..1
 |*value*: xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
-a|Property representing leaf value object of ELEMENT.
+a|Property representing leaf value object of `ELEMENT`. In real data, any concrete subtype
+of `DATA_VALUE` can be used.
 
 h|prop +
   0..1
 |*null_flavour*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Flavour of null value, e.g. unknown, no information, masked, not applicable.
+a|Flavour of null value, e.g. `253\|unknown\|`, `271\|no information\|`,
+`272\|masked\|`, and `273\|not applicable\|`.
 
 h|prop +
   0..1
 |*null_reason*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Optional specific reason for null value; if set, null_flavour must be set.
+a|Optional specific reason for null value; if set, `_null_flavour_` must be set. Null reason
+may apply only to a minority of clinical data, commonly needed in reporting contexts.
 
 h| func
 |*is_null* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if value logically not known.
+a|True if value logically not known, e.g. if indeterminate, not asked etc.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_is_null_valid: is_null() = (¬ ∃ value);
+
+h|
+2+a|inv_null_flavour_indicated: is_null() ⊻ ¬ ∃ null_flavour;
+
+h|
+2+a|inv_null_flavour_valid: is_null ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_null_flavour, null_flavour.defining_code);
+
+h|
+2+a|inv_null_reason_valid: ∃ null_reason ⇒ is_null();
+
 
 |===

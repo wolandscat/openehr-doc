@@ -7,7 +7,4 @@
 h|*Description*
 2+a|Abstract parent of ordered types, which includes all numeric and temporal types.
 
-h|
-2+^h|*Feature Group "operators"*
-
 |===

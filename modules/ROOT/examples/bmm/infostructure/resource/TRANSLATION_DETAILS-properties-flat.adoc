@@ -13,7 +13,9 @@ h|
 h|prop +
   
 |*language*: xref:representation:representation-builtin_types.adoc#_class_terminology_code[Terminology_code]
-a|Language of the translation, encoded using ISO 639-1 language codes.
+a|Language of the translation, encoded following the RFC 5646 standard, using ISO 639-1
+(two-character) language codes, e.g. "en". It may include a region subtag conforming to
+ISO 3166-1 alpha-2 (two-character country codes), e.g. "pt-br" for Brazilian Portuguese.
 
 h|prop +
   
@@ -23,22 +25,25 @@ a|Primary translator name and other demographic details.
 h|prop +
   0..1
 |*accreditation*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Accreditation of primary translator or group, usually a national translator's
-registration or association membership id.
+a|Accreditation of primary translator or group, usually a national translator's registration
+or association membership id.
 
 h|prop +
   0..1
 |*version_last_translated*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Version of this resource last time it was translated into this language.
+a|Version of this resource last time it was translated into the language represented by this
+`TRANSLATION_DETAILS` object.
 
 h|prop +
   0..1
 |*other_contributors*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>
-a|Additional contributors to this translation.
+a|Additional contributors to this translation, each listed in the preferred format of the
+relevant organisation for the artefacts in question. A typical default is `"name <email>"`
+if nothing else is specified.
 
 h|prop +
   0..1
 |*other_details*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>
-a|Any other meta-data about this translation.
+a|Any other meta-data.
 
 |===

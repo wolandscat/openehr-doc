@@ -13,7 +13,7 @@ h|
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|UID of Contribution in source system.
+a|Uid of Contribution in source system.
 
 h|prop +
   

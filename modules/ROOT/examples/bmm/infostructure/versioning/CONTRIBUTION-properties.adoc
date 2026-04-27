@@ -19,8 +19,9 @@ a|Unique identifier for this Contribution.
 h|prop +
   
 |*versions*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]>
-a|Set of references to Versions causing changes to this EHR. May include paths
-pointing to any number of versionable items such as COMPOSITIONs and FOLDERs.
+a|Set of references to Versions causing changes to this EHR. Each contribution contains a
+list of versions, which may include paths pointing to any number of versionable items,
+i.e. items of types such as `COMPOSITION` and `FOLDER`.
 
 h|prop +
   

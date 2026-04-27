@@ -10,20 +10,17 @@ h|*Description*
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
 
-h|
-2+^h|*Feature Group "operators"*
-
 h|*Invariants*
 2+a|
 
 h|
-2+a|involutive_negation: is_equal(¬ (¬ Self));
+2+a|involutive_negation: is_equal(¬ (¬ self));
 
 h|
-2+a|non_contradiction: ¬ (Self ∧ (¬ Self));
+2+a|non_contradiction: ¬ (self ∧ (¬ self));
 
 h|
-2+a|completeness: Self ∨ (¬ Self);
+2+a|completeness: self ∨ (¬ self);
 
 
 |===

@@ -10,4 +10,11 @@ h|*Description*
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_uri[DV_URI]
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|scheme_valid: scheme.is_equal(Ehr_scheme);
+
+
 |===

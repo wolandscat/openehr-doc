@@ -11,7 +11,11 @@ as breakfast. Based on HL7v3 PIVL<T> and EIVL<T>.
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_time_specification[DV_TIME_SPECIFICATION]
 
+h|*Invariants*
+2+a|
+
 h|
-2+^h|*Feature Group "access"*
+2+a|value_valid: value.formalism.is_equal("HL7:PIVL") ∨ value.formalism.is_equal("HL7:EIVL");
+
 
 |===

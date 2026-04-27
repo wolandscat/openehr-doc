@@ -17,6 +17,7 @@ h|
 h|prop +
   0..1
 |*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_item[ITEM]>
-a|The items comprising the ITEM_TREE.
+a|The items comprising the `ITEM_TREE`. Can include 0 or more `CLUSTERs` and/or 0 or more
+individual `ELEMENTs`.
 
 |===

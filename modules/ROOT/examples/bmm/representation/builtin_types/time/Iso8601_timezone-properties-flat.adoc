@@ -16,12 +16,22 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Representation of all descendants as a single String.
+a|Representation of all descendants is a single String.
+
+h|*Invariants*
+2+a|
 
 h|
-2+^h|*Feature Group "operators"*
+2+a|min_hour_valid: sign = -1 ⇒ hour > 0 ∧ hour ≤ Min_timezone_hour;
 
 h|
-2+^h|*Feature Group "definitions"*
+2+a|max_hour_valid: sign = 1 ⇒ hour > 0 ∧ hour ≤ Max_timezone_hour;
+
+h|
+2+a|minute_valid: ¬ minute_unknown ⇒ valid_minute(minute);
+
+h|
+2+a|sign_valid: sign = 1 ∨ sign = -1;
+
 
 |===

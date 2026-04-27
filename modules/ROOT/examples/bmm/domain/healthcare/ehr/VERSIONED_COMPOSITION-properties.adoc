@@ -11,7 +11,14 @@ VERSIONED_OBJECT<COMPOSITION>.
 h|*Inherit*
 2+|xref:infostructure:infostructure-versioning.adoc#_class_versioned_object[VERSIONED_OBJECT]
 
+h|*Invariants*
+2+a|
+
 h|
-2+^h|*Feature Group "access"*
+2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+
+h|
+2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
 
 |===

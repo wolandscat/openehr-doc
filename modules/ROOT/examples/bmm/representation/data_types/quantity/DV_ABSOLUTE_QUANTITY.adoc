@@ -17,6 +17,6 @@ h|
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-data_types.adoc#_class_dv_amount[DV_AMOUNT]
-a|Optional accuracy of measurement, expressed as a DV_AMOUNT.
+a|
 
 |===

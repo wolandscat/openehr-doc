@@ -13,16 +13,25 @@ h|
 h|prop +
   
 |*meaning*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Description of the relationship, usually in clinical terms, such as "problem" or "issue".
+a|Used to describe the relationship, usually in clinical terms, such as in response to (the
+relationship between test results and an order), follow-up to and so on. Such
+relationships can represent any clinically meaningful connection between pieces of
+information. Values for meaning include those described in Annex C, ENV 13606 pt 2 under
+the categories of generic , documenting and reporting , organisational , clinical ,
+circumstancial , and view management .
 
 h|prop +
   
 |*type*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Clinical or domain-level meaning for the kind of link, e.g. problem or issue.
+a|The type attribute is used to indicate a clinical or domain-level meaning for the kind of
+link, for example problem or issue . If type values are designed appropriately, they can
+be used by the requestor of EHR extracts to categorise links which must be followed and
+which can be broken when the extract is created.
 
 h|prop +
   
 |*target*: xref:representation:representation-data_types.adoc#_class_dv_ehr_uri[DV_EHR_URI]
-a|The logical 'to' object in the link relation.
+a|The logical to object in the link relation, as per the linguistic sense of the meaning
+attribute.
 
 |===

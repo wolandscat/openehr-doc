@@ -14,6 +14,6 @@ h|
 h|prop +
   
 |*documentation*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>>>
-a|Documentary annotations in a multi-level keyed structure: language, path, tag.
+a|Documentary annotations in a multi-level keyed structure.
 
 |===

@@ -22,6 +22,6 @@ a|Reference to the terminology concept formally representing this term.
 h|prop +
   
 |*text*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Text of the term.
+a|Text of term.
 
 |===

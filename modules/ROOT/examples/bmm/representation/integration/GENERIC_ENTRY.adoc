@@ -17,6 +17,7 @@ h|
 h|prop +
   
 |*data*: xref:representation:representation-data_structures.adoc#_class_item[ITEM]
-a|The data from the source message or record. May be recorded in any structural openEHR representation.
+a|The data from the source message or record. May be recorded in any structural openEHR
+representation.
 
 |===

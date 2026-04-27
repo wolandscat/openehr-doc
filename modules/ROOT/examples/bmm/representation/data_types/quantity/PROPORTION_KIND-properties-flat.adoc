@@ -33,7 +33,4 @@ h|
 |*pk_integer_fraction* = 4
 a|
 
-h|
-2+^h|*Feature Group "operators"*
-
 |===

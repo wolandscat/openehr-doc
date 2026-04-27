@@ -10,4 +10,11 @@ h|*Description*
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_interval[Interval]
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_not_point: lower ≠ upper;
+
+
 |===

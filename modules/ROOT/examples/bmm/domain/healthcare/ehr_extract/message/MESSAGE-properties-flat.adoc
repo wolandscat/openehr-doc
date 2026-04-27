@@ -21,7 +21,8 @@ responsible for its creation.
 h|prop +
   
 |*audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
-a|Details of who actually created the message and when.
+a|Details of who actually created the message and when. This is the person who entered the
+data or otherwise caused the message to be created, or might be a piece of software.
 
 h|prop +
   
@@ -31,6 +32,8 @@ a|Content of the message.
 h|prop +
   0..1
 |*signature*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional signature by the author of message content in openPGP format.
+a|Optional signature by the author of message content in openPGP format. The signature is
+created as a Hash and optional signing of the serialisation of this message object with
+this signature field Void.
 
 |===

@@ -17,7 +17,7 @@ h|
 h|prop +
   
 |*numerator*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Numerator of ratio.
+a|Numerator of ratio
 
 h|prop +
   
@@ -32,7 +32,9 @@ a|Indicates semantic type of proportion, including percent, unitary etc.
 h|prop +
   0..1
 |*precision*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Precision to which numerator and denominator values are expressed.
+a|Precision to which the `_numerator_` and `_denominator_` values of the proportion are
+expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
+The value -1 implies no limit, i.e. any number of decimal places.
 
 h|prop +
   0..1
@@ -42,7 +44,8 @@ a|Optional normal range.
 h|prop +
   0..1
 |*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_proportion[DV_PROPORTION]>>
-a|Optional tagged other reference ranges.
+a|Optional tagged other reference ranges for this value in its particular measurement
+context.
 
 h| func
 |*magnitude* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
@@ -50,6 +53,32 @@ a|Effective magnitude represented by ratio.
 
 h| func
 |*is_integral* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if numerator and denominator values are integers.
+a|True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_`
+is 0.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|type_validity: valid_proportion_kind(type);
+
+h|
+2+a|precision_validity: precision = 0 ⇒ is_integral;
+
+h|
+2+a|is_integral_validity: is_integral ⇒ (numerator.floor = numerator ∧ denominator.floor = denominator);
+
+h|
+2+a|fraction_validity: (type = pk_fraction ∨ type = pk_integer_fraction) ⇒ is_integral;
+
+h|
+2+a|unitary_validity: type = pk_unitary ⇒ denominator = 1;
+
+h|
+2+a|percent_validity: type = pk_percent ⇒ denominator = 100;
+
+h|
+2+a|valid_denominator: denominator ≠ 0;
+
 
 |===

@@ -16,42 +16,79 @@ h|
 
 h| func
 |*years* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of years in the value.
+a|Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
+if one exists.
 
 h| func
 |*months* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of months in the value.
+a|Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part,
+if one exists.
 
 h| func
 |*weeks* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of weeks in the value.
+a|Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.
 
 h| func
 |*days* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of days in the value.
+a|Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part,
+if one exists.
 
 h| func
 |*hours* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of hours in the value.
+a|Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part,
+if one exists.
 
 h| func
 |*minutes* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of minutes in the value.
+a|Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'`
+part, if one exists.
 
 h| func
 |*seconds* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of seconds in the value.
+a|Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the
+`'HMS'` part, if one exists.
 
 h| func
 |*fractional_seconds* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Fractional seconds in the value.
+a|Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the
+`'S'` in the `'HMS'` part, if one exists.
 
 h| func
 |*to_seconds* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Total number of seconds equivalent of entire duration.
+a|Total number of seconds equivalent (including fractional) of entire duration. Where non-
+definite elements such as year and month (i.e. 'Y' and 'M') are included, the
+corresponding 'average' durations from `Time_definitions` are used to compute the result.
 
 h| func
 |*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|Return the duration string value.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|years_valid: years >= 0;
+
+h|
+2+a|months_valid: months >= 0;
+
+h|
+2+a|weeks_valid: weeks >= 0;
+
+h|
+2+a|days_valid: days >= 0;
+
+h|
+2+a|hours_valid: hours >= 0;
+
+h|
+2+a|minutes_valid: minutes >= 0;
+
+h|
+2+a|seconds_valid: seconds >= 0;
+
+h|
+2+a|fractional_second_valid: fractional_second >= 0.0 ∧ fractional_second < 1.0;
+
 
 |===

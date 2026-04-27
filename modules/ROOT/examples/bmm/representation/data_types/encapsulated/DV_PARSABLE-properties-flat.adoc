@@ -21,16 +21,29 @@ a|The string, which may validly be empty in some syntaxes.
 h|prop +
   
 |*formalism*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Name of the formalism, e.g. GLIF 1.0, Proforma etc.
+a|Name of the formalism, e.g. GLIF 1.0 , Proforma etc.
 
 h|prop +
   0..1
 |*charset*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Name of character encoding scheme. Unicode/UTF-8 is the default assumption.
+a|Name of character encoding scheme in which this value is encoded. Coded from openEHR Code
+Set character sets . Unicode is the default assumption in openEHR, with UTF-8 being the
+assumed encoding. This attribute allows for variations from these assumptions.
 
 h|prop +
   0..1
 |*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Optional indicator of the localised language in which the data is written.
+a|Optional indicator of the localised language in which the data is written, if relevant.
+Coded from openEHR Code Set `languages`.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|formalism_valid: ¬ formalism.is_empty();
+
+h|
+2+a|size_valid: size >= 0;
+
 
 |===

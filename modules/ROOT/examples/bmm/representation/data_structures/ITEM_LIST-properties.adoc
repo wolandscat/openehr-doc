@@ -19,4 +19,11 @@ h|prop +
 |*items*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]>
 a|Physical representation of the list.
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|valid_structure: items.for_all(i.type = "ELEMENT");
+
+
 |===

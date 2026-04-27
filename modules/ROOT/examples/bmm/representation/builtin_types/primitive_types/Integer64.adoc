@@ -66,6 +66,6 @@ h| func
 |*negative* : xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
   *alias* -
 
-a|Unary negation of current Integer64 value.
+a|Generate negative of current Integer value.
 
 |===

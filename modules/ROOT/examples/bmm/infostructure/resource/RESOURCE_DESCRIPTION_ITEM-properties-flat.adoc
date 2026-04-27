@@ -15,7 +15,10 @@ h|
 h|prop +
   
 |*language*: xref:representation:representation-builtin_types.adoc#_class_terminology_code[Terminology_code]
-a|The localised language in which the items in this description item are written.
+a|The localised language in which the items in this description item are written. Encoded
+following the RFC 5646 standard, using ISO 639-1 (two-character) language codes, e.g.
+"en". It may include a region subtag conforming to ISO 3166-1 alpha-2 (two-character
+country codes), e.g. "pt-br" for Brazilian Portuguese.
 
 h|prop +
   
@@ -25,7 +28,7 @@ a|Purpose of the resource.
 h|prop +
   0..1
 |*keywords*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>
-a|Keywords which characterise this resource, used for indexing and searching.
+a|Keywords which characterise this resource, used e.g. for indexing and searching.
 
 h|prop +
   0..1
@@ -40,12 +43,12 @@ a|Description of any misuses of the resource, i.e. contexts in which it should n
 h|prop +
   0..1
 |*original_resource_uri*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>
-a|URIs of original clinical document(s) or description of which resource is a
-formalisation, in the language of this description item; keyed by meaning.
+a|URIs of original clinical document(s) or description of which resource is a formalisation,
+in the language of this description item; keyed by meaning.
 
 h|prop +
   0..1
 |*other_details*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:representation:representation-builtin_types.adoc#_class_string[String]>
-a|Additional language-sensitive resource metadata, as a list of name/value pairs.
+a|Additional language-senstive resource metadata, as a list of name/value pairs.
 
 |===

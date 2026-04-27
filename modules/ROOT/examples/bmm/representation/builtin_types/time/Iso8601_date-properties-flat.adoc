@@ -17,12 +17,22 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Representation of all descendants as a single String.
+a|Representation of all descendants is a single String.
+
+h|*Invariants*
+2+a|
 
 h|
-2+^h|*Feature Group "operators"*
+2+a|year_valid: valid_year(year);
 
 h|
-2+^h|*Feature Group "definitions"*
+2+a|month_valid: ¬ month_unknown ⇒ valid_month(month);
+
+h|
+2+a|day_valid: ¬ day_unknown ⇒ valid_day(year, month, day);
+
+h|
+2+a|partial_validity: month_unknown ⇒ day_unknown;
+
 
 |===

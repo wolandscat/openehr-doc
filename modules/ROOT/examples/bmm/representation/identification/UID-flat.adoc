@@ -16,4 +16,11 @@ h|prop +
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|The value of the id.
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: ¬ value.empty;
+
+
 |===

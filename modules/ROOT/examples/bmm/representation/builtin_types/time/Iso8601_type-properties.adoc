@@ -17,6 +17,6 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Representation of all descendants as a single String.
+a|Representation of all descendants is a single String.
 
 |===

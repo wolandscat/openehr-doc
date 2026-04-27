@@ -20,36 +20,66 @@ h|
 h|prop +
   
 |*subject*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
-a|Id of human subject of this ENTRY, e.g. organ donor, foetus, a family member, or
-another clinically relevant person.
+a|Id of human subject of this `ENTRY`, e.g.:
+
+* organ donor
+* foetus
+* a family member
+* another clinically relevant person.
 
 h|prop +
   0..1
 |*provider*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
-a|Optional identification of provider of the information in this ENTRY, such as the
-patient, a clinician, or a device.
+a|Optional identification of provider of the information in this `ENTRY`, which might be:
+
+* the patient
+* a patient agent, e.g. parent, guardian
+* the clinician
+* a device or software
+
+Generally only used when the recorder needs to make it explicit. Otherwise, Composition
+composer and other participants are assumed.
 
 h|prop +
   
 |*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Mandatory indicator of the localised language in which this Entry is written.
-Coded from openEHR Code Set languages.
+a|Mandatory indicator of the localised language in which this Entry is written. Coded from
+openEHR Code Set languages .
 
 h|prop +
   
 |*encoding*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
-a|Name of character set in which text values in this Entry are encoded. Coded from
-openEHR Code Set character sets.
+a|Name of character set in which text values in this Entry are encoded. Coded from openEHR
+Code Set character sets.
 
 h|prop +
   0..1
 |*other_participations*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_participation[PARTICIPATION]>
-a|Other participations at ENTRY level.
+a|Other participations at `ENTRY` level.
 
 h|prop +
   0..1
 |*workflow_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
-a|Identifier of externally held workflow engine data for this workflow execution,
-for this subject of care.
+a|Identifier of externally held workflow engine data for this workflow execution, for this
+subject of care.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|language_valid: code_set(Code_set_id_languages).has_code(language);
+
+h|
+2+a|encoding_valid: code_set(Code_set_id_character_sets).has_code(encoding);
+
+h|
+2+a|subject_validity: subject_is_self ⇒ subject.generating_type = "PARTY_SELF";
+
+h|
+2+a|other_participations_valid: ∃ other_participations ⇒ ¬ other_participations.is_empty();
+
+h|
+2+a|is_archetype_root: is_archetype_root;
+
 
 |===

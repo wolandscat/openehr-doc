@@ -16,12 +16,12 @@ h|
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Stored version of uid.
+a|Stored version of inheritance precursor.
 
 h|prop +
   0..1
 |*preceding_version_uid*: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Stored version of preceding_version_uid.
+a|Stored version of inheritance precursor.
 
 h|prop +
   0..1
@@ -31,8 +31,8 @@ a|Identifiers of other versions whose content was merged into this version, if a
 h|prop +
   
 |*lifecycle_state*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Lifecycle state of the content item; coded by openEHR vocabulary
-version lifecycle state.
+a|Lifecycle state of the content item in this version; coded by openEHR vocabulary `version
+lifecycle state`.
 
 h|prop +
   0..1
@@ -61,19 +61,34 @@ a|OpenPGP digital signature or digest of content committed in this Version.
 h|prop +
   
 |*commit_audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
-a|Audit trail corresponding to the committal of this version to the VERSIONED_OBJECT.
+a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
 h| func
 |*canonical_form* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|A canonical serial form of this Version, suitable for generating reliable hashes
-and signatures.
+a|A canonical serial form of this Version, suitable for generating reliable hashes and
+signatures. Canonical form of Version object, created by serialising all attributes except
+signature.
 
 h| func
 |*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Copy of the owning VERSIONED_OBJECT uid value; extracted from the local uid property.
+a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_`
+property's `_object_id_`.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Version represents a branch. Derived from uid attribute.
+a|True if this Version represents a branch. Derived from `_uid_` attribute.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|attestations_valid: ∃ attestations ⇒ ¬ attestations.is_empty();
+
+h|
+2+a|is_merged_validity: ¬ ∃ other_input_version_ids ⊻ is_merged;
+
+h|
+2+a|other_input_version_uids_valid: ∃ other_input_version_uids ⇒ ¬ other_input_version_uids.is_empty();
+
 
 |===

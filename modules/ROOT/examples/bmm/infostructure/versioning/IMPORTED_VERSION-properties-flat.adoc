@@ -18,7 +18,7 @@ h|
 h|prop +
   
 |*item*: xref:infostructure:infostructure-versioning.adoc#_class_original_version[ORIGINAL_VERSION]<T>
-a|The ORIGINAL_VERSION object that was imported.
+a|The `ORIGINAL_VERSION` object that was imported.
 
 h|prop +
   
@@ -33,6 +33,6 @@ a|OpenPGP digital signature or digest of content committed in this Version.
 h|prop +
   
 |*commit_audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
-a|Audit trail corresponding to the committal of this version to the VERSIONED_OBJECT.
+a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
 |===

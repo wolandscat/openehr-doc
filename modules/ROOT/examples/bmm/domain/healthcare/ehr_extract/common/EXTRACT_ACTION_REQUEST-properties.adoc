@@ -17,17 +17,17 @@ h|
 h|prop +
   
 |*request_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
-a|Identifier of previous EXTRACT_REQUEST.
+a|Identifier of previous `EXTRACT_REQUEST`.
 
 h|prop +
   
 |*action*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Requested action: cancel \| resend \| send new. Coded by openEHR Terminology group
-extract action type.
+a|Requested action: `cancel \| resend \| send new`. Coded by openEHR Terminology
+group `'extract action type'`.
 
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Identifier of this action request.
+a|
 
 |===

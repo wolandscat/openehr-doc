@@ -18,19 +18,20 @@ h|
 h|prop +
   
 |*item*: xref:infostructure:infostructure-versioning.adoc#_class_original_version[ORIGINAL_VERSION]<T>
-a|The ORIGINAL_VERSION object that was imported.
+a|The `ORIGINAL_VERSION` object that was imported.
 
 h| func
 |*uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Computed version of uid, derived as item.uid.
+a|Computed version of inheritance precursor, derived as `_item.uid_`.
 
 h| func
 |*preceding_version_uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Computed version of preceding_version_uid, derived as item.preceding_version_uid.
+a|Computed version of inheritance precursor, derived as `_item.preceding_version_uid_`.
 
 h| func
 |*lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Lifecycle state of the content item in the wrapped ORIGINAL_VERSION.
+a|Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as
+`_item.lifecycle_state_`; coded by openEHR vocabulary `version lifecycle state`.
 
 h| func
 |*data* : T
@@ -49,19 +50,21 @@ a|OpenPGP digital signature or digest of content committed in this Version.
 h|prop +
   
 |*commit_audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
-a|Audit trail corresponding to the committal of this version to the VERSIONED_OBJECT.
+a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
 h| func
 |*canonical_form* : xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|A canonical serial form of this Version, suitable for generating reliable hashes
-and signatures.
+a|A canonical serial form of this Version, suitable for generating reliable hashes and
+signatures. Canonical form of Version object, created by serialising all attributes except
+signature.
 
 h| func
 |*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Copy of the owning VERSIONED_OBJECT uid value; extracted from the local uid property.
+a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_`
+property's `_object_id_`.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Version represents a branch. Derived from uid attribute.
+a|True if this Version represents a branch. Derived from `_uid_` attribute.
 
 |===

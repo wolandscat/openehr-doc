@@ -16,12 +16,12 @@ h|
 h|prop +
   
 |*uid*: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Stored version of uid.
+a|Stored version of inheritance precursor.
 
 h|prop +
   0..1
 |*preceding_version_uid*: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Stored version of preceding_version_uid.
+a|Stored version of inheritance precursor.
 
 h|prop +
   0..1
@@ -31,8 +31,8 @@ a|Identifiers of other versions whose content was merged into this version, if a
 h|prop +
   
 |*lifecycle_state*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
-a|Lifecycle state of the content item; coded by openEHR vocabulary
-version lifecycle state.
+a|Lifecycle state of the content item in this version; coded by openEHR vocabulary `version
+lifecycle state`.
 
 h|prop +
   0..1
@@ -43,5 +43,18 @@ h|prop +
   0..1
 |*data*: T
 a|Data content of this Version.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|attestations_valid: ∃ attestations ⇒ ¬ attestations.is_empty();
+
+h|
+2+a|is_merged_validity: ¬ ∃ other_input_version_ids ⊻ is_merged;
+
+h|
+2+a|other_input_version_uids_valid: ∃ other_input_version_uids ⇒ ¬ other_input_version_uids.is_empty();
+
 
 |===

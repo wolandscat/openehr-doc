@@ -17,6 +17,13 @@ h|
 h|prop +
   
 |*value*: xref:representation:representation-data_types.adoc#_class_dv_parsable[DV_PARSABLE]
-a|The specification, in the HL7v3 syntax for PIVL or EIVL types.
+a|The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: value.formalism.is_equal("HL7:PIVL") ∨ value.formalism.is_equal("HL7:EIVL");
+
 
 |===

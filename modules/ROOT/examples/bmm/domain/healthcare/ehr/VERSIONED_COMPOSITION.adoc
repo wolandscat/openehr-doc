@@ -18,4 +18,14 @@ h| func
 |*is_persistent* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
 a|Indicates whether this composition set is persistent; derived from first version.
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+
+h|
+2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
+
 |===

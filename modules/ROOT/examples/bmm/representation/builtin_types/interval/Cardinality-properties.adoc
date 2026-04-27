@@ -20,11 +20,13 @@ a|The interval of this cardinality.
 h|prop +
   
 |*is_ordered*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the members of the container attribute are ordered.
+a|True if the members of the container attribute to which this cardinality refers are
+ordered.
 
 h|prop +
   
 |*is_unique*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the members of the container attribute are unique.
+a|True if the members of the container attribute to which this cardinality refers are
+unique.
 
 |===

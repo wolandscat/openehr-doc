@@ -24,7 +24,7 @@ a|True if string can be parsed as an integer.
 
 h| func
 |*as_integer* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|The integer corresponding to the integer value represented in this string.
+a|Return the integer corresponding to the integer value represented in this string.
 
 h| func
 |*contains* ( +

@@ -16,6 +16,7 @@ h|
 h|prop +
   0..1
 |*external_ref*: xref:representation:representation-identification.adoc#_class_party_ref[PARTY_REF]
-a|Optional reference to more detailed demographic or identification information for this party.
+a|Optional reference to more detailed demographic or identification information for this
+party, in an external system.
 
 |===

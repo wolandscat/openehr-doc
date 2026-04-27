@@ -11,4 +11,11 @@ descendant of DV_ORDERED.
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE],xref:representation:representation-builtin_types.adoc#_class_interval[Interval]
 
+h|*Invariants*
+2+a|
+
+h|
+2+a|limits_consistent: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ (lower.is_strictly_comparable_to(upper) ∧ lower <= upper);
+
+
 |===

@@ -23,16 +23,27 @@ a|The value. If set, may not be empty.
 h|prop +
   
 |*target*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
-a|Identifier of target, which may be a VERSIONED_OBJECT<T> or a VERSION<T>.
+a|Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.
 
 h|prop +
   0..1
 |*target_path*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional archetype (AQL) or RM path within target, used to tag a fine-grained element.
+a|Optional archetype (i.e. AQL) or RM path within `_target_`, used to tag a fine-grained
+element.
 
 h|prop +
   
 |*owner_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of owner object, such as EHR.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_key_valid: ¬ key.is_empty() ∧ key.is_justified;
+
+h|
+2+a|inv_value_valid: ∃ value ⇒ ¬ value.is_empty();
+
 
 |===
