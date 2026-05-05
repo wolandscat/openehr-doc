@@ -5,9 +5,15 @@
 3+^h|  *class EHR_STATUS*
 
 h|*Description*
-2+a|Single object per EHR containing various EHR-wide status flags and settings,
-including whether this EHR can be queried, modified etc. This object is always
-modifiable, in order to change the status of the EHR as a whole.
+2+a|Single object per EHR containing various EHR-wide status flags and settings, including
+whether this EHR can be queried, modified etc. This object is always modifiable, in order
+to change the status of the EHR as a whole.
+
+NOTE: It is strongly recommended that the inherited attribute `uid` be populated in
+`EHR_STATUS` objects, using the UID copied from the `object_id()` of the `uid` field
+of the enclosing `VERSION` object. + For example, the `ORIGINAL_VERSION.uid`
+`87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `uid`
+field of the `EHR_STATUS` object.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
@@ -18,7 +24,7 @@ h|
 h|prop +
   
 |*subject*: xref:representation:representation-data_marking.adoc#_class_party_self[PARTY_SELF]
-a|The subject of this EHR. The `_external_ref_` attribute can be used to contain a direct
+a|The subject of this EHR. The `external_ref` attribute can be used to contain a direct
 reference to the subject in a demographic or identity service. Alternatively, the
 association between patients and their records may be done elsewhere for security reasons.
 
@@ -85,7 +91,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
@@ -98,8 +104,13 @@ a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|The item at a path (relative to this item); only valid for unique paths.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+ +
+  *pre_cond* +
+    path_valid: path_unique(a_path);
+
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
+resolve to a single item.
 
 h| func
 |*items_at_path* ( +
@@ -108,13 +119,17 @@ a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path exists in the data.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    path_valid: ¬ a_path.is_empty;
+
+a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path corresponds to a single item.
+a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +

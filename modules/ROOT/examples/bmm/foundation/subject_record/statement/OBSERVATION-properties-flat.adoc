@@ -5,11 +5,14 @@
 3+^h|  *class OBSERVATION*
 
 h|*Description*
-2+a|Entry subtype for all clinical data in the past or present, i.e. which (by the time
-it is recorded) has already occurred. OBSERVATION data is expressed using the class
-HISTORY<T>, which guarantees that it is situated in time. OBSERVATION is used for all
-notionally objective (i.e. measured in some way) observations of phenomena, and
-patient-reported phenomena, e.g. pain.
+2+a|Entry subtype for all clinical data in the past or present, i.e. which (by the time it is
+recorded) has already occurred. `OBSERVATION` data is expressed using the class
+`HISTORY<T>`, which guarantees that it is situated in time. `OBSERVATION` is used for all
+notionally objective (i.e. measured in some way) observations of phenomena, and patient-
+reported phenomena, e.g. pain.
+
+Not to be used for recording opinion or future statements of any kind, including
+instructions, intentions, plans etc.
 
 h|*Inherit*
 2+|xref:foundation:foundation-subject_record.adoc#_class_care_entry[CARE_ENTRY]
@@ -127,7 +130,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

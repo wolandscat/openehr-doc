@@ -5,7 +5,7 @@
 3+^h|  *class OPENEHR_CONTENT_ITEM*
 
 h|*Description*
-2+a|Form of EXTRACT_ITEM containing openEHR serialised VERSIONED_OBJECTs.
+2+a|Form of `EHR EXTRACT_ITEM` containing openEHR serialised `VERSIONED_OBJECTs`.
 
 h|*Inherit*
 2+|xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_content_item[EXTRACT_CONTENT_ITEM]

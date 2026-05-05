@@ -5,8 +5,20 @@
 3+^h|  *class ITEM_TABLE*
 
 h|*Description*
-2+a|Logical relational database style table data structure, in which columns are named and ordered.
-Implemented using Cluster-per-row encoding.
+2+a|Logical relational database style table data structure, in which columns are named and
+ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row
+Cluster must have an identical number of Elements, each of which in turn must have
+identical names and value types in the corresponding positions in each row.
+
+Some columns may be designated key' columns, containing key data for each row, in the
+manner of relational tables. This allows row-naming, where each row represents a body
+site, a blood antigen etc. All values in a column have the same data type.
+
+Used for representing any data which is logically a table of values, such as blood
+pressure, most protocols, many blood tests etc.
+
+Misuse: Not to be used for time-based data, which should be represented with the temporal
+class `HISTORY`. The table may be empty.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
@@ -44,22 +56,22 @@ a|Return i-th row.
 h| func
 |*has_row_with_name* ( +
 a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Return True if there is a row with name = a_key.
+a|Return `True` if there is a column with name = `a_key`.
 
 h| func
 |*has_column_with_name* ( +
 a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Return True if there is a column with name = a_key.
+a|Return `True` if there is a column with name = `a_key`.
 
 h| func
 |*named_row* ( +
 a_name: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]
-a|Return row with name = a_key.
+a|Return row with name = `a_key`.
 
 h| func
 |*has_row_with_key* ( +
 keys: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Return True if there is a row with key keys.
+a|Return `True` if there is a row with key `keys`.
 
 h| func
 |*row_with_key* ( +
@@ -122,7 +134,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
@@ -135,8 +147,13 @@ a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|The item at a path (relative to this item); only valid for unique paths.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+ +
+  *pre_cond* +
+    path_valid: path_unique(a_path);
+
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
+resolve to a single item.
 
 h| func
 |*items_at_path* ( +
@@ -145,13 +162,17 @@ a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path exists in the data.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    path_valid: ¬ a_path.is_empty;
+
+a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path corresponds to a single item.
+a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +

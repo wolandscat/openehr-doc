@@ -5,8 +5,9 @@
 3+^h|  *class DV_DATE*
 
 h|*Description*
-2+a|Represents an absolute point in time, as measured on the Gregorian calendar, specified only to
-the day. ISO 8601 semantics.
+2+a|Represents an absolute point in time, as measured on the Gregorian calendar, and specified
+only to the day. Semantics defined by ISO 8601. Used for recording dates in real world
+time. The partial form is used for approximate birth dates, dates of death, etc.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_temporal[DV_TEMPORAL]

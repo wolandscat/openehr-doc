@@ -5,7 +5,9 @@
 3+^h|  *class VERSION_TREE_ID*
 
 h|*Description*
-2+a|Version tree identifier for one version. Lexical form: trunk_version ['.' branch_number '.' branch_version].
+2+a|Version tree identifier for one version. Lexical form:
+
+`trunk_version [ '.' branch_number '.' branch_version ]`
 
 h|
 2+^h|*Feature Group "access"*
@@ -21,12 +23,12 @@ a|Trunk version number; numbering starts at 1.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this version identifier represents a branch, i.e. has `_branch_number()_` and
-`_branch_version()_` parts.
+a|True if this version identifier represents a branch, i.e. has `branch_number()` and
+`branch_version()` parts.
 
 h| func
 |*is_first* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this version identifier corresponds to the first version, i.e. `_trunk_version_`
+a|True if this version identifier corresponds to the first version, i.e. `trunk_version`
 is 1.
 
 h| func

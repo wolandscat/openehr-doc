@@ -5,9 +5,11 @@
 3+^h| abstract  *class PARTY*
 
 h|*Description*
-2+a|Ancestor of all Party types, including real world entities and their roles. A Party
-is any entity which can participate in an activity. The name attribute inherited from
-LOCATABLE is used to indicate the actual type of party.
+2+a|Ancestor of all Party types, including real world entities and their roles. A Party is any
+entity which can participate in an activity. The `name` attribute inherited from
+`LOCATABLE` is used to indicate the actual type of party (note that the actual names, i.e.
+identities of parties are indicated in the `identities` attribute, not the `name`
+attribute).
 
 NOTE: It is strongly recommended that the inherited attribute uid be populated in `PARTY` objects,
       using the UID copied from the `object_id()` of the `uid` field of the enclosing `VERSION`
@@ -45,7 +47,7 @@ a|Relationships in which this Party takes part as source.
 h| func
 |*type* : xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
 a|Type of party, such as `PERSON`, `ORGANISATION`, etc. Role name, e.g. general practitioner
-, nurse , private citizen . Taken from inherited `_name_` attribute.
+, nurse , private citizen . Taken from inherited `name` attribute.
 
 h| func
 |*reverse_relationships* : xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-identification.adoc#_class_locatable_ref[LOCATABLE_REF]>

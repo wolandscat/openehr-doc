@@ -5,8 +5,8 @@
 3+^h| abstract  *class Iso8601_type*
 
 h|*Description*
-2+a|Abstract ancestor type of ISO 8601 types, defining interface for 'extended'
-and 'partial' concepts from ISO 8601.
+2+a|Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial'
+concepts from ISO 8601.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_temporal[Temporal],xref:representation:representation-definitions.adoc#_class_time_definitions[Time_Definitions]
@@ -37,28 +37,45 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Arithmetic value comparison. Returns True if current object is less than other.
+a|Arithmetic value comparison. Returns True if current object is less than `other`. This
+operator is effected and/or redefined in descendants to provide the appropriate ordering
+semantics for concrete types.
+
+In conjunction with `=`, enables the definition of the related functions
+`greater_than_()` etc.
 
 h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 h|
 2+^h|*Feature Group "definitions"*

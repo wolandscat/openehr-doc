@@ -17,11 +17,19 @@ h|prop +
 a|The items in this history in most-recent-last order.
 
 h| func
-|*most_recent_version* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*most_recent_version* : xref:representation:representation-builtin_types.adoc#_class_string[String] +
+ +
+  *post_cond* +
+    valid_result: Result.is_equal(items.last.version_id.value);
+
 a|The version id of the most recent item, as a String.
 
 h| func
-|*most_recent_version_time_committed* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*most_recent_version_time_committed* : xref:representation:representation-builtin_types.adoc#_class_string[String] +
+ +
+  *post_cond* +
+    valid_result: Result.is_equal(items.last.audits.first.time_committed.value);
+
 a|The commit date/time of the most recent item, as a String.
 
 |===

@@ -5,8 +5,8 @@
 3+^h|  *class Point_Interval<T:Ordered>*
 
 h|*Description*
-2+a|Type representing an Interval that is a point value. Provides an efficient
-representation substitutable for Interval<T> where needed.
+2+a|Type representing an Interval that happens to be a point value. Provides an efficient
+representation that is substitutable for `Interval<T>` where needed.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_interval[Interval]

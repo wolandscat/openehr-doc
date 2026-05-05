@@ -5,11 +5,16 @@
 3+^h|  *class DV_PARAGRAPH*
 
 h|*Description*
-2+a|DEPRECATED: use markdown formatted DV_TEXT instead.
+2+a|DEPRECATED: use markdown formatted `DV_TEXT` instead.
 
-A logical composite text value consisting of a series of DV_TEXTs, i.e. plain
-text (optionally coded) potentially with simple formatting, to form a larger
-tract of prose which may be displayed as a paragraph.
+Original definition:
+
+A logical composite text value consisting of a series of `DV_TEXTs`, i.e. plain text
+(optionally coded) potentially with simple formatting, to form a larger tract of prose,
+which may be interpreted for display purposes as a paragraph.
+
+`DV_PARAGRAPH` is the standard way for constructing longer text items in summaries,
+reports and so on.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]

@@ -5,8 +5,7 @@
 3+^h| abstract  *class CONTENT_ITEM*
 
 h|*Description*
-2+a|Abstract ancestor of all concrete content types. A fresh instance of CONTENT_ITEM
-is never created; only instances of its subtypes.
+2+a|Abstract ancestor of all concrete content types.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
@@ -28,7 +27,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

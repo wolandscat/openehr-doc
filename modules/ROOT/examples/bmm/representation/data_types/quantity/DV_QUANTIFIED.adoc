@@ -5,8 +5,8 @@
 3+^h| abstract  *class DV_QUANTIFIED*
 
 h|*Description*
-2+a|Abstract class defining the concept of true quantified values, i.e. values which are not only
-ordered but have a precise magnitude.
+2+a|Abstract class defining the concept of true quantified values, i.e. values which are not
+only ordered, but which have a precise magnitude.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]
@@ -22,7 +22,7 @@ a|Optional status of magnitude with values:
 * `"="` : magnitude is a point value
 * `"<"` : value is < magnitude
 * `">"` : value is > magnitude
-* `"\<="` : value is \<= magnitude
+* `"<="` : value is <= magnitude
 * `">="` : value is >= magnitude
 * `"~"` : value is approximately magnitude
 

@@ -5,8 +5,9 @@
 3+^h|  *class REVISION_HISTORY_ITEM*
 
 h|*Description*
-2+a|An entry in a revision history, corresponding to a version from a versioned
-container. Consists of AUDIT_DETAILS instances with the revision identifier.
+2+a|An entry in a revision history, corresponding to a version from a versioned container.
+Consists of `AUDIT_DETAILS` instances with revision identifier of the revision to which
+the `AUDIT_DETAILS` instance belongs.
 
 h|
 2+^h|*Feature Group "access"*

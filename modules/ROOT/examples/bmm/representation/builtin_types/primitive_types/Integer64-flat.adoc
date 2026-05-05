@@ -18,49 +18,49 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
   *alias* +
 
-a|64-bit integer addition.
+a|Large integer addition.
 
 h| func
 |*subtract* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
   *alias* -
 
-a|64-bit integer subtraction.
+a|Large integer subtraction.
 
 h| func
 |*multiply* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
   *alias* *
 
-a|64-bit integer multiplication.
+a|Large integer multiplication.
 
 h| func
 |*divide* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
   *alias* /
 
-a|64-bit integer division.
+a|Large integer division.
 
 h| func
 |*exponent* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_double[Double]): xref:representation:representation-builtin_types.adoc#_class_double[Double] +
   *alias* ^
 
-a|64-bit integer exponentiation.
+a|Large integer exponentiation.
 
 h| func
 |*modulo* ( +
 mod: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
   *alias* mod
 
-a|64-bit integer modulo — remainder of integer division.
+a|Large integer modulus.
 
 h| func
 |*less_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Returns True if current Integer64 is less than other.
+a|Returns True if current Integer is less than `other`.
 
 h| func
 |*negative* : xref:representation:representation-builtin_types.adoc#_class_integer64[Integer64] +
@@ -72,21 +72,33 @@ h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 |===

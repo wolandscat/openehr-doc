@@ -5,7 +5,11 @@
 3+^h|  *class DV_DATE_TIME*
 
 h|*Description*
-2+a|Represents an absolute point in time, specified to the second. ISO 8601 semantics.
+2+a|Represents an absolute point in time, specified to the second. Semantics defined by ISO
+8601.
+
+Used for recording a precise point in real world time, and for approximate time stamps,
+e.g. the origin of a `HISTORY` in an `OBSERVATION` which is only partially known.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_temporal[DV_TEMPORAL]

@@ -5,7 +5,7 @@
 3+^h|  *class VERSIONED_PARTY*
 
 h|*Description*
-2+a|Static type formed by binding the generic parameter of VERSIONED_OBJECT<T> to PARTY.
+2+a|Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `PARTY`.
 
 h|*Inherit*
 2+|xref:infostructure:infostructure-versioning.adoc#_class_versioned_object[VERSIONED_OBJECT]
@@ -46,27 +46,39 @@ a|Return a list of all versions in this object.
 h| func
 |*has_version_at_time* ( +
 a_time: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if a version for time a_time exists.
+a|True if a version for time `a_time` exists.
 
 h| func
 |*has_version_id* ( +
 a_version_uid: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if a version with a_version_uid exists.
+a|True if a version with `a_version_uid` exists.
 
 h| func
 |*version_with_id* ( +
-a_version_uid: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]): xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T>
-a|Return the version with uid = a_version_uid.
+a_version_uid: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]): xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T> +
+ +
+  *pre_cond* +
+    version_valid: has_version_id(a_ver_id);
+
+a|Return the version with `uid` = `a_version_uid`.
 
 h| func
 |*version_at_time* ( +
-a_time: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T>
-a|Return the version for time a_time.
+a_time: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]<T> +
+ +
+  *pre_cond* +
+    time_valid: has_version_at_time(a_time);
+
+a|Return the version for time `a_time`.
 
 h| func
 |*is_original_version* ( +
-a_version_uid: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if version with a_version_uid is an ORIGINAL_VERSION.
+a_version_uid: xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    version_valid: has_version_id(a_ver_id);
+
+a|True if version with `a_version_uid` is an `ORIGINAL_VERSION`.
 
 h| func
 |*revision_history* : xref:infostructure:infostructure-versioning.adoc#_class_revision_history[REVISION_HISTORY]
@@ -81,7 +93,11 @@ h| func
 a|Return the most recently added trunk version.
 
 h| func
-|*trunk_lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*trunk_lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT] +
+ +
+  *post_cond* +
+    validity: Result = latest_trunk_version.lifecycle_state;
+
 a|Return the lifecycle state from the latest trunk version. Useful for determining if the
 version container is logically deleted.
 

@@ -5,7 +5,9 @@
 3+^h|  *class DV_MULTIMEDIA*
 
 h|*Description*
-2+a|A specialisation of DV_ENCAPSULATED for audiovisual and bio-signal types.
+2+a|A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes
+further metadata relating to multimedia types which are not applicable to other subtypes
+of `DV_ENCAPSULATED`.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_encapsulated[DV_ENCAPSULATED]
@@ -27,7 +29,7 @@ entry etc, if supplied as a reference.
 h|prop +
   0..1
 |*data*: xref:representation:representation-builtin_types.adoc#_class_array[Array]<xref:representation:representation-builtin_types.adoc#_class_octet[Octet]>
-a|The actual data found at `_uri_`, if supplied inline.
+a|The actual data found at `uri`, if supplied inline.
 
 h|prop +
   
@@ -64,9 +66,9 @@ hexadecimal etc do not change the value of this attribute.
 
 h| func
 |*is_external* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Computed from the value of the `_uri_` attribute: True if the data is stored externally to
-the record, as indicated by `_uri_`. A copy may also be stored internally, in which case
-`_is_expanded_` is also true.
+a|Computed from the value of the `uri` attribute: True if the data is stored externally to
+the record, as indicated by `uri`. A copy may also be stored internally, in which case
+`is_expanded` is also true.
 
 h| func
 |*is_inline* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
@@ -75,12 +77,12 @@ form, ie within the EHR itself.
 
 h| func
 |*is_compressed* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Computed from the value of the `_compression_algorithm_` attribute: True if the data is
+a|Computed from the value of the `compression_algorithm` attribute: True if the data is
 stored in compressed form.
 
 h| func
 |*has_integrity_check* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Computed from the value of the `_integrity_check_algorithm_` attribute: True if an
+a|Computed from the value of the `integrity_check_algorithm` attribute: True if an
 integrity check has been computed.
 
 h|*Invariants*

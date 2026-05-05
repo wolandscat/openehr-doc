@@ -5,8 +5,16 @@
 3+^h|  *class Iso8601_time*
 
 h|*Description*
-2+a|Represents an ISO 8601 time, including partial and extended forms. Value may be
-hh:mm:ss (extended, preferred), hhmmss (compact), or a partial invariant.
+2+a|Represents an ISO 8601 time, including partial and extended forms. Value may be:
+
+* `hh:mm:ss[(,\|.)sss][Z\|±hh[:mm]]` (extended, preferred) or
+* `hhmmss[(,\|.)sss][Z\|±hh[mm]]` (compact)
+* or a partial invariant.
+
+See `valid_iso8601_time()` for validity.
+
+NOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time
+`24:00:00` is not allowed, for consistency with `Iso8601_date_time`.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
@@ -28,7 +36,11 @@ a|Extract the integral seconds part of the time (i.e. prior to any decimal sign)
 Integer, or return 0 if not present.
 
 h| func
-|*fractional_second* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*fractional_second* : xref:representation:representation-builtin_types.adoc#_class_real[Real] +
+ +
+  *pre_cond* +
+    seconds_known: ¬ second_unknown;
+
 a|Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a
 Real, or return 0.0 if not present.
 
@@ -38,7 +50,7 @@ a|Timezone; may be Void.
 
 h| func
 |*minute_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Indicates whether minute is unknown. If so, the time is of the form “hh”.
+a|Indicates whether minute is unknown. If so, the time is of the form "hh".
 
 h| func
 |*second_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
@@ -72,28 +84,45 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Arithmetic value comparison. Returns True if current object is less than other.
+a|Arithmetic value comparison. Returns True if current object is less than `other`. This
+operator is effected and/or redefined in descendants to provide the appropriate ordering
+semantics for concrete types.
+
+In conjunction with `=`, enables the definition of the related functions
+`greater_than_()` etc.
 
 h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 h|
 2+^h|*Feature Group "definitions"*

@@ -5,8 +5,18 @@
 3+^h|  *class DV_TEXT*
 
 h|*Description*
-2+a|A text item which may contain any amount of legal characters. Visual formatting and hyperlinks
-may be included via markdown.
+2+a|A text item, which may contain any amount of legal characters arranged as e.g. words,
+sentences etc (i.e. one `DV_TEXT` may be more than one word). Visual formatting and
+hyperlinks may be included via markdown.
+
+If the `formatting` field is set, the `value` field is affected as follows:
+
+* `formatting_ = "plain"`: plain text, may contain newlines;
+* `formatting_ = "plain_no_newlines"`: plain text with no newlines;
+* `formatting_ = "markdown"`: text in markdown format; use of CommonMark strongly
+recommended.
+
+A `DV_TEXT` can be coded by adding mappings to it.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
@@ -24,8 +34,8 @@ service.
 h|prop +
   0..1
 |*hyperlink*: xref:representation:representation-data_types.adoc#_class_dv_uri[DV_URI]
-a|DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` attribute,
-and `"markdown"` as the value of the `_formatting_` field.
+a|DEPRECATED: this field is deprecated; use markdown link/text in the `value` attribute,
+and `"markdown"` as the value of the `formatting` field.
 
 Original usage, prior to RM Release 1.0.4: Optional link sitting behind a section of plain
 text or coded term item.

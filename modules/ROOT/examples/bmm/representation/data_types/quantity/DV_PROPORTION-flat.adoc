@@ -5,8 +5,19 @@
 3+^h|  *class DV_PROPORTION*
 
 h|*Description*
-2+a|Models a ratio of values where numerator and denominator are both pure numbers. Used for titers,
-concentration ratios, percentages.
+2+a|Models a ratio of values, i.e. where the numerator and denominator are both pure numbers.
+The `valid_proportion_kind` property of the `PROPORTION_KIND` class is used to control
+the type attribute to be one of a defined set.
+
+Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary
+denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width
+(RDW).
+
+Misuse: Should not be used to represent things like blood pressure which are often written
+using a '/' character, giving the misleading impression that the item is a ratio, when in
+fact it is a structured value. Similarly, visual acuity, often written as (e.g.) "6/24" in
+clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF =
+count fingers etc). Should not be used for formulations.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_amount[DV_AMOUNT]
@@ -32,7 +43,7 @@ a|Indicates semantic type of proportion, including percent, unitary etc.
 h|prop +
   0..1
 |*precision*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Precision to which the `_numerator_` and `_denominator_` values of the proportion are
+a|Precision to which the `numerator` and `denominator` values of the proportion are
 expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
 The value -1 implies no limit, i.e. any number of decimal places.
 
@@ -53,22 +64,22 @@ a|Effective magnitude represented by ratio.
 
 h| func
 |*is_integral* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_`
+a|True if the `numerator` and `denominator` values are integers, i.e. if `precision`
 is 0.
 
 h|prop +
   0..1
 |*accuracy*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
 a|Accuracy of measurement, expressed either as a half-range percent value
-(`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that
+(`accuracy_is_percent` = `True`) or a half-range quantity. A value of `0` means that
 accuracy is 100%, i.e. no error.
 
-A value of `_unknown_accuracy_value_` means that accuracy was not recorded.
+A value of `unknown_accuracy_value` means that accuracy was not recorded.
 
 h|prop +
   0..1
 |*accuracy_is_percent*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a
+a|If `True`, indicates that when this object was created, `accuracy` was recorded as a
 percent value; if `False`, as an absolute quantity value.
 
 h|prop +
@@ -79,7 +90,7 @@ a|Optional status of magnitude with values:
 * `"="` : magnitude is a point value
 * `"<"` : value is < magnitude
 * `">"` : value is > magnitude
-* `"\<="` : value is \<= magnitude
+* `"<="` : value is <= magnitude
 * `">="` : value is >= magnitude
 * `"~"` : value is approximately magnitude
 
@@ -100,21 +111,34 @@ in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
 h| func
 |*is_strictly_comparable_to* ( +
 other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Test if two instances are strictly comparable.
+a|Test if two instances are strictly comparable. Effected in descendants.
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Ordered object is less than other.
+other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    comparable: is_strictly_comparable_to(other);
+
+a|True if this Ordered object is less than `other`. Redefined in descendants.
 
 h| func
 |*is_simple* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
 a|True if this quantity has no reference ranges.
 
 h| func
-|*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|Value is in the normal range, determined by comparison of the value to `_normal_range_` if
-present, or by the `_normal_status_` marker if present.
+|*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    testable: ∃ normal_range ∨ ∃ normal_status;
+ +
+ +
+  *post_cond* +
+    range_normal: ∃ normal_range ⇒ Result = normal_range.has(self); +
+    normal_asserted: ∃ normal_status ⇒ normal_status.code_string.is_equal("N");
+
+a|Value is in the normal range, determined by comparison of the value to `normal_range` if
+present, or by the `normal_status` marker if present.
 
 h|
 2+^h|*Feature Group "operators"*
@@ -123,22 +147,34 @@ h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 h|*Invariants*
 2+a|
@@ -162,7 +198,7 @@ h|
 2+a|percent_validity: type = pk_percent ⇒ denominator = 100;
 
 h|
-2+a|valid_denominator: denominator ≠ 0;
+2+a|valid_denominator: denominator ≠ 0.0;
 
 
 |===

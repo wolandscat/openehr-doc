@@ -5,8 +5,9 @@
 3+^h|  *class GENERIC_ENTRY*
 
 h|*Description*
-2+a|Intermediate representation of data from sources not conforming to openEHR classes, such as
-HL7 messages, relational databases.
+2+a|This class is used to create intermediate representations of data from sources not
+otherwise conforming to openEHR classes, such as HL7 messages, relational databases and so
+on.
 
 h|*Inherit*
 2+|xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]
@@ -56,7 +57,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

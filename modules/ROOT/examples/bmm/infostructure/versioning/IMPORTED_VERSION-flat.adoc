@@ -5,9 +5,10 @@
 3+^h|  *class IMPORTED_VERSION<T>*
 
 h|*Description*
-2+a|Version whose content is an ORIGINAL_VERSION copied from another location.
-Inherits commit_audit and contribution from VERSION<T>, providing imported
-versions with their own audit trail and Contribution.
+2+a|Versions whose content is an `ORIGINAL_VERSION` copied from another location; this class
+inherits `commit_audit` and `contribution` from `VERSION<T>`, providing imported
+versions with their own audit trail and Contribution, distinct from those of the imported
+`ORIGINAL_VERSION`.
 
 h|*Inherit*
 2+|xref:infostructure:infostructure-versioning.adoc#_class_version[VERSION]
@@ -21,17 +22,25 @@ h|prop +
 a|The `ORIGINAL_VERSION` object that was imported.
 
 h| func
-|*uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Computed version of inheritance precursor, derived as `_item.uid_`.
+|*uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID] +
+ +
+  *post_cond* +
+    valid_result: Result = item.uid;
+
+a|Computed version of inheritance precursor, derived as `item.uid`.
 
 h| func
-|*preceding_version_uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
-a|Computed version of inheritance precursor, derived as `_item.preceding_version_uid_`.
+|*preceding_version_uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID] +
+ +
+  *post_cond* +
+    valid_result: Result = item.preceding_version_uid;
+
+a|Computed version of inheritance precursor, derived as `item.preceding_version_uid`.
 
 h| func
 |*lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as
-`_item.lifecycle_state_`; coded by openEHR vocabulary `version lifecycle state`.
+`item.lifecycle_state`; coded by openEHR vocabulary `version lifecycle state`.
 
 h| func
 |*data* : T
@@ -59,12 +68,16 @@ signatures. Canonical form of Version object, created by serialising all attribu
 signature.
 
 h| func
-|*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_`
-property's `_object_id_`.
+|*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
+ +
+  *post_cond* +
+    valid_result: Result.value.is_equal(uid.object_id.value);
+
+a|Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `uid`
+property's `object_id`.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Version represents a branch. Derived from `_uid_` attribute.
+a|True if this Version represents a branch. Derived from `uid` attribute.
 
 |===

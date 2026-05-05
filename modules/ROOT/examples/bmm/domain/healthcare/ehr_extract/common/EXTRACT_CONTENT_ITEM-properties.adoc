@@ -5,9 +5,9 @@
 3+^h| abstract  *class EXTRACT_CONTENT_ITEM*
 
 h|*Description*
-2+a|Abstract model of a wrapper for one content item in an Extract, containing various
-meta-data. Indicates whether it was part of the primary set and what its original
-path was. Intended to be subtyped for wrappers of specific types of content.
+2+a|Abstract model of a wrapper for one content item in an Extract, containing various meta-
+data. Indicates whether it was part of the primary set and what its original path was.
+Intended to be subtyped for wrappers of specific types of content.
 
 h|*Inherit*
 2+|xref:domain:domain-healthcare-ehr_extract.adoc#_class_extract_item[EXTRACT_ITEM]

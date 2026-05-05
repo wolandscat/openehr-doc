@@ -5,8 +5,8 @@
 3+^h|  *class GENERIC_ID*
 
 h|*Description*
-2+a|Generic identifier type for identifiers whose format is otherwise unknown to openEHR. Includes
-an attribute for naming the identification scheme.
+2+a|Generic identifier type for identifiers whose format is otherwise unknown to openEHR.
+Includes an attribute for naming the identification scheme (which may well be local).
 
 h|*Inherit*
 2+|xref:representation:representation-identification.adoc#_class_object_id[OBJECT_ID]

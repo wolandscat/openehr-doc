@@ -5,8 +5,10 @@
 3+^h| abstract  *class LOCATABLE*
 
 h|*Description*
-2+a|Root class of all information model classes that can be archetyped. Defines the idea of locatability
-in an archetyped structure.
+2+a|Root class of all information model classes that can be archetyped. Most classes in the
+openEHR reference model inherit from the `LOCATABLE` class, which defines the idea of
+locatability in an archetyped structure. `LOCATABLE` defines a runtime name and an
+`archetype_node_id`.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_pathable[PATHABLE]
@@ -28,7 +30,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
@@ -41,8 +43,13 @@ a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|The item at a path (relative to this item); only valid for unique paths.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+ +
+  *pre_cond* +
+    path_valid: path_unique(a_path);
+
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
+resolve to a single item.
 
 h| func
 |*items_at_path* ( +
@@ -51,13 +58,17 @@ a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path exists in the data.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    path_valid: ¬ a_path.is_empty;
+
+a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path corresponds to a single item.
+a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +

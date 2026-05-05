@@ -53,14 +53,14 @@ h| func
 mod: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]): xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
   *alias* mod
 
-a|Integer modulo — remainder of integer division.
+a|Return self modulo other.
 
 h| func
 |*less_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Returns True if current Integer is less than other.
+a|Returns True if current Integer is less than `other`.
 
 h| func
 |*negative* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +

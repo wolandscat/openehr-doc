@@ -5,9 +5,16 @@
 3+^h|  *class COMPOSITION*
 
 h|*Description*
-2+a|Content of one version in a VERSIONED_COMPOSITION. A Composition is considered the
-unit of modification of the record, the unit of transmission in record Extracts, and
-the unit of attestation by authorising clinicians.
+2+a|Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit
+of modification of the record, the unit of transmission in record Extracts, and the unit
+of attestation by authorising clinicians. In this latter sense, it may be considered
+equivalent to a signed document.
+
+NOTE: It is strongly recommended that the inherited attribute `uid` be populated in
+Compositions, using the UID copied from the `object_id()` of the `uid` field of the
+enclosing `VERSION` object. + For example, the `ORIGINAL_VERSION.uid`
+`87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `uid`
+field of the Composition.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
@@ -20,7 +27,7 @@ h|prop +
 |*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
 a|Mandatory indicator of the localised language in which this Composition is written. Coded
 from openEHR Code Set `languages`. The language of an Entry if different from the
-Composition is indicated in `ENTRY._language_`.
+Composition is indicated in `ENTRY._language`.
 
 h|prop +
   
@@ -109,7 +116,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
@@ -122,8 +129,13 @@ a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|The item at a path (relative to this item); only valid for unique paths.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+ +
+  *pre_cond* +
+    path_valid: path_unique(a_path);
+
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
+resolve to a single item.
 
 h| func
 |*items_at_path* ( +
@@ -132,13 +144,17 @@ a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path exists in the data.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    path_valid: ¬ a_path.is_empty;
+
+a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path corresponds to a single item.
+a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +

@@ -5,7 +5,10 @@
 3+^h|  *class DV_COUNT*
 
 h|*Description*
-2+a|Countable quantities. Used for countable types such as pregnancies, steps, number of cigarettes.
+2+a|Countable quantities. Used for countable types such as pregnancies and steps (taken by a
+physiotherapy patient), number of cigarettes smoked in a day.
+
+Misuse: Not to be used for amounts of physical entities (which all have units).
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_amount[DV_AMOUNT]

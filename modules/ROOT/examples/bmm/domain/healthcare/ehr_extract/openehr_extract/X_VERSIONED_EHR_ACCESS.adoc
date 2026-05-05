@@ -5,7 +5,7 @@
 3+^h|  *class X_VERSIONED_EHR_ACCESS*
 
 h|*Description*
-2+a|Form of X_VERSIONED_OBJECT for EHR_ACCESS EHR object.
+2+a|Form of `X_VERSIONED_OBJECT` for `EHR_ACCESS` EHR object.
 
 h|*Inherit*
 2+|xref:domain:domain-healthcare-ehr_extract.adoc#_class_x_versioned_object[X_VERSIONED_OBJECT]

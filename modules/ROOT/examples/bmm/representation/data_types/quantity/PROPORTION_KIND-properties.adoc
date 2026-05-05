@@ -5,7 +5,7 @@
 3+^h|  *enum PROPORTION_KIND*
 
 h|*Description*
-2+a|Enumeration of proportion kinds: ratio, unitary, percent, fraction, integer fraction.
+2+a|Class of enumeration constants defining types of proportion for the `DV_PROPORTION` class.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_integer[Integer]

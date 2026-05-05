@@ -5,7 +5,8 @@
 3+^h|  *class CLUSTER*
 
 h|*Description*
-2+a|The grouping variant of ITEM, which may contain further instances of ITEM, in an ordered list.
+2+a|The grouping variant of `ITEM`, which may contain further instances of `ITEM`, in an
+ordered list.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_item[ITEM]

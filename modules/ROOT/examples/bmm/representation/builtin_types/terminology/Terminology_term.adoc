@@ -5,8 +5,8 @@
 3+^h|  *class Terminology_term*
 
 h|*Description*
-2+a|Leaf type representing a standalone term from a terminology, consisting of the
-term text and the code, i.e. a concept reference.
+2+a|Leaf type representing a standalone term from a terminology, which consists of the term
+text and the code, i.e. a concept reference.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]

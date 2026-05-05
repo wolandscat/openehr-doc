@@ -5,8 +5,8 @@
 3+^h|  *class ITEM_TREE*
 
 h|*Description*
-2+a|Logical tree data structure. Used for data which is logically a tree such as audiology results,
-microbiology results.
+2+a|Logical tree data structure. The tree may be empty. Used for representing data which are
+logically a tree such as audiology results, microbiology results, biochemistry results.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
@@ -23,12 +23,12 @@ individual `ELEMENTs`.
 h| func
 |*has_element_path* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if path a_path is a valid leaf path.
+a|True if path a_path' is a valid leaf path.
 
 h| func
 |*element_at_path* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-data_structures.adoc#_class_element[ELEMENT]
-a|Return the leaf element at the path a_path.
+a|Return the leaf element at the path a_path'.
 
 h| func
 |*as_hierarchy* : xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]

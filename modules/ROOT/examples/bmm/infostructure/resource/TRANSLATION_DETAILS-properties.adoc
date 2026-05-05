@@ -5,7 +5,7 @@
 3+^h|  *class TRANSLATION_DETAILS*
 
 h|*Description*
-2+a|Class providing details of a natural language translation of a resource.
+2+a|Class providing details of a natural language translation.
 
 h|
 2+^h|*Feature Group "access"*

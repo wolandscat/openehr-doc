@@ -5,8 +5,13 @@
 3+^h|  *class Iso8601_date*
 
 h|*Description*
-2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be
-YYYY-MM-DD (extended, preferred), YYYYMMDD (compact), or a partial invariant.
+2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be:
+
+* `YYYY-MM-DD` (extended, preferred)
+* `YYYYMMDD` (compact)
+* a partial invariant.
+
+See `Time_definitions._valid_iso8601_date()` for validity.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
@@ -19,11 +24,19 @@ h| func
 a|Extract the year part of the date as an Integer.
 
 h| func
-|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+ +
+  *pre_cond* +
+    month_known: ¬ month_unknown;
+
 a|Extract the month part of the date as an Integer, or return 0 if not present.
 
 h| func
-|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+ +
+  *pre_cond* +
+    day_known: ¬ day_unknown;
+
 a|Extract the day part of the date as an Integer, or return 0 if not present.
 
 h| func

@@ -5,8 +5,8 @@
 3+^h|  *class ITEM_TREE*
 
 h|*Description*
-2+a|Logical tree data structure. Used for data which is logically a tree such as audiology results,
-microbiology results.
+2+a|Logical tree data structure. The tree may be empty. Used for representing data which are
+logically a tree such as audiology results, microbiology results, biochemistry results.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
@@ -56,7 +56,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

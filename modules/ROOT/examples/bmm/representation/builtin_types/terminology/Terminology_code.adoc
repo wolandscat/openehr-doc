@@ -5,9 +5,9 @@
 3+^h|  *class Terminology_code*
 
 h|*Description*
-2+a|Primitive type representing a standalone reference to a terminology concept, in
-the form of a terminology identifier, optional version, and a code or code string
-from the terminology.
+2+a|Primitive type representing a standalone reference to a terminology concept, in the form
+of a terminology identifier, optional version, and a code or code string from the
+terminology.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]

@@ -26,7 +26,7 @@ a|Valid time interval for this contact descriptor.
 h| func
 |*purpose* : xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
 a|Purpose for which this contact is used, e.g. mail, daytime phone, etc. Taken from value of
-inherited `_name_` attribute.
+inherited `name` attribute.
 
 h|*Invariants*
 2+a|

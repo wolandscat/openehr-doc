@@ -5,7 +5,11 @@
 3+^h|  *enum VALIDITY_KIND*
 
 h|*Description*
-2+a|Enumeration of three values for constraint models: mandatory, optional, prohibited.
+2+a|An enumeration of three values that may commonly occur in constraint models.
+
+Use as the type of any attribute within this model, which expresses constraint on some
+attribute in a class in a reference model. For example to indicate validity of Date/Time
+fields.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_string[String]

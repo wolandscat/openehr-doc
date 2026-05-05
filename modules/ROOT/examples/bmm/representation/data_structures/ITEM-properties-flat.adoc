@@ -5,7 +5,7 @@
 3+^h| abstract  *class ITEM*
 
 h|*Description*
-2+a|Abstract ancestor of all data structure items, both CLUSTER and ELEMENT.
+2+a|The abstract parent of `CLUSTER` and `ELEMENT` representation classes.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
@@ -27,7 +27,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

@@ -19,9 +19,9 @@ h|prop +
   
 |*time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Point in time at which this action completed. To indicate an unknown time, use a
-`DV_DATE_TIME` instance with `_value_` set to the time of creation (or some other known
+`DV_DATE_TIME` instance with `value` set to the time of creation (or some other known
 time before which the Action is known to have occurred, e.g. data accession timestamp from
-integration engine), and `_magnitude_status_` set to `<`.
+integration engine), and `magnitude_status` set to `<`.
 
 h|prop +
   
@@ -100,7 +100,11 @@ a|Identifier of externally held workflow engine data for this workflow execution
 subject of care.
 
 h| func
-|*subject_is_self* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*subject_is_self* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    type_validity: Result ⇒ subject.generating_type = "PARTY_SELF";
+
 a|Returns True if this Entry is about the subject of the EHR, in which case the subject
 attribute is of type PARTY_SELF.
 
@@ -149,7 +153,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
@@ -162,8 +166,13 @@ a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any]
-a|The item at a path (relative to this item); only valid for unique paths.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+ +
+  *pre_cond* +
+    path_valid: path_unique(a_path);
+
+a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
+resolve to a single item.
 
 h| func
 |*items_at_path* ( +
@@ -172,13 +181,17 @@ a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path exists in the data.
+a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+ +
+  *pre_cond* +
+    path_valid: ¬ a_path.is_empty;
+
+a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
 a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if the path corresponds to a single item.
+a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +

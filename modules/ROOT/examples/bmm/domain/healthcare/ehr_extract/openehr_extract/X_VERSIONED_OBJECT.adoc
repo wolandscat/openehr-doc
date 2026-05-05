@@ -5,8 +5,8 @@
 3+^h|  *class X_VERSIONED_OBJECT<T:LOCATABLE>*
 
 h|*Description*
-2+a|Variety of Extract content that is a sharable data-oriented version of
-VERSIONED_OBJECT<T>.
+2+a|Variety of Extract content that consists is a sharable data-oriented version of
+`VERSIONED_OBJECT<T>`.
 
 h|
 2+^h|*Feature Group "access"*

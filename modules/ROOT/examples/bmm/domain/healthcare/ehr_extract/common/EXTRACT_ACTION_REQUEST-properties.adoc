@@ -5,8 +5,7 @@
 3+^h|  *class EXTRACT_ACTION_REQUEST*
 
 h|*Description*
-2+a|Request for an action relating to a previous Extract request, such as cancel,
-resend, or send new.
+2+a|Generic model of a Request for an Extract, containing an Extract specification.
 
 h|*Inherit*
 2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]

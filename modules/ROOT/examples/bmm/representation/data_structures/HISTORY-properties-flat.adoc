@@ -5,8 +5,14 @@
 3+^h|  *class HISTORY<T:ITEM_STRUCTURE>*
 
 h|*Description*
-2+a|Root object of a linear history, i.e. time series structure. Generic class whose type parameter
-must be a descendant of ITEM_STRUCTURE.
+2+a|Root object of a linear history, i.e. time series structure. This is a generic class whose
+type parameter must be a descendant of `ITEM_STRUCTURE`, ensuring that each Event in the
+`events` of a given instance is of the same structural type, i.e. `ITEM_TREE`,
+`ITEM_LIST` etc.
+
+For a periodic series of events, period will be set, and the time of each Event in the
+History must correspond; i.e. the `EVENT._offset` must be a multiple of period for each
+Event. Missing events in a period History are however allowed.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_data_structure[DATA_STRUCTURE]
@@ -79,7 +85,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

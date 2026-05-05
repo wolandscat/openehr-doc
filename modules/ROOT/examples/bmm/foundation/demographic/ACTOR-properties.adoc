@@ -5,8 +5,8 @@
 3+^h| abstract  *class ACTOR*
 
 h|*Description*
-2+a|Ancestor of all real-world types, including people and organisations. An actor is
-any real-world entity capable of taking on a role.
+2+a|Ancestor of all real-world types, including people and organisations. An actor is any
+real-world entity capable of taking on a role.
 
 h|*Inherit*
 2+|xref:foundation:foundation-demographic.adoc#_class_party[PARTY]

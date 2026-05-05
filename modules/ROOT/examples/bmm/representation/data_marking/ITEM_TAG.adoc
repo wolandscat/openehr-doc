@@ -5,7 +5,8 @@
 3+^h|  *class ITEM_TAG*
 
 h|*Description*
-2+a|A tag with optional value associated with a target information entity identified by a UID.
+2+a|A tag with optional value that is associated with a target information entity identified
+by a UID.
 
 h|
 2+^h|*Feature Group "access"*
@@ -28,7 +29,7 @@ a|Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.
 h|prop +
   0..1
 |*target_path*: xref:representation:representation-builtin_types.adoc#_class_string[String]
-a|Optional archetype (i.e. AQL) or RM path within `_target_`, used to tag a fine-grained
+a|Optional archetype (i.e. AQL) or RM path within `target`, used to tag a fine-grained
 element.
 
 h|prop +

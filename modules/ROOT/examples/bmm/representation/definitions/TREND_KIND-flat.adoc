@@ -43,7 +43,7 @@ a|Return the integer corresponding to the integer value represented in this stri
 h| func
 |*contains* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this String contains other (case-sensitive).
+a|Return True if this String contains `other` (case-sensitive).
 
 h|
 2+^h|*Feature Group "operators"*
@@ -53,34 +53,46 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_string[String] +
   *alias* +
 
-a|Concatenation — result of appending other to this string.
+a|Concatenation operator - causes `other` to be appended to this string.
 
 h| func
 |*less_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Lexical comparison based on ordering in the relevant character set.
+a|Lexical comparison of string content based on ordering in relevant character set.
 
 h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 |===

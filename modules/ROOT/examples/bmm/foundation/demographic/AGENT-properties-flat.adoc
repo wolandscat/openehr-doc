@@ -5,8 +5,8 @@
 3+^h|  *class AGENT*
 
 h|*Description*
-2+a|Generic concept of any kind of agent, including devices, software systems, but not
-humans or organisations.
+2+a|Generic concept of any kind of agent, including devices, software systems, but not humans
+or organisations.
 
 h|*Inherit*
 2+|xref:foundation:foundation-demographic.adoc#_class_actor[ACTOR]
@@ -82,7 +82,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

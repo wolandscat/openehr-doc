@@ -31,7 +31,7 @@ a|Type of change. Coded using the openEHR Terminology audit change type group.
 h|prop +
   0..1
 |*description*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Reason for committal. This may be used to qualify the value in the `_change_type_` field.
+a|Reason for committal. This may be used to qualify the value in the `change_type` field.
 For example, if the change affects only the EHR directory, this field might be used to
 indicate 'Folder "episode 2018-02-16" added' or similar.
 

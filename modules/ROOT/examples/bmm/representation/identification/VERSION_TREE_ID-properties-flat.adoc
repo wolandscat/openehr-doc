@@ -5,7 +5,9 @@
 3+^h|  *class VERSION_TREE_ID*
 
 h|*Description*
-2+a|Version tree identifier for one version. Lexical form: trunk_version ['.' branch_number '.' branch_version].
+2+a|Version tree identifier for one version. Lexical form:
+
+`trunk_version [ '.' branch_number '.' branch_version ]`
 
 h|
 2+^h|*Feature Group "access"*

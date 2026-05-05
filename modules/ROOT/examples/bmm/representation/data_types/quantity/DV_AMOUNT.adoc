@@ -5,8 +5,9 @@
 3+^h| abstract  *class DV_AMOUNT*
 
 h|*Description*
-2+a|Abstract class defining the concept of relative quantified 'amounts'. The + and - operators
-are defined.
+2+a|Abstract class defining the concept of relative quantified 'amounts'. For relative
+quantities, the `+` and `-` operators are defined (unlike descendants of
+`DV_ABSOLUTE_QUANTITY`, such as the date/time types).
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_quantified[DV_QUANTIFIED]
@@ -18,15 +19,15 @@ h|prop +
   0..1
 |*accuracy*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
 a|Accuracy of measurement, expressed either as a half-range percent value
-(`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that
+(`accuracy_is_percent` = `True`) or a half-range quantity. A value of `0` means that
 accuracy is 100%, i.e. no error.
 
-A value of `_unknown_accuracy_value_` means that accuracy was not recorded.
+A value of `unknown_accuracy_value` means that accuracy was not recorded.
 
 h|prop +
   0..1
 |*accuracy_is_percent*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|If `True`, indicates that when this object was created, `_accuracy_` was recorded as a
+a|If `True`, indicates that when this object was created, `accuracy` was recorded as a
 percent value; if `False`, as an absolute quantity value.
 
 h|*Invariants*

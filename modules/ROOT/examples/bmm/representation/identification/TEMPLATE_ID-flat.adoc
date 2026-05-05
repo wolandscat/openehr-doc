@@ -5,7 +5,7 @@
 3+^h| abstract  *class TEMPLATE_ID*
 
 h|*Description*
-2+a|Identifier for templates.
+2+a|Identifier for templates. Lexical form to be determined.
 
 h|*Inherit*
 2+|xref:representation:representation-identification.adoc#_class_object_id[OBJECT_ID]

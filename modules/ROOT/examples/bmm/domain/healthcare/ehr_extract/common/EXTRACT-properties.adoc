@@ -43,7 +43,7 @@ h|prop +
   
 |*sequence_nr*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
 a|Number of this Extract response in sequence of responses to Extract request identified by
-`_request_id_`. If this is the sole response, or there was no request, value is 1.
+`request_id`. If this is the sole response, or there was no request, value is 1.
 
 h|prop +
   0..1

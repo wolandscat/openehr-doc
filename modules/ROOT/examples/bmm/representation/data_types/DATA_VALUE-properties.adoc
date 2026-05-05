@@ -5,6 +5,7 @@
 3+^h| abstract  *class DATA_VALUE*
 
 h|*Description*
-2+a|Abstract parent of all DV_ data value types.
+2+a|Abstract parent of all `DV_` data value types. Serves as a common ancestor of all data
+value types in openEHR models.
 
 |===

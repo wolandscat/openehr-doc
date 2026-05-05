@@ -5,7 +5,8 @@
 3+^h|  *class ITEM_SINGLE*
 
 h|*Description*
-2+a|Logical single value data structure, representing any data which is logically a single value.
+2+a|Logical single value data structure. Used to represent any data which is logically a
+single value, such as a person's height or weight.
 
 h|*Inherit*
 2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
@@ -54,7 +55,7 @@ a 'standardised' name for this node to be generated, by referring to the generat
 archetype local terminology.
 
 At an archetype root point, the value of this attribute is always the stringified form of
-the `_archetype_id_` found in the `_archetype_details_` object.
+the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1

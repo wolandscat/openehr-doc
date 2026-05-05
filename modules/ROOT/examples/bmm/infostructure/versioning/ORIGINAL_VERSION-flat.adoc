@@ -70,13 +70,17 @@ signatures. Canonical form of Version object, created by serialising all attribu
 signature.
 
 h| func
-|*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID]
-a|Copy of the owning `VERSIONED_OBJECT._uid_` value; extracted from the local `_uid_`
-property's `_object_id_`.
+|*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
+ +
+  *post_cond* +
+    valid_result: Result.value.is_equal(uid.object_id.value);
+
+a|Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `uid`
+property's `object_id`.
 
 h| func
 |*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if this Version represents a branch. Derived from `_uid_` attribute.
+a|True if this Version represents a branch. Derived from `uid` attribute.
 
 h|*Invariants*
 2+a|

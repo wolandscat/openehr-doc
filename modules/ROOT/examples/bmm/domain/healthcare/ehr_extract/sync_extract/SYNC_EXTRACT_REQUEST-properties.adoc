@@ -5,8 +5,7 @@
 3+^h|  *class SYNC_EXTRACT_REQUEST*
 
 h|*Description*
-2+a|Type of request designed for synchronisation of Contributions between openEHR
-servers.
+2+a|Type of request designed for synchronisation of Contributions between openEHR servers.
 
 h|*Inherit*
 2+|xref:domain:domain-healthcare-ehr_extract.adoc#_class_message_content[MESSAGE_CONTENT]

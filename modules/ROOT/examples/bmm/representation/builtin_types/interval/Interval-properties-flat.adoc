@@ -5,8 +5,8 @@
 3+^h| abstract  *class Interval<T:Ordered>*
 
 h|*Description*
-2+a|Interval abstraction, featuring upper and lower limits that may be open or
-closed, included or not included.
+2+a|Interval abstraction, featuring upper and lower limits that may be open or closed,
+included or not included. Interval of ordered items.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
@@ -27,25 +27,25 @@ a|Upper bound. Upper bound.
 h|prop +
   
 |*lower_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if `_lower_` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
+a|True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
 -infinity)
 
 h|prop +
   
 |*upper_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if `_upper_` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
+a|True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
 +infinity)
 
 h|prop +
   
 |*lower_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if `_lower_` boundary value included in range, if `not _lower_unbounded_`. lower
+a|True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
 boundary value included in range if not lower_unbounded.
 
 h|prop +
   
 |*upper_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
-a|True if `_upper_` boundary value included in range if `not _upper_unbounded_`. upper
+a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 
 h|*Invariants*

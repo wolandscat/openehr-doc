@@ -5,8 +5,8 @@
 3+^h| abstract  *class UID_BASED_ID*
 
 h|*Description*
-2+a|Abstract model of UID-based identifiers consisting of a root part and an optional extension.
-Lexical form: root '::' extension.
+2+a|Abstract model of UID-based identifiers consisting of a root part and an optional
+extension; lexical form: `root '::' extension`.
 
 h|*Inherit*
 2+|xref:representation:representation-identification.adoc#_class_object_id[OBJECT_ID]

@@ -5,7 +5,15 @@
 3+^h|  *class Iso8601_timezone*
 
 h|*Description*
-2+a|ISO8601 timezone string, in format Z \| ±hh[mm], where Z is UTC.
+2+a|ISO8601 timezone string, in format:
+
+* `Z \| ±hh[mm]`
+
+where:
+
+* `hh` is "00" - "23" (0-filled to two digits)
+* `mm` is "00" - "59" (0-filled to two digits)
+* `Z` is a literal meaning UTC (modern replacement for GMT), i.e. timezone `+0000`
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]

@@ -5,9 +5,14 @@
 3+^h|  *class EXTRACT_SPEC*
 
 h|*Description*
-2+a|Specification of an Extract's contents. The specification consists of attributes
-specifying the directory, a version specification (which versions of information items
-are to be included) and a manifest (which entities are to be included in the extract).
+2+a|Specification of an Extract's contents. Subtypes can be used to add details specific to
+the type of Extract. The specification consists of attributes specifying the directory,
+and two further groups of attributes in their own classes, namely a version specfication
+(which versions of information items are to be included) and a manifest (which entities
+are to be included in the extract).
+
+Use: Used in a request to specify an Extract, as well as to describe what is contained in
+an Extract.
 
 h|
 2+^h|*Feature Group "access"*
@@ -57,7 +62,7 @@ a|Degree of links to follow emanating from content items specified for inclusion
 of links to follow is dependent on the type of Extract.
 
 All items at the target end of followed links at the given depth are also included in the
-extract; `EXTRACT_CONTENT_ITEM._is_primary_` is used to differentiate.
+extract; `EXTRACT_CONTENT_ITEM._is_primary` is used to differentiate.
 
 * 0 = don't follow;
 * 1 = follow first degree links;

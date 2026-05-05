@@ -5,7 +5,8 @@
 3+^h|  *class CODE_PHRASE*
 
 h|*Description*
-2+a|A fully coordinated term from a terminology service.
+2+a|A fully coordinated (i.e. all coordination has been performed) term from a terminology
+service (as distinct from a particular terminology).
 
 h|
 2+^h|*Feature Group "access"*
@@ -27,7 +28,7 @@ h|prop +
   0..1
 |*preferred_term*: xref:representation:representation-builtin_types.adoc#_class_string[String]
 a|Optional attribute to carry preferred term corresponding to the code or expression in
-`_code_string_`. Typical use in integration situations which create mappings, and
+`code_string`. Typical use in integration situations which create mappings, and
 representing data for which both a (non-preferred) actual term and a preferred term are
 both required.
 

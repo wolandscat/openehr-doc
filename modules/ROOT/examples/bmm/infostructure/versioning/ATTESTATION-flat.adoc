@@ -5,9 +5,15 @@
 3+^h|  *class ATTESTATION*
 
 h|*Description*
-2+a|Record an attestation by a party (the committer) to item(s) of record content.
-Used for authorisation of controlled substances, witnessing of content, or
-indicating acknowledgement of content by an intended recipient.
+2+a|Record an attestation of a party (the committer) to item(s) of record content. An
+attestation is an explicit signing by one healthcare agent of particular content for
+various particular purposes, including:
+
+* for authorisation of a controlled substance or procedure (e.g. sectioning of patient
+under mental health act);
+* witnessing of content by senior clinical professional;
+* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test
+result.
 
 h|*Inherit*
 2+|xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
@@ -64,7 +70,7 @@ a|Type of change. Coded using the openEHR Terminology audit change type group.
 h|prop +
   0..1
 |*description*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
-a|Reason for committal. This may be used to qualify the value in the `_change_type_` field.
+a|Reason for committal. This may be used to qualify the value in the `change_type` field.
 For example, if the change affects only the EHR directory, this field might be used to
 indicate 'Folder "episode 2018-02-16" added' or similar.
 

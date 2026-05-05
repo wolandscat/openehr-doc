@@ -5,8 +5,13 @@
 3+^h|  *class Iso8601_date*
 
 h|*Description*
-2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be
-YYYY-MM-DD (extended, preferred), YYYYMMDD (compact), or a partial invariant.
+2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be:
+
+* `YYYY-MM-DD` (extended, preferred)
+* `YYYYMMDD` (compact)
+* a partial invariant.
+
+See `Time_definitions._valid_iso8601_date()` for validity.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]

@@ -5,8 +5,8 @@
 3+^h| abstract  *class DV_ABSOLUTE_QUANTITY*
 
 h|*Description*
-2+a|Abstract class defining the concept of quantified entities whose values are absolute with respect
-to an origin. Dates and Times are the main example.
+2+a|Abstract class defining the concept of quantified entities whose values are absolute with
+respect to an origin. Dates and Times are the main example.
 
 h|*Inherit*
 2+|xref:representation:representation-data_types.adoc#_class_dv_quantified[DV_QUANTIFIED]
@@ -27,7 +27,7 @@ a|Optional status of magnitude with values:
 * `"="` : magnitude is a point value
 * `"<"` : value is < magnitude
 * `">"` : value is > magnitude
-* `"\<="` : value is \<= magnitude
+* `"<="` : value is <= magnitude
 * `">="` : value is >= magnitude
 * `"~"` : value is approximately magnitude
 

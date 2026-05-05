@@ -5,8 +5,13 @@
 3+^h|  *class Iso8601_date*
 
 h|*Description*
-2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be
-YYYY-MM-DD (extended, preferred), YYYYMMDD (compact), or a partial invariant.
+2+a|Represents an ISO 8601 date, including partial and extended forms. Value may be:
+
+* `YYYY-MM-DD` (extended, preferred)
+* `YYYYMMDD` (compact)
+* a partial invariant.
+
+See `Time_definitions._valid_iso8601_date()` for validity.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
@@ -19,11 +24,19 @@ h| func
 a|Extract the year part of the date as an Integer.
 
 h| func
-|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+ +
+  *pre_cond* +
+    month_known: ¬ month_unknown;
+
 a|Extract the month part of the date as an Integer, or return 0 if not present.
 
 h| func
-|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+ +
+  *pre_cond* +
+    day_known: ¬ day_unknown;
+
 a|Extract the day part of the date as an Integer, or return 0 if not present.
 
 h| func
@@ -66,28 +79,45 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Arithmetic value comparison. Returns True if current object is less than other.
+a|Arithmetic value comparison. Returns True if current object is less than `other`. This
+operator is effected and/or redefined in descendants to provide the appropriate ordering
+semantics for concrete types.
+
+In conjunction with `=`, enables the definition of the related functions
+`greater_than_()` etc.
 
 h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 h|
 2+^h|*Feature Group "definitions"*

@@ -46,7 +46,7 @@ h|prop +
 |*translations*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:infostructure:infostructure-resource.adoc#_class_translation_details[TRANSLATION_DETAILS]>
 a|List of details for each natural translation made of this resource, keyed by language
 code. For each translation listed here, there must be corresponding sections in all
-language-dependent parts of the resource. The `_original_language_` does not appear in
+language-dependent parts of the resource. The `original_language` does not appear in
 this list.
 
 h| func

@@ -5,8 +5,13 @@
 3+^h|  *class Iso8601_duration*
 
 h|*Description*
-2+a|Represents an ISO 8601 duration, which may have multiple parts from years down
-to seconds. Value format: P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]].
+2+a|Represents an ISO 8601 duration, which may have multiple parts from years down to seconds.
+The `value` attribute is a String in the format:
+
+* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`
+
+NOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and
+the second allowing the 'W' designator to be mixed with other designators.
 
 h|*Inherit*
 2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
@@ -16,41 +21,41 @@ h|
 
 h| func
 |*years* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of years in the `_value_`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
+a|Number of years in the `value`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
 if one exists.
 
 h| func
 |*months* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of months in the `_value_`, i.e. the value preceding the `'M'` in the `'YMD'` part,
+a|Number of months in the `value`, i.e. the value preceding the `'M'` in the `'YMD'` part,
 if one exists.
 
 h| func
 |*weeks* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of weeks in the `_value_`, i.e. the value preceding the `W`, if one exists.
+a|Number of weeks in the `value`, i.e. the value preceding the `W`, if one exists.
 
 h| func
 |*days* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of days in the `_value_`, i.e. the number preceding the `'D'` in the `'YMD'` part,
+a|Number of days in the `value`, i.e. the number preceding the `'D'` in the `'YMD'` part,
 if one exists.
 
 h| func
 |*hours* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of hours in the `_value_`, i.e. the number preceding the `'H'` in the `'HMS'` part,
+a|Number of hours in the `value`, i.e. the number preceding the `'H'` in the `'HMS'` part,
 if one exists.
 
 h| func
 |*minutes* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of minutes in the `_value_`, i.e. the number preceding the `'M'` in the `'HMS'`
+a|Number of minutes in the `value`, i.e. the number preceding the `'M'` in the `'HMS'`
 part, if one exists.
 
 h| func
 |*seconds* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
-a|Number of seconds in the `_value_`, i.e. the integer number preceding the `'S'` in the
+a|Number of seconds in the `value`, i.e. the integer number preceding the `'S'` in the
 `'HMS'` part, if one exists.
 
 h| func
 |*fractional_seconds* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
-a|Fractional seconds in the `_value_`, i.e. the decimal part of the number preceding the
+a|Fractional seconds in the `value`, i.e. the decimal part of the number preceding the
 `'S'` in the `'HMS'` part, if one exists.
 
 h| func
@@ -86,28 +91,45 @@ h| func
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <
 
-a|Arithmetic value comparison. Returns True if current object is less than other.
+a|Arithmetic value comparison. Returns True if current object is less than `other`. This
+operator is effected and/or redefined in descendants to provide the appropriate ordering
+semantics for concrete types.
+
+In conjunction with `=`, enables the definition of the related functions
+`greater_than_()` etc.
 
 h| func
 |*less_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
 
-a|True if current object is less than or equal to other.
+a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
 
-a|True if current object is greater than other.
+a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
 other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
 
-a|True if current object is greater than or equal to other.
+a|True if current object greater than or equal to `other`.
 
 h|
 2+^h|*Feature Group "definitions"*

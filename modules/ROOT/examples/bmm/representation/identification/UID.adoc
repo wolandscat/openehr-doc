@@ -5,8 +5,9 @@
 3+^h| abstract  *class UID*
 
 h|*Description*
-2+a|Abstract parent of classes representing unique identifiers which identify information entities
-in a durable way.
+2+a|Abstract parent of classes representing unique identifiers which identify information
+entities in a durable way. UIDs only ever identify one IE in time or space and are never
+re-used.
 
 h|
 2+^h|*Feature Group "access"*
