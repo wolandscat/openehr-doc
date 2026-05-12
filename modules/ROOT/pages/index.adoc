@@ -1,0 +1,24 @@
+:description: openEHR Generated UML Site
+
+[cols="^3,10",frame=none,grid=none]
+|===
+a|image::images-src/logo/openEHR-logo.png[openEHR Logo]
+a|image::images-src/website/xxxx.png[SPLASH Banner]
+|===
+
+:sectnums!:
+
+= Generated UML and Specifications
+
+== BMML Formalism
+
+TBD
+
+== Toolchain
+
+TBD
+
+== Sources
+
+TBD
+

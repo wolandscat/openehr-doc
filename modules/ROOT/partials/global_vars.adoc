@@ -1,0 +1,63 @@
+:cc_licence_text: Creative Commons Attribution-NoDerivs 3.0 Unported.
+:cc_licence_url: https://creativecommons.org/licenses/by-nd/3.0/
+
+:apache_licence_text: Apache 2.0 Licence.
+:apache_licence_url: http://apache.org/licenses/LICENSE-2.0.html
+:apache_licence_img: http://apache.org/img/ASF20thAnniversary.jpg
+
+// -------------------- SPLASH ---------------------
+:splashlang_domain: splashlang.org
+:splashlang_website_url: https://{splashlang_domain}
+
+:splashlang_release: 0.6.5
+:splashlang_doc_site: {splashlang_website_url}/splashlang-doc
+
+// -------------------- openEHR ---------------------
+:openehr_domain: www.openehr.org
+:openehr_website_url: https://www.openehr.org
+:openehr_forums_site: https://discourse.openehr.org
+:openehr_specs: https://specifications.openehr.org
+:openehr_git: https://github.com/openEHR
+:openehr_git_raw: https://raw.githubusercontent.com/openEHR
+
+:openehr_sec: {openehr_website_url}/programs/specification/editorialcommittee
+:openehr_specification_program: {openehr_website_url}/programs/specification
+:openehr_software_program: {openehr_website_url}/programs/software
+:openehr_industry_partners: {openehr_website_url}/community/industry_partners/
+:openehr_logo: {openehr_specs}/images/openEHR_logo_RGB.svg
+:cc_licence_img: {openehr_specs}/images/cc-by-nd-88x31.png
+
+
+// diagrams & images URIs in docs/common
+:common_diagrams_uri: common/diagrams
+:common_images_uri: common/images
+:overview_diagrams_uri: overview/diagrams
+:overview_images_uri: overview/images
+
+
+//
+// openEHR Wiki URLs
+//
+:openehr_wiki_root: {openehr_specs}/wiki
+:openehr_wiki: {openehr_wiki_root}/spacedirectory/view.action
+:openehr_wiki_adl_space: {openehr_wiki_root}/spaces/ADL
+
+// openEHR releases
+:release: latest
+:term_release: latest
+:lang_release: latest
+:base_release: latest
+:rm_release: latest
+:am_release: latest
+:sm_release: latest
+:cds_release: latest
+:cnf_release: latest
+:intg_release: latest
+:query_release: latest
+:proc_release: latest
+:its_release: development
+:its_rest_release: development
+:its_json_release: development
+:its_bmm_release: development
+:its_xml_release: development
+

@@ -1,0 +1,4 @@
+include::ROOT:partial$global_vars.adoc[]
+include::ROOT:partial$resources/hit_resources.adoc[]
+include::ROOT:partial$resources/openehr_resources.adoc[]
+include::ROOT:partial$resources/splash_resources.adoc[]
