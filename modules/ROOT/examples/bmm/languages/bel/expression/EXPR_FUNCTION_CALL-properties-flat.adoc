@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXPR_FUNCTION_CALL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*arguments*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]>
+a|Arguments of this function, which can be from 0 to any number. Functions with no arguments
+are typically used to represent real world varying values like 'current time' and so on.
+
+h|prop +
+  0..1
+|*item*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|The reference item from which the value of this node can be computed.
+
+|===

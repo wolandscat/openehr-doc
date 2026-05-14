@@ -1,0 +1,81 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class Multiplicity_interval*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*is_open* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this interval imposes no constraints, i.e. is set to `0..*`.
+
+h| func
+|*is_optional* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this interval expresses optionality, i.e. `0..1`.
+
+h| func
+|*is_mandatory* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this interval expresses mandation, i.e. `1..1`.
+
+h| func
+|*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this interval is set to `0..0`.
+
+h|prop +
+  0..1
+|*lower*: T
+a|Lower bound. lower bound.
+
+h|prop +
+  0..1
+|*upper*: T
+a|Upper bound. Upper bound.
+
+h|prop +
+  
+|*lower_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
+-infinity)
+
+h|prop +
+  
+|*upper_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
++infinity)
+
+h|prop +
+  
+|*lower_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
+boundary value included in range if not lower_unbounded.
+
+h|prop +
+  
+|*upper_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
+boundary value included in range if not upper_unbounded.
+
+h| func
+|*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    valid_result: Result = (lower_unbounded ∨ lower_included ∧ v >= lower) ∨ v > lower ∧ (upper_unbounded ∨ upper_included ∧ v <= upper ∨ v < upper);
+
+a|True if the value `e` is properly contained in this Interval. True if (lower_unbounded or
+((lower_included and v >= lower) or v > lower)) and (upper_unbounded or ((upper_included
+and v <= upper or v < upper)))
+
+h| func
+|*intersects* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if there is any overlap between intervals represented by Current and `other`. True
+if at least one limit of `other` is strictly inside the limits of this interval.
+
+h| func
+|*contains* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if current interval properly contains `other`? True if all points of `other` are
+inside the current interval.
+
+|===

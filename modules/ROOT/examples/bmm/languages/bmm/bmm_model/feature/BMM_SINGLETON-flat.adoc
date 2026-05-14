@@ -1,0 +1,99 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_SINGLETON*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generator*: xref:languages:bmm-gen.adoc#_class_bmm_routine_definition[BMM_ROUTINE_DEFINITION]
+a|Generator of the value of this static property.
+
+h|prop +
+  0..1
+|*is_synthesised_generic*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this feature was synthesised due to generic substitution in an inherited type, or
+further constraining of a formal generic parameter.
+
+h|prop +
+  0..1
+|*feature_extensions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_extension[BMM_FEATURE_EXTENSION]>
+a|Extensions to feature-level meta-types.
+
+h|prop +
+  
+|*group*: xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]
+a|Group containing this feature.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+a|Model element within which an element is declared.
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Declared or inferred static type of the entity.
+
+h|prop +
+  
+|*is_nullable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this element can be null (Void) at execution time. May be interpreted as
+optionality in subtypes..
+
+h| func
+|*signature* : xref:languages:bmm-gen.adoc#_class_bmm_signature[BMM_SIGNATURE]
+a|Formal signature of this element, in the form:
+
+`name [arg1_name: T_arg1, ...][:T_value]`
+
+Specific implementations in descendants.
+
+h| func
+|*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = type().equal(BMM_MODEL.boolean_type_definition());
+
+a|True if `type` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `type_name()` =
+`'Boolean'`).
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h| func
+|*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = (scope = self);
+
+a|True if this model element is the root of a model structure hierarchy.
+
+|===

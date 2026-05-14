@@ -1,0 +1,21 @@
+
+=== Class EL_OPERATOR
+
+[tabs]
+======
+Diff::
++
+include::EL_OPERATOR.adoc[]
+
+Flat::
++
+include::EL_OPERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::EL_OPERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::EL_OPERATOR-properties-flat.adoc[]
+======

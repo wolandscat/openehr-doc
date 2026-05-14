@@ -1,0 +1,21 @@
+
+=== Class ASSIGNMENT
+
+[tabs]
+======
+Diff::
++
+include::ASSIGNMENT.adoc[]
+
+Flat::
++
+include::ASSIGNMENT-flat.adoc[]
+
+Props(diff)::
++
+include::ASSIGNMENT-properties.adoc[]
+
+Props(flat)::
++
+include::ASSIGNMENT-properties-flat.adoc[]
+======

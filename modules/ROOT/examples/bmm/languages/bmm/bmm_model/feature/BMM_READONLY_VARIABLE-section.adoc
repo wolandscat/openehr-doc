@@ -1,0 +1,21 @@
+
+=== Class BMM_READONLY_VARIABLE
+
+[tabs]
+======
+Diff::
++
+include::BMM_READONLY_VARIABLE.adoc[]
+
+Flat::
++
+include::BMM_READONLY_VARIABLE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_READONLY_VARIABLE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_READONLY_VARIABLE-properties-flat.adoc[]
+======

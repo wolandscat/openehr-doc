@@ -1,0 +1,21 @@
+
+=== Class Multiplicity_interval
+
+[tabs]
+======
+Diff::
++
+include::Multiplicity_interval.adoc[]
+
+Flat::
++
+include::Multiplicity_interval-flat.adoc[]
+
+Props(diff)::
++
+include::Multiplicity_interval-properties.adoc[]
+
+Props(flat)::
++
+include::Multiplicity_interval-properties-flat.adoc[]
+======

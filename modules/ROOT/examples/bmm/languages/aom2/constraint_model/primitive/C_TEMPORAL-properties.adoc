@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_TEMPORAL<T:Temporal>*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*pattern_constraint*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional alternative constraint in the form of a pattern based on ISO8601. See descendants
+for details.
+
+|===

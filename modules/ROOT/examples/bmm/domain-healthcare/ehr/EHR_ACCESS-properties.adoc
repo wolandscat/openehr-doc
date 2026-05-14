@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EHR_ACCESS*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*settings*: xref:domain-healthcare:ehr-gen.adoc#_class_access_control_settings[ACCESS_CONTROL_SETTINGS]
+a|Access control settings for the EHR. Instance is a subtype of the type
+`ACCESS_CONTROL_SETTINGS`, allowing for the use of different access control schemes.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|scheme_valid: ¬ scheme.is_empty();
+
+h|
+2+a|is_archetype_root: is_archetype_root;
+
+
+|===

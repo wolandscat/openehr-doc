@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXPR_LEAF*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*item*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|The reference item from which the value of this node can be computed.
+
+|===

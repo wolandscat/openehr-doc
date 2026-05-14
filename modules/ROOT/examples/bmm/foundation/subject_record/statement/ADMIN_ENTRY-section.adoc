@@ -1,5 +1,5 @@
 
-=== class ADMIN_ENTRY
+=== Class ADMIN_ENTRY
 
 [tabs]
 ======

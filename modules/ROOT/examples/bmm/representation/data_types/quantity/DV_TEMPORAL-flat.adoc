@@ -1,26 +1,21 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class DV_TEMPORAL*
 
-h|*Description*
-2+a|Specialised temporal variant of `DV_ABSOLUTE_QUANTITY` whose diff type is `DV_DURATION`.
-
-h|*Inherit*
-2+|xref:representation:representation-data_types.adoc#_class_dv_absolute_quantity[DV_ABSOLUTE_QUANTITY]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   0..1
-|*accuracy*: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+|*accuracy*: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Time accuracy, expressed as a duration.
 
 h|prop +
   0..1
-|*magnitude_status*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*magnitude_status*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional status of magnitude with values:
 
 * `"="` : magnitude is a point value
@@ -33,16 +28,16 @@ a|Optional status of magnitude with values:
 If not present, assumed meaning is `"="` .
 
 h| func
-|*magnitude* : xref:representation:representation-builtin_types.adoc#_class_ordered_numeric[Ordered_Numeric]
+|*magnitude* : xref:representation:builtin_types-gen.adoc#_class_ordered_numeric[Ordered_Numeric]
 a|
 
 h| func
-|*accuracy_unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*accuracy_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if accuracy is not known, e.g. due to not being recorded or discernable.
 
 h|prop +
   0..1
-|*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*normal_status*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Optional normal status indicator of value with respect to normal range for this value.
 Often included by lab, even if the normal range itself is not included. Coded by ordinals
 in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
@@ -50,23 +45,23 @@ in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
 
 h|prop +
   0..1
-|*normal_range*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>
+|*normal_range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>
 a|Optional normal range.
 
 h|prop +
   0..1
-|*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
+|*other_reference_ranges*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>>
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
 h| func
 |*is_strictly_comparable_to* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test if two instances are strictly comparable. Effected in descendants.
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
     comparable: is_strictly_comparable_to(other);
@@ -74,11 +69,11 @@ other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_O
 a|True if this Ordered object is less than `other`. Redefined in descendants.
 
 h| func
-|*is_simple* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_simple* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this quantity has no reference ranges.
 
 h| func
-|*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*is_normal* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
     testable: ∃ normal_range ∨ ∃ normal_status;
@@ -96,7 +91,7 @@ h|
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -107,7 +102,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -118,7 +113,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +

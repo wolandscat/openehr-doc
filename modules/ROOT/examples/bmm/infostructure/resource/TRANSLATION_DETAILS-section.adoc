@@ -1,5 +1,5 @@
 
-=== class TRANSLATION_DETAILS
+=== Class TRANSLATION_DETAILS
 
 [tabs]
 ======

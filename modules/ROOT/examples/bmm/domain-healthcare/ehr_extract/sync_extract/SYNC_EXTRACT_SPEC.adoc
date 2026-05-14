@@ -1,0 +1,38 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SYNC_EXTRACT_SPEC*
+
+h|*Description*
+2+a|Details of specification of Extract, used in a request to specify an Extract, or in a
+response, to describe what is actually in the Extract.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*includes_versions*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the Versions from the Contribution are included; False if just the Contribution
+and its Audit are included.
+
+h|prop +
+  0..1
+|*contribution_list*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]>
+a|List of Contributions to include / that are included in the Extract.
+
+h|prop +
+  0..1
+|*contributions_since*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
+a|Specify Contributions included in Extract by threshold date.
+
+h|prop +
+  0..1
+|*all_contributions*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if all Contributions in the record are included.
+
+|===

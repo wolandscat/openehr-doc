@@ -1,0 +1,30 @@
+
+.bmm_model Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package schema {
+}
+
+package model {
+}
+
+package type {
+}
+
+package class {
+}
+
+package feature {
+}
+
+package value {
+}
+
+package statement {
+}
+
+....

@@ -1,12 +1,30 @@
 
 .builtin_types Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class Any [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_any]] {
+abstract class Any [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_any]] {
+}
+
+package primitive_types {
+}
+
+package structures {
+}
+
+package time {
+}
+
+package interval {
+}
+
+package terminology {
+}
+
+package functional {
 }
 
 ....

@@ -1,18 +1,12 @@
 
 .interval Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Proper_Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_proper_interval]] {
-}
-
-Interval <|-[#gray]- Proper_Interval
-
-
-class Multiplicity_Interval [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_multiplicity_interval]] {
+class Multiplicity_interval [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_multiplicity_interval]] {
         .. access ..
         is_open:Boolean
         is_optional:Boolean
@@ -20,10 +14,16 @@ class Multiplicity_Interval [[/splashlang-doc/latest/representation/representati
         is_prohibited:Boolean
 }
 
-Proper_Interval <|-[#gray]- Multiplicity_Interval
+Multiplicity_interval -[#gray]up-|> Proper_Interval  
 
 
-class Cardinality [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_cardinality]] {
+class Proper_Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_proper_interval]] {
+}
+
+Proper_Interval -[#gray]up-|> Interval  
+
+
+class Cardinality [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_cardinality]] {
         .. access ..
         is_ordered: Boolean
         is_unique: Boolean
@@ -32,15 +32,16 @@ class Cardinality [[/splashlang-doc/latest/representation/representation-builtin
         is_set:Boolean
 }
 
-Cardinality *--> "1 interval" Multiplicity_Interval
 
-class Point_Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_point_interval]] {
+Cardinality *--> "1 interval" Multiplicity_interval
+
+class Point_Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_point_interval]] {
 }
 
-Interval <|-[#gray]- Point_Interval
+Point_Interval -[#gray]up-|> Interval  
 
 
-abstract class Interval<T:Ordered> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_interval]] {
+abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_interval]] {
         .. access ..
         lower: T
         upper: T

@@ -1,5 +1,5 @@
 
-=== class ELEMENT
+=== Class ELEMENT
 
 [tabs]
 ======

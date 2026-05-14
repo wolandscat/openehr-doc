@@ -1,0 +1,82 @@
+
+.type Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class TYPE_DEF_DATE [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_date]] {
+}
+
+TYPE_DEF_DATE -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_DATE_TIME [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_date_time]] {
+}
+
+TYPE_DEF_DATE_TIME -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_TIME [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_time]] {
+}
+
+TYPE_DEF_TIME -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_DURATION [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_duration]] {
+}
+
+TYPE_DEF_DURATION -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_BOOLEAN [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_boolean]] {
+}
+
+TYPE_DEF_BOOLEAN -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_OBJECT_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_object_ref]] {
+}
+
+TYPE_DEF_OBJECT_REF -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+abstract class EXPR_TYPE_DEF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_type_def]] {
+        .. access ..
+        type_name: String
+        type_anchor: Any
+}
+
+
+class TYPE_DEF_STRING [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_string]] {
+}
+
+TYPE_DEF_STRING -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_URI [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_uri]] {
+}
+
+TYPE_DEF_URI -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_REAL [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_real]] {
+}
+
+TYPE_DEF_REAL -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_terminology_code]] {
+}
+
+TYPE_DEF_TERMINOLOGY_CODE -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+class TYPE_DEF_INTEGER [[/openehr-doc/latest/languages/bel-gen.html#_class_type_def_integer]] {
+}
+
+TYPE_DEF_INTEGER -[#gray]up-|> EXPR_TYPE_DEF  
+
+
+....

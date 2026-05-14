@@ -1,37 +1,19 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class Iso8601_date_time*
 
-h|*Description*
-2+a|Represents an ISO 8601 date/time, including partial and extended forms. Value may be:
-
-* `YYYY-MM-DDThh:mm:ss[(,\|.)sss][Z \| ±hh[:mm]]` (extended, preferred) or
-* `YYYYMMDDThhmmss[(,\|.)sss][Z \|; ±hh[mm]]` (compact)
-* or a partial variant.
-
-See `valid_iso8601_date_time()` for validity.
-
-Note that this class includes 2 deviations from ISO 8601:2004:
-
-* for partial date/times, any part of the date/time up to the month may be missing, not
-just seconds and minutes as in the standard;
-* the time `24:00:00` is not allowed, since it would mean the date was really on the next
-day.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
 
 h|
 2+^h|*Feature Group "access"*
 
 h| func
-|*year* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*year* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the year part of the date as an Integer.
 
 h| func
-|*month* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+|*month* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
     month_known: ¬ month_unknown;
@@ -39,7 +21,7 @@ h| func
 a|Extract the month part of the date/time as an Integer, or return 0 if not present.
 
 h| func
-|*day* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+|*day* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
     day_known: ¬ day_unknown;
@@ -47,7 +29,7 @@ h| func
 a|Extract the day part of the date/time as an Integer, or return 0 if not present.
 
 h| func
-|*hour* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+|*hour* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
     hour_known: ¬ hour_unknown;
@@ -55,7 +37,7 @@ h| func
 a|Extract the hour part of the date/time as an Integer, or return 0 if not present.
 
 h| func
-|*minute* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+|*minute* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
     minute_known: ¬ minute_unknown;
@@ -63,7 +45,7 @@ h| func
 a|Extract the minute part of the date/time as an Integer, or return 0 if not present.
 
 h| func
-|*second* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer] +
+|*second* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
     second_known: ¬ second_unknown;
@@ -72,30 +54,30 @@ a|Extract the integral seconds part of the date/time (i.e. prior to any decimal 
 Integer, or return 0 if not present.
 
 h| func
-|*fractional_second* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*fractional_second* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Extract the fractional seconds part of the date/time (i.e. following to any decimal sign)
 as a Real, or return 0.0 if not present.
 
 h| func
-|*timezone* : xref:representation:representation-builtin_types.adoc#_class_iso8601_timezone[Iso8601_timezone]
+|*timezone* : xref:representation:builtin_types-gen.adoc#_class_iso8601_timezone[Iso8601_timezone]
 a|Timezone; may be Void.
 
 h| func
-|*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return the string value in extended format.
 
 h|prop +
   
-|*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Representation of all descendants is a single String.
 
 h| func
-|*is_partial* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_partial* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
 missing.
 
 h| func
-|*is_extended* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_extended* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
 separators. This is the preferred format.
 
@@ -104,7 +86,7 @@ h|
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Arithmetic value comparison. Returns True if current object is less than `other`. This
@@ -116,7 +98,7 @@ In conjunction with `=`, enables the definition of the related functions
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -127,7 +109,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -138,7 +120,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +
@@ -152,77 +134,92 @@ h|
 
 h|const +
   
-|*Seconds_in_minute*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Seconds_in_minute*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of seconds in a minute.
 
 h|const +
   
-|*Minutes_in_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Minutes_in_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of minutes in an hour.
 
 h|const +
   
-|*Hours_in_day*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Hours_in_day*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  24
 a|Number of clock hours in a day.
 
 h|const +
   
-|*Days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  365
 a|Number of days in a normal year.
 
 h|const +
   
-|*Days_in_leap_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_leap_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Calendar days in a standard leap year.
 
 h|const +
   
-|*Max_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Maximum number of days in a year, accounting for leap years.
 
 h|const +
   
-|*Days_in_week*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_week*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  7
 a|Number of days in a week.
 
 h|const +
   
-|*Months_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Months_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Number of months in a year.
 
 h|const +
   
-|*Max_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  31
 a|Maximum number of days in any month.
 
 h|const +
   
-|*Average_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Used for conversions of durations containing months to days and/or seconds.
 
 h|const +
   
-|*Average_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Used for conversions of durations containing years to days and/or seconds.
 
 h|const +
   
-|*Nominal_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Nominal days in a month, used for conversions.
 
 h|const +
   
-|*Nominal_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Nominal days in a year, used for conversions.
 
 h|const +
   
-|*Min_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Min_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Minimum hour value of a timezone according to ISO 8601.
 
 h|const +
   
-|*Max_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  14
 a|Maximum hour value of a timezone according to ISO 8601.
 
 h|*Invariants*

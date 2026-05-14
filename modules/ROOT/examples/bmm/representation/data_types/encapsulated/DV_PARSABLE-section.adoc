@@ -1,5 +1,5 @@
 
-=== class DV_PARSABLE
+=== Class DV_PARSABLE
 
 [tabs]
 ======

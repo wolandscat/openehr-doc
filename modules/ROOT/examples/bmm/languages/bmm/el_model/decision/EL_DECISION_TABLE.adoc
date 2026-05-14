@@ -1,0 +1,28 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EL_DECISION_TABLE<T:EL_TERMINAL>*
+
+h|*Description*
+2+a|Meta-type for decision tables. Generic on the meta-type of the `result` attribute of the
+branches, to allow specialised forms of if/else and case structures to be created.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_terminal[EL_TERMINAL]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_el_decision_branch[EL_DECISION_BRANCH]<T>>
+a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case
+statement.
+
+h|prop +
+  
+|*else*: T
+a|Result expression of conditional, if its `condition` evaluates to True.
+
+|===

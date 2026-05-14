@@ -1,5 +1,5 @@
 
-=== class OBJECT_ID
+=== Class OBJECT_ID
 
 [tabs]
 ======

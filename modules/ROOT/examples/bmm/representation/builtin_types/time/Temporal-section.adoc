@@ -1,5 +1,5 @@
 
-=== class Temporal
+=== Class Temporal
 
 [tabs]
 ======

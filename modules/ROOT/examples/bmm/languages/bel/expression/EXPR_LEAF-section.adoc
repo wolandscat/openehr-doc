@@ -1,0 +1,21 @@
+
+=== Class EXPR_LEAF
+
+[tabs]
+======
+Diff::
++
+include::EXPR_LEAF.adoc[]
+
+Flat::
++
+include::EXPR_LEAF-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_LEAF-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_LEAF-properties-flat.adoc[]
+======

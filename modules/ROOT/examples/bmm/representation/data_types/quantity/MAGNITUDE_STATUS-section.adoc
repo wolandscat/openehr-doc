@@ -1,5 +1,5 @@
 
-=== enum MAGNITUDE_STATUS
+=== Enum MAGNITUDE_STATUS
 
 [tabs]
 ======

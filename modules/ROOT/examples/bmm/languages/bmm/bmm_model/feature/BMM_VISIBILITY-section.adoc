@@ -1,0 +1,21 @@
+
+=== Class BMM_VISIBILITY
+
+[tabs]
+======
+Diff::
++
+include::BMM_VISIBILITY.adoc[]
+
+Flat::
++
+include::BMM_VISIBILITY-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_VISIBILITY-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_VISIBILITY-properties-flat.adoc[]
+======

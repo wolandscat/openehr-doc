@@ -1,0 +1,21 @@
+
+=== Enum BMM_OPERATOR_POSITION
+
+[tabs]
+======
+Diff::
++
+include::BMM_OPERATOR_POSITION.adoc[]
+
+Flat::
++
+include::BMM_OPERATOR_POSITION-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_OPERATOR_POSITION-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_OPERATOR_POSITION-properties-flat.adoc[]
+======

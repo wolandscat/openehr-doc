@@ -1,0 +1,19 @@
+
+.integration Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class GENERIC_ENTRY [[/openehr-doc/latest/foundation/integration-gen.html#_class_generic_entry]] {
+        .. access ..
+        data: ITEM
+}
+
+GENERIC_ENTRY -[#gray]up-|> CONTENT_ITEM  
+
+abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] #FDFDFD {
+}
+
+....

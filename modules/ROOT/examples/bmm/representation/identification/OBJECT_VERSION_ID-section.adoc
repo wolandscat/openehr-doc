@@ -1,5 +1,5 @@
 
-=== class OBJECT_VERSION_ID
+=== Class OBJECT_VERSION_ID
 
 [tabs]
 ======

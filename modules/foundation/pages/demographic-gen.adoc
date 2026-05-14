@@ -1,0 +1,33 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Demographic Specification
+
+
+== Demographic Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation//demographic/demographic-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/foundation/demographic//CONTACT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//PARTY_RELATIONSHIP-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//CAPABILITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//ROLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//AGENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//ORGANISATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//PARTY_IDENTITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//PARTY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//PERSON-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//ADDRESS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//VERSIONED_PARTY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//ACTOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/demographic//GROUP-section.adoc[leveloffset=+1]
+
+
+
+
+

@@ -1,5 +1,5 @@
 
-=== class DV_SCALE
+=== Class DV_SCALE
 
 [tabs]
 ======

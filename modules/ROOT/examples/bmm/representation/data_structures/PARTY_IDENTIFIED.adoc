@@ -1,0 +1,48 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class PARTY_IDENTIFIED*
+
+h|*Description*
+2+a|Proxy data for an identified party other than the subject of the record, minimally
+consisting of human-readable identifier(s), such as name, formal (and possibly computable)
+identifiers such as NHS number, and an optional link to external data. There must be at
+least one of name, identifier or external_ref present.
+
+Used to describe parties where only identifiers may be known, and there is no entry at all
+in the demographic system (or even no demographic system). Typically for health care
+providers, e.g. name and provider number of an institution.
+
+Should not be used to include patient identifying information.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional human-readable name (in String form).
+
+h|prop +
+  0..1
+|*identifiers*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_identifier[DV_IDENTIFIER]>
+a|One or more formal identifiers (possibly computable).
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|basic_validity: ∃ name ∨ ∃ identifiers ∨ ∃ external_ref;
+
+h|
+2+a|name_valid: ∃ name ⇒ ¬ name.is_empty();
+
+h|
+2+a|identifiers_valid: ∃ identifiers ⇒ ¬ identifiers.is_empty();
+
+
+|===

@@ -1,0 +1,29 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_LITERAL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*value*: xref:languages:bmm-gen.adoc#_class_bmm_literal_value[BMM_LITERAL_VALUE]<xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]>
+a|The reference item from which the value of this node can be computed.
+
+h| func
+|*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Return `value.type`.
+
+h| func
+|*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_validity: Result = eval_type().equal(BMM_MODEL.boolean_type_definition());
+
+a|True if `eval_type` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `type_name()`
+= `Boolean`).
+
+|===

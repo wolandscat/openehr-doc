@@ -1,0 +1,21 @@
+
+=== Class PARTICIPATION
+
+[tabs]
+======
+Diff::
++
+include::PARTICIPATION.adoc[]
+
+Flat::
++
+include::PARTICIPATION-flat.adoc[]
+
+Props(diff)::
++
+include::PARTICIPATION-properties.adoc[]
+
+Props(flat)::
++
+include::PARTICIPATION-properties-flat.adoc[]
+======

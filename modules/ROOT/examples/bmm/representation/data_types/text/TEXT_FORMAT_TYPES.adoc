@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *enum TEXT_FORMAT_TYPES*
@@ -8,7 +8,7 @@ h|*Description*
 2+a|Enumeration of text format types for the DV_TEXT formatting attribute.
 
 h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+2+|xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 
 h|
 2+^h|*Feature Group "values"*

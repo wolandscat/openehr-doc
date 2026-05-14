@@ -1,5 +1,5 @@
 
-=== class INTERNET_ID
+=== Class INTERNET_ID
 
 [tabs]
 ======

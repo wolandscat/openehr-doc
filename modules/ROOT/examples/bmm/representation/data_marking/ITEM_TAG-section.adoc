@@ -1,5 +1,5 @@
 
-=== class ITEM_TAG
+=== Class ITEM_TAG
 
 [tabs]
 ======

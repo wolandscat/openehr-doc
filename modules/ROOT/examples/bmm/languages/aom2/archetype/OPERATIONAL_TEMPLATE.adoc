@@ -1,0 +1,47 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class OPERATIONAL_TEMPLATE*
+
+h|*Description*
+2+a|Root object of an operational template. An operational template is derived from a
+`TEMPLATE` definition and the `ARCHETYPEs` and/or `TEMPLATE_OVERLAYs` mentioned by that
+template by a process of flattening, and potentially removal of unneeded languages and
+terminologies.
+
+An operational template is used for generating and validating RM-canonical instance data,
+and also as a source artefact for generating other downstream technical artefacts,
+including XML schemas, APIs and UI form definitions.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_authored_archetype[AUTHORED_ARCHETYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*component_terminologies*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]>
+a|Compendium of flattened terminologies of archetypes referenced from this template, keyed
+by archetype identifier. This will almost always be present in a template.
+
+h|prop +
+  0..1
+|*terminology_extracts*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]>
+a|Compendium of flattened terminology extracts (i.e. from external terminologies) from
+archetypes referenced from this template, keyed by archetype identifier.
+
+h| func
+|*component_terminology* ( +
+an_id: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]
+a|Return the component terminology for the archetype with identifier an_id.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|specialisation_validity: is_specialised;
+
+
+|===

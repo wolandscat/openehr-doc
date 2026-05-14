@@ -1,5 +1,5 @@
 
-=== class Numeric
+=== Class Numeric
 
 [tabs]
 ======

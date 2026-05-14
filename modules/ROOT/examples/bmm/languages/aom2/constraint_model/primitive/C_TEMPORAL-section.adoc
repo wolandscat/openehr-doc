@@ -1,0 +1,21 @@
+
+=== Class C_TEMPORAL
+
+[tabs]
+======
+Diff::
++
+include::C_TEMPORAL.adoc[]
+
+Flat::
++
+include::C_TEMPORAL-flat.adoc[]
+
+Props(diff)::
++
+include::C_TEMPORAL-properties.adoc[]
+
+Props(flat)::
++
+include::C_TEMPORAL-properties-flat.adoc[]
+======

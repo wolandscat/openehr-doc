@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class HIER_OBJECT_ID*
@@ -9,6 +9,6 @@ h|*Description*
 `UID_BASED_ID`.
 
 h|*Inherit*
-2+|xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
+2+|xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 
 |===

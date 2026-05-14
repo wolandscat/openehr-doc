@@ -1,5 +1,5 @@
 
-=== class TUPLE2
+=== Class TUPLE2
 
 [tabs]
 ======

@@ -1,0 +1,45 @@
+
+.bmm Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package definitions {
+}
+
+package bmm_model.schema {
+}
+
+package bmm_model.model {
+}
+
+package bmm_model.type {
+}
+
+package bmm_model.class {
+}
+
+package bmm_model.feature {
+}
+
+package bmm_model.value {
+}
+
+package bmm_model.statement {
+}
+
+package el_model.expression {
+}
+
+package el_model.decision {
+}
+
+package el_model.reference {
+}
+
+package el_model.agent {
+}
+
+....

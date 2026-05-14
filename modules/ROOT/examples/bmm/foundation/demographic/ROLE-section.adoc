@@ -1,5 +1,5 @@
 
-=== class ROLE
+=== Class ROLE
 
 [tabs]
 ======

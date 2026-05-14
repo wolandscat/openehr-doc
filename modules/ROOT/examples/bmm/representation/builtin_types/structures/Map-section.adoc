@@ -1,0 +1,21 @@
+
+=== Class Map
+
+[tabs]
+======
+Diff::
++
+include::Map.adoc[]
+
+Flat::
++
+include::Map-flat.adoc[]
+
+Props(diff)::
++
+include::Map-properties.adoc[]
+
+Props(flat)::
++
+include::Map-properties-flat.adoc[]
+======

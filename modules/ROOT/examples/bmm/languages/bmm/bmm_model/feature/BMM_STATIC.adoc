@@ -1,0 +1,20 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_STATIC*
+
+h|*Description*
+2+a|Meta-type for static (i.e. read-only) properties.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_instantiable_feature[BMM_INSTANTIABLE_FEATURE]
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_not_nullable: ¬ is_nullable;
+
+
+|===

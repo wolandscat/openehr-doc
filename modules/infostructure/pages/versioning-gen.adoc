@@ -1,0 +1,29 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Versioning Specification
+
+
+== Versioning Package
+
+=== Overview 
+
+include::ROOT:example$bmm/infostructure//versioning/versioning-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/infostructure/versioning//VERSIONED_OBJECT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//ATTESTATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//REVISION_HISTORY_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//REVISION_HISTORY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//VERSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//AUDIT_DETAILS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//CONTRIBUTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//ORIGINAL_VERSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/versioning//IMPORTED_VERSION-section.adoc[leveloffset=+1]
+
+
+
+
+

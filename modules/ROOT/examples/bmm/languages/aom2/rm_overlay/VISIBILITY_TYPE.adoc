@@ -1,0 +1,30 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum VISIBILITY_TYPE*
+
+h|*Description*
+2+a|Enumeration of visibility settings for model elements.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*vt_hide* = hide
+a|
+Indicates to a tool to hide the model element to which this marker is attached.
+
+
+
+h|
+|*vt_show* = show
+a|
+Indicates to a tool to show the model element to which this marker is attached.
+
+
+
+|===

@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_GENERIC_TYPE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generic_parameters*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]>
+a|Generic parameters of the `root_type` in this type specifier. The order must match the
+order of the owning class's formal generic parameter declarations, and the types may be
+defined types or formal parameter types.
+
+h|prop +
+  
+|*base_class*: xref:languages:bmm-gen.adoc#_class_bmm_generic_class[BMM_GENERIC_CLASS]
+a|Defining generic class of this type.
+
+|===

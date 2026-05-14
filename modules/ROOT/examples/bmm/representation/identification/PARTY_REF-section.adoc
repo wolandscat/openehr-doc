@@ -1,5 +1,5 @@
 
-=== class PARTY_REF
+=== Class PARTY_REF
 
 [tabs]
 ======

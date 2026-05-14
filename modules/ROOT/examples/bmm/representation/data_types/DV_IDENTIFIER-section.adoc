@@ -1,5 +1,5 @@
 
-=== class DV_IDENTIFIER
+=== Class DV_IDENTIFIER
 
 [tabs]
 ======

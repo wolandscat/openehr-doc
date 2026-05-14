@@ -1,0 +1,21 @@
+
+=== Class BMM_EFFECTIVE_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_EFFECTIVE_TYPE.adoc[]
+
+Flat::
++
+include::BMM_EFFECTIVE_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_EFFECTIVE_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_EFFECTIVE_TYPE-properties-flat.adoc[]
+======

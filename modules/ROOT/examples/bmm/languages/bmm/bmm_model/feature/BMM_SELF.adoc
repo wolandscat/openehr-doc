@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_SELF*
+
+h|*Description*
+2+a|Meta-type for an automatically created variable referencing the current instance.
+Typically called 'self' or 'this' in programming languages. Read-only.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_readonly_variable[BMM_READONLY_VARIABLE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+|===

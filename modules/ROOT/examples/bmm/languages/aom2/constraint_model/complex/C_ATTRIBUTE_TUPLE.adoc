@@ -1,0 +1,43 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_ATTRIBUTE_TUPLE*
+
+h|*Description*
+2+a|Object representing a constraint on an attribute tuple, i.e. a group of attributes that
+are constrained together. Typically used for representing co-varying constraints like
+`{units, range}` constraints.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*tuples*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_primitive_tuple[C_PRIMITIVE_TUPLE]>
+a|Tuple definitions.
+
+h|prop +
+  0..1
+|*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]>
+a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
+
+h| func
+|*c_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+same as other. Typically used during validation of specialised archetype nodes.
+
+.Parameters + [horizontal] `rmcc`:: RM conformance checker agent.
+
+h| func
+|*c_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node contain no further redefinitions with respect
+to the node other. Typically used to test if an inherited node locally contains any
+constraints.
+
+|===

@@ -1,0 +1,121 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Data_types Specification
+
+
+== Data_types Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation//data_types/data_types-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types//DATA_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types//DV_IDENTIFIER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types//DV_STATE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types//DV_BOOLEAN-section.adoc[leveloffset=+1]
+
+
+
+
+== Text Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/data_types/text/text-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types/text/DV_PARAGRAPH-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/text/TEXT_FORMAT_TYPES-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/text/TERM_MAPPING-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/text/CODE_PHRASE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/text/DV_CODED_TEXT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/text/DV_TEXT-section.adoc[leveloffset=+1]
+
+
+
+
+== Quantity Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/data_types/quantity/quantity-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types/quantity/DV_PROPORTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_COUNT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/REFERENCE_RANGE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_ORDERED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_QUANTIFIED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_SCALE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_INTERVAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_AMOUNT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_DURATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/MAGNITUDE_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_DATE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_DATE_TIME-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_ABSOLUTE_QUANTITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_QUANTITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/PROPORTION_KIND-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_TEMPORAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_ORDINAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/quantity/DV_TIME-section.adoc[leveloffset=+1]
+
+
+
+
+== Encapsulated Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/data_types/encapsulated/encapsulated-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types/encapsulated/DV_ENCAPSULATED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/encapsulated/DV_MULTIMEDIA-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/encapsulated/DV_PARSABLE-section.adoc[leveloffset=+1]
+
+
+
+
+== Time_specification Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/data_types/time_specification/time_specification-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types/time_specification/DV_TIME_SPECIFICATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/time_specification/DV_PERIODIC_TIME_SPECIFICATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/time_specification/DV_GENERAL_TIME_SPECIFICATION-section.adoc[leveloffset=+1]
+
+
+
+
+== Uri Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/data_types/uri/uri-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_types/uri/DV_URI-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_types/uri/DV_EHR_URI-section.adoc[leveloffset=+1]
+
+
+
+
+

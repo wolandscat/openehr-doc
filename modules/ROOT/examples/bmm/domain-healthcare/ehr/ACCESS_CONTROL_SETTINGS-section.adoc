@@ -1,0 +1,21 @@
+
+=== Class ACCESS_CONTROL_SETTINGS
+
+[tabs]
+======
+Diff::
++
+include::ACCESS_CONTROL_SETTINGS.adoc[]
+
+Flat::
++
+include::ACCESS_CONTROL_SETTINGS-flat.adoc[]
+
+Props(diff)::
++
+include::ACCESS_CONTROL_SETTINGS-properties.adoc[]
+
+Props(flat)::
++
+include::ACCESS_CONTROL_SETTINGS-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class EXPR_TYPE_DEF
+
+[tabs]
+======
+Diff::
++
+include::EXPR_TYPE_DEF.adoc[]
+
+Flat::
++
+include::EXPR_TYPE_DEF-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_TYPE_DEF-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_TYPE_DEF-properties-flat.adoc[]
+======

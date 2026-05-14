@@ -1,0 +1,21 @@
+
+=== Class EL_FUNCTION_CALL
+
+[tabs]
+======
+Diff::
++
+include::EL_FUNCTION_CALL.adoc[]
+
+Flat::
++
+include::EL_FUNCTION_CALL-flat.adoc[]
+
+Props(diff)::
++
+include::EL_FUNCTION_CALL-properties.adoc[]
+
+Props(flat)::
++
+include::EL_FUNCTION_CALL-properties-flat.adoc[]
+======

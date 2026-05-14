@@ -1,0 +1,50 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_ATTRIBUTE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*rm_attribute_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference model attribute within the enclosing type represented by a `C_OBJECT`.
+
+h|prop +
+  0..1
+|*existence*: xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Constraint settable on every attribute, regardless of whether it is singular or of a
+container type, which indicates whether its target object exists or not (i.e. is mandatory
+or not). Only set if it overrides the underlying reference model or parent archetype in
+the case of specialised archetypes.
+
+h|prop +
+  0..1
+|*children*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]>
+a|Child `C_OBJECT` nodes. Each such node represents a constraint on the type of this
+attribute in its reference model. Multiples occur both for multiple items in the case of
+container attributes, and alternatives in the case of singular attributes.
+
+h|prop +
+  0..1
+|*differential_path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Path to the parent object of this attribute (i.e. doesn't include the name of this
+attribute). Used only for attributes in differential form, specialised archetypes. Enables
+only the re-defined parts of a specialised archetype to be expressed, at the path where
+they occur.
+
+h|prop +
+  0..1
+|*cardinality*: xref:representation:builtin_types-gen.adoc#_class_cardinality[Cardinality]
+a|Cardinality constraint of attribute, if a container attribute.
+
+h|prop +
+  
+|*is_multiple*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued)
+attribute.
+
+|===

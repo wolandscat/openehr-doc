@@ -1,0 +1,5 @@
+.Foundation
+* xref:foundation:physical_entity-gen.adoc[]
+* xref:foundation:demographic-gen.adoc[]
+* xref:foundation:subject_record-gen.adoc[]
+* xref:foundation:integration-gen.adoc[]

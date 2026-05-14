@@ -1,5 +1,5 @@
 
-=== class BASIC_DEFINITIONS
+=== Class BASIC_DEFINITIONS
 
 [tabs]
 ======

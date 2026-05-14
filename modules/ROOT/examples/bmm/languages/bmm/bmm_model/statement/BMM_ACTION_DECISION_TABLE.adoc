@@ -1,0 +1,14 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ACTION_DECISION_TABLE*
+
+h|*Description*
+2+a|Specialised form of Decision Table that allows only procedure call agents (lambdas) as the
+result of branches.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+|===

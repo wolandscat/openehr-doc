@@ -1,14 +1,8 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|builtin  abstract  *class Ordered_Numeric*
 
-h|*Description*
-2+a|Abstract notional parent class of ordered, numeric types — types with both the
-less_than() and arithmetic functions defined.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered],xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]
 
 |===

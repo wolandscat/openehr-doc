@@ -1,0 +1,21 @@
+
+=== Class ASSERTION
+
+[tabs]
+======
+Diff::
++
+include::ASSERTION.adoc[]
+
+Flat::
++
+include::ASSERTION-flat.adoc[]
+
+Props(diff)::
++
+include::ASSERTION-properties.adoc[]
+
+Props(flat)::
++
+include::ASSERTION-properties-flat.adoc[]
+======

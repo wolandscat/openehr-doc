@@ -1,5 +1,5 @@
 
-=== class DV_DATE
+=== Class DV_DATE
 
 [tabs]
 ======

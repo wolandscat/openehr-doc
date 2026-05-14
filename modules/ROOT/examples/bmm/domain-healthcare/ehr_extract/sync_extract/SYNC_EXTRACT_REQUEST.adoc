@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SYNC_EXTRACT_REQUEST*
+
+h|*Description*
+2+a|Type of request designed for synchronisation of Contributions between openEHR servers.
+
+h|*Inherit*
+2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_message_content[MESSAGE_CONTENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*specification*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_sync_extract_spec[SYNC_EXTRACT_SPEC]
+a|Details of specification of synchronisation request.
+
+|===

@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class RM_OVERLAY*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*rm_visibility*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_rm_attribute_visibility[RM_ATTRIBUTE_VISIBILITY]>
+a|Optional structure in which visibility and aliasing of reference model elements can be
+specified. Key is path to an RM attribute, which is typically formed from a path to an
+archetyped node concatenated with a further pure RM attribute path; may also refer to a
+non-archetyped attribute.
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class BMM_ENUMERATION
+
+[tabs]
+======
+Diff::
++
+include::BMM_ENUMERATION.adoc[]
+
+Flat::
++
+include::BMM_ENUMERATION-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_ENUMERATION-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_ENUMERATION-properties-flat.adoc[]
+======

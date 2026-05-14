@@ -1,0 +1,21 @@
+
+=== Class STATEMENT
+
+[tabs]
+======
+Diff::
++
+include::STATEMENT.adoc[]
+
+Flat::
++
+include::STATEMENT-flat.adoc[]
+
+Props(diff)::
++
+include::STATEMENT-properties.adoc[]
+
+Props(flat)::
++
+include::STATEMENT-properties-flat.adoc[]
+======

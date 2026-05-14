@@ -1,0 +1,21 @@
+
+=== Class EL_AGENT
+
+[tabs]
+======
+Diff::
++
+include::EL_AGENT.adoc[]
+
+Flat::
++
+include::EL_AGENT-flat.adoc[]
+
+Props(diff)::
++
+include::EL_AGENT-properties.adoc[]
+
+Props(flat)::
++
+include::EL_AGENT-properties-flat.adoc[]
+======

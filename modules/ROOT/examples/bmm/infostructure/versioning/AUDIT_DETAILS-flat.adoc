@@ -1,43 +1,40 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class AUDIT_DETAILS*
 
-h|*Description*
-2+a|The set of attributes required to document the committal of an information
-item to a repository.
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*system_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*system_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Identifier of the logical EHR system where the change was committed. This is almost always
 owned by the organisation legally responsible for the EHR, and is distinct from any
 application, or any hosting infrastructure.
 
 h|prop +
   
-|*time_committed*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
+|*time_committed*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time of committal of the item.
 
 h|prop +
   
-|*change_type*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*change_type*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Type of change. Coded using the openEHR Terminology audit change type group.
 
 h|prop +
   0..1
-|*description*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+|*description*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Reason for committal. This may be used to qualify the value in the `change_type` field.
 For example, if the change affects only the EHR directory, this field might be used to
 indicate 'Folder "episode 2018-02-16" added' or similar.
 
 h|prop +
   
-|*committer*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*committer*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Identity and optional reference into identity management service, of user who committed
 the item.
 

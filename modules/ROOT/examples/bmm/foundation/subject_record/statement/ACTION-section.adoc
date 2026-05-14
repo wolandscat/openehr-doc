@@ -1,5 +1,5 @@
 
-=== class ACTION
+=== Class ACTION
 
 [tabs]
 ======

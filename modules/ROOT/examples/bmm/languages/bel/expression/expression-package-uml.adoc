@@ -1,0 +1,136 @@
+
+.expression Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class EXPR_VARIABLE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_variable_ref]] {
+        .. access ..
+        item: VARIABLE_DECLARATION
+}
+
+EXPR_VARIABLE_REF -[#gray]up-|> EXPR_LEAF  
+
+
+abstract class EXPRESSION [[/openehr-doc/latest/languages/bel-gen.html#_class_expression]] {
+        .. access ..
+        type:EXPR_TYPE_DEF
+}
+
+EXPRESSION -[#gray]up-|> EXPR_VALUE  
+
+
+abstract class EXPR_LEAF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_leaf]] {
+        .. access ..
+        item: Any
+}
+
+EXPR_LEAF -[#gray]up-|> EXPRESSION  
+
+
+abstract class EXPR_VALUE [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value]] {
+        .. access ..
+        value:Any
+}
+
+
+enum OPERATOR_KIND [[/openehr-doc/latest/languages/bel-gen.html#_class_operator_kind]] {
+        .. values ..
+        op_eq = eq
+        op_ne = ne
+        op_lt = lt
+        op_le = le
+        op_gt = gt
+        op_ge = ge
+        op_matches = matches
+        op_not = not
+        op_and = and
+        op_or = or
+        op_xor = xor
+        op_implies = implies
+        op_for_all = for_all
+        op_exists = exists
+        op_plus = plus
+        op_minus = minus
+        op_multiply = multiply
+        op_divide = divide
+        op_modulo = modulo
+        op_exponent = exponent
+}
+
+class EXPR_VALUE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value_ref]] {
+}
+
+EXPR_VALUE_REF -[#gray]up-|> EXPR_LEAF  
+
+
+class EXTERNAL_QUERY [[/openehr-doc/latest/languages/bel-gen.html#_class_external_query]] {
+        .. access ..
+        context: String
+        query_id: String
+        query_args: List<String>
+}
+
+EXTERNAL_QUERY -[#gray]up-|> EXPR_VALUE  
+
+
+class EXPR_FUNCTION_CALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_function_call]] {
+        .. access ..
+        arguments: List<EXPRESSION>
+}
+
+EXPR_FUNCTION_CALL -[#gray]up-|> EXPR_LEAF  
+
+
+abstract class EXPR_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_operator]] {
+        .. access ..
+        precedence_overridden: Boolean
+        symbol: String
+}
+
+EXPR_OPERATOR -[#gray]up-|> EXPRESSION  
+
+
+EXPR_OPERATOR *--> "1 operator" OPERATOR_KIND
+
+class EXPR_FOR_ALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_for_all]] {
+        .. access ..
+        condition: ASSERTION
+}
+
+EXPR_FOR_ALL -[#gray]up-|> EXPR_OPERATOR  
+
+
+EXPR_FOR_ALL *--> "1 operand" EXPR_VALUE_REF
+
+class EXPR_UNARY_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_unary_operator]] {
+        .. access ..
+}
+
+EXPR_UNARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR  
+
+
+EXPR_UNARY_OPERATOR *--> "1 operand" EXPRESSION
+
+class EXPR_BINARY_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_binary_operator]] {
+        .. access ..
+}
+
+EXPR_BINARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR  
+
+
+EXPR_BINARY_OPERATOR *--> "1 left_operand" EXPRESSION
+
+EXPR_BINARY_OPERATOR *--> "1 right_operand" EXPRESSION
+
+class EXPR_LITERAL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_literal]] {
+        .. access ..
+        item: Any
+}
+
+EXPR_LITERAL -[#gray]up-|> EXPR_LEAF  
+
+
+....

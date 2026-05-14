@@ -1,37 +1,31 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *enum VERSION_STATUS*
 
-h|*Description*
-2+a|Status of a versioned artefact, as one of a number of possible values: uncontrolled,
-prerelease, release, build.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*
 
 h|
-|*alpha* = "alpha"
+|*alpha* = alpha
 a|
 
 h|
-|*beta* = "beta"
+|*beta* = beta
 a|
 
 h|
-|*release_candidate* = "release_candidate"
+|*release_candidate* = release_candidate
 a|
 
 h|
-|*released* = "released"
+|*released* = released
 a|
 
 h|
-|*build* = "build"
+|*build* = build
 a|
 
 |===

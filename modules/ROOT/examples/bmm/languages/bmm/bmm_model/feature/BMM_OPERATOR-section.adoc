@@ -1,0 +1,21 @@
+
+=== Class BMM_OPERATOR
+
+[tabs]
+======
+Diff::
++
+include::BMM_OPERATOR.adoc[]
+
+Flat::
++
+include::BMM_OPERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_OPERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_OPERATOR-properties-flat.adoc[]
+======

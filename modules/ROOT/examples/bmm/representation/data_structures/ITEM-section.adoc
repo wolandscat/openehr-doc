@@ -1,5 +1,5 @@
 
-=== class ITEM
+=== Class ITEM
 
 [tabs]
 ======

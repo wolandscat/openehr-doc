@@ -1,0 +1,37 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum BMM_PARAMETER_DIRECTION*
+
+h|*Description*
+2+a|Enumeration of parameter read/write direction values.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*pd_in* = in
+a|
+Parameter is an input parameter, and treated as readonly by the receiving routine.
+
+
+
+h|
+|*pd_out* = out
+a|
+Parameter is an output parameter, treated as a reference to a writeable entity.
+
+
+
+h|
+|*pd_in_out* = in_out
+a|
+Parameter is an input and output parameter, treated as a readable and writeable reference.
+
+
+
+|===

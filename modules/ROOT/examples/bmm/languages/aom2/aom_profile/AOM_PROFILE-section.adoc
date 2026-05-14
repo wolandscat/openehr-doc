@@ -1,0 +1,21 @@
+
+=== Class AOM_PROFILE
+
+[tabs]
+======
+Diff::
++
+include::AOM_PROFILE.adoc[]
+
+Flat::
++
+include::AOM_PROFILE-flat.adoc[]
+
+Props(diff)::
++
+include::AOM_PROFILE-properties.adoc[]
+
+Props(flat)::
++
+include::AOM_PROFILE-properties-flat.adoc[]
+======

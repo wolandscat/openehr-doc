@@ -1,0 +1,21 @@
+
+=== Class C_COMPLEX_OBJECT_PROXY
+
+[tabs]
+======
+Diff::
++
+include::C_COMPLEX_OBJECT_PROXY.adoc[]
+
+Flat::
++
+include::C_COMPLEX_OBJECT_PROXY-flat.adoc[]
+
+Props(diff)::
++
+include::C_COMPLEX_OBJECT_PROXY-properties.adoc[]
+
+Props(flat)::
++
+include::C_COMPLEX_OBJECT_PROXY-properties-flat.adoc[]
+======

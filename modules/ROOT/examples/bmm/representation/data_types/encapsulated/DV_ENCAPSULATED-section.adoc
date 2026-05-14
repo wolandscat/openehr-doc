@@ -1,5 +1,5 @@
 
-=== class DV_ENCAPSULATED
+=== Class DV_ENCAPSULATED
 
 [tabs]
 ======

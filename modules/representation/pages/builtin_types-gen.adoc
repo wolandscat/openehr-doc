@@ -1,0 +1,136 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Builtin_types Specification
+
+
+== Builtin_types Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation//builtin_types/builtin_types-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types//Any-section.adoc[leveloffset=+1]
+
+
+
+
+== Primitive_types Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/primitive_types-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Boolean-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Uri-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Integer64-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Real-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Integer-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Ordered_Numeric-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Character-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Double-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/String-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Octet-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Ordered-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/primitive_types/Numeric-section.adoc[leveloffset=+1]
+
+
+
+
+== Structures Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/structures/structures-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/structures/Array-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/structures/Container-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/structures/List-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/structures/Map-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/structures/Set-section.adoc[leveloffset=+1]
+
+
+
+
+== Time Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/time/time-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_timezone-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_date-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Temporal-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_time-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_duration-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_type-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/time/Iso8601_date_time-section.adoc[leveloffset=+1]
+
+
+
+
+== Interval Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/interval/interval-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/interval/Multiplicity_interval-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/interval/Proper_Interval-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/interval/Cardinality-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/interval/Point_Interval-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/interval/Interval-section.adoc[leveloffset=+1]
+
+
+
+
+== Terminology Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/terminology/terminology-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/terminology/Terminology_term-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/terminology/Terminology_code-section.adoc[leveloffset=+1]
+
+
+
+
+== Functional Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation/builtin_types/functional/functional-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/builtin_types/functional/TUPLE2-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/functional/TUPLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/functional/ROUTINE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/functional/FUNCTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/functional/PROCEDURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/builtin_types/functional/TUPLE1-section.adoc[leveloffset=+1]
+
+
+
+
+

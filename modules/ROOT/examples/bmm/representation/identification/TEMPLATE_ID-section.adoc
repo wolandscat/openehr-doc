@@ -1,5 +1,5 @@
 
-=== class TEMPLATE_ID
+=== Class TEMPLATE_ID
 
 [tabs]
 ======

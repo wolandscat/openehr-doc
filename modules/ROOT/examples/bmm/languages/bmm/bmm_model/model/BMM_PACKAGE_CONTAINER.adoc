@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_PACKAGE_CONTAINER*
+
+h|*Description*
+2+a|A BMM model component that contains packages and classes.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_model_element[BMM_MODEL_ELEMENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*packages*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]>
+a|Child packages; keys all in upper case for guaranteed matching.
+
+h| func
+|*package_at_path* ( +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]
+a|Package at the path `a_path`.
+
+h| func
+|*has_package_path* ( +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if there is a package at the path `a_path`; paths are delimited with delimiter
+`{BMM_DEFINITIONS} _Package_name_delimiter`.
+
+|===

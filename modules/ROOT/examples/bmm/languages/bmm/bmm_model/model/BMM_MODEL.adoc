@@ -1,0 +1,85 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_MODEL*
+
+h|*Description*
+2+a|Definition of the root of a BMM model (along with what is inherited from
+`BMM_SCHEMA_CORE`).
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_package_container[BMM_PACKAGE_CONTAINER],xref:languages:bmm-gen.adoc#_class_bmm_model_metadata[BMM_MODEL_METADATA]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*class_definitions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|All classes in this model, keyed by type name.
+
+h|prop +
+  0..1
+|*used_models*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]>
+a|List of other models 'used' (i.e. 'imported' by this model). Classes in the current model
+may refer to classes in a used model by specifying the other class's `scope` meta-
+attribute.
+
+h|prop +
+  0..1
+|*modules*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
+a|All classes in this model, keyed by type name.
+
+h| func
+|*model_id* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier of this model, lower-case, formed from:
+
+`<rm_publisher>_<model_name>_<rm_release>`
+
+E.g. `"openehr_ehr_1.0.4"`.
+
+h| func
+|*class_definition* ( +
+a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+a|Retrieve the class definition corresponding to `a_type_name` (which may contain a
+generic part).
+
+h| func
+|*has_class_definition* ( +
+a_class_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_class_name` has a class definition in the model.
+
+h| func
+|*has_type_definition* ( +
+a_type_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_type_name` is already concretely known in the system, including if it is
+generic, which may be open, partially open or closed.
+
+h| func
+|*enumeration_definition* ( +
+a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_enumeration[BMM_ENUMERATION]
+a|Retrieve the enumeration definition corresponding to `a_type_name`.
+
+h| func
+|*primitive_types* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of keys in `class_definitions` of items marked as primitive types.
+
+h| func
+|*enumeration_types* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of keys in `class_definitions` of items that are enumeration types.
+
+h| func
+|*is_descendant_of* ( +
+a_class_name: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+a_parent_class_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_class_name` is a descendant in the model of `a_parent_class_name`.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_top_level_scope: scope = self;
+
+
+|===

@@ -1,5 +1,5 @@
 
-=== class INTERVAL_EVENT
+=== Class INTERVAL_EVENT
 
 [tabs]
 ======

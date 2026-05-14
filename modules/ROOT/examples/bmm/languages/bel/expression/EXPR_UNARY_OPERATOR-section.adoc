@@ -1,0 +1,21 @@
+
+=== Class EXPR_UNARY_OPERATOR
+
+[tabs]
+======
+Diff::
++
+include::EXPR_UNARY_OPERATOR.adoc[]
+
+Flat::
++
+include::EXPR_UNARY_OPERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_UNARY_OPERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_UNARY_OPERATOR-properties-flat.adoc[]
+======

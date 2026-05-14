@@ -1,0 +1,33 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class FOLDER*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*folders*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr-gen.adoc#_class_folder[FOLDER]>
+a|Sub-folders of this `FOLDER`.
+
+h|prop +
+  0..1
+|*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]>
+a|The list of references to other (usually) versioned objects logically in this folder.
+
+h|prop +
+  0..1
+|*details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
+a|Archetypable meta-data for `FOLDER`.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|folders_valid: ¬ folders.is_empty();
+
+
+|===

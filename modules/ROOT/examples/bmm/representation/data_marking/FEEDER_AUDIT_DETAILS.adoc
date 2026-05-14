@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class FEEDER_AUDIT_DETAILS*
@@ -11,49 +11,52 @@ created. None of the attributes is defined as mandatory, however, in different s
 various combinations of attributes will usually be mandatory. This can be controlled by
 specifying feeder audit details in legacy archetypes.
 
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*system_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*system_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Identifier of the system which handled the information item. This is the IT system owned
 by the organisation legally responsible for handling the data, and at which the data were
 previously created or passed by an earlier system.
 
 h|prop +
   0..1
-|*location*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
+|*location*: xref:representation:data_structures-gen.adoc#_class_party_identified[PARTY_IDENTIFIED]
 a|Identifier of the particular site/facility within an organisation which handled the item.
 For computability, this identifier needs to be e.g. a PKI identifier which can be included
 in the identifier list of the `PARTY_IDENTIFIED` object.
 
 h|prop +
   0..1
-|*subject*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*subject*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Identifiers for subject of the received information item.
 
 h|prop +
   0..1
-|*provider*: xref:representation:representation-data_marking.adoc#_class_party_identified[PARTY_IDENTIFIED]
+|*provider*: xref:representation:data_structures-gen.adoc#_class_party_identified[PARTY_IDENTIFIED]
 a|Optional provider(s) who created, committed, forwarded or otherwise handled the item.
 
 h|prop +
   0..1
-|*time*: xref:representation:representation-data_types.adoc#_class_dv_date_time[DV_DATE_TIME]
+|*time*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time of handling the item. For an originating system, this will be time of creation, for
 an intermediate feeder system, this will be a time of accession or other time of handling,
 where available.
 
 h|prop +
   0..1
-|*version_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*version_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Any identifier used in the system such as "interim" , "final" , or numeric versions if
 available.
 
 h|prop +
   0..1
-|*other_details*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+|*other_details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Optional attribute to carry any custom meta-data. May be archetyped.
 
 h|*Invariants*

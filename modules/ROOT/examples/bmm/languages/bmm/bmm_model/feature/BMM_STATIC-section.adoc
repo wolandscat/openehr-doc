@@ -1,0 +1,21 @@
+
+=== Class BMM_STATIC
+
+[tabs]
+======
+Diff::
++
+include::BMM_STATIC.adoc[]
+
+Flat::
++
+include::BMM_STATIC-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_STATIC-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_STATIC-properties-flat.adoc[]
+======

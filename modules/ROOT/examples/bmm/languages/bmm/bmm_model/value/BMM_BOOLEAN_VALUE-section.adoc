@@ -1,0 +1,21 @@
+
+=== Class BMM_BOOLEAN_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_BOOLEAN_VALUE.adoc[]
+
+Flat::
++
+include::BMM_BOOLEAN_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_BOOLEAN_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_BOOLEAN_VALUE-properties-flat.adoc[]
+======

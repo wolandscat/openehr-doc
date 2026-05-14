@@ -1,0 +1,21 @@
+
+=== Class EL_BOOLEAN_EXPRESSION
+
+[tabs]
+======
+Diff::
++
+include::EL_BOOLEAN_EXPRESSION.adoc[]
+
+Flat::
++
+include::EL_BOOLEAN_EXPRESSION-flat.adoc[]
+
+Props(diff)::
++
+include::EL_BOOLEAN_EXPRESSION-properties.adoc[]
+
+Props(flat)::
++
+include::EL_BOOLEAN_EXPRESSION-properties-flat.adoc[]
+======

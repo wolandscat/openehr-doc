@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_BINARY_OPERATOR*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*left_operand*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
+a|Left operand node.
+
+h|prop +
+  
+|*right_operand*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
+a|Right operand node.
+
+|===

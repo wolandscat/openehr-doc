@@ -1,0 +1,21 @@
+
+=== Class EL_PREDICATE
+
+[tabs]
+======
+Diff::
++
+include::EL_PREDICATE.adoc[]
+
+Flat::
++
+include::EL_PREDICATE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_PREDICATE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_PREDICATE-properties-flat.adoc[]
+======

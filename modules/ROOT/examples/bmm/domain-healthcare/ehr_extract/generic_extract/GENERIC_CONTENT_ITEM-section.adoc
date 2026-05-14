@@ -1,0 +1,21 @@
+
+=== Class GENERIC_CONTENT_ITEM
+
+[tabs]
+======
+Diff::
++
+include::GENERIC_CONTENT_ITEM.adoc[]
+
+Flat::
++
+include::GENERIC_CONTENT_ITEM-flat.adoc[]
+
+Props(diff)::
++
+include::GENERIC_CONTENT_ITEM-properties.adoc[]
+
+Props(flat)::
++
+include::GENERIC_CONTENT_ITEM-properties-flat.adoc[]
+======

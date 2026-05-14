@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ACTION_TABLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*decision_table*: xref:languages:bmm-gen.adoc#_class_bmm_action_decision_table[BMM_ACTION_DECISION_TABLE]
+a|A specialised decision table whose outputs can only be procedure agents. In execution, the
+matched agent will be invoked.
+
+|===

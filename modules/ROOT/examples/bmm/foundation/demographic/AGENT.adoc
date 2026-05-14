@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class AGENT*
@@ -9,6 +9,6 @@ h|*Description*
 or organisations.
 
 h|*Inherit*
-2+|xref:foundation:foundation-demographic.adoc#_class_actor[ACTOR]
+2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 |===

@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class TERM_MAPPING*
@@ -14,12 +14,15 @@ Used for adding classification terms (e.g. adding ICD classifiers to SNOMED desc
 terms), or mapping into equivalents in other terminologies (e.g. across nursing
 vocabularies).
 
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*match*: xref:representation:representation-builtin_types.adoc#_class_character[Character]
+|*match*: xref:representation:builtin_types-gen.adoc#_class_character[Character]
 a|The relative match of the target term with respect to the mapped text item. Result
 meanings:
 
@@ -36,16 +39,16 @@ multilingual thesauri).
 
 h|prop +
   0..1
-|*purpose*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*purpose*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'.
 
 h|prop +
   
-|*target*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*target*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|The target term of the mapping.
 
 h| func
-|*narrower* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*narrower* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     validity: match = '<' ⇒ Result;
@@ -53,7 +56,7 @@ h| func
 a|The mapping is to a narrower term.
 
 h| func
-|*broader* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*broader* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     validity: match = '>' ⇒ Result;
@@ -61,11 +64,11 @@ h| func
 a|The mapping is to a broader term.
 
 h| func
-|*equivalent* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*equivalent* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|The mapping is to an equivalent term.
 
 h| func
-|*unknown* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     validity: match = '?' ⇒ Result;
@@ -74,7 +77,7 @@ a|The kind of mapping is unknown.
 
 h| func
 |*is_valid_match_code* ( +
-c: xref:representation:representation-builtin_types.adoc#_class_character[Character]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+c: xref:representation:builtin_types-gen.adoc#_class_character[Character]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     validity: Result = (c = '>' ∨ c = '=' ∨ c = '<' ∨ c = '?');

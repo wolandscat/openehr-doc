@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_PROCEDURE*
+
+h|*Description*
+2+a|A formal element with signature of the form: `name ({arg:TArg}*):TStatus`, where `TStatus`
+is the built-in type `BMM_STATUS_TYPE`.. A procedure is a computed (rather than data)
+element, generally assumed to be state-changing, and is usually called in the form `name
+({arg:TArg}*)`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_status_type[BMM_STATUS_TYPE]
+a|Declared or inferred static type of the entity.
+
+h| func
+|*signature* : xref:languages:bmm-gen.adoc#_class_bmm_procedure_type[BMM_PROCEDURE_TYPE]
+a|Formal signature of this element, in the form:
+
+`name [arg1_name: T_arg1, ...][:T_value]`
+
+Specific implementations in descendants.
+
+|===

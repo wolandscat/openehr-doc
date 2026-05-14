@@ -1,0 +1,62 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class AUTHORED_ARCHETYPE*
+
+h|*Description*
+2+a|Root object of a standalone, authored archetype, including all meta-data,
+description, other identifiers and lifecycle.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_archetype[ARCHETYPE],xref:infostructure:resource-gen.adoc#_class_authored_resource[AUTHORED_RESOURCE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*adl_version*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|ADL version if archetype was read in from an ADL sharable archetype.
+
+h|prop +
+  
+|*build_uid*: xref:representation:identification-gen.adoc#_class_uuid[UUID]
+a|Unique identifier of this archetype artefact instance. A new identifier is assigned every
+time the content is changed by a tool. Used by tools to distinguish different revisions
+and/or interim snapshots of the same artefact.
+
+h|prop +
+  
+|*rm_release*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Semver.org compatible release of the most recent reference model release on which the
+archetype in its current version is based. This does not imply conformance only to this
+release, since an archetype may be valid with respect to multiple releases of a reference
+model.
+
+h|prop +
+  
+|*is_generated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|If True, indicates that this artefact was machine-generated from some other source, in
+which case, tools would expect to overwrite this artefact on a new generation. Editing
+tools should set this value to False when a user starts to manually edit an archetype.
+
+h|prop +
+  
+|*other_meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|invariant_adl_version_validity: valid_version_id(adl_version);
+
+h|
+2+a|invariant_rm_release: valid_version_id(rm_release);
+
+h|
+2+a|description_validity: ∃ description;
+
+
+|===

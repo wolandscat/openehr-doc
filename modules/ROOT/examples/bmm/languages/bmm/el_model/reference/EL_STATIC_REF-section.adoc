@@ -1,0 +1,21 @@
+
+=== Class EL_STATIC_REF
+
+[tabs]
+======
+Diff::
++
+include::EL_STATIC_REF.adoc[]
+
+Flat::
++
+include::EL_STATIC_REF-flat.adoc[]
+
+Props(diff)::
++
+include::EL_STATIC_REF-properties.adoc[]
+
+Props(flat)::
++
+include::EL_STATIC_REF-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class ARCHETYPE_ID_CONSTRAINT
+
+[tabs]
+======
+Diff::
++
+include::ARCHETYPE_ID_CONSTRAINT.adoc[]
+
+Flat::
++
+include::ARCHETYPE_ID_CONSTRAINT-flat.adoc[]
+
+Props(diff)::
++
+include::ARCHETYPE_ID_CONSTRAINT-properties.adoc[]
+
+Props(flat)::
++
+include::ARCHETYPE_ID_CONSTRAINT-properties-flat.adoc[]
+======

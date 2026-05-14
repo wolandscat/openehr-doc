@@ -1,0 +1,24 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_DEFINED_OBJECT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Default value set in a template, and present in an operational template. Generally limited
+to leaf and near-leaf nodes.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_valid_default_value: valid_value(default_value);
+
+
+|===

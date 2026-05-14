@@ -1,0 +1,4 @@
+:splashlang_rm_domain: {splashlang_doc_site}/{splashlang_release}/domain/domain-overview.html
+:splashlang_rm_foundation: {splashlang_doc_site}/{splashlang_release}/foundation/foundation-overview.html
+:splashlang_rm_representation: {splashlang_doc_site}/{splashlang_release}/representation/representation-overview.html
+

@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_FUNCTION_TYPE*
+
+h|*Description*
+2+a|Meta-type for function object signatures.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_routine_type[BMM_ROUTINE_TYPE]
+
+|===

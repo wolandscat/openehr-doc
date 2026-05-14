@@ -1,5 +1,5 @@
 
-=== class TERMINOLOGY_ID
+=== Class TERMINOLOGY_ID
 
 [tabs]
 ======

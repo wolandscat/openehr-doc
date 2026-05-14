@@ -1,21 +1,16 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class Temporal*
 
-h|*Description*
-2+a|Abstract ancestor of time-related classes.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]
 
 h|
 2+^h|*Feature Group "operators"*
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Arithmetic value comparison. Returns True if current object is less than `other`. This
@@ -27,7 +22,7 @@ In conjunction with `=`, enables the definition of the related functions
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -38,7 +33,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -49,7 +44,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +

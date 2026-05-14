@@ -1,0 +1,21 @@
+
+=== Class EL_DECISION_TABLE
+
+[tabs]
+======
+Diff::
++
+include::EL_DECISION_TABLE.adoc[]
+
+Flat::
++
+include::EL_DECISION_TABLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_DECISION_TABLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_DECISION_TABLE-properties-flat.adoc[]
+======

@@ -1,12 +1,12 @@
 
 .statement Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_entry]] {
+abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
         .. access ..
         subject: PARTY_PROXY
         provider: PARTY_PROXY
@@ -17,10 +17,10 @@ abstract class ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_reco
         subject_is_self:Boolean
 }
 
-CONTENT_ITEM <|-[#gray]- ENTRY
+ENTRY -[#gray]up-|> CONTENT_ITEM  
 
 
-class ISM_TRANSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_ism_transition]] {
+class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_ism_transition]] {
         .. access ..
         current_state: DV_CODED_TEXT
         transition: DV_CODED_TEXT
@@ -28,129 +28,132 @@ class ISM_TRANSITION [[/splashlang-doc/latest/foundation/foundation-subject_reco
         reason: List<DV_TEXT>
 }
 
-PATHABLE <|-[#gray]- ISM_TRANSITION
+ISM_TRANSITION -[#gray]up-|> PATHABLE  
 
 
-enum INSTRUCTION_EXECUTION_TRANSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_execution_transition]] {
+enum INSTRUCTION_EXECUTION_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_transition]] {
         .. values ..
-        ism_t_initiate = "initiate"
-        ism_t_start = "start"
-        ism_t_schedule = "schedule"
-        ism_t_plan_step = "plan_step"
-        ism_t_cancel = "cancel"
-        ism_t_do = "do"
-        ism_t_resume = "resume"
-        ism_t_suspend = "suspend"
-        ism_t_suspended_step = "suspended_step"
-        ism_t_active_step = "active_step"
-        ism_t_scheduled_step = "scheduled_step"
-        ism_t_postponed_step = "postponed_step"
-        ism_t_abort = "abort"
-        ism_t_restore = "restore"
-        ism_t_postpone = "postpone"
-        ism_t_time_out = "time_out"
-        ism_t_notify_completed = "notify_completed"
-        ism_t_notify_aborted = "notify_aborted"
+        ism_t_initiate = initiate
+        ism_t_start = start
+        ism_t_schedule = schedule
+        ism_t_plan_step = plan_step
+        ism_t_cancel = cancel
+        ism_t_do = do
+        ism_t_resume = resume
+        ism_t_suspend = suspend
+        ism_t_suspended_step = suspended_step
+        ism_t_active_step = active_step
+        ism_t_scheduled_step = scheduled_step
+        ism_t_postponed_step = postponed_step
+        ism_t_abort = abort
+        ism_t_restore = restore
+        ism_t_postpone = postpone
+        ism_t_time_out = time_out
+        ism_t_notify_completed = notify_completed
+        ism_t_notify_aborted = notify_aborted
 }
 
-class ADMIN_ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_admin_entry]] {
+class ADMIN_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_admin_entry]] {
         .. access ..
         data: ITEM_STRUCTURE
 }
 
-ENTRY <|-[#gray]- ADMIN_ENTRY
+ADMIN_ENTRY -[#gray]up-|> ENTRY  
 
 
-class INSTRUCTION_DETAILS [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_details]] {
+class INSTRUCTION_DETAILS [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_details]] {
         .. access ..
         instruction_id: LOCATABLE_REF
         activity_id: String
         wf_details: ITEM_STRUCTURE
 }
 
-PATHABLE <|-[#gray]- INSTRUCTION_DETAILS
+INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE  
 
 
-class INSTRUCTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction]] {
+class INSTRUCTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction]] {
         .. access ..
         narrative: DV_TEXT
         expiry_time: DV_DATE_TIME
         wf_definition: DV_PARSABLE
+        activities: List<ACTIVITY>
 }
 
-CARE_ENTRY <|-[#gray]- INSTRUCTION
+INSTRUCTION -[#gray]up-|> CARE_ENTRY  
 
 
-INSTRUCTION *--> "0..* activities" ACTIVITY
-
-enum INSTRUCTION_EXECUTION_STATE [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_instruction_execution_state]] {
+enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
         .. values ..
-        initial = "initial"
-        planned = "planned"
-        postponed = "postponed"
-        cancelled = "cancelled"
-        active = "active"
-        suspended = "suspended"
-        completed = "completed"
-        aborted = "aborted"
-        expired = "expired"
+        initial = initial
+        planned = planned
+        postponed = postponed
+        cancelled = cancelled
+        active = active
+        suspended = suspended
+        completed = completed
+        aborted = aborted
+        expired = expired
 }
 
-class ACTIVITY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_activity]] {
+class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_activity]] {
         .. access ..
         description: ITEM_STRUCTURE
         timing: DV_PARSABLE
         action_archetype_id: String
 }
 
-LOCATABLE <|-[#gray]- ACTIVITY
+ACTIVITY -[#gray]up-|> LOCATABLE  
 
 
-class ACTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_action]] {
+class ACTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_action]] {
         .. access ..
         time: DV_DATE_TIME
         description: ITEM_STRUCTURE
 }
 
-CARE_ENTRY <|-[#gray]- ACTION
+ACTION -[#gray]up-|> CARE_ENTRY  
 
 
 ACTION *--> "1 ism_transition" ISM_TRANSITION
 
 ACTION *--> "0..1 instruction_details" INSTRUCTION_DETAILS
 
-class EVALUATION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_evaluation]] {
+class EVALUATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_evaluation]] {
         .. access ..
         data: ITEM_STRUCTURE
 }
 
-CARE_ENTRY <|-[#gray]- EVALUATION
+EVALUATION -[#gray]up-|> CARE_ENTRY  
 
 
-class OBSERVATION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_observation]] {
+class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_observation]] {
         .. access ..
         data: HISTORY<ITEM_STRUCTURE>
         state: HISTORY<ITEM_STRUCTURE>
 }
 
-CARE_ENTRY <|-[#gray]- OBSERVATION
+OBSERVATION -[#gray]up-|> CARE_ENTRY  
 
 
-abstract class CARE_ENTRY [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_care_entry]] {
+abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_care_entry]] {
         .. access ..
         protocol: ITEM_STRUCTURE
         guideline_id: OBJECT_REF
 }
 
-ENTRY <|-[#gray]- CARE_ENTRY
+CARE_ENTRY -[#gray]up-|> ENTRY  
 
-abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_content_item]] #FDFDFD {
+abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] #FDFDFD {
 }
-abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_pathable]] #FDFDFD {
+abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
 }
-abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+}
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
 
-LOCATABLE <|-[#gray]- CONTENT_ITEM
+CONTENT_ITEM -[#gray]up-|> LOCATABLE  
+
+LOCATABLE -[#gray]up-|> PATHABLE  
 
 ....

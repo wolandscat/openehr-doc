@@ -1,5 +1,5 @@
 
-=== class GENERIC_ID
+=== Class GENERIC_ID
 
 [tabs]
 ======

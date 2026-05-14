@@ -1,0 +1,202 @@
+
+.type Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_PROCEDURE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_procedure_type]] {
+        .. access ..
+}
+
+BMM_PROCEDURE_TYPE -[#gray]up-|> BMM_ROUTINE_TYPE  
+
+
+BMM_PROCEDURE_TYPE *--> "0..1 result_type" BMM_STATUS_TYPE
+
+class BMM_INDEXED_CONTAINER_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_indexed_container_type]] {
+        .. access ..
+        type_name:String
+}
+
+BMM_INDEXED_CONTAINER_TYPE -[#gray]up-|> BMM_CONTAINER_TYPE  
+
+
+BMM_INDEXED_CONTAINER_TYPE *--> "1 index_type" BMM_SIMPLE_TYPE
+
+class BMM_TUPLE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_tuple_type]] {
+        .. access ..
+        item_types: Map<String,BMM_TYPE>
+        flattened_type_list:List<String>
+}
+
+BMM_TUPLE_TYPE -[#gray]up-|> BMM_BUILTIN_TYPE  
+
+
+class BMM_STATUS_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_status_type]] {
+}
+
+BMM_STATUS_TYPE -[#gray]up-|> BMM_BUILTIN_TYPE  
+
+
+class BMM_UNITARY_PROPERTY [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_unitary_property]] {
+        .. access ..
+}
+
+BMM_UNITARY_PROPERTY -[#gray]up-|> BMM_PROPERTY  
+
+
+BMM_UNITARY_PROPERTY *--> "1 type" BMM_UNITARY_TYPE
+
+class BMM_ROUTINE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_routine_type]] {
+        .. access ..
+}
+
+BMM_ROUTINE_TYPE -[#gray]up-|> BMM_SIGNATURE  
+
+
+BMM_ROUTINE_TYPE *--> "0..1 argument_types" BMM_TUPLE_TYPE
+
+abstract class BMM_BUILTIN_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_builtin_type]] {
+        .. access ..
+        base_name: String
+        is_abstract:Boolean
+        is_primitive:Boolean
+        type_base_name:String
+        type_name:String
+}
+
+BMM_BUILTIN_TYPE -[#gray]up-|> BMM_EFFECTIVE_TYPE  
+
+
+class BMM_CONTAINER_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_container_type]] {
+        .. access ..
+        container_class: BMM_GENERIC_CLASS
+        is_ordered: Boolean
+        is_unique: Boolean
+        type_name:String
+        is_abstract:Boolean
+        flattened_type_list:List<String>
+        unitary_type:BMM_UNITARY_TYPE
+        is_primitive:Boolean
+        effective_type:BMM_EFFECTIVE_TYPE
+}
+
+BMM_CONTAINER_TYPE -[#gray]up-|> BMM_TYPE  
+
+
+BMM_CONTAINER_TYPE *--> "1 item_type" BMM_UNITARY_TYPE
+
+class BMM_SIMPLE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_simple_type]] {
+        .. access ..
+        base_class: BMM_SIMPLE_CLASS
+        type_name:String
+        is_abstract:Boolean
+        flattened_type_list:List<String>
+        effective_base_class:BMM_SIMPLE_CLASS
+}
+
+BMM_SIMPLE_TYPE -[#gray]up-|> BMM_MODEL_TYPE  
+
+
+class BMM_PROPERTY_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_property_type]] {
+}
+
+BMM_PROPERTY_TYPE -[#gray]up-|> BMM_SIGNATURE  
+
+
+class BMM_PARAMETER_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_parameter_type]] {
+        .. access ..
+        name: String
+        flattened_conforms_to_type:BMM_EFFECTIVE_TYPE
+        type_signature:String
+        is_primitive:Boolean
+        is_abstract:Boolean
+        type_name:String
+        flattened_type_list:List<String>
+        effective_type:BMM_EFFECTIVE_TYPE
+}
+
+BMM_PARAMETER_TYPE -[#gray]up-|> BMM_UNITARY_TYPE  
+
+
+BMM_PARAMETER_TYPE *--> "0..1 type_constraint" BMM_EFFECTIVE_TYPE
+
+BMM_PARAMETER_TYPE *--> "0..1 inheritance_precursor" BMM_PARAMETER_TYPE
+
+abstract class BMM_MODEL_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_type]] {
+        .. access ..
+        value_constraint: BMM_VALUE_SET_SPEC
+        base_class: BMM_CLASS
+        type_base_name:String
+        is_primitive:Boolean
+}
+
+BMM_MODEL_TYPE -[#gray]up-|> BMM_EFFECTIVE_TYPE  
+
+
+class BMM_SIGNATURE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_signature]] {
+        .. access ..
+        flattened_type_list:List<String>
+}
+
+BMM_SIGNATURE -[#gray]up-|> BMM_BUILTIN_TYPE  
+
+
+BMM_SIGNATURE *--> "1 result_type" BMM_TYPE
+
+class BMM_GENERIC_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_generic_type]] {
+        .. access ..
+        generic_parameters: List<BMM_UNITARY_TYPE>
+        base_class: BMM_GENERIC_CLASS
+        type_name:String
+        type_signature:String
+        is_abstract:Boolean
+        flattened_type_list:List<String>
+        is_partially_closed:Boolean
+        effective_base_class:BMM_GENERIC_CLASS
+        is_open:Boolean
+}
+
+BMM_GENERIC_TYPE -[#gray]up-|> BMM_MODEL_TYPE  
+
+
+abstract class BMM_UNITARY_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_unitary_type]] {
+        .. access ..
+        unitary_type:BMM_UNITARY_TYPE
+}
+
+BMM_UNITARY_TYPE -[#gray]up-|> BMM_TYPE  
+
+
+abstract class BMM_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_type]] {
+        .. access ..
+        type_name:String
+        type_signature:String
+        is_abstract:Boolean
+        is_primitive:Boolean
+        unitary_type:BMM_UNITARY_TYPE
+        effective_type:BMM_EFFECTIVE_TYPE
+        flattened_type_list:List<String>
+}
+
+
+abstract class BMM_EFFECTIVE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_effective_type]] {
+        .. access ..
+        effective_type:BMM_EFFECTIVE_TYPE
+        type_base_name:String
+}
+
+BMM_EFFECTIVE_TYPE -[#gray]up-|> BMM_UNITARY_TYPE  
+
+
+class BMM_FUNCTION_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_function_type]] {
+}
+
+BMM_FUNCTION_TYPE -[#gray]up-|> BMM_ROUTINE_TYPE  
+
+abstract class "languages.bmm.bmm_model.feature.\nBMM_PROPERTY" as BMM_PROPERTY  [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_property]] #FDFDFD {
+}
+
+....

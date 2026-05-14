@@ -1,0 +1,37 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Data_structures Specification
+
+
+== Data_structures Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation//data_structures/data_structures-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/data_structures//INTERVAL_EVENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//PARTY_PROXY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM_SINGLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM_LIST-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//CLUSTER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//PARTY_RELATED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//HISTORY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//PARTY_IDENTIFIED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//EVENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//POINT_EVENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM_STRUCTURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ELEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM_TREE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//PARTY_SELF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//ITEM_TABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_structures//DATA_STRUCTURE-section.adoc[leveloffset=+1]
+
+
+
+
+

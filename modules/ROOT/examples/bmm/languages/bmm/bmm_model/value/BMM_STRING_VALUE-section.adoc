@@ -1,0 +1,21 @@
+
+=== Class BMM_STRING_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_STRING_VALUE.adoc[]
+
+Flat::
++
+include::BMM_STRING_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_STRING_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_STRING_VALUE-properties-flat.adoc[]
+======

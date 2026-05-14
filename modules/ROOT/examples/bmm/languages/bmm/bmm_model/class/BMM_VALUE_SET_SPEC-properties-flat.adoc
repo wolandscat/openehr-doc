@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_VALUE_SET_SPEC*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*resource_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier of a resource (typically available as a service) that contains legal values of
+a specific type. This is typically a URI but need not be.
+
+h|prop +
+  
+|*value_set_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier of a value set within the resource identified by `resource_id`, which
+specifies the set of legal values of a type. This might be a URI, but need not be.
+
+|===

@@ -1,5 +1,5 @@
 
-=== class INSTRUCTION_DETAILS
+=== Class INSTRUCTION_DETAILS
 
 [tabs]
 ======

@@ -1,5 +1,5 @@
 
-=== class CONTACT
+=== Class CONTACT
 
 [tabs]
 ======

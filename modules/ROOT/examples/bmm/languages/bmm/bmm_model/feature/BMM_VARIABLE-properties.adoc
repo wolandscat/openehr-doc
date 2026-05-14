@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_VARIABLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
+a|Routine within which variable is defined.
+
+|===

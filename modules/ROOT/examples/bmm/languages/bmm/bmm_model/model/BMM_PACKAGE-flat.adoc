@@ -1,0 +1,81 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_PACKAGE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
+a|Member modules in this package.
+
+h| func
+|*root_classes* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]>
+a|Obtain the set of top-level classes in this package, either from this package itself or by
+recursing into the structure until classes are obtained from child packages. Recurse into
+each child only far enough to find the first level of classes.
+
+h| func
+|*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Full path of this package back to root package.
+
+h|prop +
+  0..1
+|*packages*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]>
+a|Child packages; keys all in upper case for guaranteed matching.
+
+h| func
+|*package_at_path* ( +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]
+a|Package at the path `a_path`.
+
+h| func
+|*has_package_path* ( +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if there is a package at the path `a_path`; paths are delimited with delimiter
+`{BMM_DEFINITIONS} _Package_name_delimiter`.
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model_element[BMM_MODEL_ELEMENT]
+a|Model element within which an element is declared.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h| func
+|*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = (scope = self);
+
+a|True if this model element is the root of a model structure hierarchy.
+
+|===

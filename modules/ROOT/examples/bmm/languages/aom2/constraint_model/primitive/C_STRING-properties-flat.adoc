@@ -1,0 +1,94 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_STRING*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|String constraint - a list of literal strings and / or regular expression strings
+delimited by the '/' character.
+
+To represent no constraint, use an empty list, or alternatively, a regex 'any' pattern,
+i.e. `/.*/`.
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Default String value.
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Assumed String value.
+
+h|prop +
+  0..1
+|*is_enumerated_type_constraint*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this object represents a constraint on an enumerated type from the reference
+model, where the latter is assumed to be based on a primitive type, generally Integer or
+String.
+
+h|prop +
+  
+|*rm_type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference model type that this node corresponds to.
+
+h|prop +
+  0..1
+|*occurrences*: xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Occurrences of this object node in the data, under the owning attribute. Upper limit can
+only be greater than 1 if owning attribute has a cardinality of more than 1. Only set if
+it overrides the parent archetype in the case of specialised archetypes, or else the
+occurrences inferred from the underlying reference model existence and/or cardinality of
+the containing attribute.
+
+h|prop +
+  
+|*node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a
+`node_id`; for nodes under a container `C_ATTRIBUTE`. For at-coded archetypes
+`node_id` must be an at-code defined in the archetype terminology and for valid
+structures all node ids are at-codes. For id-coded archetypes `node_id` must be an id-
+code defined in the archetype terminology and for valid structures all node ids are id-
+codes.
+
+For `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the
+special value `Primitive_node_id`; otherwise it will have the node id read during parsing.
+
+h|prop +
+  0..1
+|*alternative_ids*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Additional identifiers of this node. openEHR archetypes can carry original ALD2 id-codes
+in this attribute and it can also carry human readable codes for future use. Alternative
+ids must be unique within the archetype.
+
+h|prop +
+  0..1
+|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node and by implication all sub-nodes are deprecated for use.
+
+h|prop +
+  0..1
+|*sibling_order*: xref:languages:aom2-gen.adoc#_class_sibling_order[SIBLING_ORDER]
+a|Optional indicator of order of this node with respect to another sibling. Only meaningful
+in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
+True`.
+
+h|prop +
+  0..1
+|*parent*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
+a|Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
+archetype definition.
+
+h|prop +
+  0..1
+|*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
+a|
+
+|===

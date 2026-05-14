@@ -1,0 +1,21 @@
+
+=== Class TYPE_DEF_BOOLEAN
+
+[tabs]
+======
+Diff::
++
+include::TYPE_DEF_BOOLEAN.adoc[]
+
+Flat::
++
+include::TYPE_DEF_BOOLEAN-flat.adoc[]
+
+Props(diff)::
++
+include::TYPE_DEF_BOOLEAN-properties.adoc[]
+
+Props(flat)::
++
+include::TYPE_DEF_BOOLEAN-properties-flat.adoc[]
+======

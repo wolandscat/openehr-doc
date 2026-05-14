@@ -1,5 +1,5 @@
 
-=== class ORIGINAL_VERSION
+=== Class ORIGINAL_VERSION
 
 [tabs]
 ======

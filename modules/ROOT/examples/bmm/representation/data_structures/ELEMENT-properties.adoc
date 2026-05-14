@@ -1,33 +1,28 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class ELEMENT*
 
-h|*Description*
-2+a|The leaf variant of `ITEM`, to which a `DATA_VALUE` instance is attached.
-
-h|*Inherit*
-2+|xref:representation:representation-data_structures.adoc#_class_item[ITEM]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   0..1
-|*value*: xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
+|*value*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
 a|Property representing leaf value object of `ELEMENT`. In real data, any concrete subtype
 of `DATA_VALUE` can be used.
 
 h|prop +
   0..1
-|*null_flavour*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*null_flavour*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Flavour of null value, e.g. `253\|unknown\|`, `271\|no information\|`,
 `272\|masked\|`, and `273\|not applicable\|`.
 
 h|prop +
   0..1
-|*null_reason*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+|*null_reason*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Optional specific reason for null value; if set, `null_flavour` must be set. Null reason
 may apply only to a minority of clinical data, commonly needed in reporting contexts.
 

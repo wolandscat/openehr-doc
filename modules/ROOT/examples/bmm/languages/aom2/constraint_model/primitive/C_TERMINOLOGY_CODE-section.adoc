@@ -1,0 +1,21 @@
+
+=== Class C_TERMINOLOGY_CODE
+
+[tabs]
+======
+Diff::
++
+include::C_TERMINOLOGY_CODE.adoc[]
+
+Flat::
++
+include::C_TERMINOLOGY_CODE-flat.adoc[]
+
+Props(diff)::
++
+include::C_TERMINOLOGY_CODE-properties.adoc[]
+
+Props(flat)::
++
+include::C_TERMINOLOGY_CODE-properties-flat.adoc[]
+======

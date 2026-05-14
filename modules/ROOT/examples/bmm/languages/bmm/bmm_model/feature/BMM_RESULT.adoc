@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_RESULT*
+
+h|*Description*
+2+a|Automatically declared variable representing result of a Function call (writable).
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_writable_variable[BMM_WRITABLE_VARIABLE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+|===

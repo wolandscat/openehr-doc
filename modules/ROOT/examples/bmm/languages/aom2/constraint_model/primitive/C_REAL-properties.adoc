@@ -1,0 +1,29 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_REAL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<xref:representation:builtin_types-gen.adoc#_class_real[Real]>>
+a|Formal constraint on `Real`, in the form of one or more `Interval<Real>`.
+
+To represent no constraint, use an empty list.
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|Default value set in a template, and present in an operational template. Generally limited
+to leaf and near-leaf nodes.
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|Value to be assumed if none sent in data.
+
+|===

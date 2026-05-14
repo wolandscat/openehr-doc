@@ -1,0 +1,21 @@
+
+=== Class EXPR_VARIABLE_REF
+
+[tabs]
+======
+Diff::
++
+include::EXPR_VARIABLE_REF.adoc[]
+
+Flat::
++
+include::EXPR_VARIABLE_REF-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_VARIABLE_REF-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_VARIABLE_REF-properties-flat.adoc[]
+======

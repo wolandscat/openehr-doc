@@ -1,34 +1,16 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class DV_SCALE*
 
-h|*Description*
-2+a|A data type that represents scale values, where there is:
-
-a) implied ordering, b) no implication that the distance between each value is constant,
-and c) the total number of values is finite; d) non-integer values are allowed.
-
-Example:
-
----- Borg CR 10 Scale
-
-0 No Breathlessness at all 0.5 Very Very Slight (Just Noticeable) 1 Very Slight 2 Slight
-Breathlessness 3 Moderate ... etc ----
-
-For scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL`
-should be supported to accommodate existing data instances of that type.
-
-h|*Inherit*
-2+|xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*symbol*: xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*symbol*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Coded textual representation of this value in the scale range, which may be strings made
 from symbols or other enumerations of terms such as `no breathlessness`, `very very
 slight`, `slight breathlessness`. Codes come from archetypes.
@@ -39,17 +21,17 @@ for `code_string`.
 
 h|prop +
   
-|*value*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*value*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Real number value of Scale item.
 
 h| func
 |*is_strictly_comparable_to* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_scale[DV_SCALE]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+other: xref:representation:data_types-gen.adoc#_class_dv_scale[DV_SCALE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test if this Scale value is strictly comparable to `other`.
 
 h|prop +
   0..1
-|*normal_status*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*normal_status*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Optional normal status indicator of value with respect to normal range for this value.
 Often included by lab, even if the normal range itself is not included. Coded by ordinals
 in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
@@ -57,18 +39,18 @@ in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
 
 h|prop +
   0..1
-|*normal_range*: xref:representation:representation-data_types.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>
+|*normal_range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>
 a|Optional normal range.
 
 h|prop +
   0..1
-|*other_reference_ranges*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_types.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]>>
+|*other_reference_ranges*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>>
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
     comparable: is_strictly_comparable_to(other);
@@ -76,11 +58,11 @@ other: xref:representation:representation-data_types.adoc#_class_dv_ordered[DV_O
 a|True if this Ordered object is less than `other`. Redefined in descendants.
 
 h| func
-|*is_simple* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_simple* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this quantity has no reference ranges.
 
 h| func
-|*is_normal* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*is_normal* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
     testable: ∃ normal_range ∨ ∃ normal_status;
@@ -98,7 +80,7 @@ h|
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -109,7 +91,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -120,7 +102,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +

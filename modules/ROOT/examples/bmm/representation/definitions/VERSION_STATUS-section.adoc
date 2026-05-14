@@ -1,5 +1,5 @@
 
-=== enum VERSION_STATUS
+=== Enum VERSION_STATUS
 
 [tabs]
 ======

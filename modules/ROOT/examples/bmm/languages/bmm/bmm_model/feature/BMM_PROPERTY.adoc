@@ -1,0 +1,43 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_PROPERTY*
+
+h|*Description*
+2+a|Meta-type of a writable property definition within a class definition of an object model.
+The `is_composition` attribute indicates whether the property has sub-part or an
+association semantics with respect to the owning class.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_instantiable_feature[BMM_INSTANTIABLE_FEATURE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*is_im_runtime*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this property is marked with info model `im_runtime` property.
+
+h|prop +
+  0..1
+|*is_im_infrastructure*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this property was marked with info model `im_infrastructure` flag.
+
+h|prop +
+  0..1
+|*is_composition*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this property instance is a compositional sub-part of the owning class instance.
+Equivalent to 'composition' in UML associations (but missing from UML properties without
+associations) and also 'cascade-delete' semantics in ER schemas.
+
+h| func
+|*existence* : xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Interval form of `0..1`, `1..1` etc, derived from `is_nullable`.
+
+h| func
+|*display_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this property to display in UI.
+
+|===

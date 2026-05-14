@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_VARIABLE*
+
+h|*Description*
+2+a|A routine-scoped formal element.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
+a|Routine within which variable is defined.
+
+|===

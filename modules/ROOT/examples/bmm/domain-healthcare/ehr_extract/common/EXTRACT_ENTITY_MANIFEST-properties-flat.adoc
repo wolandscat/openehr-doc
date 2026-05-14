@@ -1,0 +1,42 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXTRACT_ENTITY_MANIFEST*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*extract_id_key*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier by which this entity is known in the Extract. May be one of the other
+identifiers, e.g. ehr_id or subject_id, or it may be something else, including a simple
+integer.
+
+h|prop +
+  0..1
+|*ehr_id*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
+a|EHR / EMR identifier for the entity at the target system.
+
+h|prop +
+  0..1
+|*subject_id*: xref:representation:identification-gen.adoc#_class_party_ref[PARTY_REF]
+a|Subject (i.e. patient or similar) identifier for the entity at the target system.
+
+h|prop +
+  0..1
+|*other_ids*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]>
+a|Other identifiers that may be used to find the entity at the target system, keyed by type.
+May include medicare numbers, drivers license number, tax number etc.
+
+h|prop +
+  0..1
+|*item_list*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]>
+a|List of Uids of items to be included in the Extract, in cases where individual items are
+being requested by id. More typically, this attribute is not used, and the
+`EXTRACT_SPEC._criteria query` defines the Extract contents. If set, for openEHR data,
+these are Uids identifying the version containers.
+
+|===

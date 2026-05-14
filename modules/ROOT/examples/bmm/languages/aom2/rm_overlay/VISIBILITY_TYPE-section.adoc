@@ -1,0 +1,21 @@
+
+=== Enum VISIBILITY_TYPE
+
+[tabs]
+======
+Diff::
++
+include::VISIBILITY_TYPE.adoc[]
+
+Flat::
++
+include::VISIBILITY_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::VISIBILITY_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::VISIBILITY_TYPE-properties-flat.adoc[]
+======

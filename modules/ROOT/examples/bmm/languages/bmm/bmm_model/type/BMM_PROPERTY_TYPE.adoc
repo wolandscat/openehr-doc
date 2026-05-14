@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_PROPERTY_TYPE*
+
+h|*Description*
+2+a|Meta-type for property and variable signatures.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_signature[BMM_SIGNATURE]
+
+|===

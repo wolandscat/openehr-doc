@@ -1,0 +1,21 @@
+
+=== Class X_VERSIONED_OBJECT
+
+[tabs]
+======
+Diff::
++
+include::X_VERSIONED_OBJECT.adoc[]
+
+Flat::
++
+include::X_VERSIONED_OBJECT-flat.adoc[]
+
+Props(diff)::
++
+include::X_VERSIONED_OBJECT-properties.adoc[]
+
+Props(flat)::
++
+include::X_VERSIONED_OBJECT-properties-flat.adoc[]
+======

@@ -1,0 +1,41 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ADDRESSED_MESSAGE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*sender*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Party sending the message.
+
+h|prop +
+  
+|*sender_reference*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identification of message used by sender. This will be the same no matter how many times
+this message is sent to these recipients.
+
+h|prop +
+  
+|*addressees*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Intended recipients, in the form of internet addresses.
+
+h|prop +
+  0..1
+|*urgency*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Urgency with which destination should deal with message:
+
+* -1 - low
+* 0 - normal
+* 1 - high
+
+h|prop +
+  
+|*message*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_message[MESSAGE]
+a|The content of the message.
+
+|===

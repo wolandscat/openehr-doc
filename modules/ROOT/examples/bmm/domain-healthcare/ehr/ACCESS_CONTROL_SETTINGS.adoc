@@ -1,0 +1,14 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class ACCESS_CONTROL_SETTINGS*
+
+h|*Description*
+2+a|Access Control Settings for the EHR and components. Intended to support multiple access
+control schemes. Currently implementation dependent.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+|===

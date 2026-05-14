@@ -1,0 +1,21 @@
+
+=== Class BMM_LITERAL_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_LITERAL_VALUE.adoc[]
+
+Flat::
++
+include::BMM_LITERAL_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_LITERAL_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_LITERAL_VALUE-properties-flat.adoc[]
+======

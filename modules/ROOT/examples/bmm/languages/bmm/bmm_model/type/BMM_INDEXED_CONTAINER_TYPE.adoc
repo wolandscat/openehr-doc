@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_INDEXED_CONTAINER_TYPE*
+
+h|*Description*
+2+a|Meta-type of linear container type that indexes the contained items in the manner of a
+standard Hash table, map or dictionary.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_container_type[BMM_CONTAINER_TYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*index_type*: xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
+a|Type of the element index, typically `String` or `Integer`, but may be a numeric type or
+indeed any type from which a hash value can be derived.
+
+h| func
+|*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return full type name, e.g. `HashMap<String, ELEMENT>`.
+
+|===

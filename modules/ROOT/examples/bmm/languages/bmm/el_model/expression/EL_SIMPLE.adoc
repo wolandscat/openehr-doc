@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EL_SIMPLE*
+
+h|*Description*
+2+a|Simple terminal, i.e. logically atomic expression element.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_terminal[EL_TERMINAL]
+
+|===

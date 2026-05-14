@@ -1,0 +1,60 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_CLASS*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*ancestors*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of immediate inheritance parents.
+
+h|prop +
+  
+|*package*: xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]
+a|Package this class belongs to.
+
+h|prop +
+  
+|*source_schema_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to original source schema defining this class. Useful for UI tools to determine
+which original schema file to open for a given class for manual editing.
+
+h|prop +
+  0..1
+|*immediate_descendants*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]>
+a|List of computed references to base classes of immediate inheritance descendants, derived
+when members of `ancestors` are attached at creation time.
+
+h|prop +
+  
+|*is_override*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this definition overrides a class of the same name in an included schema.
+
+h|prop +
+  0..1
+|*is_primitive*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this class represents a type considered to be primitive in the type system, i.e.
+any typically built-in or standard library type such as `String`, `Date`, `Map<K,V>` etc.
+
+h|prop +
+  0..1
+|*is_abstract*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this class is marked as abstract, i.e. direct instances cannot be created from its
+direct type.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_constructors: creators.for_all(procedures.has(p));
+
+h|
+2+a|inv_converters: converters.for_all(p.arity() = 1);
+
+
+|===

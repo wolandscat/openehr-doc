@@ -1,0 +1,60 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_GENERIC_TYPE*
+
+h|*Description*
+2+a|Meta-type based on a non-container generic class, e.g. `Packet<Header>`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_model_type[BMM_MODEL_TYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generic_parameters*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]>
+a|Generic parameters of the `root_type` in this type specifier. The order must match the
+order of the owning class's formal generic parameter declarations, and the types may be
+defined types or formal parameter types.
+
+h|prop +
+  
+|*base_class*: xref:languages:bmm-gen.adoc#_class_bmm_generic_class[BMM_GENERIC_CLASS]
+a|Defining generic class of this type.
+
+h| func
+|*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return the full name of the type including generic parameters, e.g. `DV_INTERVAL<T>`,
+`TABLE<List<THING>,String>`.
+
+h| func
+|*type_signature* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Signature form of the type, which for generics includes generic parameter constrainer
+types E.g. `Interval<T:Ordered>`.
+
+h| func
+|*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `base_class.is_abstract` or if any (non-open) parameter type is abstract.
+
+h| func
+|*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Result is `base_class.name` followed by names of all generic parameter type names, which
+may be open or closed.
+
+h| func
+|*is_partially_closed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Returns True if there is any substituted generic parameter.
+
+h| func
+|*effective_base_class* : xref:languages:bmm-gen.adoc#_class_bmm_generic_class[BMM_GENERIC_CLASS]
+a|Effective underlying class for this type, abstracting away any container type.
+
+h| func
+|*is_open* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if all generic parameters from ancestor generic types have been substituted in this
+type.
+
+|===

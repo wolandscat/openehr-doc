@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|builtin   *class Time_Definitions*
@@ -9,82 +9,100 @@ h|*Description*
 where the international dateline is. Thus, time in New Zealand is quoted
 using +12:00, not -12:00.
 
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
 h|
 2+^h|*Feature Group "definitions"*
 
 h|const +
   
-|*Seconds_in_minute*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Seconds_in_minute*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of seconds in a minute.
 
 h|const +
   
-|*Minutes_in_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Minutes_in_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of minutes in an hour.
 
 h|const +
   
-|*Hours_in_day*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Hours_in_day*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  24
 a|Number of clock hours in a day.
 
 h|const +
   
-|*Days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  365
 a|Number of days in a normal year.
 
 h|const +
   
-|*Days_in_leap_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_leap_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Calendar days in a standard leap year.
 
 h|const +
   
-|*Max_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Maximum number of days in a year, accounting for leap years.
 
 h|const +
   
-|*Days_in_week*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_week*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  7
 a|Number of days in a week.
 
 h|const +
   
-|*Months_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Months_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Number of months in a year.
 
 h|const +
   
-|*Max_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  31
 a|Maximum number of days in any month.
 
 h|const +
   
-|*Average_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Used for conversions of durations containing months to days and/or seconds.
 
 h|const +
   
-|*Average_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Used for conversions of durations containing years to days and/or seconds.
 
 h|const +
   
-|*Nominal_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Nominal days in a month, used for conversions.
 
 h|const +
   
-|*Nominal_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Nominal days in a year, used for conversions.
 
 h|const +
   
-|*Min_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Min_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Minimum hour value of a timezone according to ISO 8601.
 
 h|const +
   
-|*Max_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  14
 a|Maximum hour value of a timezone according to ISO 8601.
 
 |===

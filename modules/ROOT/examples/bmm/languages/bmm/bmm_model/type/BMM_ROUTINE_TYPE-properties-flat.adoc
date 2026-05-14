@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ROUTINE_TYPE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*argument_types*: xref:languages:bmm-gen.adoc#_class_bmm_tuple_type[BMM_TUPLE_TYPE]
+a|Type of arguments in the signature, if any; represented as a type-tuple (list of arbitrary
+types).
+
+h|prop +
+  
+|*result_type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Result type of signature.
+
+h|prop +
+  
+|*base_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Base name (built-in typename).
+
+|===

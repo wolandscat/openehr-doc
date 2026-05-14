@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class STATEMENT*
+
+h|*Description*
+2+a|Meta-type for the notion of statement, which is a non-value-returning entity.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+|===

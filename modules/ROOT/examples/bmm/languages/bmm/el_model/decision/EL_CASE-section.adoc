@@ -1,0 +1,21 @@
+
+=== Class EL_CASE
+
+[tabs]
+======
+Diff::
++
+include::EL_CASE.adoc[]
+
+Flat::
++
+include::EL_CASE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_CASE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_CASE-properties-flat.adoc[]
+======

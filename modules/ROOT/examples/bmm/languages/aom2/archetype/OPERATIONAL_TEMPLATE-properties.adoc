@@ -1,0 +1,30 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class OPERATIONAL_TEMPLATE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*component_terminologies*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]>
+a|Compendium of flattened terminologies of archetypes referenced from this template, keyed
+by archetype identifier. This will almost always be present in a template.
+
+h|prop +
+  0..1
+|*terminology_extracts*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]>
+a|Compendium of flattened terminology extracts (i.e. from external terminologies) from
+archetypes referenced from this template, keyed by archetype identifier.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|specialisation_validity: is_specialised;
+
+
+|===

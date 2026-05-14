@@ -1,0 +1,57 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_MODEL_TYPE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*value_constraint*: xref:languages:bmm-gen.adoc#_class_bmm_value_set_spec[BMM_VALUE_SET_SPEC]
+a|
+
+h|prop +
+  
+|*base_class*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+a|Base class of this type.
+
+h| func
+|*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Result = `base_class.name`.
+
+h| func
+|*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Result = `base_class.is_primitive`.
+
+h| func
+|*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
+a|Result = self.
+
+h| func
+|*unitary_type* : xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
+a|Result = self.
+
+h| func
+|*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Formal string form of the type as per UML.
+
+h| func
+|*type_signature* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Signature form of the type name, which for generics includes generic parameter constrainer
+types E.g. `Interval<T:Ordered>`.
+
+Defaults to the value of `type_name()`.
+
+h| func
+|*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|If true, indicates a type based on an abstract class, i.e. a type that cannot be directly
+instantiated.
+
+h| func
+|*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Completely flattened list of type names, flattening out all generic parameters.
+
+|===

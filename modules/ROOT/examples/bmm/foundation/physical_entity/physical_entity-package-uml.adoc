@@ -1,0 +1,12 @@
+
+.physical_entity Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package occurrent {
+}
+
+....

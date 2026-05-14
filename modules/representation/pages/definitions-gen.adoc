@@ -1,0 +1,28 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Definitions Specification
+
+
+== Definitions Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation//definitions/definitions-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/definitions//Time_Definitions-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//BASIC_DEFINITIONS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//VALIDITY_KIND-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//MATH_FUNCTION_KIND-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//VERSION_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//TASK_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//OPENEHR_DEFINITIONS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/definitions//TREND_KIND-section.adoc[leveloffset=+1]
+
+
+
+
+

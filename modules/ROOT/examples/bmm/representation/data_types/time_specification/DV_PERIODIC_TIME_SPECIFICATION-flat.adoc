@@ -1,0 +1,40 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class DV_PERIODIC_TIME_SPECIFICATION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*period* : xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
+a|The period of the repetition, computationally derived from the syntax representation.
+Extracted from the value' attribute.
+
+h| func
+|*calendar_alignment* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Calendar alignment extracted from value.
+
+h| func
+|*event_alignment* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Event alignment extracted from value.
+
+h| func
+|*institution_specified* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Extracted from value.
+
+h|prop +
+  
+|*value*: xref:representation:data_types-gen.adoc#_class_dv_parsable[DV_PARSABLE]
+a|The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|value_valid: value.formalism.is_equal("HL7:PIVL") ∨ value.formalism.is_equal("HL7:EIVL");
+
+
+|===

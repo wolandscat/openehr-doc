@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXPR_VALUE*
+
+h|*Description*
+2+a|Any kind of statement element that can be evaluated. The type will either be supplied in
+descendant types or else will be inferred by an assignment statement linked to a typed
+variable.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|The computed value of this node as a result of the nodes below it, for operator nodes, or
+else statically set or otherwise derived values.
+
+|===

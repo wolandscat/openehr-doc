@@ -1,0 +1,21 @@
+
+=== Class C_PRIMITIVE_TUPLE
+
+[tabs]
+======
+Diff::
++
+include::C_PRIMITIVE_TUPLE.adoc[]
+
+Flat::
++
+include::C_PRIMITIVE_TUPLE-flat.adoc[]
+
+Props(diff)::
++
+include::C_PRIMITIVE_TUPLE-properties.adoc[]
+
+Props(flat)::
++
+include::C_PRIMITIVE_TUPLE-properties-flat.adoc[]
+======

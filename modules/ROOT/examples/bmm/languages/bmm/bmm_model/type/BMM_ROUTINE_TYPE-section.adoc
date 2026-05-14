@@ -1,0 +1,21 @@
+
+=== Class BMM_ROUTINE_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_ROUTINE_TYPE.adoc[]
+
+Flat::
++
+include::BMM_ROUTINE_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_ROUTINE_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_ROUTINE_TYPE-properties-flat.adoc[]
+======

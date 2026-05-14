@@ -1,0 +1,76 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ARCHETYPE_HRID*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*namespace*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reverse domain name namespace identifier.
+
+h|prop +
+  
+|*rm_publisher*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the Reference Model publisher.
+
+h|prop +
+  
+|*rm_package*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the package in whose reachability graph the `rm_class` class is found (there can
+be more than one possibility in many reference models).
+
+h|prop +
+  
+|*rm_class*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the root class of this archetype.
+
+h|prop +
+  
+|*concept_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|The short concept name of the archetype as used in the multi-axial `archetype_hrid`.
+
+h|prop +
+  
+|*release_version*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|The full numeric version of this archetype consisting of 3 parts, e.g. `"1.8.2"`.
+
+h|prop +
+  
+|*version_status*: xref:representation:definitions-gen.adoc#_class_version_status[VERSION_STATUS]
+a|The status of the version, i.e.:
+
+* released: (empty string)
+* release_candidate: `"rc"`
+* alpha: `"alpha"`
+* beta: `"beta"`
+
+h|prop +
+  
+|*build_count*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|The build count since last increment of any version part.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_rm_publisher_validity: ¬ rm_publisher.is_empty();
+
+h|
+2+a|inv_rm_package_validity: ¬ rm_package.is_empty();
+
+h|
+2+a|inv_class_name_validity: ¬ rm_class.is_empty();
+
+h|
+2+a|inv_concept_id_validity: ¬ concept_id.is_empty();
+
+h|
+2+a|inv_release_version_validity: valid_version(release_version);
+
+
+|===

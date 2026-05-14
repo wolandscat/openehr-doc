@@ -1,5 +1,5 @@
 
-=== class Uri
+=== Class Uri
 
 [tabs]
 ======

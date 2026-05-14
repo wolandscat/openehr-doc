@@ -1,0 +1,21 @@
+
+=== Class BMM_INTERVAL_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_INTERVAL_VALUE.adoc[]
+
+Flat::
++
+include::BMM_INTERVAL_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_INTERVAL_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_INTERVAL_VALUE-properties-flat.adoc[]
+======

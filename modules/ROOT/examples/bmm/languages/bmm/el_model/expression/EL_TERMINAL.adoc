@@ -1,0 +1,14 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EL_TERMINAL*
+
+h|*Description*
+2+a|Expression entities that are terminals (i.e. leaves) within operator expressions
+or tuples.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
+
+|===

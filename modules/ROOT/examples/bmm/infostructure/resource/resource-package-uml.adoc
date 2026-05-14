@@ -1,38 +1,46 @@
 
 .resource Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class AUTHORED_RESOURCE [[/splashlang-doc/latest/infostructure/infostructure-resource.html#_class_authored_resource]] {
+class ANNOTATIONS_PATH_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_path_map]] {
+        .. access ..
+        items: Map<String,ANNOTATIONS_MAP>
+}
+
+
+abstract class AUTHORED_RESOURCE [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] {
         .. access ..
         uid: UUID
         original_language: Terminology_code «iso.iso_639-1»
         is_controlled: Boolean
-        translations: Hash<String,TRANSLATION_DETAILS>
+        translations: Map<String,TRANSLATION_DETAILS>
         languages_available:List<String>
 }
+
 
 AUTHORED_RESOURCE *--> "0..1 description" RESOURCE_DESCRIPTION
 
 AUTHORED_RESOURCE *--> "0..1 annotations" RESOURCE_ANNOTATIONS
 
-class TRANSLATION_DETAILS [[/splashlang-doc/latest/infostructure/infostructure-resource.html#_class_translation_details]] {
+class TRANSLATION_DETAILS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_translation_details]] {
         .. access ..
         language: Terminology_code «iso.iso_639-1»
-        author: Hash<String,String>
+        author: Map<String,String>
         accreditation: String
         version_last_translated: String
         other_contributors: List<String>
-        other_details: Hash<String,String>
+        other_details: Map<String,String>
 }
 
-class RESOURCE_DESCRIPTION [[/splashlang-doc/latest/infostructure/infostructure-resource.html#_class_resource_description]] {
+
+class RESOURCE_DESCRIPTION [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description]] {
         .. access ..
         title: String
-        original_author: Hash<String,String>
+        original_author: Map<String,String>
         original_namespace: String
         original_publisher: String
         other_contributors: List<String>
@@ -41,30 +49,39 @@ class RESOURCE_DESCRIPTION [[/splashlang-doc/latest/infostructure/infostructure-
         custodian_organisation: String
         copyright: String
         licence: String
-        ip_acknowledgements: Hash<String,String>
-        references: Hash<String,String>
+        ip_acknowledgements: Map<String,String>
+        references: Map<String,String>
         resource_package_uri: String
-        conversion_details: Hash<String,String>
-        details: Hash<String,RESOURCE_DESCRIPTION_ITEM>
-        other_details: Hash<String,String>
+        conversion_details: Map<String,String>
+        details: Map<String,RESOURCE_DESCRIPTION_ITEM>
+        other_details: Map<String,String>
 }
+
 
 RESOURCE_DESCRIPTION *--> "1 parent_resource" AUTHORED_RESOURCE
 
-class RESOURCE_ANNOTATIONS [[/splashlang-doc/latest/infostructure/infostructure-resource.html#_class_resource_annotations]] {
+class ANNOTATIONS_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_map]] {
         .. access ..
-        documentation: Hash<String,Hash<String,Hash<String,String>>>
+        items: Map<String,String>
 }
 
-class RESOURCE_DESCRIPTION_ITEM [[/splashlang-doc/latest/infostructure/infostructure-resource.html#_class_resource_description_item]] {
+
+class RESOURCE_ANNOTATIONS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_annotations]] {
+        .. access ..
+        documentation: Map<String,ANNOTATIONS_PATH_MAP>
+}
+
+
+class RESOURCE_DESCRIPTION_ITEM [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description_item]] {
         .. access ..
         language: Terminology_code «iso.iso_639-1»
         purpose: String
         keywords: List<String>
         use: String
         misuse: String
-        original_resource_uri: Hash<String,String>
-        other_details: Hash<String,String>
+        original_resource_uri: Map<String,String>
+        other_details: Map<String,String>
 }
+
 
 ....

@@ -1,5 +1,5 @@
 
-=== class ITEM_TREE
+=== Class ITEM_TREE
 
 [tabs]
 ======

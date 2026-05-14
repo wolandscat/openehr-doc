@@ -1,0 +1,102 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum BMM_PARAMETER_DIRECTION*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*pd_in* = in
+a|
+Parameter is an input parameter, and treated as readonly by the receiving routine.
+
+
+
+h|
+|*pd_out* = out
+a|
+Parameter is an output parameter, treated as a reference to a writeable entity.
+
+
+
+h|
+|*pd_in_out* = in_out
+a|
+Parameter is an input and output parameter, treated as a readable and writeable reference.
+
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string is empty, i.e. equal to "".
+
+h| func
+|*is_integer* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string can be parsed as an integer.
+
+h| func
+|*as_integer* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Return the integer corresponding to the integer value represented in this string.
+
+h| func
+|*contains* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return True if this String contains `other` (case-sensitive).
+
+h|
+2+^h|*Feature Group "operators"*
+
+h| func
+|*append* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String] +
+  *alias* +
+
+a|Concatenation operator - causes `other` to be appended to this string.
+
+h| func
+|*less_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <
+
+a|Lexical comparison of string content based on ordering in relevant character set.
+
+h| func
+|*less_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
+
+a|True if current object less than or equal to `other`.
+
+h| func
+|*greater_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
+
+a|True if current object greater than `other`.
+
+h| func
+|*greater_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
+
+a|True if current object greater than or equal to `other`.
+
+|===

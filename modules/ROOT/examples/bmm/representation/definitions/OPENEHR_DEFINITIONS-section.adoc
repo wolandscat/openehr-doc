@@ -1,5 +1,5 @@
 
-=== class OPENEHR_DEFINITIONS
+=== Class OPENEHR_DEFINITIONS
 
 [tabs]
 ======

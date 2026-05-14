@@ -1,0 +1,21 @@
+
+=== Class OPENEHR_CONTENT_ITEM
+
+[tabs]
+======
+Diff::
++
+include::OPENEHR_CONTENT_ITEM.adoc[]
+
+Flat::
++
+include::OPENEHR_CONTENT_ITEM-flat.adoc[]
+
+Props(diff)::
++
+include::OPENEHR_CONTENT_ITEM-properties.adoc[]
+
+Props(flat)::
++
+include::OPENEHR_CONTENT_ITEM-properties-flat.adoc[]
+======

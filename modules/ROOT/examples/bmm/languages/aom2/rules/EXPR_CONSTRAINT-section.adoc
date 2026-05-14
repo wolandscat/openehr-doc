@@ -1,0 +1,21 @@
+
+=== Class EXPR_CONSTRAINT
+
+[tabs]
+======
+Diff::
++
+include::EXPR_CONSTRAINT.adoc[]
+
+Flat::
++
+include::EXPR_CONSTRAINT-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_CONSTRAINT-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_CONSTRAINT-properties-flat.adoc[]
+======

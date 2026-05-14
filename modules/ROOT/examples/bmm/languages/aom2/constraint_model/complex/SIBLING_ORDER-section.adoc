@@ -1,0 +1,21 @@
+
+=== Class SIBLING_ORDER
+
+[tabs]
+======
+Diff::
++
+include::SIBLING_ORDER.adoc[]
+
+Flat::
++
+include::SIBLING_ORDER-flat.adoc[]
+
+Props(diff)::
++
+include::SIBLING_ORDER-properties.adoc[]
+
+Props(flat)::
++
+include::SIBLING_ORDER-properties-flat.adoc[]
+======

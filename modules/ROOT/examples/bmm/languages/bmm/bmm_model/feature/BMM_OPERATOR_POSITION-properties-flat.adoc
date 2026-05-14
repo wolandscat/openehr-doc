@@ -1,0 +1,25 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum BMM_OPERATOR_POSITION*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*prefix* = prefix
+a|
+Prefix operator position: operator comes before operand.
+
+
+
+h|
+|*infix* = infix
+a|
+Infix operator position: operator comes between left and right operands.
+
+
+
+|===

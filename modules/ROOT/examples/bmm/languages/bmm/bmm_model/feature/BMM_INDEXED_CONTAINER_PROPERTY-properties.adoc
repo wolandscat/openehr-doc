@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_INDEXED_CONTAINER_PROPERTY*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_indexed_container_type[BMM_INDEXED_CONTAINER_TYPE]
+a|Declared or inferred static type of the entity.
+
+|===

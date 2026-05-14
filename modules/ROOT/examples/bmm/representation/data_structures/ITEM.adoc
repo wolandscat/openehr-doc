@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class ITEM*
@@ -8,6 +8,6 @@ h|*Description*
 2+a|The abstract parent of `CLUSTER` and `ELEMENT` representation classes.
 
 h|*Inherit*
-2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 |===

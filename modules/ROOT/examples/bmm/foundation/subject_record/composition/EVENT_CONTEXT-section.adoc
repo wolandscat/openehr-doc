@@ -1,5 +1,5 @@
 
-=== class EVENT_CONTEXT
+=== Class EVENT_CONTEXT
 
 [tabs]
 ======

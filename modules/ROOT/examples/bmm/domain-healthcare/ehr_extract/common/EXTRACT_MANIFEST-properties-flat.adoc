@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXTRACT_MANIFEST*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*entities*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_entity_manifest[EXTRACT_ENTITY_MANIFEST]>
+a|List of entity manifests uids of items included in the Extract; for openEHR data, these
+are uids identifying the version containers.
+
+|===

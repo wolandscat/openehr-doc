@@ -1,0 +1,75 @@
+
+.languages Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package bmm.definitions {
+}
+
+package bmm.bmm_model.schema {
+}
+
+package bmm.bmm_model.model {
+}
+
+package bmm.bmm_model.type {
+}
+
+package bmm.bmm_model.class {
+}
+
+package bmm.bmm_model.feature {
+}
+
+package bmm.bmm_model.value {
+}
+
+package bmm.bmm_model.statement {
+}
+
+package bmm.el_model.expression {
+}
+
+package bmm.el_model.decision {
+}
+
+package bmm.el_model.reference {
+}
+
+package bmm.el_model.agent {
+}
+
+package bel.expression {
+}
+
+package bel.statement {
+}
+
+package bel.type {
+}
+
+package aom2.archetype {
+}
+
+package aom2.constraint_model.complex {
+}
+
+package aom2.constraint_model.primitive {
+}
+
+package aom2.rules {
+}
+
+package aom2.terminology {
+}
+
+package aom2.rm_overlay {
+}
+
+package aom2.aom_profile {
+}
+
+....

@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_CASE<T:EL_TERMINAL>*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*value_constraint*: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]
+a|Constraint on
+
+h|prop +
+  
+|*result*: T
+a|Result expression of conditional, if its `condition` evaluates to True.
+
+|===

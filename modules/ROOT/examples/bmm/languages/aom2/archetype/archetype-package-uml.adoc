@@ -1,0 +1,87 @@
+
+.archetype Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class OPERATIONAL_TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_operational_template]] {
+        .. access ..
+        component_terminologies: Map<String,ARCHETYPE_TERMINOLOGY>
+        terminology_extracts: Map<String,ARCHETYPE_TERMINOLOGY>
+        component_terminology(an_id: String):ARCHETYPE_TERMINOLOGY
+}
+
+OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
+
+
+class AUTHORED_ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_authored_archetype]] {
+        .. access ..
+        adl_version: String
+        build_uid: UUID
+        rm_release: String
+        is_generated: Boolean
+        other_meta_data: Map<String,String>
+}
+
+AUTHORED_ARCHETYPE -[#gray]up-|> ARCHETYPE  
+
+
+AUTHORED_ARCHETYPE -[#gray]up-|> AUTHORED_RESOURCE  
+
+
+abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype]] {
+        .. access ..
+        parent_archetype_id: String
+        is_differential: Boolean
+        definition: C_COMPLEX_OBJECT
+        terminology: ARCHETYPE_TERMINOLOGY
+        rules: List<STATEMENT_SET>
+        rm_overlay: RM_OVERLAY
+        concept_code:String
+        physical_paths:List<String>
+        logical_paths(a_lang: String):List<String>
+        specialisation_depth:Integer
+        is_specialised:Boolean
+}
+
+
+ARCHETYPE *--> "1 archetype_id" ARCHETYPE_HRID
+
+class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_hrid]] {
+        .. access ..
+        namespace: String
+        rm_publisher: String
+        rm_package: String
+        rm_class: String
+        concept_id: String
+        release_version: String
+        version_status: VERSION_STATUS
+        build_count: String
+        semantic_id:String
+        physical_id:String
+        version_id:String
+        major_version:String
+        minor_version:String
+        patch_version:String
+}
+
+
+class TEMPLATE_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_template_overlay]] {
+}
+
+TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE  
+
+
+class TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_template]] {
+        .. access ..
+        overlays: List<TEMPLATE_OVERLAY>
+}
+
+TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
+
+abstract class "infostructure.resource.\nAUTHORED_RESOURCE" as AUTHORED_RESOURCE  [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] #FDFDFD {
+}
+
+....

@@ -1,0 +1,21 @@
+
+=== Class TYPE_DEF_OBJECT_REF
+
+[tabs]
+======
+Diff::
++
+include::TYPE_DEF_OBJECT_REF.adoc[]
+
+Flat::
++
+include::TYPE_DEF_OBJECT_REF-flat.adoc[]
+
+Props(diff)::
++
+include::TYPE_DEF_OBJECT_REF-properties.adoc[]
+
+Props(flat)::
++
+include::TYPE_DEF_OBJECT_REF-properties-flat.adoc[]
+======

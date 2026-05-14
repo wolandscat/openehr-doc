@@ -1,0 +1,20 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_BOOLEAN_EXPRESSION*
+
+h|*Description*
+2+a|Boolean-returning expression.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_constrained[EL_CONSTRAINED]
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_boolean_expression: base_expression.is_boolean();
+
+
+|===

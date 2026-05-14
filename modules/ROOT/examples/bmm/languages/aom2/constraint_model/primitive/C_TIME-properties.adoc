@@ -1,0 +1,37 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_TIME*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]>>
+a|Formal constraint on the assumed primitive `Iso8601_time` type, in the form of one or more
+`Interval<Iso8601_time>`.
+
+For a pattern constraint or no constraint, use an empty list.
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|Default value set in a template, and present in an operational template. Generally limited
+to leaf and near-leaf nodes.
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|Value to be assumed if none sent in data.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|pattern_validity: ∃ pattern ⇒ valid_iso8601_time_constraint_pattern(pattern);
+
+
+|===

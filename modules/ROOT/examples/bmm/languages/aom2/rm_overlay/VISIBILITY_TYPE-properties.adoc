@@ -1,0 +1,25 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum VISIBILITY_TYPE*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*vt_hide* = hide
+a|
+Indicates to a tool to hide the model element to which this marker is attached.
+
+
+
+h|
+|*vt_show* = show
+a|
+Indicates to a tool to show the model element to which this marker is attached.
+
+
+
+|===

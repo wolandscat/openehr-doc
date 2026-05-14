@@ -1,0 +1,21 @@
+
+=== Class TEMPLATE_OVERLAY
+
+[tabs]
+======
+Diff::
++
+include::TEMPLATE_OVERLAY.adoc[]
+
+Flat::
++
+include::TEMPLATE_OVERLAY-flat.adoc[]
+
+Props(diff)::
++
+include::TEMPLATE_OVERLAY-properties.adoc[]
+
+Props(flat)::
++
+include::TEMPLATE_OVERLAY-properties-flat.adoc[]
+======

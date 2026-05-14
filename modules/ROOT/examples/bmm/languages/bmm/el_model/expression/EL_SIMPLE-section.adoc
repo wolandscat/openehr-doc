@@ -1,0 +1,21 @@
+
+=== Class EL_SIMPLE
+
+[tabs]
+======
+Diff::
++
+include::EL_SIMPLE.adoc[]
+
+Flat::
++
+include::EL_SIMPLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_SIMPLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_SIMPLE-properties-flat.adoc[]
+======

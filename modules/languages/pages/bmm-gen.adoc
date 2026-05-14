@@ -1,0 +1,319 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Bmm Specification
+
+
+== Bmm Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages//bmm/bmm-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== Definitions Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/definitions/definitions-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/definitions/BMM_DEFINITIONS-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/bmm_model-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== Bmm_model.schema Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/schema/schema-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/schema/BMM_SCHEMA-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/schema/BMM_SCHEMA_DESCRIPTOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/schema/BMM_SCHEMA_STATE-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.model Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/model-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_MODEL_ACCESS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_FORMAL_ELEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_MODEL_ELEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_PACKAGE_CONTAINER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_INCLUDE_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_MODEL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_PACKAGE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_MODULE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/model/BMM_MODEL_METADATA-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.type Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/type-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_PROCEDURE_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_INDEXED_CONTAINER_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_TUPLE_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_STATUS_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_UNITARY_PROPERTY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_ROUTINE_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_BUILTIN_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_CONTAINER_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_SIMPLE_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_PROPERTY_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_PARAMETER_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_MODEL_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_SIGNATURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_GENERIC_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_UNITARY_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_EFFECTIVE_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/type/BMM_FUNCTION_TYPE-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.class Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/class-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_SIMPLE_CLASS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_ENUMERATION_STRING-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_GENERIC_CLASS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_ENUMERATION_INTEGER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_CLASS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_ENUMERATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_VALUE_SET_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/class/BMM_FEATURE_GROUP-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.feature Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/feature-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_SINGLETON-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_FEATURE_EXTENSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_INDEXED_CONTAINER_PROPERTY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_PROCEDURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_SELF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_VARIABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_STATIC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_ROUTINE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_LOCAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_READONLY_VARIABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_RESULT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_FUNCTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_PARAMETER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_FEATURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_CONSTANT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_OPERATOR_POSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_CONTAINER_PROPERTY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_WRITABLE_VARIABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_VISIBILITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_PARAMETER_DIRECTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_INSTANTIABLE_FEATURE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/feature/BMM_PROPERTY-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.value Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/value-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_INTEGER_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_LITERAL_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_UNITARY_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_INDEXED_CONTAINER_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_BOOLEAN_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_PRIMITIVE_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_INTERVAL_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_CONTAINER_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/value/BMM_STRING_VALUE-section.adoc[leveloffset=+1]
+
+
+
+
+== Bmm_model.statement Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/statement-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_ASSIGNMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_SIMPLE_STATEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_ROUTINE_DEFINITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_LOCAL_ROUTINE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_STATEMENT_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_DECLARATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_ACTION_TABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_ASSERTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_STATEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_EXTERNAL_ROUTINE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_STATEMENT_BLOCK-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/bmm_model/statement/BMM_ACTION_DECISION_TABLE-section.adoc[leveloffset=+1]
+
+
+
+
+== El_model Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/el_model/el_model-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== El_model.expression Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/el_model/expression/expression-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_PREDICATE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_TERMINAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_TUPLE_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_SIMPLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_TUPLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_ATTACHED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_BOOLEAN_EXPRESSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_VALUE_GENERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_BINARY_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_DEFINED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_CONSTRAINED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_EXPRESSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_UNARY_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/expression/EL_LITERAL-section.adoc[leveloffset=+1]
+
+
+
+
+== El_model.decision Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/el_model/decision/decision-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_CONDITION_CHAIN-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_DECISION_BRANCH-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_CASE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_DECISION_TABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_CONDITIONAL_EXPRESSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/decision/EL_CASE_TABLE-section.adoc[leveloffset=+1]
+
+
+
+
+== El_model.reference Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/el_model/reference/reference-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_PROPERTY_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_TYPE_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_FEATURE_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_FUNCTION_CALL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_STATIC_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_AGENT_CALL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_WRITABLE_VARIABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/BMM_PROCEDURE_CALL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_VARIABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/reference/EL_READONLY_VARIABLE-section.adoc[leveloffset=+1]
+
+
+
+
+== El_model.agent Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bmm/el_model/agent/agent-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bmm/el_model/agent/EL_PROCEDURE_AGENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/agent/EL_AGENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bmm/el_model/agent/EL_FUNCTION_AGENT-section.adoc[leveloffset=+1]
+
+
+
+
+

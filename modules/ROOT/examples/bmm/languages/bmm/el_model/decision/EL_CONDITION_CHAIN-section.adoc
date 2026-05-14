@@ -1,0 +1,21 @@
+
+=== Class EL_CONDITION_CHAIN
+
+[tabs]
+======
+Diff::
++
+include::EL_CONDITION_CHAIN.adoc[]
+
+Flat::
++
+include::EL_CONDITION_CHAIN-flat.adoc[]
+
+Props(diff)::
++
+include::EL_CONDITION_CHAIN-properties.adoc[]
+
+Props(flat)::
++
+include::EL_CONDITION_CHAIN-properties-flat.adoc[]
+======

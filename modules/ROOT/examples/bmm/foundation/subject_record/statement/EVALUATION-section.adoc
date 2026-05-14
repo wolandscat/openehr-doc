@@ -1,5 +1,5 @@
 
-=== class EVALUATION
+=== Class EVALUATION
 
 [tabs]
 ======

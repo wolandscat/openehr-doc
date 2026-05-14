@@ -1,0 +1,37 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_BUILTIN_TYPE*
+
+h|*Description*
+2+a|Parent of built-in types, which are treated as being primitive and non-abstract.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*base_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Base name (built-in typename).
+
+h| func
+|*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return False.
+
+h| func
+|*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return True.
+
+h| func
+|*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return `base_name`.
+
+h| func
+|*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return `base_name`.
+
+|===

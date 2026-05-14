@@ -1,28 +1,23 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|builtin   *class Array<T:Any>*
 
-h|*Description*
-2+a|Container whose storage is assumed to be contiguous.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_container[Container]
 
 h|
 2+^h|*Feature Group "access"*
 
 h| func
-|*has* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test for membership of a value.
 
 h| func
-|*count* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*count* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of items in container.
 
 h| func
-|*is_empty* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if container is empty.
 
 |===

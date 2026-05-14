@@ -1,0 +1,34 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_MODEL_ACCESS*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*schema_directories*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of directories where all the schemas loaded here are found.
+
+h|prop +
+  0..1
+|*all_schemas*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|All schemas found and loaded from `schema_directory`. Keyed by `schema_id`.
+
+h|prop +
+  0..1
+|*bmm_models*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]>
+a|Top-level (root) models in use, keyed by `model_id`.
+
+h|prop +
+  0..1
+|*matching_bmm_models*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Validated models, keyed by `model_id()` and any shorter forms of id, with some or no
+versioning information. For example, the keys `"openEHR_EHR_1.0.4"`, `"openEHR_EHR_1.0"`,
+`"openEHR_EHR_1"`, and `"openEHR_EHR"` will all match the `"openEHR_EHR_1.0.4"` model,
+assuming it is the most recent version available.
+
+|===

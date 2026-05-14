@@ -1,0 +1,21 @@
+
+=== Class EXPR_LITERAL
+
+[tabs]
+======
+Diff::
++
+include::EXPR_LITERAL.adoc[]
+
+Flat::
++
+include::EXPR_LITERAL-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_LITERAL-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_LITERAL-properties-flat.adoc[]
+======

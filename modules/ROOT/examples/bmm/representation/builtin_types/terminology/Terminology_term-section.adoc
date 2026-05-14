@@ -1,5 +1,5 @@
 
-=== class Terminology_term
+=== Class Terminology_term
 
 [tabs]
 ======

@@ -1,0 +1,81 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_MODEL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*class_definitions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|All classes in this model, keyed by type name.
+
+h|prop +
+  0..1
+|*used_models*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]>
+a|List of other models 'used' (i.e. 'imported' by this model). Classes in the current model
+may refer to classes in a used model by specifying the other class's `scope` meta-
+attribute.
+
+h|prop +
+  0..1
+|*modules*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
+a|All classes in this model, keyed by type name.
+
+h|prop +
+  0..1
+|*packages*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]>
+a|Child packages; keys all in upper case for guaranteed matching.
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model_element[BMM_MODEL_ELEMENT]
+a|Model element within which an element is declared.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h|prop +
+  
+|*rm_publisher*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Publisher of model expressed in the schema.
+
+h|prop +
+  
+|*rm_release*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Release of model expressed in the schema as a 3-part numeric, e.g. "3.1.0" .
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_top_level_scope: scope = self;
+
+
+|===

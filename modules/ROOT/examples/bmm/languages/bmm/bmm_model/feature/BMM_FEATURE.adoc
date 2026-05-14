@@ -1,0 +1,37 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_FEATURE*
+
+h|*Description*
+2+a|A module-scoped formal element.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*is_synthesised_generic*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this feature was synthesised due to generic substitution in an inherited type, or
+further constraining of a formal generic parameter.
+
+h|prop +
+  0..1
+|*feature_extensions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_extension[BMM_FEATURE_EXTENSION]>
+a|Extensions to feature-level meta-types.
+
+h|prop +
+  
+|*group*: xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]
+a|Group containing this feature.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+a|Model element within which an element is declared.
+
+|===

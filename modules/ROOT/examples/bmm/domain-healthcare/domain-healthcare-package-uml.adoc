@@ -1,0 +1,27 @@
+
+.domain-healthcare Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package ehr {
+}
+
+package ehr_extract.common {
+}
+
+package ehr_extract.openehr_extract {
+}
+
+package ehr_extract.generic_extract {
+}
+
+package ehr_extract.sync_extract {
+}
+
+package ehr_extract.message {
+}
+
+....

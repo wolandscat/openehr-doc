@@ -1,0 +1,21 @@
+
+=== Class EL_DEFINED
+
+[tabs]
+======
+Diff::
++
+include::EL_DEFINED.adoc[]
+
+Flat::
++
+include::EL_DEFINED-flat.adoc[]
+
+Props(diff)::
++
+include::EL_DEFINED-properties.adoc[]
+
+Props(flat)::
++
+include::EL_DEFINED-properties-flat.adoc[]
+======

@@ -1,5 +1,5 @@
 
-=== class DV_ABSOLUTE_QUANTITY
+=== Class DV_ABSOLUTE_QUANTITY
 
 [tabs]
 ======

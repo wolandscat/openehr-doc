@@ -1,0 +1,21 @@
+
+=== Class EXTERNAL_QUERY
+
+[tabs]
+======
+Diff::
++
+include::EXTERNAL_QUERY.adoc[]
+
+Flat::
++
+include::EXTERNAL_QUERY-flat.adoc[]
+
+Props(diff)::
++
+include::EXTERNAL_QUERY-properties.adoc[]
+
+Props(flat)::
++
+include::EXTERNAL_QUERY-properties-flat.adoc[]
+======

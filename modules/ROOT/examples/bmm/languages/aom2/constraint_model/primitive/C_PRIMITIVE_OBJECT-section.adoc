@@ -1,0 +1,21 @@
+
+=== Class C_PRIMITIVE_OBJECT
+
+[tabs]
+======
+Diff::
++
+include::C_PRIMITIVE_OBJECT.adoc[]
+
+Flat::
++
+include::C_PRIMITIVE_OBJECT-flat.adoc[]
+
+Props(diff)::
++
+include::C_PRIMITIVE_OBJECT-properties.adoc[]
+
+Props(flat)::
++
+include::C_PRIMITIVE_OBJECT-properties-flat.adoc[]
+======

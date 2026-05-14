@@ -1,0 +1,21 @@
+
+=== Class ADL_CODE_DEFINITIONS
+
+[tabs]
+======
+Diff::
++
+include::ADL_CODE_DEFINITIONS.adoc[]
+
+Flat::
++
+include::ADL_CODE_DEFINITIONS-flat.adoc[]
+
+Props(diff)::
++
+include::ADL_CODE_DEFINITIONS-properties.adoc[]
+
+Props(flat)::
++
+include::ADL_CODE_DEFINITIONS-properties-flat.adoc[]
+======

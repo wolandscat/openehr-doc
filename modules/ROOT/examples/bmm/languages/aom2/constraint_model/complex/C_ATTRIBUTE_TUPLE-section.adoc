@@ -1,0 +1,21 @@
+
+=== Class C_ATTRIBUTE_TUPLE
+
+[tabs]
+======
+Diff::
++
+include::C_ATTRIBUTE_TUPLE.adoc[]
+
+Flat::
++
+include::C_ATTRIBUTE_TUPLE-flat.adoc[]
+
+Props(diff)::
++
+include::C_ATTRIBUTE_TUPLE-properties.adoc[]
+
+Props(flat)::
++
+include::C_ATTRIBUTE_TUPLE-properties-flat.adoc[]
+======

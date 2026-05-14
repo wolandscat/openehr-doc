@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_OPERATOR*
+
+h|*Description*
+2+a|Definition of a symbolic operator associated with a function.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*position*: xref:languages:bmm-gen.adoc#_class_bmm_operator_position[BMM_OPERATOR_POSITION]
+a|Position of operator in syntactic representation.
+
+h|prop +
+  
+|*symbols*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Set of `String` symbols that may be used to represent this operator in a textual
+representation of a BMM model.
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Formal name of the operator, e.g. 'minus' etc.
+
+|===

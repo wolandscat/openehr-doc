@@ -1,0 +1,21 @@
+
+=== Class EXPR_ARCHETYPE_REF
+
+[tabs]
+======
+Diff::
++
+include::EXPR_ARCHETYPE_REF.adoc[]
+
+Flat::
++
+include::EXPR_ARCHETYPE_REF-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_ARCHETYPE_REF-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_ARCHETYPE_REF-properties-flat.adoc[]
+======

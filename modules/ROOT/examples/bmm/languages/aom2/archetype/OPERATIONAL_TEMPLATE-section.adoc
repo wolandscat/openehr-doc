@@ -1,0 +1,21 @@
+
+=== Class OPERATIONAL_TEMPLATE
+
+[tabs]
+======
+Diff::
++
+include::OPERATIONAL_TEMPLATE.adoc[]
+
+Flat::
++
+include::OPERATIONAL_TEMPLATE-flat.adoc[]
+
+Props(diff)::
++
+include::OPERATIONAL_TEMPLATE-properties.adoc[]
+
+Props(flat)::
++
+include::OPERATIONAL_TEMPLATE-properties-flat.adoc[]
+======

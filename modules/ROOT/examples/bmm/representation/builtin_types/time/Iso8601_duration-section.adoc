@@ -1,5 +1,5 @@
 
-=== class Iso8601_duration
+=== Class Iso8601_duration
 
 [tabs]
 ======

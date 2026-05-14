@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_FOLDER
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_FOLDER.adoc[]
+
+Flat::
++
+include::EXTRACT_FOLDER-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_FOLDER-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_FOLDER-properties-flat.adoc[]
+======

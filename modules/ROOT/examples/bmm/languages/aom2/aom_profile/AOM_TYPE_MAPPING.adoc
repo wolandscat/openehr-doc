@@ -1,0 +1,31 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class AOM_TYPE_MAPPING*
+
+h|*Description*
+2+a|Data object expressing a mapping between two types.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*source_class_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the AOM type being mapped to an RM type.
+
+h|prop +
+  
+|*target_class_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the RM type in the mapping.
+
+h|prop +
+  0..1
+|*property_mappings*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_aom_property_mapping[AOM_PROPERTY_MAPPING]>
+a|List of mappings of properties of this type to another type.
+
+|===

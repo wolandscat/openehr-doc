@@ -1,0 +1,21 @@
+
+=== Class C_DURATION
+
+[tabs]
+======
+Diff::
++
+include::C_DURATION.adoc[]
+
+Flat::
++
+include::C_DURATION-flat.adoc[]
+
+Props(diff)::
++
+include::C_DURATION-properties.adoc[]
+
+Props(flat)::
++
+include::C_DURATION-properties-flat.adoc[]
+======

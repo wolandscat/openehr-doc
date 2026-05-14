@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ASSERTION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*expression*: xref:languages:bmm-gen.adoc#_class_el_boolean_expression[EL_BOOLEAN_EXPRESSION]
+a|Boolean-valued expression of the assertion.
+
+h|prop +
+  0..1
+|*tag*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional tag, typically used to designate design intention of the assertion, e.g.
+`"Inv_all_members_valid"`.
+
+|===

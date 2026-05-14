@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXPRESSION*
+
+h|*Description*
+2+a|Abstract parent of all expression meta-types.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_value[EXPR_VALUE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*type* : xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
+a|The primitive type of this node, which must be determined by redefinitions in concrete
+classes.
+
+|===

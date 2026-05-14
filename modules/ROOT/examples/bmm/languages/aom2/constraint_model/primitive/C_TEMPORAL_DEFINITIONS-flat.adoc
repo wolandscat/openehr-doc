@@ -1,0 +1,109 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_TEMPORAL_DEFINITIONS*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|const +
+  
+|*Valid_date_constraint_patterns*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]> = +
+  ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-??-??", "YYYY-MM-XX", "YYYY-MM-??", "YYYY-MM-DD")
+a|List of allowed date constraints.
+
+h|const +
+  
+|*Valid_date_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+  {[ + 
+"YYYY-MM-DD": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-??-??", "YYYY-MM-XX", "YYYY-MM-??", "YYYY-MM-DD"), +
+"YYYY-MM-??": ("YYYY-MM-XX", "YYYY-MM-DD"), +
+"YYYY-MM-XX": ("YYYY-MM-XX", "YYYY-MM-DD"), +
+"YYYY-??-??": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-MM-XX", "YYYY-MM-DD", "YYYY-MM-??"), +
+"YYYY-??-XX": ("YYYY-XX-XX", "YYYY-MM-XX"), +
+"YYYY-XX-XX": ("YYYY-XX-XX", "YYYY-MM-XX"), +
+}] + 
+
+a|List of allowed date constraint replacements e.g. in specialised archetype. Contains the values:
+
+An empty list value indicates no replacements possible.
+
+h|const +
+  
+|*Valid_time_constraint_patterns*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]> = +
+  ("HH:??:XX", "HH:??:??", "HH:MM:XX", "HH:MM:??", "HH:MM:SS")
+a|List of allowed time constraints.
+
+h|const +
+  
+|*Valid_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+  {[ + 
+"HH:MM:SS": ("HH:??:XX", "HH:??:??", "HH:MM:XX", "HH:MM:??", "HH:MM:SS"), +
+"HH:MM:??": ("HH:MM:XX", "HH:MM:SS"), +
+"HH:MM:XX": ("HH:MM:XX", "HH:MM:SS"), +
+"HH-??-??": ("HH:??:XX", "HH:MM:XX", "HH:MM:SS", "HH:MM:??"), +
+"HH-??-XX": ("HH:MM:XX"), +
+}] + 
+
+a|List of allowed time constraint replacements e.g. in specialised archetype.
+An empty list value indicates no replacements possible.
+
+h|const +
+  
+|*Valid_date_time_constraint_patterns*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]> = +
+  ("YYYY-??-??T??:??:??", "YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS")
+a|List of allowed date/time constraints.
+
+h|const +
+  
+|*Valid_date_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+  {[ + 
+"YYYY-MM-DDTHH:MM:SS": ("YYYY-??-??T??:??:??", "YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"), +
+"YYYY-MM-DDTHH:MM:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:SS"), +
+"YYYY-MM-DDTHH:MM:XX": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:SS"), +
+"YYYY-MM-DDTHH:??:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS", "YYYY-MM-DDTHH:??:XX"), +
+"YYYY-MM-DDTHH:??:XX": ("YYYY-MM-DDTHH:MM:XX"), +
+"YYYY-??-??T??:??:??": ("YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"), +
+}] + 
+
+a|List of allowed date/time constraint replacements e.g. in specialised archetype.
+An empty list value indicates no replacements possible.
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*valid_duration_constraint_replacement* ( +
+a_dur: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+other_dur: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if ISO8601 duration string `other_dur` contains every character element in
+`a_dur`. For example: 'PYD' (period with year and days only) conforms to 'PYMD', but
+doesn't conform to 'PY'.
+
+h| func
+|*valid_iso8601_date_constraint_pattern* ( +
+s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string literal like `"yyyy-MM-dd"` containing `"XX"` or `"??"` in `MM` or `dd`
+slots in pattern constraint is in `valid_date_constraint_patterns`.
+
+h| func
+|*valid_iso8601_time_constraint_pattern* ( +
+s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string literal like `"hh:mm:ss[.ssss]"` containing `"XX"` or `"??"` in `mm` or
+`ss` slots in pattern constraint is in `valid_time_constraint_patterns`.
+
+h| func
+|*valid_iso8601_date_time_constraint_pattern* ( +
+s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string literal in form `"yyyy-MM-dd hh:mm:ss[.ssss]"` containing `"XX"` or `"??"`
+in variable slots in pattern constraint is in `valid_date_time_constraint_patterns`.
+
+h| func
+|*valid_iso8601_duration_constraint_pattern* ( +
+s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string in form P[Y][M][W][D][T[H][M][S]] is a valid ISO 8601 duration
+constraint pattern (openEHR allows W mixed in).
+
+|===

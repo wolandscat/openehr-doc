@@ -1,5 +1,5 @@
 
-=== class ISM_TRANSITION
+=== Class ISM_TRANSITION
 
 [tabs]
 ======

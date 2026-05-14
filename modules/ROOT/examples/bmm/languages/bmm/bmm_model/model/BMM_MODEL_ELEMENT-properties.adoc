@@ -1,0 +1,42 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_MODEL_ELEMENT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model_element[BMM_MODEL_ELEMENT]
+a|Model element within which an element is declared.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+|===

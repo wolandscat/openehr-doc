@@ -1,0 +1,70 @@
+
+.openehr_extract Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class X_VERSIONED_EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_ehr_access]] {
+}
+
+X_VERSIONED_EHR_ACCESS -[#gray]up-|> X_VERSIONED_OBJECT  
+
+
+class X_VERSIONED_EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_ehr_status]] {
+}
+
+X_VERSIONED_EHR_STATUS -[#gray]up-|> X_VERSIONED_OBJECT  
+
+
+class X_VERSIONED_COMPOSITION [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_composition]] {
+}
+
+X_VERSIONED_COMPOSITION -[#gray]up-|> X_VERSIONED_OBJECT  
+
+
+class X_VERSIONED_FOLDER [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_folder]] {
+}
+
+X_VERSIONED_FOLDER -[#gray]up-|> X_VERSIONED_OBJECT  
+
+
+class X_VERSIONED_OBJECT<T:LOCATABLE> [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_object]] {
+        .. access ..
+        uid: HIER_OBJECT_ID
+        owner_id: OBJECT_REF
+        time_created: DV_DATE_TIME
+        total_version_count: Integer
+        extract_version_count: Integer
+        revision_history: REVISION_HISTORY
+        versions: List<ORIGINAL_VERSION<T>>
+}
+
+
+class OPENEHR_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_openehr_content_item]] {
+        .. access ..
+}
+
+OPENEHR_CONTENT_ITEM -[#gray]up-|> EXTRACT_CONTENT_ITEM  
+
+
+OPENEHR_CONTENT_ITEM *--> "0..1 item" X_VERSIONED_OBJECT
+
+class X_VERSIONED_PARTY [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_versioned_party]] {
+}
+
+X_VERSIONED_PARTY -[#gray]up-|> X_VERSIONED_OBJECT  
+
+
+class X_CONTRIBUTION [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_contribution]] {
+        .. access ..
+        uid: HIER_OBJECT_ID
+        audit: AUDIT_DETAILS
+        versions: List<VERSION<LOCATABLE>>
+}
+
+abstract class "domain-healthcare.ehr_extract.common.\nEXTRACT_CONTENT_ITEM" as EXTRACT_CONTENT_ITEM  [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] #FDFDFD {
+}
+
+....

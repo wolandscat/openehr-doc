@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_EXTERNAL_ROUTINE*
+
+h|*Description*
+2+a|External routine meta-type, containing sufficient meta-data to enable a routine in an
+external library to be called.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_routine_definition[BMM_ROUTINE_DEFINITION]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|External call general meta-data, including target routine name, type mapping etc.
+
+h|prop +
+  0..1
+|*argument_mapping*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Optional argument-mapping meta-data.
+
+|===

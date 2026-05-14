@@ -1,0 +1,107 @@
+
+.model Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_MODEL_ACCESS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_access]] {
+        .. access ..
+        schema_directories: List<String>
+        all_schemas: List<String>
+        bmm_models: Map<String,BMM_MODEL>
+        matching_bmm_models: List<String>
+        bmm_model(a_model_key: String):BMM_MODEL
+        has_bmm_model(a_model_key: String):Boolean
+}
+
+
+abstract class BMM_FORMAL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_formal_element]] {
+        .. access ..
+        type: BMM_TYPE
+        is_nullable: Boolean
+        signature:BMM_SIGNATURE
+        is_boolean:Boolean
+}
+
+BMM_FORMAL_ELEMENT -[#gray]up-|> BMM_MODEL_ELEMENT  
+
+
+abstract class BMM_MODEL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_element]] {
+        .. access ..
+        name: String
+        documentation: Map<String,Any>
+        extensions: Map<String,Any>
+        is_root_scope:Boolean
+}
+
+
+BMM_MODEL_ELEMENT *--> "1 scope" BMM_MODEL_ELEMENT
+
+abstract class BMM_PACKAGE_CONTAINER [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_package_container]] {
+        .. access ..
+        packages: Map<String,BMM_PACKAGE>
+        package_at_path(a_path: String):BMM_PACKAGE
+        has_package_path(a_path: String):Boolean
+}
+
+BMM_PACKAGE_CONTAINER -[#gray]up-|> BMM_MODEL_ELEMENT  
+
+
+class BMM_INCLUDE_SPEC [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_include_spec]] {
+        .. access ..
+        id: String
+}
+
+
+class BMM_MODEL [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model]] {
+        .. access ..
+        class_definitions: List<String>
+        used_models: List<BMM_MODEL>
+        modules: Map<String,BMM_MODULE>
+        model_id:String
+        class_definition(a_name: String):BMM_CLASS
+        has_class_definition(a_class_name: String):Boolean
+        has_type_definition(a_type_name: String):Boolean
+        enumeration_definition(a_name: String):BMM_ENUMERATION
+        primitive_types:List<String>
+        enumeration_types:List<String>
+        is_descendant_of(a_class_name: String, a_parent_class_name: String):Boolean
+}
+
+BMM_MODEL -[#gray]up-|> BMM_PACKAGE_CONTAINER  
+
+
+BMM_MODEL -[#gray]up-|> BMM_MODEL_METADATA  
+
+
+class BMM_PACKAGE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_package]] {
+        .. access ..
+        members: List<BMM_MODULE>
+        root_classes:List<BMM_CLASS>
+        path:String
+}
+
+BMM_PACKAGE -[#gray]up-|> BMM_PACKAGE_CONTAINER  
+
+
+abstract class BMM_MODULE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_module]] {
+        .. access ..
+        feature_groups: List<BMM_FEATURE_GROUP>
+        features: List<BMM_FORMAL_ELEMENT>
+}
+
+BMM_MODULE -[#gray]up-|> BMM_MODEL_ELEMENT  
+
+
+BMM_MODULE *--> "1 scope" BMM_MODEL
+
+class BMM_MODEL_METADATA [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_metadata]] {
+        .. access ..
+        rm_publisher: String
+        rm_release: String
+}
+
+
+....

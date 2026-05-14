@@ -1,0 +1,83 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_PRIMITIVE_OBJECT*
+
+h|*Description*
+2+a|Parent of types representing constraints on primitive types.
+
+Instances of this type represented in ADL inline form, the `node_id` attribute will have
+the special value `Primitive_node_id`; otherwise it will have the node id read during
+parsing.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_defined_object[C_DEFINED_OBJECT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Value to be assumed if none sent in data.
+
+h|prop +
+  0..1
+|*is_enumerated_type_constraint*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this object represents a constraint on an enumerated type from the reference
+model, where the latter is assumed to be based on a primitive type, generally Integer or
+String.
+
+h|prop +
+  
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Constraint represented by this object; redefine in descendants.
+
+h| func
+|*has_assumed_value* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if there is an assumed value.
+
+h| func
+|*constrained_typename* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Generate name of native type that is constrained by this `C_XXX` type. For most types, it
+is the `C_XXX` typename without the `C`, i.e. `XXX`. E.g. `C_INTEGER` -> `Integer`. For
+the date/time types the mapping is different.
+
+h| func
+|*c_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT], +
+rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+same as other. Typically used during validation of specialised archetype nodes.
+
+Parameters
+  `rmcc`:: Reference Model conformance checker lambda.
+
+h| func
+|*c_value_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node expresses a value constraint that conforms to that of `other`. Effected
+in descendants.
+
+h| func
+|*c_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node contain no further redefinitions with respect
+to the node `other`, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
+
+Typically used to test if an inherited node locally contains any constraints.
+
+h| func
+|*c_value_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node expresses the same value constraint as `other`. Effected in descendants.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_valid_assumed_value: valid_value(assumed_value);
+
+
+|===

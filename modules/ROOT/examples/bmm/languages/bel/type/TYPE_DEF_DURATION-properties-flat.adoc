@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TYPE_DEF_DURATION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Natural language type name of this type as used in abstract rules syntax variable
+declarations.
+
+h|prop +
+  
+|*type_anchor*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Attribute of the openEHR primitive type (or Any) corresponding to this type definition
+meta-type.
+
+|===

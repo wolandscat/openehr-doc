@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class RM_ATTRIBUTE_VISIBILITY*
+
+h|*Description*
+2+a|Definition of visibility of an RM attribute within a larger archetype structure.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*visibility*: xref:languages:aom2-gen.adoc#_class_visibility_type[VISIBILITY_TYPE]
+a|Visibility setting of a non-archetyped RM attribute (RM attributes that are constrained or
+within the archetyped structure are visible by default).
+
+h|prop +
+  0..1
+|*alias*: xref:representation:builtin_types-gen.adoc#_class_terminology_code[Terminology_code]
+a|Optional alias for the attribute referenced by the path.
+
+|===

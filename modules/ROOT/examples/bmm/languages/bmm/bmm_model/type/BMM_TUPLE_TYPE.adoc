@@ -1,0 +1,31 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_TUPLE_TYPE*
+
+h|*Description*
+2+a|Built-in meta-type representing the type of a tuple, i.e. an array of any number of other
+types. This includes both container and unitary types, since tuple instances represent
+concrete objects.
+
+Note that both open and closed generic parameters are allowed, as with any generic type,
+but open generic parameters are only valid within the scope of a generic class.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_builtin_type[BMM_BUILTIN_TYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*item_types*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]>
+a|List of types of the items of the tuple, keyed by purpose in the tuple.
+
+h| func
+|*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Return the logical set (i.e. unique types) from the merge of `flattened_type_list_()`
+called on each member of `item_types`.
+
+|===

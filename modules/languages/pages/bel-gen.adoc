@@ -1,0 +1,89 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Bel Specification
+
+
+== Bel Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages//bel/bel-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== Expression Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bel/expression/expression-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bel/expression/EXPR_VARIABLE_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPRESSION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_LEAF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_VALUE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/OPERATOR_KIND-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_VALUE_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXTERNAL_QUERY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_FUNCTION_CALL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_FOR_ALL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_UNARY_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_BINARY_OPERATOR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/expression/EXPR_LITERAL-section.adoc[leveloffset=+1]
+
+
+
+
+== Statement Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bel/statement/statement-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bel/statement/VARIABLE_DECLARATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/statement/STATEMENT_SET-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/statement/ASSERTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/statement/STATEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/statement/ASSIGNMENT-section.adoc[leveloffset=+1]
+
+
+
+
+== Type Package
+
+=== Overview 
+
+include::ROOT:example$bmm/languages/bel/type/type-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_DATE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_DATE_TIME-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_TIME-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_DURATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_BOOLEAN-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_OBJECT_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/EXPR_TYPE_DEF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_STRING-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_URI-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_REAL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_TERMINOLOGY_CODE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/languages/bel/type/TYPE_DEF_INTEGER-section.adoc[leveloffset=+1]
+
+
+
+
+

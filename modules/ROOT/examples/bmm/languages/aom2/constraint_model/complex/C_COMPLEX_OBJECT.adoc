@@ -1,0 +1,53 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_COMPLEX_OBJECT*
+
+h|*Description*
+2+a|Constraint on complex objects, i.e. any object that consists of other object constraints.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_defined_object[C_DEFINED_OBJECT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*attributes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]>
+a|List of constraints on attributes of the reference model type represented by this object.
+
+h|prop +
+  0..1
+|*attribute_tuples*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE]>
+a|List of attribute tuple constraints under this object constraint, if any.
+
+h| func
+|*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    reasult_valid: Result = attributes.is_empty ∧ ¬ is_prohibited;
+
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
+in descendants.
+
+h| func
+|*c_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_complex_object[C_COMPLEX_OBJECT], +
+rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+same as other. Typically used during validation of specialised archetype nodes.
+
+.Parameters
+  `rmcc`:: Reference Model conformance checker agent (lambda).
+
+h| func
+|*c_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_complex_object[C_COMPLEX_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node contain no further redefinitions with respect
+to the node `other`, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
+
+Typically used to test if an inherited node locally contains any constraints.
+
+|===

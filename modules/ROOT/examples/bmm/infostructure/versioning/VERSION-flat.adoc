@@ -1,39 +1,36 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class VERSION<T>*
 
-h|*Description*
-2+a|Abstract model of one Version within a Version container, containing data,
-commit audit trail, and the identifier of its Contribution.
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*contribution*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+|*contribution*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Contribution in which this version was added.
 
 h|prop +
   0..1
-|*signature*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*signature*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|OpenPGP digital signature or digest of content committed in this Version.
 
 h|prop +
   
-|*commit_audit*: xref:infostructure:infostructure-versioning.adoc#_class_audit_details[AUDIT_DETAILS]
+|*commit_audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
 h| func
-|*uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
+|*uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id,
 creating_system_id}` triple, where the `object_id` has the same value as the containing
 `VERSIONED_OBJECT _uid`.
 
 h| func
-|*preceding_version_uid* : xref:representation:representation-identification.adoc#_class_object_version_id[OBJECT_VERSION_ID]
+|*preceding_version_uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Unique identifier of the version of which this version is a modification; Void if this is
 the first version.
 
@@ -42,17 +39,17 @@ h| func
 a|The data of this Version. Original content of this Version.
 
 h| func
-|*lifecycle_state* : xref:representation:representation-data_types.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*lifecycle_state* : xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.
 
 h| func
-|*canonical_form* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*canonical_form* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|A canonical serial form of this Version, suitable for generating reliable hashes and
 signatures. Canonical form of Version object, created by serialising all attributes except
 signature.
 
 h| func
-|*owner_id* : xref:representation:representation-identification.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
+|*owner_id* : xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
  +
   *post_cond* +
     valid_result: Result.value.is_equal(uid.object_id.value);
@@ -61,7 +58,7 @@ a|Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `ui
 property's `object_id`.
 
 h| func
-|*is_branch* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_branch* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this Version represents a branch. Derived from `uid` attribute.
 
 h|*Invariants*

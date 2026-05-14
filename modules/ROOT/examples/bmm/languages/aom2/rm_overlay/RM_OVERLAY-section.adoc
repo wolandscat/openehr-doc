@@ -1,0 +1,21 @@
+
+=== Class RM_OVERLAY
+
+[tabs]
+======
+Diff::
++
+include::RM_OVERLAY.adoc[]
+
+Flat::
++
+include::RM_OVERLAY-flat.adoc[]
+
+Props(diff)::
++
+include::RM_OVERLAY-properties.adoc[]
+
+Props(flat)::
++
+include::RM_OVERLAY-properties-flat.adoc[]
+======

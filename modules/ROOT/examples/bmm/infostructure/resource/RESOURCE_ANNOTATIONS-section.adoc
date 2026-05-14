@@ -1,5 +1,5 @@
 
-=== class RESOURCE_ANNOTATIONS
+=== Class RESOURCE_ANNOTATIONS
 
 [tabs]
 ======

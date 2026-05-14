@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_ATTRIBUTE_TUPLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*tuples*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_primitive_tuple[C_PRIMITIVE_TUPLE]>
+a|Tuple definitions.
+
+h|prop +
+  0..1
+|*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]>
+a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
+
+|===

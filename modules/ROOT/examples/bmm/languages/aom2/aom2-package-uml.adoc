@@ -1,0 +1,52 @@
+
+.aom2 Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class ADL_CODE_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_class_adl_code_definitions]] {
+        .. values ..
+        At_code_leader:String
+        Id_code_leader:String
+        Value_code_leader:String
+        Value_set_code_leader:String
+        Specialisation_separator:Character
+        Code_regex_pattern:String
+        Root_code_regex_pattern:String
+        Primitive_node_id:String
+        .. access ..
+        codes_conformant(a_child_code: String, a_parent_code: String):Boolean
+        is_adl_code(a_code: String):Boolean
+        is_at_code(a_code: String):Boolean
+        is_id_code(a_code: String):Boolean
+        is_value_code(a_code: String):Boolean
+        is_value_set_code(a_code: String):Boolean
+        is_redefined_code(a_code: String):Boolean
+        code_exists_at_level(a_code: String, a_level: Integer):Boolean
+}
+
+
+package archetype {
+}
+
+package constraint_model.complex {
+}
+
+package constraint_model.primitive {
+}
+
+package rules {
+}
+
+package terminology {
+}
+
+package rm_overlay {
+}
+
+package aom_profile {
+}
+
+....

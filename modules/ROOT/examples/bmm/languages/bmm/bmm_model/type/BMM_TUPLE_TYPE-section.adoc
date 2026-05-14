@@ -1,0 +1,21 @@
+
+=== Class BMM_TUPLE_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_TUPLE_TYPE.adoc[]
+
+Flat::
++
+include::BMM_TUPLE_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_TUPLE_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_TUPLE_TYPE-properties-flat.adoc[]
+======

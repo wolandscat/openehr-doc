@@ -1,0 +1,41 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXTRACT_CONTENT_ITEM*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*is_primary*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the content item carried in this container was part of the primary set for the
+Extract, i.e. not added due to link-following.
+
+h|prop +
+  0..1
+|*is_changed*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the content item carried in this container is any kind of change since last send,
+in repeat sending situations.
+
+h|prop +
+  0..1
+|*is_masked*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the content of this item has not been included due to insufficient access rights
+of requestor.
+
+h|prop +
+  0..1
+|*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+a|Content object.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|item_validity: is_masked ⊻ ∃ item;
+
+
+|===

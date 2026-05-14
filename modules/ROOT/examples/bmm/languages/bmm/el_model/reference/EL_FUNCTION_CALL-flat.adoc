@@ -1,0 +1,56 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_FUNCTION_CALL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*agent*: xref:languages:bmm-gen.adoc#_class_el_function_agent[EL_FUNCTION_AGENT]
+a|The function agent being called.
+
+h|prop +
+  
+|*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Defined to return False.
+
+h| func
+|*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Return `agent.definition.type`.
+
+h| func
+|*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Generated full reference name, consisting of any scoping elements, function name and
+routine parameters enclosed in parentheses.
+
+h|prop +
+  0..1
+|*scoper*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
+a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name used to represent the reference or other entity.
+
+h| func
+|*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_validity: Result = eval_type().equal(BMM_MODEL.boolean_type_definition());
+
+a|True if `eval_type` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `type_name()`
+= `Boolean`).
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_valid_agent: agent.is_callable();
+
+
+|===

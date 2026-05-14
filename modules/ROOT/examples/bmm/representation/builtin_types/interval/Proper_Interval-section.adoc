@@ -1,5 +1,5 @@
 
-=== class Proper_Interval
+=== Class Proper_Interval
 
 [tabs]
 ======

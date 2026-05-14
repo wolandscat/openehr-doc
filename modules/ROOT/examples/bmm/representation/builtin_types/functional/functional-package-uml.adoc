@@ -1,39 +1,41 @@
 
 .functional Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class TUPLE2<A:Any,B:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple2]] {
+class TUPLE2<A:Any,B:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple2]] {
 }
 
-TUPLE <|-[#gray]- TUPLE2
+TUPLE2 -[#gray]up-|> TUPLE  
 
 
-class TUPLE [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple]] {
+class TUPLE [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple]] {
 }
 
-class ROUTINE<V:TUPLE> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_routine]] {
+
+class ROUTINE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_routine]] {
 }
 
-class FUNCTION<V:TUPLE,R:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_function]] {
+
+class FUNCTION<V:TUPLE,R:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_function]] {
 }
 
-ROUTINE <|-[#gray]- FUNCTION
+FUNCTION -[#gray]up-|> ROUTINE  
 
 
-class PROCEDURE<V:TUPLE> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_procedure]] {
+class PROCEDURE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_procedure]] {
 }
 
-ROUTINE <|-[#gray]- PROCEDURE
+PROCEDURE -[#gray]up-|> ROUTINE  
 
 
-class TUPLE1<A:Any> [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_tuple1]] {
+class TUPLE1<A:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple1]] {
 }
 
-TUPLE <|-[#gray]- TUPLE1
+TUPLE1 -[#gray]up-|> TUPLE  
 
 
 ....

@@ -1,5 +1,5 @@
 
-=== class DV_EHR_URI
+=== Class DV_EHR_URI
 
 [tabs]
 ======

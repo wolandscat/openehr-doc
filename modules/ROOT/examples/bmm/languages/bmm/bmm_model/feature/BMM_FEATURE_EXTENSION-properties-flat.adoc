@@ -1,0 +1,8 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_FEATURE_EXTENSION*
+
+
+|===

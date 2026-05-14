@@ -1,43 +1,47 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class BASIC_DEFINITIONS*
 
-h|*Description*
-2+a|Defines globally used constant values.
 
 h|
 2+^h|*Feature Group "infrastructure"*
 
 h|const +
   
-|*CR*: xref:representation:representation-builtin_types.adoc#_class_character[Character]
+|*CR*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '\r'
 a|Carriage return character.
 
 h|const +
   
-|*LF*: xref:representation:representation-builtin_types.adoc#_class_character[Character]
+|*LF*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '\n'
 a|Line feed character.
 
 h|const +
   
-|*Any_type_name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*Any_type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "Any"
 a|Name of the Any meta-type.
 
 h|const +
   
-|*Regex_any_pattern*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*Regex_any_pattern*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  ".*"
 a|Regex pattern that matches any string.
 
 h|const +
   
-|*Default_encoding*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*Default_encoding*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "UTF-8"
 a|Default character encoding.
 
 h|const +
   
-|*None_type_name*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*None_type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "None"
 a|Name of the None type.
 
 |===

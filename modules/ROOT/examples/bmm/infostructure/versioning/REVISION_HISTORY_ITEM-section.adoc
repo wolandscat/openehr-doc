@@ -1,5 +1,5 @@
 
-=== class REVISION_HISTORY_ITEM
+=== Class REVISION_HISTORY_ITEM
 
 [tabs]
 ======

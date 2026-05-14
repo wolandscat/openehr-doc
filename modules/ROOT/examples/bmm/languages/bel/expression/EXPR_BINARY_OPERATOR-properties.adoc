@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXPR_BINARY_OPERATOR*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*left_operand*: xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]
+a|Left operand node.
+
+h|prop +
+  
+|*right_operand*: xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]
+a|Right operand node.
+
+|===

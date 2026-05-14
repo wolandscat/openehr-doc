@@ -1,0 +1,21 @@
+
+=== Class C_COMPLEX_OBJECT
+
+[tabs]
+======
+Diff::
++
+include::C_COMPLEX_OBJECT.adoc[]
+
+Flat::
++
+include::C_COMPLEX_OBJECT-flat.adoc[]
+
+Props(diff)::
++
+include::C_COMPLEX_OBJECT-properties.adoc[]
+
+Props(flat)::
++
+include::C_COMPLEX_OBJECT-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class ARCHETYPE_TERMINOLOGY
+
+[tabs]
+======
+Diff::
++
+include::ARCHETYPE_TERMINOLOGY.adoc[]
+
+Flat::
++
+include::ARCHETYPE_TERMINOLOGY-flat.adoc[]
+
+Props(diff)::
++
+include::ARCHETYPE_TERMINOLOGY-properties.adoc[]
+
+Props(flat)::
++
+include::ARCHETYPE_TERMINOLOGY-properties-flat.adoc[]
+======

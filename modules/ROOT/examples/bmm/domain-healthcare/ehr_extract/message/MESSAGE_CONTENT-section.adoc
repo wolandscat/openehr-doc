@@ -1,0 +1,21 @@
+
+=== Class MESSAGE_CONTENT
+
+[tabs]
+======
+Diff::
++
+include::MESSAGE_CONTENT.adoc[]
+
+Flat::
++
+include::MESSAGE_CONTENT-flat.adoc[]
+
+Props(diff)::
++
+include::MESSAGE_CONTENT-properties.adoc[]
+
+Props(flat)::
++
+include::MESSAGE_CONTENT-properties-flat.adoc[]
+======

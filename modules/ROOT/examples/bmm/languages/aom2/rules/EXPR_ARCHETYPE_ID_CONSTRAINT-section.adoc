@@ -1,0 +1,21 @@
+
+=== Class EXPR_ARCHETYPE_ID_CONSTRAINT
+
+[tabs]
+======
+Diff::
++
+include::EXPR_ARCHETYPE_ID_CONSTRAINT.adoc[]
+
+Flat::
++
+include::EXPR_ARCHETYPE_ID_CONSTRAINT-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_ARCHETYPE_ID_CONSTRAINT-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_ARCHETYPE_ID_CONSTRAINT-properties-flat.adoc[]
+======

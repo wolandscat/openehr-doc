@@ -1,0 +1,21 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Integration Specification
+
+
+== Integration Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation//integration/integration-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/foundation/integration//GENERIC_ENTRY-section.adoc[leveloffset=+1]
+
+
+
+
+

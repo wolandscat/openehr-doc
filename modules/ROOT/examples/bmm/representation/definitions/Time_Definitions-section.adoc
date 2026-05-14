@@ -1,5 +1,5 @@
 
-=== class Time_Definitions
+=== Class Time_Definitions
 
 [tabs]
 ======

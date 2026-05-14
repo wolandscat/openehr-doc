@@ -1,0 +1,24 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class GENERIC_ENTRY*
+
+h|*Description*
+2+a|This class is used to create intermediate representations of data from sources not
+otherwise conforming to openEHR classes, such as HL7 messages, relational databases and so
+on.
+
+h|*Inherit*
+2+|xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*data*: xref:representation:data_structures-gen.adoc#_class_item[ITEM]
+a|The data from the source message or record. May be recorded in any structural openEHR
+representation.
+
+|===

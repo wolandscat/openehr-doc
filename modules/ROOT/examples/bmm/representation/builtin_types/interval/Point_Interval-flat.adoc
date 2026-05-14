@@ -1,15 +1,9 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class Point_Interval<T:Ordered>*
 
-h|*Description*
-2+a|Type representing an Interval that happens to be a point value. Provides an efficient
-representation that is substitutable for `Interval<T>` where needed.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_interval[Interval]
 
 h|
 2+^h|*Feature Group "access"*
@@ -26,30 +20,30 @@ a|Upper bound. Upper bound.
 
 h|prop +
   
-|*lower_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*lower_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
 -infinity)
 
 h|prop +
   
-|*upper_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*upper_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
 +infinity)
 
 h|prop +
   
-|*lower_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*lower_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
 boundary value included in range if not lower_unbounded.
 
 h|prop +
   
-|*upper_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*upper_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 
 h| func
-|*has* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     valid_result: Result = (lower_unbounded ∨ lower_included ∧ v >= lower) ∨ v > lower ∧ (upper_unbounded ∨ upper_included ∧ v <= upper ∨ v < upper);
@@ -59,12 +53,12 @@ a|True if the value `e` is properly contained in this Interval. True if (lower_u
 and v <= upper or v < upper)))
 
 h| func
-|*intersects* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*intersects* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is any overlap between intervals represented by Current and `other`. True
 if at least one limit of `other` is strictly inside the limits of this interval.
 
 h| func
-|*contains* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*contains* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if current interval properly contains `other`? True if all points of `other` are
 inside the current interval.
 

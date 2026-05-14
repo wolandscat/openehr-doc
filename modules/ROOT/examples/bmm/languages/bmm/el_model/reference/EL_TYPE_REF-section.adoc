@@ -1,0 +1,21 @@
+
+=== Class EL_TYPE_REF
+
+[tabs]
+======
+Diff::
++
+include::EL_TYPE_REF.adoc[]
+
+Flat::
++
+include::EL_TYPE_REF-flat.adoc[]
+
+Props(diff)::
++
+include::EL_TYPE_REF-properties.adoc[]
+
+Props(flat)::
++
+include::EL_TYPE_REF-properties-flat.adoc[]
+======

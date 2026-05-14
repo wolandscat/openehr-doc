@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_WRITABLE_VARIABLE*
+
+h|*Description*
+2+a|Meta-type for writable variables, including the special variable `Result`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_variable[BMM_VARIABLE]
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class BMM_INDEXED_CONTAINER_PROPERTY
+
+[tabs]
+======
+Diff::
++
+include::BMM_INDEXED_CONTAINER_PROPERTY.adoc[]
+
+Flat::
++
+include::BMM_INDEXED_CONTAINER_PROPERTY-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_INDEXED_CONTAINER_PROPERTY-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_INDEXED_CONTAINER_PROPERTY-properties-flat.adoc[]
+======

@@ -1,0 +1,86 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_DURATION*
+
+h|*Description*
+2+a|Constraint on instances representing duration, which is assumed to have the same parts as
+the ISO 8601 duration string. Thus, constraints are of the form `"PWD"` (weeks and/or
+days), `"PDTHMS"` (days, hours, minutes, seconds) and so on.
+
+Both range and the constraint pattern can be set at the same time, corresponding to the
+ADL constraint `"PWD/\|;P0W..P50W\|;"`.
+
+As for all of openEHR, two ISO 8601 exceptions are allowed:
+
+* the 'W' (week) designator can be mixed in - the allowed patterns are:
+`P[Y\|;y][M\|;m][D\|;d][T[H\|;h][M\|;m][S\|;s]]` and `P[W\|;w]`;
+* the values used in an interval constraint may be negated, i.e. a leading minus (`'-'`)
+sign may be used.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_temporal[C_TEMPORAL]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]>>
+a|Formal constraint on the assumed primitive `Iso8601_duration` type, in the form of one or
+more `Interval<Iso8601_duration>`.
+
+For a pattern constraint or no constraint, use an empty list.
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|Default value set in a template, and present in an operational template. Generally limited
+to leaf and near-leaf nodes.
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|Value to be assumed if none sent in data.
+
+h| func
+|*years_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if years are allowed in the constrained Duration.
+
+h| func
+|*months_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if months are allowed in the constrained Duration.
+
+h| func
+|*weeks_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if weeks are allowed in the constrained Duration.
+
+h| func
+|*days_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if days are allowed in the constrained Duration.
+
+h| func
+|*hours_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if hours are allowed in the constrained Duration.
+
+h| func
+|*minutes_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if minutes are allowed in the constrained Duration.
+
+h| func
+|*seconds_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if seconds are allowed in the constrained Duration.
+
+h| func
+|*valid_pattern_constraint* ( +
+a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return `valid_iso8601_duration_constraint_pattern (a_pattern)`
+
+h| func
+|*valid_pattern_constraint_replacement* ( +
+a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+an_other_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return `valid_duration_constraint_replacement (a_pattern, an_other_pattern)`.
+
+|===

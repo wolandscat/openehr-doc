@@ -1,0 +1,21 @@
+
+=== Class BMM_PROCEDURE
+
+[tabs]
+======
+Diff::
++
+include::BMM_PROCEDURE.adoc[]
+
+Flat::
++
+include::BMM_PROCEDURE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_PROCEDURE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_PROCEDURE-properties-flat.adoc[]
+======

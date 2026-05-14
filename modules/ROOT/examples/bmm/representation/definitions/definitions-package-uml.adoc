@@ -1,12 +1,12 @@
 
 .definitions Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Time_Definitions [[/splashlang-doc/latest/representation/representation-definitions.html#_class_time_definitions]] {
+class Time_Definitions [[/openehr-doc/latest/representation/definitions-gen.html#_class_time_definitions]] {
         .. definitions ..
         Seconds_in_minute:Integer
         Minutes_in_hour:Integer
@@ -25,7 +25,8 @@ class Time_Definitions [[/splashlang-doc/latest/representation/representation-de
         Max_timezone_hour:Integer
 }
 
-class BASIC_DEFINITIONS [[/splashlang-doc/latest/representation/representation-definitions.html#_class_basic_definitions]] {
+
+class BASIC_DEFINITIONS [[/openehr-doc/latest/representation/definitions-gen.html#_class_basic_definitions]] {
         .. infrastructure ..
         CR:Character
         LF:Character
@@ -35,59 +36,60 @@ class BASIC_DEFINITIONS [[/splashlang-doc/latest/representation/representation-d
         None_type_name:String
 }
 
-enum VALIDITY_KIND [[/splashlang-doc/latest/representation/representation-definitions.html#_class_validity_kind]] {
+
+enum VALIDITY_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_validity_kind]] {
         .. values ..
-        mandatory = "mandatory"
-        optional = "optional"
-        prohibited = "prohibited"
-        disallowed = "disallowed"
+        mandatory = mandatory
+        optional = optional
+        prohibited = prohibited
+        disallowed = disallowed
 }
 
-enum MATH_FUNCTION_KIND [[/splashlang-doc/latest/representation/representation-definitions.html#_class_math_function_kind]] {
+enum MATH_FUNCTION_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_math_function_kind]] {
         .. values ..
-        actual = "actual"
-        minimum = "minimum"
-        maximum = "maximum"
-        mean = "mean"
-        mode = "mode"
-        median = "median"
-        increase = "increase"
-        decrease = "decrease"
-        change = "change"
-        total = "total"
+        actual = actual
+        minimum = minimum
+        maximum = maximum
+        mean = mean
+        mode = mode
+        median = median
+        increase = increase
+        decrease = decrease
+        change = change
+        total = total
 }
 
-enum VERSION_STATUS [[/splashlang-doc/latest/representation/representation-definitions.html#_class_version_status]] {
+enum VERSION_STATUS [[/openehr-doc/latest/representation/definitions-gen.html#_class_version_status]] {
         .. values ..
-        alpha = "alpha"
-        beta = "beta"
-        release_candidate = "release_candidate"
-        released = "released"
-        build = "build"
+        alpha = alpha
+        beta = beta
+        release_candidate = release_candidate
+        released = released
+        build = build
 }
 
-enum TASK_STATUS [[/splashlang-doc/latest/representation/representation-definitions.html#_class_task_status]] {
+enum TASK_STATUS [[/openehr-doc/latest/representation/definitions-gen.html#_class_task_status]] {
         .. values ..
-        planned = "planned"
-        in_progress = "in_progress"
-        on_hold = "on_hold"
-        completed = "completed"
-        abandoned = "abandoned"
+        planned = planned
+        in_progress = in_progress
+        on_hold = on_hold
+        completed = completed
+        abandoned = abandoned
 }
 
-class OPENEHR_DEFINITIONS [[/splashlang-doc/latest/representation/representation-definitions.html#_class_openehr_definitions]] {
+class OPENEHR_DEFINITIONS [[/openehr-doc/latest/representation/definitions-gen.html#_class_openehr_definitions]] {
         .. infrastructure ..
         Local_terminology_id:String
 }
 
-BASIC_DEFINITIONS <|-[#gray]- OPENEHR_DEFINITIONS
+OPENEHR_DEFINITIONS -[#gray]up-|> BASIC_DEFINITIONS  
 
 
-enum TREND_KIND [[/splashlang-doc/latest/representation/representation-definitions.html#_class_trend_kind]] {
+enum TREND_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_trend_kind]] {
         .. values ..
-        increase = "increase"
-        decrease = "decrease"
-        change = "change"
+        increase = increase
+        decrease = decrease
+        change = change
 }
 
 ....

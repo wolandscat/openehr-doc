@@ -1,0 +1,21 @@
+
+=== Class EL_VARIABLE
+
+[tabs]
+======
+Diff::
++
+include::EL_VARIABLE.adoc[]
+
+Flat::
++
+include::EL_VARIABLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_VARIABLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_VARIABLE-properties-flat.adoc[]
+======

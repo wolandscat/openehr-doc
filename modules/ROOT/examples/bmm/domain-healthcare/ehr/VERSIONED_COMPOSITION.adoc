@@ -1,0 +1,31 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class VERSIONED_COMPOSITION*
+
+h|*Description*
+2+a|Version-controlled composition abstraction, defined by inheriting
+`VERSIONED_OBJECT<COMPOSITION>`.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_versioned_object[VERSIONED_OBJECT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*is_persistent* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Indicates whether this composition set is persistent; derived from first version.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+
+h|
+2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class ARCHETYPE_SLOT
+
+[tabs]
+======
+Diff::
++
+include::ARCHETYPE_SLOT.adoc[]
+
+Flat::
++
+include::ARCHETYPE_SLOT-flat.adoc[]
+
+Props(diff)::
++
+include::ARCHETYPE_SLOT-properties.adoc[]
+
+Props(flat)::
++
+include::ARCHETYPE_SLOT-properties-flat.adoc[]
+======

@@ -1,0 +1,50 @@
+
+.statement Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class VARIABLE_DECLARATION [[/openehr-doc/latest/languages/bel-gen.html#_class_variable_declaration]] {
+        .. access ..
+        name: String
+        type: EXPR_TYPE_DEF
+}
+
+VARIABLE_DECLARATION -[#gray]up-|> STATEMENT  
+
+
+class STATEMENT_SET [[/openehr-doc/latest/languages/bel-gen.html#_class_statement_set]] {
+        .. access ..
+        statement: List<STATEMENT>
+        name: String
+        execution_result:Boolean
+}
+
+
+class ASSERTION [[/openehr-doc/latest/languages/bel-gen.html#_class_assertion]] {
+        .. access ..
+        tag: String
+        string_expression: String
+        expression: EXPRESSION
+}
+
+ASSERTION -[#gray]up-|> STATEMENT  
+
+
+abstract class STATEMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_statement]] {
+}
+
+
+class ASSIGNMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_assignment]] {
+        .. access ..
+        source: EXPR_VALUE
+}
+
+ASSIGNMENT -[#gray]up-|> STATEMENT  
+
+
+ASSIGNMENT *--> "1 target" VARIABLE_DECLARATION
+
+....

@@ -1,5 +1,5 @@
 
-=== class REFERENCE_RANGE
+=== Class REFERENCE_RANGE
 
 [tabs]
 ======

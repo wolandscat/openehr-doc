@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_CONSTANT*
+
+h|*Description*
+2+a|An immutable, static value-returning element scoped to a class. The `value` is the
+result of the evaluation of the `generator`, which may be as simple as a literal value,
+or may be any expression, including a function call.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_static[BMM_STATIC]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generator*: xref:languages:bmm-gen.adoc#_class_bmm_literal_value[BMM_LITERAL_VALUE]<xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]>
+a|Literal value of the constant.
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class EL_CONSTRAINED
+
+[tabs]
+======
+Diff::
++
+include::EL_CONSTRAINED.adoc[]
+
+Flat::
++
+include::EL_CONSTRAINED-flat.adoc[]
+
+Props(diff)::
++
+include::EL_CONSTRAINED-properties.adoc[]
+
+Props(flat)::
++
+include::EL_CONSTRAINED-properties-flat.adoc[]
+======

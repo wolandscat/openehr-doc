@@ -1,5 +1,5 @@
 
-=== class Interval
+=== Class Interval
 
 [tabs]
 ======

@@ -1,0 +1,41 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EL_VARIABLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name used to represent the reference or other entity.
+
+h| func
+|*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Generated full reference name, based on constituent parts of the entity. Default version
+outputs `name` field.
+
+h| func
+|*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Meta-type of expression entity used in type-checking and evaluation.
+
+Effected in descendants.
+
+h| func
+|*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_validity: Result = eval_type().equal(BMM_MODEL.boolean_type_definition());
+
+a|True if `eval_type` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `type_name()`
+= `Boolean`).
+
+|===

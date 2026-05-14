@@ -1,34 +1,16 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class ITEM_TABLE*
 
-h|*Description*
-2+a|Logical relational database style table data structure, in which columns are named and
-ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row
-Cluster must have an identical number of Elements, each of which in turn must have
-identical names and value types in the corresponding positions in each row.
-
-Some columns may be designated key' columns, containing key data for each row, in the
-manner of relational tables. This allows row-naming, where each row represents a body
-site, a blood antigen etc. All values in a column have the same data type.
-
-Used for representing any data which is logically a table of values, such as blood
-pressure, most protocols, many blood tests etc.
-
-Misuse: Not to be used for time-based data, which should be represented with the temporal
-class `HISTORY`. The table may be empty.
-
-h|*Inherit*
-2+|xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   0..1
-|*rows*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_structures.adoc#_class_cluster[CLUSTER]>
+|*rows*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_structures-gen.adoc#_class_cluster[CLUSTER]>
 a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of
 one row of the table.
 

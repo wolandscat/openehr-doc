@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|builtin  abstract  *class Numeric*
@@ -9,14 +9,14 @@ h|*Description*
 operators defined.
 
 h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "operators"*
 
 h| func
 |*add* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]): xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* +
 
 a|Sum with `other` (commutative). Actual type of result depends on arithmetic balancing
@@ -24,7 +24,7 @@ rules.
 
 h| func
 |*subtract* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]): xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* -
 
 a|Result of subtracting `other`. Actual type of result depends on arithmetic balancing
@@ -32,27 +32,27 @@ rules.
 
 h| func
 |*multiply* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]): xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* *
 
 a|Product by `other`. Actual type of result depends on arithmetic balancing rules.
 
 h| func
 |*divide* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]): xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* /
 
 a|Divide by`other`. Actual type of result depends on arithmetic balancing rules.
 
 h| func
 |*exponent* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric]): xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* ^
 
 a|Expontiation of this by `other`.
 
 h| func
-|*negative* : xref:representation:representation-builtin_types.adoc#_class_numeric[Numeric] +
+|*negative* : xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* -
 
 a|Generate negative of current value.

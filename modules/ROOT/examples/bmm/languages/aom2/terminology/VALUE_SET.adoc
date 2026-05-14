@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class VALUE_SET*
+
+h|*Description*
+2+a|Representation of a flat value set within the archetype terminology.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_terminology_relation[TERMINOLOGY_RELATION]
+
+|===

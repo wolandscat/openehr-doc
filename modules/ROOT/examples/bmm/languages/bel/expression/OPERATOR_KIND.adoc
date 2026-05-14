@@ -1,0 +1,156 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum OPERATOR_KIND*
+
+h|*Description*
+2+a|Enumeration representing operators.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*op_eq* = eq
+a|
+Equality (equals) operator.
+
+
+
+h|
+|*op_ne* = ne
+a|
+Inequality (not-equals) operator.
+
+
+
+h|
+|*op_lt* = lt
+a|
+Less than operator.
+
+
+
+h|
+|*op_le* = le
+a|
+Less than or equals operator.
+
+
+
+h|
+|*op_gt* = gt
+a|
+Greater than operator.
+
+
+
+h|
+|*op_ge* = ge
+a|
+Greater than or equals operator.
+
+
+
+h|
+|*op_matches* = matches
+a|
+Matches operator.
+
+
+
+h|
+|*op_not* = not
+a|
+Logical negation (not) operator.
+
+
+
+h|
+|*op_and* = and
+a|
+Logical conjunction (and) operator.
+
+
+
+h|
+|*op_or* = or
+a|
+Logical inclusive disjunction (or) operator.
+
+
+
+h|
+|*op_xor* = xor
+a|
+Logical exclusive disjunction (exclusive or) operator.
+
+
+
+h|
+|*op_implies* = implies
+a|
+Logical implication (implies) operator.
+
+
+
+h|
+|*op_for_all* = for_all
+a|
+Universal quantification operator.
+
+
+
+h|
+|*op_exists* = exists
+a|
+Existential quantification operator.
+
+
+
+h|
+|*op_plus* = plus
+a|
+Arithmetic addition (plus) operator.
+
+
+
+h|
+|*op_minus* = minus
+a|
+Arithmetic subtraction (minus) operator.
+
+
+
+h|
+|*op_multiply* = multiply
+a|
+Arithmetic multiplication (times) operator.
+
+
+
+h|
+|*op_divide* = divide
+a|
+Arithmetic division (divided-by) operator.
+
+
+
+h|
+|*op_modulo* = modulo
+a|
+Arithmetic modulo operator.
+
+
+
+h|
+|*op_exponent* = exponent
+a|
+Arithmetic exponent (to the power of) operator.
+
+
+
+|===

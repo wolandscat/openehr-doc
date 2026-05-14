@@ -1,0 +1,21 @@
+
+=== Class AUTHORED_ARCHETYPE
+
+[tabs]
+======
+Diff::
++
+include::AUTHORED_ARCHETYPE.adoc[]
+
+Flat::
++
+include::AUTHORED_ARCHETYPE-flat.adoc[]
+
+Props(diff)::
++
+include::AUTHORED_ARCHETYPE-properties.adoc[]
+
+Props(flat)::
++
+include::AUTHORED_ARCHETYPE-properties-flat.adoc[]
+======

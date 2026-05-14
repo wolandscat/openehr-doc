@@ -1,0 +1,21 @@
+
+=== Class ARCHETYPE_HRID
+
+[tabs]
+======
+Diff::
++
+include::ARCHETYPE_HRID.adoc[]
+
+Flat::
++
+include::ARCHETYPE_HRID-flat.adoc[]
+
+Props(diff)::
++
+include::ARCHETYPE_HRID-properties.adoc[]
+
+Props(flat)::
++
+include::ARCHETYPE_HRID-properties-flat.adoc[]
+======

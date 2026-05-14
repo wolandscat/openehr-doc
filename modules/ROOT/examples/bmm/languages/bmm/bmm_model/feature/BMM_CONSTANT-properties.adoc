@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_CONSTANT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generator*: xref:languages:bmm-gen.adoc#_class_bmm_literal_value[BMM_LITERAL_VALUE]<xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]>
+a|Literal value of the constant.
+
+|===

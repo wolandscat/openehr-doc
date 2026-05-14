@@ -1,0 +1,3 @@
+.Infostructure
+* xref:infostructure:resource-gen.adoc[]
+* xref:infostructure:versioning-gen.adoc[]

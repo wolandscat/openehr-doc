@@ -1,0 +1,21 @@
+
+=== Class BMM_INTEGER_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_INTEGER_VALUE.adoc[]
+
+Flat::
++
+include::BMM_INTEGER_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_INTEGER_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_INTEGER_VALUE-properties-flat.adoc[]
+======

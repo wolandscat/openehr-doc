@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class TERMINOLOGY_ID*
@@ -13,6 +13,6 @@ explicitly specified.
 Lexical form: `name [ '(' version ')' ]`.
 
 h|*Inherit*
-2+|xref:representation:representation-identification.adoc#_class_object_id[OBJECT_ID]
+2+|xref:representation:identification-gen.adoc#_class_object_id[OBJECT_ID]
 
 |===

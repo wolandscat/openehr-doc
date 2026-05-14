@@ -1,5 +1,5 @@
 
-=== class CLUSTER
+=== Class CLUSTER
 
 [tabs]
 ======

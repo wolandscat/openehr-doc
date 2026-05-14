@@ -1,0 +1,89 @@
+
+.ehr Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_access]] {
+        .. access ..
+        scheme:String
+}
+
+EHR_ACCESS -[#gray]up-|> LOCATABLE  
+
+
+EHR_ACCESS *--> "0..1 settings" ACCESS_CONTROL_SETTINGS
+
+abstract class ACCESS_CONTROL_SETTINGS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_access_control_settings]] {
+}
+
+
+class VERSIONED_EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_status]] {
+}
+
+VERSIONED_EHR_STATUS -[#gray]up-|> VERSIONED_OBJECT  
+
+
+class VERSIONED_COMPOSITION [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_composition]] {
+        .. access ..
+        is_persistent:Boolean
+}
+
+VERSIONED_COMPOSITION -[#gray]up-|> VERSIONED_OBJECT  
+
+
+class VERSIONED_FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_folder]] {
+}
+
+VERSIONED_FOLDER -[#gray]up-|> VERSIONED_OBJECT  
+
+
+class VERSIONED_EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_access]] {
+}
+
+VERSIONED_EHR_ACCESS -[#gray]up-|> VERSIONED_OBJECT  
+
+
+class EHR [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr]] {
+        .. access ..
+        system_id: HIER_OBJECT_ID
+        ehr_id: HIER_OBJECT_ID
+        contributions: List<OBJECT_REF>
+        ehr_status: OBJECT_REF
+        ehr_access: OBJECT_REF
+        compositions: List<OBJECT_REF>
+        directory: OBJECT_REF
+        time_created: DV_DATE_TIME
+        folders: List<OBJECT_REF>
+        tags: List<OBJECT_REF>
+}
+
+
+class FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_folder]] {
+        .. access ..
+        folders: List<FOLDER>
+        items: List<OBJECT_REF>
+        details: ITEM_STRUCTURE
+}
+
+FOLDER -[#gray]up-|> LOCATABLE  
+
+
+class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_status]] {
+        .. access ..
+        subject: PARTY_SELF
+        is_queryable: Boolean
+        is_modifiable: Boolean
+        other_details: ITEM_STRUCTURE
+}
+
+EHR_STATUS -[#gray]up-|> LOCATABLE  
+
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+}
+class "infostructure.versioning.\nVERSIONED_OBJECT" as VERSIONED_OBJECT  [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_versioned_object]] #FDFDFD {
+}
+
+....

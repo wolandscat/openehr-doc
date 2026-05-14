@@ -1,0 +1,29 @@
+
+.rm_overlay Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+enum VISIBILITY_TYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_visibility_type]] {
+        .. values ..
+        vt_hide = hide
+        vt_show = show
+}
+
+class RM_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_overlay]] {
+        .. access ..
+        rm_visibility: Map<String,RM_ATTRIBUTE_VISIBILITY>
+}
+
+
+class RM_ATTRIBUTE_VISIBILITY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_attribute_visibility]] {
+        .. access ..
+        alias: Terminology_code
+}
+
+
+RM_ATTRIBUTE_VISIBILITY *--> "0..1 visibility" VISIBILITY_TYPE
+
+....

@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ANNOTATIONS_PATH_MAP*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*items*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:infostructure:resource-gen.adoc#_class_annotations_map[ANNOTATIONS_MAP]>
+a|
+
+|===

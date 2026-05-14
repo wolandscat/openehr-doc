@@ -1,41 +1,29 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class OBSERVATION*
 
-h|*Description*
-2+a|Entry subtype for all clinical data in the past or present, i.e. which (by the time it is
-recorded) has already occurred. `OBSERVATION` data is expressed using the class
-`HISTORY<T>`, which guarantees that it is situated in time. `OBSERVATION` is used for all
-notionally objective (i.e. measured in some way) observations of phenomena, and patient-
-reported phenomena, e.g. pain.
-
-Not to be used for recording opinion or future statements of any kind, including
-instructions, intentions, plans etc.
-
-h|*Inherit*
-2+|xref:foundation:foundation-subject_record.adoc#_class_care_entry[CARE_ENTRY]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*data*: xref:representation:representation-data_structures.adoc#_class_history[HISTORY]<xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]>
+|*data*: xref:representation:data_structures-gen.adoc#_class_history[HISTORY]<xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]>
 a|The data of this observation, in the form of a history of values which may be of any
 complexity.
 
 h|prop +
   0..1
-|*state*: xref:representation:representation-data_structures.adoc#_class_history[HISTORY]<xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]>
+|*state*: xref:representation:data_structures-gen.adoc#_class_history[HISTORY]<xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]>
 a|Optional recording of the state of subject of this observation during the observation
 process, in the form of a separate history of values which may be of any complexity. State
 may also be recorded within the History of the data attribute.
 
 h|prop +
   0..1
-|*protocol*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+|*protocol*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Description of the method (i.e. how) the information in this entry was arrived at. For
 `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`,
 how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction.
@@ -45,12 +33,12 @@ larger care process.
 
 h|prop +
   0..1
-|*guideline_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+|*guideline_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Optional external identifier of guideline creating this Entry if relevant.
 
 h|prop +
   
-|*subject*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*subject*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Id of human subject of this `ENTRY`, e.g.:
 
 * organ donor
@@ -60,7 +48,7 @@ a|Id of human subject of this `ENTRY`, e.g.:
 
 h|prop +
   0..1
-|*provider*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*provider*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Optional identification of provider of the information in this `ENTRY`, which might be:
 
 * the patient
@@ -73,29 +61,29 @@ composer and other participants are assumed.
 
 h|prop +
   
-|*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Mandatory indicator of the localised language in which this Entry is written. Coded from
 openEHR Code Set languages .
 
 h|prop +
   
-|*encoding*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*encoding*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Name of character set in which text values in this Entry are encoded. Coded from openEHR
 Code Set character sets.
 
 h|prop +
   0..1
-|*other_participations*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_participation[PARTICIPATION]>
+|*other_participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:physical_entity-gen.adoc#_class_participation[PARTICIPATION]>
 a|Other participations at `ENTRY` level.
 
 h|prop +
   0..1
-|*workflow_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+|*workflow_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of externally held workflow engine data for this workflow execution, for this
 subject of care.
 
 h| func
-|*subject_is_self* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*subject_is_self* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     type_validity: Result ⇒ subject.generating_type = "PARTY_SELF";
@@ -105,30 +93,30 @@ attribute is of type PARTY_SELF.
 
 h|prop +
   
-|*name*: xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+|*name*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
 a clinical application or batch process to name this EHR construct: its retention in the
 EHR faithfully preserves the original label by which this entry was known to end users.
 
 h|prop +
   0..1
-|*links*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_link[LINK]>
+|*links*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_marking-gen.adoc#_class_link[LINK]>
 a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
 such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
 
 h|prop +
   0..1
-|*feeder_audit*: xref:representation:representation-data_marking.adoc#_class_feeder_audit[FEEDER_AUDIT]
+|*feeder_audit*: xref:representation:data_marking-gen.adoc#_class_feeder_audit[FEEDER_AUDIT]
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
 
 h| func
-|*concept* : xref:representation:representation-data_types.adoc#_class_dv_text[DV_TEXT]
+|*concept* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the
 root node)
 
 h| func
-|*is_archetype_root* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_archetype_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of an archetyped structure.
 
 h|
@@ -136,12 +124,12 @@ h|
 
 h|prop +
   0..1
-|*uid*: xref:representation:representation-identification.adoc#_class_uid_based_id[UID_BASED_ID]
+|*uid*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 a|Optional globally unique object identifier for root points of archetyped structures.
 
 h|prop +
   
-|*archetype_node_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*archetype_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Design-time archetype identifier of this node taken from its generating archetype; used to
 build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
 a 'standardised' name for this node to be generated, by referring to the generating
@@ -152,16 +140,16 @@ the `archetype_id` found in the `archetype_details` object.
 
 h|prop +
   0..1
-|*archetype_details*: xref:representation:representation-data_marking.adoc#_class_archetyped[ARCHETYPED]
+|*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
 h| func
-|*parent* : xref:representation:representation-data_marking.adoc#_class_pathable[PATHABLE]
+|*parent* : xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 a|Parent of this node in a compositional hierarchy.
 
 h| func
 |*item_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_any[Any] +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_any[Any] +
  +
   *pre_cond* +
     path_valid: path_unique(a_path);
@@ -171,12 +159,12 @@ resolve to a single item.
 
 h| func
 |*items_at_path* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_any[Any]>
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|List of items corresponding to a non-unique path.
 
 h| func
 |*path_exists* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
     path_valid: ¬ a_path.is_empty;
@@ -185,12 +173,12 @@ a|True if the path exists in the data with respect to the current item.
 
 h| func
 |*path_unique* ( +
-a_path: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the path corresponds to a single item in the data.
 
 h| func
 |*path_of_item* ( +
-a_loc: xref:representation:representation-data_marking.adoc#_class_pathable[PATHABLE]): xref:representation:representation-builtin_types.adoc#_class_string[String]
+a_loc: xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]): xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The path to an item relative to the root of this archetyped structure.
 
 |===

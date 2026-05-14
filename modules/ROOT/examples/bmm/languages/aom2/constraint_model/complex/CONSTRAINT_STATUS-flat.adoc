@@ -1,0 +1,133 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum CONSTRAINT_STATUS*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*required* = 0
+a|
+Data item is required to formally satisfy constraint. Enumeration value = 0.
+
+
+
+h|
+|*extensible* = 1
+a|
+Data item value should satisfy constraint if it covers the meaning; otherwise another
+code may be used. Enumeration value = 1.
+
+
+
+h|
+|*preferred* = 2
+a|
+Data item value is by preference one of the codes defined by constraint, but for local
+reasons may be another code. Enumeration value = 2.
+
+
+
+h|
+|*example* = 3
+a|
+The constraint code or value-set is considered purely as an example, and the data
+item may have any value. Enumeration value = 3.
+
+
+
+h|
+2+^h|*Feature Group "operators"*
+
+h| func
+|*add* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
+  *alias* +
+
+a|Integer addition.
+
+h| func
+|*subtract* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
+  *alias* -
+
+a|Integer subtraction.
+
+h| func
+|*multiply* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
+  *alias* *
+
+a|Integer multiplication.
+
+h| func
+|*divide* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
+  *alias* /
+
+a|Integer division.
+
+h| func
+|*exponent* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
+  *alias* ^
+
+a|Integer exponentiation.
+
+h| func
+|*modulo* ( +
+mod: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
+  *alias* mod
+
+a|Return self modulo other.
+
+h| func
+|*less_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <
+
+a|Returns True if current Integer is less than `other`.
+
+h| func
+|*negative* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
+  *alias* -
+
+a|Generate negative of current Integer value.
+
+h| func
+|*less_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
+
+a|True if current object less than or equal to `other`.
+
+h| func
+|*greater_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
+
+a|True if current object greater than `other`.
+
+h| func
+|*greater_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
+
+a|True if current object greater than or equal to `other`.
+
+|===

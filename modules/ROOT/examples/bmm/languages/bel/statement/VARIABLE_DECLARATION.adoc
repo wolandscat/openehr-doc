@@ -1,0 +1,26 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class VARIABLE_DECLARATION*
+
+h|*Description*
+2+a|Meta-type for the declaration of a named variable that can be used in an expression.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_statement[STATEMENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of the variable.
+
+h|prop +
+  
+|*type*: xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
+a|Primitive type of the variable, enabling its use to be type-checked in expressions.
+
+|===

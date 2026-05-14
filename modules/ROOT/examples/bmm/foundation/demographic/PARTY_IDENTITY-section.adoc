@@ -1,5 +1,5 @@
 
-=== class PARTY_IDENTITY
+=== Class PARTY_IDENTITY
 
 [tabs]
 ======

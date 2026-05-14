@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_MANIFEST
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_MANIFEST.adoc[]
+
+Flat::
++
+include::EXTRACT_MANIFEST-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_MANIFEST-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_MANIFEST-properties-flat.adoc[]
+======

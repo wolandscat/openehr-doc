@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_PARTICIPATION
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_PARTICIPATION.adoc[]
+
+Flat::
++
+include::EXTRACT_PARTICIPATION-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_PARTICIPATION-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_PARTICIPATION-properties-flat.adoc[]
+======

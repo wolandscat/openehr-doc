@@ -1,5 +1,5 @@
 
-=== class AUDIT_DETAILS
+=== Class AUDIT_DETAILS
 
 [tabs]
 ======

@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ENUMERATION_INTEGER*
+
+h|*Description*
+2+a|Integer-based enumeration meta-type.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_enumeration[BMM_ENUMERATION]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*item_values*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_integer_value[BMM_INTEGER_VALUE]>
+a|Optional list of specific values. Must be 1:1 with `item_names` list.
+
+|===

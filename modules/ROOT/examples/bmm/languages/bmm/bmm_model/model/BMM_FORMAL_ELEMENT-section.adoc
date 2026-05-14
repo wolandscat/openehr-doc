@@ -1,0 +1,21 @@
+
+=== Class BMM_FORMAL_ELEMENT
+
+[tabs]
+======
+Diff::
++
+include::BMM_FORMAL_ELEMENT.adoc[]
+
+Flat::
++
+include::BMM_FORMAL_ELEMENT-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_FORMAL_ELEMENT-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_FORMAL_ELEMENT-properties-flat.adoc[]
+======

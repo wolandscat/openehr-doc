@@ -1,0 +1,145 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_FUNCTION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*operator_definition*: xref:languages:bmm-gen.adoc#_class_bmm_operator[BMM_OPERATOR]
+a|Optional details enabling a function to be represented as an operator in a syntactic
+representation.
+
+h|prop +
+  
+|*result*: xref:languages:bmm-gen.adoc#_class_bmm_result[BMM_RESULT]
+a|Automatically created Result variable, usable in body and post-condition.
+
+h|prop +
+  0..1
+|*parameters*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_parameter[BMM_PARAMETER]>
+a|Formal parameters of the routine.
+
+h|prop +
+  0..1
+|*pre_conditions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_assertion[BMM_ASSERTION]>
+a|Boolean conditions that must evaluate to True for the routine to execute correctly, May be
+used to generate exceptions if included in run-time build.
+
+A False pre-condition implies an error in the passed parameters.
+
+h|prop +
+  0..1
+|*post_conditions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_assertion[BMM_ASSERTION]>
+a|Boolean conditions that will evaluate to True if the routine executed correctly, May be
+used to generate exceptions if included in run-time build.
+
+A False post-condition implies an error (i.e. bug) in routine code.
+
+h|prop +
+  0..1
+|*definition*: xref:languages:bmm-gen.adoc#_class_bmm_routine_definition[BMM_ROUTINE_DEFINITION]
+a|Body of a routine, i.e. executable program.
+
+h| func
+|*arity* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Return number of arguments of this routine.
+
+h|prop +
+  0..1
+|*is_synthesised_generic*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this feature was synthesised due to generic substitution in an inherited type, or
+further constraining of a formal generic parameter.
+
+h|prop +
+  0..1
+|*feature_extensions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_extension[BMM_FEATURE_EXTENSION]>
+a|Extensions to feature-level meta-types.
+
+h|prop +
+  
+|*group*: xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]
+a|Group containing this feature.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+a|Model element within which an element is declared.
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Declared or inferred static type of the entity.
+
+h|prop +
+  
+|*is_nullable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this element can be null (Void) at execution time. May be interpreted as
+optionality in subtypes..
+
+h| func
+|*signature* : xref:languages:bmm-gen.adoc#_class_bmm_signature[BMM_SIGNATURE]
+a|Formal signature of this element, in the form:
+
+`name [arg1_name: T_arg1, ...][:T_value]`
+
+Specific implementations in descendants.
+
+h| func
+|*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = type().equal(BMM_MODEL.boolean_type_definition());
+
+a|True if `type` is notionally Boolean (i.e. a `BMM_SIMPLE_TYPE` with `type_name()` =
+`'Boolean'`).
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h| func
+|*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = (scope = self);
+
+a|True if this model element is the root of a model structure hierarchy.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|operator_validity: 1 ⇒ 2;
+
+h|
+2+a|inv_result_type: type = result.type;
+
+
+|===

@@ -1,0 +1,167 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_DEFINITIONS*
+
+h|*Description*
+2+a|Definitions used by all BMM packages.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "definitions"*
+
+h|const +
+  
+|*Bmm_internal_version*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "2.3"
+a|Current internal version of BMM meta-model.
+
+h|const +
+  
+|*Schema_name_delimiter*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "::"
+a|Delimiter used to separate schema id from package path in a fully qualified path.
+
+h|const +
+  
+|*Package_name_delimiter*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "."
+a|Delimiter used to separate package names in a package path.
+
+h|const +
+  
+|*Bmm_schema_file_extension*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  ".bmm"
+a|Extension used for BMM files.
+
+h|const +
+  
+|*Type_delimiter*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  ':'
+a|Appears between a name and a type in a declaration or type signature.
+
+h|const +
+  
+|*Generic_left_delimiter*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '<'
+a|Left delimiter for generic class and generic type names, as used in List<T>.
+
+h|const +
+  
+|*Generic_right_delimiter*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '>'
+a|Right delimiter for generic class and generic type names, as used in List<T>.
+
+h|const +
+  
+|*Generic_separator*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  ','
+a|Separator used in Generic types.
+
+h|const +
+  
+|*Generic_constraint_delimiter*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  ':'
+a|Delimiter between formal type parameter and constraint type, as used in Sortable<T: Ordered>.
+
+h|const +
+  
+|*Tuple_left_delim*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '['
+a|Left delimiter of a Tuple type and also instance.
+
+h|const +
+  
+|*Tuple_right_delim*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  ']'
+a|Right delimiter of a Tuple type and also instance.
+
+h|const +
+  
+|*Tuple_separator*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  ','
+a|Separator used in Tuple types and instances.
+
+h|const +
+  
+|*Constraint_left_delim*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '{'
+a|Left delimiter used in serial form of instance constrained enumeration.
+
+h|const +
+  
+|*Constraint_right_delim*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '}'
+a|Right delimiter used in serial form of instance constrained enumeration.
+
+h|const +
+  
+|*Metadata_bmm_version*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "bmm_version"
+a|Attribute name of logical attribute 'bmm_version' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_schema_name*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "schema_name"
+a|Attribute name of logical attribute 'schema_name' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_rm_publisher*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "rm_publisher"
+a|Attribute name of logical attribute 'rm_publisher' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_rm_release*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "rm_release"
+a|Attribute name of logical attribute 'rm_release' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_schema_revision*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "schema_revision"
+a|Attribute name of logical attribute 'schema_revision' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_schema_lifecycle_state*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "schema_lifecycle_state"
+a|Attribute name of logical attribute 'schema_lifecycle_state' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_schema_description*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "schema_description"
+a|Attribute name of logical attribute 'schema_description' in .bmm schema file.
+
+h|const +
+  
+|*Metadata_schema_path*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "schema_path"
+a|Path of schema file.
+
+h|singleton +
+  
+|*Any_class*: xref:languages:bmm-gen.adoc#_class_bmm_simple_class[BMM_SIMPLE_CLASS]
+a|Built-in type definition corresponding to the top `Any` type.
+
+h|
+2+^h|*Feature Group "factory"*
+
+h| func
+|*create_schema_id* ( +
+a_model_publisher: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+a_schema_name: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+a_model_release: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Create schema id, formed from:
+
+`a_model_publisher '-' a_schema_name '-' a_model_release`
+
+e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
+
+|===

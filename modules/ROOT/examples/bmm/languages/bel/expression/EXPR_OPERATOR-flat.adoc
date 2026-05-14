@@ -1,0 +1,39 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXPR_OPERATOR*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*precedence_overridden*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the natural precedence of operators is overridden in the expression represented by
+this node of the expression tree. If True, parentheses should be introduced around the
+totality of the syntax expression corresponding to this operator node and its operands.
+
+h|prop +
+  
+|*operator*: xref:languages:bel-gen.adoc#_class_operator_kind[OPERATOR_KIND]
+a|Operator definition.
+
+h|prop +
+  0..1
+|*symbol*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|The symbol actually used in the rule, or intended to be used for serialisation. Must be a
+member of `operator_def.symbols`.
+
+h| func
+|*type* : xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
+a|The primitive type of this node, which must be determined by redefinitions in concrete
+classes.
+
+h| func
+|*value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|The computed value of this node as a result of the nodes below it, for operator nodes, or
+else statically set or otherwise derived values.
+
+|===

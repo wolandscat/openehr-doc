@@ -1,0 +1,38 @@
+
+.message Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class MESSAGE_CONTENT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_message_content]] {
+}
+
+MESSAGE_CONTENT -[#gray]up-|> LOCATABLE  
+
+
+class ADDRESSED_MESSAGE [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_addressed_message]] {
+        .. access ..
+        sender: String
+        sender_reference: String
+        addressees: List<String>
+        urgency: Integer
+}
+
+
+ADDRESSED_MESSAGE *--> "1 message" MESSAGE
+
+class MESSAGE [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_message]] {
+        .. access ..
+        author: PARTY_PROXY
+        audit: AUDIT_DETAILS
+        signature: String
+}
+
+
+MESSAGE *--> "1 content" MESSAGE_CONTENT
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+}
+
+....

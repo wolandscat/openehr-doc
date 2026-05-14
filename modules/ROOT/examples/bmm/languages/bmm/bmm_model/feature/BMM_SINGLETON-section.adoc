@@ -1,0 +1,21 @@
+
+=== Class BMM_SINGLETON
+
+[tabs]
+======
+Diff::
++
+include::BMM_SINGLETON.adoc[]
+
+Flat::
++
+include::BMM_SINGLETON-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_SINGLETON-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_SINGLETON-properties-flat.adoc[]
+======

@@ -1,5 +1,5 @@
 
-=== class ADDRESS
+=== Class ADDRESS
 
 [tabs]
 ======

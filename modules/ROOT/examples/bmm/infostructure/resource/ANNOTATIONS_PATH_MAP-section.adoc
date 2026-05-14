@@ -1,0 +1,21 @@
+
+=== Class ANNOTATIONS_PATH_MAP
+
+[tabs]
+======
+Diff::
++
+include::ANNOTATIONS_PATH_MAP.adoc[]
+
+Flat::
++
+include::ANNOTATIONS_PATH_MAP-flat.adoc[]
+
+Props(diff)::
++
+include::ANNOTATIONS_PATH_MAP-properties.adoc[]
+
+Props(flat)::
++
+include::ANNOTATIONS_PATH_MAP-properties-flat.adoc[]
+======

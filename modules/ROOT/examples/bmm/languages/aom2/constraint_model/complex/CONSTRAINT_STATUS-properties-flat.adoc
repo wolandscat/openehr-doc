@@ -1,0 +1,42 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum CONSTRAINT_STATUS*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*required* = 0
+a|
+Data item is required to formally satisfy constraint. Enumeration value = 0.
+
+
+
+h|
+|*extensible* = 1
+a|
+Data item value should satisfy constraint if it covers the meaning; otherwise another
+code may be used. Enumeration value = 1.
+
+
+
+h|
+|*preferred* = 2
+a|
+Data item value is by preference one of the codes defined by constraint, but for local
+reasons may be another code. Enumeration value = 2.
+
+
+
+h|
+|*example* = 3
+a|
+The constraint code or value-set is considered purely as an example, and the data
+item may have any value. Enumeration value = 3.
+
+
+
+|===

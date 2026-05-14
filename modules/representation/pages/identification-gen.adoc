@@ -1,0 +1,36 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Identification Specification
+
+
+== Identification Package
+
+=== Overview 
+
+include::ROOT:example$bmm/representation//identification/identification-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/representation/identification//TEMPLATE_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//TERMINOLOGY_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//INTERNET_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//GENERIC_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//ISO_OID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//PARTY_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//OBJECT_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//OBJECT_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//LOCATABLE_REF-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//VERSION_TREE_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//OBJECT_VERSION_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//UUID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//UID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//UID_BASED_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//HIER_OBJECT_ID-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/identification//ARCHETYPE_ID-section.adoc[leveloffset=+1]
+
+
+
+
+

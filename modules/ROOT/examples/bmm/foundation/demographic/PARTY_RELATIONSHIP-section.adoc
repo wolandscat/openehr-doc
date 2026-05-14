@@ -1,5 +1,5 @@
 
-=== class PARTY_RELATIONSHIP
+=== Class PARTY_RELATIONSHIP
 
 [tabs]
 ======

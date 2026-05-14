@@ -1,0 +1,296 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_COMPLEX_OBJECT_PROXY*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*target_path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to an object node using archetype path notation.
+
+h| func
+|*use_target_occurrences* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    valid_result: Result = (¬ ∃ occurrences);
+
+a|True if target occurrences are to be used as the value of occurrences in this object; by
+the time of runtime use, the target occurrences value has to be set into this object.
+
+h| func
+|*occurrences_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node occurrences conforms to `other.occurrences`; `other` is assumed to
+be in a flat archetype.
+
+If `other` is a `C_COMPLEX_OBJECT`, then always `True`, since if occurrences defined on
+proxy node, it is an override of the occurrences on the target, and it doesn't have to
+conform to anything except the containing attribute's cardinality. However, if `other`
+is also a `C_COMPLEX_OBJECT` then the override is of another use_node, and normal
+occurrences apply
+
+.Parameters + [horizontal] `other`:: `C_OBJECT` from a flat parent archetype.
+
+h|prop +
+  
+|*rm_type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference model type that this node corresponds to.
+
+h|prop +
+  0..1
+|*occurrences*: xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Occurrences of this object node in the data, under the owning attribute. Upper limit can
+only be greater than 1 if owning attribute has a cardinality of more than 1. Only set if
+it overrides the parent archetype in the case of specialised archetypes, or else the
+occurrences inferred from the underlying reference model existence and/or cardinality of
+the containing attribute.
+
+h|prop +
+  
+|*node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a
+`node_id`; for nodes under a container `C_ATTRIBUTE`. For at-coded archetypes
+`node_id` must be an at-code defined in the archetype terminology and for valid
+structures all node ids are at-codes. For id-coded archetypes `node_id` must be an id-
+code defined in the archetype terminology and for valid structures all node ids are id-
+codes.
+
+For `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the
+special value `Primitive_node_id`; otherwise it will have the node id read during parsing.
+
+h|prop +
+  0..1
+|*alternative_ids*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Additional identifiers of this node. openEHR archetypes can carry original ALD2 id-codes
+in this attribute and it can also carry human readable codes for future use. Alternative
+ids must be unique within the archetype.
+
+h|prop +
+  0..1
+|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node and by implication all sub-nodes are deprecated for use.
+
+h|prop +
+  0..1
+|*sibling_order*: xref:languages:aom2-gen.adoc#_class_sibling_order[SIBLING_ORDER]
+a|Optional indicator of order of this node with respect to another sibling. Only meaningful
+in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
+True`.
+
+h| func
+|*specialisation_depth* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Level of specialisation of this archetype node, based on its `node_id`. The value 0
+corresponds to non-specialised, 1 to first-level specialisation and so on. The level is
+the same as the number of '.' characters in the node_id code. If `node_id` is not set,
+the return value is -1, signifying that the specialisation level should be determined from
+the nearest parent `C_OBJECT` node having a node_id.
+
+h| func
+|*effective_occurrences* ( +
+rm_prop_mult: (String, String) -> Multiplicity_interval): xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Compute effective occurrences, where no local occurrences constraint set. If the owning
+`C_ATTRIBUTE._cardinality` is set, use its upper value, else use RM multiplicity of the
+owning attribute.
+
+If local `occurrences` not set, always assume 0 as the lower bound.
+
+h| func
+|*c_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT], +
+rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+same as other. Typically used during validation of specialised archetype nodes.
+
+Parameters
+  `rmcc`:: Reference Model conformance checker agent (lambda).
+
+h| func
+|*c_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node contain no further redefinitions with respect
+to the node `other`, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
+
+Typically used to test if an inherited node locally contains any constraints.
+
+h| func
+|*node_id_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = codes_conformant(node_id, other.node_id);
+
+a|True if this node id conforms to `other.node_id`, which includes the ids being
+identical; `other` is assumed to be in a flat archetype.
+
+h| func
+|*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = ∃ occurrences ∧ occurrences.is_prohibited;
+
+a|True if this `C_OBJECT` node is prohibited, i.e. if its `occurrences` is `0..0`.
+
+h|prop +
+  0..1
+|*parent*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
+a|Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
+archetype definition.
+
+h|prop +
+  0..1
+|*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
+a|
+
+h| func
+|*has_path* ( +
+a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the relative path `a_path` exists at this node.
+
+h| func
+|*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Path of this node relative to root of archetype.
+
+h| func
+|*is_second_order_constrained* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    valid_result: ∃ soc_parent ∨ (∃ parent ∧ parent.is_second_order_constrained);
+
+a|True if there is a second order constraint such as a tuple constraint on this node.
+
+h| func
+|*is_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node is the root of the tree.
+
+h| func
+|*is_leaf* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node is a terminal node in the tree structure, i.e. having no child nodes.
+
+h| func
+|*codes_conformant* ( +
+a_child_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+a_parent_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_child_code` conforms to `a_parent_code` in the sense of specialisation,
+i.e. is `a_child_code` the same as or more specialised than `a_parent_code`?
+
+h| func
+|*is_adl_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = is_at_code(a_code) ∨ is_id_code(a_code) ∨ is_value_code(a_code) ∨ is_value_set_code(a_code);
+
+a|True if `a_code` is any kind of ADL archetype local code.
+
+h| func
+|*is_at_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = a_code.starts_with(At_code_leader);
+
+a|True if `a_code` is an 'at' code.
+
+h| func
+|*is_id_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = a_code.starts_with(Id_code_leader);
+
+a|True if `a_code` is an 'id' code.
+
+h| func
+|*is_value_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = a_code.starts_with(Value_code_leader);
+
+a|True if `a_code` is an 'at' code representing a single terminology item.
+
+h| func
+|*is_value_set_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = a_code.starts_with(Value_set_code_leader);
+
+a|True if `a_code` is an 'ac' code, i.e. a code referring to a terminology value set.
+
+h| func
+|*is_redefined_code* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|A code has been specialised if there is a non-zero code index anywhere above the last
+index e.g.
+
+* `at0.0.1` -> False
+* `at1.0.1` -> True
+
+h| func
+|*code_exists_at_level* ( +
+a_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+a_level: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Is `a_code` valid at level `a_level` or less, i.e. if we remove its trailing
+specialised part corresponding to specialisation below `a_level`, and then any trailing
+'.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a
+real node from `a_level` or higher.
+
+h|
+2+^h|*Feature Group "values"*
+
+h|const +
+  
+|*At_code_leader*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "at"
+a|String leader of 'identifier' codes used to identify at-coded archetype nodes.
+
+h|const +
+  
+|*Id_code_leader*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "id"
+a|String leader of 'identifier' codes used to identify id-coded archetype nodes.
+
+h|const +
+  
+|*Value_code_leader*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "at"
+a|String leader of 'value' codes used to identify code values and value set members.
+
+h|const +
+  
+|*Value_set_code_leader*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "ac"
+a|String leader of 'value set' codes used to identify value sets.
+
+h|const +
+  
+|*Specialisation_separator*: xref:representation:builtin_types-gen.adoc#_class_character[Character] = +
+  '.'
+a|Character used to separate numeric parts of codes belonging to different specialisation
+levels.
+
+h|const +
+  
+|*Code_regex_pattern*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  """(0\|[1-9][0-9]*)(\.(0\|[1-9][0-9]*))*"""
+a|Regex defining the legal numeric part of any archetype code.
+
+h|const +
+  
+|*Root_code_regex_pattern*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  """^id(\.1)*$"""
+a|Regex pattern of the root code of any archetype.
+
+h|const +
+  
+|*Primitive_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String] = +
+  "id9999"
+a|Code id used for C_PRIMITIVE_OBJECT nodes on creation.
+
+|===

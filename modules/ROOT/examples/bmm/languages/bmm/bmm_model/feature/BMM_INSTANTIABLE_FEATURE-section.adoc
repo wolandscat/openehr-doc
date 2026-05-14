@@ -1,0 +1,21 @@
+
+=== Class BMM_INSTANTIABLE_FEATURE
+
+[tabs]
+======
+Diff::
++
+include::BMM_INSTANTIABLE_FEATURE.adoc[]
+
+Flat::
++
+include::BMM_INSTANTIABLE_FEATURE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_INSTANTIABLE_FEATURE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_INSTANTIABLE_FEATURE-properties-flat.adoc[]
+======

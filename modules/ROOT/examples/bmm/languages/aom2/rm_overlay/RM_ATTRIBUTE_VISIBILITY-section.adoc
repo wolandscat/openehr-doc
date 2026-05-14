@@ -1,0 +1,21 @@
+
+=== Class RM_ATTRIBUTE_VISIBILITY
+
+[tabs]
+======
+Diff::
++
+include::RM_ATTRIBUTE_VISIBILITY.adoc[]
+
+Flat::
++
+include::RM_ATTRIBUTE_VISIBILITY-flat.adoc[]
+
+Props(diff)::
++
+include::RM_ATTRIBUTE_VISIBILITY-properties.adoc[]
+
+Props(flat)::
++
+include::RM_ATTRIBUTE_VISIBILITY-properties-flat.adoc[]
+======

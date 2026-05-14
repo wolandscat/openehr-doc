@@ -1,5 +1,5 @@
 
-=== enum MATH_FUNCTION_KIND
+=== Enum MATH_FUNCTION_KIND
 
 [tabs]
 ======

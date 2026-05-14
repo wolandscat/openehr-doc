@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class DV_IDENTIFIER*
@@ -17,30 +17,30 @@ to refer to information items; the types OBJECT_ID and OBJECT_REF and subtypes a
 for this purpose.
 
 h|*Inherit*
-2+|xref:representation:representation-data_types.adoc#_class_data_value[DATA_VALUE]
+2+|xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The identifier value. Often structured, according to the definition of the issuing
 authority's rules.
 
 h|prop +
   0..1
-|*issuer*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*issuer*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional authority which issues the kind of id used in the id field of this object.
 
 h|prop +
   0..1
-|*assigner*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*assigner*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional organisation that assigned the id to the item being identified.
 
 h|prop +
   0..1
-|*type*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*type*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional identifier type, such as prescription , or Social Security Number . One day a
 controlled vocabulary might be possible for this.
 

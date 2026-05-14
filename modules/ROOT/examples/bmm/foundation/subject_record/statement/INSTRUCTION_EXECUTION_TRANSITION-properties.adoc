@@ -1,140 +1,134 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *enum INSTRUCTION_EXECUTION_TRANSITION*
 
-h|*Description*
-2+a|Enumeration of transitions in the Instruction State Machine (ISM) that drive
-changes between instruction execution states.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*
 
 h|
-|*ism_t_initiate* = "initiate"
+|*ism_t_initiate* = initiate
 a|
 Transition to initiate an instruction.
 
 
 
 h|
-|*ism_t_start* = "start"
+|*ism_t_start* = start
 a|
 Transition to start execution.
 
 
 
 h|
-|*ism_t_schedule* = "schedule"
+|*ism_t_schedule* = schedule
 a|
 Transition to schedule the instruction.
 
 
 
 h|
-|*ism_t_plan_step* = "plan_step"
+|*ism_t_plan_step* = plan_step
 a|
 Transition representing a planned step.
 
 
 
 h|
-|*ism_t_cancel* = "cancel"
+|*ism_t_cancel* = cancel
 a|
 Transition to cancel the instruction.
 
 
 
 h|
-|*ism_t_do* = "do"
+|*ism_t_do* = do
 a|
 Transition to perform an active step.
 
 
 
 h|
-|*ism_t_resume* = "resume"
+|*ism_t_resume* = resume
 a|
 Transition to resume a suspended instruction.
 
 
 
 h|
-|*ism_t_suspend* = "suspend"
+|*ism_t_suspend* = suspend
 a|
 Transition to suspend an active instruction.
 
 
 
 h|
-|*ism_t_suspended_step* = "suspended_step"
+|*ism_t_suspended_step* = suspended_step
 a|
 Transition representing a step in suspended state.
 
 
 
 h|
-|*ism_t_active_step* = "active_step"
+|*ism_t_active_step* = active_step
 a|
 Transition representing a step in active state.
 
 
 
 h|
-|*ism_t_scheduled_step* = "scheduled_step"
+|*ism_t_scheduled_step* = scheduled_step
 a|
 Transition representing a step in scheduled state.
 
 
 
 h|
-|*ism_t_postponed_step* = "postponed_step"
+|*ism_t_postponed_step* = postponed_step
 a|
 Transition representing a step in postponed state.
 
 
 
 h|
-|*ism_t_abort* = "abort"
+|*ism_t_abort* = abort
 a|
 Transition to abort the instruction.
 
 
 
 h|
-|*ism_t_restore* = "restore"
+|*ism_t_restore* = restore
 a|
 Transition to restore a previously suspended instruction.
 
 
 
 h|
-|*ism_t_postpone* = "postpone"
+|*ism_t_postpone* = postpone
 a|
 Transition to postpone an instruction.
 
 
 
 h|
-|*ism_t_time_out* = "time_out"
+|*ism_t_time_out* = time_out
 a|
 Transition triggered by expiry of a time limit.
 
 
 
 h|
-|*ism_t_notify_completed* = "notify_completed"
+|*ism_t_notify_completed* = notify_completed
 a|
 Transition notifying that the instruction completed.
 
 
 
 h|
-|*ism_t_notify_aborted* = "notify_aborted"
+|*ism_t_notify_aborted* = notify_aborted
 a|
 Transition notifying that the instruction was aborted.
 

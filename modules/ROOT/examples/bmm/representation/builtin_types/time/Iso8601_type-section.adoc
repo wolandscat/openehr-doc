@@ -1,5 +1,5 @@
 
-=== class Iso8601_type
+=== Class Iso8601_type
 
 [tabs]
 ======

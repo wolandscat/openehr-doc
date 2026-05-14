@@ -1,0 +1,21 @@
+
+=== Class C_INTEGER
+
+[tabs]
+======
+Diff::
++
+include::C_INTEGER.adoc[]
+
+Flat::
++
+include::C_INTEGER-flat.adoc[]
+
+Props(diff)::
++
+include::C_INTEGER-properties.adoc[]
+
+Props(flat)::
++
+include::C_INTEGER-properties-flat.adoc[]
+======

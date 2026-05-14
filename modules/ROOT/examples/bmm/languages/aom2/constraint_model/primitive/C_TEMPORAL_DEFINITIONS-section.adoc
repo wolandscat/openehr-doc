@@ -1,0 +1,21 @@
+
+=== Class C_TEMPORAL_DEFINITIONS
+
+[tabs]
+======
+Diff::
++
+include::C_TEMPORAL_DEFINITIONS.adoc[]
+
+Flat::
++
+include::C_TEMPORAL_DEFINITIONS-flat.adoc[]
+
+Props(diff)::
++
+include::C_TEMPORAL_DEFINITIONS-properties.adoc[]
+
+Props(flat)::
++
+include::C_TEMPORAL_DEFINITIONS-properties-flat.adoc[]
+======

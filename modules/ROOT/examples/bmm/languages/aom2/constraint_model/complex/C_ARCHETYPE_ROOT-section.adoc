@@ -1,0 +1,21 @@
+
+=== Class C_ARCHETYPE_ROOT
+
+[tabs]
+======
+Diff::
++
+include::C_ARCHETYPE_ROOT.adoc[]
+
+Flat::
++
+include::C_ARCHETYPE_ROOT-flat.adoc[]
+
+Props(diff)::
++
+include::C_ARCHETYPE_ROOT-properties.adoc[]
+
+Props(flat)::
++
+include::C_ARCHETYPE_ROOT-properties-flat.adoc[]
+======

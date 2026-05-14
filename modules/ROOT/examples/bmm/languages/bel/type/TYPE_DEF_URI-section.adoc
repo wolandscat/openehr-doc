@@ -1,0 +1,21 @@
+
+=== Class TYPE_DEF_URI
+
+[tabs]
+======
+Diff::
++
+include::TYPE_DEF_URI.adoc[]
+
+Flat::
++
+include::TYPE_DEF_URI-flat.adoc[]
+
+Props(diff)::
++
+include::TYPE_DEF_URI-properties.adoc[]
+
+Props(flat)::
++
+include::TYPE_DEF_URI-properties-flat.adoc[]
+======

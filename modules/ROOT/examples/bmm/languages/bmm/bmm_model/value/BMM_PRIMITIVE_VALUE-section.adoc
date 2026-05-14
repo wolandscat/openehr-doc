@@ -1,0 +1,21 @@
+
+=== Class BMM_PRIMITIVE_VALUE
+
+[tabs]
+======
+Diff::
++
+include::BMM_PRIMITIVE_VALUE.adoc[]
+
+Flat::
++
+include::BMM_PRIMITIVE_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_PRIMITIVE_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_PRIMITIVE_VALUE-properties-flat.adoc[]
+======

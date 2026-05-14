@@ -1,0 +1,21 @@
+
+=== Class EL_TUPLE
+
+[tabs]
+======
+Diff::
++
+include::EL_TUPLE.adoc[]
+
+Flat::
++
+include::EL_TUPLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_TUPLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_TUPLE-properties-flat.adoc[]
+======

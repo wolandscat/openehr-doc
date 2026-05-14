@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_ROUTINE_DEFINITION*
+
+h|*Description*
+2+a|Abstract ancestor of routine body meta-types.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+|===

@@ -1,5 +1,5 @@
 
-=== class IMPORTED_VERSION
+=== Class IMPORTED_VERSION
 
 [tabs]
 ======

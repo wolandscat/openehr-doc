@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXTRACT_ENTITY_CHAPTER*
+
+h|*Description*
+2+a|Type of chapter that contains information relating to a single demographic entity.
+
+h|*Inherit*
+2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_chapter[EXTRACT_CHAPTER]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*extract_id_key*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to entity, usually a demographic entity such as a patient that the content of
+this chapter relates to.
+
+|===

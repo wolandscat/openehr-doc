@@ -1,0 +1,14 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_ATTACHED*
+
+h|*Description*
+2+a|A predicate on any object reference (including function call) that returns True if the
+reference is attached, i.e. non-Void.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_predicate[EL_PREDICATE]
+
+|===

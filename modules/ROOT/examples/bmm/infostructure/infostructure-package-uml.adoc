@@ -1,0 +1,15 @@
+
+.infostructure Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package versioning {
+}
+
+package resource {
+}
+
+....

@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_READONLY_VARIABLE*
+
+h|*Description*
+2+a|Meta-type for writable variables, including routine parameters and the special variable
+`Self`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_variable[BMM_VARIABLE]
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_not_nullable: ¬ is_nullable;
+
+
+|===

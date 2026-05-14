@@ -1,0 +1,35 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_PRIMITIVE_OBJECT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Value to be assumed if none sent in data.
+
+h|prop +
+  0..1
+|*is_enumerated_type_constraint*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this object represents a constraint on an enumerated type from the reference
+model, where the latter is assumed to be based on a primitive type, generally Integer or
+String.
+
+h|prop +
+  
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Constraint represented by this object; redefine in descendants.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_valid_assumed_value: valid_value(assumed_value);
+
+
+|===

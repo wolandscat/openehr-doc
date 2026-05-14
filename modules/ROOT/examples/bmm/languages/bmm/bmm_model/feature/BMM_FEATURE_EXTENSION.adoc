@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_FEATURE_EXTENSION*
+
+h|*Description*
+2+a|Abstract parent of feature extensions.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+|===

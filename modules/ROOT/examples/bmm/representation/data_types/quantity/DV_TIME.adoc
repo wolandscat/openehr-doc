@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class DV_TIME*
@@ -14,33 +14,33 @@ time. The partial form is used for approximate times of events and substance
 administrations.
 
 h|*Inherit*
-2+|xref:representation:representation-data_types.adoc#_class_dv_temporal[DV_TEMPORAL]
+2+|xref:representation:data_types-gen.adoc#_class_dv_temporal[DV_TEMPORAL]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 time string
 
 h| func
-|*magnitude* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*magnitude* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
 h| func
 |*add* ( +
-a_diff: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]): xref:representation:representation-data_types.adoc#_class_dv_time[DV_TIME]
+a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]
 a|Addition of a Duration to this Time.
 
 h| func
 |*subtract* ( +
-a_diff: xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]): xref:representation:representation-data_types.adoc#_class_dv_time[DV_TIME]
+a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]
 a|Subtract a Duration from this Time.
 
 h| func
 |*diff* ( +
-other: xref:representation:representation-data_types.adoc#_class_dv_time[DV_TIME]): xref:representation:representation-data_types.adoc#_class_dv_duration[DV_DURATION]
+other: xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Time and `other`.
 
 h|*Invariants*

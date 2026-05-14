@@ -1,57 +1,51 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *enum VERSION_STATUS*
 
-h|*Description*
-2+a|Status of a versioned artefact, as one of a number of possible values: uncontrolled,
-prerelease, release, build.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*
 
 h|
-|*alpha* = "alpha"
+|*alpha* = alpha
 a|
 
 h|
-|*beta* = "beta"
+|*beta* = beta
 a|
 
 h|
-|*release_candidate* = "release_candidate"
+|*release_candidate* = release_candidate
 a|
 
 h|
-|*released* = "released"
+|*released* = released
 a|
 
 h|
-|*build* = "build"
+|*build* = build
 a|
 
 h|
 2+^h|*Feature Group "access"*
 
 h| func
-|*is_empty* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string is empty, i.e. equal to "".
 
 h| func
-|*is_integer* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_integer* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string can be parsed as an integer.
 
 h| func
-|*as_integer* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*as_integer* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return the integer corresponding to the integer value represented in this string.
 
 h| func
 |*contains* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return True if this String contains `other` (case-sensitive).
 
 h|
@@ -59,21 +53,21 @@ h|
 
 h| func
 |*append* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_string[String] +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String] +
   *alias* +
 
 a|Concatenation operator - causes `other` to be appended to this string.
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_string[String]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Lexical comparison of string content based on ordering in relevant character set.
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -84,7 +78,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -95,7 +89,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +

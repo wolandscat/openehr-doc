@@ -1,0 +1,34 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Physical_entity Specification
+
+
+== Physical_entity Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation//physical_entity/physical_entity-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== Occurrent Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation/physical_entity/occurrent/occurrent-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/foundation/physical_entity/occurrent/PARTICIPATION-section.adoc[leveloffset=+1]
+
+
+
+
+

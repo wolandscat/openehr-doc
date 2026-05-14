@@ -1,0 +1,21 @@
+
+=== Enum BMM_PARAMETER_DIRECTION
+
+[tabs]
+======
+Diff::
++
+include::BMM_PARAMETER_DIRECTION.adoc[]
+
+Flat::
++
+include::BMM_PARAMETER_DIRECTION-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_PARAMETER_DIRECTION-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_PARAMETER_DIRECTION-properties-flat.adoc[]
+======

@@ -1,0 +1,49 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_DEFINED_OBJECT*
+
+h|*Description*
+2+a|Abstract parent type of `C_OBJECT` subtypes that are defined by value, i.e. whose
+definitions are actually in the archetype rather than being by reference.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*default_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Default value set in a template, and present in an operational template. Generally limited
+to leaf and near-leaf nodes.
+
+h| func
+|*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
+in descendants.
+
+h| func
+|*valid_value* ( +
+a_value: xref:representation:builtin_types-gen.adoc#_class_any[Any]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_value` is valid with respect to constraint expressed in concrete instance of
+this type.
+
+h| func
+|*prototype_value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Generate a prototype value from this constraint object.
+
+h| func
+|*has_default_value* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if there is an assumed value.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_valid_default_value: valid_value(default_value);
+
+
+|===

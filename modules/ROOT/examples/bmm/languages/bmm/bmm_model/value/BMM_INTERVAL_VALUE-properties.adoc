@@ -1,0 +1,8 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_INTERVAL_VALUE<T:BMM_UNITARY_TYPE>*
+
+
+|===

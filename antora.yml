@@ -1,0 +1,22 @@
+name: openehr-doc
+version: '1.0.0'
+title: openEHR UML Site
+nav:
+  - modules/representation/nav-gen.adoc
+  - modules/foundation/nav-gen.adoc
+  - modules/domain-healthcare/nav-gen.adoc
+  - modules/infostructure/nav-gen.adoc
+  - modules/languages/nav-gen.adoc
+
+asciidoc:
+  attributes:
+    doctype: book
+    page-toclevels: 4
+    sectnums: true
+    sectnumlevels: 4
+    chapter-refsig: Section
+    xrefstyle: short
+    icons: font
+
+
+

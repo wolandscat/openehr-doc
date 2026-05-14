@@ -1,5 +1,5 @@
 
-=== class ARCHETYPE_ID
+=== Class ARCHETYPE_ID
 
 [tabs]
 ======

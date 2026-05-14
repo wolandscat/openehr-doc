@@ -1,5 +1,5 @@
 
-=== class DV_ORDINAL
+=== Class DV_ORDINAL
 
 [tabs]
 ======

@@ -1,5 +1,5 @@
 
-=== class FEEDER_AUDIT
+=== Class FEEDER_AUDIT
 
 [tabs]
 ======

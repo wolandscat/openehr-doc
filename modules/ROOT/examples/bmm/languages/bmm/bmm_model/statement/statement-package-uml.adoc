@@ -1,0 +1,97 @@
+
+.statement Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_ASSIGNMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_assignment]] {
+        .. access ..
+        target: EL_VALUE_GENERATOR
+        source: EL_EXPRESSION
+}
+
+BMM_ASSIGNMENT -[#gray]up-|> BMM_SIMPLE_STATEMENT  
+
+
+abstract class BMM_SIMPLE_STATEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_simple_statement]] {
+}
+
+BMM_SIMPLE_STATEMENT -[#gray]up-|> BMM_STATEMENT  
+
+
+abstract class BMM_ROUTINE_DEFINITION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_routine_definition]] {
+}
+
+
+class BMM_LOCAL_ROUTINE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_local_routine]] {
+        .. access ..
+        locals: List<BMM_LOCAL>
+}
+
+BMM_LOCAL_ROUTINE -[#gray]up-|> BMM_ROUTINE_DEFINITION  
+
+
+BMM_LOCAL_ROUTINE *--> "1 body" BMM_STATEMENT_BLOCK
+
+abstract class BMM_STATEMENT_ITEM [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement_item]] {
+}
+
+
+class BMM_DECLARATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_declaration]] {
+        .. access ..
+        name: String
+        result: EL_WRITABLE_VARIABLE
+        type: BMM_TYPE
+}
+
+BMM_DECLARATION -[#gray]up-|> BMM_SIMPLE_STATEMENT  
+
+
+class BMM_ACTION_TABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_action_table]] {
+        .. access ..
+}
+
+BMM_ACTION_TABLE -[#gray]up-|> BMM_STATEMENT  
+
+
+BMM_ACTION_TABLE *--> "1 decision_table" BMM_ACTION_DECISION_TABLE
+
+class BMM_ASSERTION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_assertion]] {
+        .. access ..
+        expression: EL_BOOLEAN_EXPRESSION
+        tag: String
+}
+
+BMM_ASSERTION -[#gray]up-|> BMM_SIMPLE_STATEMENT  
+
+
+abstract class BMM_STATEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement]] {
+}
+
+BMM_STATEMENT -[#gray]up-|> BMM_STATEMENT_ITEM  
+
+
+class BMM_EXTERNAL_ROUTINE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_external_routine]] {
+        .. access ..
+        meta_data: Map<String,String>
+        argument_mapping: Map<String,String>
+}
+
+BMM_EXTERNAL_ROUTINE -[#gray]up-|> BMM_ROUTINE_DEFINITION  
+
+
+class BMM_STATEMENT_BLOCK [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement_block]] {
+        .. access ..
+        items: List<BMM_STATEMENT_ITEM>
+}
+
+BMM_STATEMENT_BLOCK -[#gray]up-|> BMM_STATEMENT_ITEM  
+
+
+class BMM_ACTION_DECISION_TABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_action_decision_table]] {
+}
+
+
+....

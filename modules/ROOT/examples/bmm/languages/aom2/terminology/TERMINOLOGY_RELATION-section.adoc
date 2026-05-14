@@ -1,0 +1,21 @@
+
+=== Class TERMINOLOGY_RELATION
+
+[tabs]
+======
+Diff::
++
+include::TERMINOLOGY_RELATION.adoc[]
+
+Flat::
++
+include::TERMINOLOGY_RELATION-flat.adoc[]
+
+Props(diff)::
++
+include::TERMINOLOGY_RELATION-properties.adoc[]
+
+Props(flat)::
++
+include::TERMINOLOGY_RELATION-properties-flat.adoc[]
+======

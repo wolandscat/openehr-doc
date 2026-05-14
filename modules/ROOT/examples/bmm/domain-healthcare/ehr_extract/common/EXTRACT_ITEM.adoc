@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EXTRACT_ITEM*
+
+h|*Description*
+2+a|Abstract parent of Extract Folder and Content types.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+
+|===

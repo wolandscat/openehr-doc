@@ -1,5 +1,5 @@
 
-=== class DV_QUANTIFIED
+=== Class DV_QUANTIFIED
 
 [tabs]
 ======

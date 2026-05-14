@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ARCHETYPE_TERM*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*code*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Code of this term.
+
+h|prop +
+  
+|*text*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Short term text, typically for display.
+
+h|prop +
+  
+|*description*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Full description text.
+
+h|prop +
+  0..1
+|*other_items*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Hash of keys and corresponding values for other items in a term, e.g. provenance. Hash of
+keys ("text", "description" etc) and corresponding values.
+
+|===

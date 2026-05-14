@@ -1,0 +1,28 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXTERNAL_QUERY*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*context*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional name of context. This allows a basic separation of query types to be done in more
+sophisticated environments. Possible values might be "patient", "medications" and so on.
+Not yet standardised.
+
+h|prop +
+  
+|*query_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier of query in the external context, e.g. "date_of_birth". Not yet standardised.
+
+h|prop +
+  0..1
+|*query_args*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Optional arguments to query. Not yet standardised.
+
+|===

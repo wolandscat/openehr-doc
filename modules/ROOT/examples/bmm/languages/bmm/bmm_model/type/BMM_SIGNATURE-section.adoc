@@ -1,0 +1,21 @@
+
+=== Class BMM_SIGNATURE
+
+[tabs]
+======
+Diff::
++
+include::BMM_SIGNATURE.adoc[]
+
+Flat::
++
+include::BMM_SIGNATURE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_SIGNATURE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_SIGNATURE-properties-flat.adoc[]
+======

@@ -1,5 +1,5 @@
 
-=== class Iso8601_timezone
+=== Class Iso8601_timezone
 
 [tabs]
 ======

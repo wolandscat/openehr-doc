@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_MODULE*
+
+h|*Description*
+2+a|Meta-type defining a generalised module concept. Descendants define actual structure and
+contents.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_model_element[BMM_MODEL_ELEMENT]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
+a|Model within which module is defined.
+
+h|prop +
+  0..1
+|*feature_groups*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]>
+a|List of feature groups in this class.
+
+h|prop +
+  0..1
+|*features*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]>
+a|Features of this module.
+
+|===

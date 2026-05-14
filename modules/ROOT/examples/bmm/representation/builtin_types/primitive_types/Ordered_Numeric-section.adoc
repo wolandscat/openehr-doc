@@ -1,5 +1,5 @@
 
-=== class Ordered_Numeric
+=== Class Ordered_Numeric
 
 [tabs]
 ======

@@ -1,0 +1,31 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class X_CONTRIBUTION*
+
+h|*Description*
+2+a|Serialised form of Contribution for an Extract.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*uid*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
+a|Uid of Contribution in source system.
+
+h|prop +
+  
+|*audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
+a|Audit of Contribution in source system.
+
+h|prop +
+  0..1
+|*versions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:infostructure:versioning-gen.adoc#_class_version[VERSION]<xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]>>
+a|Serialised Versions from Contribution in source system.
+
+|===

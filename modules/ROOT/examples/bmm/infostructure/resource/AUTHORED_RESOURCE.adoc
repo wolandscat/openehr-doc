@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class AUTHORED_RESOURCE*
@@ -7,18 +7,21 @@
 h|*Description*
 2+a|Abstract idea of an online resource created by a human author.
 
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   0..1
-|*uid*: xref:representation:representation-identification.adoc#_class_uuid[UUID]
+|*uid*: xref:representation:identification-gen.adoc#_class_uuid[UUID]
 a|Unique identifier of the family of archetypes having the same interface identifier (same
 major version).
 
 h|prop +
   
-|*original_language*: xref:representation:representation-builtin_types.adoc#_class_terminology_code[Terminology_code]
+|*original_language*: xref:representation:builtin_types-gen.adoc#_class_terminology_code[Terminology_code]
 a|Language in which this resource was initially authored. Although there is no language
 primacy of resources overall, the language of original authoring is required to ensure
 natural language translations can preserve quality. Language is relevant in both the
@@ -26,31 +29,31 @@ description and ontology sections.
 
 h|prop +
   0..1
-|*is_controlled*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_controlled*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this resource is under any kind of change control (even file copying), in which
 case revision history is created.
 
 h|prop +
   0..1
-|*description*: xref:infostructure:infostructure-resource.adoc#_class_resource_description[RESOURCE_DESCRIPTION]
+|*description*: xref:infostructure:resource-gen.adoc#_class_resource_description[RESOURCE_DESCRIPTION]
 a|Description and lifecycle information of the resource.
 
 h|prop +
   0..1
-|*annotations*: xref:infostructure:infostructure-resource.adoc#_class_resource_annotations[RESOURCE_ANNOTATIONS]
+|*annotations*: xref:infostructure:resource-gen.adoc#_class_resource_annotations[RESOURCE_ANNOTATIONS]
 a|Annotations on individual items within the resource, keyed by path. The inner table takes
 the form of a Hash table of String values keyed by String tags.
 
 h|prop +
   0..1
-|*translations*: xref:representation:representation-builtin_types.adoc#_class_hash[Hash]<xref:representation:representation-builtin_types.adoc#_class_string[String],xref:infostructure:infostructure-resource.adoc#_class_translation_details[TRANSLATION_DETAILS]>
+|*translations*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:infostructure:resource-gen.adoc#_class_translation_details[TRANSLATION_DETAILS]>
 a|List of details for each natural translation made of this resource, keyed by language
 code. For each translation listed here, there must be corresponding sections in all
 language-dependent parts of the resource. The `original_language` does not appear in
 this list.
 
 h| func
-|*languages_available* : xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-builtin_types.adoc#_class_string[String]>
+|*languages_available* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Total list of languages available in this resource, derived from original_language and
 translations.
 

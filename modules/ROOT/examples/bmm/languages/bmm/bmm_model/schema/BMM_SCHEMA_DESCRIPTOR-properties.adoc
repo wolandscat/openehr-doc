@@ -1,0 +1,44 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_SCHEMA_DESCRIPTOR*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*schema_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Schema id, formed by
+
+`{BMM_DEFINITIONS}.create_schema_id(
+meta_data.item({BMM_DEFINITIONS}.Metadata_model_publisher),
+meta_data.item({BMM_DEFINITIONS}.Metadata_schema_name),
+meta_data.item({BMM_DEFINITIONS}.Metadata_model_release)`
+
+e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
+
+h|prop +
+  
+|*meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Table of `{key, value}` of schema meta-data, keys are string values defined by
+`{BMM_DEFINITIONS}.Metadata_*` constants.
+
+h|prop +
+  0..1
+|*bmm_schema*: xref:languages:bmm-gen.adoc#_class_bmm_schema[BMM_SCHEMA]
+a|Persistent form of model.
+
+h|prop +
+  0..1
+|*bmm_model*: xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
+a|Computable form of model.
+
+h|prop +
+  0..1
+|*includes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Identifiers of schemas included by this schema.
+
+|===

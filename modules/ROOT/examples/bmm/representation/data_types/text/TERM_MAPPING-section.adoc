@@ -1,5 +1,5 @@
 
-=== class TERM_MAPPING
+=== Class TERM_MAPPING
 
 [tabs]
 ======

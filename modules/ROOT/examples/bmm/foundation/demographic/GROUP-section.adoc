@@ -1,5 +1,5 @@
 
-=== class GROUP
+=== Class GROUP
 
 [tabs]
 ======

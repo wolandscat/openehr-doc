@@ -1,0 +1,134 @@
+
+.expression Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class EL_PREDICATE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_predicate]] {
+        .. access ..
+        eval_type:BMM_SIMPLE_TYPE
+}
+
+EL_PREDICATE -[#gray]up-|> EL_SIMPLE  
+
+
+EL_PREDICATE *--> "1 operand" EL_VALUE_GENERATOR
+
+abstract class EL_TERMINAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_terminal]] {
+}
+
+EL_TERMINAL -[#gray]up-|> EL_EXPRESSION  
+
+
+class EL_TUPLE_ITEM [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple_item]] {
+        .. access ..
+        name: String
+}
+
+
+EL_TUPLE_ITEM *--> "0..1 item" EL_EXPRESSION
+
+abstract class EL_SIMPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_simple]] {
+}
+
+EL_SIMPLE -[#gray]up-|> EL_TERMINAL  
+
+
+class EL_TUPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple]] {
+        .. access ..
+        items: List<EL_TUPLE_ITEM>
+        type: BMM_TUPLE_TYPE
+        eval_type:BMM_TYPE
+}
+
+EL_TUPLE -[#gray]up-|> EL_EXPRESSION  
+
+
+class EL_ATTACHED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_attached]] {
+}
+
+EL_ATTACHED -[#gray]up-|> EL_PREDICATE  
+
+
+class EL_BOOLEAN_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_boolean_expression]] {
+}
+
+EL_BOOLEAN_EXPRESSION -[#gray]up-|> EL_CONSTRAINED  
+
+
+abstract class EL_VALUE_GENERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_value_generator]] {
+        .. access ..
+        is_writable: Boolean
+        name: String
+        reference:String
+}
+
+EL_VALUE_GENERATOR -[#gray]up-|> EL_SIMPLE  
+
+
+class EL_BINARY_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_binary_operator]] {
+        .. access ..
+}
+
+EL_BINARY_OPERATOR -[#gray]up-|> EL_OPERATOR  
+
+
+EL_BINARY_OPERATOR *--> "1 left_operand" EL_EXPRESSION
+
+EL_BINARY_OPERATOR *--> "1 right_operand" EL_EXPRESSION
+
+class EL_DEFINED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_defined]] {
+}
+
+EL_DEFINED -[#gray]up-|> EL_PREDICATE  
+
+
+abstract class EL_CONSTRAINED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_constrained]] {
+        .. access ..
+}
+
+EL_CONSTRAINED -[#gray]up-|> EL_EXPRESSION  
+
+
+EL_CONSTRAINED *--> "1 base_expression" EL_EXPRESSION
+
+abstract class EL_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_expression]] {
+        .. access ..
+        eval_type:BMM_TYPE
+        is_boolean:Boolean
+}
+
+
+abstract class EL_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_operator]] {
+        .. access ..
+        precedence_overridden: Boolean
+        symbol: String
+        call: EL_FUNCTION_CALL
+        operator_definition:BMM_OPERATOR
+        equivalent_call:EL_FUNCTION_CALL
+}
+
+EL_OPERATOR -[#gray]up-|> EL_EXPRESSION  
+
+
+class EL_UNARY_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_unary_operator]] {
+        .. access ..
+}
+
+EL_UNARY_OPERATOR -[#gray]up-|> EL_OPERATOR  
+
+
+EL_UNARY_OPERATOR *--> "1 operand" EL_EXPRESSION
+
+class EL_LITERAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_literal]] {
+        .. access ..
+        value: BMM_LITERAL_VALUE<BMM_TYPE>
+        eval_type:BMM_TYPE
+}
+
+EL_LITERAL -[#gray]up-|> EL_SIMPLE  
+
+
+....

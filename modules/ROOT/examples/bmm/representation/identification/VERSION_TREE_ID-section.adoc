@@ -1,5 +1,5 @@
 
-=== class VERSION_TREE_ID
+=== Class VERSION_TREE_ID
 
 [tabs]
 ======

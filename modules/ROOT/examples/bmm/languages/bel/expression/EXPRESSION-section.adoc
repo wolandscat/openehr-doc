@@ -1,0 +1,21 @@
+
+=== Class EXPRESSION
+
+[tabs]
+======
+Diff::
++
+include::EXPRESSION.adoc[]
+
+Flat::
++
+include::EXPRESSION-flat.adoc[]
+
+Props(diff)::
++
+include::EXPRESSION-properties.adoc[]
+
+Props(flat)::
++
+include::EXPRESSION-properties-flat.adoc[]
+======

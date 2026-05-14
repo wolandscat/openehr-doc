@@ -1,0 +1,21 @@
+
+=== Class EL_TERMINAL
+
+[tabs]
+======
+Diff::
++
+include::EL_TERMINAL.adoc[]
+
+Flat::
++
+include::EL_TERMINAL-flat.adoc[]
+
+Props(diff)::
++
+include::EL_TERMINAL-properties.adoc[]
+
+Props(flat)::
++
+include::EL_TERMINAL-properties-flat.adoc[]
+======

@@ -1,5 +1,5 @@
 
-=== enum VALIDITY_KIND
+=== Enum VALIDITY_KIND
 
 [tabs]
 ======

@@ -1,0 +1,21 @@
+
+=== Class TEMPLATE
+
+[tabs]
+======
+Diff::
++
+include::TEMPLATE.adoc[]
+
+Flat::
++
+include::TEMPLATE-flat.adoc[]
+
+Props(diff)::
++
+include::TEMPLATE-properties.adoc[]
+
+Props(flat)::
++
+include::TEMPLATE-properties-flat.adoc[]
+======

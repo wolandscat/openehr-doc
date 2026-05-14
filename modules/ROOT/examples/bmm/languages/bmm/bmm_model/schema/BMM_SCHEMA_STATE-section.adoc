@@ -1,0 +1,21 @@
+
+=== Enum BMM_SCHEMA_STATE
+
+[tabs]
+======
+Diff::
++
+include::BMM_SCHEMA_STATE.adoc[]
+
+Flat::
++
+include::BMM_SCHEMA_STATE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_SCHEMA_STATE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_SCHEMA_STATE-properties-flat.adoc[]
+======

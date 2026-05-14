@@ -1,0 +1,78 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class GENERIC_CONTENT_ITEM*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*item_type*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|Identifier of model or schema used to create the content.
+
+h|prop +
+  0..1
+|*item_type_version*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Version of model or schema used to create the content item.
+
+h|prop +
+  0..1
+|*author*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to a demographic entity elsewhere in this Extract representing the author of the
+item version. The reference should be a UID corresponding to the UID of a
+`GENERIC_CONTENT_ITEM` containing the demographic information.
+
+h|prop +
+  0..1
+|*creation_time*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|Time of creation of this item version on the original system. This may be an earlier
+commit time, or it may be the time at which the item was created during the Extract
+generation process.
+
+h|prop +
+  0..1
+|*authoriser*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to a demographic entity elsewhere in this Extract representing an authoriser of
+the item version, if relevant. The reference should be a UID corresponding to the UID of a
+`GENERIC_CONTENT_ITEM` containing the demographic information.
+
+h|prop +
+  0..1
+|*authorisation_time*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|Time of authorisation of this item version on the original system where relevant.
+
+h|prop +
+  0..1
+|*item_status*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|Coded lifecycle status of the item.
+
+h|prop +
+  0..1
+|*version_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Version id of this item in original system.
+
+h|prop +
+  0..1
+|*version_set_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Version set id of this item in original system, where applicable.
+
+h|prop +
+  0..1
+|*system_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Identifier of EMR or other system from which the item was created / extracted. Typically
+in the form of a domain name.
+
+h|prop +
+  0..1
+|*other_details*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Other details about the content item.
+
+h|prop +
+  0..1
+|*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+a|Content object.
+
+|===

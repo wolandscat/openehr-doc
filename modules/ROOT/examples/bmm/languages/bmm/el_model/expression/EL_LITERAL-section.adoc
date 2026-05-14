@@ -1,0 +1,21 @@
+
+=== Class EL_LITERAL
+
+[tabs]
+======
+Diff::
++
+include::EL_LITERAL.adoc[]
+
+Flat::
++
+include::EL_LITERAL-flat.adoc[]
+
+Props(diff)::
++
+include::EL_LITERAL-properties.adoc[]
+
+Props(flat)::
++
+include::EL_LITERAL-properties-flat.adoc[]
+======

@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_BOOLEAN_EXPRESSION*
+
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_boolean_expression: base_expression.is_boolean();
+
+
+|===

@@ -1,5 +1,5 @@
 
-=== class CARE_ENTRY
+=== Class CARE_ENTRY
 
 [tabs]
 ======

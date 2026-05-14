@@ -1,0 +1,27 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Resource Specification
+
+
+== Resource Package
+
+=== Overview 
+
+include::ROOT:example$bmm/infostructure//resource/resource-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/infostructure/resource//ANNOTATIONS_PATH_MAP-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//AUTHORED_RESOURCE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//TRANSLATION_DETAILS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//RESOURCE_DESCRIPTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//ANNOTATIONS_MAP-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//RESOURCE_ANNOTATIONS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/infostructure/resource//RESOURCE_DESCRIPTION_ITEM-section.adoc[leveloffset=+1]
+
+
+
+
+

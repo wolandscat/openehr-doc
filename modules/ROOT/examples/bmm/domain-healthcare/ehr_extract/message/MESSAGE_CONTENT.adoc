@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class MESSAGE_CONTENT*
+
+h|*Description*
+2+a|Abstract parent of message payload types.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+
+|===

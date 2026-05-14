@@ -1,0 +1,41 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXPR_FOR_ALL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*condition*: xref:languages:bel-gen.adoc#_class_assertion[ASSERTION]
+a|Boolean condition that returns True or False when applied to a member of the operand of a
+`for_all` operator.
+
+h|prop +
+  
+|*operand*: xref:languages:bel-gen.adoc#_class_expr_value_ref[EXPR_VALUE_REF]
+a|Reference to collection / container object to which the `for_all` operator is to be
+applied.
+
+h|prop +
+  0..1
+|*precedence_overridden*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the natural precedence of operators is overridden in the expression represented by
+this node of the expression tree. If True, parentheses should be introduced around the
+totality of the syntax expression corresponding to this operator node and its operands.
+
+h|prop +
+  
+|*operator*: xref:languages:bel-gen.adoc#_class_operator_kind[OPERATOR_KIND]
+a|Operator definition.
+
+h|prop +
+  0..1
+|*symbol*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|The symbol actually used in the rule, or intended to be used for serialisation. Must be a
+member of `operator_def.symbols`.
+
+|===

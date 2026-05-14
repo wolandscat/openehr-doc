@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_ENTITY_MANIFEST
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_ENTITY_MANIFEST.adoc[]
+
+Flat::
++
+include::EXTRACT_ENTITY_MANIFEST-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_ENTITY_MANIFEST-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_ENTITY_MANIFEST-properties-flat.adoc[]
+======

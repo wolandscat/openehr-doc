@@ -1,5 +1,5 @@
 
-=== class FUNCTION
+=== Class FUNCTION
 
 [tabs]
 ======

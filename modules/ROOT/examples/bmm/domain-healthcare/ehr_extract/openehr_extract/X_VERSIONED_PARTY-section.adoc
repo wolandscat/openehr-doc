@@ -1,0 +1,21 @@
+
+=== Class X_VERSIONED_PARTY
+
+[tabs]
+======
+Diff::
++
+include::X_VERSIONED_PARTY.adoc[]
+
+Flat::
++
+include::X_VERSIONED_PARTY-flat.adoc[]
+
+Props(diff)::
++
+include::X_VERSIONED_PARTY-properties.adoc[]
+
+Props(flat)::
++
+include::X_VERSIONED_PARTY-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class BMM_VALUE_SET_SPEC
+
+[tabs]
+======
+Diff::
++
+include::BMM_VALUE_SET_SPEC.adoc[]
+
+Flat::
++
+include::BMM_VALUE_SET_SPEC-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_VALUE_SET_SPEC-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_VALUE_SET_SPEC-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class EL_DECISION_BRANCH
+
+[tabs]
+======
+Diff::
++
+include::EL_DECISION_BRANCH.adoc[]
+
+Flat::
++
+include::EL_DECISION_BRANCH-flat.adoc[]
+
+Props(diff)::
++
+include::EL_DECISION_BRANCH-properties.adoc[]
+
+Props(flat)::
++
+include::EL_DECISION_BRANCH-properties-flat.adoc[]
+======

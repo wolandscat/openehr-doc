@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class ACTIVITY*
@@ -8,19 +8,19 @@ h|*Description*
 2+a|Defines a single activity within an Instruction, such as a medication administration.
 
 h|*Inherit*
-2+|xref:representation:representation-data_marking.adoc#_class_locatable[LOCATABLE]
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*description*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+|*description*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Description of the activity, in the form of an archetyped structure.
 
 h|prop +
   0..1
-|*timing*: xref:representation:representation-data_types.adoc#_class_dv_parsable[DV_PARSABLE]
+|*timing*: xref:representation:data_types-gen.adoc#_class_dv_parsable[DV_PARSABLE]
 a|Timing of the activity, in the form of a parsable string. If used, the preferred syntax is
 ISO8601 'R' format, but other formats may be used including HL7 GTS.
 
@@ -33,7 +33,7 @@ should carry text that indicates the timing of its `activities`.
 
 h|prop +
   
-|*action_archetype_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*action_archetype_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Perl-compliant regular expression pattern, enclosed in '//' delimiters, indicating the
 valid identifiers of archetypes for Actions corresponding to this Activity specification.
 

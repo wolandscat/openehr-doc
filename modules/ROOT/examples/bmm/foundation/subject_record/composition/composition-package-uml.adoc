@@ -1,37 +1,35 @@
 
 .composition Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class COMPOSITION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_composition]] {
+class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_composition]] {
         .. access ..
         language: CODE_PHRASE «iso.iso_639-1»
         territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
         category: DV_CODED_TEXT
         composer: PARTY_PROXY
+        content: List<CONTENT_ITEM>
         is_persistent:Boolean
 }
 
-LOCATABLE <|-[#gray]- COMPOSITION
+COMPOSITION -[#gray]up-|> LOCATABLE  
 
 
 COMPOSITION *--> "0..1 context" EVENT_CONTEXT
 
-COMPOSITION *--> "0..* content" CONTENT_ITEM
-
-class SECTION [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_section]] {
+class SECTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_section]] {
         .. access ..
+        items: List<CONTENT_ITEM>
 }
 
-CONTENT_ITEM <|-[#gray]- SECTION
+SECTION -[#gray]up-|> CONTENT_ITEM  
 
 
-SECTION *--> "0..* items" CONTENT_ITEM
-
-class EVENT_CONTEXT [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_event_context]] {
+class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_event_context]] {
         .. access ..
         start_time: DV_DATE_TIME
         end_time: DV_DATE_TIME
@@ -42,17 +40,19 @@ class EVENT_CONTEXT [[/splashlang-doc/latest/foundation/foundation-subject_recor
         participations: List<PARTICIPATION>
 }
 
-PATHABLE <|-[#gray]- EVENT_CONTEXT
+EVENT_CONTEXT -[#gray]up-|> PATHABLE  
 
 
-abstract class CONTENT_ITEM [[/splashlang-doc/latest/foundation/foundation-subject_record.html#_class_content_item]] {
+abstract class CONTENT_ITEM [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] {
 }
 
-LOCATABLE <|-[#gray]- CONTENT_ITEM
+CONTENT_ITEM -[#gray]up-|> LOCATABLE  
 
-abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] #FDFDFD {
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
-abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_pathable]] #FDFDFD {
+abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
 }
+
+LOCATABLE -[#gray]up-|> PATHABLE  
 
 ....

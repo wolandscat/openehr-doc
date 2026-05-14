@@ -1,0 +1,25 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_EFFECTIVE_TYPE*
+
+h|*Description*
+2+a|Meta-type for a concrete, unitary type that can be used as an actual parameter type in a
+generic type declaration.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
+a|Result = self.
+
+h| func
+|*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of base generator type, i.e. excluding any generic parts if present.
+
+|===

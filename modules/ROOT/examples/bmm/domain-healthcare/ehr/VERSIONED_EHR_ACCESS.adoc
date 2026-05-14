@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class VERSIONED_EHR_ACCESS*
+
+h|*Description*
+2+a|Version container for `EHR_ACCESS` instance.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_versioned_object[VERSIONED_OBJECT]
+
+|===

@@ -1,22 +1,16 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class CARE_ENTRY*
 
-h|*Description*
-2+a|The abstract parent of all clinical `ENTRY` subtypes. A `CARE_ENTRY` defines protocol and
-guideline attributes for all clinical Entry subtypes.
-
-h|*Inherit*
-2+|xref:foundation:foundation-subject_record.adoc#_class_entry[ENTRY]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   0..1
-|*protocol*: xref:representation:representation-data_structures.adoc#_class_item_structure[ITEM_STRUCTURE]
+|*protocol*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Description of the method (i.e. how) the information in this entry was arrived at. For
 `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`,
 how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction.
@@ -26,7 +20,7 @@ larger care process.
 
 h|prop +
   0..1
-|*guideline_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+|*guideline_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Optional external identifier of guideline creating this Entry if relevant.
 
 |===

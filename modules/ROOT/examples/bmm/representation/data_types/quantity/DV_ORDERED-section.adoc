@@ -1,5 +1,5 @@
 
-=== class DV_ORDERED
+=== Class DV_ORDERED
 
 [tabs]
 ======

@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class VALUE_SET*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Code of source term of this relation.
+
+h|prop +
+  
+|*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of target terms in this relation.
+
+|===

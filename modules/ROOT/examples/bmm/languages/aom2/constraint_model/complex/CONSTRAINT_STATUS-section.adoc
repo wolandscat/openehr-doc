@@ -1,0 +1,21 @@
+
+=== Enum CONSTRAINT_STATUS
+
+[tabs]
+======
+Diff::
++
+include::CONSTRAINT_STATUS.adoc[]
+
+Flat::
++
+include::CONSTRAINT_STATUS-flat.adoc[]
+
+Props(diff)::
++
+include::CONSTRAINT_STATUS-properties.adoc[]
+
+Props(flat)::
++
+include::CONSTRAINT_STATUS-properties-flat.adoc[]
+======

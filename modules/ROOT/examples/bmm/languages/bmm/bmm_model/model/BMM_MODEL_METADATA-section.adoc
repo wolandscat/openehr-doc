@@ -1,0 +1,21 @@
+
+=== Class BMM_MODEL_METADATA
+
+[tabs]
+======
+Diff::
++
+include::BMM_MODEL_METADATA.adoc[]
+
+Flat::
++
+include::BMM_MODEL_METADATA-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_MODEL_METADATA-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_MODEL_METADATA-properties-flat.adoc[]
+======

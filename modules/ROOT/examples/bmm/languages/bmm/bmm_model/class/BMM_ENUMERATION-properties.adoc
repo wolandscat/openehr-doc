@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ENUMERATION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*item_names*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|The list of names of the enumeration. If no values are supplied, the integer values 0, 1,
+2, ... are assumed.
+
+h|prop +
+  0..1
+|*item_values*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_primitive_value[BMM_PRIMITIVE_VALUE]<xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]>>
+a|Optional list of specific values. Must be 1:1 with `item_names` list.
+
+|===

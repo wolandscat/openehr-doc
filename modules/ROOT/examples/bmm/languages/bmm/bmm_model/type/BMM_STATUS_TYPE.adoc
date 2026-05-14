@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_STATUS_TYPE*
+
+h|*Description*
+2+a|Built-in meta-type representing action status, e.g. result of a call invocation.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_builtin_type[BMM_BUILTIN_TYPE]
+
+|===

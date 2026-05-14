@@ -1,0 +1,21 @@
+
+=== Class C_BOOLEAN
+
+[tabs]
+======
+Diff::
++
+include::C_BOOLEAN.adoc[]
+
+Flat::
++
+include::C_BOOLEAN-flat.adoc[]
+
+Props(diff)::
++
+include::C_BOOLEAN-properties.adoc[]
+
+Props(flat)::
++
+include::C_BOOLEAN-properties-flat.adoc[]
+======

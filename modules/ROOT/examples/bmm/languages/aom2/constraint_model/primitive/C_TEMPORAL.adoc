@@ -1,0 +1,55 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class C_TEMPORAL<T:Temporal>*
+
+h|*Description*
+2+a|Purpose Abstract parent of `C_ORDERED` types whose base type is an ISO date/time type.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*pattern_constraint*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional alternative constraint in the form of a pattern based on ISO8601. See descendants
+for details.
+
+h| func
+|*valid_pattern_constraint* ( +
+a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `a_pattern` is a valid constraint. Define in concrete descendants.
+
+h| func
+|*valid_pattern_constraint_replacement* ( +
+a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String], +
+an_other_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return True if `a_pattern` can be replaced by `an_other_pattern` in a specialised
+constraint. Define in concrete subtypes.
+
+h| func
+|*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = precursor ∧ pattern_constraint.is_empty;
+
+a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
+in descendants.
+
+h| func
+|*c_value_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `precursor()` or else `other.pattern_constraint` is empty, or else
+`pattern_constraint` is a valid (narrower) replacement for `other.pattern_constraint`.
+
+h| func
+|*c_value_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if `precursor (other)` and `pattern_constraint_ ~ _other.pattern_constraint`, i.e.
+either both `Void` or else both non-`Void` and identical.
+
+|===

@@ -1,5 +1,5 @@
 
-=== class DATA_STRUCTURE
+=== Class DATA_STRUCTURE
 
 [tabs]
 ======

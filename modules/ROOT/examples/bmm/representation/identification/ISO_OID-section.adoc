@@ -1,5 +1,5 @@
 
-=== class ISO_OID
+=== Class ISO_OID
 
 [tabs]
 ======

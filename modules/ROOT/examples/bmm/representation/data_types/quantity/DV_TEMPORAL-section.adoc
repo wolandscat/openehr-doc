@@ -1,5 +1,5 @@
 
-=== class DV_TEMPORAL
+=== Class DV_TEMPORAL
 
 [tabs]
 ======

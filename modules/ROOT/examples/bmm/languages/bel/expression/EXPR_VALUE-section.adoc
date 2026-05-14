@@ -1,0 +1,21 @@
+
+=== Class EXPR_VALUE
+
+[tabs]
+======
+Diff::
++
+include::EXPR_VALUE.adoc[]
+
+Flat::
++
+include::EXPR_VALUE-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_VALUE-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_VALUE-properties-flat.adoc[]
+======

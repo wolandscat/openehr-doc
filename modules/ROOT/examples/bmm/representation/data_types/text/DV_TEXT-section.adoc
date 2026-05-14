@@ -1,5 +1,5 @@
 
-=== class DV_TEXT
+=== Class DV_TEXT
 
 [tabs]
 ======

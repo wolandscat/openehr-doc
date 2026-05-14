@@ -1,0 +1,21 @@
+
+=== Class PARTY_PROXY
+
+[tabs]
+======
+Diff::
++
+include::PARTY_PROXY.adoc[]
+
+Flat::
++
+include::PARTY_PROXY-flat.adoc[]
+
+Props(diff)::
++
+include::PARTY_PROXY-properties.adoc[]
+
+Props(flat)::
++
+include::PARTY_PROXY-properties-flat.adoc[]
+======

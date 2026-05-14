@@ -1,0 +1,35 @@
+
+.constraint_model Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+abstract class ARCHETYPE_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_constraint]] {
+        .. access ..
+        soc_parent: C_SECOND_ORDER
+        is_prohibited:Boolean
+        has_path(a_path: String):Boolean
+        path:String
+        c_conforms_to(other: ARCHETYPE_CONSTRAINT, rmcc: (String, String) -> Boolean):Boolean
+        c_congruent_to(other: ARCHETYPE_CONSTRAINT):Boolean
+        is_second_order_constrained:Boolean
+        is_root:Boolean
+        is_leaf:Boolean
+}
+
+ARCHETYPE_CONSTRAINT -[#gray]up-|> ADL_CODE_DEFINITIONS  
+
+
+ARCHETYPE_CONSTRAINT *--> "0..1 parent" ARCHETYPE_CONSTRAINT
+class "languages.aom2.\nADL_CODE_DEFINITIONS" as ADL_CODE_DEFINITIONS  [[/openehr-doc/latest/languages/aom2-gen.html#_class_adl_code_definitions]] #FDFDFD {
+}
+
+package complex {
+}
+
+package primitive {
+}
+
+....

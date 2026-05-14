@@ -1,0 +1,21 @@
+
+=== Class C_ORDERED
+
+[tabs]
+======
+Diff::
++
+include::C_ORDERED.adoc[]
+
+Flat::
++
+include::C_ORDERED-flat.adoc[]
+
+Props(diff)::
++
+include::C_ORDERED-properties.adoc[]
+
+Props(flat)::
++
+include::C_ORDERED-properties-flat.adoc[]
+======

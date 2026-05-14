@@ -1,0 +1,21 @@
+
+=== Class EL_VALUE_GENERATOR
+
+[tabs]
+======
+Diff::
++
+include::EL_VALUE_GENERATOR.adoc[]
+
+Flat::
++
+include::EL_VALUE_GENERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::EL_VALUE_GENERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::EL_VALUE_GENERATOR-properties-flat.adoc[]
+======

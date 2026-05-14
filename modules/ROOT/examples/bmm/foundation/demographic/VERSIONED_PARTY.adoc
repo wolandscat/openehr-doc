@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class VERSIONED_PARTY*
@@ -8,6 +8,6 @@ h|*Description*
 2+a|Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `PARTY`.
 
 h|*Inherit*
-2+|xref:infostructure:infostructure-versioning.adoc#_class_versioned_object[VERSIONED_OBJECT]
+2+|xref:infostructure:versioning-gen.adoc#_class_versioned_object[VERSIONED_OBJECT]
 
 |===

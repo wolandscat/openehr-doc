@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|builtin   *class Boolean*
@@ -8,14 +8,14 @@ h|*Description*
 2+a|Type representing minimal interface of built-in Boolean type.
 
 h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "operators"*
 
 h| func
 |*conjunction* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* and, ∧
  +
  +
@@ -27,7 +27,7 @@ a|Logical conjunction of this with `other`.
 
 h| func
 |*semistrict_conjunction* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* and then
  +
  +
@@ -38,7 +38,7 @@ a|Boolean semi-strict conjunction with `other`.
 
 h| func
 |*disjunction* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* or, ∨
  +
  +
@@ -51,7 +51,7 @@ a|Boolean disjunction with `other`.
 
 h| func
 |*semistrict_disjunction* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* or else
  +
  +
@@ -62,7 +62,7 @@ a|Boolean semi-strict disjunction with `other`.
 
 h| func
 |*exclusive_disjunction* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* xor, ⊻
  +
  +
@@ -73,7 +73,7 @@ a|Boolean exclusive or with `other`.
 
 h| func
 |*implication* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* implies, ⇒
  +
  +
@@ -83,7 +83,7 @@ other: xref:representation:representation-builtin_types.adoc#_class_boolean[Bool
 a|Boolean implication of `other` (semi-strict)
 
 h| func
-|*negation* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*negation* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* not, ¬
 
 a|Boolean negation of the current value.

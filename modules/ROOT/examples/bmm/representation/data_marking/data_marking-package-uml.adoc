@@ -1,17 +1,12 @@
 
 .data_marking Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class PARTY_PROXY [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_party_proxy]] {
-        .. access ..
-        external_ref: PARTY_REF
-}
-
-class ITEM_TAG [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_item_tag]] {
+class ITEM_TAG [[/openehr-doc/latest/representation/data_marking-gen.html#_class_item_tag]] {
         .. access ..
         key: String
         value: String
@@ -20,56 +15,40 @@ class ITEM_TAG [[/splashlang-doc/latest/representation/representation-data_marki
         owner_id: OBJECT_REF
 }
 
-class PARTY_RELATED [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_party_related]] {
-        .. access ..
-        relationship: DV_CODED_TEXT
-}
 
-PARTY_IDENTIFIED <|-[#gray]- PARTY_RELATED
-
-
-class FEEDER_AUDIT_DETAILS [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_feeder_audit_details]] {
+class FEEDER_AUDIT_DETAILS [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit_details]] {
         .. access ..
         system_id: String
+        location: PARTY_IDENTIFIED
+        subject: PARTY_PROXY
+        provider: PARTY_IDENTIFIED
         time: DV_DATE_TIME
         version_id: String
         other_details: ITEM_STRUCTURE
 }
 
-FEEDER_AUDIT_DETAILS *--> "0..1 location" PARTY_IDENTIFIED
 
-FEEDER_AUDIT_DETAILS *--> "0..1 subject" PARTY_PROXY
-
-FEEDER_AUDIT_DETAILS *--> "0..1 provider" PARTY_IDENTIFIED
-
-class PARTY_IDENTIFIED [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_party_identified]] {
-        .. access ..
-        name: String
-        identifiers: List<DV_IDENTIFIER>
-}
-
-PARTY_PROXY <|-[#gray]- PARTY_IDENTIFIED
-
-
-class LINK [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_link]] {
+class LINK [[/openehr-doc/latest/representation/data_marking-gen.html#_class_link]] {
         .. access ..
         meaning: DV_TEXT
         type: DV_TEXT
         target: DV_EHR_URI
 }
 
-class FEEDER_AUDIT [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_feeder_audit]] {
+
+class FEEDER_AUDIT [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit]] {
         .. access ..
         originating_system_item_ids: List<DV_IDENTIFIER>
         feeder_system_item_ids: List<DV_IDENTIFIER>
         original_content: DV_ENCAPSULATED
 }
 
+
 FEEDER_AUDIT *--> "1 originating_system_audit" FEEDER_AUDIT_DETAILS
 
 FEEDER_AUDIT *--> "0..1 feeder_system_audit" FEEDER_AUDIT_DETAILS
 
-abstract class PATHABLE [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_pathable]] {
+abstract class PATHABLE [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] {
         .. infrastructure ..
         parent:PATHABLE
         item_at_path(a_path: String):Any
@@ -79,45 +58,31 @@ abstract class PATHABLE [[/splashlang-doc/latest/representation/representation-d
         path_of_item(a_loc: PATHABLE):String
 }
 
-class PARTY_SELF [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_party_self]] {
-}
 
-PARTY_PROXY <|-[#gray]- PARTY_SELF
-
-
-class ARCHETYPED [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_archetyped]] {
+class ARCHETYPED [[/openehr-doc/latest/representation/data_marking-gen.html#_class_archetyped]] {
         .. infrastructure ..
         archetype_id: ARCHETYPE_ID
         template_id: TEMPLATE_ID
         rm_version: String
 }
 
-abstract class LOCATABLE [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_locatable]] {
+
+abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] {
         .. infrastructure ..
         uid: UID_BASED_ID
         archetype_node_id: String
         .. access ..
         name: DV_TEXT
+        links: List<LINK>
         concept:DV_TEXT
         is_archetype_root:Boolean
 }
 
-PATHABLE <|-[#gray]- LOCATABLE
+LOCATABLE -[#gray]up-|> PATHABLE  
 
 
 LOCATABLE *--> "0..1 archetype_details" ARCHETYPED
 
-LOCATABLE *--> "0..* links" LINK
-
 LOCATABLE *--> "0..1 feeder_audit" FEEDER_AUDIT
-
-class PARTICIPATION [[/splashlang-doc/latest/representation/representation-data_marking.html#_class_participation]] {
-        .. access ..
-        function: DV_TEXT «openehr.Participation_function»
-        mode: DV_CODED_TEXT «openehr.Participation_mode»
-        time: DV_INTERVAL<DV_DATE_TIME>
-}
-
-PARTICIPATION *--> "1 performer" PARTY_PROXY
 
 ....

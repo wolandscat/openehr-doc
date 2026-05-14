@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ARCHETYPE_ID_CONSTRAINT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*constraint*: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]
+a|Right hand side of the constraint expression, in the form of a `C_STRING`, i.e. string
+value constrainer.
+
+|===

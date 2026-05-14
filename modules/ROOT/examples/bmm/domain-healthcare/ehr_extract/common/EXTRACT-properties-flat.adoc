@@ -1,0 +1,98 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXTRACT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*chapters*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_chapter[EXTRACT_CHAPTER]>
+a|The content extracted and serialised from the source repository for this Extract.
+
+h|prop +
+  0..1
+|*specification*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_spec[EXTRACT_SPEC]
+a|The specification that this Extract actually conforms to; might not be identical with the
+specification of the corresponding request.
+
+h|prop +
+  0..1
+|*request_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
+a|Reference to causing Request, if any.
+
+h|prop +
+  
+|*time_created*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
+a|Creation time of this Extract
+
+h|prop +
+  
+|*system_id*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
+a|Identifier of creating system.
+
+h|prop +
+  
+|*sequence_nr*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Number of this Extract response in sequence of responses to Extract request identified by
+`request_id`. If this is the sole response, or there was no request, value is 1.
+
+h|prop +
+  0..1
+|*participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_participation[EXTRACT_PARTICIPATION]>
+a|Participations relevant to the creation of this Extract.
+
+h|prop +
+  
+|*name*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
+a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
+a clinical application or batch process to name this EHR construct: its retention in the
+EHR faithfully preserves the original label by which this entry was known to end users.
+
+h|prop +
+  0..1
+|*links*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_marking-gen.adoc#_class_link[LINK]>
+a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
+such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
+
+h|prop +
+  0..1
+|*feeder_audit*: xref:representation:data_marking-gen.adoc#_class_feeder_audit[FEEDER_AUDIT]
+a|Audit trail from non-openEHR system of original commit of information forming the content
+of this node, or from a conversion gateway which has synthesised this node.
+
+h|
+2+^h|*Feature Group "infrastructure"*
+
+h|prop +
+  0..1
+|*uid*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
+a|Optional globally unique object identifier for root points of archetyped structures.
+
+h|prop +
+  
+|*archetype_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Design-time archetype identifier of this node taken from its generating archetype; used to
+build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
+a 'standardised' name for this node to be generated, by referring to the generating
+archetype local terminology.
+
+At an archetype root point, the value of this attribute is always the stringified form of
+the `archetype_id` found in the `archetype_details` object.
+
+h|prop +
+  0..1
+|*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
+a|Details of archetyping used on this node.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|sequence_nr_valid: sequence_nr >= 1;
+
+
+|===

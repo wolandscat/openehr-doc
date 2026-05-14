@@ -1,0 +1,21 @@
+
+=== Class BMM_FUNCTION_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_FUNCTION_TYPE.adoc[]
+
+Flat::
++
+include::BMM_FUNCTION_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_FUNCTION_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_FUNCTION_TYPE-properties-flat.adoc[]
+======

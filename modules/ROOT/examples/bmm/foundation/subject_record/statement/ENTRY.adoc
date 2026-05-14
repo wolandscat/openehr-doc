@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h| abstract  *class ENTRY*
@@ -16,14 +16,14 @@ An `ENTRY` is also the minimal unit of information any query should return, sinc
 information, as well as the subject and generator of the information.
 
 h|*Inherit*
-2+|xref:foundation:foundation-subject_record.adoc#_class_content_item[CONTENT_ITEM]
+2+|xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*subject*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*subject*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Id of human subject of this `ENTRY`, e.g.:
 
 * organ donor
@@ -33,7 +33,7 @@ a|Id of human subject of this `ENTRY`, e.g.:
 
 h|prop +
   0..1
-|*provider*: xref:representation:representation-data_marking.adoc#_class_party_proxy[PARTY_PROXY]
+|*provider*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Optional identification of provider of the information in this `ENTRY`, which might be:
 
 * the patient
@@ -46,29 +46,29 @@ composer and other participants are assumed.
 
 h|prop +
   
-|*language*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Mandatory indicator of the localised language in which this Entry is written. Coded from
 openEHR Code Set languages .
 
 h|prop +
   
-|*encoding*: xref:representation:representation-data_types.adoc#_class_code_phrase[CODE_PHRASE]
+|*encoding*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Name of character set in which text values in this Entry are encoded. Coded from openEHR
 Code Set character sets.
 
 h|prop +
   0..1
-|*other_participations*: xref:representation:representation-builtin_types.adoc#_class_list[List]<xref:representation:representation-data_marking.adoc#_class_participation[PARTICIPATION]>
+|*other_participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:physical_entity-gen.adoc#_class_participation[PARTICIPATION]>
 a|Other participations at `ENTRY` level.
 
 h|prop +
   0..1
-|*workflow_id*: xref:representation:representation-identification.adoc#_class_object_ref[OBJECT_REF]
+|*workflow_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of externally held workflow engine data for this workflow execution, for this
 subject of care.
 
 h| func
-|*subject_is_self* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+|*subject_is_self* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
     type_validity: Result ⇒ subject.generating_type = "PARTY_SELF";

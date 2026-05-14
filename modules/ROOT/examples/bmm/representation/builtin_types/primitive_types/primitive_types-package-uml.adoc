@@ -1,12 +1,12 @@
 
 .primitive_types Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Boolean [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_boolean]] {
+class Boolean [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_boolean]] {
         .. operators ..
         conjunction(other: Boolean):Boolean
         semistrict_conjunction(other: Boolean):Boolean
@@ -18,13 +18,13 @@ class Boolean [[/splashlang-doc/latest/representation/representation-builtin_typ
 }
 
 
-class Uri [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_uri]] {
+class Uri [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_uri]] {
 }
 
-String <|-[#gray]- Uri
+Uri -[#gray]up-|> String  
 
 
-class Integer64 [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_integer64]] {
+class Integer64 [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_integer64]] {
         .. operators ..
         add(other: Integer64):Integer64
         subtract(other: Integer64):Integer64
@@ -36,10 +36,10 @@ class Integer64 [[/splashlang-doc/latest/representation/representation-builtin_t
         negative:Integer64
 }
 
-Ordered_Numeric <|-[#gray]- Integer64
+Integer64 -[#gray]up-|> Ordered_Numeric  
 
 
-class Real [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_real]] {
+class Real [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_real]] {
         .. access ..
         floor:Integer
         .. operators ..
@@ -52,10 +52,10 @@ class Real [[/splashlang-doc/latest/representation/representation-builtin_types.
         negative:Real
 }
 
-Ordered_Numeric <|-[#gray]- Real
+Real -[#gray]up-|> Ordered_Numeric  
 
 
-class Integer [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_integer]] {
+class Integer [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_integer]] {
         .. operators ..
         add(other: Integer):Integer
         subtract(other: Integer):Integer
@@ -67,25 +67,25 @@ class Integer [[/splashlang-doc/latest/representation/representation-builtin_typ
         negative:Integer
 }
 
-Ordered_Numeric <|-[#gray]- Integer
+Integer -[#gray]up-|> Ordered_Numeric  
 
 
-abstract class Ordered_Numeric [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_ordered_numeric]] {
+abstract class Ordered_Numeric [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_ordered_numeric]] {
 }
 
-Ordered <|-[#gray]- Ordered_Numeric
+Ordered_Numeric -[#gray]up-|> Ordered  
 
 
-Numeric <|-[#gray]- Ordered_Numeric
+Ordered_Numeric -[#gray]up-|> Numeric  
 
 
-class Character [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_character]] {
+class Character [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_character]] {
 }
 
-Ordered <|-[#gray]- Character
+Character -[#gray]up-|> Ordered  
 
 
-class Double [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_double]] {
+class Double [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_double]] {
         .. access ..
         floor:Integer
         .. operators ..
@@ -98,10 +98,10 @@ class Double [[/splashlang-doc/latest/representation/representation-builtin_type
         negative:Double
 }
 
-Ordered_Numeric <|-[#gray]- Double
+Double -[#gray]up-|> Ordered_Numeric  
 
 
-class String [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_string]] {
+class String [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_string]] {
         .. access ..
         is_empty:Boolean
         is_integer:Boolean
@@ -112,16 +112,16 @@ class String [[/splashlang-doc/latest/representation/representation-builtin_type
         less_than(other: String):Boolean
 }
 
-Ordered <|-[#gray]- String
+String -[#gray]up-|> Ordered  
 
 
-class Octet [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_octet]] {
+class Octet [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_octet]] {
 }
 
-Ordered <|-[#gray]- Octet
+Octet -[#gray]up-|> Ordered  
 
 
-abstract class Ordered [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_ordered]] {
+abstract class Ordered [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_ordered]] {
         .. operators ..
         less_than(other: Ordered):Boolean
         less_than_or_equal(other: Ordered):Boolean
@@ -129,7 +129,8 @@ abstract class Ordered [[/splashlang-doc/latest/representation/representation-bu
         greater_than_or_equal(other: Ordered):Boolean
 }
 
-abstract class Numeric [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_numeric]] {
+
+abstract class Numeric [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_numeric]] {
         .. operators ..
         add(other: Numeric):Numeric
         subtract(other: Numeric):Numeric

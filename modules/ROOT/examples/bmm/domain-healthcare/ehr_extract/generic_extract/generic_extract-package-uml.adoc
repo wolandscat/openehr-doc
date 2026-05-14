@@ -1,0 +1,30 @@
+
+.generic_extract Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class GENERIC_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_generic_content_item]] {
+        .. access ..
+        item_type: DV_CODED_TEXT
+        item_type_version: String
+        author: String
+        creation_time: Iso8601_date_time
+        authoriser: String
+        authorisation_time: Iso8601_date_time
+        item_status: DV_CODED_TEXT
+        version_id: String
+        version_set_id: String
+        system_id: String
+        other_details: Map<String,String>
+        item: LOCATABLE
+}
+
+GENERIC_CONTENT_ITEM -[#gray]up-|> EXTRACT_CONTENT_ITEM  
+
+abstract class "domain-healthcare.ehr_extract.common.\nEXTRACT_CONTENT_ITEM" as EXTRACT_CONTENT_ITEM  [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] #FDFDFD {
+}
+
+....

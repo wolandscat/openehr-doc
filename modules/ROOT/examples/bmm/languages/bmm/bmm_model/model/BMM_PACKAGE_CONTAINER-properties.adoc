@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_PACKAGE_CONTAINER*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*packages*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]>
+a|Child packages; keys all in upper case for guaranteed matching.
+
+|===

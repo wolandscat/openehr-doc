@@ -1,0 +1,21 @@
+
+=== Class TYPE_DEF_INTEGER
+
+[tabs]
+======
+Diff::
++
+include::TYPE_DEF_INTEGER.adoc[]
+
+Flat::
++
+include::TYPE_DEF_INTEGER-flat.adoc[]
+
+Props(diff)::
++
+include::TYPE_DEF_INTEGER-properties.adoc[]
+
+Props(flat)::
++
+include::TYPE_DEF_INTEGER-properties-flat.adoc[]
+======

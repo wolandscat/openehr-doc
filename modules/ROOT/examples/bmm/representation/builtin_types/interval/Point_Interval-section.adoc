@@ -1,5 +1,5 @@
 
-=== class Point_Interval
+=== Class Point_Interval
 
 [tabs]
 ======

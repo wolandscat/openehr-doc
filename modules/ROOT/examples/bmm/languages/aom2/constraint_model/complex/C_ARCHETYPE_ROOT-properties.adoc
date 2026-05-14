@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_ARCHETYPE_ROOT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*archetype_ref*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to archetype is being used to fill a slot or redefine an external reference.
+Typically an 'interface' archetype id, i.e. identifier with partial version information.
+
+|===

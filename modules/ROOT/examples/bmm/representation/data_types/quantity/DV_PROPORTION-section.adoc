@@ -1,5 +1,5 @@
 
-=== class DV_PROPORTION
+=== Class DV_PROPORTION
 
 [tabs]
 ======

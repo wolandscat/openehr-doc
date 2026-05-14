@@ -1,5 +1,5 @@
 
-=== class Integer
+=== Class Integer
 
 [tabs]
 ======

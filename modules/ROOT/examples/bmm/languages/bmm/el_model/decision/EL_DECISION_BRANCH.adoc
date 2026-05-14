@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class EL_DECISION_BRANCH<T:EL_TERMINAL>*
+
+h|*Description*
+2+a|Abstract parent of meta-types representing a branch of some kind of decision structure.
+Defines `result` as being of the generic type `T`.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*result*: T
+a|Result expression of conditional, if its `condition` evaluates to True.
+
+|===

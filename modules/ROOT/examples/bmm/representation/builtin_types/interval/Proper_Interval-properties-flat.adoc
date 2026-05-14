@@ -1,14 +1,9 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class Proper_Interval<T:Ordered>*
 
-h|*Description*
-2+a|Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_interval[Interval]
 
 h|
 2+^h|*Feature Group "access"*
@@ -25,25 +20,25 @@ a|Upper bound. Upper bound.
 
 h|prop +
   
-|*lower_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*lower_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
 -infinity)
 
 h|prop +
   
-|*upper_unbounded*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*upper_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
 +infinity)
 
 h|prop +
   
-|*lower_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*lower_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
 boundary value included in range if not lower_unbounded.
 
 h|prop +
   
-|*upper_included*: xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*upper_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 

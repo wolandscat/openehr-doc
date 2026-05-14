@@ -1,5 +1,5 @@
 
-=== class Container
+=== Class Container
 
 [tabs]
 ======

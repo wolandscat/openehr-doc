@@ -1,5 +1,5 @@
 
-=== class POINT_EVENT
+=== Class POINT_EVENT
 
 [tabs]
 ======

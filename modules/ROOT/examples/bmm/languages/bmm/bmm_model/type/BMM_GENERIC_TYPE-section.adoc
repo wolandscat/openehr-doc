@@ -1,0 +1,21 @@
+
+=== Class BMM_GENERIC_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_GENERIC_TYPE.adoc[]
+
+Flat::
++
+include::BMM_GENERIC_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_GENERIC_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_GENERIC_TYPE-properties-flat.adoc[]
+======

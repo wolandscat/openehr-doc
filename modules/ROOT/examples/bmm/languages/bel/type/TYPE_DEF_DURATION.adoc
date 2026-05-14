@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TYPE_DEF_DURATION*
+
+h|*Description*
+2+a|Rules meta-type representing the primitive type Duration.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
+
+|===

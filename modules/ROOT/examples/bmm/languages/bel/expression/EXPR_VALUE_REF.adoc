@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EXPR_VALUE_REF*
+
+h|*Description*
+2+a|Path-based reference to a value in a data structure.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_leaf[EXPR_LEAF]
+
+|===

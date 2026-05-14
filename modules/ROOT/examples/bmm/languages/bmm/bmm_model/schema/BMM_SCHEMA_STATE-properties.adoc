@@ -1,0 +1,39 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum BMM_SCHEMA_STATE*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*state_created* = State_created
+a|
+Initial state directly after instantiation of schema.
+
+
+
+h|
+|*state_validated_created* = State_validated_created
+a|
+Initial validation pass after instantiation.
+
+
+
+h|
+|*state_includes_pending* = State_includes_pending
+a|
+State of schema processing if there are still included schemas to process.
+
+
+
+h|
+|*state_includes_processed* = State_includes_processed
+a|
+State when all included schemas have been processed.
+
+
+
+|===

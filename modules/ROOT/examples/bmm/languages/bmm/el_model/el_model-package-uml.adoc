@@ -1,0 +1,21 @@
+
+.el_model Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package expression {
+}
+
+package decision {
+}
+
+package reference {
+}
+
+package agent {
+}
+
+....

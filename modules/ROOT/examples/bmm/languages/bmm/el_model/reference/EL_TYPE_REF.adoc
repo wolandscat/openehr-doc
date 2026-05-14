@@ -1,0 +1,33 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_TYPE_REF*
+
+h|*Description*
+2+a|Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at
+run-time. Typically represented syntactically as `TypeName` or `{TypeName}`.
+
+May be used as a value, or as the qualifier for a function or constant access.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Type, directly from the name of the reference, e.g. `{SOME_TYPE}`.
+
+h|prop +
+  
+|*is_mutable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h| func
+|*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Return `type`.
+
+|===

@@ -1,0 +1,29 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Ehr Specification
+
+
+== Ehr Package
+
+=== Overview 
+
+include::ROOT:example$bmm/domain-healthcare//ehr/ehr-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/domain-healthcare/ehr//EHR_ACCESS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//ACCESS_CONTROL_SETTINGS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//VERSIONED_EHR_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//VERSIONED_COMPOSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//VERSIONED_FOLDER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//VERSIONED_EHR_ACCESS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//EHR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//FOLDER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr//EHR_STATUS-section.adoc[leveloffset=+1]
+
+
+
+
+

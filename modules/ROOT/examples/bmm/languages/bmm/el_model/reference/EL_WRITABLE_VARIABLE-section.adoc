@@ -1,0 +1,21 @@
+
+=== Class EL_WRITABLE_VARIABLE
+
+[tabs]
+======
+Diff::
++
+include::EL_WRITABLE_VARIABLE.adoc[]
+
+Flat::
++
+include::EL_WRITABLE_VARIABLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_WRITABLE_VARIABLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_WRITABLE_VARIABLE-properties-flat.adoc[]
+======

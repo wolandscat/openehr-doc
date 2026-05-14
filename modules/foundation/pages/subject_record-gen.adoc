@@ -1,0 +1,62 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Subject_record Specification
+
+
+== Subject_record Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation//subject_record/subject_record-package-uml.adoc[]
+
+=== Classes
+
+
+
+
+
+
+== Composition Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation/subject_record/composition/composition-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/foundation/subject_record/composition/COMPOSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/composition/SECTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/composition/EVENT_CONTEXT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/composition/CONTENT_ITEM-section.adoc[leveloffset=+1]
+
+
+
+
+== Statement Package
+
+=== Overview 
+
+include::ROOT:example$bmm/foundation/subject_record/statement/statement-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/foundation/subject_record/statement/ENTRY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/ISM_TRANSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/INSTRUCTION_EXECUTION_TRANSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/ADMIN_ENTRY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/INSTRUCTION_DETAILS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/INSTRUCTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/INSTRUCTION_EXECUTION_STATE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/ACTIVITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/ACTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/EVALUATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/OBSERVATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/foundation/subject_record/statement/CARE_ENTRY-section.adoc[leveloffset=+1]
+
+
+
+
+

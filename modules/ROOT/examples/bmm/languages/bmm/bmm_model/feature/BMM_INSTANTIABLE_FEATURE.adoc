@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_INSTANTIABLE_FEATURE*
+
+h|*Description*
+2+a|Meta-type representing instantiable features, i.e. features that are created as value
+objects.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_feature[BMM_FEATURE]
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_signature_no_args: ¬ ∃ signature().arguments;
+
+
+|===

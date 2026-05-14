@@ -1,0 +1,35 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SIBLING_ORDER*
+
+h|*Description*
+2+a|Defines the order indicator that can be used on a `C_OBJECT` within a container attribute
+in a specialised archetype to indicate its order with respect to a sibling defined in a
+higher specialisation level.
+
+Misuse: This type cannot be used on a `C_OBJECT` other than one within a container
+attribute in a specialised archetype.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*is_before*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the order relationship is 'before', if False, it is 'after'.
+
+h|prop +
+  
+|*sibling_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Node identifier of sibling before or after which this node should come.
+
+h| func
+|*is_after* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if the order relationship is `after`, computed as the negation of `is_before`.
+
+|===

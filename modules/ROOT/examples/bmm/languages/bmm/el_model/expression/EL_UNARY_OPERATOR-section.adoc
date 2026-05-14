@@ -1,0 +1,21 @@
+
+=== Class EL_UNARY_OPERATOR
+
+[tabs]
+======
+Diff::
++
+include::EL_UNARY_OPERATOR.adoc[]
+
+Flat::
++
+include::EL_UNARY_OPERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::EL_UNARY_OPERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::EL_UNARY_OPERATOR-properties-flat.adoc[]
+======

@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_INTERVAL_VALUE<T:BMM_UNITARY_TYPE>*
+
+h|*Description*
+2+a|Meta-type for literal intervals of type `Interval<Ordered>`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_literal_value[BMM_LITERAL_VALUE]
+
+|===

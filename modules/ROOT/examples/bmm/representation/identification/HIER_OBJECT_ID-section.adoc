@@ -1,5 +1,5 @@
 
-=== class HIER_OBJECT_ID
+=== Class HIER_OBJECT_ID
 
 [tabs]
 ======

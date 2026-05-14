@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_CHAPTER
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_CHAPTER.adoc[]
+
+Flat::
++
+include::EXTRACT_CHAPTER-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_CHAPTER-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_CHAPTER-properties-flat.adoc[]
+======

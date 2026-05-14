@@ -1,0 +1,138 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_GENERIC_CLASS*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*generic_parameters*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_parameter_type[BMM_PARAMETER_TYPE]>
+a|List of formal generic parameters, keyed by name. These are defined either directly on
+this class or by the inclusion of an ancestor class which is generic.
+
+h| func
+|*type* : xref:languages:bmm-gen.adoc#_class_bmm_generic_type[BMM_GENERIC_TYPE]
+a|Generate a fully open `BMM_GENERIC_TYPE` instance that corresponds to this class
+definition
+
+h| func
+|*generic_parameter_conformance_type* ( +
+a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|For a generic class, type to which generic parameter `a_name` conforms e.g. if this class
+is `Interval <T:Comparable>` then the Result will be the single type `Comparable`. For an
+unconstrained type `T`, the Result will be `Any`.
+
+h|prop +
+  0..1
+|*ancestors*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of immediate inheritance parents.
+
+h|prop +
+  
+|*package*: xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]
+a|Package this class belongs to.
+
+h|prop +
+  
+|*source_schema_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference to original source schema defining this class. Useful for UI tools to determine
+which original schema file to open for a given class for manual editing.
+
+h|prop +
+  0..1
+|*immediate_descendants*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]>
+a|List of computed references to base classes of immediate inheritance descendants, derived
+when members of `ancestors` are attached at creation time.
+
+h|prop +
+  
+|*is_override*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this definition overrides a class of the same name in an included schema.
+
+h|prop +
+  0..1
+|*is_primitive*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this class represents a type considered to be primitive in the type system, i.e.
+any typically built-in or standard library type such as `String`, `Date`, `Map<K,V>` etc.
+
+h|prop +
+  0..1
+|*is_abstract*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this class is marked as abstract, i.e. direct instances cannot be created from its
+direct type.
+
+h| func
+|*all_ancestors* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|List of all inheritance parent class names, recursively.
+
+h| func
+|*all_descendants* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Compute all descendants by following `immediate_descendants`.
+
+h| func
+|*flat_properties* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_property[BMM_PROPERTY]>
+a|List of all properties due to current and ancestor classes, keyed by property name.
+
+h| func
+|*package_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Fully qualified package name, of form: `package.package`.
+
+h| func
+|*class_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Fully qualified class name, of form: `package.package.CLASS` with package path in lower-
+case and class in original case.
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
+a|Model within which module is defined.
+
+h|prop +
+  0..1
+|*feature_groups*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]>
+a|List of feature groups in this class.
+
+h|prop +
+  0..1
+|*features*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]>
+a|Features of this module.
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h| func
+|*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = (scope = self);
+
+a|True if this model element is the root of a model structure hierarchy.
+
+|===

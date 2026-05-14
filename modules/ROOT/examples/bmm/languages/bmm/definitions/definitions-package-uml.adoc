@@ -1,0 +1,39 @@
+
+.definitions Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_DEFINITIONS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_definitions]] {
+        .. definitions ..
+        Bmm_internal_version:String
+        Schema_name_delimiter:String
+        Package_name_delimiter:String
+        Bmm_schema_file_extension:String
+        Type_delimiter:Character
+        Generic_left_delimiter:Character
+        Generic_right_delimiter:Character
+        Generic_separator:Character
+        Generic_constraint_delimiter:Character
+        Tuple_left_delim:Character
+        Tuple_right_delim:Character
+        Tuple_separator:Character
+        Constraint_left_delim:Character
+        Constraint_right_delim:Character
+        Metadata_bmm_version:String
+        Metadata_schema_name:String
+        Metadata_rm_publisher:String
+        Metadata_rm_release:String
+        Metadata_schema_revision:String
+        Metadata_schema_lifecycle_state:String
+        Metadata_schema_description:String
+        Metadata_schema_path:String
+        Any_class:BMM_SIMPLE_CLASS
+        .. factory ..
+        create_schema_id(a_model_publisher: String, a_schema_name: String, a_model_release: String):String
+}
+
+
+....

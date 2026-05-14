@@ -1,0 +1,90 @@
+
+.class Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_SIMPLE_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_simple_class]] {
+        .. access ..
+        type:BMM_SIMPLE_TYPE
+}
+
+BMM_SIMPLE_CLASS -[#gray]up-|> BMM_CLASS  
+
+
+class BMM_ENUMERATION_STRING [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration_string]] {
+        .. access ..
+        item_values: List<BMM_STRING_VALUE>
+}
+
+BMM_ENUMERATION_STRING -[#gray]up-|> BMM_ENUMERATION  
+
+
+class BMM_GENERIC_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_generic_class]] {
+        .. access ..
+        generic_parameters: Map<String,BMM_PARAMETER_TYPE>
+        type:BMM_GENERIC_TYPE
+        generic_parameter_conformance_type(a_name: String):String
+}
+
+BMM_GENERIC_CLASS -[#gray]up-|> BMM_CLASS  
+
+
+class BMM_ENUMERATION_INTEGER [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration_integer]] {
+        .. access ..
+        item_values: List<BMM_INTEGER_VALUE>
+}
+
+BMM_ENUMERATION_INTEGER -[#gray]up-|> BMM_ENUMERATION  
+
+
+abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_class]] {
+        .. access ..
+        ancestors: List<String>
+        package: BMM_PACKAGE
+        source_schema_id: String
+        immediate_descendants: List<BMM_CLASS>
+        is_override: Boolean
+        is_primitive: Boolean
+        is_abstract: Boolean
+        type:BMM_MODEL_TYPE
+        all_ancestors:List<String>
+        all_descendants:List<String>
+        flat_properties:List<BMM_PROPERTY>
+        package_path:String
+        class_path:String
+}
+
+BMM_CLASS -[#gray]up-|> BMM_MODULE  
+
+
+class BMM_ENUMERATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration]] {
+        .. access ..
+        item_names: List<String>
+        item_values: List<BMM_PRIMITIVE_VALUE<BMM_UNITARY_TYPE>>
+}
+
+BMM_ENUMERATION -[#gray]up-|> BMM_SIMPLE_CLASS  
+
+
+class BMM_VALUE_SET_SPEC [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_value_set_spec]] {
+        .. access ..
+        resource_id: String
+        value_set_id: String
+}
+
+
+class BMM_FEATURE_GROUP [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_feature_group]] {
+        .. access ..
+        name: String
+        properties: Map<String,String>
+        features: List<BMM_FEATURE>
+        visibility: BMM_VISIBILITY
+}
+
+abstract class "languages.bmm.bmm_model.model.\nBMM_MODULE" as BMM_MODULE  [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_module]] #FDFDFD {
+}
+
+....

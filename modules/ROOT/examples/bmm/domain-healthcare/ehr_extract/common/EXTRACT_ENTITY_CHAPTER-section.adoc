@@ -1,0 +1,21 @@
+
+=== Class EXTRACT_ENTITY_CHAPTER
+
+[tabs]
+======
+Diff::
++
+include::EXTRACT_ENTITY_CHAPTER.adoc[]
+
+Flat::
++
+include::EXTRACT_ENTITY_CHAPTER-flat.adoc[]
+
+Props(diff)::
++
+include::EXTRACT_ENTITY_CHAPTER-properties.adoc[]
+
+Props(flat)::
++
+include::EXTRACT_ENTITY_CHAPTER-properties-flat.adoc[]
+======

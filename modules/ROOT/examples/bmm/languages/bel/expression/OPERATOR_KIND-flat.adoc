@@ -1,0 +1,221 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enum OPERATOR_KIND*
+
+
+h|
+2+^h|*Feature Group "values"*
+
+h|
+|*op_eq* = eq
+a|
+Equality (equals) operator.
+
+
+
+h|
+|*op_ne* = ne
+a|
+Inequality (not-equals) operator.
+
+
+
+h|
+|*op_lt* = lt
+a|
+Less than operator.
+
+
+
+h|
+|*op_le* = le
+a|
+Less than or equals operator.
+
+
+
+h|
+|*op_gt* = gt
+a|
+Greater than operator.
+
+
+
+h|
+|*op_ge* = ge
+a|
+Greater than or equals operator.
+
+
+
+h|
+|*op_matches* = matches
+a|
+Matches operator.
+
+
+
+h|
+|*op_not* = not
+a|
+Logical negation (not) operator.
+
+
+
+h|
+|*op_and* = and
+a|
+Logical conjunction (and) operator.
+
+
+
+h|
+|*op_or* = or
+a|
+Logical inclusive disjunction (or) operator.
+
+
+
+h|
+|*op_xor* = xor
+a|
+Logical exclusive disjunction (exclusive or) operator.
+
+
+
+h|
+|*op_implies* = implies
+a|
+Logical implication (implies) operator.
+
+
+
+h|
+|*op_for_all* = for_all
+a|
+Universal quantification operator.
+
+
+
+h|
+|*op_exists* = exists
+a|
+Existential quantification operator.
+
+
+
+h|
+|*op_plus* = plus
+a|
+Arithmetic addition (plus) operator.
+
+
+
+h|
+|*op_minus* = minus
+a|
+Arithmetic subtraction (minus) operator.
+
+
+
+h|
+|*op_multiply* = multiply
+a|
+Arithmetic multiplication (times) operator.
+
+
+
+h|
+|*op_divide* = divide
+a|
+Arithmetic division (divided-by) operator.
+
+
+
+h|
+|*op_modulo* = modulo
+a|
+Arithmetic modulo operator.
+
+
+
+h|
+|*op_exponent* = exponent
+a|
+Arithmetic exponent (to the power of) operator.
+
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string is empty, i.e. equal to "".
+
+h| func
+|*is_integer* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if string can be parsed as an integer.
+
+h| func
+|*as_integer* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|Return the integer corresponding to the integer value represented in this string.
+
+h| func
+|*contains* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return True if this String contains `other` (case-sensitive).
+
+h|
+2+^h|*Feature Group "operators"*
+
+h| func
+|*append* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String] +
+  *alias* +
+
+a|Concatenation operator - causes `other` to be appended to this string.
+
+h| func
+|*less_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <
+
+a|Lexical comparison of string content based on ordering in relevant character set.
+
+h| func
+|*less_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* <=, ≤
+ +
+ +
+  *post_cond* +
+    valid_result: ¬ (other < self);
+
+a|True if current object less than or equal to `other`.
+
+h| func
+|*greater_than* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other < self);
+
+a|True if current object greater than `other`.
+
+h| func
+|*greater_than_or_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* >=, ≥
+ +
+ +
+  *post_cond* +
+    valid_result: Result = (other <= self);
+
+a|True if current object greater than or equal to `other`.
+
+|===

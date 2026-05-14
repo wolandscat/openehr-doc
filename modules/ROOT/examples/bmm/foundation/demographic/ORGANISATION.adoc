@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class ORGANISATION*
@@ -10,6 +10,6 @@ whose existence (in general) outlives the existence of parties considered to be 
 of it.
 
 h|*Inherit*
-2+|xref:foundation:foundation-demographic.adoc#_class_actor[ACTOR]
+2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 |===

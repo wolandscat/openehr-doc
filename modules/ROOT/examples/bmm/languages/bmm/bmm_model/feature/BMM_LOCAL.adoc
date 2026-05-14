@@ -1,0 +1,13 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_LOCAL*
+
+h|*Description*
+2+a|A routine local variable (writable).
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_writable_variable[BMM_WRITABLE_VARIABLE]
+
+|===

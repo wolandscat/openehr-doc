@@ -1,0 +1,21 @@
+
+=== Class BMM_LOCAL
+
+[tabs]
+======
+Diff::
++
+include::BMM_LOCAL.adoc[]
+
+Flat::
++
+include::BMM_LOCAL-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_LOCAL-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_LOCAL-properties-flat.adoc[]
+======

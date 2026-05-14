@@ -1,5 +1,5 @@
 
-=== class LOCATABLE_REF
+=== Class LOCATABLE_REF
 
 [tabs]
 ======

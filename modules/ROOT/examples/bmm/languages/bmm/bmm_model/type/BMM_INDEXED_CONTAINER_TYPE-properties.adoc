@@ -1,0 +1,17 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_INDEXED_CONTAINER_TYPE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*index_type*: xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
+a|Type of the element index, typically `String` or `Integer`, but may be a numeric type or
+indeed any type from which a hash value can be derived.
+
+|===

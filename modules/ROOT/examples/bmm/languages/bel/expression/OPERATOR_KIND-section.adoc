@@ -1,0 +1,21 @@
+
+=== Enum OPERATOR_KIND
+
+[tabs]
+======
+Diff::
++
+include::OPERATOR_KIND.adoc[]
+
+Flat::
++
+include::OPERATOR_KIND-flat.adoc[]
+
+Props(diff)::
++
+include::OPERATOR_KIND-properties.adoc[]
+
+Props(flat)::
++
+include::OPERATOR_KIND-properties-flat.adoc[]
+======

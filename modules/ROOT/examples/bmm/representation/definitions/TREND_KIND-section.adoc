@@ -1,5 +1,5 @@
 
-=== enum TREND_KIND
+=== Enum TREND_KIND
 
 [tabs]
 ======

@@ -1,5 +1,5 @@
 
-=== class ENTRY
+=== Class ENTRY
 
 [tabs]
 ======

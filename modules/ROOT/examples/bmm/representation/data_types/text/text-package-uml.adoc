@@ -1,28 +1,27 @@
 
 .text Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class DV_PARAGRAPH [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_paragraph]] {
+class DV_PARAGRAPH [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_paragraph]] {
         .. access ..
+        items: List<DV_TEXT>
 }
 
-DATA_VALUE <|-[#gray]- DV_PARAGRAPH
+DV_PARAGRAPH -[#gray]up-|> DATA_VALUE  
 
 
-DV_PARAGRAPH *--> "0..* items" DV_TEXT
-
-enum TEXT_FORMAT_TYPES [[/splashlang-doc/latest/representation/representation-data_types.html#_class_text_format_types]] {
+enum TEXT_FORMAT_TYPES [[/openehr-doc/latest/representation/data_types-gen.html#_class_text_format_types]] {
         .. values ..
         plain = 0
         plain_no_newlines = 1
         markdown = 2
 }
 
-class TERM_MAPPING [[/splashlang-doc/latest/representation/representation-data_types.html#_class_term_mapping]] {
+class TERM_MAPPING [[/openehr-doc/latest/representation/data_types-gen.html#_class_term_mapping]] {
         .. access ..
         match: Character
         narrower:Boolean
@@ -32,42 +31,43 @@ class TERM_MAPPING [[/splashlang-doc/latest/representation/representation-data_t
         is_valid_match_code(c: Character):Boolean
 }
 
+
 TERM_MAPPING *--> "0..1 purpose" DV_CODED_TEXT
 
 TERM_MAPPING *--> "1 target" CODE_PHRASE
 
-class CODE_PHRASE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_code_phrase]] {
+class CODE_PHRASE [[/openehr-doc/latest/representation/data_types-gen.html#_class_code_phrase]] {
         .. access ..
         terminology_id: TERMINOLOGY_ID
         code_string: String
         preferred_term: String
 }
 
-class DV_CODED_TEXT [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_coded_text]] {
+
+class DV_CODED_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_coded_text]] {
         .. access ..
 }
 
-DV_TEXT <|-[#gray]- DV_CODED_TEXT
+DV_CODED_TEXT -[#gray]up-|> DV_TEXT  
 
 
 DV_CODED_TEXT *--> "1 defining_code" CODE_PHRASE
 
-class DV_TEXT [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_text]] {
+class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_text]] {
         .. access ..
         value: String
         hyperlink: DV_URI
         formatting: String
+        mappings: List<TERM_MAPPING>
 }
 
-DATA_VALUE <|-[#gray]- DV_TEXT
+DV_TEXT -[#gray]up-|> DATA_VALUE  
 
-
-DV_TEXT *--> "0..* mappings" TERM_MAPPING
 
 DV_TEXT *--> "0..1 language" CODE_PHRASE
 
 DV_TEXT *--> "0..1 encoding" CODE_PHRASE
-abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] #FDFDFD {
+abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/openehr-doc/latest/representation/data_types-gen.html#_class_data_value]] #FDFDFD {
 }
 
 ....

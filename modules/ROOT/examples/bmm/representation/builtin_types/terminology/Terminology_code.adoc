@@ -1,5 +1,5 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class Terminology_code*
@@ -10,34 +10,34 @@ of a terminology identifier, optional version, and a code or code string from th
 terminology.
 
 h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_any[Any]
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*
 
 h|prop +
   
-|*terminology_id*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*terminology_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The archetype environment namespace identifier used to identify a terminology. Typically a
 value like `"snomed_ct"` that is mapped elsewhere to the full URI identifying the
 terminology.
 
 h|prop +
   0..1
-|*terminology_version*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*terminology_version*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional string value representing terminology version, typically a date or dotted
 numeric.
 
 h|prop +
   
-|*code_string*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*code_string*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|A terminology code or post-coordinated code expression, if supported by the terminology.
 The code may refer to a single term, a value set consisting of multiple terms, or some
 other entity representable within the terminology.
 
 h|prop +
   0..1
-|*uri*: xref:representation:representation-builtin_types.adoc#_class_uri[Uri]
+|*uri*: xref:representation:builtin_types-gen.adoc#_class_uri[Uri]
 a|The URI reference that may be used as a concrete key into a notional terminology service
 for queries that can obtain the term text, definition, and other associated elements.
 

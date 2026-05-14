@@ -1,0 +1,89 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ARCHETYPE_SLOT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*includes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bel-gen.adoc#_class_assertion[ASSERTION]>
+a|List of constraints defining other archetypes that could be included at this point.
+Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
+matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
+
+h|prop +
+  0..1
+|*excludes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bel-gen.adoc#_class_assertion[ASSERTION]>
+a|List of constraints defining other archetypes that cannot be included at this point.
+Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
+matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
+
+h|prop +
+  
+|*is_closed*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this slot specification in this artefact is closed to further filling either in
+further specialisations or at runtime. Default value False, i.e. unless explicitly set, a
+slot remains open.
+
+h|prop +
+  
+|*rm_type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Reference model type that this node corresponds to.
+
+h|prop +
+  0..1
+|*occurrences*: xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
+a|Occurrences of this object node in the data, under the owning attribute. Upper limit can
+only be greater than 1 if owning attribute has a cardinality of more than 1. Only set if
+it overrides the parent archetype in the case of specialised archetypes, or else the
+occurrences inferred from the underlying reference model existence and/or cardinality of
+the containing attribute.
+
+h|prop +
+  
+|*node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Semantic identifier of this node, used to distinguish sibling nodes. All nodes must have a
+`node_id`; for nodes under a container `C_ATTRIBUTE`. For at-coded archetypes
+`node_id` must be an at-code defined in the archetype terminology and for valid
+structures all node ids are at-codes. For id-coded archetypes `node_id` must be an id-
+code defined in the archetype terminology and for valid structures all node ids are id-
+codes.
+
+For `C_PRIMITIVE_OBJECTs` represented in ADL inline form, this attribute will have the
+special value `Primitive_node_id`; otherwise it will have the node id read during parsing.
+
+h|prop +
+  0..1
+|*alternative_ids*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Additional identifiers of this node. openEHR archetypes can carry original ALD2 id-codes
+in this attribute and it can also carry human readable codes for future use. Alternative
+ids must be unique within the archetype.
+
+h|prop +
+  0..1
+|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node and by implication all sub-nodes are deprecated for use.
+
+h|prop +
+  0..1
+|*sibling_order*: xref:languages:aom2-gen.adoc#_class_sibling_order[SIBLING_ORDER]
+a|Optional indicator of order of this node with respect to another sibling. Only meaningful
+in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
+True`.
+
+h|prop +
+  0..1
+|*parent*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
+a|Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
+archetype definition.
+
+h|prop +
+  0..1
+|*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
+a|
+
+|===

@@ -1,0 +1,60 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_READONLY_VARIABLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*scope*: xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
+a|Routine within which variable is defined.
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Declared or inferred static type of the entity.
+
+h|prop +
+  
+|*is_nullable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this element can be null (Void) at execution time. May be interpreted as
+optionality in subtypes..
+
+h|prop +
+  
+|*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Name of this model element.
+
+h|prop +
+  0..1
+|*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional documentation of this element, as a keyed list.
+
+It is strongly recommended to use the following key /type combinations for the relevant
+purposes:
+
+* `"purpose": String`
+* `"keywords": List<String>`
+* `"use": String`
+* `"misuse": String`
+* `"references": String`
+
+Other keys and value types may be freely added.
+
+h|prop +
+  0..1
+|*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
+a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_not_nullable: ¬ is_nullable;
+
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class BMM_PROPERTY
+
+[tabs]
+======
+Diff::
++
+include::BMM_PROPERTY.adoc[]
+
+Flat::
++
+include::BMM_PROPERTY-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_PROPERTY-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_PROPERTY-properties-flat.adoc[]
+======

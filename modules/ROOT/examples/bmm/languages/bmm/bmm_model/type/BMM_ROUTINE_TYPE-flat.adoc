@@ -1,0 +1,63 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_ROUTINE_TYPE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*argument_types*: xref:languages:bmm-gen.adoc#_class_bmm_tuple_type[BMM_TUPLE_TYPE]
+a|Type of arguments in the signature, if any; represented as a type-tuple (list of arbitrary
+types).
+
+h|prop +
+  
+|*result_type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
+a|Result type of signature.
+
+h| func
+|*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|Return the logical set (i.e. unique items) consisting of
+`argument_types.flattened_type_list_()` and `result_type.flattened_type_list_()`.
+
+h|prop +
+  
+|*base_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Base name (built-in typename).
+
+h| func
+|*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return False.
+
+h| func
+|*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Return True.
+
+h| func
+|*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return `base_name`.
+
+h| func
+|*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Return `base_name`.
+
+h| func
+|*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
+a|Result = self.
+
+h| func
+|*unitary_type* : xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
+a|Result = self.
+
+h| func
+|*type_signature* : xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Signature form of the type name, which for generics includes generic parameter constrainer
+types E.g. `Interval<T:Ordered>`.
+
+Defaults to the value of `type_name()`.
+
+|===

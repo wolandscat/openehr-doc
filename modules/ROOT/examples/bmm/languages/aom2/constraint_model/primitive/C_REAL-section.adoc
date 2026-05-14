@@ -1,0 +1,21 @@
+
+=== Class C_REAL
+
+[tabs]
+======
+Diff::
++
+include::C_REAL.adoc[]
+
+Flat::
++
+include::C_REAL-flat.adoc[]
+
+Props(diff)::
++
+include::C_REAL-properties.adoc[]
+
+Props(flat)::
++
+include::C_REAL-properties-flat.adoc[]
+======

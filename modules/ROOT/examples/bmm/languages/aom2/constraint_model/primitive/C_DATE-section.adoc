@@ -1,0 +1,21 @@
+
+=== Class C_DATE
+
+[tabs]
+======
+Diff::
++
+include::C_DATE.adoc[]
+
+Flat::
++
+include::C_DATE-flat.adoc[]
+
+Props(diff)::
++
+include::C_DATE-properties.adoc[]
+
+Props(flat)::
++
+include::C_DATE-properties-flat.adoc[]
+======

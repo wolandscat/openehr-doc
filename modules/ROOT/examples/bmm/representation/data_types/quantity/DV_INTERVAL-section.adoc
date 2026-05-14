@@ -1,5 +1,5 @@
 
-=== class DV_INTERVAL
+=== Class DV_INTERVAL
 
 [tabs]
 ======

@@ -1,5 +1,5 @@
 
-=== class RESOURCE_DESCRIPTION_ITEM
+=== Class RESOURCE_DESCRIPTION_ITEM
 
 [tabs]
 ======

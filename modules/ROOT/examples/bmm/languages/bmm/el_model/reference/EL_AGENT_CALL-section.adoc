@@ -1,0 +1,21 @@
+
+=== Class EL_AGENT_CALL
+
+[tabs]
+======
+Diff::
++
+include::EL_AGENT_CALL.adoc[]
+
+Flat::
++
+include::EL_AGENT_CALL-flat.adoc[]
+
+Props(diff)::
++
+include::EL_AGENT_CALL-properties.adoc[]
+
+Props(flat)::
++
+include::EL_AGENT_CALL-properties-flat.adoc[]
+======

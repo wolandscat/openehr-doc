@@ -1,0 +1,18 @@
+
+.bel Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package expression {
+}
+
+package statement {
+}
+
+package type {
+}
+
+....

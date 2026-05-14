@@ -1,0 +1,24 @@
+
+.foundation Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package physical_entity.occurrent {
+}
+
+package subject_record.composition {
+}
+
+package subject_record.statement {
+}
+
+package integration {
+}
+
+package demographic {
+}
+
+....

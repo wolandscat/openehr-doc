@@ -1,5 +1,5 @@
 
-=== class ITEM_LIST
+=== Class ITEM_LIST
 
 [tabs]
 ======

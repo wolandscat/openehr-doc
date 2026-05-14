@@ -1,5 +1,5 @@
 
-=== class DV_URI
+=== Class DV_URI
 
 [tabs]
 ======

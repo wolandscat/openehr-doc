@@ -1,0 +1,21 @@
+
+=== Class C_ATTRIBUTE
+
+[tabs]
+======
+Diff::
++
+include::C_ATTRIBUTE.adoc[]
+
+Flat::
++
+include::C_ATTRIBUTE-flat.adoc[]
+
+Props(diff)::
++
+include::C_ATTRIBUTE-properties.adoc[]
+
+Props(flat)::
++
+include::C_ATTRIBUTE-properties-flat.adoc[]
+======

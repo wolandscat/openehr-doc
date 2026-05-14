@@ -1,0 +1,21 @@
+
+=== Class VALUE_SET
+
+[tabs]
+======
+Diff::
++
+include::VALUE_SET.adoc[]
+
+Flat::
++
+include::VALUE_SET-flat.adoc[]
+
+Props(diff)::
++
+include::VALUE_SET-properties.adoc[]
+
+Props(flat)::
++
+include::VALUE_SET-properties-flat.adoc[]
+======

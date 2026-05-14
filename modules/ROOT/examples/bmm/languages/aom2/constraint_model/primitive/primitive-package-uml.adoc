@@ -1,0 +1,219 @@
+
+.primitive Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class C_PRIMITIVE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_tuple]] {
+        .. access ..
+        members: List<C_PRIMITIVE_OBJECT>
+        c_conforms_to(other: C_PRIMITIVE_TUPLE, rmcc: (String, String) -> Boolean):Boolean
+        c_congruent_to(other: C_SECOND_ORDER):Boolean
+}
+
+C_PRIMITIVE_TUPLE -[#gray]up-|> C_SECOND_ORDER  
+
+
+class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
+        .. access ..
+        constraint: List<Interval<Iso8601_time>>
+        default_value: Iso8601_time
+        assumed_value: Iso8601_time
+        minute_validity:VALIDITY_KIND
+        second_validity:VALIDITY_KIND
+        millisecond_validity:VALIDITY_KIND
+        timezone_validity:VALIDITY_KIND
+        valid_pattern_constraint(a_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+}
+
+C_TIME -[#gray]up-|> C_TEMPORAL  
+
+
+class C_DATE_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date_time]] {
+        .. access ..
+        constraint: List<Interval<Iso8601_date_time>>
+        default_value: Iso8601_date_time
+        assumed_value: Iso8601_date_time
+        valid_pattern_constraint(a_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        month_validity:VALIDITY_KIND
+        day_validity:VALIDITY_KIND
+        minute_validity:VALIDITY_KIND
+        second_validity:VALIDITY_KIND
+        millisecond_validity:VALIDITY_KIND
+        timezone_validity:VALIDITY_KIND
+}
+
+C_DATE_TIME -[#gray]up-|> C_TEMPORAL  
+
+
+class C_DURATION [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_duration]] {
+        .. access ..
+        constraint: List<Interval<Iso8601_duration>>
+        default_value: Iso8601_duration
+        assumed_value: Iso8601_duration
+        years_allowed:Boolean
+        months_allowed:Boolean
+        weeks_allowed:Boolean
+        days_allowed:Boolean
+        hours_allowed:Boolean
+        minutes_allowed:Boolean
+        seconds_allowed:Boolean
+        valid_pattern_constraint(a_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+}
+
+C_DURATION -[#gray]up-|> C_TEMPORAL  
+
+
+abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal]] {
+        .. access ..
+        pattern_constraint: String
+        valid_pattern_constraint(a_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        any_allowed:Boolean
+        c_value_conforms_to(other: C_ORDERED<T>):Boolean
+        c_value_congruent_to(other: C_ORDERED<T>):Boolean
+}
+
+C_TEMPORAL -[#gray]up-|> C_ORDERED  
+
+
+class C_REAL [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_real]] {
+        .. access ..
+        constraint: List<Interval<Real>>
+        default_value: Real
+        assumed_value: Real
+}
+
+C_REAL -[#gray]up-|> C_ORDERED  
+
+
+class C_STRING [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_string]] {
+        .. access ..
+        constraint: List<String>
+        default_value: String
+        assumed_value: String
+        prototype_value:String
+        valid_value(a_value: String):Boolean
+        any_allowed:Boolean
+        c_value_conforms_to(other: C_STRING):Boolean
+        c_value_congruent_to(other: C_STRING):Boolean
+}
+
+C_STRING -[#gray]up-|> C_PRIMITIVE_OBJECT  
+
+
+abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_object]] {
+        .. access ..
+        assumed_value: Any
+        is_enumerated_type_constraint: Boolean
+        constraint: Any
+        has_assumed_value:Boolean
+        constrained_typename:String
+        c_conforms_to(other: C_PRIMITIVE_OBJECT, rmcc: (String, String) -> Boolean):Boolean
+        c_value_conforms_to(other: C_PRIMITIVE_OBJECT):Boolean
+        c_congruent_to(other: C_PRIMITIVE_OBJECT):Boolean
+        c_value_congruent_to(other: C_PRIMITIVE_OBJECT):Boolean
+}
+
+C_PRIMITIVE_OBJECT -[#gray]up-|> C_DEFINED_OBJECT  
+
+
+class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_terminology_code]] {
+        .. access ..
+        constraint: String
+        assumed_value: Terminology_code
+        default_value: Terminology_code
+        constraint_status: CONSTRAINT_STATUS
+        constraint_required:Boolean
+        effective_constraint_status:Integer
+        value_set_expanded:List<String>
+        value_set_substituted:List<Uri>
+        value_set_resolved:List<Terminology_code>
+        valid_value(a_value: Terminology_code):Boolean
+        prototype_value:Terminology_code
+        any_allowed:Boolean
+        c_value_conforms_to(other: C_TERMINOLOGY_CODE):Boolean
+        c_value_congruent_to(other: C_TERMINOLOGY_CODE):Boolean
+}
+
+C_TERMINOLOGY_CODE -[#gray]up-|> C_PRIMITIVE_OBJECT  
+
+
+class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
+        .. access ..
+        constraint: List<Interval<Iso8601_date>>
+        default_value: Iso8601_date
+        assumed_value: Iso8601_date
+        month_validity:VALIDITY_KIND
+        day_validity:VALIDITY_KIND
+        valid_pattern_constraint(a_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+}
+
+C_DATE -[#gray]up-|> C_TEMPORAL  
+
+
+class C_INTEGER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_integer]] {
+        .. access ..
+        constraint: List<Interval<Integer>>
+        default_value: Integer
+        assumed_value: Integer
+}
+
+C_INTEGER -[#gray]up-|> C_ORDERED  
+
+
+class C_TEMPORAL_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal_definitions]] {
+        .. values ..
+        Valid_date_constraint_patterns:List<String>
+        Valid_date_constraint_replacements:Map<String,List<String>>
+        Valid_time_constraint_patterns:List<String>
+        Valid_time_constraint_replacements:Map<String,List<String>>
+        Valid_date_time_constraint_patterns:List<String>
+        Valid_date_time_constraint_replacements:Map<String,List<String>>
+        .. access ..
+        valid_duration_constraint_replacement(a_dur: String, other_dur: String):Boolean
+        valid_iso8601_date_constraint_pattern(s: String):Boolean
+        valid_iso8601_time_constraint_pattern(s: String):Boolean
+        valid_iso8601_date_time_constraint_pattern(s: String):Boolean
+        valid_iso8601_duration_constraint_pattern(s: String):Boolean
+}
+
+
+class C_BOOLEAN [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_boolean]] {
+        .. access ..
+        constraint: List<Boolean>
+        assumed_value: Boolean
+        default_value: Boolean
+        prototype_value:Boolean
+        any_allowed:Boolean
+        c_value_conforms_to(other: C_BOOLEAN):Boolean
+        c_value_congruent_to(other: C_BOOLEAN):Boolean
+}
+
+C_BOOLEAN -[#gray]up-|> C_PRIMITIVE_OBJECT  
+
+
+abstract class C_ORDERED<T:Ordered> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_ordered]] {
+        .. access ..
+        constraint: List<Interval<T>>
+        default_value: T
+        assumed_value: T
+        any_allowed:Boolean
+        c_value_conforms_to(other: C_ORDERED<T>):Boolean
+        c_value_congruent_to(other: C_ORDERED<T>):Boolean
+}
+
+C_ORDERED -[#gray]up-|> C_PRIMITIVE_OBJECT  
+
+abstract class "languages.aom2.constraint_model.complex.\nC_SECOND_ORDER" as C_SECOND_ORDER  [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_second_order]] #FDFDFD {
+}
+abstract class "languages.aom2.constraint_model.complex.\nC_DEFINED_OBJECT" as C_DEFINED_OBJECT  [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_defined_object]] #FDFDFD {
+}
+
+....

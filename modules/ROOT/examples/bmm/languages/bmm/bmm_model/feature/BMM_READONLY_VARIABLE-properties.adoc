@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class BMM_READONLY_VARIABLE*
+
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_not_nullable: ¬ is_nullable;
+
+
+|===

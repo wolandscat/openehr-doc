@@ -1,0 +1,35 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_MODEL*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*class_definitions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|All classes in this model, keyed by type name.
+
+h|prop +
+  0..1
+|*used_models*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]>
+a|List of other models 'used' (i.e. 'imported' by this model). Classes in the current model
+may refer to classes in a used model by specifying the other class's `scope` meta-
+attribute.
+
+h|prop +
+  0..1
+|*modules*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
+a|All classes in this model, keyed by type name.
+
+h|*Invariants*
+2+a|
+
+h|
+2+a|inv_top_level_scope: scope = self;
+
+
+|===

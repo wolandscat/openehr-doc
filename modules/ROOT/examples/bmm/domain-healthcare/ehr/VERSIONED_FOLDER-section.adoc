@@ -1,0 +1,21 @@
+
+=== Class VERSIONED_FOLDER
+
+[tabs]
+======
+Diff::
++
+include::VERSIONED_FOLDER.adoc[]
+
+Flat::
++
+include::VERSIONED_FOLDER-flat.adoc[]
+
+Props(diff)::
++
+include::VERSIONED_FOLDER-properties.adoc[]
+
+Props(flat)::
++
+include::VERSIONED_FOLDER-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_READONLY_VARIABLE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*definition*: xref:languages:bmm-gen.adoc#_class_bmm_readonly_variable[BMM_READONLY_VARIABLE]
+a|Variable definition to which this reference refers.
+
+h|prop +
+  
+|*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Defined to return False in all cases.
+
+|===

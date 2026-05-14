@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_SIMPLE_CLASS*
+
+h|*Description*
+2+a|Definition of a simple class, i.e. a class that has no generic parameters and is 1:1 with
+the type it generates.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
+
+h|
+2+^h|*Feature Group "access"*
+
+h| func
+|*type* : xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
+a|Generate a type object that represents the type of this class. Can only be an instance of
+`BMM_SIMPLE_TYPE` or a descendant.
+
+|===

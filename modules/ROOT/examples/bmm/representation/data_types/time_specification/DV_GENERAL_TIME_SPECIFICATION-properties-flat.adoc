@@ -1,0 +1,16 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class DV_GENERAL_TIME_SPECIFICATION*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*value*: xref:representation:data_types-gen.adoc#_class_dv_parsable[DV_PARSABLE]
+a|The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types.
+
+|===

@@ -1,5 +1,5 @@
 
-=== class DV_QUANTITY
+=== Class DV_QUANTITY
 
 [tabs]
 ======

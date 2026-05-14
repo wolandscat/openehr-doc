@@ -1,0 +1,21 @@
+
+=== Class EXPR_FUNCTION_CALL
+
+[tabs]
+======
+Diff::
++
+include::EXPR_FUNCTION_CALL.adoc[]
+
+Flat::
++
+include::EXPR_FUNCTION_CALL-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_FUNCTION_CALL-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_FUNCTION_CALL-properties-flat.adoc[]
+======

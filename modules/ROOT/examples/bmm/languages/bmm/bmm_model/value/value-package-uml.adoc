@@ -1,0 +1,74 @@
+
+.value Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class BMM_INTEGER_VALUE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_integer_value]] {
+        .. access ..
+        value: Integer
+}
+
+BMM_INTEGER_VALUE -[#gray]up-|> BMM_PRIMITIVE_VALUE  
+
+
+abstract class BMM_LITERAL_VALUE<T:BMM_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_literal_value]] {
+        .. access ..
+        value_literal: String
+        value: Any
+        syntax: String
+        type: T
+}
+
+
+abstract class BMM_UNITARY_VALUE<T:BMM_UNITARY_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_unitary_value]] {
+}
+
+BMM_UNITARY_VALUE -[#gray]up-|> BMM_LITERAL_VALUE  
+
+
+class BMM_INDEXED_CONTAINER_VALUE<T:BMM_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_indexed_container_value]] {
+}
+
+BMM_INDEXED_CONTAINER_VALUE -[#gray]up-|> BMM_LITERAL_VALUE  
+
+
+class BMM_BOOLEAN_VALUE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_boolean_value]] {
+        .. access ..
+        value: Boolean
+}
+
+BMM_BOOLEAN_VALUE -[#gray]up-|> BMM_PRIMITIVE_VALUE  
+
+
+class BMM_PRIMITIVE_VALUE<T:BMM_UNITARY_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_primitive_value]] {
+        .. access ..
+        type: BMM_SIMPLE_TYPE
+}
+
+BMM_PRIMITIVE_VALUE -[#gray]up-|> BMM_UNITARY_VALUE  
+
+
+class BMM_INTERVAL_VALUE<T:BMM_UNITARY_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_interval_value]] {
+}
+
+BMM_INTERVAL_VALUE -[#gray]up-|> BMM_LITERAL_VALUE  
+
+
+class BMM_CONTAINER_VALUE<T:BMM_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_container_value]] {
+}
+
+BMM_CONTAINER_VALUE -[#gray]up-|> BMM_LITERAL_VALUE  
+
+
+class BMM_STRING_VALUE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_string_value]] {
+        .. access ..
+        value: String
+}
+
+BMM_STRING_VALUE -[#gray]up-|> BMM_PRIMITIVE_VALUE  
+
+
+....

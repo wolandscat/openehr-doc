@@ -1,0 +1,24 @@
+
+.ehr_extract Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+package common {
+}
+
+package openehr_extract {
+}
+
+package generic_extract {
+}
+
+package sync_extract {
+}
+
+package message {
+}
+
+....

@@ -1,0 +1,3 @@
+.Domain-healthcare
+* xref:domain-healthcare:ehr-gen.adoc[]
+* xref:domain-healthcare:ehr_extract-gen.adoc[]

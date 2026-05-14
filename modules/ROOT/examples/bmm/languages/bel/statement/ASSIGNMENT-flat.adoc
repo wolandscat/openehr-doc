@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ASSIGNMENT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*target*: xref:languages:bel-gen.adoc#_class_variable_declaration[VARIABLE_DECLARATION]
+a|The target variable on the notional left-hand side of this assignment.
+
+h|prop +
+  
+|*source*: xref:languages:bel-gen.adoc#_class_expr_value[EXPR_VALUE]
+a|Source right hand side) of the assignment.
+
+|===

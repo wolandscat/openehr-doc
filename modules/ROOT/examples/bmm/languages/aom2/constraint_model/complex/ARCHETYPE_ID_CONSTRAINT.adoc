@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ARCHETYPE_ID_CONSTRAINT*
+
+h|*Description*
+2+a|Constraint expression representing a regex constraint on an archetype identifier.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*constraint*: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]
+a|Right hand side of the constraint expression, in the form of a `C_STRING`, i.e. string
+value constrainer.
+
+|===

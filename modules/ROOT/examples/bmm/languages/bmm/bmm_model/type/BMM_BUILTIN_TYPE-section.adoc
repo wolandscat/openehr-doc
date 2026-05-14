@@ -1,0 +1,21 @@
+
+=== Class BMM_BUILTIN_TYPE
+
+[tabs]
+======
+Diff::
++
+include::BMM_BUILTIN_TYPE.adoc[]
+
+Flat::
++
+include::BMM_BUILTIN_TYPE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_BUILTIN_TYPE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_BUILTIN_TYPE-properties-flat.adoc[]
+======

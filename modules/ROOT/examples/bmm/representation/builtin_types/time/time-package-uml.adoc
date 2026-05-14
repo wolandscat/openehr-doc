@@ -1,12 +1,12 @@
 
 .time Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Iso8601_timezone [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_timezone]] {
+class Iso8601_timezone [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_timezone]] {
         .. access ..
         hour:Integer
         minute:Integer
@@ -16,10 +16,10 @@ class Iso8601_timezone [[/splashlang-doc/latest/representation/representation-bu
         as_string:String
 }
 
-Iso8601_type <|-[#gray]- Iso8601_timezone
+Iso8601_timezone -[#gray]up-|> Iso8601_type  
 
 
-class Iso8601_date [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_date]] {
+class Iso8601_date [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_date]] {
         .. access ..
         year:Integer
         month:Integer
@@ -30,16 +30,16 @@ class Iso8601_date [[/splashlang-doc/latest/representation/representation-builti
         as_string:String
 }
 
-Iso8601_type <|-[#gray]- Iso8601_date
+Iso8601_date -[#gray]up-|> Iso8601_type  
 
 
-abstract class Temporal [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_temporal]] {
+abstract class Temporal [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_temporal]] {
 }
 
-Ordered <|-[#gray]- Temporal
+Temporal -[#gray]up-|> Ordered  
 
 
-class Iso8601_time [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_time]] {
+class Iso8601_time [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_time]] {
         .. access ..
         hour:Integer
         minute:Integer
@@ -51,10 +51,10 @@ class Iso8601_time [[/splashlang-doc/latest/representation/representation-builti
         as_string:String
 }
 
-Iso8601_type <|-[#gray]- Iso8601_time
+Iso8601_time -[#gray]up-|> Iso8601_type  
 
 
-class Iso8601_duration [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_duration]] {
+class Iso8601_duration [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_duration]] {
         .. access ..
         years:Integer
         months:Integer
@@ -68,23 +68,23 @@ class Iso8601_duration [[/splashlang-doc/latest/representation/representation-bu
         as_string:String
 }
 
-Iso8601_type <|-[#gray]- Iso8601_duration
+Iso8601_duration -[#gray]up-|> Iso8601_type  
 
 
-abstract class Iso8601_type [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_type]] {
+abstract class Iso8601_type [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_type]] {
         .. access ..
         value: String
         is_partial:Boolean
         is_extended:Boolean
 }
 
-Temporal <|-[#gray]- Iso8601_type
+Iso8601_type -[#gray]up-|> Temporal  
 
 
-Time_Definitions <|-[#gray]- Iso8601_type
+Iso8601_type -[#gray]up-|> Time_Definitions  
 
 
-class Iso8601_date_time [[/splashlang-doc/latest/representation/representation-builtin_types.html#_class_iso8601_date_time]] {
+class Iso8601_date_time [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_date_time]] {
         .. access ..
         year:Integer
         month:Integer
@@ -97,7 +97,7 @@ class Iso8601_date_time [[/splashlang-doc/latest/representation/representation-b
         as_string:String
 }
 
-Iso8601_type <|-[#gray]- Iso8601_date_time
+Iso8601_date_time -[#gray]up-|> Iso8601_type  
 
 
 ....

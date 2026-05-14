@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class EL_STATIC_REF*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*definition*: xref:languages:bmm-gen.adoc#_class_bmm_static[BMM_STATIC]
+a|Constant definition (within class).
+
+h|prop +
+  
+|*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Defined to return False.
+
+|===

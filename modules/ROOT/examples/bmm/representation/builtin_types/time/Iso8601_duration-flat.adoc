@@ -1,85 +1,74 @@
 
-[cols="^1,3,5"]
+[%autowidth.stretch]
 |===
 
 3+^h|  *class Iso8601_duration*
 
-h|*Description*
-2+a|Represents an ISO 8601 duration, which may have multiple parts from years down to seconds.
-The `value` attribute is a String in the format:
-
-* `P[nnY][nnM][nnW][nnD][T[nnH][nnM][nnS]]`
-
-NOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and
-the second allowing the 'W' designator to be mixed with other designators.
-
-h|*Inherit*
-2+|xref:representation:representation-builtin_types.adoc#_class_iso8601_type[Iso8601_type]
 
 h|
 2+^h|*Feature Group "access"*
 
 h| func
-|*years* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*years* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of years in the `value`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
 if one exists.
 
 h| func
-|*months* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*months* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of months in the `value`, i.e. the value preceding the `'M'` in the `'YMD'` part,
 if one exists.
 
 h| func
-|*weeks* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*weeks* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of weeks in the `value`, i.e. the value preceding the `W`, if one exists.
 
 h| func
-|*days* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*days* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of days in the `value`, i.e. the number preceding the `'D'` in the `'YMD'` part,
 if one exists.
 
 h| func
-|*hours* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*hours* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of hours in the `value`, i.e. the number preceding the `'H'` in the `'HMS'` part,
 if one exists.
 
 h| func
-|*minutes* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*minutes* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of minutes in the `value`, i.e. the number preceding the `'M'` in the `'HMS'`
 part, if one exists.
 
 h| func
-|*seconds* : xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*seconds* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of seconds in the `value`, i.e. the integer number preceding the `'S'` in the
 `'HMS'` part, if one exists.
 
 h| func
-|*fractional_seconds* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*fractional_seconds* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Fractional seconds in the `value`, i.e. the decimal part of the number preceding the
 `'S'` in the `'HMS'` part, if one exists.
 
 h| func
-|*to_seconds* : xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*to_seconds* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Total number of seconds equivalent (including fractional) of entire duration. Where non-
 definite elements such as year and month (i.e. 'Y' and 'M') are included, the
 corresponding 'average' durations from `Time_definitions` are used to compute the result.
 
 h| func
-|*as_string* : xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return the duration string value.
 
 h|prop +
   
-|*value*: xref:representation:representation-builtin_types.adoc#_class_string[String]
+|*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Representation of all descendants is a single String.
 
 h| func
-|*is_partial* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_partial* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
 missing.
 
 h| func
-|*is_extended* : xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean]
+|*is_extended* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
 separators. This is the preferred format.
 
@@ -88,7 +77,7 @@ h|
 
 h| func
 |*less_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Arithmetic value comparison. Returns True if current object is less than `other`. This
@@ -100,7 +89,7 @@ In conjunction with `=`, enables the definition of the related functions
 
 h| func
 |*less_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
  +
  +
@@ -111,7 +100,7 @@ a|True if current object less than or equal to `other`.
 
 h| func
 |*greater_than* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
  +
  +
@@ -122,7 +111,7 @@ a|True if current object greater than `other`.
 
 h| func
 |*greater_than_or_equal* ( +
-other: xref:representation:representation-builtin_types.adoc#_class_ordered[Ordered]): xref:representation:representation-builtin_types.adoc#_class_boolean[Boolean] +
+other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
  +
  +
@@ -136,77 +125,92 @@ h|
 
 h|const +
   
-|*Seconds_in_minute*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Seconds_in_minute*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of seconds in a minute.
 
 h|const +
   
-|*Minutes_in_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Minutes_in_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  60
 a|Number of minutes in an hour.
 
 h|const +
   
-|*Hours_in_day*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Hours_in_day*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  24
 a|Number of clock hours in a day.
 
 h|const +
   
-|*Days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  365
 a|Number of days in a normal year.
 
 h|const +
   
-|*Days_in_leap_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_leap_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Calendar days in a standard leap year.
 
 h|const +
   
-|*Max_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  366
 a|Maximum number of days in a year, accounting for leap years.
 
 h|const +
   
-|*Days_in_week*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Days_in_week*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  7
 a|Number of days in a week.
 
 h|const +
   
-|*Months_in_year*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Months_in_year*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Number of months in a year.
 
 h|const +
   
-|*Max_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  31
 a|Maximum number of days in any month.
 
 h|const +
   
-|*Average_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Used for conversions of durations containing months to days and/or seconds.
 
 h|const +
   
-|*Average_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Average_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Used for conversions of durations containing years to days and/or seconds.
 
 h|const +
   
-|*Nominal_days_in_month*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_month*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  30.42
 a|Nominal days in a month, used for conversions.
 
 h|const +
   
-|*Nominal_days_in_year*: xref:representation:representation-builtin_types.adoc#_class_real[Real]
+|*Nominal_days_in_year*: xref:representation:builtin_types-gen.adoc#_class_real[Real] = +
+  365.24
 a|Nominal days in a year, used for conversions.
 
 h|const +
   
-|*Min_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Min_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  12
 a|Minimum hour value of a timezone according to ISO 8601.
 
 h|const +
   
-|*Max_timezone_hour*: xref:representation:representation-builtin_types.adoc#_class_integer[Integer]
+|*Max_timezone_hour*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer] = +
+  14
 a|Maximum hour value of a timezone according to ISO 8601.
 
 h|*Invariants*

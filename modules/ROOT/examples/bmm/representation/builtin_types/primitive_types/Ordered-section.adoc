@@ -1,5 +1,5 @@
 
-=== class Ordered
+=== Class Ordered
 
 [tabs]
 ======

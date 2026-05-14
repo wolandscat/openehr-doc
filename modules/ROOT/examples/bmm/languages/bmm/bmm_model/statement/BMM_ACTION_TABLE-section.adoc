@@ -1,0 +1,21 @@
+
+=== Class BMM_ACTION_TABLE
+
+[tabs]
+======
+Diff::
++
+include::BMM_ACTION_TABLE.adoc[]
+
+Flat::
++
+include::BMM_ACTION_TABLE-flat.adoc[]
+
+Props(diff)::
++
+include::BMM_ACTION_TABLE-properties.adoc[]
+
+Props(flat)::
++
+include::BMM_ACTION_TABLE-properties-flat.adoc[]
+======

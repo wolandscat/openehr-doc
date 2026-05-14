@@ -1,0 +1,21 @@
+
+=== Class EXPR_BINARY_OPERATOR
+
+[tabs]
+======
+Diff::
++
+include::EXPR_BINARY_OPERATOR.adoc[]
+
+Flat::
++
+include::EXPR_BINARY_OPERATOR-flat.adoc[]
+
+Props(diff)::
++
+include::EXPR_BINARY_OPERATOR-properties.adoc[]
+
+Props(flat)::
++
+include::EXPR_BINARY_OPERATOR-properties-flat.adoc[]
+======

@@ -1,0 +1,21 @@
+
+=== Class AOM_TYPE_MAPPING
+
+[tabs]
+======
+Diff::
++
+include::AOM_TYPE_MAPPING.adoc[]
+
+Flat::
++
+include::AOM_TYPE_MAPPING-flat.adoc[]
+
+Props(diff)::
++
+include::AOM_TYPE_MAPPING-properties.adoc[]
+
+Props(flat)::
++
+include::AOM_TYPE_MAPPING-properties-flat.adoc[]
+======

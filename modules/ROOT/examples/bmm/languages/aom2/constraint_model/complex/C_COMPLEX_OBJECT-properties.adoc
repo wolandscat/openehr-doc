@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class C_COMPLEX_OBJECT*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  0..1
+|*attributes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]>
+a|List of constraints on attributes of the reference model type represented by this object.
+
+h|prop +
+  0..1
+|*attribute_tuples*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE]>
+a|List of attribute tuple constraints under this object constraint, if any.
+
+|===

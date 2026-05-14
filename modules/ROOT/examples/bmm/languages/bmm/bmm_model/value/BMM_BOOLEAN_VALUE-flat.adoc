@@ -1,0 +1,33 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BMM_BOOLEAN_VALUE*
+
+
+h|
+2+^h|*Feature Group "access"*
+
+h|prop +
+  
+|*value*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|Native Boolean value.
+
+h|prop +
+  
+|*type*: xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
+a|Concrete type of this literal.
+
+h|prop +
+  
+|*value_literal*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|A serial representation of the value.
+
+h|prop +
+  0..1
+|*syntax*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|Optional specification of formalism of the `value_literal` attribute for complex values.
+Value may be any of `json \|; json5 \|; yawl \|; xml \|; odin \|; rdf` or
+another value agreed by the user community. If not set, `json` is assumed.
+
+|===

@@ -1,0 +1,21 @@
+
+=== Class EL_READONLY_VARIABLE
+
+[tabs]
+======
+Diff::
++
+include::EL_READONLY_VARIABLE.adoc[]
+
+Flat::
++
+include::EL_READONLY_VARIABLE-flat.adoc[]
+
+Props(diff)::
++
+include::EL_READONLY_VARIABLE-properties.adoc[]
+
+Props(flat)::
++
+include::EL_READONLY_VARIABLE-properties-flat.adoc[]
+======

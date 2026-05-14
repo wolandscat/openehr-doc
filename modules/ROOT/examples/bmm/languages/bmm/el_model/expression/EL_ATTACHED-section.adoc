@@ -1,0 +1,21 @@
+
+=== Class EL_ATTACHED
+
+[tabs]
+======
+Diff::
++
+include::EL_ATTACHED.adoc[]
+
+Flat::
++
+include::EL_ATTACHED-flat.adoc[]
+
+Props(diff)::
++
+include::EL_ATTACHED-properties.adoc[]
+
+Props(flat)::
++
+include::EL_ATTACHED-properties-flat.adoc[]
+======

@@ -1,21 +1,21 @@
 
 .encapsulated Package
-[plantuml,opts=interactive]
+[plantuml,opts=interactive,link=self]
 ....
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class DV_ENCAPSULATED [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_encapsulated]] {
+abstract class DV_ENCAPSULATED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_encapsulated]] {
         .. access ..
         charset: CODE_PHRASE «iana.character-sets»
         language: CODE_PHRASE «iso.iso_639-1»
 }
 
-DATA_VALUE <|-[#gray]- DV_ENCAPSULATED
+DV_ENCAPSULATED -[#gray]up-|> DATA_VALUE  
 
 
-class DV_MULTIMEDIA [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_multimedia]] {
+class DV_MULTIMEDIA [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_multimedia]] {
         .. access ..
         alternate_text: String
         uri: DV_URI
@@ -31,21 +31,21 @@ class DV_MULTIMEDIA [[/splashlang-doc/latest/representation/representation-data_
         has_integrity_check:Boolean
 }
 
-DV_ENCAPSULATED <|-[#gray]- DV_MULTIMEDIA
+DV_MULTIMEDIA -[#gray]up-|> DV_ENCAPSULATED  
 
 
 DV_MULTIMEDIA *--> "0..1 thumbnail" DV_MULTIMEDIA
 
-class DV_PARSABLE [[/splashlang-doc/latest/representation/representation-data_types.html#_class_dv_parsable]] {
+class DV_PARSABLE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_parsable]] {
         .. access ..
         value: String
         formalism: String
         size:Integer
 }
 
-DV_ENCAPSULATED <|-[#gray]- DV_PARSABLE
+DV_PARSABLE -[#gray]up-|> DV_ENCAPSULATED  
 
-abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/splashlang-doc/latest/representation/representation-data_types.html#_class_data_value]] #FDFDFD {
+abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/openehr-doc/latest/representation/data_types-gen.html#_class_data_value]] #FDFDFD {
 }
 
 ....
