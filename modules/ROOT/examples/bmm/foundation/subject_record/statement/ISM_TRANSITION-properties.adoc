@@ -33,14 +33,4 @@ h|prop +
 a|Optional possibility of adding one or more reasons for this careflow step having been
 taken. Multiple reasons may occur in medication management for example.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|current_state_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_instruction_states, current_state.defining_code);
-
-h|
-2+a|transition_valid: ∃ transition ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_instruction_transitions, transition.defining_code);
-
-
 |===

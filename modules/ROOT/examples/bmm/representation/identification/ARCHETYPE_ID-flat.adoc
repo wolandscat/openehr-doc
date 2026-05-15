@@ -4,6 +4,16 @@
 
 3+^h|  *class ARCHETYPE_ID*
 
+h|*Description*
+2+a|Identifier or reference for archetypes. Ideally, these identify globally unique
+archetypes. When used as a reference, only partial version information is included (major
+version only), and the namespace is omitted.
+
+Lexical form: `rm_originator '-' rm_name '-' rm_entity '.' concept_name { '-'
+specialisation }* '.v' version_id`.
+
+h|*Inherit*
+2+|xref:representation:identification-gen.adoc#_class_object_id[OBJECT_ID]
 
 h|
 2+^h|*Feature Group "access"*

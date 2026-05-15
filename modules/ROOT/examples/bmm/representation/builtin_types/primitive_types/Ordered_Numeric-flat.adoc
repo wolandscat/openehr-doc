@@ -4,6 +4,12 @@
 
 3+^h|builtin  abstract  *class Ordered_Numeric*
 
+h|*Description*
+2+a|Abstract notional parent class of ordered, numeric types — types with both the
+less_than() and arithmetic functions defined.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered],xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]
 
 h|
 2+^h|*Feature Group "operators"*

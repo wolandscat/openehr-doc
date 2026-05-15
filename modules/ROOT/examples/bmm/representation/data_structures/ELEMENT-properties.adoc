@@ -26,20 +26,4 @@ h|prop +
 a|Optional specific reason for null value; if set, `null_flavour` must be set. Null reason
 may apply only to a minority of clinical data, commonly needed in reporting contexts.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_is_null_valid: is_null() = (¬ ∃ value);
-
-h|
-2+a|inv_null_flavour_indicated: is_null() ⊻ ¬ ∃ null_flavour;
-
-h|
-2+a|inv_null_flavour_valid: is_null ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_null_flavour, null_flavour.defining_code);
-
-h|
-2+a|inv_null_reason_valid: ∃ null_reason ⇒ is_null();
-
-
 |===

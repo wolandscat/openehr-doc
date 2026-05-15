@@ -4,6 +4,14 @@
 
 3+^h| abstract  *class LOCATABLE*
 
+h|*Description*
+2+a|Root class of all information model classes that can be archetyped. Most classes in the
+openEHR reference model inherit from the `LOCATABLE` class, which defines the idea of
+locatability in an archetyped structure. `LOCATABLE` defines a runtime name and an
+`archetype_node_id`.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
 2+^h|*Feature Group "infrastructure"*

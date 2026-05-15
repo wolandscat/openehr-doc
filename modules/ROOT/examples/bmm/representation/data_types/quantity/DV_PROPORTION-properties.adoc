@@ -41,29 +41,4 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|type_validity: valid_proportion_kind(type);
-
-h|
-2+a|precision_validity: precision = 0 ⇒ is_integral;
-
-h|
-2+a|is_integral_validity: is_integral ⇒ (numerator.floor = numerator ∧ denominator.floor = denominator);
-
-h|
-2+a|fraction_validity: (type = pk_fraction ∨ type = pk_integer_fraction) ⇒ is_integral;
-
-h|
-2+a|unitary_validity: type = pk_unitary ⇒ denominator = 1;
-
-h|
-2+a|percent_validity: type = pk_percent ⇒ denominator = 100;
-
-h|
-2+a|valid_denominator: denominator ≠ 0.0;
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_GENERIC_TYPE*
 
+h|*Description*
+2+a|Meta-type based on a non-container generic class, e.g. `Packet<Header>`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_model_type[BMM_MODEL_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

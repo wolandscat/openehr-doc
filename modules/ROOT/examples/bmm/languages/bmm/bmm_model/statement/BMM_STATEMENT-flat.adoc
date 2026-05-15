@@ -4,5 +4,10 @@
 
 3+^h| abstract  *class BMM_STATEMENT*
 
+h|*Description*
+2+a|Abstract parent of 'statement' types that may be defined to implement BMM Routines.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_statement_item[BMM_STATEMENT_ITEM]
 
 |===

@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class ARCHETYPE_CONSTRAINT*
 
+h|*Description*
+2+a|Abstract parent of all constraint model types. Defines conformance and congruence function
+signatures.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_adl_code_definitions[ADL_CODE_DEFINITIONS]
 
 h|
 2+^h|*Feature Group "access"*

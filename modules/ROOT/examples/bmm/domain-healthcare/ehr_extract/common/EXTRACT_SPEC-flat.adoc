@@ -4,6 +4,18 @@
 
 3+^h|  *class EXTRACT_SPEC*
 
+h|*Description*
+2+a|Specification of an Extract's contents. Subtypes can be used to add details specific to
+the type of Extract. The specification consists of attributes specifying the directory,
+and two further groups of attributes in their own classes, namely a version specfication
+(which versions of information items are to be included) and a manifest (which entities
+are to be included in the extract).
+
+Use: Used in a request to specify an Extract, as well as to describe what is contained in
+an Extract.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,11 @@
 
 3+^h|  *class EXPR_VARIABLE_REF*
 
+h|*Description*
+2+a|Expression tree leaf item representing a reference to a declared variable.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_leaf[EXPR_LEAF]
 
 h|
 2+^h|*Feature Group "access"*

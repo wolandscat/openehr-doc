@@ -4,6 +4,12 @@
 
 3+^h|  *enum INSTRUCTION_EXECUTION_STATE*
 
+h|*Description*
+2+a|Enumeration of states in the Instruction State Machine (ISM) used to track the
+lifecycle of an Instruction execution.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*

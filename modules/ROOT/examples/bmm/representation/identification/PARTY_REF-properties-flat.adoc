@@ -34,11 +34,4 @@ h|prop +
 |*id*: xref:representation:identification-gen.adoc#_class_object_id[OBJECT_ID]
 a|Globally unique id of an object, regardless of where it is stored.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|type_validity: type.is_equal("PERSON") ∨ type.is_equal("ORGANISATION") ∨ type.is_equal("GROUP") ∨ type.is_equal("AGENT") ∨ type.is_equal("ROLE") ∨ type.is_equal("PARTY") ∨ type.is_equal("ACTOR");
-
-
 |===

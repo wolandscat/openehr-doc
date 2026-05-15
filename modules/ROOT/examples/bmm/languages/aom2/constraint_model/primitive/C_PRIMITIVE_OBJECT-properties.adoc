@@ -25,11 +25,4 @@ h|prop +
 |*constraint*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Constraint represented by this object; redefine in descendants.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_valid_assumed_value: valid_value(assumed_value);
-
-
 |===

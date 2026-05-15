@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_GENERIC_CLASS*
 
+h|*Description*
+2+a|Definition of a generic class in an object model.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
 
 h|
 2+^h|*Feature Group "access"*

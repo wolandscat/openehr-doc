@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class EL_VARIABLE*
 
+h|*Description*
+2+a|Abstract meta-type of any kind of symbolic variable.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 
 h|
 2+^h|*Feature Group "access"*

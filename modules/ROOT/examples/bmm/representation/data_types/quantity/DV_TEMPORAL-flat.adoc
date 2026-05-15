@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class DV_TEMPORAL*
 
+h|*Description*
+2+a|Specialised temporal variant of `DV_ABSOLUTE_QUANTITY` whose diff type is `DV_DURATION`.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_absolute_quantity[DV_ABSOLUTE_QUANTITY]
 
 h|
 2+^h|*Feature Group "access"*

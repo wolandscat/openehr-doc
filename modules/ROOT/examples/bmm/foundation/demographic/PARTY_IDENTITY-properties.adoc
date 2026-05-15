@@ -14,11 +14,4 @@ h|prop +
 a|The value of the identity. This will often taken the form of a parseable string or a small
 structure of strings.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|purpose_valid: purpose = name;
-
-
 |===

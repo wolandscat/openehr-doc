@@ -4,6 +4,13 @@
 
 3+^h| abstract  *class DV_TIME_SPECIFICATION*
 
+h|*Description*
+2+a|This is an abstract class of which all timing specifications are specialisations.
+Specifies points in time, possibly linked to the calendar, or a real world repeating
+event, such as breakfast.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

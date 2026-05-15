@@ -4,6 +4,11 @@
 
 3+^h|  *class AOM_TYPE_MAPPING*
 
+h|*Description*
+2+a|Data object expressing a mapping between two types.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class BMM_SCHEMA*
 
+h|*Description*
+2+a|Abstract parent of any persistable form of a BMM model, e.g. `P_BMM_SCHEMA`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_model_metadata[BMM_MODEL_METADATA]
 
 h|
 2+^h|*Feature Group "access"*

@@ -19,11 +19,4 @@ h|prop +
 |*range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<T>
 a|The data range for this meaning, e.g. critical etc.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|range_is_simple: (range.lower_unbounded ∨ range.lower.is_simple) ∧ (range.upper_unbounded ∨ range.upper.is_simple);
-
-
 |===

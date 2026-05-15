@@ -4,6 +4,13 @@
 
 3+^h|  *class ORGANISATION*
 
+h|*Description*
+2+a|Generic description of organisations. An organisation is a legally constituted body
+whose existence (in general) outlives the existence of parties considered to be part
+of it.
+
+h|*Inherit*
+2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 h|
 2+^h|*Feature Group "access"*

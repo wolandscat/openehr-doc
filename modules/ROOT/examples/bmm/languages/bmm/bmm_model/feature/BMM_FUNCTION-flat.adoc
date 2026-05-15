@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_FUNCTION*
 
+h|*Description*
+2+a|A formal element with signature of the form: `name ({arg:TArg}*):TResult`. A function is a
+computed (rather than data) element, generally assumed to be non-state-changing.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
 
 h|
 2+^h|*Feature Group "access"*

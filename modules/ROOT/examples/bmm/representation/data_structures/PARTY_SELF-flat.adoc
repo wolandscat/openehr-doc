@@ -4,6 +4,12 @@
 
 3+^h|  *class PARTY_SELF*
 
+h|*Description*
+2+a|Party proxy representing the subject of the record. Used to indicate that the party is the
+owner of the record. May or may not have `external_ref` set.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 
 h|
 2+^h|*Feature Group "access"*

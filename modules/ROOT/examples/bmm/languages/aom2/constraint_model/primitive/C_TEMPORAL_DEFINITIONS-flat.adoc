@@ -4,6 +4,11 @@
 
 3+^h|  *class C_TEMPORAL_DEFINITIONS*
 
+h|*Description*
+2+a|Definitions related to `C_TEMPORAL` constraints.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "values"*

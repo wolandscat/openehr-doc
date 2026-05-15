@@ -23,11 +23,4 @@ h|prop +
 |*details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Archetypable meta-data for `FOLDER`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|folders_valid: ¬ folders.is_empty();
-
-
 |===

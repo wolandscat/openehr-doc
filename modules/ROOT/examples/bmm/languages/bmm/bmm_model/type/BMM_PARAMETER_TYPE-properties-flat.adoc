@@ -23,11 +23,4 @@ h|prop +
 |*inheritance_precursor*: xref:languages:bmm-gen.adoc#_class_bmm_parameter_type[BMM_PARAMETER_TYPE]
 a|If set, is the corresponding generic parameter definition in an ancestor class.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_generic_name: name.count = 1 ∧ name.is_upper;
-
-
 |===

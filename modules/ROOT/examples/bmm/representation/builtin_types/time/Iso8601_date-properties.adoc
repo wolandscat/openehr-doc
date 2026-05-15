@@ -5,20 +5,4 @@
 3+^h|  *class Iso8601_date*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|year_valid: valid_year(year);
-
-h|
-2+a|month_valid: ¬ month_unknown ⇒ valid_month(month);
-
-h|
-2+a|day_valid: ¬ day_unknown ⇒ valid_day(year, month, day);
-
-h|
-2+a|partial_validity: month_unknown ⇒ day_unknown;
-
-
 |===

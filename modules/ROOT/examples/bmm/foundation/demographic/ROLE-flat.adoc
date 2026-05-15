@@ -4,6 +4,14 @@
 
 3+^h|  *class ROLE*
 
+h|*Description*
+2+a|Generic description of a role performed by an Actor. The role corresponds to a
+competency of the Party. Roles are used to define the responsibilities undertaken
+by a Party for a purpose. Roles should have credentials qualifying the performer to
+perform the role.
+
+h|*Inherit*
+2+|xref:foundation:demographic-gen.adoc#_class_party[PARTY]
 
 h|
 2+^h|*Feature Group "access"*

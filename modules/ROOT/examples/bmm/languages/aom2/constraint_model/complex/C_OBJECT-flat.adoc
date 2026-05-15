@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class C_OBJECT*
 
+h|*Description*
+2+a|Abstract model of constraint on any kind of object node.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
 
 h|
 2+^h|*Feature Group "access"*

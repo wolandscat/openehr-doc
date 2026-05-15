@@ -13,11 +13,4 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The value of the id in the form defined below.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|has_extension_valid: extension.is_empty() ⊻ has_extension;
-
-
 |===

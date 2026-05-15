@@ -4,6 +4,13 @@
 
 3+^h|  *class ACTION*
 
+h|*Description*
+2+a|Used to record a clinical action that has been performed, which may have been ad hoc,
+or due to the execution of an Activity in an Instruction workflow. Every Action
+corresponds to a careflow step of some kind or another.
+
+h|*Inherit*
+2+|xref:foundation:subject_record-gen.adoc#_class_care_entry[CARE_ENTRY]
 
 h|
 2+^h|*Feature Group "access"*

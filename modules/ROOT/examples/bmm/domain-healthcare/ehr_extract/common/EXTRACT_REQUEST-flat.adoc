@@ -4,6 +4,11 @@
 
 3+^h|  *class EXTRACT_REQUEST*
 
+h|*Description*
+2+a|Generic model of a Request for an Extract, containing an Extract specification.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*

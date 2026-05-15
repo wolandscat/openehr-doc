@@ -4,6 +4,11 @@
 
 3+^h|  *class EHR*
 
+h|*Description*
+2+a|The EHR object is the root object and access point of an EHR for a subject of care.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

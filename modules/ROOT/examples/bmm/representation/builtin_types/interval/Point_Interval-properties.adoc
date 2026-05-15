@@ -5,11 +5,4 @@
 3+^h|  *class Point_Interval<T:Ordered>*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_point: lower = upper;
-
-
 |===

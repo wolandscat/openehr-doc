@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_PROCEDURE_CALL*
 
+h|*Description*
+2+a|A call made on a closed procedure agent. The method in BMM via which external actions are
+achieved from within a program.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_agent_call[EL_AGENT_CALL],xref:languages:bmm-gen.adoc#_class_bmm_simple_statement[BMM_SIMPLE_STATEMENT]
 
 h|
 2+^h|*Feature Group "access"*

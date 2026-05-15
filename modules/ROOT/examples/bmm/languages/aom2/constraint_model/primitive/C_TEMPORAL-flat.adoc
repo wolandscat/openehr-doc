@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class C_TEMPORAL<T:Temporal>*
 
+h|*Description*
+2+a|Purpose Abstract parent of `C_ORDERED` types whose base type is an ISO date/time type.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]
 
 h|
 2+^h|*Feature Group "access"*

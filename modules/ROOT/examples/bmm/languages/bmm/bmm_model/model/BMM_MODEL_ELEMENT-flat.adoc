@@ -4,6 +4,14 @@
 
 3+^h| abstract  *class BMM_MODEL_ELEMENT*
 
+h|*Description*
+2+a|Abstract meta-type of BMM declared model elements. A _declaration_ is a an element of a
+model within a context, which defines the _scope_ of the element. Thus, a class definition
+and its property and routine definitions are model elements, but Types are not, since they
+are derived from model elements.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

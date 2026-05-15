@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class BMM_UNITARY_TYPE*
 
+h|*Description*
+2+a|Parent of meta-types that may be used as the type of any instantiated object that is not a
+container object.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

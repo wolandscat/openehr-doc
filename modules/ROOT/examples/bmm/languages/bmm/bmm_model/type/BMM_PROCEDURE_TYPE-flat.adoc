@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_PROCEDURE_TYPE*
 
+h|*Description*
+2+a|Form of routine specific to procedure object signatures, with `result_type` being the
+special Status meta-type
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_routine_type[BMM_ROUTINE_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

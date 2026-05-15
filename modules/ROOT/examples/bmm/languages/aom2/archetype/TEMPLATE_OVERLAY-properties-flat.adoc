@@ -47,11 +47,4 @@ h|prop +
 |*rm_overlay*: xref:languages:aom2-gen.adoc#_class_rm_overlay[RM_OVERLAY]
 a|
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_is_specialised: is_specialised;
-
-
 |===

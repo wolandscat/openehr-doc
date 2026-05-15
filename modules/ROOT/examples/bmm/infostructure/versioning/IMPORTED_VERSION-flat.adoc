@@ -4,6 +4,14 @@
 
 3+^h|  *class IMPORTED_VERSION<T>*
 
+h|*Description*
+2+a|Versions whose content is an `ORIGINAL_VERSION` copied from another location; this class
+inherits `commit_audit` and `contribution` from `VERSION<T>`, providing imported
+versions with their own audit trail and Contribution, distinct from those of the imported
+`ORIGINAL_VERSION`.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_version[VERSION]
 
 h|
 2+^h|*Feature Group "access"*

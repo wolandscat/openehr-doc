@@ -4,6 +4,13 @@
 
 3+^h|  *class RM_OVERLAY*
 
+h|*Description*
+2+a|Container object for archetype statements relating to RM attributes, which may be directly
+on objects constrained within the archetype, or at deeper non-constrained RM paths from an
+object or the root.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

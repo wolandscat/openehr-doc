@@ -60,20 +60,4 @@ a|Directory of extracts of external terminologies, as a two-level table. The out
 are terminology ids, e.g. `"SNOMED_CT"`, while the inner hash keys are term codes or code-
 phrases from the relevant terminology, e.g. `"10094842"`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|original_language_validity: code_set(Code_set_id_languages).has_concept_id(original_language);
-
-h|
-2+a|concept_code_validity: id_codes.has(concept_code);
-
-h|
-2+a|term_bindings_validity: ∃ bindings ⇒ ¬ bindings.is_empty();
-
-h|
-2+a|parent_archetype_valid: parent_archetype.terminology = Current;
-
-
 |===

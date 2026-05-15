@@ -4,6 +4,12 @@
 
 3+^h|  *class Terminology_term*
 
+h|*Description*
+2+a|Leaf type representing a standalone term from a terminology, which consists of the term
+text and the code, i.e. a concept reference.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,14 @@
 
 3+^h|  *class SECTION*
 
+h|*Description*
+2+a|Represents a heading in a heading structure, or section tree. Created according to
+archetyped structures for typical headings such as SOAP, physical examination, but also
+pathology result heading structures. Should not be used instead of `ENTRY` hierarchical
+structures.
+
+h|*Inherit*
+2+|xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]
 
 h|
 2+^h|*Feature Group "access"*

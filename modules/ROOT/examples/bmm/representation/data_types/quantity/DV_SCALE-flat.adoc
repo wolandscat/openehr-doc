@@ -4,6 +4,24 @@
 
 3+^h|  *class DV_SCALE*
 
+h|*Description*
+2+a|A data type that represents scale values, where there is:
+
+a) implied ordering, b) no implication that the distance between each value is constant,
+and c) the total number of values is finite; d) non-integer values are allowed.
+
+Example:
+
+---- Borg CR 10 Scale
+
+0 No Breathlessness at all 0.5 Very Very Slight (Just Noticeable) 1 Very Slight 2 Slight
+Breathlessness 3 Moderate ... etc ----
+
+For scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL`
+should be supported to accommodate existing data instances of that type.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]
 
 h|
 2+^h|*Feature Group "access"*

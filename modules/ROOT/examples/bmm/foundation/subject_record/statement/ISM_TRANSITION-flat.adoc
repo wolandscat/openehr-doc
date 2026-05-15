@@ -4,6 +4,12 @@
 
 3+^h|  *class ISM_TRANSITION*
 
+h|*Description*
+2+a|Model of a transition in the Instruction State Machine, caused by a careflow step.
+The attributes document the careflow step as well as the ISM transition.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
 2+^h|*Feature Group "access"*

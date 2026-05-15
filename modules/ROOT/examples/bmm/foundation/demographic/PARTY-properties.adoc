@@ -29,26 +29,4 @@ h|prop +
 |*relationships*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_party_relationship[PARTY_RELATIONSHIP]>
 a|Relationships in which this Party takes part as source.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|type_valid: type = name;
-
-h|
-2+a|contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
-
-h|
-2+a|relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
-
-h|
-2+a|reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);
-
-h|
-2+a|is_archetype_root: is_archetype_root;
-
-h|
-2+a|uid_mandatory: ∃ uid;
-
-
 |===

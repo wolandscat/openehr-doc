@@ -4,6 +4,16 @@
 
 3+^h|  *class C_TIME*
 
+h|*Description*
+2+a|Constraint on instances representing times in the form either of a set of validity values,
+or else time ranges based on the `C_ORDERED` list constraint.
+
+There is no validity flag for `hour`, since it must always be by definition mandatory in
+order to have a sensible time at all. Syntax expressions of instances of this class
+include `"HH:??:xx"` (time with optional minutes and seconds not allowed).
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_temporal[C_TEMPORAL]
 
 h|
 2+^h|*Feature Group "access"*

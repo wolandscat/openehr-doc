@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class BMM_FEATURE*
 
+h|*Description*
+2+a|A module-scoped formal element.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]
 
 h|
 2+^h|*Feature Group "access"*

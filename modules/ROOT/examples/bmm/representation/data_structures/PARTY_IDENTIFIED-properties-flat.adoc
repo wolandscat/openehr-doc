@@ -24,17 +24,4 @@ h|prop +
 a|Optional reference to more detailed demographic or identification information for this
 party, in an external system.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|basic_validity: ∃ name ∨ ∃ identifiers ∨ ∃ external_ref;
-
-h|
-2+a|name_valid: ∃ name ⇒ ¬ name.is_empty();
-
-h|
-2+a|identifiers_valid: ∃ identifiers ⇒ ¬ identifiers.is_empty();
-
-
 |===

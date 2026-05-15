@@ -31,11 +31,4 @@ h|prop +
 |*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 a|Content object.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|item_validity: is_masked ⊻ ∃ item;
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|  *class POINT_EVENT<T>*
 
+h|*Description*
+2+a|Defines a single point event in a series.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_event[EVENT]
 
 h|
 2+^h|*Feature Group "access"*

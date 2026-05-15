@@ -23,11 +23,4 @@ h|prop +
 |*capabilities*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_capability[CAPABILITY]>
 a|The capabilities of this role.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|capabilities_valid: ∃ capabilities ⇒ ¬ capabilities.is_empty();
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|  *class C_STRING*
 
+h|*Description*
+2+a|Constraint on instances of `String`.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

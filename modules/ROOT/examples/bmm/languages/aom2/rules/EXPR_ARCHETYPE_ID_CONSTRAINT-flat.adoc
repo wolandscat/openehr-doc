@@ -4,6 +4,11 @@
 
 3+^h|  *class EXPR_ARCHETYPE_ID_CONSTRAINT*
 
+h|*Description*
+2+a|Expression tree leaf item representing a constraint on an archetype identifier.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_expr_constraint[EXPR_CONSTRAINT]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,11 @@
 
 3+^h|  *class SYNC_EXTRACT*
 
+h|*Description*
+2+a|Extract designed for synchronisation of Contributions between openEHR servers.
+
+h|*Inherit*
+2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_message_content[MESSAGE_CONTENT]
 
 h|
 2+^h|*Feature Group "access"*

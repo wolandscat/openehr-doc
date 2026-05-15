@@ -4,6 +4,12 @@
 
 3+^h|  *class EXPR_LITERAL*
 
+h|*Description*
+2+a|Literal value expression tree leaf item. This can represent a literal value of any
+primitive type included in the `PRIMITIVE_TYPE` enumeration.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_leaf[EXPR_LEAF]
 
 h|
 2+^h|*Feature Group "access"*

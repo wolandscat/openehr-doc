@@ -34,14 +34,4 @@ h|prop +
 |*performer*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|The id and possibly demographic system link of the party participating in the activity.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|function_valid: function.generating_type.is_equal("DV_CODED_TEXT") ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_function, function.defining_code);
-
-h|
-2+a|mode_valid: ∃ mode ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_mode, mode.defining_code);
-
-
 |===

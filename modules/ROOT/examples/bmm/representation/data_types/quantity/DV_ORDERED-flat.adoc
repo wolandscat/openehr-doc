@@ -4,6 +4,19 @@
 
 3+^h| abstract  *class DV_ORDERED*
 
+h|*Description*
+2+a|Abstract class defining the concept of ordered values, which includes ordinals as well as
+true quantities. It defines the functions `<` and `is_strictly_comparable_to()`, the
+latter of which must evaluate to `True` for instances being compared with the `<`
+function, or used as limits in the `DV_INTERVAL<T>` class.
+
+Data value types which are to be used as limits in the `DV_INTERVAL<T>` class must inherit
+from this class, and implement the function `is_strictly_comparable_to()` to ensure that
+instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be
+compared if they measure the same kind of physical quantity.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE],xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]
 
 h|
 2+^h|*Feature Group "access"*

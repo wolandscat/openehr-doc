@@ -4,6 +4,12 @@
 
 3+^h|  *class HIER_OBJECT_ID*
 
+h|*Description*
+2+a|Concrete type corresponding to hierarchical identifiers of the form defined by
+`UID_BASED_ID`.
+
+h|*Inherit*
+2+|xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 
 h|
 2+^h|*Feature Group "access"*

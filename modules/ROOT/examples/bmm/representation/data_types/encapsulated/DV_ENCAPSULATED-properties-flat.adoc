@@ -21,14 +21,4 @@ h|prop +
 a|Optional indicator of the localised language in which the data is written, if relevant.
 Coded from openEHR Code Set `languages`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|language_valid: ∃ language ⇒ code_set(Code_set_id_languages).has_code(language);
-
-h|
-2+a|charset_valid: ∃ charset ⇒ code_set(Code_set_id_character_sets).has_code(charset);
-
-
 |===

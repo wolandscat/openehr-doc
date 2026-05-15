@@ -4,6 +4,12 @@
 
 3+^h|builtin   *class Map<K:Ordered,V>*
 
+h|*Description*
+2+a|Type representing a keyed table of values. V is the value type and K the type
+of the keys.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_container[Container]
 
 h|
 2+^h|*Feature Group "access"*

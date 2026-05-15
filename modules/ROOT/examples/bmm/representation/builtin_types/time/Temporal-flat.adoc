@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class Temporal*
 
+h|*Description*
+2+a|Abstract ancestor of time-related classes.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]
 
 h|
 2+^h|*Feature Group "operators"*

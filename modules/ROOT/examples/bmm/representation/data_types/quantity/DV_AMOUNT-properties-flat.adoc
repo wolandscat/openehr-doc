@@ -56,14 +56,4 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|accuracy_is_percent_validity: accuracy = 0 ⇒ ¬ accuracy_is_percent;
-
-h|
-2+a|accuracy_validity: accuracy_is_percent ⇒ valid_percentage(accuracy);
-
-
 |===

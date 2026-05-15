@@ -4,6 +4,11 @@
 
 3+^h|  *class RM_ATTRIBUTE_VISIBILITY*
 
+h|*Description*
+2+a|Definition of visibility of an RM attribute within a larger archetype structure.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,12 @@
 
 3+^h|  *class SYNC_EXTRACT_SPEC*
 
+h|*Description*
+2+a|Details of specification of Extract, used in a request to specify an Extract, or in a
+response, to describe what is actually in the Extract.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

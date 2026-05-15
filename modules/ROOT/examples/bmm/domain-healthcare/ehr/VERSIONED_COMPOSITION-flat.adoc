@@ -4,6 +4,12 @@
 
 3+^h|  *class VERSIONED_COMPOSITION*
 
+h|*Description*
+2+a|Version-controlled composition abstraction, defined by inheriting
+`VERSIONED_OBJECT<COMPOSITION>`.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_versioned_object[VERSIONED_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

@@ -45,11 +45,4 @@ h|prop +
 |*participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_participation[EXTRACT_PARTICIPATION]>
 a|Participations relevant to the creation of this Extract.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|sequence_nr_valid: sequence_nr >= 1;
-
-
 |===

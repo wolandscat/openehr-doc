@@ -18,14 +18,4 @@ h|prop +
 |*formalism*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the formalism, e.g. GLIF 1.0 , Proforma etc.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|formalism_valid: ¬ formalism.is_empty();
-
-h|
-2+a|size_valid: size >= 0;
-
-
 |===

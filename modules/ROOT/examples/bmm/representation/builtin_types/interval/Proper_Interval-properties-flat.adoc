@@ -42,11 +42,4 @@ h|prop +
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_not_point: lower ≠ upper;
-
-
 |===

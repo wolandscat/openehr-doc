@@ -37,11 +37,4 @@ this option on in openEHR systems causes `X_VERSIONED_OBJECTs` to have
 having to look at any content data. In other systems it may or may not have a sensible
 meaning.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|includes_revision_history_valid: ¬ include_data ⇒ include_revision_history;
-
-
 |===

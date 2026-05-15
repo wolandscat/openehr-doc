@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_SINGLETON*
 
+h|*Description*
+2+a|Meta-type for static value properties computed once by a function invocation.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_static[BMM_STATIC]
 
 h|
 2+^h|*Feature Group "access"*

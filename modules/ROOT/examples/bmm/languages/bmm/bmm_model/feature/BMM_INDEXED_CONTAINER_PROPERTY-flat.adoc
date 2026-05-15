@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_INDEXED_CONTAINER_PROPERTY*
 
+h|*Description*
+2+a|Meta-type of for properties of linear container type, such as `Map<Index_type, T>` etc.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_container_property[BMM_CONTAINER_PROPERTY]
 
 h|
 2+^h|*Feature Group "access"*

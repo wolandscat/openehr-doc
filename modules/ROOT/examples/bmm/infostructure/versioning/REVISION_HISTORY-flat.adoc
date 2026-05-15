@@ -4,6 +4,12 @@
 
 3+^h|  *class REVISION_HISTORY*
 
+h|*Description*
+2+a|Defines the notion of a revision history of audit items, each associated with
+the version for which that audit was committed. The list is in most-recent-last order.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

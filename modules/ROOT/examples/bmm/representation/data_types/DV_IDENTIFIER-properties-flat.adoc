@@ -30,11 +30,4 @@ h|prop +
 a|Optional identifier type, such as prescription , or Social Security Number . One day a
 controlled vocabulary might be possible for this.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|id_valid: ¬ id.is_empty();
-
-
 |===

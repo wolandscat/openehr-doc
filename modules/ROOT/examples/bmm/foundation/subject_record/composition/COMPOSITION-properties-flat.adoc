@@ -95,23 +95,4 @@ h|prop +
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|category_validity: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_composition_category, category.defining_code);
-
-h|
-2+a|territory_valid: code_set(Code_set_id_countries).has_code(territory);
-
-h|
-2+a|language_valid: code_set(Code_set_id_languages).has_code(language);
-
-h|
-2+a|content_valid: ∃ content ⇒ ¬ content.is_empty();
-
-h|
-2+a|is_archetype_root: is_archetype_root;
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|builtin   *class Integer64*
 
+h|*Description*
+2+a|Type representing minimal interface of built-in Integer64 type (64-bit integers).
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered_numeric[Ordered_Numeric]
 
 h|
 2+^h|*Feature Group "operators"*

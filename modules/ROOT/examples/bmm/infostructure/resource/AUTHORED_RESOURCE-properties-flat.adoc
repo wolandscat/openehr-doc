@@ -47,23 +47,4 @@ code. For each translation listed here, there must be corresponding sections in 
 language-dependent parts of the resource. The `original_language` does not appear in
 this list.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|original_language_valid: code_set(Code_set_id_languages).has_code(original_language.as_string);
-
-h|
-2+a|current_revision_valid: (∃ current_revision ∧ ¬ is_controlled) ⇒ current_revision.is_equal("(uncontrolled)");
-
-h|
-2+a|translations_valid: ∃ translations ⇒ ¬ translations.is_empty() ∧ ¬ translations.has(orginal_language.code_string);
-
-h|
-2+a|description_valid: ∃ translations ⇒ description.details.for_all(translations.has_key(d.language.code_string));
-
-h|
-2+a|languages_available_valid: languages_available.has(original_language);
-
-
 |===

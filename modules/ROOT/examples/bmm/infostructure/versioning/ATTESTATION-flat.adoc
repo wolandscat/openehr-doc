@@ -4,6 +4,19 @@
 
 3+^h|  *class ATTESTATION*
 
+h|*Description*
+2+a|Record an attestation of a party (the committer) to item(s) of record content. An
+attestation is an explicit signing by one healthcare agent of particular content for
+various particular purposes, including:
+
+* for authorisation of a controlled substance or procedure (e.g. sectioning of patient
+under mental health act);
+* witnessing of content by senior clinical professional;
+* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test
+result.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 
 h|
 2+^h|*Feature Group "access"*

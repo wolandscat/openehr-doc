@@ -4,6 +4,13 @@
 
 3+^h|  *class TEMPLATE*
 
+h|*Description*
+2+a|Class representing source template, i.e. a kind of archetype that may include template
+overlays, and may be restricted by tools to only defining mandations, prohibitions, and
+restrictions on elements already defined in the flat parent.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_authored_archetype[AUTHORED_ARCHETYPE]
 
 h|
 2+^h|*Feature Group "access"*

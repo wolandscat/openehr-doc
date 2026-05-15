@@ -4,6 +4,12 @@
 
 3+^h|  *class CONTRIBUTION*
 
+h|*Description*
+2+a|Documents a Contribution (change set) of one or more versions added to a
+change-controlled repository.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

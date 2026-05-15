@@ -54,23 +54,4 @@ h|prop +
 |*build_count*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The build count since last increment of any version part.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_rm_publisher_validity: ¬ rm_publisher.is_empty();
-
-h|
-2+a|inv_rm_package_validity: ¬ rm_package.is_empty();
-
-h|
-2+a|inv_class_name_validity: ¬ rm_class.is_empty();
-
-h|
-2+a|inv_concept_id_validity: ¬ concept_id.is_empty();
-
-h|
-2+a|inv_release_version_validity: valid_version(release_version);
-
-
 |===

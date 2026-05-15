@@ -4,6 +4,12 @@
 
 3+^h|  *class AUDIT_DETAILS*
 
+h|*Description*
+2+a|The set of attributes required to document the committal of an information
+item to a repository.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

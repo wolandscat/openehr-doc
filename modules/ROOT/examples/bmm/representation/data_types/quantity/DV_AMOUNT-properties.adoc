@@ -23,14 +23,4 @@ h|prop +
 a|If `True`, indicates that when this object was created, `accuracy` was recorded as a
 percent value; if `False`, as an absolute quantity value.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|accuracy_is_percent_validity: accuracy = 0 ⇒ ¬ accuracy_is_percent;
-
-h|
-2+a|accuracy_validity: accuracy_is_percent ⇒ valid_percentage(accuracy);
-
-
 |===

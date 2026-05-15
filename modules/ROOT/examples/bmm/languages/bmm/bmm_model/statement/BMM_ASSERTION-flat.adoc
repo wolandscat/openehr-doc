@@ -4,6 +4,14 @@
 
 3+^h|  *class BMM_ASSERTION*
 
+h|*Description*
+2+a|A statement that asserts the truth of its expression. If the expression evaluates to False
+the execution generates an exception (depending on run-time settings).
+
+May be rendered in syntax as `assert condition` or similar.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_simple_statement[BMM_SIMPLE_STATEMENT]
 
 h|
 2+^h|*Feature Group "access"*

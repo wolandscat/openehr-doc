@@ -4,5 +4,10 @@
 
 3+^h|  *class TUPLE*
 
+h|*Description*
+2+a|Parent type of all TUPLE types.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 |===

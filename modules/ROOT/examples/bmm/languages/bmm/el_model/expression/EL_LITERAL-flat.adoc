@@ -4,6 +4,12 @@
 
 3+^h|  *class EL_LITERAL*
 
+h|*Description*
+2+a|Literal value of any type known in the model, including primitive types. Defined via a
+`BMM_LITERAL_VALUE`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_simple[EL_SIMPLE]
 
 h|
 2+^h|*Feature Group "access"*

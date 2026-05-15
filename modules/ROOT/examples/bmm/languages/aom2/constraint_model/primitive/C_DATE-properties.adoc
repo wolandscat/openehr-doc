@@ -27,11 +27,4 @@ h|prop +
 |*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
 a|Value to be assumed if none sent in data.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|pattern_validity: ∃ pattern ⇒ valid_iso8601_date_constraint_pattern(pattern);
-
-
 |===

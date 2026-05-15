@@ -14,11 +14,4 @@ h|prop +
 a|Value of URI as a String. 'Plain-text' URIs are allowed, enabling better readability, but
 must be RFC-3986 encoded in use.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|value_valid: ¬ value.is_empty();
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|builtin   *class Set<T:Any>*
 
+h|*Description*
+2+a|Unordered container that may not contain duplicates.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_container[Container]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_DECLARATION*
 
+h|*Description*
+2+a|Declaration of a writable variable, associating a name with a type.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_simple_statement[BMM_SIMPLE_STATEMENT]
 
 h|
 2+^h|*Feature Group "access"*

@@ -13,11 +13,4 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 time string
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|value_valid: valid_iso8601_time(value);
-
-
 |===

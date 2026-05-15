@@ -4,6 +4,13 @@
 
 3+^h|  *class INTERNET_ID*
 
+h|*Description*
+2+a|Model of a reverse internet domain, as used to uniquely identify an internet domain. In
+the form of a dot-separated string in the reverse order of a domain name, specified by
+https://www.rfc-editor.org/info/rfc1034[IETF RFC 1034^].
+
+h|*Inherit*
+2+|xref:representation:identification-gen.adoc#_class_uid[UID]
 
 h|
 2+^h|*Feature Group "access"*

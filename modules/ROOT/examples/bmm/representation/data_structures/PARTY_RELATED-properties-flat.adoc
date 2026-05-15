@@ -30,11 +30,4 @@ h|prop +
 a|Optional reference to more detailed demographic or identification information for this
 party, in an external system.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|relationship_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_subject_relationship, relationship.defining_code);
-
-
 |===

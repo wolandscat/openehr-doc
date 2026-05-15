@@ -4,6 +4,13 @@
 
 3+^h|  *class C_PRIMITIVE_TUPLE*
 
+h|*Description*
+2+a|Class representing a single object tuple instance in a tuple constraint. Each such
+instance is a vector of object constraints, where each member (each `C_PRIMITIVE_OBJECT`)
+corresponds to one of the `C_ATTRIBUTEs` referred to by the owning `C_ATTRIBUTE_TUPLE`.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 
 h|
 2+^h|*Feature Group "access"*

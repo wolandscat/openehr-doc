@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class DV_ABSOLUTE_QUANTITY*
 
+h|*Description*
+2+a|Abstract class defining the concept of quantified entities whose values are absolute with
+respect to an origin. Dates and Times are the main example.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_quantified[DV_QUANTIFIED]
 
 h|
 2+^h|*Feature Group "access"*

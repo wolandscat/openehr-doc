@@ -65,29 +65,4 @@ h|prop +
 a|Optional list of tags associated with this EHR. Tag `target` values can only be within
 the same EHR.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|contributions_valid: contributions.for_all(c.type.is_equal("CONTRIBUTION"));
-
-h|
-2+a|ehr_access_valid: ehr_access.type.is_equal("VERSIONED_EHR_ACCESS");
-
-h|
-2+a|ehr_status_valid: ehr_status.type.is_equal("VERSIONED_EHR_STATUS");
-
-h|
-2+a|compositions_valid: compositions.for_all(c.type.is_equal("VERSIONED_COMPOSITION"));
-
-h|
-2+a|directory_valid: ∃ directory ⇒ directory.type.is_equal("VERSIONED_FOLDER");
-
-h|
-2+a|folders_valid: ∃ folders ⇒ folders.for_all(f.type.is_equal("VERSIONED_FOLDER"));
-
-h|
-2+a|directory_in_folders: ∃ folders ⇒ folders.item(1) = directory;
-
-
 |===

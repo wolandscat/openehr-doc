@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_MODEL_METADATA*
 
+h|*Description*
+2+a|Core properties of `BMM_MODEL`, may be used in a serial representation as well, such as
+`P_BMM_SCHEMA`.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

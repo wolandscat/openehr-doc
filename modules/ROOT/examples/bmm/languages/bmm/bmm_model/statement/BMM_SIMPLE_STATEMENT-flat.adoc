@@ -4,5 +4,11 @@
 
 3+^h| abstract  *class BMM_SIMPLE_STATEMENT*
 
+h|*Description*
+2+a|Simple statement, i.e. statement with one logical element - a single expression, procedure
+call etc.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_statement[BMM_STATEMENT]
 
 |===

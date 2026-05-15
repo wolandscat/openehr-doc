@@ -51,11 +51,4 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|value_valid: valid_iso8601_date_time(value);
-
-
 |===

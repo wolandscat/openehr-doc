@@ -4,6 +4,13 @@
 
 3+^h| abstract  *class BMM_LITERAL_VALUE<T:BMM_TYPE>*
 
+h|*Description*
+2+a|Meta-type for literal instance values declared in a model. Instance values may be inline
+values of primitive types in the usual fashion or complex objects in syntax form, e.g.
+JSON.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

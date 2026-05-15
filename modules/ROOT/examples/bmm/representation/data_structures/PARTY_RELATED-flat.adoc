@@ -4,6 +4,12 @@
 
 3+^h|  *class PARTY_RELATED*
 
+h|*Description*
+2+a|Proxy type for identifying a party and its relationship to the subject of the record. Use
+where the relationship between the party and the subject of the record must be known.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_party_identified[PARTY_IDENTIFIED]
 
 h|
 2+^h|*Feature Group "access"*

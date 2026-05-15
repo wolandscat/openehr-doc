@@ -4,6 +4,12 @@
 
 3+^h|  *class AGENT*
 
+h|*Description*
+2+a|Generic concept of any kind of agent, including devices, software systems, but not humans
+or organisations.
+
+h|*Inherit*
+2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 h|
 2+^h|*Feature Group "access"*

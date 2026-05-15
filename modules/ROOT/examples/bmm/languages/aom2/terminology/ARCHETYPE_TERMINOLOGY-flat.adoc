@@ -4,6 +4,12 @@
 
 3+^h|  *class ARCHETYPE_TERMINOLOGY*
 
+h|*Description*
+2+a|Local terminology of an archetype. This class defines the semantics of the terminology of
+an archetype.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

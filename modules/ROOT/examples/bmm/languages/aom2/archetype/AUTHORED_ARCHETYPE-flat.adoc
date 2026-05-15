@@ -4,6 +4,12 @@
 
 3+^h|  *class AUTHORED_ARCHETYPE*
 
+h|*Description*
+2+a|Root object of a standalone, authored archetype, including all meta-data,
+description, other identifiers and lifecycle.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_archetype[ARCHETYPE],xref:infostructure:resource-gen.adoc#_class_authored_resource[AUTHORED_RESOURCE]
 
 h|
 2+^h|*Feature Group "access"*

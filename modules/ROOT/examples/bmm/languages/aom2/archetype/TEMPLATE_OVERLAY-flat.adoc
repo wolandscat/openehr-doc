@@ -4,6 +4,13 @@
 
 3+^h|  *class TEMPLATE_OVERLAY*
 
+h|*Description*
+2+a|A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source
+template. Overlays have no meta-data of their own, and are instead documented by their
+owning template.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_archetype[ARCHETYPE]
 
 h|
 2+^h|*Feature Group "access"*

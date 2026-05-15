@@ -4,5 +4,11 @@
 
 3+^h|  *class TUPLE2<A:Any,B:Any>*
 
+h|*Description*
+2+a|A Tuple type used, among other things, for representing two typed arguments within a
+Routine signature.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_tuple[TUPLE]
 
 |===

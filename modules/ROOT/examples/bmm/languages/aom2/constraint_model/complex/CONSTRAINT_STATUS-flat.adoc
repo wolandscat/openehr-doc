@@ -4,6 +4,12 @@
 
 3+^h|  *enum CONSTRAINT_STATUS*
 
+h|*Description*
+2+a|Status of `constraint`, with values allowing for 'soft' constraints, which are
+effectively different kinds of suggestions.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 
 h|
 2+^h|*Feature Group "values"*

@@ -40,17 +40,4 @@ h|prop +
 |*other_meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|invariant_adl_version_validity: valid_version_id(adl_version);
-
-h|
-2+a|invariant_rm_release: valid_version_id(rm_release);
-
-h|
-2+a|description_validity: ∃ description;
-
-
 |===

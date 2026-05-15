@@ -4,6 +4,11 @@
 
 3+^h|  *class DV_GENERAL_TIME_SPECIFICATION*
 
+h|*Description*
+2+a|Specifies points in time in a general syntax. Based on the HL7v3 GTS data type.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_time_specification[DV_TIME_SPECIFICATION]
 
 h|
 2+^h|*Feature Group "access"*

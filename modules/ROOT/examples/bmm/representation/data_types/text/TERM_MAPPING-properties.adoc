@@ -35,14 +35,4 @@ h|prop +
 |*target*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|The target term of the mapping.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|purpose_valid: ∃ purpose ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_term_mapping_purpose, purpose.defining_code);
-
-h|
-2+a|match_valid: is_valid_match_code(match);
-
-
 |===

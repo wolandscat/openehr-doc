@@ -37,17 +37,4 @@ h|prop +
 a|The events in the series. This attribute is of a generic type whose parameter must be a
 descendant of `ITEM_SUTRUCTURE`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|events_valid: (∃ events ∧ ¬ events.is_empty) ∨ ∃ summary;
-
-h|
-2+a|periodic_validity: is_periodic ⊻ ¬ ∃ period;
-
-h|
-2+a|period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
-
-
 |===

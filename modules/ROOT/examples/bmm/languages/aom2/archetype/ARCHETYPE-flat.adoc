@@ -4,6 +4,15 @@
 
 3+^h| abstract  *class ARCHETYPE*
 
+h|*Description*
+2+a|The `ARCHETYPE` class defines the core formal model of the root object of any archetype or
+template. It includes only basic identification information, and otherwise provides the
+structural connections from the Archetype to its constituent parts, i.e. definition (a
+`C_COMPLEX_OBJECT`), terminology (`ARCHEYTPE_TERMINOLOGY`) and so on. It is the parent
+class of all concrete types of archetype.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

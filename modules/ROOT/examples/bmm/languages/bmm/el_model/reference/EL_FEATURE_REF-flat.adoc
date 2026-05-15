@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class EL_FEATURE_REF*
 
+h|*Description*
+2+a|A reference that is scoped by a containing entity and requires a context qualifier if it
+is not the currently scoping entity.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 
 h|
 2+^h|*Feature Group "access"*

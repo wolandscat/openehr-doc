@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class DV_ENCAPSULATED*
 
+h|*Description*
+2+a|Abstract class defining the common meta-data of all types of encapsulated data.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

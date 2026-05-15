@@ -51,17 +51,4 @@ h|prop +
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|links_valid: ∃ links ⇒ ¬ links.is_empty();
-
-h|
-2+a|archetyped_valid: is_archetype_root ⊻ ¬ ∃ archetype_details;
-
-h|
-2+a|archetype_node_id_valid: ¬ archetype_node_id.is_empty();
-
-
 |===

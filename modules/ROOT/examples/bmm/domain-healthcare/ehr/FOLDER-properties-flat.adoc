@@ -66,11 +66,4 @@ h|prop +
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|folders_valid: ¬ folders.is_empty();
-
-
 |===

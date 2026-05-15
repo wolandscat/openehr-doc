@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_ENUMERATION_INTEGER*
 
+h|*Description*
+2+a|Integer-based enumeration meta-type.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_enumeration[BMM_ENUMERATION]
 
 h|
 2+^h|*Feature Group "access"*

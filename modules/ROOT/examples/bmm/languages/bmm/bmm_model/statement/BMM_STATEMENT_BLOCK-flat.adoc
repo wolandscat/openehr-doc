@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_STATEMENT_BLOCK*
 
+h|*Description*
+2+a|A statement 'block' corresponding to the programming language concept of the same name.
+May be used to establish scope in specific languages.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_statement_item[BMM_STATEMENT_ITEM]
 
 h|
 2+^h|*Feature Group "access"*

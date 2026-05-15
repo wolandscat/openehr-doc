@@ -4,6 +4,11 @@
 
 3+^h|builtin  abstract  *class Container<T:Any>*
 
+h|*Description*
+2+a|Abstract ancestor of container types whose items are addressable in some way.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

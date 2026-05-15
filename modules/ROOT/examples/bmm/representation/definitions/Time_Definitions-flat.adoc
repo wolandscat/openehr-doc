@@ -4,6 +4,13 @@
 
 3+^h|builtin   *class Time_Definitions*
 
+h|*Description*
+2+a|Definitions for date/time classes. Note that the timezone limits are set by
+where the international dateline is. Thus, time in New Zealand is quoted
+using +12:00, not -12:00.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "definitions"*

@@ -4,6 +4,12 @@
 
 3+^h|  *class ASSIGNMENT*
 
+h|*Description*
+2+a|Meta-type representing the assignment statement, which associates a named variable with an
+expression, and produces no value.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_statement[STATEMENT]
 
 h|
 2+^h|*Feature Group "access"*

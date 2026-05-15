@@ -4,6 +4,11 @@
 
 3+^h|  *class VERSIONED_OBJECT<T>*
 
+h|*Description*
+2+a|Version control abstraction, defining semantics for versioning one complex object.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

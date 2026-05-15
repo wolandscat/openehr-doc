@@ -26,14 +26,4 @@ h|prop +
 |*time_created*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time of initial creation of this versioned object.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
-
-h|
-2+a|persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
-
-
 |===

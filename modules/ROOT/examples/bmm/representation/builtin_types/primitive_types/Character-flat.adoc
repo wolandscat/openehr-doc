@@ -4,6 +4,11 @@
 
 3+^h|builtin   *class Character*
 
+h|*Description*
+2+a|Type representing minimal interface of built-in Character type.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]
 
 h|
 2+^h|*Feature Group "operators"*

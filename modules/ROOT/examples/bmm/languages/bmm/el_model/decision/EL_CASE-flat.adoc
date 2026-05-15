@@ -4,6 +4,12 @@
 
 3+^h|  *class EL_CASE<T:EL_TERMINAL>*
 
+h|*Description*
+2+a|One branch of a Case table, consisting of a value constraint (the match criterion) and a
+result, of the generic parameter type T.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_decision_branch[EL_DECISION_BRANCH]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,12 @@
 
 3+^h|  *enum INSTRUCTION_EXECUTION_TRANSITION*
 
+h|*Description*
+2+a|Enumeration of transitions in the Instruction State Machine (ISM) that drive
+changes between instruction execution states.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*

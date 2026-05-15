@@ -4,6 +4,12 @@
 
 3+^h|builtin   *class Double*
 
+h|*Description*
+2+a|Type used to represent double-precision decimal numbers. Corresponds to a
+double-precision floating point value in most languages.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered_numeric[Ordered_Numeric]
 
 h|
 2+^h|*Feature Group "access"*

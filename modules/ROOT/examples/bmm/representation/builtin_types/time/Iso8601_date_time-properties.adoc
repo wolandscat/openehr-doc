@@ -5,44 +5,4 @@
 3+^h|  *class Iso8601_date_time*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|year_valid: valid_year(year);
-
-h|
-2+a|month_valid: valid_month(month);
-
-h|
-2+a|day_valid: valid_day(year, month, day);
-
-h|
-2+a|hour_valid: valid_hour(hour, minute, second);
-
-h|
-2+a|minute_valid: ¬ minute_unknown ⇒ valid_minute(minute);
-
-h|
-2+a|second_valid: ¬ second_unknown ⇒ valid_second(second);
-
-h|
-2+a|fractional_second_valid: has_fractional_second ⇒ (¬ second_unknown ∧ valid_fractional_second(fractional_second));
-
-h|
-2+a|partial_validity_year: ¬ month_unknown;
-
-h|
-2+a|partial_validity_month: ¬ month_unknown;
-
-h|
-2+a|partial_validity_day: ¬ day_unknown;
-
-h|
-2+a|partial_validity_hour: ¬ hour_unknown;
-
-h|
-2+a|partial_validity_minute: minute_unknown ⇒ second_unknown;
-
-
 |===

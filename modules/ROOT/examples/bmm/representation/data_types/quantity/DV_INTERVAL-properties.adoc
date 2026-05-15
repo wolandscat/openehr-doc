@@ -5,11 +5,4 @@
 3+^h|  *class DV_INTERVAL<T:DV_ORDERED>*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|limits_consistent: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ (lower.is_strictly_comparable_to(upper) ∧ lower <= upper);
-
-
 |===

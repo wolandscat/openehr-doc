@@ -46,11 +46,4 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|magnitude_status_valid: ∃ magnitude_status ⇒ valid_magnitude_status(magnitude_status);
-
-
 |===

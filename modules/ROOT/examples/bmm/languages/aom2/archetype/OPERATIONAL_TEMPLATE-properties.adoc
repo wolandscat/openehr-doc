@@ -20,11 +20,4 @@ h|prop +
 a|Compendium of flattened terminology extracts (i.e. from external terminologies) from
 archetypes referenced from this template, keyed by archetype identifier.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|specialisation_validity: is_specialised;
-
-
 |===

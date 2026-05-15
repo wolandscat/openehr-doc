@@ -13,11 +13,4 @@ h|prop +
 |*base_expression*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|The base expression of this constrained form.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_boolean_expression: base_expression.is_boolean();
-
-
 |===

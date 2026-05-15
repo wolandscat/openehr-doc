@@ -4,6 +4,11 @@
 
 3+^h|  *enum MATH_FUNCTION_KIND*
 
+h|*Description*
+2+a|Enumeration of mathematical functions applicable to interval event data, e.g. maximum, mean, total.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*

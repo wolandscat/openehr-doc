@@ -54,17 +54,4 @@ h|prop +
 |*commit_audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|attestations_valid: ∃ attestations ⇒ ¬ attestations.is_empty();
-
-h|
-2+a|is_merged_validity: ¬ ∃ other_input_version_ids ⊻ is_merged;
-
-h|
-2+a|other_input_version_uids_valid: ∃ other_input_version_uids ⇒ ¬ other_input_version_uids.is_empty();
-
-
 |===

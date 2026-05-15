@@ -28,11 +28,4 @@ h|prop +
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_valid_agent: agent.is_callable();
-
-
 |===

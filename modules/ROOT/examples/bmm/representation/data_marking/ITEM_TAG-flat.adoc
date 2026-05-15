@@ -4,6 +4,12 @@
 
 3+^h|  *class ITEM_TAG*
 
+h|*Description*
+2+a|A tag with optional value that is associated with a target information entity identified
+by a UID.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

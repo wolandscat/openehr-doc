@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_ACTION_TABLE*
 
+h|*Description*
+2+a|Multi-branch conditional statement structure.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_statement[BMM_STATEMENT]
 
 h|
 2+^h|*Feature Group "access"*

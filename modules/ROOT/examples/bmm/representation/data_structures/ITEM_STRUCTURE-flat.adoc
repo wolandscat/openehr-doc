@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class ITEM_STRUCTURE*
 
+h|*Description*
+2+a|Abstract parent class of all spatial data types.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_data_structure[DATA_STRUCTURE]
 
 h|
 2+^h|*Feature Group "access"*

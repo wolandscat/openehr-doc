@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class BMM_SCHEMA_DESCRIPTOR*
 
+h|*Description*
+2+a|Descriptor for a BMM schema. Contains a meta-data table of attributes obtained from a
+mini-ODIN parse of the schema file.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

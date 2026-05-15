@@ -4,6 +4,20 @@
 
 3+^h|  *class COMPOSITION*
 
+h|*Description*
+2+a|Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit
+of modification of the record, the unit of transmission in record Extracts, and the unit
+of attestation by authorising clinicians. In this latter sense, it may be considered
+equivalent to a signed document.
+
+NOTE: It is strongly recommended that the inherited attribute `uid` be populated in
+Compositions, using the UID copied from the `object_id()` of the `uid` field of the
+enclosing `VERSION` object. + For example, the `ORIGINAL_VERSION.uid`
+`87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `uid`
+field of the Composition.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*

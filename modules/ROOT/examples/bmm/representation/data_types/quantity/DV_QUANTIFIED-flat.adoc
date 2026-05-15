@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class DV_QUANTIFIED*
 
+h|*Description*
+2+a|Abstract class defining the concept of true quantified values, i.e. values which are not
+only ordered, but which have a precise magnitude.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]
 
 h|
 2+^h|*Feature Group "access"*

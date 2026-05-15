@@ -14,14 +14,4 @@ h|prop +
 a|Access control settings for the EHR. Instance is a subtype of the type
 `ACCESS_CONTROL_SETTINGS`, allowing for the use of different access control schemes.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|scheme_valid: ¬ scheme.is_empty();
-
-h|
-2+a|is_archetype_root: is_archetype_root;
-
-
 |===

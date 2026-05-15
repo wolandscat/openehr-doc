@@ -4,6 +4,12 @@
 
 3+^h|  *enum BMM_SCHEMA_STATE*
 
+h|*Description*
+2+a|Enumeration of processing states of a `BMM_SCHEMA` used by creation and validation
+routines in `BMM_SCHEMA`.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
 2+^h|*Feature Group "values"*

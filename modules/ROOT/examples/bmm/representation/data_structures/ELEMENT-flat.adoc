@@ -4,6 +4,11 @@
 
 3+^h|  *class ELEMENT*
 
+h|*Description*
+2+a|The leaf variant of `ITEM`, to which a `DATA_VALUE` instance is attached.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_item[ITEM]
 
 h|
 2+^h|*Feature Group "access"*

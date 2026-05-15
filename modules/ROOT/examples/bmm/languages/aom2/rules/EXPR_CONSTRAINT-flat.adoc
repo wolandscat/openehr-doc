@@ -4,6 +4,12 @@
 
 3+^h|  *class EXPR_CONSTRAINT*
 
+h|*Description*
+2+a|Expression tree leaf item representing a constraint on a primitive type, expressed
+in the form of a concrete subtype of C_PRIMITIVE_OBJECT.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_leaf[EXPR_LEAF]
 
 h|
 2+^h|*Feature Group "access"*

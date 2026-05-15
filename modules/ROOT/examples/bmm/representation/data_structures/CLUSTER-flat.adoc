@@ -4,6 +4,12 @@
 
 3+^h|  *class CLUSTER*
 
+h|*Description*
+2+a|The grouping variant of `ITEM`, which may contain further instances of `ITEM`, in an
+ordered list.
+
+h|*Inherit*
+2+|xref:representation:data_structures-gen.adoc#_class_item[ITEM]
 
 h|
 2+^h|*Feature Group "access"*

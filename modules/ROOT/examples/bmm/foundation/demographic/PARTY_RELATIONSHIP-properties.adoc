@@ -28,17 +28,4 @@ h|prop +
 |*source*: xref:representation:identification-gen.adoc#_class_party_ref[PARTY_REF]
 a|Source of relationship.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|source_valid: ∃ source ∧ source.relationships.has(self);
-
-h|
-2+a|target_valid: ∃ target ∧ ¬ target.reverse_relationships.has(self);
-
-h|
-2+a|type_validity: type = name;
-
-
 |===

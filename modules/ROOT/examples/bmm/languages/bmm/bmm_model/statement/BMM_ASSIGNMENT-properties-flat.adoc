@@ -18,11 +18,4 @@ h|prop +
 |*source*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Source right hand side) of the assignment.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_target_writable: target.is_writable;
-
-
 |===

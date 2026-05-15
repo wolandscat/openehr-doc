@@ -31,14 +31,4 @@ h|prop +
 a|Optional indicator of the localised language in which the data is written, if relevant.
 Coded from openEHR Code Set `languages`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|formalism_valid: ¬ formalism.is_empty();
-
-h|
-2+a|size_valid: size >= 0;
-
-
 |===

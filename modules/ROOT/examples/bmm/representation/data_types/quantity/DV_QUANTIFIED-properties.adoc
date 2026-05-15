@@ -27,11 +27,4 @@ h|prop +
 |*accuracy*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Accuracy of measurement. Exact form of expression determined in descendants.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|magnitude_status_valid: ∃ magnitude_status ⇒ valid_magnitude_status(magnitude_status);
-
-
 |===

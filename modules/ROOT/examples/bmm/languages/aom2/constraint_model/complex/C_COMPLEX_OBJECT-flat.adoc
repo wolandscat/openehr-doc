@@ -4,6 +4,11 @@
 
 3+^h|  *class C_COMPLEX_OBJECT*
 
+h|*Description*
+2+a|Constraint on complex objects, i.e. any object that consists of other object constraints.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_defined_object[C_DEFINED_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

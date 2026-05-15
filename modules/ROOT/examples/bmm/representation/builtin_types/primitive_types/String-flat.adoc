@@ -4,6 +4,12 @@
 
 3+^h|builtin   *class String*
 
+h|*Description*
+2+a|Type representing minimal interface of built-in String type, used to represent
+textual data in any natural or formal language.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]
 
 h|
 2+^h|*Feature Group "access"*

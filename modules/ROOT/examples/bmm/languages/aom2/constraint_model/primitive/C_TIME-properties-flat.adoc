@@ -97,11 +97,4 @@ h|prop +
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|pattern_validity: ∃ pattern ⇒ valid_iso8601_time_constraint_pattern(pattern);
-
-
 |===

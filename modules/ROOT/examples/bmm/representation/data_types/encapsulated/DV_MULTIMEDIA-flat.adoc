@@ -4,6 +4,13 @@
 
 3+^h|  *class DV_MULTIMEDIA*
 
+h|*Description*
+2+a|A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes
+further metadata relating to multimedia types which are not applicable to other subtypes
+of `DV_ENCAPSULATED`.
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_encapsulated[DV_ENCAPSULATED]
 
 h|
 2+^h|*Feature Group "access"*

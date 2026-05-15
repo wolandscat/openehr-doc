@@ -4,6 +4,18 @@
 
 3+^h|  *class ADMIN_ENTRY*
 
+h|*Description*
+2+a|Entry subtype for administrative information, i.e. information about setting up the
+clinical process, but not itself clinically relevant. Archetypes will define contained
+information.
+
+Used for administrative details of admission, episode, ward location, discharge,
+appointment (if not stored in a practice management or appointments system).
+
+Not to be used for any clinically significant information.
+
+h|*Inherit*
+2+|xref:foundation:subject_record-gen.adoc#_class_entry[ENTRY]
 
 h|
 2+^h|*Feature Group "access"*

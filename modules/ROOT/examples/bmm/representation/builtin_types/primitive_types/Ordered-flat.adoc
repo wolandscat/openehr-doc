@@ -4,6 +4,11 @@
 
 3+^h|builtin  abstract  *class Ordered*
 
+h|*Description*
+2+a|Abstract parent of ordered types, which includes all numeric and temporal types.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "operators"*

@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class BMM_ROUTINE*
 
+h|*Description*
+2+a|A feature defining a routine, scoped to a class.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_feature[BMM_FEATURE]
 
 h|
 2+^h|*Feature Group "access"*

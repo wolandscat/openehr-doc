@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_OPERATOR*
 
+h|*Description*
+2+a|Definition of a symbolic operator associated with a function.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

@@ -50,11 +50,4 @@ h|prop +
 |*other_details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Optional attribute to carry any custom meta-data. May be archetyped.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|system_id_valid: ¬ system_id.is_empty();
-
-
 |===

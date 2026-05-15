@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_MODEL*
 
+h|*Description*
+2+a|Definition of the root of a BMM model (along with what is inherited from
+`BMM_SCHEMA_CORE`).
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_package_container[BMM_PACKAGE_CONTAINER],xref:languages:bmm-gen.adoc#_class_bmm_model_metadata[BMM_MODEL_METADATA]
 
 h|
 2+^h|*Feature Group "access"*

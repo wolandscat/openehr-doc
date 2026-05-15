@@ -80,17 +80,4 @@ h|prop +
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|events_valid: (∃ events ∧ ¬ events.is_empty) ∨ ∃ summary;
-
-h|
-2+a|periodic_validity: is_periodic ⊻ ¬ ∃ period;
-
-h|
-2+a|period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
-
-
 |===

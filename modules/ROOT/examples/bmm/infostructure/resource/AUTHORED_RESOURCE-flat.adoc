@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class AUTHORED_RESOURCE*
 
+h|*Description*
+2+a|Abstract idea of an online resource created by a human author.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

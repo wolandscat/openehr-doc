@@ -4,6 +4,16 @@
 
 3+^h|  *class TERMINOLOGY_ID*
 
+h|*Description*
+2+a|Identifier for terminologies such as accessed via a terminology query service. In this
+class, the value attribute identifies the Terminology in the terminology service, e.g.
+SNOMED-CT . A terminology is assumed to be in a particular language, which must be
+explicitly specified.
+
+Lexical form: `name [ '(' version ')' ]`.
+
+h|*Inherit*
+2+|xref:representation:identification-gen.adoc#_class_object_id[OBJECT_ID]
 
 h|
 2+^h|*Feature Group "access"*

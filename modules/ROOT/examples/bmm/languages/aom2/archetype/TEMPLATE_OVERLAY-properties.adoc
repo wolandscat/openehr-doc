@@ -5,11 +5,4 @@
 3+^h|  *class TEMPLATE_OVERLAY*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_is_specialised: is_specialised;
-
-
 |===

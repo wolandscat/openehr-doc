@@ -27,14 +27,4 @@ a|Mathematical function of the data of this event, e.g. maximum, mean etc. Coded
 R vocabulary `event math function`]. Default value `640\|actual\|`, meaning
 'actual value'.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|math_function_validity: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_event_math_function, math_function.defining_code);
-
-h|
-2+a|interval_start_time_valid: interval_start_time = time - width;
-
-
 |===

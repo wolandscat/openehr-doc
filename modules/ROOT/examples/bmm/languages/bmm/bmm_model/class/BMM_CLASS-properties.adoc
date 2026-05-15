@@ -47,14 +47,4 @@ h|prop +
 a|True if this class is marked as abstract, i.e. direct instances cannot be created from its
 direct type.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_constructors: creators.for_all(procedures.has(p));
-
-h|
-2+a|inv_converters: converters.for_all(p.arity() = 1);
-
-
 |===

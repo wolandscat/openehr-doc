@@ -4,6 +4,14 @@
 
 3+^h|  *class EXPR_FOR_ALL*
 
+h|*Description*
+2+a|Universal quantification operator, usually known as `for_all`, whose operand is a
+collection of items referenced by an `EXPR_VALUE_REF`. The `condition` attribute
+represents an assertion that is applied to every member of the collection at runtime to
+determine the result.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_operator[EXPR_OPERATOR]
 
 h|
 2+^h|*Feature Group "access"*

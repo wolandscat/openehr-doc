@@ -5,11 +5,4 @@
 3+^h| abstract  *class UID_BASED_ID*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|has_extension_valid: extension.is_empty() ⊻ has_extension;
-
-
 |===

@@ -4,6 +4,13 @@
 
 3+^h|  *class LOCATABLE_REF*
 
+h|*Description*
+2+a|Reference to a `LOCATABLE` instance inside the top-level content structure inside a
+`VERSION<T>` identified by the `id` attribute. The `path` attribute is applied to the
+object that `VERSION._data` points to.
+
+h|*Inherit*
+2+|xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 
 h|
 2+^h|*Feature Group "access"*

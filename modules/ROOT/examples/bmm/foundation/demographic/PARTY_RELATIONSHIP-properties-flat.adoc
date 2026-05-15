@@ -71,17 +71,4 @@ h|prop +
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|source_valid: ∃ source ∧ source.relationships.has(self);
-
-h|
-2+a|target_valid: ∃ target ∧ ¬ target.reverse_relationships.has(self);
-
-h|
-2+a|type_validity: type = name;
-
-
 |===

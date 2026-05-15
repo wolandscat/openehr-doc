@@ -54,23 +54,4 @@ h|prop +
 a|Identifier of externally held workflow engine data for this workflow execution, for this
 subject of care.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|language_valid: code_set(Code_set_id_languages).has_code(language);
-
-h|
-2+a|encoding_valid: code_set(Code_set_id_character_sets).has_code(encoding);
-
-h|
-2+a|subject_validity: subject_is_self ⇒ subject.generating_type = "PARTY_SELF";
-
-h|
-2+a|other_participations_valid: ∃ other_participations ⇒ ¬ other_participations.is_empty();
-
-h|
-2+a|is_archetype_root: is_archetype_root;
-
-
 |===

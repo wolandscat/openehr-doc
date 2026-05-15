@@ -4,6 +4,13 @@
 
 3+^h| abstract  *class EVENT<T:ITEM_STRUCTURE>*
 
+h|*Description*
+2+a|Defines the abstract notion of a single event in a series. This class is generic, allowing
+types to be generated which are locked to particular spatial types, such as
+`EVENT<ITEM_LIST>`. Subtypes express point or intveral data.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*

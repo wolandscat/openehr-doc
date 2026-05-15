@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class EXPRESSION*
 
+h|*Description*
+2+a|Abstract parent of all expression meta-types.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_value[EXPR_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,13 @@
 
 3+^h|  *class BMM_SIGNATURE*
 
+h|*Description*
+2+a|Built-in meta-type that expresses the type structure of any referenceable element of a
+model. Consists of potential `arguments` and `result`, with constraints in descendants
+determining the exact form.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_builtin_type[BMM_BUILTIN_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

@@ -47,14 +47,4 @@ h|prop +
 |*rm_overlay*: xref:languages:aom2-gen.adoc#_class_rm_overlay[RM_OVERLAY]
 a|
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|invariant_concept_valid: terminology.has_term_code(concept_code);
-
-h|
-2+a|invariant_specialisation_validity: is_specialised ⇒ specialisation_depth > 0;
-
-
 |===

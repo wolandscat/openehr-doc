@@ -66,11 +66,4 @@ h|prop +
 |*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_signature_no_args: ¬ ∃ signature().arguments;
-
-
 |===

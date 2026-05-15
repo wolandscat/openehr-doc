@@ -18,11 +18,4 @@ h|prop +
 |*result*: T
 a|Result expression of conditional, if its `condition` evaluates to True.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_condition_boolean: condition.is_boolean();
-
-
 |===

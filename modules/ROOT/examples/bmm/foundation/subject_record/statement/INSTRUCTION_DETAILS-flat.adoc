@@ -4,6 +4,11 @@
 
 3+^h|  *class INSTRUCTION_DETAILS*
 
+h|*Description*
+2+a|Used to record details of the Instruction causing an Action.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
 2+^h|*Feature Group "access"*

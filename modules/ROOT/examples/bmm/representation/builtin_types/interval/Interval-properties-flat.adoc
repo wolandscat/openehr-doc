@@ -42,20 +42,4 @@ h|prop +
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|lower_included_valid: lower_unbounded ⇒ ¬ lower_included;
-
-h|
-2+a|upper_included_valid: upper_unbounded ⇒ ¬ upper_included;
-
-h|
-2+a|limits_consistent: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower <= upper;
-
-h|
-2+a|limits_comparable: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower.strictly_comparable_to(upper);
-
-
 |===

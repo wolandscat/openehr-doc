@@ -6,6 +6,8 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
+LOCATABLE -[#gray]up-|> PATHABLE  
+
 class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_composition]] {
         .. access ..
         language: CODE_PHRASE «iso.iso_639-1»
@@ -52,7 +54,5 @@ abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openeh
 }
 abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
 }
-
-LOCATABLE -[#gray]up-|> PATHABLE  
 
 ....

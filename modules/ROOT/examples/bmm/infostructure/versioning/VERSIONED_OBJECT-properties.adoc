@@ -26,23 +26,4 @@ h|prop +
 |*time_created*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time of initial creation of this versioned object.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|version_count_valid: version_count >= 0;
-
-h|
-2+a|all_version_ids_valid: all_version_ids.count = version_count;
-
-h|
-2+a|all_versions_valid: all_versions.count = version_count;
-
-h|
-2+a|latest_version_valid: version_count > 0 ⇒ ∃ latest_version;
-
-h|
-2+a|uid_validity: extension.is_empty();
-
-
 |===

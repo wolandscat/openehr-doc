@@ -88,11 +88,4 @@ h|prop +
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_valid_assumed_value: valid_value(assumed_value);
-
-
 |===

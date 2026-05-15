@@ -34,14 +34,4 @@ h|prop +
 |*performer*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Uid of demographic entity within Extract who performed this participation.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|function_valid: ∃ function ∧ function.generating_type.is_equal("DV_CODED_TEXT") ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_function, function.defining_code);
-
-h|
-2+a|mode_valid: ∃ mode ∧ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_participation_mode, mode.defining_code);
-
-
 |===

@@ -4,6 +4,11 @@
 
 3+^h|  *class VERSIONED_EHR_STATUS*
 
+h|*Description*
+2+a|Version container for `EHR_STATUS` instance.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_versioned_object[VERSIONED_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

@@ -124,11 +124,4 @@ code. For each translation listed here, there must be corresponding sections in 
 language-dependent parts of the resource. The `original_language` does not appear in
 this list.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_is_specialised: is_specialised;
-
-
 |===

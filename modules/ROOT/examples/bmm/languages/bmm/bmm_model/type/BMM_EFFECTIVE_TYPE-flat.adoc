@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class BMM_EFFECTIVE_TYPE*
 
+h|*Description*
+2+a|Meta-type for a concrete, unitary type that can be used as an actual parameter type in a
+generic type declaration.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

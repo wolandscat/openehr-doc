@@ -16,11 +16,4 @@ a|Ordered list of content items under this section, which may include:
 * more `SECTIONs`;
 * `ENTRYs`.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|items_valid: ∃ items ⇒ ¬ items.is_empty();
-
-
 |===

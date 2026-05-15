@@ -4,6 +4,11 @@
 
 3+^h|  *class EL_UNARY_OPERATOR*
 
+h|*Description*
+2+a|Unary operator expression node.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_operator[EL_OPERATOR]
 
 h|
 2+^h|*Feature Group "access"*

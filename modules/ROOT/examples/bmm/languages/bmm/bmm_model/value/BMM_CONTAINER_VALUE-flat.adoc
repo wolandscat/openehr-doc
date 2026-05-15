@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_CONTAINER_VALUE<T:BMM_TYPE>*
 
+h|*Description*
+2+a|Meta-type for literals whose concrete type is a linear container type, i.e. array, list or
+set.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_literal_value[BMM_LITERAL_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

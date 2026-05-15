@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class C_DEFINED_OBJECT*
 
+h|*Description*
+2+a|Abstract parent type of `C_OBJECT` subtypes that are defined by value, i.e. whose
+definitions are actually in the archetype rather than being by reference.
+
+h|*Inherit*
+2+|xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

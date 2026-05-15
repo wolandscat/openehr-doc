@@ -18,17 +18,4 @@ h|prop +
 |*identifiers*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_identifier[DV_IDENTIFIER]>
 a|One or more formal identifiers (possibly computable).
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|basic_validity: ∃ name ∨ ∃ identifiers ∨ ∃ external_ref;
-
-h|
-2+a|name_valid: ∃ name ⇒ ¬ name.is_empty();
-
-h|
-2+a|identifiers_valid: ∃ identifiers ⇒ ¬ identifiers.is_empty();
-
-
 |===

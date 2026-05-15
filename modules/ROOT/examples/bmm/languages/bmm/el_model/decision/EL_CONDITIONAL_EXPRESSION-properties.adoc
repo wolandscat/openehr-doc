@@ -13,11 +13,4 @@ h|prop +
 |*condition*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Boolean expression defining the condition of this decision branch.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_condition_boolean: condition.is_boolean();
-
-
 |===

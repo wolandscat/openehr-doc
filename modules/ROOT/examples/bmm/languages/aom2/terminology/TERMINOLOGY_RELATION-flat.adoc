@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class TERMINOLOGY_RELATION*
 
+h|*Description*
+2+a|Class whose instances represent any kind of 1:N relationship between a source term and
+1-N target terms.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

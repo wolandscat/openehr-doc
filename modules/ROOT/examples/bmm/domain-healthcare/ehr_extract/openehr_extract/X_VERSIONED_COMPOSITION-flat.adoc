@@ -4,6 +4,11 @@
 
 3+^h|  *class X_VERSIONED_COMPOSITION*
 
+h|*Description*
+2+a|Form of `X_VERSIONED_OBJECT` for `COMPOSITION` EHR object.
+
+h|*Inherit*
+2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_x_versioned_object[X_VERSIONED_OBJECT]
 
 h|
 2+^h|*Feature Group "access"*

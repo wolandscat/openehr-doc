@@ -29,11 +29,4 @@ a|Optional attribute to carry preferred term corresponding to the code or expres
 representing data for which both a (non-preferred) actual term and a preferred term are
 both required.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|code_string_valid: ¬ code_string.is_empty();
-
-
 |===

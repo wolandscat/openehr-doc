@@ -19,14 +19,4 @@ h|prop +
 |*result*: xref:languages:bmm-gen.adoc#_class_bmm_result[BMM_RESULT]
 a|Automatically created Result variable, usable in body and post-condition.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|operator_validity: 1 ⇒ 2;
-
-h|
-2+a|inv_result_type: type = result.type;
-
-
 |===

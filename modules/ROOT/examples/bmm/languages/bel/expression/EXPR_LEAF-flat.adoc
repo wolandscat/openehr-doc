@@ -4,6 +4,16 @@
 
 3+^h| abstract  *class EXPR_LEAF*
 
+h|*Description*
+2+a|Meta-type representing one of:
+
+* a manifest constant of any primitive type;
+* a path referring to a value in the archetype;
+* a constraint;
+* a variable reference.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]
 
 h|
 2+^h|*Feature Group "access"*

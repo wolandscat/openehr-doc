@@ -4,6 +4,13 @@
 
 3+^h| abstract  *class DV_AMOUNT*
 
+h|*Description*
+2+a|Abstract class defining the concept of relative quantified 'amounts'. For relative
+quantities, the `+` and `-` operators are defined (unlike descendants of
+`DV_ABSOLUTE_QUANTITY`, such as the date/time types).
+
+h|*Inherit*
+2+|xref:representation:data_types-gen.adoc#_class_dv_quantified[DV_QUANTIFIED]
 
 h|
 2+^h|*Feature Group "access"*

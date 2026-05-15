@@ -4,6 +4,11 @@
 
 3+^h|  *class EXTRACT_FOLDER*
 
+h|*Description*
+2+a|Folder in local Folder structure in an Extract. Empty Folders are allowed.
+
+h|*Inherit*
+2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_item[EXTRACT_ITEM]
 
 h|
 2+^h|*Feature Group "access"*

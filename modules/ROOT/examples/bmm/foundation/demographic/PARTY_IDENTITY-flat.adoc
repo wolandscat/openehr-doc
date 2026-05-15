@@ -4,6 +4,12 @@
 
 3+^h|  *class PARTY_IDENTITY*
 
+h|*Description*
+2+a|An identity owned by a Party, such as a person name or company name, and which is
+used by the Party to identify itself. Actual structure is archetyped.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,12 @@
 
 3+^h|  *class CAPABILITY*
 
+h|*Description*
+2+a|Capability of a role, such as ehr modifier, health care provider. Capability should be
+backed up by credentials.
+
+h|*Inherit*
+2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
 2+^h|*Feature Group "access"*

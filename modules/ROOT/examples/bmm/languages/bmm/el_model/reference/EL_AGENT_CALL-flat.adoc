@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class EL_AGENT_CALL*
 
+h|*Description*
+2+a|A call made to a 'closed' agent, i.e. one with no remaining open arguments.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

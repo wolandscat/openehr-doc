@@ -4,6 +4,12 @@
 
 3+^h|  *class PERSON*
 
+h|*Description*
+2+a|Generic description of persons. Provides a dedicated type to which Person archetypes
+can be targeted.
+
+h|*Inherit*
+2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 h|
 2+^h|*Feature Group "access"*

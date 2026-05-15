@@ -4,6 +4,12 @@
 
 3+^h|  *class Multiplicity_interval*
 
+h|*Description*
+2+a|An Interval of Integer, used to represent multiplicity, cardinality and optionality in
+models.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_proper_interval[Proper_Interval]
 
 h|
 2+^h|*Feature Group "access"*

@@ -4,6 +4,11 @@
 
 3+^h|  *class BMM_PARAMETER_TYPE*
 
+h|*Description*
+2+a|Definition of a generic parameter in a class definition of a generic type.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

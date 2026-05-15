@@ -4,6 +4,11 @@
 
 3+^h|  *class EL_STATIC_REF*
 
+h|*Description*
+2+a|Reference to a writable property, either a constant or computed.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_el_feature_ref[EL_FEATURE_REF]
 
 h|
 2+^h|*Feature Group "access"*

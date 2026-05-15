@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class BMM_BUILTIN_TYPE*
 
+h|*Description*
+2+a|Parent of built-in types, which are treated as being primitive and non-abstract.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 
 h|
 2+^h|*Feature Group "access"*

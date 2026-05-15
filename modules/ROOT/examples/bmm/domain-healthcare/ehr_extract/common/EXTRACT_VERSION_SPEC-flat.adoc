@@ -4,6 +4,16 @@
 
 3+^h|  *class EXTRACT_VERSION_SPEC*
 
+h|*Description*
+2+a|Specification of what versions should be included in an Extract. By default, only latest
+versions are included in the Extract, in which case this part of the Extract specification
+is not needed at all. The attributes `include_all_versions` and `commit_time_interval`
+are used to modify this; the former forces all versions to be included; the latter limits
+the versions to be those latest versions committed in the time interval, or if
+`include_all_versions` is `True`, all versions committed in the time interval.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

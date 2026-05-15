@@ -25,11 +25,4 @@ h|prop +
 |*modules*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
 a|All classes in this model, keyed by type name.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_top_level_scope: scope = self;
-
-
 |===

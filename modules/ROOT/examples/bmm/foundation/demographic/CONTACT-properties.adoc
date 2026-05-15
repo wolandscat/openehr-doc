@@ -18,11 +18,4 @@ h|prop +
 |*time_validity*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]>
 a|Valid time interval for this contact descriptor.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|purpose_valid: purpose = name;
-
-
 |===

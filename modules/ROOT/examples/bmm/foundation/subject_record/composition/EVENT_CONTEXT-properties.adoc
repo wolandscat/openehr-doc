@@ -50,17 +50,4 @@ a|Parties involved in the healthcare event. These would normally include the phy
 and often the patient (but not the latter if the clinical session is a pathology test for
 example).
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|setting_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_setting, setting.defining_code);
-
-h|
-2+a|participations_validity: ∃ participations ⇒ ¬ participations.is_empty();
-
-h|
-2+a|location_valid: ∃ location ⇒ ¬ location.is_empty();
-
-
 |===

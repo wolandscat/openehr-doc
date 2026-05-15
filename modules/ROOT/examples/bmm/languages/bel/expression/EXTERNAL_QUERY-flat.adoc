@@ -4,6 +4,14 @@
 
 3+^h|  *class EXTERNAL_QUERY*
 
+h|*Description*
+2+a|Definition of a variable whose value is derived from a query run on a data context in the
+operational environment. Typical uses of this kind of variable are to obtain values like
+the patient date of birth, sex, weight, and so on. It could also be used to obtain items
+from a knowledge context, such as a drug database.
+
+h|*Inherit*
+2+|xref:languages:bel-gen.adoc#_class_expr_value[EXPR_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

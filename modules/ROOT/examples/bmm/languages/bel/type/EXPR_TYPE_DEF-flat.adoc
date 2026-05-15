@@ -4,6 +4,11 @@
 
 3+^h| abstract  *class EXPR_TYPE_DEF*
 
+h|*Description*
+2+a|Ancestor class for type definitions known in the openEHR Expression formalism.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

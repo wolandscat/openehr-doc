@@ -5,11 +5,4 @@
 3+^h| abstract  *class BMM_INSTANTIABLE_FEATURE*
 
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_signature_no_args: ¬ ∃ signature().arguments;
-
-
 |===

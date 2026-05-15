@@ -34,11 +34,4 @@ valid identifiers of archetypes for Actions corresponding to this Activity speci
 
 Defaults to `/.*/`, meaning any archetype.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|action_archetype_id_valid: ¬ action_archetype_id.is_empty();
-
-
 |===

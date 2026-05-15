@@ -4,6 +4,12 @@
 
 3+^h| abstract  *class Interval<T:Ordered>*
 
+h|*Description*
+2+a|Interval abstraction, featuring upper and lower limits that may be open or closed,
+included or not included. Interval of ordered items.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
 
 h|
 2+^h|*Feature Group "access"*

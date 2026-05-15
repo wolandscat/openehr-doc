@@ -4,6 +4,11 @@
 
 3+^h|  *class ORIGINAL_VERSION<T>*
 
+h|*Description*
+2+a|A Version containing locally created content and optional attestations.
+
+h|*Inherit*
+2+|xref:infostructure:versioning-gen.adoc#_class_version[VERSION]
 
 h|
 2+^h|*Feature Group "access"*

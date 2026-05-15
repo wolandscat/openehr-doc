@@ -34,14 +34,4 @@ h|prop +
 |*owner_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of owner object, such as EHR.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_key_valid: ¬ key.is_empty() ∧ key.is_justified;
-
-h|
-2+a|inv_value_valid: ∃ value ⇒ ¬ value.is_empty();
-
-
 |===

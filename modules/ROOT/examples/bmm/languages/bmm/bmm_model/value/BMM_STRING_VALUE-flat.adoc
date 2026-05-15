@@ -4,6 +4,12 @@
 
 3+^h|  *class BMM_STRING_VALUE*
 
+h|*Description*
+2+a|Meta-type for a literal String value, for which `type` is fixed to the `BMM_TYPE`
+representing `String` and `value` is of type `String`.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_primitive_value[BMM_PRIMITIVE_VALUE]
 
 h|
 2+^h|*Feature Group "access"*

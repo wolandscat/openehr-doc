@@ -4,6 +4,14 @@
 
 3+^h|  *class BMM_PACKAGE*
 
+h|*Description*
+2+a|Abstraction of a package as a tree structure whose nodes can contain other packages and
+classes.
+
+The `name` may be qualified if it is a top-level package.
+
+h|*Inherit*
+2+|xref:languages:bmm-gen.adoc#_class_bmm_package_container[BMM_PACKAGE_CONTAINER]
 
 h|
 2+^h|*Feature Group "access"*

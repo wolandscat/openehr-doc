@@ -5,6 +5,12 @@
 skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+}
+
+CONTENT_ITEM -[#gray]up-|> LOCATABLE  
+
+LOCATABLE -[#gray]up-|> PATHABLE  
 
 abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
         .. access ..
@@ -149,11 +155,5 @@ abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-
 }
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
-abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
-}
-
-CONTENT_ITEM -[#gray]up-|> LOCATABLE  
-
-LOCATABLE -[#gray]up-|> PATHABLE  
 
 ....

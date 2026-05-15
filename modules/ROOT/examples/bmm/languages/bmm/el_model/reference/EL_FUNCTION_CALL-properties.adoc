@@ -18,11 +18,4 @@ h|prop +
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Defined to return False.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_valid_agent: agent.is_callable();
-
-
 |===

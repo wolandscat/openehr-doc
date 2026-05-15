@@ -14,11 +14,4 @@ h|prop +
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.
 
-h|*Invariants*
-2+a|
-
-h|
-2+a|inv_valid_default_value: valid_value(default_value);
-
-
 |===
