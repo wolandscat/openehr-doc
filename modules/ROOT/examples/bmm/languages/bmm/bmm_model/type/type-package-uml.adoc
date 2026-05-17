@@ -73,7 +73,6 @@ BMM_BUILTIN_TYPE -[#gray]up-|> BMM_EFFECTIVE_TYPE
 
 class BMM_CONTAINER_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_container_type]] {
         .. access ..
-        container_class: BMM_GENERIC_CLASS
         is_ordered: Boolean
         is_unique: Boolean
         type_name:String
@@ -87,11 +86,12 @@ class BMM_CONTAINER_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
 BMM_CONTAINER_TYPE -[#gray]up-|> BMM_TYPE  
 
 
+BMM_CONTAINER_TYPE *--> "1 container_class" BMM_GENERIC_CLASS
+
 BMM_CONTAINER_TYPE *--> "1 item_type" BMM_UNITARY_TYPE
 
 class BMM_SIMPLE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_simple_type]] {
         .. access ..
-        base_class: BMM_SIMPLE_CLASS
         type_name:String
         is_abstract:Boolean
         flattened_type_list:List<String>
@@ -100,6 +100,8 @@ class BMM_SIMPLE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_si
 
 BMM_SIMPLE_TYPE -[#gray]up-|> BMM_MODEL_TYPE  
 
+
+BMM_SIMPLE_TYPE *--> "1 base_class" BMM_SIMPLE_CLASS
 
 class BMM_PROPERTY_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_property_type]] {
 }
@@ -128,14 +130,16 @@ BMM_PARAMETER_TYPE *--> "0..1 inheritance_precursor" BMM_PARAMETER_TYPE
 
 abstract class BMM_MODEL_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_type]] {
         .. access ..
-        value_constraint: BMM_VALUE_SET_SPEC
-        base_class: BMM_CLASS
         type_base_name:String
         is_primitive:Boolean
 }
 
 BMM_MODEL_TYPE -[#gray]up-|> BMM_EFFECTIVE_TYPE  
 
+
+BMM_MODEL_TYPE *--> "0..1 value_constraint" BMM_VALUE_SET_SPEC
+
+BMM_MODEL_TYPE *--> "1 base_class" BMM_CLASS
 
 class BMM_SIGNATURE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_signature]] {
         .. access ..
@@ -149,7 +153,6 @@ BMM_SIGNATURE *--> "1 result_type" BMM_TYPE
 
 class BMM_GENERIC_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_generic_type]] {
         .. access ..
-        base_class: BMM_GENERIC_CLASS
         type_name:String
         type_signature:String
         is_abstract:Boolean
@@ -163,6 +166,8 @@ BMM_GENERIC_TYPE -[#gray]up-|> BMM_MODEL_TYPE
 
 
 BMM_GENERIC_TYPE *--> "0..* generic_parameters" BMM_UNITARY_TYPE
+
+BMM_GENERIC_TYPE *--> "1 base_class" BMM_GENERIC_CLASS
 
 abstract class BMM_UNITARY_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_unitary_type]] {
         .. access ..

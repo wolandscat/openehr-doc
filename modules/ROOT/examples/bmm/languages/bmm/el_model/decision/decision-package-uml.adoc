@@ -22,11 +22,12 @@ abstract class EL_DECISION_BRANCH<T:EL_TERMINAL> [[/openehr-doc/latest/languages
 
 class EL_CASE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case]] {
         .. access ..
-        value_constraint: C_OBJECT
 }
 
 EL_CASE -[#gray]up-|> EL_DECISION_BRANCH  
 
+
+EL_CASE *--> "1 value_constraint" C_OBJECT
 
 abstract class EL_DECISION_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_table]] {
         .. access ..
@@ -39,20 +40,22 @@ EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL
 
 class EL_CONDITIONAL_EXPRESSION<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_conditional_expression]] {
         .. access ..
-        condition: EL_EXPRESSION
 }
 
 EL_CONDITIONAL_EXPRESSION -[#gray]up-|> EL_DECISION_BRANCH  
 
 
+EL_CONDITIONAL_EXPRESSION *--> "1 condition" EL_EXPRESSION
+
 class EL_CASE_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case_table]] {
         .. access ..
         items: List<EL_CASE<T>>
-        test_value: EL_VALUE_GENERATOR
 }
 
 EL_CASE_TABLE -[#gray]up-|> EL_DECISION_TABLE  
 
+
+EL_CASE_TABLE *--> "1 test_value" EL_VALUE_GENERATOR
 abstract class "languages.bmm.el_model.expression.\nEL_TERMINAL" as EL_TERMINAL  [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_terminal]] #FDFDFD {
 }
 

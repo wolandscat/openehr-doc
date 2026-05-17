@@ -10,39 +10,52 @@ class ITEM_TAG [[/openehr-doc/latest/representation/data_marking-gen.html#_class
         .. access ..
         key: String
         value: String
-        target: UID_BASED_ID
         target_path: String
-        owner_id: OBJECT_REF
 }
 
+
+ITEM_TAG *--> "1 target" UID_BASED_ID
+
+ITEM_TAG *--> "1 owner_id" OBJECT_REF
 
 class FEEDER_AUDIT_DETAILS [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit_details]] {
         .. access ..
         system_id: String
-        location: PARTY_IDENTIFIED
-        subject: PARTY_PROXY
-        provider: PARTY_IDENTIFIED
-        time: DV_DATE_TIME
         version_id: String
-        other_details: ITEM_STRUCTURE
 }
 
+
+FEEDER_AUDIT_DETAILS *--> "0..1 location" PARTY_IDENTIFIED
+
+FEEDER_AUDIT_DETAILS *--> "0..1 subject" PARTY_PROXY
+
+FEEDER_AUDIT_DETAILS *--> "0..1 provider" PARTY_IDENTIFIED
+
+FEEDER_AUDIT_DETAILS *--> "0..1 time" DV_DATE_TIME
+
+FEEDER_AUDIT_DETAILS *--> "0..1 other_details" ITEM_STRUCTURE
 
 class LINK [[/openehr-doc/latest/representation/data_marking-gen.html#_class_link]] {
         .. access ..
-        meaning: DV_TEXT
-        type: DV_TEXT
-        target: DV_EHR_URI
 }
 
+
+LINK *--> "1 meaning" DV_TEXT
+
+LINK *--> "1 type" DV_TEXT
+
+LINK *--> "1 target" DV_EHR_URI
 
 class FEEDER_AUDIT [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit]] {
         .. access ..
-        originating_system_item_ids: List<DV_IDENTIFIER>
-        feeder_system_item_ids: List<DV_IDENTIFIER>
-        original_content: DV_ENCAPSULATED
 }
 
+
+FEEDER_AUDIT *--> "0..* originating_system_item_ids" DV_IDENTIFIER
+
+FEEDER_AUDIT *--> "0..* feeder_system_item_ids" DV_IDENTIFIER
+
+FEEDER_AUDIT *--> "0..1 original_content" DV_ENCAPSULATED
 
 FEEDER_AUDIT *--> "1 originating_system_audit" FEEDER_AUDIT_DETAILS
 
@@ -61,18 +74,18 @@ abstract class PATHABLE [[/openehr-doc/latest/representation/data_marking-gen.ht
 
 class ARCHETYPED [[/openehr-doc/latest/representation/data_marking-gen.html#_class_archetyped]] {
         .. infrastructure ..
-        archetype_id: ARCHETYPE_ID
-        template_id: TEMPLATE_ID
         rm_version: String
 }
 
 
+ARCHETYPED *--> "1 archetype_id" ARCHETYPE_ID
+
+ARCHETYPED *--> "0..1 template_id" TEMPLATE_ID
+
 abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] {
         .. infrastructure ..
-        uid: UID_BASED_ID
         archetype_node_id: String
         .. access ..
-        name: DV_TEXT
         concept:DV_TEXT
         is_archetype_root:Boolean
 }
@@ -80,7 +93,11 @@ abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.h
 LOCATABLE -[#gray]up-|> PATHABLE  
 
 
+LOCATABLE *--> "0..1 uid" UID_BASED_ID
+
 LOCATABLE *--> "0..1 archetype_details" ARCHETYPED
+
+LOCATABLE *--> "1 name" DV_TEXT
 
 LOCATABLE *--> "0..* links" LINK
 

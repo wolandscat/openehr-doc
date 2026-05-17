@@ -8,22 +8,20 @@ skinparam citedClassColor #FDFDFD
 
 abstract class DV_ENCAPSULATED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_encapsulated]] {
         .. access ..
-        charset: CODE_PHRASE «iana.character-sets»
-        language: CODE_PHRASE «iso.iso_639-1»
 }
 
 DV_ENCAPSULATED -[#gray]up-|> DATA_VALUE  
 
 
+DV_ENCAPSULATED *--> "0..1 charset" CODE_PHRASE
+
+DV_ENCAPSULATED *--> "0..1 language" CODE_PHRASE
+
 class DV_MULTIMEDIA [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_multimedia]] {
         .. access ..
         alternate_text: String
-        uri: DV_URI
         data: Array<Octet>
-        media_type: CODE_PHRASE «iana.media-types»
-        compression_algorithm: CODE_PHRASE «iana.compression-algorithms»
         integrity_check: Array<Octet>
-        integrity_check_algorithm: CODE_PHRASE «iana.integrity-check-algorithms»
         size: Integer
         is_external:Boolean
         is_inline:Boolean
@@ -33,6 +31,14 @@ class DV_MULTIMEDIA [[/openehr-doc/latest/representation/data_types-gen.html#_cl
 
 DV_MULTIMEDIA -[#gray]up-|> DV_ENCAPSULATED  
 
+
+DV_MULTIMEDIA *--> "0..1 uri" DV_URI
+
+DV_MULTIMEDIA *--> "1 media_type" CODE_PHRASE
+
+DV_MULTIMEDIA *--> "0..1 compression_algorithm" CODE_PHRASE
+
+DV_MULTIMEDIA *--> "0..1 integrity_check_algorithm" CODE_PHRASE
 
 DV_MULTIMEDIA *--> "0..1 thumbnail" DV_MULTIMEDIA
 

@@ -38,7 +38,6 @@ EL_SIMPLE -[#gray]up-|> EL_TERMINAL
 
 class EL_TUPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple]] {
         .. access ..
-        type: BMM_TUPLE_TYPE
         eval_type:BMM_TYPE
 }
 
@@ -46,6 +45,8 @@ EL_TUPLE -[#gray]up-|> EL_EXPRESSION
 
 
 EL_TUPLE *--> "0..* items" EL_TUPLE_ITEM
+
+EL_TUPLE *--> "1 type" BMM_TUPLE_TYPE
 
 class EL_ATTACHED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_attached]] {
 }
@@ -106,13 +107,14 @@ abstract class EL_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_e
         .. access ..
         precedence_overridden: Boolean
         symbol: String
-        call: EL_FUNCTION_CALL
         operator_definition:BMM_OPERATOR
         equivalent_call:EL_FUNCTION_CALL
 }
 
 EL_OPERATOR -[#gray]up-|> EL_EXPRESSION  
 
+
+EL_OPERATOR *--> "1 call" EL_FUNCTION_CALL
 
 class EL_UNARY_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_unary_operator]] {
         .. access ..
@@ -125,11 +127,12 @@ EL_UNARY_OPERATOR *--> "1 operand" EL_EXPRESSION
 
 class EL_LITERAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_literal]] {
         .. access ..
-        value: BMM_LITERAL_VALUE<BMM_TYPE>
         eval_type:BMM_TYPE
 }
 
 EL_LITERAL -[#gray]up-|> EL_SIMPLE  
 
+
+EL_LITERAL *--> "1 value" BMM_LITERAL_VALUE
 
 ....

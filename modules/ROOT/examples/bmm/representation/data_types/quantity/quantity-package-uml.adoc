@@ -35,15 +35,15 @@ DV_COUNT *--> "0..1 normal_range" DV_INTERVAL
 
 class REFERENCE_RANGE<T> [[/openehr-doc/latest/representation/data_types-gen.html#_class_reference_range]] {
         .. access ..
-        meaning: DV_TEXT
 }
 
+
+REFERENCE_RANGE *--> "1 meaning" DV_TEXT
 
 REFERENCE_RANGE *--> "1 range" DV_INTERVAL
 
 abstract class DV_ORDERED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_ordered]] {
         .. access ..
-        normal_status: CODE_PHRASE
         other_reference_ranges: List<REFERENCE_RANGE<DV_ORDERED>>
         is_strictly_comparable_to(other: DV_ORDERED):Boolean
         less_than(other: DV_ORDERED):Boolean
@@ -57,12 +57,13 @@ DV_ORDERED -[#gray]up-|> DATA_VALUE
 DV_ORDERED -[#gray]up-|> Ordered  
 
 
+DV_ORDERED *--> "0..1 normal_status" CODE_PHRASE
+
 DV_ORDERED *--> "0..1 normal_range" DV_INTERVAL
 
 abstract class DV_QUANTIFIED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_quantified]] {
         .. access ..
         magnitude_status: String
-        accuracy: Any
         magnitude:Ordered_Numeric
         accuracy_unknown:Boolean
 }
@@ -70,15 +71,18 @@ abstract class DV_QUANTIFIED [[/openehr-doc/latest/representation/data_types-gen
 DV_QUANTIFIED -[#gray]up-|> DV_ORDERED  
 
 
+DV_QUANTIFIED *--> "0..1 accuracy" Any
+
 class DV_SCALE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_scale]] {
         .. access ..
-        symbol: DV_CODED_TEXT
         value: Real
         is_strictly_comparable_to(other: DV_SCALE):Boolean
 }
 
 DV_SCALE -[#gray]up-|> DV_ORDERED  
 
+
+DV_SCALE *--> "1 symbol" DV_CODED_TEXT
 
 class DV_INTERVAL<T:DV_ORDERED> [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_interval]] {
 }
@@ -190,11 +194,12 @@ DV_TEMPORAL *--> "0..1 accuracy" DV_DURATION
 class DV_ORDINAL [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_ordinal]] {
         .. access ..
         value: Integer
-        symbol: DV_CODED_TEXT
 }
 
 DV_ORDINAL -[#gray]up-|> DV_ORDERED  
 
+
+DV_ORDINAL *--> "1 symbol" DV_CODED_TEXT
 
 class DV_TIME [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_time]] {
         .. access ..

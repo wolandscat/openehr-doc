@@ -8,19 +8,18 @@ skinparam citedClassColor #FDFDFD
 
 class EL_PROCEDURE_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_procedure_agent]] {
         .. access ..
-        definition: BMM_PROCEDURE
         eval_type:BMM_PROCEDURE_TYPE
 }
 
 EL_PROCEDURE_AGENT -[#gray]up-|> EL_AGENT  
 
 
+EL_PROCEDURE_AGENT *--> "0..1 definition" BMM_PROCEDURE
+
 abstract class EL_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_agent]] {
         .. access ..
         name: String
-        closed_args: EL_TUPLE
         open_args: List<String>
-        definition: BMM_ROUTINE
         is_writable: Boolean
         eval_type:BMM_ROUTINE_TYPE
         is_callable:Boolean
@@ -30,14 +29,19 @@ abstract class EL_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_a
 EL_AGENT -[#gray]up-|> EL_FEATURE_REF  
 
 
+EL_AGENT *--> "0..1 closed_args" EL_TUPLE
+
+EL_AGENT *--> "0..1 definition" BMM_ROUTINE
+
 class EL_FUNCTION_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_function_agent]] {
         .. access ..
-        definition: BMM_FUNCTION
         eval_type:BMM_FUNCTION_TYPE
 }
 
 EL_FUNCTION_AGENT -[#gray]up-|> EL_AGENT  
 
+
+EL_FUNCTION_AGENT *--> "0..1 definition" BMM_FUNCTION
 abstract class "languages.bmm.el_model.reference.\nEL_FEATURE_REF" as EL_FEATURE_REF  [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_feature_ref]] #FDFDFD {
 }
 

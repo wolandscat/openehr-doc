@@ -22,7 +22,6 @@ class ARCHETYPE_TERMINOLOGY [[/openehr-doc/latest/languages/aom2-gen.html#_class
         concept_code: String
         term_definitions: Map<String,Map<String,ARCHETYPE_TERM>>
         term_bindings: Map<String,Map<String,Uri>>
-        owner_archetype: ARCHETYPE
         terminology_extracts: Map<String,Map<String,ARCHETYPE_TERM>>
         specialisation_depth:Integer
         node_codes:List<String>
@@ -39,6 +38,8 @@ class ARCHETYPE_TERMINOLOGY [[/openehr-doc/latest/languages/aom2-gen.html#_class
         languages_available:List<String>
 }
 
+
+ARCHETYPE_TERMINOLOGY *--> "1 owner_archetype" ARCHETYPE
 
 ARCHETYPE_TERMINOLOGY *--> "0..* value_sets" VALUE_SET
 

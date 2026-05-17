@@ -23,12 +23,13 @@ DV_IDENTIFIER -[#gray]up-|> DATA_VALUE
 
 class DV_STATE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_state]] {
         .. access ..
-        value: DV_CODED_TEXT
         is_terminal: Boolean
 }
 
 DV_STATE -[#gray]up-|> DATA_VALUE  
 
+
+DV_STATE *--> "1 value" DV_CODED_TEXT
 
 class DV_BOOLEAN [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_boolean]] {
         .. access ..

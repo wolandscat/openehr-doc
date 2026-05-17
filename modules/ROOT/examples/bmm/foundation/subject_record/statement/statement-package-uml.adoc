@@ -18,13 +18,14 @@ abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_c
         provider: PARTY_PROXY
         language: CODE_PHRASE «iso.iso_639-1»
         encoding: CODE_PHRASE «iana.character-sets»
-        other_participations: List<PARTICIPATION>
         workflow_id: OBJECT_REF
         subject_is_self:Boolean
 }
 
 ENTRY -[#gray]up-|> CONTENT_ITEM  
 
+
+ENTRY *--> "0..* other_participations" PARTICIPATION
 
 class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_ism_transition]] {
         .. access ..

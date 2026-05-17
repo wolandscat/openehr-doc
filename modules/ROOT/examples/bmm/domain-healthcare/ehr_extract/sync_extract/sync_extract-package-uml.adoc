@@ -17,13 +17,14 @@ class SYNC_EXTRACT_SPEC [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.
 
 class SYNC_EXTRACT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_sync_extract]] {
         .. access ..
-        items: List<X_CONTRIBUTION>
 }
 
 SYNC_EXTRACT -[#gray]up-|> MESSAGE_CONTENT  
 
 
 SYNC_EXTRACT *--> "1 specification" SYNC_EXTRACT_SPEC
+
+SYNC_EXTRACT *--> "0..* items" X_CONTRIBUTION
 
 class SYNC_EXTRACT_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_sync_extract_request]] {
         .. access ..

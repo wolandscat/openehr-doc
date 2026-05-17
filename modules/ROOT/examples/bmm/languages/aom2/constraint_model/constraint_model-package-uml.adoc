@@ -8,7 +8,6 @@ skinparam citedClassColor #FDFDFD
 
 abstract class ARCHETYPE_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_constraint]] {
         .. access ..
-        soc_parent: C_SECOND_ORDER
         is_prohibited:Boolean
         has_path(a_path: String):Boolean
         path:String
@@ -23,6 +22,8 @@ ARCHETYPE_CONSTRAINT -[#gray]up-|> ADL_CODE_DEFINITIONS
 
 
 ARCHETYPE_CONSTRAINT *--> "0..1 parent" ARCHETYPE_CONSTRAINT
+
+ARCHETYPE_CONSTRAINT *--> "0..1 soc_parent" C_SECOND_ORDER
 class "languages.aom2.\nADL_CODE_DEFINITIONS" as ADL_CODE_DEFINITIONS  [[/openehr-doc/latest/languages/aom2-gen.html#_class_adl_code_definitions]] #FDFDFD {
 }
 

@@ -8,13 +8,15 @@ skinparam citedClassColor #FDFDFD
 
 class OPERATIONAL_TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_operational_template]] {
         .. access ..
-        component_terminologies: Map<String,ARCHETYPE_TERMINOLOGY>
-        terminology_extracts: Map<String,ARCHETYPE_TERMINOLOGY>
         component_terminology(an_id: String):ARCHETYPE_TERMINOLOGY
 }
 
 OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
 
+
+OPERATIONAL_TEMPLATE *--> "0..* component_terminologies" ARCHETYPE_TERMINOLOGY
+
+OPERATIONAL_TEMPLATE *--> "0..* terminology_extracts" ARCHETYPE_TERMINOLOGY
 
 class AUTHORED_ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_authored_archetype]] {
         .. access ..
@@ -35,10 +37,6 @@ abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_ar
         .. access ..
         parent_archetype_id: String
         is_differential: Boolean
-        definition: C_COMPLEX_OBJECT
-        terminology: ARCHETYPE_TERMINOLOGY
-        rules: List<STATEMENT_SET>
-        rm_overlay: RM_OVERLAY
         concept_code:String
         physical_paths:List<String>
         logical_paths(a_lang: String):List<String>
@@ -48,6 +46,14 @@ abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_ar
 
 
 ARCHETYPE *--> "1 archetype_id" ARCHETYPE_HRID
+
+ARCHETYPE *--> "1 definition" C_COMPLEX_OBJECT
+
+ARCHETYPE *--> "1 terminology" ARCHETYPE_TERMINOLOGY
+
+ARCHETYPE *--> "0..* rules" STATEMENT_SET
+
+ARCHETYPE *--> "0..1 rm_overlay" RM_OVERLAY
 
 class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_hrid]] {
         .. access ..

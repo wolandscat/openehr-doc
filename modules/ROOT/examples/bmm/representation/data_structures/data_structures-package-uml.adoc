@@ -8,20 +8,23 @@ skinparam citedClassColor #FDFDFD
 
 class INTERVAL_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_interval_event]] {
         .. access ..
-        width: DV_DURATION
         sample_count: Integer
-        math_function: DV_CODED_TEXT
         interval_start_time:DV_DATE_TIME
 }
 
 INTERVAL_EVENT -[#gray]up-|> EVENT  
 
 
+INTERVAL_EVENT *--> "1 width" DV_DURATION
+
+INTERVAL_EVENT *--> "1 math_function" DV_CODED_TEXT
+
 abstract class PARTY_PROXY [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_proxy]] {
         .. access ..
-        external_ref: PARTY_REF
 }
 
+
+PARTY_PROXY *--> "0..1 external_ref" PARTY_REF
 
 class ITEM_SINGLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_single]] {
         .. access ..
@@ -58,17 +61,15 @@ CLUSTER *--> "0..* items" ITEM
 
 class PARTY_RELATED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_related]] {
         .. access ..
-        relationship: DV_CODED_TEXT
 }
 
 PARTY_RELATED -[#gray]up-|> PARTY_IDENTIFIED  
 
 
+PARTY_RELATED *--> "1 relationship" DV_CODED_TEXT
+
 class HISTORY<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_history]] {
         .. access ..
-        origin: DV_DATE_TIME
-        period: DV_DURATION
-        duration: DV_DURATION
         events: List<EVENT<T>>
         is_periodic:Boolean
 }
@@ -76,26 +77,34 @@ class HISTORY<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_struct
 HISTORY -[#gray]up-|> DATA_STRUCTURE  
 
 
+HISTORY *--> "1 origin" DV_DATE_TIME
+
+HISTORY *--> "0..1 period" DV_DURATION
+
+HISTORY *--> "0..1 duration" DV_DURATION
+
 HISTORY *--> "0..1 summary" ITEM_STRUCTURE
 
 class PARTY_IDENTIFIED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_identified]] {
         .. access ..
         name: String
-        identifiers: List<DV_IDENTIFIER>
 }
 
 PARTY_IDENTIFIED -[#gray]up-|> PARTY_PROXY  
 
 
+PARTY_IDENTIFIED *--> "0..* identifiers" DV_IDENTIFIER
+
 abstract class EVENT<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_event]] {
         .. access ..
-        time: DV_DATE_TIME
         data: T
         offset:DV_DURATION
 }
 
 EVENT -[#gray]up-|> LOCATABLE  
 
+
+EVENT *--> "1 time" DV_DATE_TIME
 
 EVENT *--> "0..1 state" ITEM_STRUCTURE
 
@@ -113,14 +122,17 @@ ITEM_STRUCTURE -[#gray]up-|> DATA_STRUCTURE
 
 class ELEMENT [[/openehr-doc/latest/representation/data_structures-gen.html#_class_element]] {
         .. access ..
-        value: DATA_VALUE
-        null_flavour: DV_CODED_TEXT
-        null_reason: DV_TEXT
         is_null:Boolean
 }
 
 ELEMENT -[#gray]up-|> ITEM  
 
+
+ELEMENT *--> "0..1 value" DATA_VALUE
+
+ELEMENT *--> "0..1 null_flavour" DV_CODED_TEXT
+
+ELEMENT *--> "0..1 null_reason" DV_TEXT
 
 abstract class ITEM [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item]] {
 }

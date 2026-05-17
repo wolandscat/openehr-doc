@@ -26,10 +26,11 @@ ADDRESSED_MESSAGE *--> "1 message" MESSAGE
 class MESSAGE [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_message]] {
         .. access ..
         author: PARTY_PROXY
-        audit: AUDIT_DETAILS
         signature: String
 }
 
+
+MESSAGE *--> "1 audit" AUDIT_DETAILS
 
 MESSAGE *--> "1 content" MESSAGE_CONTENT
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {

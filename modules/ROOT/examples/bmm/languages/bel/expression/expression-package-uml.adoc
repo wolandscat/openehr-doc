@@ -8,11 +8,12 @@ skinparam citedClassColor #FDFDFD
 
 class EXPR_VARIABLE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_variable_ref]] {
         .. access ..
-        item: VARIABLE_DECLARATION
 }
 
 EXPR_VARIABLE_REF -[#gray]up-|> EXPR_LEAF  
 
+
+EXPR_VARIABLE_REF *--> "1 item" VARIABLE_DECLARATION
 
 abstract class EXPRESSION [[/openehr-doc/latest/languages/bel-gen.html#_class_expression]] {
         .. access ..
@@ -98,11 +99,12 @@ EXPR_OPERATOR *--> "1 operator" OPERATOR_KIND
 
 class EXPR_FOR_ALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_for_all]] {
         .. access ..
-        condition: ASSERTION
 }
 
 EXPR_FOR_ALL -[#gray]up-|> EXPR_OPERATOR  
 
+
+EXPR_FOR_ALL *--> "1 condition" ASSERTION
 
 EXPR_FOR_ALL *--> "1 operand" EXPR_VALUE_REF
 

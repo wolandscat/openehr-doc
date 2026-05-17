@@ -11,27 +11,30 @@ EXPR_VALUE_REF -[#gray]up-|> EXPR_LEAF
 class EXPR_ARCHETYPE_REF [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_archetype_ref]] {
         .. access ..
         path: String
-        item: ARCHETYPE_CONSTRAINT
 }
 
 EXPR_ARCHETYPE_REF -[#gray]up-|> EXPR_VALUE_REF  
 
 
+EXPR_ARCHETYPE_REF *--> "1 item" ARCHETYPE_CONSTRAINT
+
 class EXPR_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_constraint]] {
         .. access ..
-        item: C_PRIMITIVE_OBJECT
 }
 
 EXPR_CONSTRAINT -[#gray]up-|> EXPR_LEAF  
 
 
+EXPR_CONSTRAINT *--> "1 item" C_PRIMITIVE_OBJECT
+
 class EXPR_ARCHETYPE_ID_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_archetype_id_constraint]] {
         .. access ..
-        item: C_STRING
 }
 
 EXPR_ARCHETYPE_ID_CONSTRAINT -[#gray]up-|> EXPR_CONSTRAINT  
 
+
+EXPR_ARCHETYPE_ID_CONSTRAINT *--> "1 item" C_STRING
 class "languages.bel.expression.\nEXPR_VALUE_REF" as EXPR_VALUE_REF  [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value_ref]] #FDFDFD {
 }
 abstract class "languages.bel.expression.\nEXPR_LEAF" as EXPR_LEAF  [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_leaf]] #FDFDFD {

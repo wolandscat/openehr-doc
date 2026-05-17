@@ -20,7 +20,6 @@ BMM_MODEL_ACCESS *--> "0..* bmm_models" BMM_MODEL
 
 abstract class BMM_FORMAL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_formal_element]] {
         .. access ..
-        type: BMM_TYPE
         is_nullable: Boolean
         signature:BMM_SIGNATURE
         is_boolean:Boolean
@@ -28,6 +27,8 @@ abstract class BMM_FORMAL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_
 
 BMM_FORMAL_ELEMENT -[#gray]up-|> BMM_MODEL_ELEMENT  
 
+
+BMM_FORMAL_ELEMENT *--> "1 type" BMM_TYPE
 
 abstract class BMM_MODEL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model_element]] {
         .. access ..
@@ -93,13 +94,14 @@ BMM_PACKAGE *--> "0..* members" BMM_MODULE
 
 abstract class BMM_MODULE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_module]] {
         .. access ..
-        feature_groups: List<BMM_FEATURE_GROUP>
 }
 
 BMM_MODULE -[#gray]up-|> BMM_MODEL_ELEMENT  
 
 
 BMM_MODULE *--> "1 scope" BMM_MODEL
+
+BMM_MODULE *--> "0..* feature_groups" BMM_FEATURE_GROUP
 
 BMM_MODULE *--> "0..* features" BMM_FORMAL_ELEMENT
 

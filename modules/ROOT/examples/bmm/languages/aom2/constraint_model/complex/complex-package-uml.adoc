@@ -8,13 +8,14 @@ skinparam citedClassColor #FDFDFD
 
 class C_ATTRIBUTE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_attribute_tuple]] {
         .. access ..
-        tuples: List<C_PRIMITIVE_TUPLE>
         c_conforms_to(other: C_ATTRIBUTE_TUPLE):Boolean
         c_congruent_to(other: C_SECOND_ORDER):Boolean
 }
 
 C_ATTRIBUTE_TUPLE -[#gray]up-|> C_SECOND_ORDER  
 
+
+C_ATTRIBUTE_TUPLE *--> "0..* tuples" C_PRIMITIVE_TUPLE
 
 C_ATTRIBUTE_TUPLE *--> "0..* members" C_ATTRIBUTE
 
@@ -41,17 +42,19 @@ C_OBJECT *--> "0..1 sibling_order" SIBLING_ORDER
 
 class ARCHETYPE_ID_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_id_constraint]] {
         .. access ..
-        constraint: C_STRING
 }
 
 
+ARCHETYPE_ID_CONSTRAINT *--> "1 constraint" C_STRING
+
 abstract class C_SECOND_ORDER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_second_order]] {
         .. access ..
-        members: List<ARCHETYPE_CONSTRAINT>
         c_conforms_to(other: C_SECOND_ORDER):Boolean
         c_congruent_to(other: C_SECOND_ORDER):Boolean
 }
 
+
+C_SECOND_ORDER *--> "0..* members" ARCHETYPE_CONSTRAINT
 
 class SIBLING_ORDER [[/openehr-doc/latest/languages/aom2-gen.html#_class_sibling_order]] {
         .. access ..
@@ -101,14 +104,16 @@ C_COMPLEX_OBJECT_PROXY -[#gray]up-|> C_OBJECT
 
 class ARCHETYPE_SLOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_slot]] {
         .. access ..
-        includes: List<ASSERTION>
-        excludes: List<ASSERTION>
         is_closed: Boolean
         any_allowed:Boolean
 }
 
 ARCHETYPE_SLOT -[#gray]up-|> C_OBJECT  
 
+
+ARCHETYPE_SLOT *--> "0..* includes" ASSERTION
+
+ARCHETYPE_SLOT *--> "0..* excludes" ASSERTION
 
 class C_COMPLEX_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_complex_object]] {
         .. access ..

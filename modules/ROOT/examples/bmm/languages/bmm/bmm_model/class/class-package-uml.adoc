@@ -16,15 +16,15 @@ BMM_SIMPLE_CLASS -[#gray]up-|> BMM_CLASS
 
 class BMM_ENUMERATION_STRING [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration_string]] {
         .. access ..
-        item_values: List<BMM_STRING_VALUE>
 }
 
 BMM_ENUMERATION_STRING -[#gray]up-|> BMM_ENUMERATION  
 
 
+BMM_ENUMERATION_STRING *--> "0..* item_values" BMM_STRING_VALUE
+
 class BMM_GENERIC_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_generic_class]] {
         .. access ..
-        generic_parameters: Map<String,BMM_PARAMETER_TYPE>
         type:BMM_GENERIC_TYPE
         generic_parameter_conformance_type(a_name: String):String
 }
@@ -32,18 +32,20 @@ class BMM_GENERIC_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_
 BMM_GENERIC_CLASS -[#gray]up-|> BMM_CLASS  
 
 
+BMM_GENERIC_CLASS *--> "0..* generic_parameters" BMM_PARAMETER_TYPE
+
 class BMM_ENUMERATION_INTEGER [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration_integer]] {
         .. access ..
-        item_values: List<BMM_INTEGER_VALUE>
 }
 
 BMM_ENUMERATION_INTEGER -[#gray]up-|> BMM_ENUMERATION  
 
 
+BMM_ENUMERATION_INTEGER *--> "0..* item_values" BMM_INTEGER_VALUE
+
 abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_class]] {
         .. access ..
         ancestors: List<String>
-        package: BMM_PACKAGE
         source_schema_id: String
         is_override: Boolean
         is_primitive: Boolean
@@ -58,6 +60,8 @@ abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
 
 BMM_CLASS -[#gray]up-|> BMM_MODULE  
 
+
+BMM_CLASS *--> "1 package" BMM_PACKAGE
 
 BMM_CLASS *--> "0..* immediate_descendants" BMM_CLASS
 
@@ -81,10 +85,12 @@ class BMM_FEATURE_GROUP [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_
         .. access ..
         name: String
         properties: Map<String,String>
-        features: List<BMM_FEATURE>
-        visibility: BMM_VISIBILITY
 }
 
+
+BMM_FEATURE_GROUP *--> "0..* features" BMM_FEATURE
+
+BMM_FEATURE_GROUP *--> "0..1 visibility" BMM_VISIBILITY
 abstract class "languages.bmm.bmm_model.model.\nBMM_MODULE" as BMM_MODULE  [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_module]] #FDFDFD {
 }
 

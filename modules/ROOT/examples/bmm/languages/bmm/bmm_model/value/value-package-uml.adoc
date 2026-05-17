@@ -45,11 +45,12 @@ BMM_BOOLEAN_VALUE -[#gray]up-|> BMM_PRIMITIVE_VALUE
 
 class BMM_PRIMITIVE_VALUE<T:BMM_UNITARY_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_primitive_value]] {
         .. access ..
-        type: BMM_SIMPLE_TYPE
 }
 
 BMM_PRIMITIVE_VALUE -[#gray]up-|> BMM_UNITARY_VALUE  
 
+
+BMM_PRIMITIVE_VALUE *--> "1 type" BMM_SIMPLE_TYPE
 
 class BMM_INTERVAL_VALUE<T:BMM_UNITARY_TYPE> [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_interval_value]] {
 }

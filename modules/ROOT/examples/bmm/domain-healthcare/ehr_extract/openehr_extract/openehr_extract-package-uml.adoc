@@ -37,10 +37,11 @@ class X_VERSIONED_OBJECT<T:LOCATABLE> [[/openehr-doc/latest/domain-healthcare/eh
         time_created: DV_DATE_TIME
         total_version_count: Integer
         extract_version_count: Integer
-        revision_history: REVISION_HISTORY
         versions: List<ORIGINAL_VERSION<T>>
 }
 
+
+X_VERSIONED_OBJECT *--> "0..1 revision_history" REVISION_HISTORY
 
 class OPENEHR_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_openehr_content_item]] {
         .. access ..
@@ -60,10 +61,11 @@ X_VERSIONED_PARTY -[#gray]up-|> X_VERSIONED_OBJECT
 class X_CONTRIBUTION [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_x_contribution]] {
         .. access ..
         uid: HIER_OBJECT_ID
-        audit: AUDIT_DETAILS
         versions: List<VERSION<LOCATABLE>>
 }
 
+
+X_CONTRIBUTION *--> "1 audit" AUDIT_DETAILS
 abstract class "domain-healthcare.ehr_extract.common.\nEXTRACT_CONTENT_ITEM" as EXTRACT_CONTENT_ITEM  [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] #FDFDFD {
 }
 

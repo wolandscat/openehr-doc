@@ -39,11 +39,12 @@ TERM_MAPPING *--> "1 target" CODE_PHRASE
 
 class CODE_PHRASE [[/openehr-doc/latest/representation/data_types-gen.html#_class_code_phrase]] {
         .. access ..
-        terminology_id: TERMINOLOGY_ID
         code_string: String
         preferred_term: String
 }
 
+
+CODE_PHRASE *--> "1 terminology_id" TERMINOLOGY_ID
 
 class DV_CODED_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_coded_text]] {
         .. access ..
@@ -57,12 +58,13 @@ DV_CODED_TEXT *--> "1 defining_code" CODE_PHRASE
 class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_text]] {
         .. access ..
         value: String
-        hyperlink: DV_URI
         formatting: String
 }
 
 DV_TEXT -[#gray]up-|> DATA_VALUE  
 
+
+DV_TEXT *--> "0..1 hyperlink" DV_URI
 
 DV_TEXT *--> "0..* mappings" TERM_MAPPING
 

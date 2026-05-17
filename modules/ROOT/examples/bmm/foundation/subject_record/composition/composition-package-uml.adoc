@@ -41,11 +41,12 @@ class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_cl
         setting: DV_CODED_TEXT
         other_context: ITEM_STRUCTURE
         health_care_facility: PARTY_IDENTIFIED
-        participations: List<PARTICIPATION>
 }
 
 EVENT_CONTEXT -[#gray]up-|> PATHABLE  
 
+
+EVENT_CONTEXT *--> "0..* participations" PARTICIPATION
 
 abstract class CONTENT_ITEM [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] {
 }
