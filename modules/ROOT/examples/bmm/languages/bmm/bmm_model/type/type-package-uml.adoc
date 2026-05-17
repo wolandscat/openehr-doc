@@ -27,12 +27,13 @@ BMM_INDEXED_CONTAINER_TYPE *--> "1 index_type" BMM_SIMPLE_TYPE
 
 class BMM_TUPLE_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_tuple_type]] {
         .. access ..
-        item_types: Map<String,BMM_TYPE>
         flattened_type_list:List<String>
 }
 
 BMM_TUPLE_TYPE -[#gray]up-|> BMM_BUILTIN_TYPE  
 
+
+BMM_TUPLE_TYPE *--> "0..* item_types" BMM_TYPE
 
 class BMM_STATUS_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_status_type]] {
 }
@@ -148,7 +149,6 @@ BMM_SIGNATURE *--> "1 result_type" BMM_TYPE
 
 class BMM_GENERIC_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_generic_type]] {
         .. access ..
-        generic_parameters: List<BMM_UNITARY_TYPE>
         base_class: BMM_GENERIC_CLASS
         type_name:String
         type_signature:String
@@ -161,6 +161,8 @@ class BMM_GENERIC_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_g
 
 BMM_GENERIC_TYPE -[#gray]up-|> BMM_MODEL_TYPE  
 
+
+BMM_GENERIC_TYPE *--> "0..* generic_parameters" BMM_UNITARY_TYPE
 
 abstract class BMM_UNITARY_TYPE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_unitary_type]] {
         .. access ..

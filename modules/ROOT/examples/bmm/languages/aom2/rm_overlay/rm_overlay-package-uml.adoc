@@ -14,9 +14,10 @@ enum VISIBILITY_TYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_visibi
 
 class RM_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_overlay]] {
         .. access ..
-        rm_visibility: Map<String,RM_ATTRIBUTE_VISIBILITY>
 }
 
+
+RM_OVERLAY *--> "0..* rm_visibility" RM_ATTRIBUTE_VISIBILITY
 
 class RM_ATTRIBUTE_VISIBILITY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_attribute_visibility]] {
         .. access ..

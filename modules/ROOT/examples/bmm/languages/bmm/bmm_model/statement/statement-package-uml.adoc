@@ -84,11 +84,12 @@ BMM_EXTERNAL_ROUTINE -[#gray]up-|> BMM_ROUTINE_DEFINITION
 
 class BMM_STATEMENT_BLOCK [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement_block]] {
         .. access ..
-        items: List<BMM_STATEMENT_ITEM>
 }
 
 BMM_STATEMENT_BLOCK -[#gray]up-|> BMM_STATEMENT_ITEM  
 
+
+BMM_STATEMENT_BLOCK *--> "0..* items" BMM_STATEMENT_ITEM
 
 class BMM_ACTION_DECISION_TABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_action_decision_table]] {
 }

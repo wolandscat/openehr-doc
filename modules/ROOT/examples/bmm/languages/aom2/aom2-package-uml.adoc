@@ -17,14 +17,14 @@ class ADL_CODE_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_class_
         Root_code_regex_pattern:String
         Primitive_node_id:String
         .. access ..
-        codes_conformant(a_child_code: String, a_parent_code: String):Boolean
+        codes_conformant(a_child_code: String, ...):Boolean
         is_adl_code(a_code: String):Boolean
         is_at_code(a_code: String):Boolean
         is_id_code(a_code: String):Boolean
         is_value_code(a_code: String):Boolean
         is_value_set_code(a_code: String):Boolean
         is_redefined_code(a_code: String):Boolean
-        code_exists_at_level(a_code: String, a_level: Integer):Boolean
+        code_exists_at_level(a_code: String, ...):Boolean
 }
 
 

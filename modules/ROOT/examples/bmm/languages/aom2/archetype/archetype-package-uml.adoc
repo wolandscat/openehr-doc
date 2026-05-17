@@ -57,7 +57,6 @@ class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archet
         rm_class: String
         concept_id: String
         release_version: String
-        version_status: VERSION_STATUS
         build_count: String
         semantic_id:String
         physical_id:String
@@ -68,6 +67,8 @@ class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archet
 }
 
 
+ARCHETYPE_HRID *--> "1 version_status" VERSION_STATUS
+
 class TEMPLATE_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_template_overlay]] {
 }
 
@@ -76,11 +77,12 @@ TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE
 
 class TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_template]] {
         .. access ..
-        overlays: List<TEMPLATE_OVERLAY>
 }
 
 TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
 
+
+TEMPLATE *--> "0..* overlays" TEMPLATE_OVERLAY
 abstract class "infostructure.resource.\nAUTHORED_RESOURCE" as AUTHORED_RESOURCE  [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] #FDFDFD {
 }
 

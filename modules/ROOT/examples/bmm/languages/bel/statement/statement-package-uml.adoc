@@ -17,11 +17,12 @@ VARIABLE_DECLARATION -[#gray]up-|> STATEMENT
 
 class STATEMENT_SET [[/openehr-doc/latest/languages/bel-gen.html#_class_statement_set]] {
         .. access ..
-        statement: List<STATEMENT>
         name: String
         execution_result:Boolean
 }
 
+
+STATEMENT_SET *--> "0..* statement" STATEMENT
 
 class ASSERTION [[/openehr-doc/latest/languages/bel-gen.html#_class_assertion]] {
         .. access ..

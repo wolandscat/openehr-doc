@@ -14,7 +14,6 @@ class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
         category: DV_CODED_TEXT
         composer: PARTY_PROXY
-        content: List<CONTENT_ITEM>
         is_persistent:Boolean
 }
 
@@ -23,13 +22,16 @@ COMPOSITION -[#gray]up-|> LOCATABLE
 
 COMPOSITION *--> "0..1 context" EVENT_CONTEXT
 
+COMPOSITION *--> "0..* content" CONTENT_ITEM
+
 class SECTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_section]] {
         .. access ..
-        items: List<CONTENT_ITEM>
 }
 
 SECTION -[#gray]up-|> CONTENT_ITEM  
 
+
+SECTION *--> "0..* items" CONTENT_ITEM
 
 class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_event_context]] {
         .. access ..

@@ -45,7 +45,6 @@ abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
         ancestors: List<String>
         package: BMM_PACKAGE
         source_schema_id: String
-        immediate_descendants: List<BMM_CLASS>
         is_override: Boolean
         is_primitive: Boolean
         is_abstract: Boolean
@@ -59,6 +58,8 @@ abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
 
 BMM_CLASS -[#gray]up-|> BMM_MODULE  
 
+
+BMM_CLASS *--> "0..* immediate_descendants" BMM_CLASS
 
 class BMM_ENUMERATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration]] {
         .. access ..

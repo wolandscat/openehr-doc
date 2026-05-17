@@ -78,11 +78,12 @@ EXTERNAL_QUERY -[#gray]up-|> EXPR_VALUE
 
 class EXPR_FUNCTION_CALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_function_call]] {
         .. access ..
-        arguments: List<EXPRESSION>
 }
 
 EXPR_FUNCTION_CALL -[#gray]up-|> EXPR_LEAF  
 
+
+EXPR_FUNCTION_CALL *--> "0..* arguments" EXPRESSION
 
 abstract class EXPR_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_operator]] {
         .. access ..

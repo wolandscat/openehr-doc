@@ -35,7 +35,6 @@ ITEM_SINGLE *--> "1 item" ELEMENT
 
 class ITEM_LIST [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_list]] {
         .. access ..
-        items: List<ELEMENT>
         item_count:Integer
         names:List<DV_TEXT>
         named_item(a_name: String):ELEMENT
@@ -46,13 +45,16 @@ class ITEM_LIST [[/openehr-doc/latest/representation/data_structures-gen.html#_c
 ITEM_LIST -[#gray]up-|> ITEM_STRUCTURE  
 
 
+ITEM_LIST *--> "0..* items" ELEMENT
+
 class CLUSTER [[/openehr-doc/latest/representation/data_structures-gen.html#_class_cluster]] {
         .. access ..
-        items: List<ITEM>
 }
 
 CLUSTER -[#gray]up-|> ITEM  
 
+
+CLUSTER *--> "0..* items" ITEM
 
 class PARTY_RELATED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_related]] {
         .. access ..
@@ -128,7 +130,6 @@ ITEM -[#gray]up-|> LOCATABLE
 
 class ITEM_TREE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_tree]] {
         .. access ..
-        items: List<ITEM>
         has_element_path(a_path: String):Boolean
         element_at_path(a_path: String):ELEMENT
         as_hierarchy:CLUSTER
@@ -136,6 +137,8 @@ class ITEM_TREE [[/openehr-doc/latest/representation/data_structures-gen.html#_c
 
 ITEM_TREE -[#gray]up-|> ITEM_STRUCTURE  
 
+
+ITEM_TREE *--> "0..* items" ITEM
 
 class PARTY_SELF [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_self]] {
 }
@@ -145,7 +148,6 @@ PARTY_SELF -[#gray]up-|> PARTY_PROXY
 
 class ITEM_TABLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_table]] {
         .. access ..
-        rows: List<CLUSTER>
         row_count:Integer
         column_count:Integer
         row_names:List<DV_TEXT>
@@ -156,12 +158,14 @@ class ITEM_TABLE [[/openehr-doc/latest/representation/data_structures-gen.html#_
         named_row(a_name: String):CLUSTER
         has_row_with_key(keys: List<String>):Boolean
         row_with_key(keys: List<String>):CLUSTER
-        element_at_cell_ij(i: Integer, j: Integer):ELEMENT
+        element_at_cell_ij(i: Integer, ...):ELEMENT
         as_hierarchy:CLUSTER
 }
 
 ITEM_TABLE -[#gray]up-|> ITEM_STRUCTURE  
 
+
+ITEM_TABLE *--> "0..* rows" CLUSTER
 
 abstract class DATA_STRUCTURE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_data_structure]] {
         .. access ..

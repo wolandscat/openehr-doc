@@ -8,11 +8,12 @@ skinparam citedClassColor #FDFDFD
 
 class DV_PARAGRAPH [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_paragraph]] {
         .. access ..
-        items: List<DV_TEXT>
 }
 
 DV_PARAGRAPH -[#gray]up-|> DATA_VALUE  
 
+
+DV_PARAGRAPH *--> "0..* items" DV_TEXT
 
 enum TEXT_FORMAT_TYPES [[/openehr-doc/latest/representation/data_types-gen.html#_class_text_format_types]] {
         .. values ..
@@ -58,11 +59,12 @@ class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv
         value: String
         hyperlink: DV_URI
         formatting: String
-        mappings: List<TERM_MAPPING>
 }
 
 DV_TEXT -[#gray]up-|> DATA_VALUE  
 
+
+DV_TEXT *--> "0..* mappings" TERM_MAPPING
 
 DV_TEXT *--> "0..1 language" CODE_PHRASE
 

@@ -63,13 +63,14 @@ class EHR [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr]] {
 
 class FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_folder]] {
         .. access ..
-        folders: List<FOLDER>
         items: List<OBJECT_REF>
         details: ITEM_STRUCTURE
 }
 
 FOLDER -[#gray]up-|> LOCATABLE  
 
+
+FOLDER *--> "0..* folders" FOLDER
 
 class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_status]] {
         .. access ..

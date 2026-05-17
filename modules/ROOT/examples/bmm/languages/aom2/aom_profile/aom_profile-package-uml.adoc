@@ -10,9 +10,10 @@ class AOM_TYPE_MAPPING [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_
         .. access ..
         source_class_name: String
         target_class_name: String
-        property_mappings: Map<String,AOM_PROPERTY_MAPPING>
 }
 
+
+AOM_TYPE_MAPPING *--> "0..* property_mappings" AOM_PROPERTY_MAPPING
 
 class AOM_PROPERTY_MAPPING [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_property_mapping]] {
         .. access ..
@@ -27,11 +28,12 @@ class AOM_PROFILE [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_profi
         archetype_parent_class: String
         archetype_data_value_parent_class: String
         archetype_visualise_descendants_of: String
-        aom_rm_type_mappings: Map<String,AOM_TYPE_MAPPING>
         aom_rm_type_substitutions: Map<String,String>
         aom_lifecycle_mappings: Map<String,String>
         rm_primitive_type_equivalences: Map<String,String>
 }
 
+
+AOM_PROFILE *--> "0..* aom_rm_type_mappings" AOM_TYPE_MAPPING
 
 ....

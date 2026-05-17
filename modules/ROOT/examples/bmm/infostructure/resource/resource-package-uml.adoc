@@ -8,16 +8,16 @@ skinparam citedClassColor #FDFDFD
 
 class ANNOTATIONS_PATH_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_path_map]] {
         .. access ..
-        items: Map<String,ANNOTATIONS_MAP>
 }
 
+
+ANNOTATIONS_PATH_MAP *--> "0..* items" ANNOTATIONS_MAP
 
 abstract class AUTHORED_RESOURCE [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] {
         .. access ..
         uid: UUID
         original_language: Terminology_code «iso.iso_639-1»
         is_controlled: Boolean
-        translations: Map<String,TRANSLATION_DETAILS>
         languages_available:List<String>
 }
 
@@ -25,6 +25,8 @@ abstract class AUTHORED_RESOURCE [[/openehr-doc/latest/infostructure/resource-ge
 AUTHORED_RESOURCE *--> "0..1 description" RESOURCE_DESCRIPTION
 
 AUTHORED_RESOURCE *--> "0..1 annotations" RESOURCE_ANNOTATIONS
+
+AUTHORED_RESOURCE *--> "0..* translations" TRANSLATION_DETAILS
 
 class TRANSLATION_DETAILS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_translation_details]] {
         .. access ..
@@ -53,12 +55,13 @@ class RESOURCE_DESCRIPTION [[/openehr-doc/latest/infostructure/resource-gen.html
         references: Map<String,String>
         resource_package_uri: String
         conversion_details: Map<String,String>
-        details: Map<String,RESOURCE_DESCRIPTION_ITEM>
         other_details: Map<String,String>
 }
 
 
 RESOURCE_DESCRIPTION *--> "1 parent_resource" AUTHORED_RESOURCE
+
+RESOURCE_DESCRIPTION *--> "0..* details" RESOURCE_DESCRIPTION_ITEM
 
 class ANNOTATIONS_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_map]] {
         .. access ..
@@ -68,9 +71,10 @@ class ANNOTATIONS_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_cla
 
 class RESOURCE_ANNOTATIONS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_annotations]] {
         .. access ..
-        documentation: Map<String,ANNOTATIONS_PATH_MAP>
 }
 
+
+RESOURCE_ANNOTATIONS *--> "0..* documentation" ANNOTATIONS_PATH_MAP
 
 class RESOURCE_DESCRIPTION_ITEM [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description_item]] {
         .. access ..

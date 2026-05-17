@@ -82,11 +82,12 @@ class INSTRUCTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         narrative: DV_TEXT
         expiry_time: DV_DATE_TIME
         wf_definition: DV_PARSABLE
-        activities: List<ACTIVITY>
 }
 
 INSTRUCTION -[#gray]up-|> CARE_ENTRY  
 
+
+INSTRUCTION *--> "0..* activities" ACTIVITY
 
 enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
         .. values ..

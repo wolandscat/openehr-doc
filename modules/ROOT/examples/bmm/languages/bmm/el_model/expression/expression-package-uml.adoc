@@ -38,13 +38,14 @@ EL_SIMPLE -[#gray]up-|> EL_TERMINAL
 
 class EL_TUPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple]] {
         .. access ..
-        items: List<EL_TUPLE_ITEM>
         type: BMM_TUPLE_TYPE
         eval_type:BMM_TYPE
 }
 
 EL_TUPLE -[#gray]up-|> EL_EXPRESSION  
 
+
+EL_TUPLE *--> "0..* items" EL_TUPLE_ITEM
 
 class EL_ATTACHED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_attached]] {
 }

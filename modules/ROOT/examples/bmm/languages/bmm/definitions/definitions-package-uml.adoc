@@ -32,7 +32,7 @@ class BMM_DEFINITIONS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_de
         Metadata_schema_path:String
         Any_class:BMM_SIMPLE_CLASS
         .. factory ..
-        create_schema_id(a_model_publisher: String, a_schema_name: String, a_model_release: String):String
+        create_schema_id(a_model_publisher: String, ...):String
 }
 
 

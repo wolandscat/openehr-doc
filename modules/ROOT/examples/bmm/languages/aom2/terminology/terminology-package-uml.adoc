@@ -23,7 +23,6 @@ class ARCHETYPE_TERMINOLOGY [[/openehr-doc/latest/languages/aom2-gen.html#_class
         term_definitions: Map<String,Map<String,ARCHETYPE_TERM>>
         term_bindings: Map<String,Map<String,Uri>>
         owner_archetype: ARCHETYPE
-        value_sets: Map<String,VALUE_SET>
         terminology_extracts: Map<String,Map<String,ARCHETYPE_TERM>>
         specialisation_depth:Integer
         node_codes:List<String>
@@ -32,14 +31,16 @@ class ARCHETYPE_TERMINOLOGY [[/openehr-doc/latest/languages/aom2-gen.html#_class
         has_language(a_lang: String):Boolean
         has_terminology(a_terminology_id: String):Boolean
         has_term_code(a_code: String):Boolean
-        term_definition(a_lang: String, a_code: String):ARCHETYPE_TERM
-        term_binding(a_terminology: String, a_code: String):Uri
+        term_definition(a_lang: String, ...):ARCHETYPE_TERM
+        term_binding(a_terminology: String, ...):Uri
         terminologies_available:List<String>
-        terminology_extract_term(a_terminology_id: String, a_code: String):ARCHETYPE_TERM
+        terminology_extract_term(a_terminology_id: String, ...):ARCHETYPE_TERM
         has_terminology_extract(a_terminology_id: String):Boolean
         languages_available:List<String>
 }
 
+
+ARCHETYPE_TERMINOLOGY *--> "0..* value_sets" VALUE_SET
 
 class VALUE_SET [[/openehr-doc/latest/languages/aom2-gen.html#_class_value_set]] {
 }

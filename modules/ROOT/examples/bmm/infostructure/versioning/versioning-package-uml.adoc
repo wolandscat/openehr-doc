@@ -41,17 +41,19 @@ ATTESTATION -[#gray]up-|> AUDIT_DETAILS
 class REVISION_HISTORY_ITEM [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_revision_history_item]] {
         .. access ..
         version_id: OBJECT_VERSION_ID
-        audits: List<AUDIT_DETAILS>
 }
 
 
+REVISION_HISTORY_ITEM *--> "0..* audits" AUDIT_DETAILS
+
 class REVISION_HISTORY [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_revision_history]] {
         .. access ..
-        items: List<REVISION_HISTORY_ITEM>
         most_recent_version:String
         most_recent_version_time_committed:String
 }
 
+
+REVISION_HISTORY *--> "0..* items" REVISION_HISTORY_ITEM
 
 abstract class VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_version]] {
         .. access ..
@@ -94,13 +96,14 @@ class ORIGINAL_VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.htm
         preceding_version_uid: OBJECT_VERSION_ID
         other_input_version_uids: List<OBJECT_VERSION_ID>
         lifecycle_state: DV_CODED_TEXT
-        attestations: List<ATTESTATION>
         data: T
         is_merged:Boolean
 }
 
 ORIGINAL_VERSION -[#gray]up-|> VERSION  
 
+
+ORIGINAL_VERSION *--> "0..* attestations" ATTESTATION
 
 class IMPORTED_VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_imported_version]] {
         .. access ..

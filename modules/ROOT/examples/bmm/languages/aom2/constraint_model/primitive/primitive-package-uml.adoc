@@ -8,13 +8,14 @@ skinparam citedClassColor #FDFDFD
 
 class C_PRIMITIVE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_tuple]] {
         .. access ..
-        members: List<C_PRIMITIVE_OBJECT>
-        c_conforms_to(other: C_PRIMITIVE_TUPLE, rmcc: (String, String) -> Boolean):Boolean
+        c_conforms_to(other: C_PRIMITIVE_TUPLE, ...):Boolean
         c_congruent_to(other: C_SECOND_ORDER):Boolean
 }
 
 C_PRIMITIVE_TUPLE -[#gray]up-|> C_SECOND_ORDER  
 
+
+C_PRIMITIVE_TUPLE *--> "0..* members" C_PRIMITIVE_OBJECT
 
 class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
         .. access ..
@@ -26,7 +27,7 @@ class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
         millisecond_validity:VALIDITY_KIND
         timezone_validity:VALIDITY_KIND
         valid_pattern_constraint(a_pattern: String):Boolean
-        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, ...):Boolean
 }
 
 C_TIME -[#gray]up-|> C_TEMPORAL  
@@ -38,7 +39,7 @@ class C_DATE_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date_ti
         default_value: Iso8601_date_time
         assumed_value: Iso8601_date_time
         valid_pattern_constraint(a_pattern: String):Boolean
-        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, ...):Boolean
         month_validity:VALIDITY_KIND
         day_validity:VALIDITY_KIND
         minute_validity:VALIDITY_KIND
@@ -63,7 +64,7 @@ class C_DURATION [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_duration
         minutes_allowed:Boolean
         seconds_allowed:Boolean
         valid_pattern_constraint(a_pattern: String):Boolean
-        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, ...):Boolean
 }
 
 C_DURATION -[#gray]up-|> C_TEMPORAL  
@@ -73,7 +74,7 @@ abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.h
         .. access ..
         pattern_constraint: String
         valid_pattern_constraint(a_pattern: String):Boolean
-        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, ...):Boolean
         any_allowed:Boolean
         c_value_conforms_to(other: C_ORDERED<T>):Boolean
         c_value_congruent_to(other: C_ORDERED<T>):Boolean
@@ -114,7 +115,7 @@ abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#
         constraint: Any
         has_assumed_value:Boolean
         constrained_typename:String
-        c_conforms_to(other: C_PRIMITIVE_OBJECT, rmcc: (String, String) -> Boolean):Boolean
+        c_conforms_to(other: C_PRIMITIVE_OBJECT, ...):Boolean
         c_value_conforms_to(other: C_PRIMITIVE_OBJECT):Boolean
         c_congruent_to(other: C_PRIMITIVE_OBJECT):Boolean
         c_value_congruent_to(other: C_PRIMITIVE_OBJECT):Boolean
@@ -128,7 +129,6 @@ class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_
         constraint: String
         assumed_value: Terminology_code
         default_value: Terminology_code
-        constraint_status: CONSTRAINT_STATUS
         constraint_required:Boolean
         effective_constraint_status:Integer
         value_set_expanded:List<String>
@@ -144,6 +144,8 @@ class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_
 C_TERMINOLOGY_CODE -[#gray]up-|> C_PRIMITIVE_OBJECT  
 
 
+C_TERMINOLOGY_CODE *--> "0..1 constraint_status" CONSTRAINT_STATUS
+
 class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
         .. access ..
         constraint: List<Interval<Iso8601_date>>
@@ -152,7 +154,7 @@ class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
         month_validity:VALIDITY_KIND
         day_validity:VALIDITY_KIND
         valid_pattern_constraint(a_pattern: String):Boolean
-        valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        valid_pattern_constraint_replacement(a_pattern: String, ...):Boolean
 }
 
 C_DATE -[#gray]up-|> C_TEMPORAL  
@@ -177,7 +179,7 @@ class C_TEMPORAL_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_clas
         Valid_date_time_constraint_patterns:List<String>
         Valid_date_time_constraint_replacements:Map<String,List<String>>
         .. access ..
-        valid_duration_constraint_replacement(a_dur: String, other_dur: String):Boolean
+        valid_duration_constraint_replacement(a_dur: String, ...):Boolean
         valid_iso8601_date_constraint_pattern(s: String):Boolean
         valid_iso8601_time_constraint_pattern(s: String):Boolean
         valid_iso8601_date_time_constraint_pattern(s: String):Boolean

@@ -73,7 +73,6 @@ abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.h
         archetype_node_id: String
         .. access ..
         name: DV_TEXT
-        links: List<LINK>
         concept:DV_TEXT
         is_archetype_root:Boolean
 }
@@ -82,6 +81,8 @@ LOCATABLE -[#gray]up-|> PATHABLE
 
 
 LOCATABLE *--> "0..1 archetype_details" ARCHETYPED
+
+LOCATABLE *--> "0..* links" LINK
 
 LOCATABLE *--> "0..1 feeder_audit" FEEDER_AUDIT
 
