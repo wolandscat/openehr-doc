@@ -11,7 +11,7 @@ h|
 h|prop +
   
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
-a|Type, directly from the name of the reference, e.g. `{SOME_TYPE}`.
+a|Type, directly from the name of the reference, e.g. `SOME_TYPE`.
 
 h|prop +
   

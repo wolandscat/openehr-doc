@@ -71,10 +71,9 @@ class ANNOTATIONS_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_cla
 
 class RESOURCE_ANNOTATIONS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_annotations]] {
         .. access ..
+        documentation: Map<String,Map<String,Map<String,String>>>
 }
 
-
-RESOURCE_ANNOTATIONS *--> "0..* documentation" ANNOTATIONS_PATH_MAP
 
 class RESOURCE_DESCRIPTION_ITEM [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description_item]] {
         .. access ..

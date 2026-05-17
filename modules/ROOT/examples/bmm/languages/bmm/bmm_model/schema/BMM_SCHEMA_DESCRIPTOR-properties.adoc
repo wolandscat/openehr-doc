@@ -11,20 +11,15 @@ h|
 h|prop +
   
 |*schema_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
-a|Schema id, formed by
-
-`{BMM_DEFINITIONS}.create_schema_id(
-meta_data.item({BMM_DEFINITIONS}.Metadata_model_publisher),
-meta_data.item({BMM_DEFINITIONS}.Metadata_schema_name),
-meta_data.item({BMM_DEFINITIONS}.Metadata_model_release)`
-
+a|Schema id, formed by the meta-data items:
+  <model_publisher>_<schema_name>_<model_release>
 e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
 
 h|prop +
   
 |*meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Table of `{key, value}` of schema meta-data, keys are string values defined by
-`{BMM_DEFINITIONS}.Metadata_*` constants.
+`BMM_DEFINITIONS.Metadata_*` constants.
 
 h|prop +
   0..1
