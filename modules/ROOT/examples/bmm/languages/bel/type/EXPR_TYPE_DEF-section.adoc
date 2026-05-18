@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EXPR_TYPE_DEF.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EXPR_TYPE_DEF-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EXPR_TYPE_DEF-properties.adoc[]
 
 Props(flat)::
 +
 include::EXPR_TYPE_DEF-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EXPR_TYPE_DEF.bmml[]
+----
+
 ======

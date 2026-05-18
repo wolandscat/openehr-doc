@@ -1,0 +1,31 @@
+| 
+| Abstract ancestor type of ISO 8601 types, defining interface for 'extended' and 'partial'
+| concepts from ISO 8601.
+| 
+
+abstract class Iso8601_type
+    is_a Temporal, Time_Definitions
+
+feature_group ("access")
+
+    | 
+    | Representation of all descendants is a single String.
+    | 
+    prop value: String;
+
+    | 
+    | True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
+    | missing.
+    | 
+    func is_partial:Boolean
+        ;
+
+    | 
+    | True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
+    | separators. This is the preferred format.
+    | 
+    func is_extended:Boolean
+        ;
+
+
+end

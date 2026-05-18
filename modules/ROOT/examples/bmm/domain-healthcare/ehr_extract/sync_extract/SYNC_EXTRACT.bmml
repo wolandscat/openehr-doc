@@ -1,0 +1,21 @@
+| 
+| Extract designed for synchronisation of Contributions between openEHR servers.
+| 
+
+class SYNC_EXTRACT
+    is_a MESSAGE_CONTENT
+
+feature_group ("access")
+
+    | 
+    | Details of specification of this Extract.
+    | 
+    prop specification: SYNC_EXTRACT_SPEC;
+
+    | 
+    | Content, in the form of a serialised Contributions.
+    | 
+    prop items: List<X_CONTRIBUTION>;
+
+
+end

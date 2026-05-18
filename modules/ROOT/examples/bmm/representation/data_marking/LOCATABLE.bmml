@@ -1,0 +1,73 @@
+| 
+| Root class of all information model classes that can be archetyped. Most classes in the
+| openEHR reference model inherit from the `LOCATABLE` class, which defines the idea of
+| locatability in an archetyped structure. `LOCATABLE` defines a runtime name and an
+| `archetype_node_id`.
+| 
+
+abstract class LOCATABLE
+    is_a PATHABLE
+
+feature_group ("infrastructure")
+
+    | 
+    | Optional globally unique object identifier for root points of archetyped structures.
+    | 
+    prop uid: UID_BASED_ID;
+
+    | 
+    | Design-time archetype identifier of this node taken from its generating archetype; used to
+    | build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
+    | a 'standardised' name for this node to be generated, by referring to the generating
+    | archetype local terminology.
+    | 
+    | At an archetype root point, the value of this attribute is always the stringified form of
+    | the `archetype_id` found in the `archetype_details` object.
+    | 
+    prop archetype_node_id: String;
+
+    | 
+    | Details of archetyping used on this node.
+    | 
+    prop archetype_details: ARCHETYPED;
+
+feature_group ("access")
+
+    | 
+    | Runtime name of this fragment, used to build runtime paths. This is the term provided via
+    | a clinical application or batch process to name this EHR construct: its retention in the
+    | EHR faithfully preserves the original label by which this entry was known to end users.
+    | 
+    prop name: DV_TEXT;
+
+    | 
+    | Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
+    | such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
+    | 
+    prop links: List<LINK>;
+
+    | 
+    | Audit trail from non-openEHR system of original commit of information forming the content
+    | of this node, or from a conversion gateway which has synthesised this node.
+    | 
+    prop feeder_audit: FEEDER_AUDIT;
+
+    | 
+    | Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the
+    | root node)
+    | 
+    func concept:DV_TEXT
+        ;
+
+    | 
+    | True if this node is the root of an archetyped structure.
+    | 
+    func is_archetype_root:Boolean
+        ;
+
+invariant
+    links_valid: ∃ links ⇒ ¬ links.is_empty();
+    archetyped_valid: is_archetype_root ⊻ ¬ ∃ archetype_details;
+    archetype_node_id_valid: ¬ archetype_node_id.is_empty();
+
+end

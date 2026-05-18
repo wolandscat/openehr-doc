@@ -1,0 +1,16 @@
+| 
+| Type of request designed for synchronisation of Contributions between openEHR servers.
+| 
+
+class SYNC_EXTRACT_REQUEST
+    is_a MESSAGE_CONTENT
+
+feature_group ("access")
+
+    | 
+    | Details of specification of synchronisation request.
+    | 
+    prop specification: SYNC_EXTRACT_SPEC;
+
+
+end

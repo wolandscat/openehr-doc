@@ -1,0 +1,41 @@
+| 
+| Generic description of a relationship between parties.
+| 
+
+class PARTY_RELATIONSHIP
+    is_a LOCATABLE
+
+feature_group ("access")
+
+    | 
+    | The detailed description of the relationship.
+    | 
+    prop details: ITEM_STRUCTURE;
+
+    | 
+    | Target of relationship.
+    | 
+    prop target: PARTY_REF;
+
+    | 
+    | Valid time interval for this relationship.
+    | 
+    prop time_validity: DV_INTERVAL<DV_DATE>;
+
+    | 
+    | Source of relationship.
+    | 
+    prop source: PARTY_REF;
+
+    | 
+    | Type of relationship, such as employment, authority, health provision
+    | 
+    func type:DV_TEXT
+        ;
+
+invariant
+    source_valid: ∃ source ∧ source.relationships.has(self);
+    target_valid: ∃ target ∧ ¬ target.reverse_relationships.has(self);
+    type_validity: type = name;
+
+end

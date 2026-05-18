@@ -1,0 +1,9 @@
+| 
+| Abstract parent class of all spatial data types.
+| 
+
+abstract class ITEM_STRUCTURE
+    is_a DATA_STRUCTURE
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_VALUE_GENERATOR.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_VALUE_GENERATOR-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_VALUE_GENERATOR-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_VALUE_GENERATOR-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_VALUE_GENERATOR.bmml[]
+----
+
 ======

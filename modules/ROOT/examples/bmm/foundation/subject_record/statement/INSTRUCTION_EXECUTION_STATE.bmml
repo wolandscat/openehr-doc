@@ -1,0 +1,28 @@
+| 
+| Enumeration of states in the Instruction State Machine (ISM) used to track the
+| lifecycle of an Instruction execution.
+| 
+
+enum INSTRUCTION_EXECUTION_STATE
+    base_type String
+
+        initial (initial)
+
+        planned (planned)
+
+        postponed (postponed)
+
+        cancelled (cancelled)
+
+        active (active)
+
+        suspended (suspended)
+
+        completed (completed)
+
+        aborted (aborted)
+
+        expired (expired)
+
+
+end

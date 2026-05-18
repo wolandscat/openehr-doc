@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::FEEDER_AUDIT_DETAILS.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::FEEDER_AUDIT_DETAILS-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::FEEDER_AUDIT_DETAILS-properties.adoc[]
 
 Props(flat)::
 +
 include::FEEDER_AUDIT_DETAILS-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::FEEDER_AUDIT_DETAILS.bmml[]
+----
+
 ======

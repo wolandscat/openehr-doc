@@ -1,0 +1,24 @@
+| 
+| An entry in a revision history, corresponding to a version from a versioned container.
+| Consists of `AUDIT_DETAILS` instances with revision identifier of the revision to which
+| the `AUDIT_DETAILS` instance belongs.
+| 
+
+class REVISION_HISTORY_ITEM
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Version identifier for this revision.
+    | 
+    prop version_id: OBJECT_VERSION_ID;
+
+    | 
+    | The audits for this revision; there will always be at least one commit audit (which may
+    | itself be an `ATTESTATION`), there may also be further attestations.
+    | 
+    prop audits: List<AUDIT_DETAILS>;
+
+
+end

@@ -1,0 +1,38 @@
+| 
+| Constraint describing a 'slot' where another archetype can occur.
+| 
+
+class ARCHETYPE_SLOT
+    is_a C_OBJECT
+
+feature_group ("access")
+
+    | 
+    | List of constraints defining other archetypes that could be included at this point.
+    | Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
+    | matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
+    | 
+    prop includes: List<ASSERTION>;
+
+    | 
+    | List of constraints defining other archetypes that cannot be included at this point.
+    | Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
+    | matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
+    | 
+    prop excludes: List<ASSERTION>;
+
+    | 
+    | True if this slot specification in this artefact is closed to further filling either in
+    | further specialisations or at runtime. Default value False, i.e. unless explicitly set, a
+    | slot remains open.
+    | 
+    prop is_closed: Boolean;
+
+    | 
+    | True if no constraints stated, and slot is not closed.
+    | 
+    func any_allowed:Boolean
+        ;
+
+
+end

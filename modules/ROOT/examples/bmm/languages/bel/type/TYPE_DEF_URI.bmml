@@ -1,0 +1,9 @@
+| 
+| Rules meta-type representing the primitive type Uri.
+| 
+
+class TYPE_DEF_URI
+    is_a EXPR_TYPE_DEF
+
+
+end

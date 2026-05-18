@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_BINARY_OPERATOR.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_BINARY_OPERATOR-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_BINARY_OPERATOR-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_BINARY_OPERATOR-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_BINARY_OPERATOR.bmml[]
+----
+
 ======

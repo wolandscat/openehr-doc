@@ -1,0 +1,25 @@
+| 
+| A statement that asserts the truth of its expression. If the expression evaluates to False
+| the execution generates an exception (depending on run-time settings).
+| 
+| May be rendered in syntax as `assert condition` or similar.
+| 
+
+class BMM_ASSERTION
+    is_a BMM_SIMPLE_STATEMENT
+
+feature_group ("access")
+
+    | 
+    | Boolean-valued expression of the assertion.
+    | 
+    prop expression: EL_BOOLEAN_EXPRESSION;
+
+    | 
+    | Optional tag, typically used to designate design intention of the assertion, e.g.
+    | `"Inv_all_members_valid"`.
+    | 
+    prop tag: String;
+
+
+end

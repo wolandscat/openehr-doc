@@ -1,0 +1,9 @@
+| 
+| Rules meta-type representing the primitive type Date.
+| 
+
+class TYPE_DEF_DATE
+    is_a EXPR_TYPE_DEF
+
+
+end

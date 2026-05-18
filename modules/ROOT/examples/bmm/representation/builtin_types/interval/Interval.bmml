@@ -1,0 +1,75 @@
+| 
+| Interval abstraction, featuring upper and lower limits that may be open or closed,
+| included or not included. Interval of ordered items.
+| 
+
+abstract class Interval
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Lower bound. lower bound.
+    | 
+    prop lower: T;
+
+    | 
+    | Upper bound. Upper bound.
+    | 
+    prop upper: T;
+
+    | 
+    | True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
+    | -infinity)
+    | 
+    prop lower_unbounded: Boolean;
+
+    | 
+    | True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
+    | +infinity)
+    | 
+    prop upper_unbounded: Boolean;
+
+    | 
+    | True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
+    | boundary value included in range if not lower_unbounded.
+    | 
+    prop lower_included: Boolean;
+
+    | 
+    | True if `upper` boundary value included in range if `not _upper_unbounded`. upper
+    | boundary value included in range if not upper_unbounded.
+    | 
+    prop upper_included: Boolean;
+
+    | 
+    | True if the value `e` is properly contained in this Interval. True if (lower_unbounded or
+    | ((lower_included and v >= lower) or v > lower)) and (upper_unbounded or ((upper_included
+    | and v <= upper or v < upper)))
+    | 
+    func has:Boolean
+        post_cond
+            valid_result: Result = (lower_unbounded ∨ lower_included ∧ v >= lower) ∨ v > lower ∧ (upper_unbounded ∨ upper_included ∧ v <= upper ∨ v < upper);
+        ;
+
+    | 
+    | True if there is any overlap between intervals represented by Current and `other`. True
+    | if at least one limit of `other` is strictly inside the limits of this interval.
+    | 
+    func intersects:Boolean
+        ;
+
+    | 
+    | True if current interval properly contains `other`? True if all points of `other` are
+    | inside the current interval.
+    | 
+    func contains:Boolean
+        ;
+
+invariant
+    lower_included_valid: lower_unbounded ⇒ ¬ lower_included;
+    upper_included_valid: upper_unbounded ⇒ ¬ upper_included;
+    limits_consistent: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower <= upper;
+    limits_comparable: (¬ upper_unbounded ∧ ¬ lower_unbounded) ⇒ lower.strictly_comparable_to(upper);
+
+end

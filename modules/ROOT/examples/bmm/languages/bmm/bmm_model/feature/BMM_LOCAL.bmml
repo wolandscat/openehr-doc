@@ -1,0 +1,9 @@
+| 
+| A routine local variable (writable).
+| 
+
+class BMM_LOCAL
+    is_a BMM_WRITABLE_VARIABLE
+
+
+end

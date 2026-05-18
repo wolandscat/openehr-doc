@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::BMM_PROPERTY.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::BMM_PROPERTY-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::BMM_PROPERTY-properties.adoc[]
 
 Props(flat)::
 +
 include::BMM_PROPERTY-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::BMM_PROPERTY.bmml[]
+----
+
 ======

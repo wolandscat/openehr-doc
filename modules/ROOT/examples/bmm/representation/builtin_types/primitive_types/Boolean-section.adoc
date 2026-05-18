@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Boolean.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Boolean-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Boolean-properties.adoc[]
 
 Props(flat)::
 +
 include::Boolean-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Boolean.bmml[]
+----
+
 ======

@@ -1,0 +1,9 @@
+| 
+| Abstract parent of 'statement' types that may be defined to implement BMM Routines.
+| 
+
+abstract class BMM_STATEMENT
+    is_a BMM_STATEMENT_ITEM
+
+
+end

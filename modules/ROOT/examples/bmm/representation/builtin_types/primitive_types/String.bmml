@@ -1,0 +1,54 @@
+| 
+| Type representing minimal interface of built-in String type, used to represent
+| textual data in any natural or formal language.
+| 
+
+builtin class String
+    is_a Ordered
+
+feature_group ("access")
+
+    | 
+    | True if string is empty, i.e. equal to "".
+    | 
+    func is_empty:Boolean
+        ;
+
+    | 
+    | True if string can be parsed as an integer.
+    | 
+    func is_integer:Boolean
+        ;
+
+    | 
+    | Return the integer corresponding to the integer value represented in this string.
+    | 
+    func as_integer:Integer
+        ;
+
+    | 
+    | Return True if this String contains `other` (case-sensitive).
+    | 
+    func contains(other: String):Boolean
+        ;
+
+feature_group ("operators")
+
+    | 
+    | Concatenation operator - causes `other` to be appended to this string.
+    | 
+    func append(other: String):String
+        alias
+            +;
+        ;
+
+    | 
+    | Lexical comparison of string content based on ordering in relevant character set.
+    | 
+    func less_than(other: String):Boolean
+        alias
+            <;
+        ;
+
+
+end

@@ -1,0 +1,61 @@
+| 
+| Abstract idea of specifying a type in some context. This is not the same as 'defining' a
+| class. A type specification is essentially a reference of some kind, that defines the type
+| of an attribute, or function result or argument. It may include generic parameters that
+| might or might not be bound. See subtypes.
+| 
+
+abstract class BMM_TYPE
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Formal string form of the type as per UML.
+    | 
+    func type_name:String
+        ;
+
+    | 
+    | Signature form of the type name, which for generics includes generic parameter constrainer
+    | types E.g. `Interval<T:Ordered>`.
+    | 
+    | Defaults to the value of `type_name()`.
+    | 
+    func type_signature:String
+        ;
+
+    | 
+    | If true, indicates a type based on an abstract class, i.e. a type that cannot be directly
+    | instantiated.
+    | 
+    func is_abstract:Boolean
+        ;
+
+    | 
+    | If True, indicates that a type based solely on primitive classes.
+    | 
+    func is_primitive:Boolean
+        ;
+
+    | 
+    | Type with any container abstracted away; may be a formal generic type.
+    | 
+    func unitary_type:BMM_UNITARY_TYPE
+        ;
+
+    | 
+    | Type with any container abstracted away, and any formal parameter replaced by its
+    | effective constraint type.
+    | 
+    func effective_type:BMM_EFFECTIVE_TYPE
+        ;
+
+    | 
+    | Completely flattened list of type names, flattening out all generic parameters.
+    | 
+    func flattened_type_list:List<String>
+        ;
+
+
+end

@@ -1,0 +1,32 @@
+| 
+| Representation of any coded entity (term or constraint) in the archetype ontology.
+| 
+
+class ARCHETYPE_TERM
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Code of this term.
+    | 
+    prop code: String;
+
+    | 
+    | Short term text, typically for display.
+    | 
+    prop text: String;
+
+    | 
+    | Full description text.
+    | 
+    prop description: String;
+
+    | 
+    | Hash of keys and corresponding values for other items in a term, e.g. provenance. Hash of
+    | keys ("text", "description" etc) and corresponding values.
+    | 
+    prop other_items: Map<String,String>;
+
+
+end

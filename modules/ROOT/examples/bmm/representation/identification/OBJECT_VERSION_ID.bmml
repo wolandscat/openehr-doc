@@ -1,0 +1,39 @@
+| 
+| Globally unique identifier for one version of a versioned object; lexical form: `object_id
+| '::' creating_system_id '::' version_tree_id`.
+| 
+
+class OBJECT_VERSION_ID
+    is_a UID_BASED_ID
+
+feature_group ("access")
+
+    | 
+    | Unique identifier for logical object of which this identifier identifies one version;
+    | normally the `object_id` will be the unique identifier of the version container
+    | containing the version referred to by this `OBJECT_VERSION_ID` instance.
+    | 
+    func object_id:UID
+        ;
+
+    | 
+    | Identifier of the system that created the Version corresponding to this Object version id.
+    | 
+    func creating_system_id:UID
+        ;
+
+    | 
+    | Tree identifier of this version with respect to other versions in the same version tree,
+    | as either 1 or 3 part dot-separated numbers, e.g. 1 , 2.1.4 .
+    | 
+    func version_tree_id:VERSION_TREE_ID
+        ;
+
+    | 
+    | True if this version identifier represents a branch.
+    | 
+    func is_branch:Boolean
+        ;
+
+
+end

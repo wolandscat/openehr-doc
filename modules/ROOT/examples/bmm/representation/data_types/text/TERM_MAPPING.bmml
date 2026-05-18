@@ -1,0 +1,86 @@
+| 
+| Represents a coded term mapped to a `DV_TEXT`, and the relative match of the target term
+| with respect to the mapped item. Plain or coded text items may appear in the EHR for which
+| one or mappings in alternative terminologies are required. Mappings are only used to
+| enable computer processing, so they can only be instances of `DV_CODED_TEXT`.
+| 
+| Used for adding classification terms (e.g. adding ICD classifiers to SNOMED descriptive
+| terms), or mapping into equivalents in other terminologies (e.g. across nursing
+| vocabularies).
+| 
+
+class TERM_MAPPING
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The relative match of the target term with respect to the mapped text item. Result
+    | meanings:
+    | 
+    | * `'>'`: the mapping is to a broader term e.g. orginal text = arbovirus infection , target
+    | = viral infection
+    | * `'='`: the mapping is to a (supposedly) equivalent to the original item
+    | * `'<'`: the mapping is to a narrower term. e.g. original text = diabetes , mapping =
+    | diabetes mellitus .
+    | * `'?'`: the kind of mapping is unknown.
+    | 
+    | The first three values are taken from the ISO standards 2788 ( Guide to Establishment and
+    | development of monolingual thesauri) and 5964 (Guide to Establishment and development of
+    | multilingual thesauri).
+    | 
+    prop match: Character;
+
+    | 
+    | Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'.
+    | 
+    prop purpose: DV_CODED_TEXT;
+
+    | 
+    | The target term of the mapping.
+    | 
+    prop target: CODE_PHRASE;
+
+    | 
+    | The mapping is to a narrower term.
+    | 
+    func narrower:Boolean
+        post_cond
+            validity: match = '<' ⇒ Result;
+        ;
+
+    | 
+    | The mapping is to a broader term.
+    | 
+    func broader:Boolean
+        post_cond
+            validity: match = '>' ⇒ Result;
+        ;
+
+    | 
+    | The mapping is to an equivalent term.
+    | 
+    func equivalent:Boolean
+        ;
+
+    | 
+    | The kind of mapping is unknown.
+    | 
+    func unknown:Boolean
+        post_cond
+            validity: match = '?' ⇒ Result;
+        ;
+
+    | 
+    | True if match valid.
+    | 
+    func is_valid_match_code(c: Character):Boolean
+        post_cond
+            validity: Result = (c = '>' ∨ c = '=' ∨ c = '<' ∨ c = '?');
+        ;
+
+invariant
+    purpose_valid: ∃ purpose ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_term_mapping_purpose, purpose.defining_code);
+    match_valid: is_valid_match_code(match);
+
+end

@@ -1,0 +1,16 @@
+| 
+| Form of `EHR EXTRACT_ITEM` containing openEHR serialised `VERSIONED_OBJECTs`.
+| 
+
+class OPENEHR_CONTENT_ITEM
+    is_a EXTRACT_CONTENT_ITEM
+
+feature_group ("access")
+
+    | 
+    | Content object.
+    | 
+    prop item: X_VERSIONED_OBJECT<LOCATABLE>;
+
+
+end

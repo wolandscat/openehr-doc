@@ -1,0 +1,79 @@
+| 
+| Represents an ISO 8601 time, including partial and extended forms. Value may be:
+| 
+| * `hh:mm:ss[(,|.)sss][Z|±hh[:mm]]` (extended, preferred) or
+| * `hhmmss[(,|.)sss][Z|±hh[mm]]` (compact)
+| * or a partial invariant.
+| 
+| See `valid_iso8601_time()` for validity.
+| 
+| NOTE: A small deviation to the ISO 8601:2004 standard in this class is that the time
+| `24:00:00` is not allowed, for consistency with `Iso8601_date_time`.
+| 
+
+class Iso8601_time
+    is_a Iso8601_type
+
+feature_group ("access")
+
+    | 
+    | Extract the hour part of the date/time as an Integer.
+    | 
+    func hour:Integer
+        ;
+
+    | 
+    | Extract the minute part of the time as an Integer, or return 0 if not present.
+    | 
+    func minute:Integer
+        ;
+
+    | 
+    | Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an
+    | Integer, or return 0 if not present.
+    | 
+    func second:Integer
+        ;
+
+    | 
+    | Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a
+    | Real, or return 0.0 if not present.
+    | 
+    func fractional_second:Real
+        pre_cond
+            seconds_known: ¬ second_unknown;
+        ;
+
+    | 
+    | Timezone; may be Void.
+    | 
+    func timezone:Iso8601_timezone
+        ;
+
+    | 
+    | Indicates whether minute is unknown. If so, the time is of the form "hh".
+    | 
+    func minute_unknown:Boolean
+        ;
+
+    | 
+    | Indicates whether second is unknown. If so and month is known, the time is of the form
+    | `"hh:mm"` or `"hhmm"`.
+    | 
+    func second_unknown:Boolean
+        ;
+
+    | 
+    | Return string value in extended format.
+    | 
+    func as_string:String
+        ;
+
+invariant
+    hour_valid: valid_hour(hour, minute, second);
+    minute_valid: ¬ minute_unknown ⇒ valid_minute(minute);
+    second_valid: ¬ second_unknown ⇒ valid_second(second);
+    fractional_second_valid: has_fractional_second ⇒ (¬ second_unknown ∧ valid_fractional_second(fractional_second));
+    partial_validity: minute_unknown ⇒ second_unknown;
+
+end

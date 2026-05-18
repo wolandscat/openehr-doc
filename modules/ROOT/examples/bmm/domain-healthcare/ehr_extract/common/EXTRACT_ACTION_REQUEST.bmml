@@ -1,0 +1,25 @@
+| 
+| Generic model of a Request for an Extract, containing an Extract specification.
+| 
+
+class EXTRACT_ACTION_REQUEST
+    is_a LOCATABLE
+
+feature_group ("access")
+
+    | 
+    | Identifier of previous `EXTRACT_REQUEST`.
+    | 
+    prop request_id: OBJECT_REF;
+
+    | 
+    | Requested action: `cancel | resend | send new`. Coded by openEHR Terminology
+    | group `'extract action type'`.
+    | 
+    prop action: DV_CODED_TEXT;
+
+    | 
+    prop uid: HIER_OBJECT_ID;
+
+
+end

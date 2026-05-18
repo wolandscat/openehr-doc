@@ -1,0 +1,38 @@
+| 
+| Root object of an operational template. An operational template is derived from a
+| `TEMPLATE` definition and the `ARCHETYPEs` and/or `TEMPLATE_OVERLAYs` mentioned by that
+| template by a process of flattening, and potentially removal of unneeded languages and
+| terminologies.
+| 
+| An operational template is used for generating and validating RM-canonical instance data,
+| and also as a source artefact for generating other downstream technical artefacts,
+| including XML schemas, APIs and UI form definitions.
+| 
+
+class OPERATIONAL_TEMPLATE
+    is_a AUTHORED_ARCHETYPE
+
+feature_group ("access")
+
+    | 
+    | Compendium of flattened terminologies of archetypes referenced from this template, keyed
+    | by archetype identifier. This will almost always be present in a template.
+    | 
+    prop component_terminologies: Map<String,ARCHETYPE_TERMINOLOGY>;
+
+    | 
+    | Compendium of flattened terminology extracts (i.e. from external terminologies) from
+    | archetypes referenced from this template, keyed by archetype identifier.
+    | 
+    prop terminology_extracts: Map<String,ARCHETYPE_TERMINOLOGY>;
+
+    | 
+    | Return the component terminology for the archetype with identifier an_id.
+    | 
+    func component_terminology(an_id: String):ARCHETYPE_TERMINOLOGY
+        ;
+
+invariant
+    specialisation_validity: is_specialised;
+
+end

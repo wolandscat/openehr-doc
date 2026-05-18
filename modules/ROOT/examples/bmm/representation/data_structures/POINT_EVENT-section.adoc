@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::POINT_EVENT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::POINT_EVENT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::POINT_EVENT-properties.adoc[]
 
 Props(flat)::
 +
 include::POINT_EVENT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::POINT_EVENT.bmml[]
+----
+
 ======

@@ -1,0 +1,29 @@
+| 
+| Reference to a writable property.
+| 
+
+class EL_PROPERTY_REF
+    is_a EL_FEATURE_REF
+
+feature_group ("access")
+
+    | 
+    | Property definition (within class).
+    | 
+    prop definition: BMM_PROPERTY;
+
+    | 
+    | Defined to return True.
+    | 
+    prop is_writable: Boolean;
+
+    | 
+    | Type definition (i.e. BMM meta-type definition object) of the constant, property or
+    | variable, inferred by inspection of the current scoping instance. Return
+    | `definition.type`.
+    | 
+    func eval_type:BMM_TYPE
+        ;
+
+
+end

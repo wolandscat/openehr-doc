@@ -1,0 +1,10 @@
+| 
+| Rules meta-type representing the type Object_ref, which is assumed to be the type
+| of any non-primitive reference target within a rule.
+| 
+
+class TYPE_DEF_OBJECT_REF
+    is_a EXPR_TYPE_DEF
+
+
+end

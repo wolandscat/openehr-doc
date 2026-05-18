@@ -1,0 +1,9 @@
+| 
+| Meta-type for writable variables, including the special variable `Result`.
+| 
+
+abstract class BMM_WRITABLE_VARIABLE
+    is_a BMM_VARIABLE
+
+
+end

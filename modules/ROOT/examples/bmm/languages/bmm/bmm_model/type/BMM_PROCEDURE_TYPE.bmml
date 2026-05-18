@@ -1,0 +1,17 @@
+| 
+| Form of routine specific to procedure object signatures, with `result_type` being the
+| special Status meta-type
+| 
+
+class BMM_PROCEDURE_TYPE
+    is_a BMM_ROUTINE_TYPE
+
+feature_group ("access")
+
+    | 
+    | Result type of a procedure.
+    | 
+    prop result_type: BMM_STATUS_TYPE;
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::ACCESS_CONTROL_SETTINGS.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::ACCESS_CONTROL_SETTINGS-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::ACCESS_CONTROL_SETTINGS-properties.adoc[]
 
 Props(flat)::
 +
 include::ACCESS_CONTROL_SETTINGS-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::ACCESS_CONTROL_SETTINGS.bmml[]
+----
+
 ======

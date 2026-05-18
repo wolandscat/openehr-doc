@@ -1,0 +1,10 @@
+| 
+| A predicate on any object reference (including function call) that returns True if the
+| reference is attached, i.e. non-Void.
+| 
+
+class EL_ATTACHED
+    is_a EL_PREDICATE
+
+
+end

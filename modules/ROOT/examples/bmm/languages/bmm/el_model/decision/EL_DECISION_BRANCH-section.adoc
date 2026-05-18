@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_DECISION_BRANCH.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_DECISION_BRANCH-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_DECISION_BRANCH-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_DECISION_BRANCH-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_DECISION_BRANCH.bmml[]
+----
+
 ======

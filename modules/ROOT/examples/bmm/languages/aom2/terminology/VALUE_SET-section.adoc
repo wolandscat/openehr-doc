@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::VALUE_SET.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::VALUE_SET-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::VALUE_SET-properties.adoc[]
 
 Props(flat)::
 +
 include::VALUE_SET-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::VALUE_SET.bmml[]
+----
+
 ======

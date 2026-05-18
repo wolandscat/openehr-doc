@@ -1,0 +1,16 @@
+| 
+| Meta-type of for properties of unitary type.
+| 
+
+class BMM_UNITARY_PROPERTY
+    is_a BMM_PROPERTY
+
+feature_group ("access")
+
+    | 
+    | Declared or inferred static type of the entity.
+    | 
+    prop type: BMM_UNITARY_TYPE;
+
+
+end

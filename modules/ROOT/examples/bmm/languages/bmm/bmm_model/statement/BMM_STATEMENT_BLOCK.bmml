@@ -1,0 +1,17 @@
+| 
+| A statement 'block' corresponding to the programming language concept of the same name.
+| May be used to establish scope in specific languages.
+| 
+
+class BMM_STATEMENT_BLOCK
+    is_a BMM_STATEMENT_ITEM
+
+feature_group ("access")
+
+    | 
+    | Child blocks of the current block.
+    | 
+    prop items: List<BMM_STATEMENT_ITEM>;
+
+
+end

@@ -1,0 +1,9 @@
+| 
+| Path-based reference to a value in a data structure.
+| 
+
+class EXPR_VALUE_REF
+    is_a EXPR_LEAF
+
+
+end

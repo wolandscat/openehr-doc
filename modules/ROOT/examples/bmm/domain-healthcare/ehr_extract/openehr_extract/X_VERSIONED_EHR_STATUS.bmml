@@ -1,0 +1,9 @@
+| 
+| Form of `X_VERSIONED_OBJECT` for `EHR_STATUS` EHR object.
+| 
+
+class X_VERSIONED_EHR_STATUS
+    is_a X_VERSIONED_OBJECT<>
+
+
+end

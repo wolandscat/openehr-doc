@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_BOOLEAN.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_BOOLEAN-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_BOOLEAN-properties.adoc[]
 
 Props(flat)::
 +
 include::C_BOOLEAN-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_BOOLEAN.bmml[]
+----
+
 ======

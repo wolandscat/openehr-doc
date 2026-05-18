@@ -1,0 +1,13 @@
+| 
+| Enumeration of visibility settings for model elements.
+| 
+
+enum VISIBILITY_TYPE
+    base_type String
+
+        vt_hide (hide)
+
+        vt_show (show)
+
+
+end

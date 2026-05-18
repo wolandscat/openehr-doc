@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::OPERATOR_KIND.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::OPERATOR_KIND-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::OPERATOR_KIND-properties.adoc[]
 
 Props(flat)::
 +
 include::OPERATOR_KIND-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::OPERATOR_KIND.bmml[]
+----
+
 ======

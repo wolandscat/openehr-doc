@@ -1,0 +1,52 @@
+| 
+| Language-specific detail of resource description. When a resource is translated for use in
+| another language environment, each `RESOURCE_DESCRIPTION_ITEM` needs to be copied and
+| translated into the new language.
+| 
+
+class RESOURCE_DESCRIPTION_ITEM
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The localised language in which the items in this description item are written. Encoded
+    | following the RFC 5646 standard, using ISO 639-1 (two-character) language codes, e.g.
+    | "en". It may include a region subtag conforming to ISO 3166-1 alpha-2 (two-character
+    | country codes), e.g. "pt-br" for Brazilian Portuguese.
+    | 
+    prop language: Terminology_code «iso.iso_639-1»;
+
+    | 
+    | Purpose of the resource.
+    | 
+    prop purpose: String;
+
+    | 
+    | Keywords which characterise this resource, used e.g. for indexing and searching.
+    | 
+    prop keywords: List<String>;
+
+    | 
+    | Description of the uses of the resource, i.e. contexts in which it could be used.
+    | 
+    prop use: String;
+
+    | 
+    | Description of any misuses of the resource, i.e. contexts in which it should not be used.
+    | 
+    prop misuse: String;
+
+    | 
+    | URIs of original clinical document(s) or description of which resource is a formalisation,
+    | in the language of this description item; keyed by meaning.
+    | 
+    prop original_resource_uri: Map<String,String>;
+
+    | 
+    | Additional language-senstive resource metadata, as a list of name/value pairs.
+    | 
+    prop other_details: Map<String,String>;
+
+
+end

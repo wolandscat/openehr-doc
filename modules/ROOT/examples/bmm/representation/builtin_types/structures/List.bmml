@@ -1,0 +1,26 @@
+| 
+| Ordered container that may contain duplicates.
+| 
+
+builtin class List
+    is_a Container<>
+
+feature_group ("access")
+
+    | 
+    | Return first element.
+    | 
+    func first:T
+        ;
+
+    | 
+    | Return last element.
+    | 
+    func last:T
+        ;
+
+invariant
+    first_validity: ¬ is_empty ⇒ ∃ first;
+    last_validity: ¬ is_empty ⇒ ∃ last;
+
+end

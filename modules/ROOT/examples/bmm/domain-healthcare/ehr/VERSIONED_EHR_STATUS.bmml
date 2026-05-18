@@ -1,0 +1,9 @@
+| 
+| Version container for `EHR_STATUS` instance.
+| 
+
+class VERSIONED_EHR_STATUS
+    is_a VERSIONED_OBJECT<>
+
+
+end

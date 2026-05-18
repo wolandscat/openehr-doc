@@ -1,0 +1,76 @@
+| 
+| The EHR object is the root object and access point of an EHR for a subject of care.
+| 
+
+class EHR
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The identifier of the logical EHR management system in which this EHR was created.
+    | 
+    prop system_id: HIER_OBJECT_ID;
+
+    | 
+    | The unique identifier of this EHR.
+    | 
+    | NOTE: is is strongly recommended that a UUID always be used for this field.
+    | 
+    prop ehr_id: HIER_OBJECT_ID;
+
+    | 
+    | List of contributions causing changes to this EHR. Each contribution contains a list of
+    | versions, which may include references to any number of `VERSION` instances, i.e. items of
+    | type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`.
+    | 
+    prop contributions: List<OBJECT_REF>;
+
+    | 
+    | Reference to `EHR_STATUS` object for this EHR.
+    | 
+    prop ehr_status: OBJECT_REF;
+
+    | 
+    | Reference to `EHR_ACCESS` object for this EHR.
+    | 
+    prop ehr_access: OBJECT_REF;
+
+    | 
+    | Master list of all Versioned Composition references in this EHR.
+    | 
+    prop compositions: List<OBJECT_REF>;
+
+    | 
+    | Optional directory structure for this EHR. If present, this is a reference to the first
+    | member of `folders`.
+    | 
+    prop directory: OBJECT_REF;
+
+    | 
+    | Time of creation of the EHR.
+    | 
+    prop time_created: DV_DATE_TIME;
+
+    | 
+    | Optional additional Folder structures for this EHR. If set, the `directory` attribute
+    | refers to the first member.
+    | 
+    prop folders: List<OBJECT_REF>;
+
+    | 
+    | Optional list of tags associated with this EHR. Tag `target` values can only be within
+    | the same EHR.
+    | 
+    prop tags: List<OBJECT_REF>;
+
+invariant
+    contributions_valid: contributions.for_all(c.type.is_equal("CONTRIBUTION"));
+    ehr_access_valid: ehr_access.type.is_equal("VERSIONED_EHR_ACCESS");
+    ehr_status_valid: ehr_status.type.is_equal("VERSIONED_EHR_STATUS");
+    compositions_valid: compositions.for_all(c.type.is_equal("VERSIONED_COMPOSITION"));
+    directory_valid: ∃ directory ⇒ directory.type.is_equal("VERSIONED_FOLDER");
+    folders_valid: ∃ folders ⇒ folders.for_all(f.type.is_equal("VERSIONED_FOLDER"));
+    directory_in_folders: ∃ folders ⇒ folders.item(1) = directory;
+
+end

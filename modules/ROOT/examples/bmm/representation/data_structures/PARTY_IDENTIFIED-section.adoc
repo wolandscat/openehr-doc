@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::PARTY_IDENTIFIED.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::PARTY_IDENTIFIED-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::PARTY_IDENTIFIED-properties.adoc[]
 
 Props(flat)::
 +
 include::PARTY_IDENTIFIED-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::PARTY_IDENTIFIED.bmml[]
+----
+
 ======

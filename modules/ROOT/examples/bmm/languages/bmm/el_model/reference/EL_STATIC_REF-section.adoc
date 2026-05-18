@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_STATIC_REF.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_STATIC_REF-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_STATIC_REF-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_STATIC_REF-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_STATIC_REF.bmml[]
+----
+
 ======

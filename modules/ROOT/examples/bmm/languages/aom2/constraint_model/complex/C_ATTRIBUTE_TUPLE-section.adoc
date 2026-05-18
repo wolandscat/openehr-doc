@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_ATTRIBUTE_TUPLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_ATTRIBUTE_TUPLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_ATTRIBUTE_TUPLE-properties.adoc[]
 
 Props(flat)::
 +
 include::C_ATTRIBUTE_TUPLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_ATTRIBUTE_TUPLE.bmml[]
+----
+
 ======

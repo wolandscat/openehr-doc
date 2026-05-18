@@ -1,0 +1,43 @@
+| 
+| A feature defining a routine, scoped to a class.
+| 
+
+abstract class BMM_ROUTINE
+    is_a BMM_FEATURE
+
+feature_group ("access")
+
+    | 
+    | Formal parameters of the routine.
+    | 
+    prop parameters: List<BMM_PARAMETER>;
+
+    | 
+    | Boolean conditions that must evaluate to True for the routine to execute correctly, May be
+    | used to generate exceptions if included in run-time build.
+    | 
+    | A False pre-condition implies an error in the passed parameters.
+    | 
+    prop pre_conditions: List<BMM_ASSERTION>;
+
+    | 
+    | Boolean conditions that will evaluate to True if the routine executed correctly, May be
+    | used to generate exceptions if included in run-time build.
+    | 
+    | A False post-condition implies an error (i.e. bug) in routine code.
+    | 
+    prop post_conditions: List<BMM_ASSERTION>;
+
+    | 
+    | Body of a routine, i.e. executable program.
+    | 
+    prop definition: BMM_ROUTINE_DEFINITION;
+
+    | 
+    | Return number of arguments of this routine.
+    | 
+    func arity:Integer
+        ;
+
+
+end

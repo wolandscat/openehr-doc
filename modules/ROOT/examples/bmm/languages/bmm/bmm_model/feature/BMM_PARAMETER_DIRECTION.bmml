@@ -1,0 +1,15 @@
+| 
+| Enumeration of parameter read/write direction values.
+| 
+
+enum BMM_PARAMETER_DIRECTION
+    base_type String
+
+        pd_in (in)
+
+        pd_out (out)
+
+        pd_in_out (in_out)
+
+
+end

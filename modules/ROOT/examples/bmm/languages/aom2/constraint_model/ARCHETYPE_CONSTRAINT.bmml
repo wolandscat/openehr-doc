@@ -1,0 +1,82 @@
+| 
+| Abstract parent of all constraint model types. Defines conformance and congruence function
+| signatures.
+| 
+
+abstract class ARCHETYPE_CONSTRAINT
+    is_a ADL_CODE_DEFINITIONS
+
+feature_group ("access")
+
+    | 
+    | Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
+    | archetype definition.
+    | 
+    prop parent: ARCHETYPE_CONSTRAINT;
+
+    | 
+    prop soc_parent: C_SECOND_ORDER;
+
+    | 
+    | True if this node is prohibited. Implemented in subtypes.
+    | 
+    func is_prohibited:Boolean
+        ;
+
+    | 
+    | True if the relative path `a_path` exists at this node.
+    | 
+    func has_path(a_path: String):Boolean
+        ;
+
+    | 
+    | Path of this node relative to root of archetype.
+    | 
+    func path:String
+        ;
+
+    | 
+    | True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+    | same as other. Typically used during validation of specialised archetype nodes.
+    | 
+    | Parameters
+    |   `rmcc`:: RM conformance checker - a lambda (i.e. function object) that can compute
+    |       conformance of type-names within the Reference Model on which the current archetype
+    |       is based. The signature provides two arguments representing respectively, the
+    |       `rm_type_name` of the current node and the `rm_type_name` of the node being redefined
+    |       in a specialisation parent archetype.
+    | 
+    func c_conforms_to(other: ARCHETYPE_CONSTRAINT, rmcc: (String, String) -> Boolean):Boolean
+        ;
+
+    | 
+    | True if constraints represented by this node contain no further redefinitions with respect
+    | to the node other, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
+    | 
+    | Typically used to test if an inherited node locally contains any constraints.
+    | 
+    func c_congruent_to(other: ARCHETYPE_CONSTRAINT):Boolean
+        ;
+
+    | 
+    | True if there is a second order constraint such as a tuple constraint on this node.
+    | 
+    func is_second_order_constrained:Boolean
+        post_cond
+            valid_result: ∃ soc_parent ∨ (∃ parent ∧ parent.is_second_order_constrained);
+        ;
+
+    | 
+    | True if this node is the root of the tree.
+    | 
+    func is_root:Boolean
+        ;
+
+    | 
+    | True if this node is a terminal node in the tree structure, i.e. having no child nodes.
+    | 
+    func is_leaf:Boolean
+        ;
+
+
+end

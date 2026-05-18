@@ -1,0 +1,16 @@
+| 
+| Unary operator expression node.
+| 
+
+class EXPR_UNARY_OPERATOR
+    is_a EXPR_OPERATOR
+
+feature_group ("access")
+
+    | 
+    | Operand node.
+    | 
+    prop operand: EXPRESSION;
+
+
+end

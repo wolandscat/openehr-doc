@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::AOM_TYPE_MAPPING.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::AOM_TYPE_MAPPING-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::AOM_TYPE_MAPPING-properties.adoc[]
 
 Props(flat)::
 +
 include::AOM_TYPE_MAPPING-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::AOM_TYPE_MAPPING.bmml[]
+----
+
 ======

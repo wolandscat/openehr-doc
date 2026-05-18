@@ -1,0 +1,24 @@
+| 
+| Type representing a keyed table of values. V is the value type and K the type
+| of the keys.
+| 
+
+builtin class Map
+    is_a Container<>
+
+feature_group ("access")
+
+    | 
+    | Test for presence of `a_key`.
+    | 
+    func has_key:Boolean
+        ;
+
+    | 
+    | Return item for key `a_key`.
+    | 
+    func item:V
+        ;
+
+
+end

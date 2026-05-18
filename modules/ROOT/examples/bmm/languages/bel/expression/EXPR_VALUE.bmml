@@ -1,0 +1,20 @@
+| 
+| Any kind of statement element that can be evaluated. The type will either be supplied in
+| descendant types or else will be inferred by an assignment statement linked to a typed
+| variable.
+| 
+
+abstract class EXPR_VALUE
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The computed value of this node as a result of the nodes below it, for operator nodes, or
+    | else statically set or otherwise derived values.
+    | 
+    func value:Any
+        ;
+
+
+end

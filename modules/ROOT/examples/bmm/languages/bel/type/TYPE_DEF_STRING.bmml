@@ -1,0 +1,9 @@
+| 
+| Rules meta-type representing the primitive type String.
+| 
+
+class TYPE_DEF_STRING
+    is_a EXPR_TYPE_DEF
+
+
+end

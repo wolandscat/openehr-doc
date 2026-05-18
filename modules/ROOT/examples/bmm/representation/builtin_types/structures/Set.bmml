@@ -1,0 +1,9 @@
+| 
+| Unordered container that may not contain duplicates.
+| 
+
+builtin class Set
+    is_a Container<>
+
+
+end

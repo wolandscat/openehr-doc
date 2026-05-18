@@ -1,0 +1,48 @@
+| 
+| Versions whose content is an `ORIGINAL_VERSION` copied from another location; this class
+| inherits `commit_audit` and `contribution` from `VERSION<T>`, providing imported
+| versions with their own audit trail and Contribution, distinct from those of the imported
+| `ORIGINAL_VERSION`.
+| 
+
+class IMPORTED_VERSION
+    is_a VERSION<>
+
+feature_group ("access")
+
+    | 
+    | The `ORIGINAL_VERSION` object that was imported.
+    | 
+    prop item: ORIGINAL_VERSION<T>;
+
+    | 
+    | Computed version of inheritance precursor, derived as `item.uid`.
+    | 
+    func uid:OBJECT_VERSION_ID
+        post_cond
+            valid_result: Result = item.uid;
+        ;
+
+    | 
+    | Computed version of inheritance precursor, derived as `item.preceding_version_uid`.
+    | 
+    func preceding_version_uid:OBJECT_VERSION_ID
+        post_cond
+            valid_result: Result = item.preceding_version_uid;
+        ;
+
+    | 
+    | Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as
+    | `item.lifecycle_state`; coded by openEHR vocabulary `version lifecycle state`.
+    | 
+    func lifecycle_state:DV_CODED_TEXT
+        ;
+
+    | 
+    | Original content of this Version.
+    | 
+    func data:T
+        ;
+
+
+end

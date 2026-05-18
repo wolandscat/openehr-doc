@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::REFERENCE_RANGE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::REFERENCE_RANGE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::REFERENCE_RANGE-properties.adoc[]
 
 Props(flat)::
 +
 include::REFERENCE_RANGE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::REFERENCE_RANGE.bmml[]
+----
+
 ======

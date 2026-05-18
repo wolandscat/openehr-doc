@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::AUTHORED_ARCHETYPE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::AUTHORED_ARCHETYPE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::AUTHORED_ARCHETYPE-properties.adoc[]
 
 Props(flat)::
 +
 include::AUTHORED_ARCHETYPE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::AUTHORED_ARCHETYPE.bmml[]
+----
+
 ======

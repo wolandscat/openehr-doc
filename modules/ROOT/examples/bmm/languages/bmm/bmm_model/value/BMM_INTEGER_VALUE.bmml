@@ -1,0 +1,17 @@
+| 
+| Meta-type for a literal Integer value, for which `type` is fixed to the `BMM_TYPE`
+| representing `Integer` and `value` is of type `Integer`.
+| 
+
+class BMM_INTEGER_VALUE
+    is_a BMM_PRIMITIVE_VALUE<>
+
+feature_group ("access")
+
+    | 
+    | Native Integer value.
+    | 
+    prop value: Integer;
+
+
+end

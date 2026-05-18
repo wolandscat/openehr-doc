@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EVALUATION.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EVALUATION-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EVALUATION-properties.adoc[]
 
 Props(flat)::
 +
 include::EVALUATION-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EVALUATION.bmml[]
+----
+
 ======

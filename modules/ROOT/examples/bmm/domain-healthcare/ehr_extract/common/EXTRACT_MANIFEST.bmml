@@ -1,0 +1,18 @@
+| 
+| Specification of the candidate entities and optionally top-level items (e.g. Compositions)
+| to be included in the Extract.
+| 
+
+class EXTRACT_MANIFEST
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | List of entity manifests uids of items included in the Extract; for openEHR data, these
+    | are uids identifying the version containers.
+    | 
+    prop entities: List<EXTRACT_ENTITY_MANIFEST>;
+
+
+end

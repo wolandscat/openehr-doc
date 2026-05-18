@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::BMM_PRIMITIVE_VALUE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::BMM_PRIMITIVE_VALUE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::BMM_PRIMITIVE_VALUE-properties.adoc[]
 
 Props(flat)::
 +
 include::BMM_PRIMITIVE_VALUE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::BMM_PRIMITIVE_VALUE.bmml[]
+----
+
 ======

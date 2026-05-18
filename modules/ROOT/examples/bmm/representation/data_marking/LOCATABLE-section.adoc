@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::LOCATABLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::LOCATABLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::LOCATABLE-properties.adoc[]
 
 Props(flat)::
 +
 include::LOCATABLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::LOCATABLE.bmml[]
+----
+
 ======

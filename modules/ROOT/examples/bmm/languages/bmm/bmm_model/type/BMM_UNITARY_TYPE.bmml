@@ -1,0 +1,18 @@
+| 
+| Parent of meta-types that may be used as the type of any instantiated object that is not a
+| container object.
+| 
+
+abstract class BMM_UNITARY_TYPE
+    is_a BMM_TYPE
+
+feature_group ("access")
+
+    | 
+    | Result = self.
+    | 
+    func unitary_type:BMM_UNITARY_TYPE
+        ;
+
+
+end

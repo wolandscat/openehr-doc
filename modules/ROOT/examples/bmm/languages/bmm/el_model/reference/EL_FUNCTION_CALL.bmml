@@ -1,0 +1,37 @@
+| 
+| A call made on a closed function agent, returning a result. Equivalent to an 'application'
+| of a function in Lambda calculus.
+| 
+
+class EL_FUNCTION_CALL
+    is_a EL_FEATURE_REF, EL_AGENT_CALL
+
+feature_group ("access")
+
+    | 
+    | The function agent being called.
+    | 
+    prop agent: EL_FUNCTION_AGENT;
+
+    | 
+    | Defined to return False.
+    | 
+    prop is_writable: Boolean;
+
+    | 
+    | Return `agent.definition.type`.
+    | 
+    func eval_type:BMM_TYPE
+        ;
+
+    | 
+    | Generated full reference name, consisting of any scoping elements, function name and
+    | routine parameters enclosed in parentheses.
+    | 
+    func reference:String
+        ;
+
+invariant
+    inv_valid_agent: agent.is_callable();
+
+end

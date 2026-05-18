@@ -1,0 +1,9 @@
+| 
+| Meta-type for property and variable signatures.
+| 
+
+class BMM_PROPERTY_TYPE
+    is_a BMM_SIGNATURE
+
+
+end

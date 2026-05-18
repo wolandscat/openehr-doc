@@ -1,0 +1,9 @@
+| 
+| Meta-type for literal intervals of type `Interval<Ordered>`.
+| 
+
+class BMM_INTERVAL_VALUE
+    is_a BMM_LITERAL_VALUE<>
+
+
+end

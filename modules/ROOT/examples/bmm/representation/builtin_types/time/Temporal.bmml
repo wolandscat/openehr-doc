@@ -1,0 +1,9 @@
+| 
+| Abstract ancestor of time-related classes.
+| 
+
+abstract class Temporal
+    is_a Ordered
+
+
+end

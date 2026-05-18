@@ -1,0 +1,17 @@
+| 
+| Meta-type for routine objects.
+| 
+
+class BMM_ROUTINE_TYPE
+    is_a BMM_SIGNATURE
+
+feature_group ("access")
+
+    | 
+    | Type of arguments in the signature, if any; represented as a type-tuple (list of arbitrary
+    | types).
+    | 
+    prop argument_types: BMM_TUPLE_TYPE;
+
+
+end

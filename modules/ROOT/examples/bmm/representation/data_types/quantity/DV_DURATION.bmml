@@ -1,0 +1,66 @@
+| 
+| Represents a period of time with respect to a notional point in time, which is not
+| specified. A sign may be used to indicate the duration is backwards in time rather than
+| forwards.
+| 
+| NOTE: two deviations from ISO 8601 are supported, the first, to allow a negative sign, and
+| the second allowing the 'W' designator to be mixed with other designators. See time types
+| section in the Foundation Types model.
+| 
+| Used for recording the duration of something in the real world, particularly when there is
+| a need a) to represent the duration in customary format, i.e. days, hours, minutes etc,
+| and b) if it will be used in computational operations with date/time quantities, i.e.
+| additions, subtractions etc.
+| 
+| Misuse: Durations cannot be used to represent points in time, or intervals of time.
+| 
+
+class DV_DURATION
+    is_a DV_AMOUNT
+
+feature_group ("access")
+
+    | 
+    | ISO8601 duration string, including described deviations to support negative values and
+    | weeks.
+    | 
+    prop value: String;
+
+    | 
+    | Numeric value of the duration as a number of seconds. Computed using the method
+    | `to_seconds()` inherited from `Iso8601_duration`.
+    | 
+    func magnitude:Double
+        ;
+
+    | 
+    | Sum of this Duration and `other`.
+    | 
+    func add(other: DV_DURATION):DV_DURATION
+        ;
+
+    | 
+    | Difference of this Duration and `other`.
+    | 
+    func subtract(other: DV_DURATION):DV_DURATION
+        ;
+
+    | 
+    | Product of this Duration and `factor`.
+    | 
+    func multiply(factor: Real):DV_DURATION
+        ;
+
+    | 
+    | Negated version of current duration.
+    | 
+    | Assuming the current duration is positive, the negated version represents a time prior to
+    | some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).
+    | 
+    func negative:DV_DURATION
+        ;
+
+invariant
+    value_valid: valid_iso8601_duration(value);
+
+end

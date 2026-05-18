@@ -1,0 +1,41 @@
+| 
+| Defines globally used constant values.
+| 
+
+class BASIC_DEFINITIONS
+    is_a Any
+
+feature_group ("infrastructure")
+
+    | 
+    | Carriage return character.
+    | 
+    const CR:Character = '\r';
+
+    | 
+    | Line feed character.
+    | 
+    const LF:Character = '\n';
+
+    | 
+    | Name of the Any meta-type.
+    | 
+    const Any_type_name:String = "Any";
+
+    | 
+    | Regex pattern that matches any string.
+    | 
+    const Regex_any_pattern:String = ".*";
+
+    | 
+    | Default character encoding.
+    | 
+    const Default_encoding:String = "UTF-8";
+
+    | 
+    | Name of the None type.
+    | 
+    const None_type_name:String = "None";
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::TEXT_FORMAT_TYPES.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::TEXT_FORMAT_TYPES-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::TEXT_FORMAT_TYPES-properties.adoc[]
 
 Props(flat)::
 +
 include::TEXT_FORMAT_TYPES-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::TEXT_FORMAT_TYPES.bmml[]
+----
+
 ======

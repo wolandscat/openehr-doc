@@ -1,0 +1,15 @@
+| 
+| Enumeration of trend directions for DV_ORDINAL and similar ordered values.
+| 
+
+enum TREND_KIND
+    base_type String
+
+        increase (increase)
+
+        decrease (decrease)
+
+        change (change)
+
+
+end

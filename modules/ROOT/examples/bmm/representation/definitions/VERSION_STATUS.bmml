@@ -1,0 +1,20 @@
+| 
+| Status of a versioned artefact, as one of a number of possible values: uncontrolled,
+| prerelease, release, build.
+| 
+
+enum VERSION_STATUS
+    base_type String
+
+        alpha (alpha)
+
+        beta (beta)
+
+        release_candidate (release_candidate)
+
+        released (released)
+
+        build (build)
+
+
+end

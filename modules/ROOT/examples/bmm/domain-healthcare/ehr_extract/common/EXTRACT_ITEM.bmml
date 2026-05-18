@@ -1,0 +1,9 @@
+| 
+| Abstract parent of Extract Folder and Content types.
+| 
+
+abstract class EXTRACT_ITEM
+    is_a LOCATABLE
+
+
+end

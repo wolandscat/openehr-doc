@@ -1,0 +1,17 @@
+| 
+| Multi-branch conditional statement structure.
+| 
+
+class BMM_ACTION_TABLE
+    is_a BMM_STATEMENT
+
+feature_group ("access")
+
+    | 
+    | A specialised decision table whose outputs can only be procedure agents. In execution, the
+    | matched agent will be invoked.
+    | 
+    prop decision_table: BMM_ACTION_DECISION_TABLE;
+
+
+end

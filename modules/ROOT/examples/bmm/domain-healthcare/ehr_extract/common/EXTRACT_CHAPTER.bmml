@@ -1,0 +1,16 @@
+| 
+| One content chapter of an Extract; contains information relating to only one entity.
+| 
+
+class EXTRACT_CHAPTER
+    is_a LOCATABLE
+
+feature_group ("access")
+
+    | 
+    | The information content of this chapter.
+    | 
+    prop items: List<EXTRACT_ITEM>;
+
+
+end

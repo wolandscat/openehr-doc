@@ -1,0 +1,18 @@
+| 
+| Enumeration of processing states of a `BMM_SCHEMA` used by creation and validation
+| routines in `BMM_SCHEMA`.
+| 
+
+enum BMM_SCHEMA_STATE
+    base_type String
+
+        state_created (State_created)
+
+        state_validated_created (State_validated_created)
+
+        state_includes_pending (State_includes_pending)
+
+        state_includes_processed (State_includes_processed)
+
+
+end

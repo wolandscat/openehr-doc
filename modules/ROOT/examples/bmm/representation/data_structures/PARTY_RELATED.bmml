@@ -1,0 +1,20 @@
+| 
+| Proxy type for identifying a party and its relationship to the subject of the record. Use
+| where the relationship between the party and the subject of the record must be known.
+| 
+
+class PARTY_RELATED
+    is_a PARTY_IDENTIFIED
+
+feature_group ("access")
+
+    | 
+    | Relationship of subject of this ENTRY to the subject of the record. May be coded. If it is
+    | the patient, coded as self.
+    | 
+    prop relationship: DV_CODED_TEXT;
+
+invariant
+    relationship_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_subject_relationship, relationship.defining_code);
+
+end

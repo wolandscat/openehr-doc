@@ -1,0 +1,16 @@
+| 
+| Automatically declared variable representing result of a Function call (writable).
+| 
+
+class BMM_RESULT
+    is_a BMM_WRITABLE_VARIABLE
+
+feature_group ("access")
+
+    | 
+    | Name of this model element.
+    | 
+    prop name: String;
+
+
+end

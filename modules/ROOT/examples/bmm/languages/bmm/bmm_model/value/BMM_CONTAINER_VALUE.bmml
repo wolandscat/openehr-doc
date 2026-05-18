@@ -1,0 +1,10 @@
+| 
+| Meta-type for literals whose concrete type is a linear container type, i.e. array, list or
+| set.
+| 
+
+class BMM_CONTAINER_VALUE
+    is_a BMM_LITERAL_VALUE<>
+
+
+end

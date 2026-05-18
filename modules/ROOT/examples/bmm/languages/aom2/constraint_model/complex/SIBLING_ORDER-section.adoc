@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::SIBLING_ORDER.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::SIBLING_ORDER-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::SIBLING_ORDER-properties.adoc[]
 
 Props(flat)::
 +
 include::SIBLING_ORDER-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::SIBLING_ORDER.bmml[]
+----
+
 ======

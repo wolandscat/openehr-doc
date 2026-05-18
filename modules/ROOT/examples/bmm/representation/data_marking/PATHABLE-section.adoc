@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::PATHABLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::PATHABLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::PATHABLE-properties.adoc[]
 
 Props(flat)::
 +
 include::PATHABLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::PATHABLE.bmml[]
+----
+
 ======

@@ -1,0 +1,10 @@
+| 
+| Abstract notional parent class of ordered, numeric types — types with both the
+| less_than() and arithmetic functions defined.
+| 
+
+builtin abstract class Ordered_Numeric
+    is_a Ordered, Numeric
+
+
+end

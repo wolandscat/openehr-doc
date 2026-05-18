@@ -1,0 +1,85 @@
+| 
+| Definition of the root of a BMM model (along with what is inherited from
+| `BMM_SCHEMA_CORE`).
+| 
+
+class BMM_MODEL
+    is_a BMM_PACKAGE_CONTAINER, BMM_MODEL_METADATA
+
+feature_group ("access")
+
+    | 
+    | All classes in this model, keyed by type name.
+    | 
+    prop class_definitions: List<String>;
+
+    | 
+    | List of other models 'used' (i.e. 'imported' by this model). Classes in the current model
+    | may refer to classes in a used model by specifying the other class's `scope` meta-
+    | attribute.
+    | 
+    prop used_models: List<BMM_MODEL>;
+
+    | 
+    | All classes in this model, keyed by type name.
+    | 
+    prop modules: Map<String,BMM_MODULE>;
+
+    | 
+    | Identifier of this model, lower-case, formed from:
+    | 
+    | `<rm_publisher>_<model_name>_<rm_release>`
+    | 
+    | E.g. `"openehr_ehr_1.0.4"`.
+    | 
+    func model_id:String
+        ;
+
+    | 
+    | Retrieve the class definition corresponding to `a_type_name` (which may contain a
+    | generic part).
+    | 
+    func class_definition(a_name: String):BMM_CLASS
+        ;
+
+    | 
+    | True if `a_class_name` has a class definition in the model.
+    | 
+    func has_class_definition(a_class_name: String):Boolean
+        ;
+
+    | 
+    | True if `a_type_name` is already concretely known in the system, including if it is
+    | generic, which may be open, partially open or closed.
+    | 
+    func has_type_definition(a_type_name: String):Boolean
+        ;
+
+    | 
+    | Retrieve the enumeration definition corresponding to `a_type_name`.
+    | 
+    func enumeration_definition(a_name: String):BMM_ENUMERATION
+        ;
+
+    | 
+    | List of keys in `class_definitions` of items marked as primitive types.
+    | 
+    func primitive_types:List<String>
+        ;
+
+    | 
+    | List of keys in `class_definitions` of items that are enumeration types.
+    | 
+    func enumeration_types:List<String>
+        ;
+
+    | 
+    | True if `a_class_name` is a descendant in the model of `a_parent_class_name`.
+    | 
+    func is_descendant_of(a_class_name: String, a_parent_class_name: String):Boolean
+        ;
+
+invariant
+    inv_top_level_scope: scope = self;
+
+end

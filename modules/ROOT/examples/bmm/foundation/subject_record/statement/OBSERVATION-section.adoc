@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::OBSERVATION.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::OBSERVATION-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::OBSERVATION-properties.adoc[]
 
 Props(flat)::
 +
 include::OBSERVATION-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::OBSERVATION.bmml[]
+----
+
 ======

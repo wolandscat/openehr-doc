@@ -1,0 +1,28 @@
+| 
+| A container for a specific set of statements intended to be used together.
+| 
+
+class STATEMENT_SET
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The member statements of this statement set.
+    | 
+    prop statement: List<STATEMENT>;
+
+    | 
+    | Optional name of this rule set.
+    | 
+    prop name: String;
+
+    | 
+    | Execution result of the whole rule set. Determined by the and-ing of result values of
+    | Assertions in the rule set.
+    | 
+    func execution_result:Boolean
+        ;
+
+
+end

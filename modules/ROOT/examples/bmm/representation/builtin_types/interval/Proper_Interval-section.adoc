@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Proper_Interval.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Proper_Interval-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Proper_Interval-properties.adoc[]
 
 Props(flat)::
 +
 include::Proper_Interval-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Proper_Interval.bmml[]
+----
+
 ======

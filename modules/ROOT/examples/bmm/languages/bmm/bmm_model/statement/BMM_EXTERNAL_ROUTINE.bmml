@@ -1,0 +1,22 @@
+| 
+| External routine meta-type, containing sufficient meta-data to enable a routine in an
+| external library to be called.
+| 
+
+class BMM_EXTERNAL_ROUTINE
+    is_a BMM_ROUTINE_DEFINITION
+
+feature_group ("access")
+
+    | 
+    | External call general meta-data, including target routine name, type mapping etc.
+    | 
+    prop meta_data: Map<String,String>;
+
+    | 
+    | Optional argument-mapping meta-data.
+    | 
+    prop argument_mapping: Map<String,String>;
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::DV_PARSABLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::DV_PARSABLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::DV_PARSABLE-properties.adoc[]
 
 Props(flat)::
 +
 include::DV_PARSABLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::DV_PARSABLE.bmml[]
+----
+
 ======

@@ -1,0 +1,49 @@
+| 
+| Enumeration representing operators.
+| 
+
+enum OPERATOR_KIND
+    base_type String
+
+        op_eq (eq)
+
+        op_ne (ne)
+
+        op_lt (lt)
+
+        op_le (le)
+
+        op_gt (gt)
+
+        op_ge (ge)
+
+        op_matches (matches)
+
+        op_not (not)
+
+        op_and (and)
+
+        op_or (or)
+
+        op_xor (xor)
+
+        op_implies (implies)
+
+        op_for_all (for_all)
+
+        op_exists (exists)
+
+        op_plus (plus)
+
+        op_minus (minus)
+
+        op_multiply (multiply)
+
+        op_divide (divide)
+
+        op_modulo (modulo)
+
+        op_exponent (exponent)
+
+
+end

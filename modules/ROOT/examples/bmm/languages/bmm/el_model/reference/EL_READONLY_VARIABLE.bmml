@@ -1,0 +1,22 @@
+| 
+| Meta-type of read-only variables, including routine parameter and the special variable
+| 'Self'.
+| 
+
+class EL_READONLY_VARIABLE
+    is_a EL_VARIABLE
+
+feature_group ("access")
+
+    | 
+    | Variable definition to which this reference refers.
+    | 
+    prop definition: BMM_READONLY_VARIABLE;
+
+    | 
+    | Defined to return False in all cases.
+    | 
+    prop is_writable: Boolean;
+
+
+end

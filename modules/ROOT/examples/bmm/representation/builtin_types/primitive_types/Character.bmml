@@ -1,0 +1,9 @@
+| 
+| Type representing minimal interface of built-in Character type.
+| 
+
+builtin class Character
+    is_a Ordered
+
+
+end

@@ -1,0 +1,9 @@
+| 
+| Parent type of all TUPLE types.
+| 
+
+class TUPLE
+    is_a Any
+
+
+end

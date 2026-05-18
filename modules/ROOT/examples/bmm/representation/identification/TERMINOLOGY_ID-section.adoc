@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::TERMINOLOGY_ID.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::TERMINOLOGY_ID-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::TERMINOLOGY_ID-properties.adoc[]
 
 Props(flat)::
 +
 include::TERMINOLOGY_ID-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::TERMINOLOGY_ID.bmml[]
+----
+
 ======

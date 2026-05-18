@@ -1,0 +1,19 @@
+| 
+| A call made on a closed procedure agent. The method in BMM via which external actions are
+| achieved from within a program.
+| 
+
+class BMM_PROCEDURE_CALL
+    is_a EL_AGENT_CALL, BMM_SIMPLE_STATEMENT
+
+feature_group ("access")
+
+    | 
+    | The procedure agent being called.
+    | 
+    prop agent: EL_PROCEDURE_AGENT;
+
+invariant
+    inv_valid_agent: agent.is_callable();
+
+end

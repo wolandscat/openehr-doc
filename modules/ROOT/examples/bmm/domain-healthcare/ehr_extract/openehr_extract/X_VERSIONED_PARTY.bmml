@@ -1,0 +1,9 @@
+| 
+| Form of `X_VERSIONED_OBJECT` for `PARTY` demographic object.
+| 
+
+class X_VERSIONED_PARTY
+    is_a X_VERSIONED_OBJECT<>
+
+
+end

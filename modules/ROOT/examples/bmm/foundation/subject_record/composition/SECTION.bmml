@@ -1,0 +1,24 @@
+| 
+| Represents a heading in a heading structure, or section tree. Created according to
+| archetyped structures for typical headings such as SOAP, physical examination, but also
+| pathology result heading structures. Should not be used instead of `ENTRY` hierarchical
+| structures.
+| 
+
+class SECTION
+    is_a CONTENT_ITEM
+
+feature_group ("access")
+
+    | 
+    | Ordered list of content items under this section, which may include:
+    | 
+    | * more `SECTIONs`;
+    | * `ENTRYs`.
+    | 
+    prop items: List<CONTENT_ITEM>;
+
+invariant
+    items_valid: ∃ items ⇒ ¬ items.is_empty();
+
+end

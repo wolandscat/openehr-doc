@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_CONSTRAINED.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_CONSTRAINED-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_CONSTRAINED-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_CONSTRAINED-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_CONSTRAINED.bmml[]
+----
+
 ======

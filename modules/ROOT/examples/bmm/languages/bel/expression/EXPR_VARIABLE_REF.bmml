@@ -1,0 +1,16 @@
+| 
+| Expression tree leaf item representing a reference to a declared variable.
+| 
+
+class EXPR_VARIABLE_REF
+    is_a EXPR_LEAF
+
+feature_group ("access")
+
+    | 
+    | The variable referred to.
+    | 
+    prop item: VARIABLE_DECLARATION;
+
+
+end

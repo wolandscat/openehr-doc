@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_ARCHETYPE_ROOT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_ARCHETYPE_ROOT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_ARCHETYPE_ROOT-properties.adoc[]
 
 Props(flat)::
 +
 include::C_ARCHETYPE_ROOT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_ARCHETYPE_ROOT.bmml[]
+----
+
 ======

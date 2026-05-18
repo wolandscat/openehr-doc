@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Multiplicity_interval.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Multiplicity_interval-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Multiplicity_interval-properties.adoc[]
 
 Props(flat)::
 +
 include::Multiplicity_interval-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Multiplicity_interval.bmml[]
+----
+
 ======

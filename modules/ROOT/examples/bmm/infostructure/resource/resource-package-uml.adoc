@@ -6,13 +6,6 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class ANNOTATIONS_PATH_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_path_map]] {
-        .. access ..
-}
-
-
-ANNOTATIONS_PATH_MAP *--> "0..* items" ANNOTATIONS_MAP
-
 abstract class AUTHORED_RESOURCE [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] {
         .. access ..
         uid: UUID
@@ -62,12 +55,6 @@ class RESOURCE_DESCRIPTION [[/openehr-doc/latest/infostructure/resource-gen.html
 RESOURCE_DESCRIPTION *--> "1 parent_resource" AUTHORED_RESOURCE
 
 RESOURCE_DESCRIPTION *--> "0..* details" RESOURCE_DESCRIPTION_ITEM
-
-class ANNOTATIONS_MAP [[/openehr-doc/latest/infostructure/resource-gen.html#_class_annotations_map]] {
-        .. access ..
-        items: Map<String,String>
-}
-
 
 class RESOURCE_ANNOTATIONS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_annotations]] {
         .. access ..

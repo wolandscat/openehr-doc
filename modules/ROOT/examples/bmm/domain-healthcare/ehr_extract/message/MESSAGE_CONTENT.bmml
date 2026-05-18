@@ -1,0 +1,9 @@
+| 
+| Abstract parent of message payload types.
+| 
+
+abstract class MESSAGE_CONTENT
+    is_a LOCATABLE
+
+
+end

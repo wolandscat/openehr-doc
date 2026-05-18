@@ -1,0 +1,27 @@
+| 
+| Statement type representing an assignment from a value-generating source to a writable
+| entity, i.e. a variable reference or property.
+| 
+| At the meta-model level, may be understood as an initialisation of an existing meta-model
+| instance.
+| 
+
+class BMM_ASSIGNMENT
+    is_a BMM_SIMPLE_STATEMENT
+
+feature_group ("access")
+
+    | 
+    | The target variable on the notional left-hand side of this assignment.
+    | 
+    prop target: EL_VALUE_GENERATOR;
+
+    | 
+    | Source right hand side) of the assignment.
+    | 
+    prop source: EL_EXPRESSION;
+
+invariant
+    inv_target_writable: target.is_writable;
+
+end

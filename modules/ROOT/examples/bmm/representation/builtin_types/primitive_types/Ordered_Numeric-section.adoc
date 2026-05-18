@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Ordered_Numeric.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Ordered_Numeric-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Ordered_Numeric-properties.adoc[]
 
 Props(flat)::
 +
 include::Ordered_Numeric-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Ordered_Numeric.bmml[]
+----
+
 ======

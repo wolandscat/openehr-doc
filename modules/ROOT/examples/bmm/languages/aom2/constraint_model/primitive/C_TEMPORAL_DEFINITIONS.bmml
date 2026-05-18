@@ -1,0 +1,106 @@
+| 
+| Definitions related to `C_TEMPORAL` constraints.
+| 
+
+class C_TEMPORAL_DEFINITIONS
+    is_a Any
+
+feature_group ("values")
+
+    | 
+    | List of allowed date constraints.
+    | 
+    const Valid_date_constraint_patterns:List<String> = ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-??-??", "YYYY-MM-XX", "YYYY-MM-??", "YYYY-MM-DD");
+
+    | 
+    | List of allowed date constraint replacements e.g. in specialised archetype. Contains the values:
+    | 
+    | An empty list value indicates no replacements possible.
+    | 
+    const Valid_date_constraint_replacements:Map<String,List<String>> = {[
+        "YYYY-MM-DD": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-??-??", "YYYY-MM-XX", "YYYY-MM-??", "YYYY-MM-DD"),
+        "YYYY-MM-??": ("YYYY-MM-XX", "YYYY-MM-DD"),
+        "YYYY-MM-XX": ("YYYY-MM-XX", "YYYY-MM-DD"),
+        "YYYY-??-??": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-MM-XX", "YYYY-MM-DD", "YYYY-MM-??"),
+        "YYYY-??-XX": ("YYYY-XX-XX", "YYYY-MM-XX"),
+        "YYYY-XX-XX": ("YYYY-XX-XX", "YYYY-MM-XX"),
+        }]
+        ;
+
+    | 
+    | List of allowed time constraints.
+    | 
+    const Valid_time_constraint_patterns:List<String> = ("HH:??:XX", "HH:??:??", "HH:MM:XX", "HH:MM:??", "HH:MM:SS");
+
+    | 
+    | List of allowed time constraint replacements e.g. in specialised archetype.
+    | An empty list value indicates no replacements possible.
+    | 
+    const Valid_time_constraint_replacements:Map<String,List<String>> = {[
+        "HH:MM:SS": ("HH:??:XX", "HH:??:??", "HH:MM:XX", "HH:MM:??", "HH:MM:SS"),
+        "HH:MM:??": ("HH:MM:XX", "HH:MM:SS"),
+        "HH:MM:XX": ("HH:MM:XX", "HH:MM:SS"),
+        "HH-??-??": ("HH:??:XX", "HH:MM:XX", "HH:MM:SS", "HH:MM:??"),
+        "HH-??-XX": ("HH:MM:XX"),
+        }]
+        ;
+
+    | 
+    | List of allowed date/time constraints.
+    | 
+    const Valid_date_time_constraint_patterns:List<String> = ("YYYY-??-??T??:??:??", "YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS");
+
+    | 
+    | List of allowed date/time constraint replacements e.g. in specialised archetype.
+    | An empty list value indicates no replacements possible.
+    | 
+    const Valid_date_time_constraint_replacements:Map<String,List<String>> = {[
+        "YYYY-MM-DDTHH:MM:SS": ("YYYY-??-??T??:??:??", "YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"),
+        "YYYY-MM-DDTHH:MM:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:SS"),
+        "YYYY-MM-DDTHH:MM:XX": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:SS"),
+        "YYYY-MM-DDTHH:??:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS", "YYYY-MM-DDTHH:??:XX"),
+        "YYYY-MM-DDTHH:??:XX": ("YYYY-MM-DDTHH:MM:XX"),
+        "YYYY-??-??T??:??:??": ("YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"),
+        }]
+        ;
+
+feature_group ("access")
+
+    | 
+    | True if ISO8601 duration string `other_dur` contains every character element in
+    | `a_dur`. For example: 'PYD' (period with year and days only) conforms to 'PYMD', but
+    | doesn't conform to 'PY'.
+    | 
+    func valid_duration_constraint_replacement(a_dur: String, other_dur: String):Boolean
+        ;
+
+    | 
+    | True if string literal like `"yyyy-MM-dd"` containing `"XX"` or `"??"` in `MM` or `dd`
+    | slots in pattern constraint is in `valid_date_constraint_patterns`.
+    | 
+    func valid_iso8601_date_constraint_pattern(s: String):Boolean
+        ;
+
+    | 
+    | True if string literal like `"hh:mm:ss[.ssss]"` containing `"XX"` or `"??"` in `mm` or
+    | `ss` slots in pattern constraint is in `valid_time_constraint_patterns`.
+    | 
+    func valid_iso8601_time_constraint_pattern(s: String):Boolean
+        ;
+
+    | 
+    | True if string literal in form `"yyyy-MM-dd hh:mm:ss[.ssss]"` containing `"XX"` or `"??"`
+    | in variable slots in pattern constraint is in `valid_date_time_constraint_patterns`.
+    | 
+    func valid_iso8601_date_time_constraint_pattern(s: String):Boolean
+        ;
+
+    | 
+    | True if string in form P[Y][M][W][D][T[H][M][S]] is a valid ISO 8601 duration
+    | constraint pattern (openEHR allows W mixed in).
+    | 
+    func valid_iso8601_duration_constraint_pattern(s: String):Boolean
+        ;
+
+
+end

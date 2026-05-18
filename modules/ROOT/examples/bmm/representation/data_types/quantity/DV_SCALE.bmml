@@ -1,0 +1,46 @@
+| 
+| A data type that represents scale values, where there is:
+| 
+| a) implied ordering, b) no implication that the distance between each value is constant,
+| and c) the total number of values is finite; d) non-integer values are allowed.
+| 
+| Example:
+| 
+| ---- Borg CR 10 Scale
+| 
+| 0 No Breathlessness at all 0.5 Very Very Slight (Just Noticeable) 1 Very Slight 2 Slight
+| Breathlessness 3 Moderate ... etc ----
+| 
+| For scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL`
+| should be supported to accommodate existing data instances of that type.
+| 
+
+class DV_SCALE
+    is_a DV_ORDERED
+
+feature_group ("access")
+
+    | 
+    | Coded textual representation of this value in the scale range, which may be strings made
+    | from symbols or other enumerations of terms such as `no breathlessness`, `very very
+    | slight`, `slight breathlessness`. Codes come from archetypes.
+    | 
+    | In some cases, a scale may include values that have no code/symbol. In this case, the
+    | symbol will be a `DV-CODED_TEXT` including the `terminology_id` and a blank String value
+    | for `code_string`.
+    | 
+    prop symbol: DV_CODED_TEXT;
+
+    | 
+    | Real number value of Scale item.
+    | 
+    prop value: Real;
+
+    | 
+    | Test if this Scale value is strictly comparable to `other`.
+    | 
+    func is_strictly_comparable_to(other: DV_SCALE):Boolean
+        ;
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::ITEM_TAG.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::ITEM_TAG-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::ITEM_TAG-properties.adoc[]
 
 Props(flat)::
 +
 include::ITEM_TAG-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::ITEM_TAG.bmml[]
+----
+
 ======

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::PROPORTION_KIND.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::PROPORTION_KIND-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::PROPORTION_KIND-properties.adoc[]
 
 Props(flat)::
 +
 include::PROPORTION_KIND-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::PROPORTION_KIND.bmml[]
+----
+
 ======

@@ -1,0 +1,19 @@
+| 
+| Enumeration of lifecycle status values for tasks.
+| 
+
+enum TASK_STATUS
+    base_type String
+
+        planned (planned)
+
+        in_progress (in_progress)
+
+        on_hold (on_hold)
+
+        completed (completed)
+
+        abandoned (abandoned)
+
+
+end

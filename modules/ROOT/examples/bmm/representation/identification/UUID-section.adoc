@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::UUID.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::UUID-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::UUID-properties.adoc[]
 
 Props(flat)::
 +
 include::UUID-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::UUID.bmml[]
+----
+
 ======

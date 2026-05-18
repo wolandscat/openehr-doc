@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::BMM_FEATURE_GROUP.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::BMM_FEATURE_GROUP-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::BMM_FEATURE_GROUP-properties.adoc[]
 
 Props(flat)::
 +
 include::BMM_FEATURE_GROUP-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::BMM_FEATURE_GROUP.bmml[]
+----
+
 ======

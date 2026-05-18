@@ -1,0 +1,22 @@
+| 
+| Core properties of `BMM_MODEL`, may be used in a serial representation as well, such as
+| `P_BMM_SCHEMA`.
+| 
+
+class BMM_MODEL_METADATA
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Publisher of model expressed in the schema.
+    | 
+    prop rm_publisher: String;
+
+    | 
+    | Release of model expressed in the schema as a 3-part numeric, e.g. "3.1.0" .
+    | 
+    prop rm_release: String;
+
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::ARCHETYPE_HRID.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::ARCHETYPE_HRID-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::ARCHETYPE_HRID-properties.adoc[]
 
 Props(flat)::
 +
 include::ARCHETYPE_HRID-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::ARCHETYPE_HRID.bmml[]
+----
+
 ======

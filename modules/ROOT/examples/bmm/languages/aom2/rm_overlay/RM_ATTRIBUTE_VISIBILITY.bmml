@@ -1,0 +1,22 @@
+| 
+| Definition of visibility of an RM attribute within a larger archetype structure.
+| 
+
+class RM_ATTRIBUTE_VISIBILITY
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Visibility setting of a non-archetyped RM attribute (RM attributes that are constrained or
+    | within the archetyped structure are visible by default).
+    | 
+    prop visibility: VISIBILITY_TYPE;
+
+    | 
+    | Optional alias for the attribute referenced by the path.
+    | 
+    prop alias: Terminology_code;
+
+
+end

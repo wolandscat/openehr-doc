@@ -1,0 +1,9 @@
+| 
+| Form of `X_VERSIONED_OBJECT` for `COMPOSITION` EHR object.
+| 
+
+class X_VERSIONED_COMPOSITION
+    is_a X_VERSIONED_OBJECT<>
+
+
+end

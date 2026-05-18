@@ -1,0 +1,20 @@
+| 
+| Abstract parent of classes representing unique identifiers which identify information
+| entities in a durable way. UIDs only ever identify one IE in time or space and are never
+| re-used.
+| 
+
+abstract class UID
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The value of the id.
+    | 
+    prop value: String;
+
+invariant
+    value_valid: ¬ value.empty;
+
+end

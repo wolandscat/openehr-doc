@@ -1,0 +1,88 @@
+| 
+| Definitions for date/time classes. Note that the timezone limits are set by
+| where the international dateline is. Thus, time in New Zealand is quoted
+| using +12:00, not -12:00.
+| 
+
+builtin class Time_Definitions
+    is_a Any
+
+feature_group ("definitions")
+
+    | 
+    | Number of seconds in a minute.
+    | 
+    const Seconds_in_minute:Integer = 60;
+
+    | 
+    | Number of minutes in an hour.
+    | 
+    const Minutes_in_hour:Integer = 60;
+
+    | 
+    | Number of clock hours in a day.
+    | 
+    const Hours_in_day:Integer = 24;
+
+    | 
+    | Number of days in a normal year.
+    | 
+    const Days_in_year:Integer = 365;
+
+    | 
+    | Calendar days in a standard leap year.
+    | 
+    const Days_in_leap_year:Integer = 366;
+
+    | 
+    | Maximum number of days in a year, accounting for leap years.
+    | 
+    const Max_days_in_year:Integer = 366;
+
+    | 
+    | Number of days in a week.
+    | 
+    const Days_in_week:Integer = 7;
+
+    | 
+    | Number of months in a year.
+    | 
+    const Months_in_year:Integer = 12;
+
+    | 
+    | Maximum number of days in any month.
+    | 
+    const Max_days_in_month:Integer = 31;
+
+    | 
+    | Used for conversions of durations containing months to days and/or seconds.
+    | 
+    const Average_days_in_month:Real = 30.42;
+
+    | 
+    | Used for conversions of durations containing years to days and/or seconds.
+    | 
+    const Average_days_in_year:Real = 365.24;
+
+    | 
+    | Nominal days in a month, used for conversions.
+    | 
+    const Nominal_days_in_month:Real = 30.42;
+
+    | 
+    | Nominal days in a year, used for conversions.
+    | 
+    const Nominal_days_in_year:Real = 365.24;
+
+    | 
+    | Minimum hour value of a timezone according to ISO 8601.
+    | 
+    const Min_timezone_hour:Integer = 12;
+
+    | 
+    | Maximum hour value of a timezone according to ISO 8601.
+    | 
+    const Max_timezone_hour:Integer = 14;
+
+
+end

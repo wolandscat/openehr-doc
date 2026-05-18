@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::String.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::String-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::String-properties.adoc[]
 
 Props(flat)::
 +
 include::String-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::String.bmml[]
+----
+
 ======

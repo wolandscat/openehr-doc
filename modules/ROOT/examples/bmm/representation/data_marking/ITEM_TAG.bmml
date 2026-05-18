@@ -1,0 +1,41 @@
+| 
+| A tag with optional value that is associated with a target information entity identified
+| by a UID.
+| 
+
+class ITEM_TAG
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The tag key. May not be empty or contain leading or trailing whitespace.
+    | 
+    prop key: String;
+
+    | 
+    | The value. If set, may not be empty.
+    | 
+    prop value: String;
+
+    | 
+    | Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.
+    | 
+    prop target: UID_BASED_ID;
+
+    | 
+    | Optional archetype (i.e. AQL) or RM path within `target`, used to tag a fine-grained
+    | element.
+    | 
+    prop target_path: String;
+
+    | 
+    | Identifier of owner object, such as EHR.
+    | 
+    prop owner_id: OBJECT_REF;
+
+invariant
+    inv_key_valid: ¬ key.is_empty() ∧ key.is_justified;
+    inv_value_valid: ∃ value ⇒ ¬ value.is_empty();
+
+end

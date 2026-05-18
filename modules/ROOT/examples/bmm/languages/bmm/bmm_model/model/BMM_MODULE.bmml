@@ -1,0 +1,27 @@
+| 
+| Meta-type defining a generalised module concept. Descendants define actual structure and
+| contents.
+| 
+
+abstract class BMM_MODULE
+    is_a BMM_MODEL_ELEMENT
+
+feature_group ("access")
+
+    | 
+    | Model within which module is defined.
+    | 
+    prop scope: BMM_MODEL;
+
+    | 
+    | List of feature groups in this class.
+    | 
+    prop feature_groups: List<BMM_FEATURE_GROUP>;
+
+    | 
+    | Features of this module.
+    | 
+    prop features: List<BMM_FORMAL_ELEMENT>;
+
+
+end

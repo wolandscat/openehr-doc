@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::TEMPLATE_OVERLAY.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::TEMPLATE_OVERLAY-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::TEMPLATE_OVERLAY-properties.adoc[]
 
 Props(flat)::
 +
 include::TEMPLATE_OVERLAY-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::TEMPLATE_OVERLAY.bmml[]
+----
+
 ======

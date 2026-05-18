@@ -1,0 +1,75 @@
+| 
+| Type representing minimal interface of built-in Integer type.
+| 
+
+builtin class Integer
+    is_a Ordered_Numeric
+
+feature_group ("operators")
+
+    | 
+    | Integer addition.
+    | 
+    func add(other: Integer):Integer
+        alias
+            +;
+        ;
+
+    | 
+    | Integer subtraction.
+    | 
+    func subtract(other: Integer):Integer
+        alias
+            -;
+        ;
+
+    | 
+    | Integer multiplication.
+    | 
+    func multiply(other: Integer):Integer
+        alias
+            *;
+        ;
+
+    | 
+    | Integer division.
+    | 
+    func divide(other: Integer):Double
+        alias
+            /;
+        ;
+
+    | 
+    | Integer exponentiation.
+    | 
+    func exponent(other: Double):Double
+        alias
+            ^;
+        ;
+
+    | 
+    | Return self modulo other.
+    | 
+    func modulo(mod: Integer):Integer
+        alias
+            mod;
+        ;
+
+    | 
+    | Returns True if current Integer is less than `other`.
+    | 
+    func less_than(other: Integer):Boolean
+        alias
+            <;
+        ;
+
+    | 
+    | Generate negative of current Integer value.
+    | 
+    func negative:Integer
+        alias
+            -;
+        ;
+
+
+end

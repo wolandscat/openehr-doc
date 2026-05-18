@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EVENT_CONTEXT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EVENT_CONTEXT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EVENT_CONTEXT-properties.adoc[]
 
 Props(flat)::
 +
 include::EVENT_CONTEXT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EVENT_CONTEXT.bmml[]
+----
+
 ======

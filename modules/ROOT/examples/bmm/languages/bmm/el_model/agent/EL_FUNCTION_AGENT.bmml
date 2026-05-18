@@ -1,0 +1,26 @@
+| 
+| An agent whose signature is of a function, i.e. has a result type.
+| 
+
+class EL_FUNCTION_AGENT
+    is_a EL_AGENT
+
+feature_group ("access")
+
+    | 
+    | Reference to definition of a routine for which this is a direct call instance, if one
+    | exists.
+    | 
+    prop definition: BMM_FUNCTION;
+
+    | 
+    | Eval type is the signature corresponding to the (remaining) open arguments and return
+    | type, if any.
+    | 
+    func eval_type:BMM_FUNCTION_TYPE
+        post_cond
+            result_validity: Result = definition.signature;
+        ;
+
+
+end

@@ -1,0 +1,22 @@
+| 
+| Parent type of predicate of any object reference.
+| 
+
+abstract class EL_PREDICATE
+    is_a EL_SIMPLE
+
+feature_group ("access")
+
+    | 
+    | The target instance of this predicate.
+    | 
+    prop operand: EL_VALUE_GENERATOR;
+
+    | 
+    | Return `{BMM_MODEL}._boolean_type_definition_()`.
+    | 
+    func eval_type:BMM_SIMPLE_TYPE
+        ;
+
+
+end

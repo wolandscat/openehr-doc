@@ -1,0 +1,9 @@
+| 
+| Abstract meta-type of any kind of symbolic variable.
+| 
+
+abstract class EL_VARIABLE
+    is_a EL_VALUE_GENERATOR
+
+
+end

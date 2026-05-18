@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EXTERNAL_QUERY.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EXTERNAL_QUERY-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EXTERNAL_QUERY-properties.adoc[]
 
 Props(flat)::
 +
 include::EXTERNAL_QUERY-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EXTERNAL_QUERY.bmml[]
+----
+
 ======

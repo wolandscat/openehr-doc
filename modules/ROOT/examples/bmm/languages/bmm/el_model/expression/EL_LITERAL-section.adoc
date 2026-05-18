@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_LITERAL.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_LITERAL-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_LITERAL-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_LITERAL-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_LITERAL.bmml[]
+----
+
 ======

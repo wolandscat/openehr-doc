@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Temporal.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Temporal-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Temporal-properties.adoc[]
 
 Props(flat)::
 +
 include::Temporal-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Temporal.bmml[]
+----
+
 ======

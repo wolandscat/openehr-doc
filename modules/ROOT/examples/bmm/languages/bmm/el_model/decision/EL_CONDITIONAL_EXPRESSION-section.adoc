@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_CONDITIONAL_EXPRESSION.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_CONDITIONAL_EXPRESSION-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_CONDITIONAL_EXPRESSION-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_CONDITIONAL_EXPRESSION-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_CONDITIONAL_EXPRESSION.bmml[]
+----
+
 ======

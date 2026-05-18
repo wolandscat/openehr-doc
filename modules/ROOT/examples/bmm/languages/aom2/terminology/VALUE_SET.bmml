@@ -1,0 +1,9 @@
+| 
+| Representation of a flat value set within the archetype terminology.
+| 
+
+class VALUE_SET
+    is_a TERMINOLOGY_RELATION
+
+
+end

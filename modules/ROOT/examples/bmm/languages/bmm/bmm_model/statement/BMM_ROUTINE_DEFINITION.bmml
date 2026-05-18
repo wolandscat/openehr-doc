@@ -1,0 +1,9 @@
+| 
+| Abstract ancestor of routine body meta-types.
+| 
+
+abstract class BMM_ROUTINE_DEFINITION
+    is_a Any
+
+
+end

@@ -1,0 +1,21 @@
+| 
+| Version-controlled composition abstraction, defined by inheriting
+| `VERSIONED_OBJECT<COMPOSITION>`.
+| 
+
+class VERSIONED_COMPOSITION
+    is_a VERSIONED_OBJECT<>
+
+feature_group ("access")
+
+    | 
+    | Indicates whether this composition set is persistent; derived from first version.
+    | 
+    func is_persistent:Boolean
+        ;
+
+invariant
+    archetype_node_id_valid: all_versions.for_all(v.archetype_node_id.is_equal(all_versions.first.archetype_node_id));
+    persistent_validity: all_versions.for_all(v.is_persistent = all_versions.first.data.is_persistent);
+
+end

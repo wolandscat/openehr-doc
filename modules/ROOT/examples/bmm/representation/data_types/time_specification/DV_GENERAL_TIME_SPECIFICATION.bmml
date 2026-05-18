@@ -1,0 +1,29 @@
+| 
+| Specifies points in time in a general syntax. Based on the HL7v3 GTS data type.
+| 
+
+class DV_GENERAL_TIME_SPECIFICATION
+    is_a DV_TIME_SPECIFICATION
+
+feature_group ("access")
+
+    | 
+    | Calendar alignment extracted from value.
+    | 
+    func calendar_alignment:String
+        ;
+
+    | 
+    | Event alignment extracted from value.
+    | 
+    func event_alignment:String
+        ;
+
+    | 
+    | Extracted from value.
+    | 
+    func institution_specified:Boolean
+        ;
+
+
+end

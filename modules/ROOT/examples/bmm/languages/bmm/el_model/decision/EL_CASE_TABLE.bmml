@@ -1,0 +1,30 @@
+| 
+| Compound expression consisting of a list of value-range / expression pairs, and an
+| `else` member that as a whole, represents a case statement flavour of decision table.
+| 
+| Evaluated by iterating through `items` and for each one, comparing `input` to the item
+| `value_range`. If the `input` is in the range, the evaluation result of the table is
+| that item's `result` evaluation result.
+| 
+| If no member of `items` has a True-returning `condition`, the evaluation result is the
+| result of evaluating the `else` expression.
+| 
+
+class EL_CASE_TABLE
+    is_a EL_DECISION_TABLE<>
+
+feature_group ("access")
+
+    | 
+    | Members of the chain, equivalent to branches in an if/then/else chain and cases in a case
+    | statement.
+    | 
+    prop items: List<EL_CASE<T>>;
+
+    | 
+    | Expressing generating the input value for the case table.
+    | 
+    prop test_value: EL_VALUE_GENERATOR;
+
+
+end

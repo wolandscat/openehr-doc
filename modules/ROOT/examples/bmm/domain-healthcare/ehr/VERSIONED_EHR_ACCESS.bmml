@@ -1,0 +1,9 @@
+| 
+| Version container for `EHR_ACCESS` instance.
+| 
+
+class VERSIONED_EHR_ACCESS
+    is_a VERSIONED_OBJECT<>
+
+
+end

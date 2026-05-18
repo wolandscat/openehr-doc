@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::VARIABLE_DECLARATION.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::VARIABLE_DECLARATION-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::VARIABLE_DECLARATION-properties.adoc[]
 
 Props(flat)::
 +
 include::VARIABLE_DECLARATION-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::VARIABLE_DECLARATION.bmml[]
+----
+
 ======

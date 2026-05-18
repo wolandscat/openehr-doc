@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_TIME.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_TIME-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_TIME-properties.adoc[]
 
 Props(flat)::
 +
 include::C_TIME-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_TIME.bmml[]
+----
+
 ======

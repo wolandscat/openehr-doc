@@ -1,0 +1,96 @@
+| 
+| Constraint on instances representing duration, which is assumed to have the same parts as
+| the ISO 8601 duration string. Thus, constraints are of the form `"PWD"` (weeks and/or
+| days), `"PDTHMS"` (days, hours, minutes, seconds) and so on.
+| 
+| Both range and the constraint pattern can be set at the same time, corresponding to the
+| ADL constraint `"PWD/|;P0W..P50W|;"`.
+| 
+| As for all of openEHR, two ISO 8601 exceptions are allowed:
+| 
+| * the 'W' (week) designator can be mixed in - the allowed patterns are:
+| `P[Y|;y][M|;m][D|;d][T[H|;h][M|;m][S|;s]]` and `P[W|;w]`;
+| * the values used in an interval constraint may be negated, i.e. a leading minus (`'-'`)
+| sign may be used.
+| 
+
+class C_DURATION
+    is_a C_TEMPORAL<>
+
+feature_group ("access")
+
+    | 
+    | Formal constraint on the assumed primitive `Iso8601_duration` type, in the form of one or
+    | more `Interval<Iso8601_duration>`.
+    | 
+    | For a pattern constraint or no constraint, use an empty list.
+    | 
+    prop constraint: List<Interval<Iso8601_duration>>;
+
+    | 
+    | Default value set in a template, and present in an operational template. Generally limited
+    | to leaf and near-leaf nodes.
+    | 
+    prop default_value: Iso8601_duration;
+
+    | 
+    | Value to be assumed if none sent in data.
+    | 
+    prop assumed_value: Iso8601_duration;
+
+    | 
+    | True if years are allowed in the constrained Duration.
+    | 
+    func years_allowed:Boolean
+        ;
+
+    | 
+    | True if months are allowed in the constrained Duration.
+    | 
+    func months_allowed:Boolean
+        ;
+
+    | 
+    | True if weeks are allowed in the constrained Duration.
+    | 
+    func weeks_allowed:Boolean
+        ;
+
+    | 
+    | True if days are allowed in the constrained Duration.
+    | 
+    func days_allowed:Boolean
+        ;
+
+    | 
+    | True if hours are allowed in the constrained Duration.
+    | 
+    func hours_allowed:Boolean
+        ;
+
+    | 
+    | True if minutes are allowed in the constrained Duration.
+    | 
+    func minutes_allowed:Boolean
+        ;
+
+    | 
+    | True if seconds are allowed in the constrained Duration.
+    | 
+    func seconds_allowed:Boolean
+        ;
+
+    | 
+    | Return `valid_iso8601_duration_constraint_pattern (a_pattern)`
+    | 
+    func valid_pattern_constraint(a_pattern: String):Boolean
+        ;
+
+    | 
+    | Return `valid_duration_constraint_replacement (a_pattern, an_other_pattern)`.
+    | 
+    func valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+        ;
+
+
+end

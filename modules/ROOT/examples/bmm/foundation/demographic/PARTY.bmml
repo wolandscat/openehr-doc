@@ -1,0 +1,62 @@
+| 
+| Ancestor of all Party types, including real world entities and their roles. A Party is any
+| entity which can participate in an activity. The `name` attribute inherited from
+| `LOCATABLE` is used to indicate the actual type of party (note that the actual names, i.e.
+| identities of parties are indicated in the `identities` attribute, not the `name`
+| attribute).
+| 
+| NOTE: It is strongly recommended that the inherited attribute uid be populated in `PARTY` objects,
+|       using the UID copied from the `object_id()` of the `uid` field of the enclosing `VERSION`
+|       object.
+|       For example, the `ORIGINAL_VERSION.uid 87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2`
+|       would be copied to the `uid` field of the `PARTY` object.
+| 
+
+abstract class PARTY
+    is_a LOCATABLE
+
+feature_group ("access")
+
+    | 
+    | Identities used by the party to identify itself, such as legal name, stage names, aliases,
+    | nicknames and so on.
+    | 
+    prop identities: List<PARTY_IDENTITY>;
+
+    | 
+    | Contacts for this party.
+    | 
+    prop contacts: List<CONTACT>;
+
+    | 
+    | All other details for this Party.
+    | 
+    prop details: ITEM_STRUCTURE;
+
+    | 
+    | Relationships in which this Party takes part as source.
+    | 
+    prop relationships: List<PARTY_RELATIONSHIP>;
+
+    | 
+    | Type of party, such as `PERSON`, `ORGANISATION`, etc. Role name, e.g. general practitioner
+    | , nurse , private citizen . Taken from inherited `name` attribute.
+    | 
+    func type:DV_TEXT
+        ;
+
+    | 
+    | References to relationships in which this Party takes part as target.
+    | 
+    func reverse_relationships:List<LOCATABLE_REF>
+        ;
+
+invariant
+    type_valid: type = name;
+    contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
+    relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
+    reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);
+    is_archetype_root: is_archetype_root;
+    uid_mandatory: ∃ uid;
+
+end

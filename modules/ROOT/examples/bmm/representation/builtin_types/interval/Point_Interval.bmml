@@ -1,0 +1,12 @@
+| 
+| Type representing an Interval that happens to be a point value. Provides an efficient
+| representation that is substitutable for `Interval<T>` where needed.
+| 
+
+class Point_Interval
+    is_a Interval<>
+
+invariant
+    inv_point: lower = upper;
+
+end

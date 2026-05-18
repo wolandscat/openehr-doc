@@ -1,0 +1,35 @@
+| 
+| Meta-type for literal instance values declared in a model. Instance values may be inline
+| values of primitive types in the usual fashion or complex objects in syntax form, e.g.
+| JSON.
+| 
+
+abstract class BMM_LITERAL_VALUE
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | A serial representation of the value.
+    | 
+    prop value_literal: String;
+
+    | 
+    | A native representation of the value, possibly derived by deserialising `value_literal`.
+    | 
+    prop value: Any;
+
+    | 
+    | Optional specification of formalism of the `value_literal` attribute for complex values.
+    | Value may be any of `json |; json5 |; yawl |; xml |; odin |; rdf` or
+    | another value agreed by the user community. If not set, `json` is assumed.
+    | 
+    prop syntax: String;
+
+    | 
+    | Concrete type of this literal.
+    | 
+    prop type: T;
+
+
+end

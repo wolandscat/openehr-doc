@@ -1,0 +1,9 @@
+| 
+| Abstract parent of statement types representing a locally defined routine body.
+| 
+
+abstract class BMM_STATEMENT_ITEM
+    is_a Any
+
+
+end

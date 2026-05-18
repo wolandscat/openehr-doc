@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EXTRACT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EXTRACT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EXTRACT-properties.adoc[]
 
 Props(flat)::
 +
 include::EXTRACT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EXTRACT.bmml[]
+----
+
 ======

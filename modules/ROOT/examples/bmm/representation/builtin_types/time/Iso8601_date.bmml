@@ -1,0 +1,69 @@
+| 
+| Represents an ISO 8601 date, including partial and extended forms. Value may be:
+| 
+| * `YYYY-MM-DD` (extended, preferred)
+| * `YYYYMMDD` (compact)
+| * a partial invariant.
+| 
+| See `Time_definitions._valid_iso8601_date()` for validity.
+| 
+
+class Iso8601_date
+    is_a Iso8601_type
+
+feature_group ("access")
+
+    | 
+    | Extract the year part of the date as an Integer.
+    | 
+    func year:Integer
+        ;
+
+    | 
+    | Extract the month part of the date as an Integer, or return 0 if not present.
+    | 
+    func month:Integer
+        pre_cond
+            month_known: ¬ month_unknown;
+        ;
+
+    | 
+    | Extract the day part of the date as an Integer, or return 0 if not present.
+    | 
+    func day:Integer
+        pre_cond
+            day_known: ¬ day_unknown;
+        ;
+
+    | 
+    | Timezone; may be Void.
+    | 
+    func timezone:Iso8601_timezone
+        ;
+
+    | 
+    | Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.
+    | 
+    func month_unknown:Boolean
+        ;
+
+    | 
+    | Indicates whether day in month is unknown. If so, and month is known, the date is of the
+    | form `"YYYY-MM"` or `"YYYYMM"`.
+    | 
+    func day_unknown:Boolean
+        ;
+
+    | 
+    | Return string value in extended format.
+    | 
+    func as_string:String
+        ;
+
+invariant
+    year_valid: valid_year(year);
+    month_valid: ¬ month_unknown ⇒ valid_month(month);
+    day_valid: ¬ day_unknown ⇒ valid_day(year, month, day);
+    partial_validity: month_unknown ⇒ day_unknown;
+
+end

@@ -1,0 +1,67 @@
+| 
+| A delayed routine call, whose arguments may be open, partially closed or closed. Generated
+| by special reference to a routine, usually via a dedicated keyword, such as 'lambda' or
+| 'agent', or other special syntax.
+| 
+| Instances may include closed delayed calls like `calculate_age (dob="1987-09-13",
+| today="2019-06-03")` but also partially open calls such as `format_structure (struct=?,
+| style=3)`, where `struct` is an open argument.
+| 
+| Evaluation type (i.e. type of runtime evaluated form) is `BMM_SIGNATURE`.
+| 
+
+abstract class EL_AGENT
+    is_a EL_FEATURE_REF
+
+feature_group ("access")
+
+    | 
+    | Name of the routine being called.
+    | 
+    prop name: String;
+
+    | 
+    | Closed arguments of a routine call as a tuple of objects.
+    | 
+    prop closed_args: EL_TUPLE;
+
+    | 
+    | Optional list of names of open arguments of the call. If not provided, and the `name`
+    | refers to a routine with more arguments than supplied in `closed_args`, the missing
+    | arguments are inferred from the `definition`.
+    | 
+    prop open_args: List<String>;
+
+    | 
+    | Reference to definition of a routine for which this is an agent, if one exists.
+    | 
+    prop definition: BMM_ROUTINE;
+
+    | 
+    prop is_writable: Boolean;
+
+    | 
+    | Eval type is the signature corresponding to the (remaining) open arguments and return
+    | type, if any.
+    | 
+    func eval_type:BMM_ROUTINE_TYPE
+        post_cond
+            result_validity: Result = definition.signature;
+        ;
+
+    | 
+    | True if there are no open arguments.
+    | 
+    func is_callable:Boolean
+        post_cond
+            result_validity: Result = ¬ ∃ open_arguments;
+        ;
+
+    | 
+    | Generated full reference name, including scoping elements.
+    | 
+    func reference:String
+        ;
+
+
+end

@@ -1,0 +1,21 @@
+| 
+| Reference to a writable property, either a constant or computed.
+| 
+
+class EL_STATIC_REF
+    is_a EL_FEATURE_REF
+
+feature_group ("access")
+
+    | 
+    | Constant definition (within class).
+    | 
+    prop definition: BMM_STATIC;
+
+    | 
+    | Defined to return False.
+    | 
+    prop is_writable: Boolean;
+
+
+end

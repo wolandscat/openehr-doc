@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::VISIBILITY_TYPE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::VISIBILITY_TYPE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::VISIBILITY_TYPE-properties.adoc[]
 
 Props(flat)::
 +
 include::VISIBILITY_TYPE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::VISIBILITY_TYPE.bmml[]
+----
+
 ======

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::MATH_FUNCTION_KIND.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::MATH_FUNCTION_KIND-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::MATH_FUNCTION_KIND-properties.adoc[]
 
 Props(flat)::
 +
 include::MATH_FUNCTION_KIND-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::MATH_FUNCTION_KIND.bmml[]
+----
+
 ======

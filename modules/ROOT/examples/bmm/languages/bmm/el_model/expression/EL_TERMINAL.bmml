@@ -1,0 +1,10 @@
+| 
+| Expression entities that are terminals (i.e. leaves) within operator expressions
+| or tuples.
+| 
+
+abstract class EL_TERMINAL
+    is_a EL_EXPRESSION
+
+
+end

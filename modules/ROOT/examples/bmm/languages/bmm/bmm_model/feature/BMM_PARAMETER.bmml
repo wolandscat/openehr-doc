@@ -1,0 +1,17 @@
+| 
+| A routine parameter variable (read-only).
+| 
+
+class BMM_PARAMETER
+    is_a BMM_READONLY_VARIABLE
+
+feature_group ("access")
+
+    | 
+    | Optional read/write direction of the parameter. If none-supplied, the parameter is treated
+    | as `in`, i.e. readable.
+    | 
+    prop direction: BMM_PARAMETER_DIRECTION;
+
+
+end

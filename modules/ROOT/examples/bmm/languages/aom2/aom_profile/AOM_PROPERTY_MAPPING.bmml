@@ -1,0 +1,21 @@
+| 
+| Data object expressing a mapping between two class properties.
+| 
+
+class AOM_PROPERTY_MAPPING
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Name of property in source class.
+    | 
+    prop source_property_name: String;
+
+    | 
+    | Name of property in target class.
+    | 
+    prop target_property_name: String;
+
+
+end

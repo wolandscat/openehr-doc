@@ -1,0 +1,9 @@
+| 
+| The abstract parent of `CLUSTER` and `ELEMENT` representation classes.
+| 
+
+abstract class ITEM
+    is_a LOCATABLE
+
+
+end

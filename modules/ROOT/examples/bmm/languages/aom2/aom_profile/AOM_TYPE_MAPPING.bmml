@@ -1,0 +1,26 @@
+| 
+| Data object expressing a mapping between two types.
+| 
+
+class AOM_TYPE_MAPPING
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Name of the AOM type being mapped to an RM type.
+    | 
+    prop source_class_name: String;
+
+    | 
+    | Name of the RM type in the mapping.
+    | 
+    prop target_class_name: String;
+
+    | 
+    | List of mappings of properties of this type to another type.
+    | 
+    prop property_mappings: Map<String,AOM_PROPERTY_MAPPING>;
+
+
+end

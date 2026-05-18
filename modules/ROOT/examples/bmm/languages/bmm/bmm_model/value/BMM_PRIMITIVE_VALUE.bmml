@@ -1,0 +1,16 @@
+| 
+| Meta-type for literals whose concrete type is a primitive type.
+| 
+
+class BMM_PRIMITIVE_VALUE
+    is_a BMM_UNITARY_VALUE<>
+
+feature_group ("access")
+
+    | 
+    | Concrete type of this literal.
+    | 
+    prop type: BMM_SIMPLE_TYPE;
+
+
+end

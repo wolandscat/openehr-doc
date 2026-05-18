@@ -1,0 +1,9 @@
+| 
+| Container whose storage is assumed to be contiguous.
+| 
+
+builtin class Array
+    is_a Container<>
+
+
+end

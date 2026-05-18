@@ -1,0 +1,46 @@
+| 
+| Enumeration of transitions in the Instruction State Machine (ISM) that drive
+| changes between instruction execution states.
+| 
+
+enum INSTRUCTION_EXECUTION_TRANSITION
+    base_type String
+
+        ism_t_initiate (initiate)
+
+        ism_t_start (start)
+
+        ism_t_schedule (schedule)
+
+        ism_t_plan_step (plan_step)
+
+        ism_t_cancel (cancel)
+
+        ism_t_do (do)
+
+        ism_t_resume (resume)
+
+        ism_t_suspend (suspend)
+
+        ism_t_suspended_step (suspended_step)
+
+        ism_t_active_step (active_step)
+
+        ism_t_scheduled_step (scheduled_step)
+
+        ism_t_postponed_step (postponed_step)
+
+        ism_t_abort (abort)
+
+        ism_t_restore (restore)
+
+        ism_t_postpone (postpone)
+
+        ism_t_time_out (time_out)
+
+        ism_t_notify_completed (notify_completed)
+
+        ism_t_notify_aborted (notify_aborted)
+
+
+end

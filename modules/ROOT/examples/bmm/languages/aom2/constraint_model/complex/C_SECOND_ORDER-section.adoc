@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_SECOND_ORDER.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_SECOND_ORDER-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_SECOND_ORDER-properties.adoc[]
 
 Props(flat)::
 +
 include::C_SECOND_ORDER-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_SECOND_ORDER.bmml[]
+----
+
 ======

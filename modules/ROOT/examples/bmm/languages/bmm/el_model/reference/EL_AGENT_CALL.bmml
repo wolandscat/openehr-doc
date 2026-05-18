@@ -1,0 +1,18 @@
+| 
+| A call made to a 'closed' agent, i.e. one with no remaining open arguments.
+| 
+
+abstract class EL_AGENT_CALL
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | The agent being called.
+    | 
+    prop agent: EL_AGENT;
+
+invariant
+    inv_valid_call: agent.is_callable();
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::Integer64.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::Integer64-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::Integer64-properties.adoc[]
 
 Props(flat)::
 +
 include::Integer64-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::Integer64.bmml[]
+----
+
 ======

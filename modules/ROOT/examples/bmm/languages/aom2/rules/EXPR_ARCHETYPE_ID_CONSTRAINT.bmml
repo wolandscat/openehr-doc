@@ -1,0 +1,16 @@
+| 
+| Expression tree leaf item representing a constraint on an archetype identifier.
+| 
+
+class EXPR_ARCHETYPE_ID_CONSTRAINT
+    is_a EXPR_CONSTRAINT
+
+feature_group ("access")
+
+    | 
+    | A C_STRING representing a regular expression for matching Archetype identifiers.
+    | 
+    prop item: C_STRING;
+
+
+end

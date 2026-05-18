@@ -1,0 +1,21 @@
+| 
+| Meta-type for the declaration of a named variable that can be used in an expression.
+| 
+
+class VARIABLE_DECLARATION
+    is_a STATEMENT
+
+feature_group ("access")
+
+    | 
+    | Name of the variable.
+    | 
+    prop name: String;
+
+    | 
+    | Primitive type of the variable, enabling its use to be type-checked in expressions.
+    | 
+    prop type: EXPR_TYPE_DEF;
+
+
+end

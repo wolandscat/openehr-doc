@@ -1,0 +1,9 @@
+| 
+| Rules meta-type representing the primitive type Terminology_code.
+| 
+
+class TYPE_DEF_TERMINOLOGY_CODE
+    is_a EXPR_TYPE_DEF
+
+
+end

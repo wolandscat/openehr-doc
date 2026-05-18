@@ -1,0 +1,33 @@
+| 
+| Encapsulated data expressed as a parsable String. The internal model of the data item is
+| not described in the openEHR model in common with other encapsulated types, but in this
+| case, the form of the data is assumed to be plaintext, rather than compressed or other
+| types of large binary data.
+| 
+
+class DV_PARSABLE
+    is_a DV_ENCAPSULATED
+
+feature_group ("access")
+
+    | 
+    | The string, which may validly be empty in some syntaxes.
+    | 
+    prop value: String;
+
+    | 
+    | Name of the formalism, e.g. GLIF 1.0 , Proforma etc.
+    | 
+    prop formalism: String;
+
+    | 
+    | Size in bytes of value.
+    | 
+    func size:Integer
+        ;
+
+invariant
+    formalism_valid: ¬ formalism.is_empty();
+    size_valid: size >= 0;
+
+end

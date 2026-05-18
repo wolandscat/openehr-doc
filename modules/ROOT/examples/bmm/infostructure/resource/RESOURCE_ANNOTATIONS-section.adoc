@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::RESOURCE_ANNOTATIONS.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::RESOURCE_ANNOTATIONS-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::RESOURCE_ANNOTATIONS-properties.adoc[]
 
 Props(flat)::
 +
 include::RESOURCE_ANNOTATIONS-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::RESOURCE_ANNOTATIONS.bmml[]
+----
+
 ======

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_AGENT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_AGENT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_AGENT-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_AGENT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_AGENT.bmml[]
+----
+
 ======

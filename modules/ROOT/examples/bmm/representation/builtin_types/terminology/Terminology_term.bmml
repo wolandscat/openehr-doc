@@ -1,0 +1,22 @@
+| 
+| Leaf type representing a standalone term from a terminology, which consists of the term
+| text and the code, i.e. a concept reference.
+| 
+
+class Terminology_term
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Reference to the terminology concept formally representing this term.
+    | 
+    prop concept: Terminology_code;
+
+    | 
+    | Text of term.
+    | 
+    prop text: String;
+
+
+end

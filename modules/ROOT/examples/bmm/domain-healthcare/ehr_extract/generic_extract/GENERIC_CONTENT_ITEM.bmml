@@ -1,0 +1,78 @@
+| 
+| Single item in generic extract, designed for 13606 and CDA data.
+| 
+
+class GENERIC_CONTENT_ITEM
+    is_a EXTRACT_CONTENT_ITEM
+
+feature_group ("access")
+
+    | 
+    | Identifier of model or schema used to create the content.
+    | 
+    prop item_type: DV_CODED_TEXT;
+
+    | 
+    | Version of model or schema used to create the content item.
+    | 
+    prop item_type_version: String;
+
+    | 
+    | Reference to a demographic entity elsewhere in this Extract representing the author of the
+    | item version. The reference should be a UID corresponding to the UID of a
+    | `GENERIC_CONTENT_ITEM` containing the demographic information.
+    | 
+    prop author: String;
+
+    | 
+    | Time of creation of this item version on the original system. This may be an earlier
+    | commit time, or it may be the time at which the item was created during the Extract
+    | generation process.
+    | 
+    prop creation_time: Iso8601_date_time;
+
+    | 
+    | Reference to a demographic entity elsewhere in this Extract representing an authoriser of
+    | the item version, if relevant. The reference should be a UID corresponding to the UID of a
+    | `GENERIC_CONTENT_ITEM` containing the demographic information.
+    | 
+    prop authoriser: String;
+
+    | 
+    | Time of authorisation of this item version on the original system where relevant.
+    | 
+    prop authorisation_time: Iso8601_date_time;
+
+    | 
+    | Coded lifecycle status of the item.
+    | 
+    prop item_status: DV_CODED_TEXT;
+
+    | 
+    | Version id of this item in original system.
+    | 
+    prop version_id: String;
+
+    | 
+    | Version set id of this item in original system, where applicable.
+    | 
+    prop version_set_id: String;
+
+    | 
+    | Identifier of EMR or other system from which the item was created / extracted. Typically
+    | in the form of a domain name.
+    | 
+    prop system_id: String;
+
+    | 
+    | Other details about the content item.
+    | 
+    prop other_details: Map<String,String>;
+
+    | 
+    | Content object.
+    | 
+    prop item: LOCATABLE;
+
+
+end

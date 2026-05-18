@@ -1,0 +1,35 @@
+| 
+| A fully coordinated (i.e. all coordination has been performed) term from a terminology
+| service (as distinct from a particular terminology).
+| 
+
+class CODE_PHRASE
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Identifier of the distinct terminology from which the code_string (or its elements) was
+    | extracted.
+    | 
+    prop terminology_id: TERMINOLOGY_ID;
+
+    | 
+    | The key used by the terminology service to identify a concept or coordination of concepts.
+    | This string is most likely parsable inside the terminology service, but nothing can be
+    | assumed about its syntax outside that context.
+    | 
+    prop code_string: String;
+
+    | 
+    | Optional attribute to carry preferred term corresponding to the code or expression in
+    | `code_string`. Typical use in integration situations which create mappings, and
+    | representing data for which both a (non-preferred) actual term and a preferred term are
+    | both required.
+    | 
+    prop preferred_term: String;
+
+invariant
+    code_string_valid: ¬ code_string.is_empty();
+
+end

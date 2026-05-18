@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::INSTRUCTION_EXECUTION_STATE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::INSTRUCTION_EXECUTION_STATE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::INSTRUCTION_EXECUTION_STATE-properties.adoc[]
 
 Props(flat)::
 +
 include::INSTRUCTION_EXECUTION_STATE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::INSTRUCTION_EXECUTION_STATE.bmml[]
+----
+
 ======

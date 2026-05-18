@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::ARCHETYPE_ID_CONSTRAINT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::ARCHETYPE_ID_CONSTRAINT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::ARCHETYPE_ID_CONSTRAINT-properties.adoc[]
 
 Props(flat)::
 +
 include::ARCHETYPE_ID_CONSTRAINT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::ARCHETYPE_ID_CONSTRAINT.bmml[]
+----
+
 ======

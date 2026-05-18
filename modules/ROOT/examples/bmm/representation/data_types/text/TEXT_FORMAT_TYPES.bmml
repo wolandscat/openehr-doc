@@ -1,0 +1,15 @@
+| 
+| Enumeration of text format types for the DV_TEXT formatting attribute.
+| 
+
+enum TEXT_FORMAT_TYPES
+    base_type Integer
+
+        plain (0)
+
+        plain_no_newlines (1)
+
+        markdown (2)
+
+
+end

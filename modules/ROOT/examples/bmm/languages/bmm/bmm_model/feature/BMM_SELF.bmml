@@ -1,0 +1,17 @@
+| 
+| Meta-type for an automatically created variable referencing the current instance.
+| Typically called 'self' or 'this' in programming languages. Read-only.
+| 
+
+class BMM_SELF
+    is_a BMM_READONLY_VARIABLE
+
+feature_group ("access")
+
+    | 
+    | Name of this model element.
+    | 
+    prop name: String;
+
+
+end

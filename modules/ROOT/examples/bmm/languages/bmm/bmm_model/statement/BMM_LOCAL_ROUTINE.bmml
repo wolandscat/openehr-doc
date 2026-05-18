@@ -1,0 +1,21 @@
+| 
+| Meta-type for locally declared routine body.
+| 
+
+class BMM_LOCAL_ROUTINE
+    is_a BMM_ROUTINE_DEFINITION
+
+feature_group ("access")
+
+    | 
+    | Local variables of the routine, if there is a body defined.
+    | 
+    prop locals: List<BMM_LOCAL>;
+
+    | 
+    | Body of routine declaration.
+    | 
+    prop body: BMM_STATEMENT_BLOCK;
+
+
+end

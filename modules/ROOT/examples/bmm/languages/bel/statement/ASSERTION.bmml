@@ -1,0 +1,27 @@
+| 
+| Meta-type for a first order predicate logic expression with a Boolean result.
+| 
+
+class ASSERTION
+    is_a STATEMENT
+
+feature_group ("access")
+
+    | 
+    | Expression tag, used for differentiating multiple assertions.
+    | 
+    prop tag: String;
+
+    | 
+    | String form of expression, in case an expression evaluator taking String expressions is
+    | used for evaluation.
+    | 
+    prop string_expression: String;
+
+    | 
+    | Root of expression tree.
+    | 
+    prop expression: EXPRESSION;
+
+
+end

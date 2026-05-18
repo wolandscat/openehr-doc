@@ -1,0 +1,21 @@
+| 
+| Binary operator expression node.
+| 
+
+class EL_BINARY_OPERATOR
+    is_a EL_OPERATOR
+
+feature_group ("access")
+
+    | 
+    | Left operand node.
+    | 
+    prop left_operand: EL_EXPRESSION;
+
+    | 
+    | Right operand node.
+    | 
+    prop right_operand: EL_EXPRESSION;
+
+
+end

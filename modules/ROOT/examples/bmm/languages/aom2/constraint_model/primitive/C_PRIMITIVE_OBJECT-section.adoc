@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_PRIMITIVE_OBJECT.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_PRIMITIVE_OBJECT-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_PRIMITIVE_OBJECT-properties.adoc[]
 
 Props(flat)::
 +
 include::C_PRIMITIVE_OBJECT-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_PRIMITIVE_OBJECT.bmml[]
+----
+
 ======

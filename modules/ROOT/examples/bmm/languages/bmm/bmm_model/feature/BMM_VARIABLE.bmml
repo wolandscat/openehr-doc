@@ -1,0 +1,16 @@
+| 
+| A routine-scoped formal element.
+| 
+
+abstract class BMM_VARIABLE
+    is_a BMM_FORMAL_ELEMENT
+
+feature_group ("access")
+
+    | 
+    | Routine within which variable is defined.
+    | 
+    prop scope: BMM_ROUTINE;
+
+
+end

@@ -1,0 +1,11 @@
+| 
+| Meta-type for static (i.e. read-only) properties.
+| 
+
+abstract class BMM_STATIC
+    is_a BMM_INSTANTIABLE_FEATURE
+
+invariant
+    inv_not_nullable: ¬ is_nullable;
+
+end

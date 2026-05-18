@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_PRIMITIVE_TUPLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_PRIMITIVE_TUPLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_PRIMITIVE_TUPLE-properties.adoc[]
 
 Props(flat)::
 +
 include::C_PRIMITIVE_TUPLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_PRIMITIVE_TUPLE.bmml[]
+----
+
 ======

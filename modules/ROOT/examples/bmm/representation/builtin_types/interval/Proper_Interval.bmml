@@ -1,0 +1,11 @@
+| 
+| Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.
+| 
+
+class Proper_Interval
+    is_a Interval<>
+
+invariant
+    inv_not_point: lower ≠ upper;
+
+end

@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::BMM_PROCEDURE_CALL.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::BMM_PROCEDURE_CALL-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::BMM_PROCEDURE_CALL-properties.adoc[]
 
 Props(flat)::
 +
 include::BMM_PROCEDURE_CALL-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::BMM_PROCEDURE_CALL.bmml[]
+----
+
 ======

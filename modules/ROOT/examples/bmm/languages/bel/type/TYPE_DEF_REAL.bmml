@@ -1,0 +1,9 @@
+| 
+| Rules meta-type representing the primitive type Real.
+| 
+
+class TYPE_DEF_REAL
+    is_a EXPR_TYPE_DEF
+
+
+end

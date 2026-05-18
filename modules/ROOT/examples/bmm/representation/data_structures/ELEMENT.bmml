@@ -1,0 +1,40 @@
+| 
+| The leaf variant of `ITEM`, to which a `DATA_VALUE` instance is attached.
+| 
+
+class ELEMENT
+    is_a ITEM
+
+feature_group ("access")
+
+    | 
+    | Property representing leaf value object of `ELEMENT`. In real data, any concrete subtype
+    | of `DATA_VALUE` can be used.
+    | 
+    prop value: DATA_VALUE;
+
+    | 
+    | Flavour of null value, e.g. `253|unknown|`, `271|no information|`,
+    | `272|masked|`, and `273|not applicable|`.
+    | 
+    prop null_flavour: DV_CODED_TEXT;
+
+    | 
+    | Optional specific reason for null value; if set, `null_flavour` must be set. Null reason
+    | may apply only to a minority of clinical data, commonly needed in reporting contexts.
+    | 
+    prop null_reason: DV_TEXT;
+
+    | 
+    | True if value logically not known, e.g. if indeterminate, not asked etc.
+    | 
+    func is_null:Boolean
+        ;
+
+invariant
+    inv_is_null_valid: is_null() = (¬ ∃ value);
+    inv_null_flavour_indicated: is_null() ⊻ ¬ ∃ null_flavour;
+    inv_null_flavour_valid: is_null ⇒ terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_null_flavour, null_flavour.defining_code);
+    inv_null_reason_valid: ∃ null_reason ⇒ is_null();
+
+end

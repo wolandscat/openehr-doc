@@ -1,0 +1,76 @@
+| 
+| Type used to represent double-precision decimal numbers. Corresponds to a
+| double-precision floating point value in most languages.
+| 
+
+builtin class Double
+    is_a Ordered_Numeric
+
+feature_group ("access")
+
+    | 
+    | Return the greatest integer no greater than the value of this object.
+    | 
+    func floor:Integer
+        ;
+
+feature_group ("operators")
+
+    | 
+    | Double-precision real number addition.
+    | 
+    func add(other: Double):Double
+        alias
+            +;
+        ;
+
+    | 
+    | Double-precision real number subtraction.
+    | 
+    func subtract(other: Double):Double
+        alias
+            -;
+        ;
+
+    | 
+    | Double-precision real number multiplication.
+    | 
+    func multiply(other: Double):Double
+        alias
+            *;
+        ;
+
+    | 
+    | Double-precision real number division.
+    | 
+    func divide(other: Double):Double
+        alias
+            /;
+        ;
+
+    | 
+    | Double-precision real number exponentiation.
+    | 
+    func exponent(other: Double):Double
+        alias
+            ^;
+        ;
+
+    | 
+    | Returns True if current Double is less than `other`.
+    | 
+    func less_than(other: Double):Boolean
+        alias
+            <;
+        ;
+
+    | 
+    | Generate negative of current Double value.
+    | 
+    func negative:Double
+        alias
+            -;
+        ;
+
+
+end

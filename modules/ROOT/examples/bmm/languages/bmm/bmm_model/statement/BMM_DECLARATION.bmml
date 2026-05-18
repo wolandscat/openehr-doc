@@ -1,0 +1,22 @@
+| 
+| Declaration of a writable variable, associating a name with a type.
+| 
+
+class BMM_DECLARATION
+    is_a BMM_SIMPLE_STATEMENT
+
+feature_group ("access")
+
+    | 
+    prop name: String;
+
+    | 
+    prop result: EL_WRITABLE_VARIABLE;
+
+    | 
+    | The declared type of the variable.
+    | 
+    prop type: BMM_TYPE;
+
+
+end

@@ -1,0 +1,23 @@
+| 
+| Meta-type for decision tables. Generic on the meta-type of the `result` attribute of the
+| branches, to allow specialised forms of if/else and case structures to be created.
+| 
+
+abstract class EL_DECISION_TABLE
+    is_a EL_TERMINAL
+
+feature_group ("access")
+
+    | 
+    | Members of the chain, equivalent to branches in an if/then/else chain and cases in a case
+    | statement.
+    | 
+    prop items: List<EL_DECISION_BRANCH<T>>;
+
+    | 
+    | Result expression of conditional, if its `condition` evaluates to True.
+    | 
+    prop else: T;
+
+
+end

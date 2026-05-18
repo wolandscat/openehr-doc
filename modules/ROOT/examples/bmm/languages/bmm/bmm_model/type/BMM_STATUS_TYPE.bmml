@@ -1,0 +1,9 @@
+| 
+| Built-in meta-type representing action status, e.g. result of a call invocation.
+| 
+
+class BMM_STATUS_TYPE
+    is_a BMM_BUILTIN_TYPE
+
+
+end

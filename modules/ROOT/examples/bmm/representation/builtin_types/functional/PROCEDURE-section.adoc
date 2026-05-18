@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::PROCEDURE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::PROCEDURE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::PROCEDURE-properties.adoc[]
 
 Props(flat)::
 +
 include::PROCEDURE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::PROCEDURE.bmml[]
+----
+
 ======

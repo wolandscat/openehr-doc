@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EXTRACT_CHAPTER.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EXTRACT_CHAPTER-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EXTRACT_CHAPTER-properties.adoc[]
 
 Props(flat)::
 +
 include::EXTRACT_CHAPTER-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EXTRACT_CHAPTER.bmml[]
+----
+
 ======

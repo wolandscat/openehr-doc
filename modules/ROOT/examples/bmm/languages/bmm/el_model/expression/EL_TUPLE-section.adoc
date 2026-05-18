@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::EL_TUPLE.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::EL_TUPLE-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::EL_TUPLE-properties.adoc[]
 
 Props(flat)::
 +
 include::EL_TUPLE-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::EL_TUPLE.bmml[]
+----
+
 ======

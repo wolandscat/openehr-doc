@@ -1,0 +1,17 @@
+| 
+| Literal value expression tree leaf item. This can represent a literal value of any
+| primitive type included in the `PRIMITIVE_TYPE` enumeration.
+| 
+
+class EXPR_LITERAL
+    is_a EXPR_LEAF
+
+feature_group ("access")
+
+    | 
+    | A statically set constant value of a primitive type.
+    | 
+    prop item: Any;
+
+
+end

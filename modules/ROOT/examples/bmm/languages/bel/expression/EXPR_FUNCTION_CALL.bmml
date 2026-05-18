@@ -1,0 +1,17 @@
+| 
+| Node representing a function call with 0 or more arguments.
+| 
+
+class EXPR_FUNCTION_CALL
+    is_a EXPR_LEAF
+
+feature_group ("access")
+
+    | 
+    | Arguments of this function, which can be from 0 to any number. Functions with no arguments
+    | are typically used to represent real world varying values like 'current time' and so on.
+    | 
+    prop arguments: List<EXPRESSION>;
+
+
+end

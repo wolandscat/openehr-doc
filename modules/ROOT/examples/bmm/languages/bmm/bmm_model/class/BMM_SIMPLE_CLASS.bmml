@@ -1,0 +1,19 @@
+| 
+| Definition of a simple class, i.e. a class that has no generic parameters and is 1:1 with
+| the type it generates.
+| 
+
+class BMM_SIMPLE_CLASS
+    is_a BMM_CLASS
+
+feature_group ("access")
+
+    | 
+    | Generate a type object that represents the type of this class. Can only be an instance of
+    | `BMM_SIMPLE_TYPE` or a descendant.
+    | 
+    func type:BMM_SIMPLE_TYPE
+        ;
+
+
+end

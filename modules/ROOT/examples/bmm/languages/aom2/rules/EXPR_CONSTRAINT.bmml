@@ -1,0 +1,17 @@
+| 
+| Expression tree leaf item representing a constraint on a primitive type, expressed
+| in the form of a concrete subtype of C_PRIMITIVE_OBJECT.
+| 
+
+class EXPR_CONSTRAINT
+    is_a EXPR_LEAF
+
+feature_group ("access")
+
+    | 
+    | The constraint.
+    | 
+    prop item: C_PRIMITIVE_OBJECT;
+
+
+end

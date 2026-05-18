@@ -1,0 +1,54 @@
+| 
+| Abstract parent of ordered types, which includes all numeric and temporal types.
+| 
+
+builtin abstract class Ordered
+    is_a Any
+
+feature_group ("operators")
+
+    | 
+    | Arithmetic value comparison. Returns True if current object is less than `other`. This
+    | operator is effected and/or redefined in descendants to provide the appropriate ordering
+    | semantics for concrete types.
+    | 
+    | In conjunction with `=`, enables the definition of the related functions
+    | `greater_than_()` etc.
+    | 
+    func less_than(other: Ordered):Boolean
+        alias
+            <;
+        ;
+
+    | 
+    | True if current object less than or equal to `other`.
+    | 
+    func less_than_or_equal(other: Ordered):Boolean
+        alias
+            <=, ≤;
+        post_cond
+            valid_result: ¬ (other < self);
+        ;
+
+    | 
+    | True if current object greater than `other`.
+    | 
+    func greater_than(other: Ordered):Boolean
+        alias
+            >;
+        post_cond
+            valid_result: Result = (other < self);
+        ;
+
+    | 
+    | True if current object greater than or equal to `other`.
+    | 
+    func greater_than_or_equal(other: Ordered):Boolean
+        alias
+            >=, ≥;
+        post_cond
+            valid_result: Result = (other <= self);
+        ;
+
+
+end

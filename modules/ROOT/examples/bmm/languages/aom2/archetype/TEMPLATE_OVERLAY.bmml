@@ -1,0 +1,13 @@
+| 
+| A concrete form of the bare `ARCHETYPE` class, used to represent overlays in a source
+| template. Overlays have no meta-data of their own, and are instead documented by their
+| owning template.
+| 
+
+class TEMPLATE_OVERLAY
+    is_a ARCHETYPE
+
+invariant
+    inv_is_specialised: is_specialised;
+
+end

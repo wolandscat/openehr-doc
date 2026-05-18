@@ -1,0 +1,29 @@
+| 
+| Abstract ancestor of container types whose items are addressable in some way.
+| 
+
+builtin abstract class Container
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Test for membership of a value.
+    | 
+    func has:Boolean
+        ;
+
+    | 
+    | Number of items in container.
+    | 
+    func count:Integer
+        ;
+
+    | 
+    | True if container is empty.
+    | 
+    func is_empty:Boolean
+        ;
+
+
+end

@@ -1,0 +1,23 @@
+| 
+| Ancestor class for type definitions known in the openEHR Expression formalism.
+| 
+
+abstract class EXPR_TYPE_DEF
+    is_a Any
+
+feature_group ("access")
+
+    | 
+    | Natural language type name of this type as used in abstract rules syntax variable
+    | declarations.
+    | 
+    prop type_name: String;
+
+    | 
+    | Attribute of the openEHR primitive type (or Any) corresponding to this type definition
+    | meta-type.
+    | 
+    prop type_anchor: Any;
+
+
+end

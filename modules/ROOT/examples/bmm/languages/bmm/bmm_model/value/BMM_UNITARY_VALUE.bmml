@@ -1,0 +1,9 @@
+| 
+| Meta-type for literals whose concrete type is a unitary type in the BMM sense.
+| 
+
+abstract class BMM_UNITARY_VALUE
+    is_a BMM_LITERAL_VALUE<>
+
+
+end

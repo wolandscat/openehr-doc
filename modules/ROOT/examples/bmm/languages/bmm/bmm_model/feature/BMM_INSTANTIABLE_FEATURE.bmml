@@ -1,0 +1,12 @@
+| 
+| Meta-type representing instantiable features, i.e. features that are created as value
+| objects.
+| 
+
+abstract class BMM_INSTANTIABLE_FEATURE
+    is_a BMM_FEATURE
+
+invariant
+    inv_signature_no_args: ¬ ∃ signature().arguments;
+
+end

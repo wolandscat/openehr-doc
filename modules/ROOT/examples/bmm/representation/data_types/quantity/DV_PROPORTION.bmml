@@ -1,0 +1,77 @@
+| 
+| Models a ratio of values, i.e. where the numerator and denominator are both pure numbers.
+| The `valid_proportion_kind` property of the `PROPORTION_KIND` class is used to control
+| the type attribute to be one of a defined set.
+| 
+| Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary
+| denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width
+| (RDW).
+| 
+| Misuse: Should not be used to represent things like blood pressure which are often written
+| using a '/' character, giving the misleading impression that the item is a ratio, when in
+| fact it is a structured value. Similarly, visual acuity, often written as (e.g.) "6/24" in
+| clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF =
+| count fingers etc). Should not be used for formulations.
+| 
+
+class DV_PROPORTION
+    is_a DV_AMOUNT
+
+feature_group ("access")
+
+    | 
+    | Numerator of ratio
+    | 
+    prop numerator: Real;
+
+    | 
+    | Denominator of ratio.
+    | 
+    prop denominator: Real;
+
+    | 
+    | Indicates semantic type of proportion, including percent, unitary etc.
+    | 
+    prop type: Integer;
+
+    | 
+    | Precision to which the `numerator` and `denominator` values of the proportion are
+    | expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
+    | The value -1 implies no limit, i.e. any number of decimal places.
+    | 
+    prop precision: Integer;
+
+    | 
+    | Optional normal range.
+    | 
+    prop normal_range: DV_INTERVAL<DV_PROPORTION>;
+
+    | 
+    | Optional tagged other reference ranges for this value in its particular measurement
+    | context.
+    | 
+    prop other_reference_ranges: List<REFERENCE_RANGE<DV_PROPORTION>>;
+
+    | 
+    | Effective magnitude represented by ratio.
+    | 
+    func magnitude:Real
+        ;
+
+    | 
+    | True if the `numerator` and `denominator` values are integers, i.e. if `precision`
+    | is 0.
+    | 
+    func is_integral:Boolean
+        ;
+
+invariant
+    type_validity: valid_proportion_kind(type);
+    precision_validity: precision = 0 ⇒ is_integral;
+    is_integral_validity: is_integral ⇒ (numerator.floor = numerator ∧ denominator.floor = denominator);
+    fraction_validity: (type = pk_fraction ∨ type = pk_integer_fraction) ⇒ is_integral;
+    unitary_validity: type = pk_unitary ⇒ denominator = 1;
+    percent_validity: type = pk_percent ⇒ denominator = 100;
+    valid_denominator: denominator ≠ 0.0;
+
+end

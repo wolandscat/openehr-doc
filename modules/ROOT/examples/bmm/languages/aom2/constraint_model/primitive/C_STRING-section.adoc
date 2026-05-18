@@ -3,7 +3,7 @@
 
 [tabs]
 ======
-Diff::
+Source::
 +
 include::C_STRING.adoc[]
 
@@ -11,11 +11,20 @@ Flat::
 +
 include::C_STRING-flat.adoc[]
 
-Props(diff)::
+Props::
 +
 include::C_STRING-properties.adoc[]
 
 Props(flat)::
 +
 include::C_STRING-properties-flat.adoc[]
+
+
+BMML::
++
+[source,bmml]
+----
+include::C_STRING.bmml[]
+----
+
 ======
