@@ -26,13 +26,13 @@ a|The actual data found at `uri`, if supplied inline.
 
 h|prop +
   
-|*media_type*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+|*media_type*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iana.media-types»
 a|Data media type coded from openEHR code set media types (interface for the IANA MIME types
 code set).
 
 h|prop +
   0..1
-|*compression_algorithm*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+|*compression_algorithm*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iana.compression-algorithms»
 a|Compression type, a coded value from the openEHR Integrity check code set. Void means no
 compression.
 
@@ -43,7 +43,7 @@ a|Binary cryptographic integrity checksum.
 
 h|prop +
   0..1
-|*integrity_check_algorithm*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+|*integrity_check_algorithm*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iana.integrity-check-algorithms»
 a|Type of integrity check, a coded value from the openEHR `Integrity check` code set.
 
 h|prop +

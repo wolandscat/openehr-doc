@@ -99,7 +99,7 @@ major version).
 
 h|prop +
   
-|*original_language*: xref:representation:builtin_types-gen.adoc#_class_terminology_code[Terminology_code]
+|*original_language*: xref:representation:builtin_types-gen.adoc#_class_terminology_code[Terminology_code] «iso.iso_639-1»
 a|Language in which this resource was initially authored. Although there is no language
 primacy of resources overall, the language of original authoring is required to ensure
 natural language translations can preserve quality. Language is relevant in both the

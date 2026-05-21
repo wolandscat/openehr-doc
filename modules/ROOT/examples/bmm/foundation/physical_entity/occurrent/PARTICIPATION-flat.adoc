@@ -19,7 +19,7 @@ h|
 
 h|prop +
   
-|*function*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
+|*function*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT] «openehr.Participation_function»
 a|The function of the Party in this participation (note that a given party might participate
 in more than one way in a particular activity). This attribute should be coded, but cannot
 be limited to the HL7v3:ParticipationFunction vocabulary, since it is too limited and
@@ -27,7 +27,7 @@ hospital-oriented.
 
 h|prop +
   0..1
-|*mode*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+|*mode*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT] «openehr.Participation_mode»
 a|Optional field for recording the 'mode' of the performer / activity interaction, e.g.
 present, by telephone, by email etc.
 

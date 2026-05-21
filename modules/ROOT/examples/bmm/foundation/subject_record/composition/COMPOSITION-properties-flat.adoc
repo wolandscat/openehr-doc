@@ -10,14 +10,14 @@ h|
 
 h|prop +
   
-|*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+|*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iso.iso_639-1»
 a|Mandatory indicator of the localised language in which this Composition is written. Coded
 from openEHR Code Set `languages`. The language of an Entry if different from the
 Composition is indicated in `ENTRY._language`.
 
 h|prop +
   
-|*territory*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+|*territory*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iso.iso_3166-1-alpha2»
 a|Name of territory in which this Composition was written. Coded from openEHR countries code
 set, which is an expression of the ISO 3166 standard.
 
