@@ -21,7 +21,7 @@ feature_group ("access")
     | Purpose for which this contact is used, e.g. mail, daytime phone, etc. Taken from value of
     | inherited `name` attribute.
     | 
-    func purpose:DV_TEXT
+    func purpose: DV_TEXT
         ;
 
 invariant

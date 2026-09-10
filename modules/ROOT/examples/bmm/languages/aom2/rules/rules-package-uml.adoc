@@ -8,16 +8,6 @@ skinparam citedClassColor #FDFDFD
 
 EXPR_VALUE_REF -[#gray]up-|> EXPR_LEAF  
 
-class EXPR_ARCHETYPE_REF [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_archetype_ref]] {
-        .. access ..
-        path: String
-}
-
-EXPR_ARCHETYPE_REF -[#gray]up-|> EXPR_VALUE_REF  
-
-
-EXPR_ARCHETYPE_REF *--> "1 item" ARCHETYPE_CONSTRAINT
-
 class EXPR_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_constraint]] {
         .. access ..
 }
@@ -35,9 +25,19 @@ EXPR_ARCHETYPE_ID_CONSTRAINT -[#gray]up-|> EXPR_CONSTRAINT
 
 
 EXPR_ARCHETYPE_ID_CONSTRAINT *--> "1 item" C_STRING
-class "languages.bel.expression.\nEXPR_VALUE_REF" as EXPR_VALUE_REF  [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value_ref]] #FDFDFD {
+
+class EXPR_ARCHETYPE_REF [[/openehr-doc/latest/languages/aom2-gen.html#_class_expr_archetype_ref]] {
+        .. access ..
+        path: String
 }
+
+EXPR_ARCHETYPE_REF -[#gray]up-|> EXPR_VALUE_REF  
+
+
+EXPR_ARCHETYPE_REF *--> "1 item" ARCHETYPE_CONSTRAINT
 abstract class "languages.bel.expression.\nEXPR_LEAF" as EXPR_LEAF  [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_leaf]] #FDFDFD {
+}
+class "languages.bel.expression.\nEXPR_VALUE_REF" as EXPR_VALUE_REF  [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value_ref]] #FDFDFD {
 }
 
 ....

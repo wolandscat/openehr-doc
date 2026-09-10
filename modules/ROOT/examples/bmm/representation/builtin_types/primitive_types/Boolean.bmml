@@ -10,7 +10,7 @@ feature_group ("operators")
     | 
     | Logical conjunction of this with `other`.
     | 
-    func conjunction(other: Boolean):Boolean
+    func conjunction(other: Boolean): Boolean
         alias
             and, ∧;
         post_cond
@@ -21,7 +21,7 @@ feature_group ("operators")
     | 
     | Boolean semi-strict conjunction with `other`.
     | 
-    func semistrict_conjunction(other: Boolean):Boolean
+    func semistrict_conjunction(other: Boolean): Boolean
         alias
             and then;
         post_cond
@@ -31,7 +31,7 @@ feature_group ("operators")
     | 
     | Boolean disjunction with `other`.
     | 
-    func disjunction(other: Boolean):Boolean
+    func disjunction(other: Boolean): Boolean
         alias
             or, ∨;
         post_cond
@@ -43,7 +43,7 @@ feature_group ("operators")
     | 
     | Boolean semi-strict disjunction with `other`.
     | 
-    func semistrict_disjunction(other: Boolean):Boolean
+    func semistrict_disjunction(other: Boolean): Boolean
         alias
             or else;
         post_cond
@@ -53,7 +53,7 @@ feature_group ("operators")
     | 
     | Boolean exclusive or with `other`.
     | 
-    func exclusive_disjunction(other: Boolean):Boolean
+    func exclusive_disjunction(other: Boolean): Boolean
         alias
             xor, ⊻;
         post_cond
@@ -63,7 +63,7 @@ feature_group ("operators")
     | 
     | Boolean implication of `other` (semi-strict)
     | 
-    func implication(other: Boolean):Boolean
+    func implication(other: Boolean): Boolean
         alias
             implies, ⇒;
         post_cond
@@ -73,7 +73,7 @@ feature_group ("operators")
     | 
     | Boolean negation of the current value.
     | 
-    func negation:Boolean
+    func negation: Boolean
         alias
             not, ¬;
         ;

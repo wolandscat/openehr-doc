@@ -10,7 +10,7 @@ feature_group ("operators")
     | 
     | Integer addition.
     | 
-    func add(other: Integer):Integer
+    func add(other: Integer): Integer
         alias
             +;
         ;
@@ -18,7 +18,7 @@ feature_group ("operators")
     | 
     | Integer subtraction.
     | 
-    func subtract(other: Integer):Integer
+    func subtract(other: Integer): Integer
         alias
             -;
         ;
@@ -26,7 +26,7 @@ feature_group ("operators")
     | 
     | Integer multiplication.
     | 
-    func multiply(other: Integer):Integer
+    func multiply(other: Integer): Integer
         alias
             *;
         ;
@@ -34,7 +34,7 @@ feature_group ("operators")
     | 
     | Integer division.
     | 
-    func divide(other: Integer):Double
+    func divide(other: Integer): Double
         alias
             /;
         ;
@@ -42,7 +42,7 @@ feature_group ("operators")
     | 
     | Integer exponentiation.
     | 
-    func exponent(other: Double):Double
+    func exponent(other: Double): Double
         alias
             ^;
         ;
@@ -50,7 +50,7 @@ feature_group ("operators")
     | 
     | Return self modulo other.
     | 
-    func modulo(mod: Integer):Integer
+    func modulo(mod: Integer): Integer
         alias
             mod;
         ;
@@ -58,7 +58,7 @@ feature_group ("operators")
     | 
     | Returns True if current Integer is less than `other`.
     | 
-    func less_than(other: Integer):Boolean
+    func less_than(other: Integer): Boolean
         alias
             <;
         ;
@@ -66,7 +66,7 @@ feature_group ("operators")
     | 
     | Generate negative of current Integer value.
     | 
-    func negative:Integer
+    func negative: Integer
         alias
             -;
         ;

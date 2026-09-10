@@ -74,13 +74,13 @@ feature_group ("access")
     | 
     | E.g. `"openehr_rm_ehr_1.0.4"`.
     | 
-    func schema_id:String
+    func schema_id: String
         ;
 
     | 
     | True when validation may be commenced.
     | 
-    func read_to_validate:Boolean
+    func read_to_validate: Boolean
         post_cond
             valid_result: state = State_includes_processed;
         ;

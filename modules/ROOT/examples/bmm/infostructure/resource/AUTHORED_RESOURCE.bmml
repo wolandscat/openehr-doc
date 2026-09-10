@@ -50,7 +50,7 @@ feature_group ("access")
     | Total list of languages available in this resource, derived from original_language and
     | translations.
     | 
-    func languages_available:List<String>
+    func languages_available: List<String>
         ;
 
 invariant

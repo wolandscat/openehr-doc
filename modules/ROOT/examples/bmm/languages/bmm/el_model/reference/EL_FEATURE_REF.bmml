@@ -17,7 +17,7 @@ feature_group ("access")
     | Generated full reference name, consisting of scoping elements and `name` concatenated
     | using dot notation.
     | 
-    func reference:String
+    func reference: String
         ;
 
 

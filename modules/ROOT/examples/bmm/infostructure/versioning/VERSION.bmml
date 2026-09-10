@@ -28,26 +28,26 @@ feature_group ("access")
     | creating_system_id}` triple, where the `object_id` has the same value as the containing
     | `VERSIONED_OBJECT _uid`.
     | 
-    func uid:OBJECT_VERSION_ID
+    func uid: OBJECT_VERSION_ID
         ;
 
     | 
     | Unique identifier of the version of which this version is a modification; Void if this is
     | the first version.
     | 
-    func preceding_version_uid:OBJECT_VERSION_ID
+    func preceding_version_uid: OBJECT_VERSION_ID
         ;
 
     | 
     | The data of this Version. Original content of this Version.
     | 
-    func data:T
+    func data: T
         ;
 
     | 
     | Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.
     | 
-    func lifecycle_state:DV_CODED_TEXT
+    func lifecycle_state: DV_CODED_TEXT
         ;
 
     | 
@@ -55,14 +55,14 @@ feature_group ("access")
     | signatures. Canonical form of Version object, created by serialising all attributes except
     | signature.
     | 
-    func canonical_form:String
+    func canonical_form: String
         ;
 
     | 
     | Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `uid`
     | property's `object_id`.
     | 
-    func owner_id:HIER_OBJECT_ID
+    func owner_id: HIER_OBJECT_ID
         post_cond
             valid_result: Result.value.is_equal(uid.object_id.value);
         ;
@@ -70,7 +70,7 @@ feature_group ("access")
     | 
     | True if this Version represents a branch. Derived from `uid` attribute.
     | 
-    func is_branch:Boolean
+    func is_branch: Boolean
         ;
 
 invariant

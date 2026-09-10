@@ -3,7 +3,7 @@
 | 
 
 class ORIGINAL_VERSION
-    is_a VERSION<>
+    is_a VERSION<T>
 
 feature_group ("access")
 
@@ -41,7 +41,7 @@ feature_group ("access")
     | 
     | True if this Version was created from more than just the preceding (checked out) version.
     | 
-    func is_merged:Boolean
+    func is_merged: Boolean
         ;
 
 invariant

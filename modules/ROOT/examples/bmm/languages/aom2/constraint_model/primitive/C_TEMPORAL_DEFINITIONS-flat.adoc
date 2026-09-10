@@ -21,7 +21,7 @@ a|List of allowed date constraints.
 
 h|const +
   
-|*Valid_date_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+|*Valid_date_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
   {[ +
 "YYYY-MM-DD": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-??-??", "YYYY-MM-XX", "YYYY-MM-??", "YYYY-MM-DD"), +
 "YYYY-MM-??": ("YYYY-MM-XX", "YYYY-MM-DD"), +
@@ -43,7 +43,7 @@ a|List of allowed time constraints.
 
 h|const +
   
-|*Valid_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+|*Valid_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
   {[ +
 "HH:MM:SS": ("HH:??:XX", "HH:??:??", "HH:MM:XX", "HH:MM:??", "HH:MM:SS"), +
 "HH:MM:??": ("HH:MM:XX", "HH:MM:SS"), +
@@ -63,7 +63,7 @@ a|List of allowed date/time constraints.
 
 h|const +
   
-|*Valid_date_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
+|*Valid_date_time_constraint_replacements*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>> = +
   {[ +
 "YYYY-MM-DDTHH:MM:SS": ("YYYY-??-??T??:??:??", "YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"), +
 "YYYY-MM-DDTHH:MM:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:SS"), +

@@ -44,7 +44,7 @@ feature_group ("access")
     | 
     | The mapping is to a narrower term.
     | 
-    func narrower:Boolean
+    func narrower: Boolean
         post_cond
             validity: match = '<' ⇒ Result;
         ;
@@ -52,7 +52,7 @@ feature_group ("access")
     | 
     | The mapping is to a broader term.
     | 
-    func broader:Boolean
+    func broader: Boolean
         post_cond
             validity: match = '>' ⇒ Result;
         ;
@@ -60,13 +60,13 @@ feature_group ("access")
     | 
     | The mapping is to an equivalent term.
     | 
-    func equivalent:Boolean
+    func equivalent: Boolean
         ;
 
     | 
     | The kind of mapping is unknown.
     | 
-    func unknown:Boolean
+    func unknown: Boolean
         post_cond
             validity: match = '?' ⇒ Result;
         ;
@@ -74,7 +74,7 @@ feature_group ("access")
     | 
     | True if match valid.
     | 
-    func is_valid_match_code(c: Character):Boolean
+    func is_valid_match_code(c: Character): Boolean
         post_cond
             validity: Result = (c = '>' ∨ c = '=' ∨ c = '<' ∨ c = '?');
         ;

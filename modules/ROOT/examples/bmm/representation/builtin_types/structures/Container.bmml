@@ -10,19 +10,19 @@ feature_group ("access")
     | 
     | Test for membership of a value.
     | 
-    func has:Boolean
+    func has: Boolean
         ;
 
     | 
     | Number of items in container.
     | 
-    func count:Integer
+    func count: Integer
         ;
 
     | 
     | True if container is empty.
     | 
-    func is_empty:Boolean
+    func is_empty: Boolean
         ;
 
 

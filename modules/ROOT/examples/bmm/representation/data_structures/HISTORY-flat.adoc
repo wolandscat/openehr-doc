@@ -158,7 +158,7 @@ h|
 2+a|periodic_validity: is_periodic ⊻ ¬ ∃ period;
 
 h|
-2+a|period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
+2+a|period_consistency: e.offset.to_seconds.mod(period.to_seconds) ⇒ events.for_all(0);
 
 
 |===

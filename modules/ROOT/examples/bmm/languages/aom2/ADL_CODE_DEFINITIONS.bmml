@@ -54,13 +54,13 @@ feature_group ("access")
     | True if `a_child_code` conforms to `a_parent_code` in the sense of specialisation,
     | i.e. is `a_child_code` the same as or more specialised than `a_parent_code`?
     | 
-    func codes_conformant(a_child_code: String, a_parent_code: String):Boolean
+    func codes_conformant(a_child_code: String, a_parent_code: String): Boolean
         ;
 
     | 
     | True if `a_code` is any kind of ADL archetype local code.
     | 
-    func is_adl_code(a_code: String):Boolean
+    func is_adl_code(a_code: String): Boolean
         post_cond
             result_valid: Result = is_at_code(a_code) ∨ is_id_code(a_code) ∨ is_value_code(a_code) ∨ is_value_set_code(a_code);
         ;
@@ -68,7 +68,7 @@ feature_group ("access")
     | 
     | True if `a_code` is an 'at' code.
     | 
-    func is_at_code(a_code: String):Boolean
+    func is_at_code(a_code: String): Boolean
         post_cond
             result_valid: Result = a_code.starts_with(At_code_leader);
         ;
@@ -76,7 +76,7 @@ feature_group ("access")
     | 
     | True if `a_code` is an 'id' code.
     | 
-    func is_id_code(a_code: String):Boolean
+    func is_id_code(a_code: String): Boolean
         post_cond
             result_valid: Result = a_code.starts_with(Id_code_leader);
         ;
@@ -84,7 +84,7 @@ feature_group ("access")
     | 
     | True if `a_code` is an 'at' code representing a single terminology item.
     | 
-    func is_value_code(a_code: String):Boolean
+    func is_value_code(a_code: String): Boolean
         post_cond
             result_valid: Result = a_code.starts_with(Value_code_leader);
         ;
@@ -92,7 +92,7 @@ feature_group ("access")
     | 
     | True if `a_code` is an 'ac' code, i.e. a code referring to a terminology value set.
     | 
-    func is_value_set_code(a_code: String):Boolean
+    func is_value_set_code(a_code: String): Boolean
         post_cond
             result_valid: Result = a_code.starts_with(Value_set_code_leader);
         ;
@@ -104,7 +104,7 @@ feature_group ("access")
     | * `at0.0.1` -> False
     | * `at1.0.1` -> True
     | 
-    func is_redefined_code(a_code: String):Boolean
+    func is_redefined_code(a_code: String): Boolean
         ;
 
     | 
@@ -113,7 +113,7 @@ feature_group ("access")
     | '.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a
     | real node from `a_level` or higher.
     | 
-    func code_exists_at_level(a_code: String, a_level: Integer):Boolean
+    func code_exists_at_level(a_code: String, a_level: Integer): Boolean
         ;
 
 

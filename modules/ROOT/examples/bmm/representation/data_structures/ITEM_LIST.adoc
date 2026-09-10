@@ -52,7 +52,7 @@ h|*Invariants*
 2+a|
 
 h|
-2+a|valid_structure: items.for_all(i.type = "ELEMENT");
+2+a|valid_structure: items.for_all("ELEMENT");
 
 
 |===

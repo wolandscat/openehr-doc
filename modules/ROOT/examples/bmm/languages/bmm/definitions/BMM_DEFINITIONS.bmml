@@ -131,7 +131,7 @@ feature_group ("factory")
     | 
     | e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
     | 
-    func create_schema_id(a_model_publisher: String, a_schema_name: String, a_model_release: String):String
+    func create_schema_id(a_model_publisher: String, a_schema_name: String, a_model_release: String): String
         ;
 
 

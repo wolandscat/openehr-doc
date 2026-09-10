@@ -17,55 +17,55 @@ feature_group ("access")
     | Number of years in the `value`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
     | if one exists.
     | 
-    func years:Integer
+    func years: Integer
         ;
 
     | 
     | Number of months in the `value`, i.e. the value preceding the `'M'` in the `'YMD'` part,
     | if one exists.
     | 
-    func months:Integer
+    func months: Integer
         ;
 
     | 
     | Number of weeks in the `value`, i.e. the value preceding the `W`, if one exists.
     | 
-    func weeks:Integer
+    func weeks: Integer
         ;
 
     | 
     | Number of days in the `value`, i.e. the number preceding the `'D'` in the `'YMD'` part,
     | if one exists.
     | 
-    func days:Integer
+    func days: Integer
         ;
 
     | 
     | Number of hours in the `value`, i.e. the number preceding the `'H'` in the `'HMS'` part,
     | if one exists.
     | 
-    func hours:Integer
+    func hours: Integer
         ;
 
     | 
     | Number of minutes in the `value`, i.e. the number preceding the `'M'` in the `'HMS'`
     | part, if one exists.
     | 
-    func minutes:Integer
+    func minutes: Integer
         ;
 
     | 
     | Number of seconds in the `value`, i.e. the integer number preceding the `'S'` in the
     | `'HMS'` part, if one exists.
     | 
-    func seconds:Integer
+    func seconds: Integer
         ;
 
     | 
     | Fractional seconds in the `value`, i.e. the decimal part of the number preceding the
     | `'S'` in the `'HMS'` part, if one exists.
     | 
-    func fractional_seconds:Real
+    func fractional_seconds: Real
         ;
 
     | 
@@ -73,13 +73,13 @@ feature_group ("access")
     | definite elements such as year and month (i.e. 'Y' and 'M') are included, the
     | corresponding 'average' durations from `Time_definitions` are used to compute the result.
     | 
-    func to_seconds:Real
+    func to_seconds: Real
         ;
 
     | 
     | Return the duration string value.
     | 
-    func as_string:String
+    func as_string: String
         ;
 
 invariant

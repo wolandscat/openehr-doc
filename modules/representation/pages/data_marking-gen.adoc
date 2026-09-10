@@ -13,13 +13,13 @@ include::ROOT:example$bmm/representation//data_marking/data_marking-package-uml.
 === Classes
 
 
-include::ROOT:example$bmm/representation/data_marking//ITEM_TAG-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/representation/data_marking//FEEDER_AUDIT_DETAILS-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/representation/data_marking//LINK-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/representation/data_marking//FEEDER_AUDIT-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/representation/data_marking//PATHABLE-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/representation/data_marking//ARCHETYPED-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/representation/data_marking//LOCATABLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_marking//ITEM_TAG-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_marking//LINK-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_marking//FEEDER_AUDIT_DETAILS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_marking//FEEDER_AUDIT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/representation/data_marking//ARCHETYPED-section.adoc[leveloffset=+1]
 
 
 

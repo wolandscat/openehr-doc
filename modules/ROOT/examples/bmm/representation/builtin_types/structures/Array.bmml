@@ -3,7 +3,7 @@
 | 
 
 builtin class Array
-    is_a Container<>
+    is_a Container<T>
 
 
 end

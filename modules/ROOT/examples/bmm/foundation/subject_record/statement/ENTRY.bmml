@@ -65,7 +65,7 @@ feature_group ("access")
     | Returns True if this Entry is about the subject of the EHR, in which case the subject
     | attribute is of type PARTY_SELF.
     | 
-    func subject_is_self:Boolean
+    func subject_is_self: Boolean
         post_cond
             type_validity: Result ⇒ subject.generating_type = "PARTY_SELF";
         ;

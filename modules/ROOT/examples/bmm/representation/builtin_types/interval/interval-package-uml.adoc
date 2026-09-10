@@ -6,39 +6,39 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Multiplicity_interval [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_multiplicity_interval]] {
-        .. access ..
-        is_open:Boolean
-        is_optional:Boolean
-        is_mandatory:Boolean
-        is_prohibited:Boolean
+class Point_interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_point_interval]] {
 }
 
-Multiplicity_interval -[#gray]up-|> Proper_Interval  
-
-
-class Proper_Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_proper_interval]] {
-}
-
-Proper_Interval -[#gray]up-|> Interval  
+Point_interval -[#gray]up-|> Interval  
 
 
 class Cardinality [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_cardinality]] {
         .. access ..
         is_ordered: Boolean
         is_unique: Boolean
-        is_bag:Boolean
-        is_list:Boolean
-        is_set:Boolean
+        is_bag: Boolean
+        is_list: Boolean
+        is_set: Boolean
 }
 
 
 Cardinality *--> "1 interval" Multiplicity_interval
 
-class Point_Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_point_interval]] {
+class Proper_interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_proper_interval]] {
 }
 
-Point_Interval -[#gray]up-|> Interval  
+Proper_interval -[#gray]up-|> Interval  
+
+
+class Multiplicity_interval [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_multiplicity_interval]] {
+        .. access ..
+        is_open: Boolean
+        is_optional: Boolean
+        is_mandatory: Boolean
+        is_prohibited: Boolean
+}
+
+Multiplicity_interval -[#gray]up-|> Proper_interval  
 
 
 abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_interval]] {
@@ -49,9 +49,9 @@ abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_
         upper_unbounded: Boolean
         lower_included: Boolean
         upper_included: Boolean
-        has:Boolean
-        intersects:Boolean
-        contains:Boolean
+        has: Boolean
+        intersects: Boolean
+        contains: Boolean
 }
 
 

@@ -28,7 +28,7 @@ feature_group ("access")
     | 
     | True if value logically not known, e.g. if indeterminate, not asked etc.
     | 
-    func is_null:Boolean
+    func is_null: Boolean
         ;
 
 invariant

@@ -8,17 +8,12 @@ skinparam citedClassColor #FDFDFD
 
 class EL_CONDITION_CHAIN<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_condition_chain]] {
         .. access ..
-        items: List<EL_CONDITIONAL_EXPRESSION<T>>
 }
 
 EL_CONDITION_CHAIN -[#gray]up-|> EL_DECISION_TABLE  
 
 
-abstract class EL_DECISION_BRANCH<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_branch]] {
-        .. access ..
-        result: T
-}
-
+EL_CONDITION_CHAIN *--> "0..* items" EL_CONDITIONAL_EXPRESSION
 
 class EL_CASE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case]] {
         .. access ..
@@ -29,13 +24,21 @@ EL_CASE -[#gray]up-|> EL_DECISION_BRANCH
 
 EL_CASE *--> "1 value_constraint" C_OBJECT
 
-abstract class EL_DECISION_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_table]] {
+class EL_CASE_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case_table]] {
         .. access ..
-        items: List<EL_DECISION_BRANCH<T>>
-        else: T
 }
 
-EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL  
+EL_CASE_TABLE -[#gray]up-|> EL_DECISION_TABLE  
+
+
+EL_CASE_TABLE *--> "0..* items" EL_CASE
+
+EL_CASE_TABLE *--> "1 test_value" EL_VALUE_GENERATOR
+
+abstract class EL_DECISION_BRANCH<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_branch]] {
+        .. access ..
+        result: T
+}
 
 
 class EL_CONDITIONAL_EXPRESSION<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_conditional_expression]] {
@@ -47,15 +50,15 @@ EL_CONDITIONAL_EXPRESSION -[#gray]up-|> EL_DECISION_BRANCH
 
 EL_CONDITIONAL_EXPRESSION *--> "1 condition" EL_EXPRESSION
 
-class EL_CASE_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case_table]] {
+abstract class EL_DECISION_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_table]] {
         .. access ..
-        items: List<EL_CASE<T>>
+        else: T
 }
 
-EL_CASE_TABLE -[#gray]up-|> EL_DECISION_TABLE  
+EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL  
 
 
-EL_CASE_TABLE *--> "1 test_value" EL_VALUE_GENERATOR
+EL_DECISION_TABLE *--> "0..* items" EL_DECISION_BRANCH
 abstract class "languages.bmm.el_model.expression.\nEL_TERMINAL" as EL_TERMINAL  [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_terminal]] #FDFDFD {
 }
 

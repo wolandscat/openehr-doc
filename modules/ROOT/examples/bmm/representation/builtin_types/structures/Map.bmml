@@ -4,20 +4,20 @@
 | 
 
 builtin class Map
-    is_a Container<>
+    is_a Container<V>
 
 feature_group ("access")
 
     | 
     | Test for presence of `a_key`.
     | 
-    func has_key:Boolean
+    func has_key: Boolean
         ;
 
     | 
     | Return item for key `a_key`.
     | 
-    func item:V
+    func item: V
         ;
 
 

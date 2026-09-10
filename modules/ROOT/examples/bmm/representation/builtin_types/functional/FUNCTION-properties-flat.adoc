@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class FUNCTION<V:TUPLE,R:Any>*
+3+^h|  *class FUNCTION<V:TUPLE, R:Any>*
 
 
 |===

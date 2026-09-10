@@ -21,7 +21,7 @@ feature_group ("access")
     | Execution result of the whole rule set. Determined by the and-ing of result values of
     | Assertions in the rule set.
     | 
-    func execution_result:Boolean
+    func execution_result: Boolean
         ;
 
 

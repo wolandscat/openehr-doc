@@ -15,25 +15,25 @@ feature_group ("access")
     | 
     | Result is `base_class.name`.
     | 
-    func type_name:String
+    func type_name: String
         ;
 
     | 
     | Result is `base_class.is_abstract`.
     | 
-    func is_abstract:Boolean
+    func is_abstract: Boolean
         ;
 
     | 
     | Result is `base_class.name` .
     | 
-    func flattened_type_list:List<String>
+    func flattened_type_list: List<String>
         ;
 
     | 
     | Main design class for this type, from which properties etc can be extracted.
     | 
-    func effective_base_class:BMM_SIMPLE_CLASS
+    func effective_base_class: BMM_SIMPLE_CLASS
         ;
 
 

@@ -16,13 +16,13 @@ feature_group ("access")
     | 
     | Extract the year part of the date as an Integer.
     | 
-    func year:Integer
+    func year: Integer
         ;
 
     | 
     | Extract the month part of the date as an Integer, or return 0 if not present.
     | 
-    func month:Integer
+    func month: Integer
         pre_cond
             month_known: ¬ month_unknown;
         ;
@@ -30,7 +30,7 @@ feature_group ("access")
     | 
     | Extract the day part of the date as an Integer, or return 0 if not present.
     | 
-    func day:Integer
+    func day: Integer
         pre_cond
             day_known: ¬ day_unknown;
         ;
@@ -38,26 +38,26 @@ feature_group ("access")
     | 
     | Timezone; may be Void.
     | 
-    func timezone:Iso8601_timezone
+    func timezone: Iso8601_timezone
         ;
 
     | 
     | Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.
     | 
-    func month_unknown:Boolean
+    func month_unknown: Boolean
         ;
 
     | 
     | Indicates whether day in month is unknown. If so, and month is known, the date is of the
     | form `"YYYY-MM"` or `"YYYYMM"`.
     | 
-    func day_unknown:Boolean
+    func day_unknown: Boolean
         ;
 
     | 
     | Return string value in extended format.
     | 
-    func as_string:String
+    func as_string: String
         ;
 
 invariant

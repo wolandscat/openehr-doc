@@ -3,7 +3,7 @@
 | 
 
 class X_VERSIONED_EHR_ACCESS
-    is_a X_VERSIONED_OBJECT<>
+    is_a X_VERSIONED_OBJECT<EHR_ACCESS>
 
 
 end

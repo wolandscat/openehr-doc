@@ -3,7 +3,7 @@
 | 
 
 class VERSIONED_EHR_STATUS
-    is_a VERSIONED_OBJECT<>
+    is_a VERSIONED_OBJECT<EHR_STATUS>
 
 
 end

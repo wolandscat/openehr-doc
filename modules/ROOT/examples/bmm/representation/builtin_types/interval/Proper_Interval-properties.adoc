@@ -1,8 +1,0 @@
-
-[%autowidth.stretch]
-|===
-
-3+^h|  *class Proper_Interval<T:Ordered>*
-
-
-|===

@@ -44,7 +44,7 @@ feature_group ("access")
     | Eval type is the signature corresponding to the (remaining) open arguments and return
     | type, if any.
     | 
-    func eval_type:BMM_ROUTINE_TYPE
+    func eval_type: BMM_ROUTINE_TYPE
         post_cond
             result_validity: Result = definition.signature;
         ;
@@ -52,7 +52,7 @@ feature_group ("access")
     | 
     | True if there are no open arguments.
     | 
-    func is_callable:Boolean
+    func is_callable: Boolean
         post_cond
             result_validity: Result = ¬ ∃ open_arguments;
         ;
@@ -60,7 +60,7 @@ feature_group ("access")
     | 
     | Generated full reference name, including scoping elements.
     | 
-    func reference:String
+    func reference: String
         ;
 
 

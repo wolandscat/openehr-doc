@@ -28,7 +28,7 @@ feature_group ("access")
     | 
     | Offset of this event from origin, computed as time.diff(parent.origin).
     | 
-    func offset:DV_DURATION
+    func offset: DV_DURATION
         post_cond
             valid_result: Result = time.diff(parent.origin);
         ;

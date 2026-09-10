@@ -15,7 +15,7 @@ feature_group ("access")
     | 
     | Return `{BMM_MODEL}._boolean_type_definition_()`.
     | 
-    func eval_type:BMM_SIMPLE_TYPE
+    func eval_type: BMM_SIMPLE_TYPE
         ;
 
 

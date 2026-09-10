@@ -56,13 +56,13 @@ feature_group ("access")
     | Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the
     | root node)
     | 
-    func concept:DV_TEXT
+    func concept: DV_TEXT
         ;
 
     | 
     | True if this node is the root of an archetyped structure.
     | 
-    func is_archetype_root:Boolean
+    func is_archetype_root: Boolean
         ;
 
 invariant

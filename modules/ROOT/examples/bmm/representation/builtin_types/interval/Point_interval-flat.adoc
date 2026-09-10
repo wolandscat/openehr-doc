@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class Point_Interval<T:Ordered>*
+3+^h|  *class Point_interval<T:Ordered>*
 
 h|*Description*
 2+a|Type representing an Interval that happens to be a point value. Provides an efficient

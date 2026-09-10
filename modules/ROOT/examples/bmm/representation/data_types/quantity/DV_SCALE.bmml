@@ -39,7 +39,7 @@ feature_group ("access")
     | 
     | Test if this Scale value is strictly comparable to `other`.
     | 
-    func is_strictly_comparable_to(other: DV_SCALE):Boolean
+    func is_strictly_comparable_to(other: DV_SCALE): Boolean
         ;
 
 

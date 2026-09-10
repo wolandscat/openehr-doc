@@ -13,20 +13,20 @@ feature_group ("access")
     | identification scheme. Returns the part to the left of the first '::' separator, if any,
     | or else the whole string.
     | 
-    func root:UID
+    func root: UID
         ;
 
     | 
     | Optional local identifier of the object within the context of the root identifier. Returns
     | the part to the right of the first '::' separator if any, or else any empty String.
     | 
-    func extension:String
+    func extension: String
         ;
 
     | 
     | True if not `extension_.is_empty()`.
     | 
-    func has_extension:Boolean
+    func has_extension: Boolean
         ;
 
 invariant

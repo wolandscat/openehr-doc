@@ -4,7 +4,7 @@
 | 
 
 class BMM_INDEXED_CONTAINER_VALUE
-    is_a BMM_LITERAL_VALUE<>
+    is_a BMM_LITERAL_VALUE<T>
 
 
 end

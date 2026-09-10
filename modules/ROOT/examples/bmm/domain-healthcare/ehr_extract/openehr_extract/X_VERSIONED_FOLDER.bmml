@@ -3,7 +3,7 @@
 | 
 
 class X_VERSIONED_FOLDER
-    is_a X_VERSIONED_OBJECT<>
+    is_a X_VERSIONED_OBJECT<FOLDER>
 
 
 end

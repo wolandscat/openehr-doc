@@ -6,9 +6,15 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
+class TEMPLATE_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_template_overlay]] {
+}
+
+TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE  
+
+
 class OPERATIONAL_TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_operational_template]] {
         .. access ..
-        component_terminology(an_id: String):ARCHETYPE_TERMINOLOGY
+        component_terminology(an_id: String): ARCHETYPE_TERMINOLOGY
 }
 
 OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
@@ -17,6 +23,57 @@ OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE
 OPERATIONAL_TEMPLATE *--> "0..* component_terminologies" ARCHETYPE_TERMINOLOGY
 
 OPERATIONAL_TEMPLATE *--> "0..* terminology_extracts" ARCHETYPE_TERMINOLOGY
+
+class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_hrid]] {
+        .. access ..
+        namespace: String
+        rm_publisher: String
+        rm_package: String
+        rm_class: String
+        concept_id: String
+        release_version: String
+        build_count: String
+        semantic_id: String
+        physical_id: String
+        version_id: String
+        major_version: String
+        minor_version: String
+        patch_version: String
+}
+
+
+ARCHETYPE_HRID *--> "1 version_status" VERSION_STATUS
+
+class TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_template]] {
+        .. access ..
+}
+
+TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
+
+
+TEMPLATE *--> "0..* overlays" TEMPLATE_OVERLAY
+
+abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype]] {
+        .. access ..
+        parent_archetype_id: String
+        is_differential: Boolean
+        concept_code: String
+        physical_paths: List<String>
+        logical_paths(a_lang: String): List<String>
+        specialisation_depth: Integer
+        is_specialised: Boolean
+}
+
+
+ARCHETYPE *--> "1 archetype_id" ARCHETYPE_HRID
+
+ARCHETYPE *--> "1 definition" C_COMPLEX_OBJECT
+
+ARCHETYPE *--> "1 terminology" ARCHETYPE_TERMINOLOGY
+
+ARCHETYPE *--> "0..* rules" STATEMENT_SET
+
+ARCHETYPE *--> "0..1 rm_overlay" RM_OVERLAY
 
 class AUTHORED_ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_authored_archetype]] {
         .. access ..
@@ -32,63 +89,6 @@ AUTHORED_ARCHETYPE -[#gray]up-|> ARCHETYPE
 
 AUTHORED_ARCHETYPE -[#gray]up-|> AUTHORED_RESOURCE  
 
-
-abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype]] {
-        .. access ..
-        parent_archetype_id: String
-        is_differential: Boolean
-        concept_code:String
-        physical_paths:List<String>
-        logical_paths(a_lang: String):List<String>
-        specialisation_depth:Integer
-        is_specialised:Boolean
-}
-
-
-ARCHETYPE *--> "1 archetype_id" ARCHETYPE_HRID
-
-ARCHETYPE *--> "1 definition" C_COMPLEX_OBJECT
-
-ARCHETYPE *--> "1 terminology" ARCHETYPE_TERMINOLOGY
-
-ARCHETYPE *--> "0..* rules" STATEMENT_SET
-
-ARCHETYPE *--> "0..1 rm_overlay" RM_OVERLAY
-
-class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_hrid]] {
-        .. access ..
-        namespace: String
-        rm_publisher: String
-        rm_package: String
-        rm_class: String
-        concept_id: String
-        release_version: String
-        build_count: String
-        semantic_id:String
-        physical_id:String
-        version_id:String
-        major_version:String
-        minor_version:String
-        patch_version:String
-}
-
-
-ARCHETYPE_HRID *--> "1 version_status" VERSION_STATUS
-
-class TEMPLATE_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_template_overlay]] {
-}
-
-TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE  
-
-
-class TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_template]] {
-        .. access ..
-}
-
-TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
-
-
-TEMPLATE *--> "0..* overlays" TEMPLATE_OVERLAY
 abstract class "infostructure.resource.\nAUTHORED_RESOURCE" as AUTHORED_RESOURCE  [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] #FDFDFD {
 }
 

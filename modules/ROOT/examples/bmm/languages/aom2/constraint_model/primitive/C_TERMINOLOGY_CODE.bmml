@@ -56,7 +56,7 @@ feature_group ("access")
     | archetypes where `C_TERMINOLOGY_CODE` instances have no `constraint_status`, the
     | `required` status is assumed, which applies to all legacy archetypes.
     | 
-    func constraint_required:Boolean
+    func constraint_required: Boolean
         ;
 
     | 
@@ -67,47 +67,47 @@ feature_group ("access")
     | archetype that redefines another such instance in the flat parent. I.e. no stated
     | `constraint_status` means `required`.
     | 
-    func effective_constraint_status:Integer
+    func effective_constraint_status: Integer
         ;
 
     | 
     | Effective set of at-code values corresponding to an ac-code for a locally defined value
     | set. Not defined for ac-codes that have no local value set.
     | 
-    func value_set_expanded:List<String>
+    func value_set_expanded: List<String>
         ;
 
     | 
     | For locally defined value sets within individual code bindings: return the term URI(s)
     | substituted from bindings for local at-codes in `value_set_expanded`.
     | 
-    func value_set_substituted:List<Uri>
+    func value_set_substituted: List<Uri>
         ;
 
     | 
     | For locally defined value sets within individual code bindings: final set of external
     | codes to which value set is resolved.
     | 
-    func value_set_resolved:List<Terminology_code>
+    func value_set_resolved: List<Terminology_code>
         ;
 
     | 
     | True if a `value` is valid with respect to constraint expressed in concrete instance of
     | this type.
     | 
-    func valid_value(a_value: Terminology_code):Boolean
+    func valid_value(a_value: Terminology_code): Boolean
         ;
 
     | 
     | A generated prototype value from this constraint object.
     | 
-    func prototype_value:Terminology_code
+    func prototype_value: Terminology_code
         ;
 
     | 
     | True if `constraint` is empty.
     | 
-    func any_allowed:Boolean
+    func any_allowed: Boolean
         post_cond
             result_valid: Result = constraint.is_empty;
         ;
@@ -117,7 +117,7 @@ feature_group ("access")
     | in the `other.constraint`, and `effective_constraint_status()` is <=
     | `other.effective_constraint_status()`.
     | 
-    func c_value_conforms_to(other: C_TERMINOLOGY_CODE):Boolean
+    func c_value_conforms_to(other: C_TERMINOLOGY_CODE): Boolean
         ;
 
     | 
@@ -125,7 +125,7 @@ feature_group ("access")
     | identical value sets, or else are identical value codes; and
     | `effective_constraint_status()` = `other.effective_constraint_status()`.
     | 
-    func c_value_congruent_to(other: C_TERMINOLOGY_CODE):Boolean
+    func c_value_congruent_to(other: C_TERMINOLOGY_CODE): Boolean
         ;
 
 

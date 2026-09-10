@@ -3,8 +3,8 @@
 | representation that is substitutable for `Interval<T>` where needed.
 | 
 
-class Point_Interval
-    is_a Interval<>
+class Point_interval
+    is_a Interval<T>
 
 invariant
     inv_point: lower = upper;

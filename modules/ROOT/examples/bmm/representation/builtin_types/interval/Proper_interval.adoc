@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class Proper_Interval<T:Ordered>*
+3+^h|  *class Proper_interval<T:Ordered>*
 
 h|*Description*
 2+a|Type representing a 'proper' Interval, i.e. any two-sided or one-sided interval.

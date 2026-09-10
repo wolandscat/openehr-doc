@@ -52,7 +52,7 @@ feature_group ("access")
     | The concept code of the root object of the archetype, also standing for the concept of the
     | archetype as a whole.
     | 
-    func concept_code:String
+    func concept_code: String
         post_cond
             valid_result: Result.is_equal(definition.node_id);
         ;
@@ -62,21 +62,21 @@ feature_group ("access")
     | and are formed from alternations of `C_OBJECT._node_id` and
     | `C_ATTRIBUTE._rm_attribute_name` values.
     | 
-    func physical_paths:List<String>
+    func physical_paths: List<String>
         ;
 
     | 
     | Set of language-dependent paths extracted from archetype. Paths obey the same syntax as
     | physical_paths, but with node_ids replaced by their meanings from the terminology.
     | 
-    func logical_paths(a_lang: String):List<String>
+    func logical_paths(a_lang: String): List<String>
         ;
 
     | 
     | Specialisation depth of this archetype; larger than 0 if this archetype has a parent.
     | Derived from terminology.specialisation_depth.
     | 
-    func specialisation_depth:Integer
+    func specialisation_depth: Integer
         post_cond
             valid_result: Result = terminology.specialisation_depth;
         ;
@@ -84,7 +84,7 @@ feature_group ("access")
     | 
     | True if this archetype is a specialisation of another.
     | 
-    func is_specialised:Boolean
+    func is_specialised: Boolean
         post_cond
             valid_result: Result ⇒ ∃ parent_archetype_hrid;
         ;

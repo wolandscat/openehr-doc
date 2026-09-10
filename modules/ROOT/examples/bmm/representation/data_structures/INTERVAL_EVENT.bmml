@@ -3,7 +3,7 @@
 | 
 
 class INTERVAL_EVENT
-    is_a EVENT<>
+    is_a EVENT<T>
 
 feature_group ("access")
 
@@ -29,7 +29,7 @@ feature_group ("access")
     | 
     | Start time of the interval of this event.
     | 
-    func interval_start_time:DV_DATE_TIME
+    func interval_start_time: DV_DATE_TIME
         ;
 
 invariant

@@ -29,7 +29,7 @@ feature_group ("access")
     | 
     | Return the component terminology for the archetype with identifier an_id.
     | 
-    func component_terminology(an_id: String):ARCHETYPE_TERMINOLOGY
+    func component_terminology(an_id: String): ARCHETYPE_TERMINOLOGY
         ;
 
 invariant

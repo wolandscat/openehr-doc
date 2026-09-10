@@ -6,99 +6,19 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class CONTACT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_contact]] {
-        .. access ..
-        time_validity: DV_INTERVAL<DV_DATE>
-        purpose:DV_TEXT
-}
-
-CONTACT -[#gray]up-|> LOCATABLE  
-
-
-CONTACT *--> "0..* addresses" ADDRESS
-
-class PARTY_RELATIONSHIP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_relationship]] {
-        .. access ..
-        details: ITEM_STRUCTURE
-        target: PARTY_REF
-        time_validity: DV_INTERVAL<DV_DATE>
-        source: PARTY_REF
-        type:DV_TEXT
-}
-
-PARTY_RELATIONSHIP -[#gray]up-|> LOCATABLE  
-
-
-class CAPABILITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_capability]] {
-        .. access ..
-        credentials: ITEM_STRUCTURE
-        time_validity: DV_INTERVAL<DV_DATE>
-}
-
-CAPABILITY -[#gray]up-|> LOCATABLE  
-
-
-class ROLE [[/openehr-doc/latest/foundation/demographic-gen.html#_class_role]] {
-        .. access ..
-        time_validity: DV_INTERVAL<DV_DATE>
-        performer: PARTY_REF
-}
-
-ROLE -[#gray]up-|> PARTY  
-
-
-ROLE *--> "0..* capabilities" CAPABILITY
-
-class AGENT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_agent]] {
-}
-
-AGENT -[#gray]up-|> ACTOR  
-
-
-class ORGANISATION [[/openehr-doc/latest/foundation/demographic-gen.html#_class_organisation]] {
-}
-
-ORGANISATION -[#gray]up-|> ACTOR  
-
-
 class PARTY_IDENTITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_identity]] {
         .. access ..
         details: ITEM_STRUCTURE
-        purpose:DV_TEXT
+        purpose: DV_TEXT
 }
 
 PARTY_IDENTITY -[#gray]up-|> LOCATABLE  
 
 
-abstract class PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party]] {
-        .. access ..
-        details: ITEM_STRUCTURE
-        type:DV_TEXT
-        reverse_relationships:List<LOCATABLE_REF>
-}
-
-PARTY -[#gray]up-|> LOCATABLE  
-
-
-PARTY *--> "0..* identities" PARTY_IDENTITY
-
-PARTY *--> "0..* contacts" CONTACT
-
-PARTY *--> "0..* relationships" PARTY_RELATIONSHIP
-
 class PERSON [[/openehr-doc/latest/foundation/demographic-gen.html#_class_person]] {
 }
 
 PERSON -[#gray]up-|> ACTOR  
-
-
-class ADDRESS [[/openehr-doc/latest/foundation/demographic-gen.html#_class_address]] {
-        .. access ..
-        details: ITEM_STRUCTURE
-        type:DV_TEXT
-}
-
-ADDRESS -[#gray]up-|> LOCATABLE  
 
 
 class VERSIONED_PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_versioned_party]] {
@@ -116,10 +36,90 @@ abstract class ACTOR [[/openehr-doc/latest/foundation/demographic-gen.html#_clas
 ACTOR -[#gray]up-|> PARTY  
 
 
+class ADDRESS [[/openehr-doc/latest/foundation/demographic-gen.html#_class_address]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        type: DV_TEXT
+}
+
+ADDRESS -[#gray]up-|> LOCATABLE  
+
+
+class CAPABILITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_capability]] {
+        .. access ..
+        credentials: ITEM_STRUCTURE
+        time_validity: DV_INTERVAL<DV_DATE>
+}
+
+CAPABILITY -[#gray]up-|> LOCATABLE  
+
+
+abstract class PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        type: DV_TEXT
+        reverse_relationships: List<LOCATABLE_REF>
+}
+
+PARTY -[#gray]up-|> LOCATABLE  
+
+
+PARTY *--> "0..* identities" PARTY_IDENTITY
+
+PARTY *--> "0..* contacts" CONTACT
+
+PARTY *--> "0..* relationships" PARTY_RELATIONSHIP
+
+class AGENT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_agent]] {
+}
+
+AGENT -[#gray]up-|> ACTOR  
+
+
+class ROLE [[/openehr-doc/latest/foundation/demographic-gen.html#_class_role]] {
+        .. access ..
+        time_validity: DV_INTERVAL<DV_DATE>
+        performer: PARTY_REF
+}
+
+ROLE -[#gray]up-|> PARTY  
+
+
+ROLE *--> "0..* capabilities" CAPABILITY
+
+class CONTACT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_contact]] {
+        .. access ..
+        time_validity: DV_INTERVAL<DV_DATE>
+        purpose: DV_TEXT
+}
+
+CONTACT -[#gray]up-|> LOCATABLE  
+
+
+CONTACT *--> "0..* addresses" ADDRESS
+
+class ORGANISATION [[/openehr-doc/latest/foundation/demographic-gen.html#_class_organisation]] {
+}
+
+ORGANISATION -[#gray]up-|> ACTOR  
+
+
 class GROUP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_group]] {
 }
 
 GROUP -[#gray]up-|> ACTOR  
+
+
+class PARTY_RELATIONSHIP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_relationship]] {
+        .. access ..
+        details: ITEM_STRUCTURE
+        target: PARTY_REF
+        time_validity: DV_INTERVAL<DV_DATE>
+        source: PARTY_REF
+        type: DV_TEXT
+}
+
+PARTY_RELATIONSHIP -[#gray]up-|> LOCATABLE  
 
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }

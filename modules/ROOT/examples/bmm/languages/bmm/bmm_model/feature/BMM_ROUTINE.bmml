@@ -36,7 +36,7 @@ feature_group ("access")
     | 
     | Return number of arguments of this routine.
     | 
-    func arity:Integer
+    func arity: Integer
         ;
 
 

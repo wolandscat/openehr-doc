@@ -21,7 +21,7 @@ feature_group ("access")
     | 
     | Return `type`.
     | 
-    func eval_type:BMM_TYPE
+    func eval_type: BMM_TYPE
         ;
 
 

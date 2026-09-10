@@ -8,24 +8,18 @@ skinparam citedClassColor #FDFDFD
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
 
-CONTENT_ITEM -[#gray]up-|> LOCATABLE  
-
 LOCATABLE -[#gray]up-|> PATHABLE  
 
-abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
+CONTENT_ITEM -[#gray]up-|> LOCATABLE  
+
+class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_observation]] {
         .. access ..
-        subject: PARTY_PROXY
-        provider: PARTY_PROXY
-        language: CODE_PHRASE «iso.iso_639-1»
-        encoding: CODE_PHRASE «iana.character-sets»
-        workflow_id: OBJECT_REF
-        subject_is_self:Boolean
+        data: HISTORY<ITEM_STRUCTURE>
+        state: HISTORY<ITEM_STRUCTURE>
 }
 
-ENTRY -[#gray]up-|> CONTENT_ITEM  
+OBSERVATION -[#gray]up-|> CARE_ENTRY  
 
-
-ENTRY *--> "0..* other_participations" PARTICIPATION
 
 class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_ism_transition]] {
         .. access ..
@@ -36,6 +30,39 @@ class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_c
 }
 
 ISM_TRANSITION -[#gray]up-|> PATHABLE  
+
+
+class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_activity]] {
+        .. access ..
+        description: ITEM_STRUCTURE
+        timing: DV_PARSABLE
+        action_archetype_id: String
+}
+
+ACTIVITY -[#gray]up-|> LOCATABLE  
+
+
+enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
+        .. values ..
+        initial = initial
+        planned = planned
+        postponed = postponed
+        cancelled = cancelled
+        active = active
+        suspended = suspended
+        completed = completed
+        aborted = aborted
+        expired = expired
+}
+
+class INSTRUCTION_DETAILS [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_details]] {
+        .. access ..
+        instruction_id: LOCATABLE_REF
+        activity_id: String
+        wf_details: ITEM_STRUCTURE
+}
+
+INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE  
 
 
 enum INSTRUCTION_EXECUTION_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_transition]] {
@@ -60,23 +87,37 @@ enum INSTRUCTION_EXECUTION_TRANSITION [[/openehr-doc/latest/foundation/subject_r
         ism_t_notify_aborted = notify_aborted
 }
 
-class ADMIN_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_admin_entry]] {
+class EVALUATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_evaluation]] {
         .. access ..
         data: ITEM_STRUCTURE
 }
 
-ADMIN_ENTRY -[#gray]up-|> ENTRY  
+EVALUATION -[#gray]up-|> CARE_ENTRY  
 
 
-class INSTRUCTION_DETAILS [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_details]] {
+abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_care_entry]] {
         .. access ..
-        instruction_id: LOCATABLE_REF
-        activity_id: String
-        wf_details: ITEM_STRUCTURE
+        protocol: ITEM_STRUCTURE
+        guideline_id: OBJECT_REF
 }
 
-INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE  
+CARE_ENTRY -[#gray]up-|> ENTRY  
 
+
+abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
+        .. access ..
+        subject: PARTY_PROXY
+        provider: PARTY_PROXY
+        language: CODE_PHRASE «iso.iso_639-1»
+        encoding: CODE_PHRASE «iana.character-sets»
+        workflow_id: OBJECT_REF
+        subject_is_self: Boolean
+}
+
+ENTRY -[#gray]up-|> CONTENT_ITEM  
+
+
+ENTRY *--> "0..* other_participations" PARTICIPATION
 
 class INSTRUCTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction]] {
         .. access ..
@@ -89,29 +130,6 @@ INSTRUCTION -[#gray]up-|> CARE_ENTRY
 
 
 INSTRUCTION *--> "0..* activities" ACTIVITY
-
-enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
-        .. values ..
-        initial = initial
-        planned = planned
-        postponed = postponed
-        cancelled = cancelled
-        active = active
-        suspended = suspended
-        completed = completed
-        aborted = aborted
-        expired = expired
-}
-
-class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_activity]] {
-        .. access ..
-        description: ITEM_STRUCTURE
-        timing: DV_PARSABLE
-        action_archetype_id: String
-}
-
-ACTIVITY -[#gray]up-|> LOCATABLE  
-
 
 class ACTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_action]] {
         .. access ..
@@ -126,36 +144,18 @@ ACTION *--> "1 ism_transition" ISM_TRANSITION
 
 ACTION *--> "0..1 instruction_details" INSTRUCTION_DETAILS
 
-class EVALUATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_evaluation]] {
+class ADMIN_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_admin_entry]] {
         .. access ..
         data: ITEM_STRUCTURE
 }
 
-EVALUATION -[#gray]up-|> CARE_ENTRY  
+ADMIN_ENTRY -[#gray]up-|> ENTRY  
 
-
-class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_observation]] {
-        .. access ..
-        data: HISTORY<ITEM_STRUCTURE>
-        state: HISTORY<ITEM_STRUCTURE>
-}
-
-OBSERVATION -[#gray]up-|> CARE_ENTRY  
-
-
-abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_care_entry]] {
-        .. access ..
-        protocol: ITEM_STRUCTURE
-        guideline_id: OBJECT_REF
-}
-
-CARE_ENTRY -[#gray]up-|> ENTRY  
-
-abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] #FDFDFD {
-}
 abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
 }
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+}
+abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] #FDFDFD {
 }
 
 ....

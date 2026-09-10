@@ -4,7 +4,7 @@
 | 
 
 class BMM_STRING_VALUE
-    is_a BMM_PRIMITIVE_VALUE<>
+    is_a BMM_PRIMITIVE_VALUE<BMM_UNITARY_TYPE>
 
 feature_group ("access")
 

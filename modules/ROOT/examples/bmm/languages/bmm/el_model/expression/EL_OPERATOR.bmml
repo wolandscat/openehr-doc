@@ -29,13 +29,13 @@ feature_group ("access")
     | 
     | Operator definition derived from `definition.operator_definition()`.
     | 
-    func operator_definition:BMM_OPERATOR
+    func operator_definition: BMM_OPERATOR
         ;
 
     | 
     | Function call equivalent to this operator.
     | 
-    func equivalent_call:EL_FUNCTION_CALL
+    func equivalent_call: EL_FUNCTION_CALL
         ;
 
 

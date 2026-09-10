@@ -18,7 +18,7 @@ feature_group ("access")
     | Purpose of identity, e.g. legal , stagename, nickname, tribal name, trading name. Taken
     | from value of inherited `name` attribute.
     | 
-    func purpose:DV_TEXT
+    func purpose: DV_TEXT
         ;
 
 invariant

@@ -19,7 +19,7 @@ feature_group ("access")
     | Generated full reference name, based on constituent parts of the entity. Default version
     | outputs `name` field.
     | 
-    func reference:String
+    func reference: String
         ;
 
 

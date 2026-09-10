@@ -6,24 +6,24 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class EL_PROCEDURE_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_procedure_agent]] {
+class EL_FUNCTION_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_function_agent]] {
         .. access ..
-        eval_type:BMM_PROCEDURE_TYPE
+        eval_type: BMM_FUNCTION_TYPE
 }
 
-EL_PROCEDURE_AGENT -[#gray]up-|> EL_AGENT  
+EL_FUNCTION_AGENT -[#gray]up-|> EL_AGENT  
 
 
-EL_PROCEDURE_AGENT *--> "0..1 definition" BMM_PROCEDURE
+EL_FUNCTION_AGENT *--> "0..1 definition" BMM_FUNCTION
 
 abstract class EL_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_agent]] {
         .. access ..
         name: String
         open_args: List<String>
         is_writable: Boolean
-        eval_type:BMM_ROUTINE_TYPE
-        is_callable:Boolean
-        reference:String
+        eval_type: BMM_ROUTINE_TYPE
+        is_callable: Boolean
+        reference: String
 }
 
 EL_AGENT -[#gray]up-|> EL_FEATURE_REF  
@@ -33,15 +33,15 @@ EL_AGENT *--> "0..1 closed_args" EL_TUPLE
 
 EL_AGENT *--> "0..1 definition" BMM_ROUTINE
 
-class EL_FUNCTION_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_function_agent]] {
+class EL_PROCEDURE_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_procedure_agent]] {
         .. access ..
-        eval_type:BMM_FUNCTION_TYPE
+        eval_type: BMM_PROCEDURE_TYPE
 }
 
-EL_FUNCTION_AGENT -[#gray]up-|> EL_AGENT  
+EL_PROCEDURE_AGENT -[#gray]up-|> EL_AGENT  
 
 
-EL_FUNCTION_AGENT *--> "0..1 definition" BMM_FUNCTION
+EL_PROCEDURE_AGENT *--> "0..1 definition" BMM_PROCEDURE
 abstract class "languages.bmm.el_model.reference.\nEL_FEATURE_REF" as EL_FEATURE_REF  [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_feature_ref]] #FDFDFD {
 }
 

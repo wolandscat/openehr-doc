@@ -6,7 +6,7 @@
 | 
 
 class IMPORTED_VERSION
-    is_a VERSION<>
+    is_a VERSION<T>
 
 feature_group ("access")
 
@@ -18,7 +18,7 @@ feature_group ("access")
     | 
     | Computed version of inheritance precursor, derived as `item.uid`.
     | 
-    func uid:OBJECT_VERSION_ID
+    func uid: OBJECT_VERSION_ID
         post_cond
             valid_result: Result = item.uid;
         ;
@@ -26,7 +26,7 @@ feature_group ("access")
     | 
     | Computed version of inheritance precursor, derived as `item.preceding_version_uid`.
     | 
-    func preceding_version_uid:OBJECT_VERSION_ID
+    func preceding_version_uid: OBJECT_VERSION_ID
         post_cond
             valid_result: Result = item.preceding_version_uid;
         ;
@@ -35,13 +35,13 @@ feature_group ("access")
     | Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as
     | `item.lifecycle_state`; coded by openEHR vocabulary `version lifecycle state`.
     | 
-    func lifecycle_state:DV_CODED_TEXT
+    func lifecycle_state: DV_CODED_TEXT
         ;
 
     | 
     | Original content of this Version.
     | 
-    func data:T
+    func data: T
         ;
 
 

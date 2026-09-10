@@ -39,14 +39,14 @@ feature_group ("access")
     | 
     | True if this is a top-level schema, i.e. is the root schema of a 'model'.
     | 
-    func is_top_level:Boolean
+    func is_top_level: Boolean
         ;
 
     | 
     | True if the BMM version found in the schema (or assumed, if none) is compatible with that
     | in this software.
     | 
-    func is_bmm_compatible:Boolean
+    func is_bmm_compatible: Boolean
         ;
 
 invariant

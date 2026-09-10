@@ -16,7 +16,7 @@ feature_group ("access")
     | Type of address, e.g. electronic, locality. Taken from value of inherited `name`
     | attribute.
     | 
-    func type:DV_TEXT
+    func type: DV_TEXT
         ;
 
 invariant

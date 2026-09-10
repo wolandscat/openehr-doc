@@ -8,7 +8,7 @@
 | 
 
 class C_TIME
-    is_a C_TEMPORAL<>
+    is_a C_TEMPORAL<Iso8601_time>
 
 feature_group ("access")
 
@@ -34,31 +34,31 @@ feature_group ("access")
     | 
     | Validity of minute in constrained time.
     | 
-    func minute_validity:VALIDITY_KIND
+    func minute_validity: VALIDITY_KIND
         ;
 
     | 
     | Validity of second in constrained time.
     | 
-    func second_validity:VALIDITY_KIND
+    func second_validity: VALIDITY_KIND
         ;
 
     | 
     | Validity of millisecond in constrained time.
     | 
-    func millisecond_validity:VALIDITY_KIND
+    func millisecond_validity: VALIDITY_KIND
         ;
 
     | 
     | Validity of timezone in constrained time.
     | 
-    func timezone_validity:VALIDITY_KIND
+    func timezone_validity: VALIDITY_KIND
         ;
 
     | 
     | Return `valid_iso8601_time_constraint_pattern (a_pattern)`
     | 
-    func valid_pattern_constraint(a_pattern: String):Boolean
+    func valid_pattern_constraint(a_pattern: String): Boolean
         ;
 
     | 
@@ -66,7 +66,7 @@ feature_group ("access")
     | valid_time_constraint_replacements.item (an_other_pattern.as_upper).has
     | (a_pattern.as_upper)`.
     | 
-    func valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String):Boolean
+    func valid_pattern_constraint_replacement(a_pattern: String, an_other_pattern: String): Boolean
         ;
 
 invariant

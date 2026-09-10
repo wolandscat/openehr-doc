@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|builtin   *class Map<K:Ordered,V>*
+3+^h|builtin   *class Map<K:Ordered, V>*
 
 
 |===

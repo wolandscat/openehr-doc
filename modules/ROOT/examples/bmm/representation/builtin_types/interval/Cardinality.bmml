@@ -30,21 +30,21 @@ feature_group ("access")
     | True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique
     | membership.
     | 
-    func is_bag:Boolean
+    func is_bag: Boolean
         ;
 
     | 
     | True if the semantics of this cardinality represent a list, i.e. ordered, non-unique
     | membership.
     | 
-    func is_list:Boolean
+    func is_list: Boolean
         ;
 
     | 
     | True if the semantics of this cardinality represent a set, i.e. unordered, unique
     | membership.
     | 
-    func is_set:Boolean
+    func is_set: Boolean
         ;
 
 

@@ -14,7 +14,7 @@ feature_group ("access")
     | 
     | Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.
     | 
-    func as_hierarchy:ELEMENT
+    func as_hierarchy: ELEMENT
         ;
 
 

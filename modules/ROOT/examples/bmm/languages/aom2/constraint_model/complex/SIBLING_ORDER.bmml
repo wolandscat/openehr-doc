@@ -25,7 +25,7 @@ feature_group ("access")
     | 
     | True if the order relationship is `after`, computed as the negation of `is_before`.
     | 
-    func is_after:Boolean
+    func is_after: Boolean
         ;
 
 

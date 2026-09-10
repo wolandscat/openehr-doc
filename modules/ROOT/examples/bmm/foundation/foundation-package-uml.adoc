@@ -6,9 +6,6 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-package physical_entity.occurrent {
-}
-
 package subject_record.composition {
 }
 
@@ -19,6 +16,9 @@ package integration {
 }
 
 package demographic {
+}
+
+package physical_entity.occurrent {
 }
 
 ....

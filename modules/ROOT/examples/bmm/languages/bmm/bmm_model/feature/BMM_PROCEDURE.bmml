@@ -22,7 +22,7 @@ feature_group ("access")
     | 
     | Specific implementations in descendants.
     | 
-    func signature:BMM_PROCEDURE_TYPE
+    func signature: BMM_PROCEDURE_TYPE
         ;
 
 

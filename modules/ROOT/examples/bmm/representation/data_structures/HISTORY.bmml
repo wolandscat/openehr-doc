@@ -46,12 +46,12 @@ feature_group ("access")
     | 
     | Indicates whether history is periodic.
     | 
-    func is_periodic:Boolean
+    func is_periodic: Boolean
         ;
 
 invariant
     events_valid: (∃ events ∧ ¬ events.is_empty) ∨ ∃ summary;
     periodic_validity: is_periodic ⊻ ¬ ∃ period;
-    period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
+    period_consistency: e.offset.to_seconds.mod(period.to_seconds) ⇒ events.for_all(0);
 
 end

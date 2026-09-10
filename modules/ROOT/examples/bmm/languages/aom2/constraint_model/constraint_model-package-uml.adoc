@@ -8,14 +8,14 @@ skinparam citedClassColor #FDFDFD
 
 abstract class ARCHETYPE_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_constraint]] {
         .. access ..
-        is_prohibited:Boolean
-        has_path(a_path: String):Boolean
-        path:String
-        c_conforms_to(other: ARCHETYPE_CONSTRAINT, ...):Boolean
-        c_congruent_to(other: ARCHETYPE_CONSTRAINT):Boolean
-        is_second_order_constrained:Boolean
-        is_root:Boolean
-        is_leaf:Boolean
+        is_prohibited: Boolean
+        has_path(a_path: String): Boolean
+        path: String
+        c_conforms_to(other: ARCHETYPE_CONSTRAINT, ...): Boolean
+        c_congruent_to(other: ARCHETYPE_CONSTRAINT): Boolean
+        is_second_order_constrained: Boolean
+        is_root: Boolean
+        is_leaf: Boolean
 }
 
 ARCHETYPE_CONSTRAINT -[#gray]up-|> ADL_CODE_DEFINITIONS  

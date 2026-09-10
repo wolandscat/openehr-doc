@@ -18,13 +18,13 @@ feature_group ("access")
     | 
     | Result = `base_class.name`.
     | 
-    func type_base_name:String
+    func type_base_name: String
         ;
 
     | 
     | Result = `base_class.is_primitive`.
     | 
-    func is_primitive:Boolean
+    func is_primitive: Boolean
         ;
 
 

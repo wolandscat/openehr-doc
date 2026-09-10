@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class FUNCTION<V:TUPLE,R:Any>*
+3+^h|  *class FUNCTION<V:TUPLE, R:Any>*
 
 h|*Description*
 2+a|Type representing a function with a return type and 0 or more arguments

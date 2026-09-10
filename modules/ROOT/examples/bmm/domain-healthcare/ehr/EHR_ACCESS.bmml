@@ -24,7 +24,7 @@ feature_group ("access")
     | The name of the access control scheme in use; corresponds to the concrete instance of the
     | settings attribute.
     | 
-    func scheme:String
+    func scheme: String
         ;
 
 invariant

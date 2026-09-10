@@ -5,7 +5,7 @@
 | 
 
 class EL_CONDITIONAL_EXPRESSION
-    is_a EL_DECISION_BRANCH<>
+    is_a EL_DECISION_BRANCH<T>
 
 feature_group ("access")
 

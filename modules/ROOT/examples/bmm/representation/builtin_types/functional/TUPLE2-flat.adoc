@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class TUPLE2<A:Any,B:Any>*
+3+^h|  *class TUPLE2<A:Any, B:Any>*
 
 h|*Description*
 2+a|A Tuple type used, among other things, for representing two typed arguments within a

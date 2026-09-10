@@ -15,25 +15,25 @@ feature_group ("access")
     | 
     | Return False.
     | 
-    func is_abstract:Boolean
+    func is_abstract: Boolean
         ;
 
     | 
     | Return True.
     | 
-    func is_primitive:Boolean
+    func is_primitive: Boolean
         ;
 
     | 
     | Return `base_name`.
     | 
-    func type_base_name:String
+    func type_base_name: String
         ;
 
     | 
     | Return `base_name`.
     | 
-    func type_name:String
+    func type_name: String
         ;
 
 

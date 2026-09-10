@@ -12,7 +12,7 @@ feature_group ("operators")
     | Sum with `other` (commutative). Actual type of result depends on arithmetic balancing
     | rules.
     | 
-    func add(other: Numeric):Numeric
+    func add(other: Numeric): Numeric
         alias
             +;
         ;
@@ -21,7 +21,7 @@ feature_group ("operators")
     | Result of subtracting `other`. Actual type of result depends on arithmetic balancing
     | rules.
     | 
-    func subtract(other: Numeric):Numeric
+    func subtract(other: Numeric): Numeric
         alias
             -;
         ;
@@ -29,7 +29,7 @@ feature_group ("operators")
     | 
     | Product by `other`. Actual type of result depends on arithmetic balancing rules.
     | 
-    func multiply(other: Numeric):Numeric
+    func multiply(other: Numeric): Numeric
         alias
             *;
         ;
@@ -37,7 +37,7 @@ feature_group ("operators")
     | 
     | Divide by`other`. Actual type of result depends on arithmetic balancing rules.
     | 
-    func divide(other: Numeric):Numeric
+    func divide(other: Numeric): Numeric
         alias
             /;
         ;
@@ -45,7 +45,7 @@ feature_group ("operators")
     | 
     | Expontiation of this by `other`.
     | 
-    func exponent(other: Numeric):Numeric
+    func exponent(other: Numeric): Numeric
         alias
             ^;
         ;
@@ -53,7 +53,7 @@ feature_group ("operators")
     | 
     | Generate negative of current value.
     | 
-    func negative:Numeric
+    func negative: Numeric
         alias
             -;
         ;

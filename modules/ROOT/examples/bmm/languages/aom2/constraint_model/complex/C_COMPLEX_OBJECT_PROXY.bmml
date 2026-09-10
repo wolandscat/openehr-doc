@@ -23,7 +23,7 @@ feature_group ("access")
     | True if target occurrences are to be used as the value of occurrences in this object; by
     | the time of runtime use, the target occurrences value has to be set into this object.
     | 
-    func use_target_occurrences:Boolean
+    func use_target_occurrences: Boolean
         post_cond
             valid_result: Result = (¬ ∃ occurrences);
         ;
@@ -40,7 +40,7 @@ feature_group ("access")
     | 
     | .Parameters + [horizontal] `other`:: `C_OBJECT` from a flat parent archetype.
     | 
-    func occurrences_conforms_to(other: C_OBJECT):Boolean
+    func occurrences_conforms_to(other: C_OBJECT): Boolean
         ;
 
 

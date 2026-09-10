@@ -3,7 +3,7 @@
 | 
 
 class VERSIONED_PARTY
-    is_a VERSIONED_OBJECT<>
+    is_a VERSIONED_OBJECT<PARTY>
 
 
 end

@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class TUPLE2<A:Any,B:Any>*
+3+^h|  *class TUPLE2<A:Any, B:Any>*
 
 
 |===

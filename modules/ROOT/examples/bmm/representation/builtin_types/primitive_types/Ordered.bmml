@@ -15,7 +15,7 @@ feature_group ("operators")
     | In conjunction with `=`, enables the definition of the related functions
     | `greater_than_()` etc.
     | 
-    func less_than(other: Ordered):Boolean
+    func less_than(other: Ordered): Boolean
         alias
             <;
         ;
@@ -23,7 +23,7 @@ feature_group ("operators")
     | 
     | True if current object less than or equal to `other`.
     | 
-    func less_than_or_equal(other: Ordered):Boolean
+    func less_than_or_equal(other: Ordered): Boolean
         alias
             <=, ≤;
         post_cond
@@ -33,7 +33,7 @@ feature_group ("operators")
     | 
     | True if current object greater than `other`.
     | 
-    func greater_than(other: Ordered):Boolean
+    func greater_than(other: Ordered): Boolean
         alias
             >;
         post_cond
@@ -43,7 +43,7 @@ feature_group ("operators")
     | 
     | True if current object greater than or equal to `other`.
     | 
-    func greater_than_or_equal(other: Ordered):Boolean
+    func greater_than_or_equal(other: Ordered): Boolean
         alias
             >=, ≥;
         post_cond

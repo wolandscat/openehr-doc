@@ -55,14 +55,14 @@ feature_group ("access")
     | 
     | Effective magnitude represented by ratio.
     | 
-    func magnitude:Real
+    func magnitude: Real
         ;
 
     | 
     | True if the `numerator` and `denominator` values are integers, i.e. if `precision`
     | is 0.
     | 
-    func is_integral:Boolean
+    func is_integral: Boolean
         ;
 
 invariant

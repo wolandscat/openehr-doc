@@ -6,14 +6,6 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Terminology_term [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_terminology_term]] {
-        .. access ..
-        text: String
-}
-
-
-Terminology_term *--> "1 concept" Terminology_code
-
 class Terminology_code [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_terminology_code]] {
         .. access ..
         terminology_id: String
@@ -22,5 +14,13 @@ class Terminology_code [[/openehr-doc/latest/representation/builtin_types-gen.ht
         uri: Uri
 }
 
+
+class Terminology_term [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_terminology_term]] {
+        .. access ..
+        text: String
+}
+
+
+Terminology_term *--> "1 concept" Terminology_code
 
 ....

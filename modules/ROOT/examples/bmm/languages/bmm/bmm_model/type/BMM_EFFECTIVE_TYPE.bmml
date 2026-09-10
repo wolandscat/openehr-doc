@@ -11,13 +11,13 @@ feature_group ("access")
     | 
     | Result = self.
     | 
-    func effective_type:BMM_EFFECTIVE_TYPE
+    func effective_type: BMM_EFFECTIVE_TYPE
         ;
 
     | 
     | Name of base generator type, i.e. excluding any generic parts if present.
     | 
-    func type_base_name:String
+    func type_base_name: String
         ;
 
 

@@ -28,6 +28,6 @@ a|The path to the archetype node.
 h|prop +
   
 |*item*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
-a|
+a|Resolved reference to archetype element.
 
 |===

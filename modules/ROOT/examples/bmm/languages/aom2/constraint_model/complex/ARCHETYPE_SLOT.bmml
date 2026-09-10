@@ -31,7 +31,7 @@ feature_group ("access")
     | 
     | True if no constraints stated, and slot is not closed.
     | 
-    func any_allowed:Boolean
+    func any_allowed: Boolean
         ;
 
 

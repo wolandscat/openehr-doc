@@ -3,20 +3,20 @@
 | 
 
 builtin class List
-    is_a Container<>
+    is_a Container<T>
 
 feature_group ("access")
 
     | 
     | Return first element.
     | 
-    func first:T
+    func first: T
         ;
 
     | 
     | Return last element.
     | 
-    func last:T
+    func last: T
         ;
 
 invariant

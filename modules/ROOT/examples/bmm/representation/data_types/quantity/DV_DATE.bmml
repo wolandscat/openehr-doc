@@ -17,25 +17,25 @@ feature_group ("access")
     | 
     | Numeric value of the date as days since the calendar origin date `0001-01-01`.
     | 
-    func magnitude:Integer
+    func magnitude: Integer
         ;
 
     | 
     | Addition of a Duration to this Date.
     | 
-    func add(a_diff: DV_DURATION):DV_DATE
+    func add(a_diff: DV_DURATION): DV_DATE
         ;
 
     | 
     | Subtract a Duration from this Date.
     | 
-    func subtract(a_diff: DV_DURATION):DV_DATE
+    func subtract(a_diff: DV_DURATION): DV_DATE
         ;
 
     | 
     | Difference between this Date and `other`.
     | 
-    func diff(other: DV_DATE):DV_DURATION
+    func diff(other: DV_DATE): DV_DURATION
         ;
 
 invariant

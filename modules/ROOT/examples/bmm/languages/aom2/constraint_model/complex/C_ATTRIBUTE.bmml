@@ -50,7 +50,7 @@ feature_group ("access")
     | True if there is no effective constraint on the children of the RM attribute to which this
     | `C_ATTRIBUTE` refers.
     | 
-    func any_allowed:Boolean
+    func any_allowed: Boolean
         post_cond
             valid_result: Result = children.is_empty ∧ ¬ is_prohibited;
         ;
@@ -58,7 +58,7 @@ feature_group ("access")
     | 
     | True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i.e. mandation.
     | 
-    func is_mandatory:Boolean
+    func is_mandatory: Boolean
         post_cond
             valid_result: Result = ∃ existence ∧ existence.is_mandatory;
         ;
@@ -67,14 +67,14 @@ feature_group ("access")
     | Path of this attribute with respect to owning `C_OBJECT`, including differential path
     | where applicable.
     | 
-    func rm_attribute_path:String
+    func rm_attribute_path: String
         ;
 
     | 
     | True if this node logically represents a single-valued attribute. Evaluated as not
     | `is_multiple`.
     | 
-    func is_single:Boolean
+    func is_single: Boolean
         ;
 
     | 
@@ -83,7 +83,7 @@ feature_group ("access")
     | 
     | Typically used to test if an inherited node locally contains any constraints.
     | 
-    func c_congruent_to(other: ARCHETYPE_CONSTRAINT):Boolean
+    func c_congruent_to(other: ARCHETYPE_CONSTRAINT): Boolean
         post_cond
             valid_result: Result = ¬ ∃ existence ∧ ((is_single ∧ other.is_single) ∨ (is_multiple ∧ other.is_multiple ∧ ¬ ∃ cardinality));
         ;
@@ -92,7 +92,7 @@ feature_group ("access")
     | True if constraints represented by this node, ignoring any sub-parts, are narrower or the
     | same as other. Typically used during validation of specialised archetype nodes.
     | 
-    func c_conforms_to(other: ARCHETYPE_CONSTRAINT, rmcc: (String, String) -> Boolean):Boolean
+    func c_conforms_to(other: ARCHETYPE_CONSTRAINT, rmcc: (String, String) -> Boolean): Boolean
         post_cond
             valid_result: Result = existence_conforms_to(other) ∧ ((is_single ∧ other.is_single) ∨ (is_multiple ∧ cardinality_conforms_to(other)));
         ;
@@ -100,7 +100,7 @@ feature_group ("access")
     | 
     | True if this `C_ATTRIBUTE` has an existence constraint of `0..0`, i.e. prohibition.
     | 
-    func is_prohibited:Boolean
+    func is_prohibited: Boolean
         post_cond
             valid_result: Result = ∃ existence ∧ existence.is_prohibited;
         ;
@@ -108,13 +108,13 @@ feature_group ("access")
     | 
     | True if the existence of this node conforms to other.existence
     | 
-    func existence_conforms_to(other: C_ATTRIBUTE):Boolean
+    func existence_conforms_to(other: C_ATTRIBUTE): Boolean
         ;
 
     | 
     | True if the cardinality of this node conforms to other.cardinality, if it exists
     | 
-    func cardinality_conforms_to(other: C_ATTRIBUTE):Boolean
+    func cardinality_conforms_to(other: C_ATTRIBUTE): Boolean
         ;
 
 

@@ -6,25 +6,81 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-abstract class TEMPLATE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_template_id]] {
+class OBJECT_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_object_ref]] {
         .. access ..
-        name:String
-        version_id:String
+        namespace: String
+        type: String
 }
 
-TEMPLATE_ID -[#gray]up-|> OBJECT_ID  
 
-
-class TERMINOLOGY_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_terminology_id]] {
-}
-
-TERMINOLOGY_ID -[#gray]up-|> OBJECT_ID  
-
+OBJECT_REF *--> "1 id" OBJECT_ID
 
 class INTERNET_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_internet_id]] {
 }
 
 INTERNET_ID -[#gray]up-|> UID  
+
+
+abstract class UID [[/openehr-doc/latest/representation/identification-gen.html#_class_uid]] {
+        .. access ..
+        value: String
+}
+
+
+class VERSION_TREE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_version_tree_id]] {
+        .. access ..
+        value: String
+        trunk_version: String
+        is_branch: Boolean
+        is_first: Boolean
+        branch_number: String
+        branch_version: String
+}
+
+
+abstract class TEMPLATE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_template_id]] {
+        .. access ..
+        name: String
+        version_id: String
+}
+
+TEMPLATE_ID -[#gray]up-|> OBJECT_ID  
+
+
+class ISO_OID [[/openehr-doc/latest/representation/identification-gen.html#_class_iso_oid]] {
+}
+
+ISO_OID -[#gray]up-|> UID  
+
+
+class HIER_OBJECT_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_hier_object_id]] {
+}
+
+HIER_OBJECT_ID -[#gray]up-|> UID_BASED_ID  
+
+
+abstract class UID_BASED_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_uid_based_id]] {
+        .. access ..
+        root: UID
+        extension: String
+        has_extension: Boolean
+}
+
+UID_BASED_ID -[#gray]up-|> OBJECT_ID  
+
+
+class ARCHETYPE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_archetype_id]] {
+        .. access ..
+        qualified_rm_entity: String
+        domain_concept: String
+        rm_originator: String
+        rm_name: String
+        rm_entity: String
+        specialisation: String
+        version_id: String
+}
+
+ARCHETYPE_ID -[#gray]up-|> OBJECT_ID  
 
 
 class GENERIC_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_generic_id]] {
@@ -35,10 +91,27 @@ class GENERIC_ID [[/openehr-doc/latest/representation/identification-gen.html#_c
 GENERIC_ID -[#gray]up-|> OBJECT_ID  
 
 
-class ISO_OID [[/openehr-doc/latest/representation/identification-gen.html#_class_iso_oid]] {
+class OBJECT_VERSION_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_object_version_id]] {
+        .. access ..
+        object_id: UID
+        creating_system_id: UID
+        version_tree_id: VERSION_TREE_ID
+        is_branch: Boolean
 }
 
-ISO_OID -[#gray]up-|> UID  
+OBJECT_VERSION_ID -[#gray]up-|> UID_BASED_ID  
+
+
+class TERMINOLOGY_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_terminology_id]] {
+}
+
+TERMINOLOGY_ID -[#gray]up-|> OBJECT_ID  
+
+
+abstract class OBJECT_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_object_id]] {
+        .. access ..
+        value: String
+}
 
 
 class PARTY_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_party_ref]] {
@@ -47,94 +120,21 @@ class PARTY_REF [[/openehr-doc/latest/representation/identification-gen.html#_cl
 PARTY_REF -[#gray]up-|> OBJECT_REF  
 
 
-class OBJECT_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_object_ref]] {
-        .. access ..
-        namespace: String
-        type: String
-}
-
-
-OBJECT_REF *--> "1 id" OBJECT_ID
-
-abstract class OBJECT_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_object_id]] {
-        .. access ..
-        value: String
-}
-
-
-class LOCATABLE_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_locatable_ref]] {
-        .. access ..
-        path: String
-        as_uri:String
-}
-
-LOCATABLE_REF -[#gray]up-|> OBJECT_REF  
-
-
-LOCATABLE_REF *--> "1 id" UID_BASED_ID
-
-class VERSION_TREE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_version_tree_id]] {
-        .. access ..
-        value: String
-        trunk_version:String
-        is_branch:Boolean
-        is_first:Boolean
-        branch_number:String
-        branch_version:String
-}
-
-
-class OBJECT_VERSION_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_object_version_id]] {
-        .. access ..
-        object_id:UID
-        creating_system_id:UID
-        version_tree_id:VERSION_TREE_ID
-        is_branch:Boolean
-}
-
-OBJECT_VERSION_ID -[#gray]up-|> UID_BASED_ID  
-
-
 class UUID [[/openehr-doc/latest/representation/identification-gen.html#_class_uuid]] {
 }
 
 UUID -[#gray]up-|> UID  
 
 
-abstract class UID [[/openehr-doc/latest/representation/identification-gen.html#_class_uid]] {
+class LOCATABLE_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_locatable_ref]] {
         .. access ..
-        value: String
+        path: String
+        as_uri: String
 }
 
-
-abstract class UID_BASED_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_uid_based_id]] {
-        .. access ..
-        root:UID
-        extension:String
-        has_extension:Boolean
-}
-
-UID_BASED_ID -[#gray]up-|> OBJECT_ID  
+LOCATABLE_REF -[#gray]up-|> OBJECT_REF  
 
 
-class HIER_OBJECT_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_hier_object_id]] {
-}
-
-HIER_OBJECT_ID -[#gray]up-|> UID_BASED_ID  
-
-
-class ARCHETYPE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_archetype_id]] {
-        .. access ..
-        qualified_rm_entity:String
-        domain_concept:String
-        rm_originator:String
-        rm_name:String
-        rm_entity:String
-        specialisation:String
-        version_id:String
-}
-
-ARCHETYPE_ID -[#gray]up-|> OBJECT_ID  
-
+LOCATABLE_REF *--> "1 id" UID_BASED_ID
 
 ....

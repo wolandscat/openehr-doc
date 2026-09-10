@@ -25,7 +25,7 @@ feature_group ("access")
     | them. Values may include: "ftp", "telnet", "mailto", etc. Refer to RFC-3986 for a full
     | list.
     | 
-    func scheme:String
+    func scheme: String
         ;
 
     | 
@@ -36,7 +36,7 @@ feature_group ("access")
     | may include internet/intranet location identifiers of the form: `sub_domain...domain`,
     | e.g. `"info.cern.ch"`.
     | 
-    func path:String
+    func path: String
         ;
 
     | 
@@ -44,7 +44,7 @@ feature_group ("access")
     | of objects, such as a certain line and character position in a text object. The syntax and
     | semantics are defined by the application responsible for the object.
     | 
-    func fragment_id:String
+    func fragment_id: String
         ;
 
     | 
@@ -52,7 +52,7 @@ feature_group ("access")
     | applications, including databases to be included in the URI. Supports any query meaningful
     | to the server, including SQL.
     | 
-    func query:String
+    func query: String
         ;
 
 invariant

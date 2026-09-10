@@ -30,7 +30,7 @@ feature_group ("access")
     | 
     | Type of relationship, such as employment, authority, health provision
     | 
-    func type:DV_TEXT
+    func type: DV_TEXT
         ;
 
 invariant

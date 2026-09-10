@@ -17,33 +17,33 @@ feature_group ("access")
     | 
     | Trunk version number; numbering starts at 1.
     | 
-    func trunk_version:String
+    func trunk_version: String
         ;
 
     | 
     | True if this version identifier represents a branch, i.e. has `branch_number()` and
     | `branch_version()` parts.
     | 
-    func is_branch:Boolean
+    func is_branch: Boolean
         ;
 
     | 
     | True if this version identifier corresponds to the first version, i.e. `trunk_version`
     | is 1.
     | 
-    func is_first:Boolean
+    func is_first: Boolean
         ;
 
     | 
     | Number of branch from the trunk point; numbering starts at 1.
     | 
-    func branch_number:String
+    func branch_number: String
         ;
 
     | 
     | Version of the branch; numbering starts at 1.
     | 
-    func branch_version:String
+    func branch_version: String
         ;
 
 invariant

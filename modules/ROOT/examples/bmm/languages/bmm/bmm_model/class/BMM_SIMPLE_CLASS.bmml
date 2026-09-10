@@ -12,7 +12,7 @@ feature_group ("access")
     | Generate a type object that represents the type of this class. Can only be an instance of
     | `BMM_SIMPLE_TYPE` or a descendant.
     | 
-    func type:BMM_SIMPLE_TYPE
+    func type: BMM_SIMPLE_TYPE
         ;
 
 

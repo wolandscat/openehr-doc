@@ -11,25 +11,25 @@ feature_group ("access")
     | 
     | True if string is empty, i.e. equal to "".
     | 
-    func is_empty:Boolean
+    func is_empty: Boolean
         ;
 
     | 
     | True if string can be parsed as an integer.
     | 
-    func is_integer:Boolean
+    func is_integer: Boolean
         ;
 
     | 
     | Return the integer corresponding to the integer value represented in this string.
     | 
-    func as_integer:Integer
+    func as_integer: Integer
         ;
 
     | 
     | Return True if this String contains `other` (case-sensitive).
     | 
-    func contains(other: String):Boolean
+    func contains(other: String): Boolean
         ;
 
 feature_group ("operators")
@@ -37,7 +37,7 @@ feature_group ("operators")
     | 
     | Concatenation operator - causes `other` to be appended to this string.
     | 
-    func append(other: String):String
+    func append(other: String): String
         alias
             +;
         ;
@@ -45,7 +45,7 @@ feature_group ("operators")
     | 
     | Lexical comparison of string content based on ordering in relevant character set.
     | 
-    func less_than(other: String):Boolean
+    func less_than(other: String): Boolean
         alias
             <;
         ;

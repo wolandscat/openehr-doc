@@ -17,7 +17,7 @@ feature_group ("access")
     | 
     | Return full type name, e.g. `HashMap<String, ELEMENT>`.
     | 
-    func type_name:String
+    func type_name: String
         ;
 
 

@@ -13,7 +13,7 @@ feature_group ("access")
     | The computed value of this node as a result of the nodes below it, for operator nodes, or
     | else statically set or otherwise derived values.
     | 
-    func value:Any
+    func value: Any
         ;
 
 

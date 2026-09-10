@@ -22,7 +22,7 @@ feature_group ("access")
     | variable, inferred by inspection of the current scoping instance. Return
     | `definition.type`.
     | 
-    func eval_type:BMM_TYPE
+    func eval_type: BMM_TYPE
         ;
 
 

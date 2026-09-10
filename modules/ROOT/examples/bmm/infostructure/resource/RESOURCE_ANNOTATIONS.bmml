@@ -28,7 +28,7 @@ feature_group ("access")
     | 
     | Documentary annotations in a multi-level keyed structure.
     | 
-    prop documentation: Map<String,Map<String,Map<String,String>>>;
+    prop documentation: Map<String, Map<String, Map<String, String>>>;
 
 
 end

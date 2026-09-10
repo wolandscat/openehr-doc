@@ -18,21 +18,21 @@ feature_group ("access")
     | Indicates what prototypical point in the calendar the specification is aligned to, e.g.
     | 5th of the month . Empty if not aligned. Extracted from the value' attribute.
     | 
-    func calendar_alignment:String
+    func calendar_alignment: String
         ;
 
     | 
     | Indicates what real-world event the specification is aligned to if any. Extracted from the
     | value' attribute.
     | 
-    func event_alignment:String
+    func event_alignment: String
         ;
 
     | 
     | Indicates if the specification is aligned with institution schedules, e.g. a hospital
     | nursing changeover or meal serving times. Extracted from the value' attribute.
     | 
-    func institution_specified:Boolean
+    func institution_specified: Boolean
         ;
 
 

@@ -35,13 +35,13 @@ feature_group ("access")
     | 
     | Return full type name, e.g. `List<ELEMENT>`.
     | 
-    func type_name:String
+    func type_name: String
         ;
 
     | 
     | True if the container class is abstract.
     | 
-    func is_abstract:Boolean
+    func is_abstract: Boolean
         post_cond
             valid_result: Result = container_type.is_abstract;
         ;
@@ -49,7 +49,7 @@ feature_group ("access")
     | 
     | Flattened list of type names of `item_type`, i.e. `item_type.flattened_type_list_()`.
     | 
-    func flattened_type_list:List<String>
+    func flattened_type_list: List<String>
         post_cond
             valid_result: Result = item_type.flattened_type_list;
         ;
@@ -57,13 +57,13 @@ feature_group ("access")
     | 
     | Return `item_type`.
     | 
-    func unitary_type:BMM_UNITARY_TYPE
+    func unitary_type: BMM_UNITARY_TYPE
         ;
 
     | 
     | True if `item_type` is primitive.
     | 
-    func is_primitive:Boolean
+    func is_primitive: Boolean
         post_cond
             valid_result: Result = item_type.is_primitive;
         ;
@@ -71,7 +71,7 @@ feature_group ("access")
     | 
     | Return `item_type.effective_type_()`.
     | 
-    func effective_type:BMM_EFFECTIVE_TYPE
+    func effective_type: BMM_EFFECTIVE_TYPE
         ;
 
 

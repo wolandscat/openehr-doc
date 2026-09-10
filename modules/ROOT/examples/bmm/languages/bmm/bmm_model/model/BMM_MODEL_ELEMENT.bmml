@@ -44,7 +44,7 @@ feature_group ("access")
     | 
     | True if this model element is the root of a model structure hierarchy.
     | 
-    func is_root_scope:Boolean
+    func is_root_scope: Boolean
         post_cond
             result_valid: Result = (scope = self);
         ;

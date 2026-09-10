@@ -47,7 +47,7 @@ feature_group ("access")
     | ((lower_included and v >= lower) or v > lower)) and (upper_unbounded or ((upper_included
     | and v <= upper or v < upper)))
     | 
-    func has:Boolean
+    func has: Boolean
         post_cond
             valid_result: Result = (lower_unbounded ∨ lower_included ∧ v >= lower) ∨ v > lower ∧ (upper_unbounded ∨ upper_included ∧ v <= upper ∨ v < upper);
         ;
@@ -56,14 +56,14 @@ feature_group ("access")
     | True if there is any overlap between intervals represented by Current and `other`. True
     | if at least one limit of `other` is strictly inside the limits of this interval.
     | 
-    func intersects:Boolean
+    func intersects: Boolean
         ;
 
     | 
     | True if current interval properly contains `other`? True if all points of `other` are
     | inside the current interval.
     | 
-    func contains:Boolean
+    func contains: Boolean
         ;
 
 invariant

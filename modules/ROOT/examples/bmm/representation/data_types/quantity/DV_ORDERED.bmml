@@ -37,13 +37,13 @@ feature_group ("access")
     | 
     | Test if two instances are strictly comparable. Effected in descendants.
     | 
-    func is_strictly_comparable_to(other: DV_ORDERED):Boolean
+    func is_strictly_comparable_to(other: DV_ORDERED): Boolean
         ;
 
     | 
     | True if this Ordered object is less than `other`. Redefined in descendants.
     | 
-    func less_than(other: DV_ORDERED):Boolean
+    func less_than(other: DV_ORDERED): Boolean
         pre_cond
             comparable: is_strictly_comparable_to(other);
         ;
@@ -51,14 +51,14 @@ feature_group ("access")
     | 
     | True if this quantity has no reference ranges.
     | 
-    func is_simple:Boolean
+    func is_simple: Boolean
         ;
 
     | 
     | Value is in the normal range, determined by comparison of the value to `normal_range` if
     | present, or by the `normal_status` marker if present.
     | 
-    func is_normal:Boolean
+    func is_normal: Boolean
         pre_cond
             testable: ∃ normal_range ∨ ∃ normal_status;
         post_cond

@@ -6,30 +6,6 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-package data_types.text {
-}
-
-package data_types.quantity {
-}
-
-package data_types.encapsulated {
-}
-
-package data_types.time_specification {
-}
-
-package data_types.uri {
-}
-
-package definitions {
-}
-
-package data_marking {
-}
-
-package data_structures {
-}
-
 package builtin_types.primitive_types {
 }
 
@@ -46,6 +22,30 @@ package builtin_types.terminology {
 }
 
 package builtin_types.functional {
+}
+
+package data_types.text {
+}
+
+package data_types.quantity {
+}
+
+package data_types.encapsulated {
+}
+
+package data_types.time_specification {
+}
+
+package data_types.uri {
+}
+
+package data_structures {
+}
+
+package definitions {
+}
+
+package data_marking {
 }
 
 package identification {

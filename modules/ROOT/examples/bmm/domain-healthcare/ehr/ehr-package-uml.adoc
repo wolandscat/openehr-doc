@@ -6,19 +6,16 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_access]] {
+class FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_folder]] {
         .. access ..
-        scheme:String
+        items: List<OBJECT_REF>
+        details: ITEM_STRUCTURE
 }
 
-EHR_ACCESS -[#gray]up-|> LOCATABLE  
+FOLDER -[#gray]up-|> LOCATABLE  
 
 
-EHR_ACCESS *--> "0..1 settings" ACCESS_CONTROL_SETTINGS
-
-abstract class ACCESS_CONTROL_SETTINGS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_access_control_settings]] {
-}
-
+FOLDER *--> "0..* folders" FOLDER
 
 class VERSIONED_EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_status]] {
 }
@@ -28,7 +25,7 @@ VERSIONED_EHR_STATUS -[#gray]up-|> VERSIONED_OBJECT
 
 class VERSIONED_COMPOSITION [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_composition]] {
         .. access ..
-        is_persistent:Boolean
+        is_persistent: Boolean
 }
 
 VERSIONED_COMPOSITION -[#gray]up-|> VERSIONED_OBJECT  
@@ -38,6 +35,17 @@ class VERSIONED_FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_cla
 }
 
 VERSIONED_FOLDER -[#gray]up-|> VERSIONED_OBJECT  
+
+
+class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_status]] {
+        .. access ..
+        subject: PARTY_SELF
+        is_queryable: Boolean
+        is_modifiable: Boolean
+        other_details: ITEM_STRUCTURE
+}
+
+EHR_STATUS -[#gray]up-|> LOCATABLE  
 
 
 class VERSIONED_EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_access]] {
@@ -61,26 +69,18 @@ class EHR [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr]] {
 }
 
 
-class FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_folder]] {
+class EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_access]] {
         .. access ..
-        items: List<OBJECT_REF>
-        details: ITEM_STRUCTURE
+        scheme: String
 }
 
-FOLDER -[#gray]up-|> LOCATABLE  
+EHR_ACCESS -[#gray]up-|> LOCATABLE  
 
 
-FOLDER *--> "0..* folders" FOLDER
+EHR_ACCESS *--> "0..1 settings" ACCESS_CONTROL_SETTINGS
 
-class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_status]] {
-        .. access ..
-        subject: PARTY_SELF
-        is_queryable: Boolean
-        is_modifiable: Boolean
-        other_details: ITEM_STRUCTURE
+abstract class ACCESS_CONTROL_SETTINGS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_access_control_settings]] {
 }
-
-EHR_STATUS -[#gray]up-|> LOCATABLE  
 
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }

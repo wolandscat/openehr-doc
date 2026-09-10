@@ -12,13 +12,13 @@ feature_group ("access")
     | distinct (i.e. non-compatible) terminologies. Thus the names "ICD10AM" and "ICD10" refer to distinct
     | terminologies.
     | 
-    func name:String
+    func name: String
         ;
 
     | 
     | Version of this terminology, if versioning supported, else the empty string.
     | 
-    func version_id:String
+    func version_id: String
         ;
 
 

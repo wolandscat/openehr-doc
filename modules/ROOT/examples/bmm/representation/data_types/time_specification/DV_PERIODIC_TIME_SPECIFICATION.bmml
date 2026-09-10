@@ -15,25 +15,25 @@ feature_group ("access")
     | The period of the repetition, computationally derived from the syntax representation.
     | Extracted from the value' attribute.
     | 
-    func period:DV_DURATION
+    func period: DV_DURATION
         ;
 
     | 
     | Calendar alignment extracted from value.
     | 
-    func calendar_alignment:String
+    func calendar_alignment: String
         ;
 
     | 
     | Event alignment extracted from value.
     | 
-    func event_alignment:String
+    func event_alignment: String
         ;
 
     | 
     | Extracted from value.
     | 
-    func institution_specified:Boolean
+    func institution_specified: Boolean
         ;
 
 invariant

@@ -28,7 +28,7 @@ feature_group ("access")
     | * `id.value`
     | * `/` + `path`, where `path` is non-empty
     | 
-    func as_uri:String
+    func as_uri: String
         ;
 
 

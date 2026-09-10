@@ -9,7 +9,7 @@ h|*Description*
 models.
 
 h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_proper_interval[Proper_Interval]
+2+|xref:representation:builtin_types-gen.adoc#_class_proper_interval[Proper_interval]
 
 h|
 2+^h|*Feature Group "access"*

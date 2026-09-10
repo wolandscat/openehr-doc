@@ -4,7 +4,7 @@
 | 
 
 class FUNCTION
-    is_a ROUTINE<>
+    is_a ROUTINE<V>
 
 
 end

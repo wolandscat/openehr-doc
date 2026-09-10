@@ -6,6 +6,20 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
+abstract class BMM_SCHEMA_DESCRIPTOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_schema_descriptor]] {
+        .. access ..
+        schema_id: String
+        meta_data: Map<String,String>
+        includes: List<String>
+        is_top_level: Boolean
+        is_bmm_compatible: Boolean
+}
+
+
+BMM_SCHEMA_DESCRIPTOR *--> "0..1 bmm_schema" BMM_SCHEMA
+
+BMM_SCHEMA_DESCRIPTOR *--> "0..1 bmm_model" BMM_MODEL
+
 abstract class BMM_SCHEMA [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_schema]] {
         .. access ..
         bmm_version: String
@@ -16,8 +30,8 @@ abstract class BMM_SCHEMA [[/openehr-doc/latest/languages/bmm-gen.html#_class_bm
         schema_description: String
         model_name: String
         schema_contributors: List<String>
-        schema_id:String
-        read_to_validate:Boolean
+        schema_id: String
+        read_to_validate: Boolean
 }
 
 BMM_SCHEMA -[#gray]up-|> BMM_MODEL_METADATA  
@@ -28,20 +42,6 @@ BMM_SCHEMA *--> "1 state" BMM_SCHEMA_STATE
 BMM_SCHEMA *--> "0..* includes" BMM_INCLUDE_SPEC
 
 BMM_SCHEMA *--> "0..1 bmm_model" BMM_MODEL
-
-abstract class BMM_SCHEMA_DESCRIPTOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_schema_descriptor]] {
-        .. access ..
-        schema_id: String
-        meta_data: Map<String,String>
-        includes: List<String>
-        is_top_level:Boolean
-        is_bmm_compatible:Boolean
-}
-
-
-BMM_SCHEMA_DESCRIPTOR *--> "0..1 bmm_schema" BMM_SCHEMA
-
-BMM_SCHEMA_DESCRIPTOR *--> "0..1 bmm_model" BMM_MODEL
 
 enum BMM_SCHEMA_STATE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_schema_state]] {
         .. values ..

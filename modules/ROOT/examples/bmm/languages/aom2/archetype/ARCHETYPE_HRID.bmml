@@ -56,40 +56,40 @@ feature_group ("access")
     | 
     | The 'interface' form of the HRID, i.e. down to the major version.
     | 
-    func semantic_id:String
+    func semantic_id: String
         ;
 
     | 
     | The 'physical' form of the HRID, i.e. with complete version information specified by
     | `version_id()`.
     | 
-    func physical_id:String
+    func physical_id: String
         ;
 
     | 
     | Full version identifier string, based on `release_version`, `version_status`, and
     | `build_count` e.g. `"1.8.2-rc.4"`.
     | 
-    func version_id:String
+    func version_id: String
         ;
 
     | 
     | Major version of this archetype, extracted from `release_version`.
     | 
-    func major_version:String
+    func major_version: String
         ;
 
     | 
     | Minor version of this archetype, extracted from `release_version`.
     | 
-    func minor_version:String
+    func minor_version: String
         ;
 
     | 
     | Patch version of this archetype, extracted from `release_version`. Equivalent to patch
     | version in patch version in `semver.org` sytem.
     | 
-    func patch_version:String
+    func patch_version: String
         ;
 
 invariant

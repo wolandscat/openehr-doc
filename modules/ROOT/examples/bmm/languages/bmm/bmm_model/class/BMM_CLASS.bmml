@@ -55,38 +55,38 @@ feature_group ("access")
     | 
     | Generate a type object that represents the type for which this class is the definer.
     | 
-    func type:BMM_MODEL_TYPE
+    func type: BMM_MODEL_TYPE
         ;
 
     | 
     | List of all inheritance parent class names, recursively.
     | 
-    func all_ancestors:List<String>
+    func all_ancestors: List<String>
         ;
 
     | 
     | Compute all descendants by following `immediate_descendants`.
     | 
-    func all_descendants:List<String>
+    func all_descendants: List<String>
         ;
 
     | 
     | List of all properties due to current and ancestor classes, keyed by property name.
     | 
-    func flat_properties:List<BMM_PROPERTY>
+    func flat_properties: List<BMM_PROPERTY>
         ;
 
     | 
     | Fully qualified package name, of form: `package.package`.
     | 
-    func package_path:String
+    func package_path: String
         ;
 
     | 
     | Fully qualified class name, of form: `package.package.CLASS` with package path in lower-
     | case and class in original case.
     | 
-    func class_path:String
+    func class_path: String
         ;
 
 invariant

@@ -23,7 +23,7 @@ feature_group ("access")
     | 
     | Size in bytes of value.
     | 
-    func size:Integer
+    func size: Integer
         ;
 
 invariant

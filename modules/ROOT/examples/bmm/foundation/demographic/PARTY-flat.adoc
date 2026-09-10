@@ -153,7 +153,7 @@ h|
 2+a|contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
 
 h|
-2+a|relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
+2+a|relationships_validity: ¬ relationships.is_empty() ⇒ r.source ∧ relationships.for_all(self);
 
 h|
 2+a|reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);

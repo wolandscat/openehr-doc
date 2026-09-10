@@ -11,7 +11,7 @@ feature_group ("access")
     | 
     | Result = self.
     | 
-    func unitary_type:BMM_UNITARY_TYPE
+    func unitary_type: BMM_UNITARY_TYPE
         ;
 
 

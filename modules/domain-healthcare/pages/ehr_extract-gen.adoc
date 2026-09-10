@@ -26,20 +26,20 @@ include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/common-package-um
 === Classes
 
 
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ITEM-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ACTION_REQUEST-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_VERSION_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_REQUEST-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_FOLDER-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ENTITY_MANIFEST-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_PARTICIPATION-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_UPDATE_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ACTION_REQUEST-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_CHAPTER-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_MANIFEST-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_REQUEST-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_FOLDER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_PARTICIPATION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_VERSION_SPEC-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ENTITY_CHAPTER-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_CONTENT_ITEM-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_SPEC-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/common/EXTRACT_UPDATE_SPEC-section.adoc[leveloffset=+1]
 
 
 
@@ -53,14 +53,14 @@ include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/openehr_
 === Classes
 
 
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_EHR_ACCESS-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_EHR_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/OPENEHR_CONTENT_ITEM-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_COMPOSITION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_EHR_ACCESS-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_FOLDER-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_OBJECT-section.adoc[leveloffset=+1]
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/OPENEHR_CONTENT_ITEM-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_PARTY-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_CONTRIBUTION-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/openehr_extract/X_VERSIONED_EHR_STATUS-section.adoc[leveloffset=+1]
 
 
 
@@ -88,9 +88,9 @@ include::ROOT:example$bmm/domain-healthcare/ehr_extract/sync_extract/sync_extrac
 === Classes
 
 
-include::ROOT:example$bmm/domain-healthcare/ehr_extract/sync_extract/SYNC_EXTRACT_SPEC-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/sync_extract/SYNC_EXTRACT-section.adoc[leveloffset=+1]
 include::ROOT:example$bmm/domain-healthcare/ehr_extract/sync_extract/SYNC_EXTRACT_REQUEST-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/domain-healthcare/ehr_extract/sync_extract/SYNC_EXTRACT_SPEC-section.adoc[leveloffset=+1]
 
 
 

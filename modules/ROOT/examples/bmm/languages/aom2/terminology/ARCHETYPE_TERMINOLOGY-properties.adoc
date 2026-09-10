@@ -29,14 +29,14 @@ Must be defined in the `term_definitions` property.
 
 h|prop +
   
-|*term_definitions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM]>>
+|*term_definitions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM]>>
 a|Directory of term definitions as a two-level table. The outer hash keys are language
 codes, e.g. `"en"`, `"de"`, while the inner hash keys are term codes, e.g. `"at0017"`,
 `"at0004"` (at-coded archetypes) or `"id17"`, `"at4"` (id-coded archetypes).
 
 h|prop +
   0..1
-|*term_bindings*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_uri[Uri]>>
+|*term_bindings*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_uri[Uri]>>
 a|Directory of bindings to external terminology codes and value sets, as a two-level table.
 The outer hash keys are terminology ids, e.g. `"SNOMED_CT"`, and the inner hash keys are
 constraint codes, e.g. `"at0004"`, `"at4"`, "ac13"` or paths. The indexed `Uri` objects
@@ -55,7 +55,7 @@ a|Archetype-local value sets, each keyed by value-set id, i.e. an ac-code.
 
 h|prop +
   0..1
-|*terminology_extracts*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM]>>
+|*terminology_extracts*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String], xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM]>>
 a|Directory of extracts of external terminologies, as a two-level table. The outer hash keys
 are terminology ids, e.g. `"SNOMED_CT"`, while the inner hash keys are term codes or code-
 phrases from the relevant terminology, e.g. `"10094842"`.

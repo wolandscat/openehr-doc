@@ -3,7 +3,7 @@
 | 
 
 class BMM_PRIMITIVE_VALUE
-    is_a BMM_UNITARY_VALUE<>
+    is_a BMM_UNITARY_VALUE<T>
 
 feature_group ("access")
 

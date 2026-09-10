@@ -77,7 +77,7 @@ feature_group ("access")
     | 
     | True if `precision` = 0, meaning that the `magnitude` is a whole number.
     | 
-    func is_integral:Boolean
+    func is_integral: Boolean
         ;
 
 

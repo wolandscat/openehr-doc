@@ -64,7 +64,7 @@ feature_group ("access")
     | True if category is `431|persistent|`, False otherwise. Useful for finding
     | Compositions in an EHR which are guaranteed to be of interest to most users.
     | 
-    func is_persistent:Boolean
+    func is_persistent: Boolean
         ;
 
 invariant

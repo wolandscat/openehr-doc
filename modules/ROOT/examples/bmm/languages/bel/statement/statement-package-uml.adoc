@@ -6,20 +6,14 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class VARIABLE_DECLARATION [[/openehr-doc/latest/languages/bel-gen.html#_class_variable_declaration]] {
-        .. access ..
-        name: String
+abstract class STATEMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_statement]] {
 }
 
-VARIABLE_DECLARATION -[#gray]up-|> STATEMENT  
-
-
-VARIABLE_DECLARATION *--> "1 type" EXPR_TYPE_DEF
 
 class STATEMENT_SET [[/openehr-doc/latest/languages/bel-gen.html#_class_statement_set]] {
         .. access ..
         name: String
-        execution_result:Boolean
+        execution_result: Boolean
 }
 
 
@@ -36,10 +30,6 @@ ASSERTION -[#gray]up-|> STATEMENT
 
 ASSERTION *--> "1 expression" EXPRESSION
 
-abstract class STATEMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_statement]] {
-}
-
-
 class ASSIGNMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_assignment]] {
         .. access ..
 }
@@ -50,5 +40,15 @@ ASSIGNMENT -[#gray]up-|> STATEMENT
 ASSIGNMENT *--> "1 target" VARIABLE_DECLARATION
 
 ASSIGNMENT *--> "1 source" EXPR_VALUE
+
+class VARIABLE_DECLARATION [[/openehr-doc/latest/languages/bel-gen.html#_class_variable_declaration]] {
+        .. access ..
+        name: String
+}
+
+VARIABLE_DECLARATION -[#gray]up-|> STATEMENT  
+
+
+VARIABLE_DECLARATION *--> "1 type" EXPR_TYPE_DEF
 
 ....

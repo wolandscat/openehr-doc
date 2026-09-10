@@ -11,7 +11,7 @@ feature_group ("access")
     | 
     | Return the greatest integer no greater than the value of this object.
     | 
-    func floor:Integer
+    func floor: Integer
         ;
 
 feature_group ("operators")
@@ -19,7 +19,7 @@ feature_group ("operators")
     | 
     | Real number addition.
     | 
-    func add(other: Real):Real
+    func add(other: Real): Real
         alias
             +;
         ;
@@ -27,7 +27,7 @@ feature_group ("operators")
     | 
     | Real number subtraction.
     | 
-    func subtract(other: Real):Real
+    func subtract(other: Real): Real
         alias
             -;
         ;
@@ -35,7 +35,7 @@ feature_group ("operators")
     | 
     | Real number multiplication.
     | 
-    func multiply(other: Real):Real
+    func multiply(other: Real): Real
         alias
             *;
         ;
@@ -43,7 +43,7 @@ feature_group ("operators")
     | 
     | Real number division.
     | 
-    func divide(other: Real):Double
+    func divide(other: Real): Double
         alias
             /;
         ;
@@ -51,7 +51,7 @@ feature_group ("operators")
     | 
     | Real number exponentiation.
     | 
-    func exponent(other: Double):Double
+    func exponent(other: Double): Double
         alias
             ^;
         ;
@@ -59,7 +59,7 @@ feature_group ("operators")
     | 
     | Returns True if current Real is less than `other`.
     | 
-    func less_than(other: Real):Boolean
+    func less_than(other: Real): Boolean
         alias
             <;
         ;
@@ -67,7 +67,7 @@ feature_group ("operators")
     | 
     | Generate negative of current Real value.
     | 
-    func negative:Real
+    func negative: Real
         alias
             -;
         ;

@@ -21,14 +21,14 @@ feature_group ("access")
     | 
     | Return `agent.definition.type`.
     | 
-    func eval_type:BMM_TYPE
+    func eval_type: BMM_TYPE
         ;
 
     | 
     | Generated full reference name, consisting of any scoping elements, function name and
     | routine parameters enclosed in parentheses.
     | 
-    func reference:String
+    func reference: String
         ;
 
 invariant

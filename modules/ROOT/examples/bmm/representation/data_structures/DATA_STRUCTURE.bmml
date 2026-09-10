@@ -15,7 +15,7 @@ feature_group ("access")
     | Hierarchical equivalent of the physical representation of each subtype, compatible with
     | CEN EN 13606 structures.
     | 
-    func as_hierarchy:ITEM
+    func as_hierarchy: ITEM
         ;
 
 

@@ -18,37 +18,37 @@ feature_group ("access")
     | 
     | Extract the hour part of timezone, as an Integer in the range `00 - 14`.
     | 
-    func hour:Integer
+    func hour: Integer
         ;
 
     | 
     | Extract the hour part of timezone, as an Integer, usually either 0 or 30.
     | 
-    func minute:Integer
+    func minute: Integer
         ;
 
     | 
     | Direction of timezone expresssed as +1 or -1.
     | 
-    func sign:Integer
+    func sign: Integer
         ;
 
     | 
     | Indicates whether minute part known.
     | 
-    func minute_unknown:Boolean
+    func minute_unknown: Boolean
         ;
 
     | 
     | True if timezone is UTC, i.e. `+0000`.
     | 
-    func is_gmt:Boolean
+    func is_gmt: Boolean
         ;
 
     | 
     | Return timezone string in extended format.
     | 
-    func as_string:String
+    func as_string: String
         ;
 
 invariant

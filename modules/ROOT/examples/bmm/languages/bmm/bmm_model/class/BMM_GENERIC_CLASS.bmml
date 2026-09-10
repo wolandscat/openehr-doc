@@ -17,7 +17,7 @@ feature_group ("access")
     | Generate a fully open `BMM_GENERIC_TYPE` instance that corresponds to this class
     | definition
     | 
-    func type:BMM_GENERIC_TYPE
+    func type: BMM_GENERIC_TYPE
         ;
 
     | 
@@ -25,7 +25,7 @@ feature_group ("access")
     | is `Interval <T:Comparable>` then the Result will be the single type `Comparable`. For an
     | unconstrained type `T`, the Result will be `Any`.
     | 
-    func generic_parameter_conformance_type(a_name: String):String
+    func generic_parameter_conformance_type(a_name: String): String
         ;
 
 

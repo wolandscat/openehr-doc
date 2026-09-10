@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class Proper_Interval<T:Ordered>*
+3+^h|  *class Point_interval<T:Ordered>*
 
 
 h|

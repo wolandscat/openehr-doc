@@ -6,14 +6,20 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class DV_PARAGRAPH [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_paragraph]] {
+class TERM_MAPPING [[/openehr-doc/latest/representation/data_types-gen.html#_class_term_mapping]] {
         .. access ..
+        match: Character
+        narrower: Boolean
+        broader: Boolean
+        equivalent: Boolean
+        unknown: Boolean
+        is_valid_match_code(c: Character): Boolean
 }
 
-DV_PARAGRAPH -[#gray]up-|> DATA_VALUE  
 
+TERM_MAPPING *--> "0..1 purpose" DV_CODED_TEXT
 
-DV_PARAGRAPH *--> "0..* items" DV_TEXT
+TERM_MAPPING *--> "1 target" CODE_PHRASE
 
 enum TEXT_FORMAT_TYPES [[/openehr-doc/latest/representation/data_types-gen.html#_class_text_format_types]] {
         .. values ..
@@ -22,29 +28,29 @@ enum TEXT_FORMAT_TYPES [[/openehr-doc/latest/representation/data_types-gen.html#
         markdown = 2
 }
 
-class TERM_MAPPING [[/openehr-doc/latest/representation/data_types-gen.html#_class_term_mapping]] {
+class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_text]] {
         .. access ..
-        match: Character
-        narrower:Boolean
-        broader:Boolean
-        equivalent:Boolean
-        unknown:Boolean
-        is_valid_match_code(c: Character):Boolean
+        value: String
+        hyperlink: DV_URI
+        formatting: String
 }
 
+DV_TEXT -[#gray]up-|> DATA_VALUE  
 
-TERM_MAPPING *--> "0..1 purpose" DV_CODED_TEXT
 
-TERM_MAPPING *--> "1 target" CODE_PHRASE
+DV_TEXT *--> "0..* mappings" TERM_MAPPING
+
+DV_TEXT *--> "0..1 language" CODE_PHRASE
+
+DV_TEXT *--> "0..1 encoding" CODE_PHRASE
 
 class CODE_PHRASE [[/openehr-doc/latest/representation/data_types-gen.html#_class_code_phrase]] {
         .. access ..
+        terminology_id: TERMINOLOGY_ID
         code_string: String
         preferred_term: String
 }
 
-
-CODE_PHRASE *--> "1 terminology_id" TERMINOLOGY_ID
 
 class DV_CODED_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_coded_text]] {
         .. access ..
@@ -55,22 +61,14 @@ DV_CODED_TEXT -[#gray]up-|> DV_TEXT
 
 DV_CODED_TEXT *--> "1 defining_code" CODE_PHRASE
 
-class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_text]] {
+class DV_PARAGRAPH [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_paragraph]] {
         .. access ..
-        value: String
-        formatting: String
 }
 
-DV_TEXT -[#gray]up-|> DATA_VALUE  
+DV_PARAGRAPH -[#gray]up-|> DATA_VALUE  
 
 
-DV_TEXT *--> "0..1 hyperlink" DV_URI
-
-DV_TEXT *--> "0..* mappings" TERM_MAPPING
-
-DV_TEXT *--> "0..1 language" CODE_PHRASE
-
-DV_TEXT *--> "0..1 encoding" CODE_PHRASE
+DV_PARAGRAPH *--> "0..* items" DV_TEXT
 abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/openehr-doc/latest/representation/data_types-gen.html#_class_data_value]] #FDFDFD {
 }
 

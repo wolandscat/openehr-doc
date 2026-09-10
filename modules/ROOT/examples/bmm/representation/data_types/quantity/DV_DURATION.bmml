@@ -30,25 +30,25 @@ feature_group ("access")
     | Numeric value of the duration as a number of seconds. Computed using the method
     | `to_seconds()` inherited from `Iso8601_duration`.
     | 
-    func magnitude:Double
+    func magnitude: Double
         ;
 
     | 
     | Sum of this Duration and `other`.
     | 
-    func add(other: DV_DURATION):DV_DURATION
+    func add(other: DV_DURATION): DV_DURATION
         ;
 
     | 
     | Difference of this Duration and `other`.
     | 
-    func subtract(other: DV_DURATION):DV_DURATION
+    func subtract(other: DV_DURATION): DV_DURATION
         ;
 
     | 
     | Product of this Duration and `factor`.
     | 
-    func multiply(factor: Real):DV_DURATION
+    func multiply(factor: Real): DV_DURATION
         ;
 
     | 
@@ -57,7 +57,7 @@ feature_group ("access")
     | Assuming the current duration is positive, the negated version represents a time prior to
     | some origin point, or a negative age (e.g. so-called 'adjusted age' of premature infant).
     | 
-    func negative:DV_DURATION
+    func negative: DV_DURATION
         ;
 
 invariant

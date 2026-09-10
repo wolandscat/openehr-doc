@@ -8,31 +8,6 @@ skinparam citedClassColor #FDFDFD
 
 LOCATABLE -[#gray]up-|> PATHABLE  
 
-class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_composition]] {
-        .. access ..
-        language: CODE_PHRASE «iso.iso_639-1»
-        territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
-        category: DV_CODED_TEXT
-        composer: PARTY_PROXY
-        is_persistent:Boolean
-}
-
-COMPOSITION -[#gray]up-|> LOCATABLE  
-
-
-COMPOSITION *--> "0..1 context" EVENT_CONTEXT
-
-COMPOSITION *--> "0..* content" CONTENT_ITEM
-
-class SECTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_section]] {
-        .. access ..
-}
-
-SECTION -[#gray]up-|> CONTENT_ITEM  
-
-
-SECTION *--> "0..* items" CONTENT_ITEM
-
 class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_event_context]] {
         .. access ..
         start_time: DV_DATE_TIME
@@ -53,9 +28,34 @@ abstract class CONTENT_ITEM [[/openehr-doc/latest/foundation/subject_record-gen.
 
 CONTENT_ITEM -[#gray]up-|> LOCATABLE  
 
-abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
+
+class SECTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_section]] {
+        .. access ..
 }
+
+SECTION -[#gray]up-|> CONTENT_ITEM  
+
+
+SECTION *--> "0..* items" CONTENT_ITEM
+
+class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_composition]] {
+        .. access ..
+        language: CODE_PHRASE «iso.iso_639-1»
+        territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
+        category: DV_CODED_TEXT
+        composer: PARTY_PROXY
+        is_persistent: Boolean
+}
+
+COMPOSITION -[#gray]up-|> LOCATABLE  
+
+
+COMPOSITION *--> "0..1 context" EVENT_CONTEXT
+
+COMPOSITION *--> "0..* content" CONTENT_ITEM
 abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
+}
+abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
 
 ....

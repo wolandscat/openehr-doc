@@ -6,6 +6,27 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
+package aom2.archetype {
+}
+
+package aom2.constraint_model.complex {
+}
+
+package aom2.constraint_model.primitive {
+}
+
+package aom2.rules {
+}
+
+package aom2.terminology {
+}
+
+package aom2.rm_overlay {
+}
+
+package aom2.aom_profile {
+}
+
 package bmm.definitions {
 }
 
@@ -49,27 +70,6 @@ package bel.statement {
 }
 
 package bel.type {
-}
-
-package aom2.archetype {
-}
-
-package aom2.constraint_model.complex {
-}
-
-package aom2.constraint_model.primitive {
-}
-
-package aom2.rules {
-}
-
-package aom2.terminology {
-}
-
-package aom2.rm_overlay {
-}
-
-package aom2.aom_profile {
 }
 
 ....

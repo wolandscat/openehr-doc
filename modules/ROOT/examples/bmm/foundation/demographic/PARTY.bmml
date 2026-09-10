@@ -42,19 +42,19 @@ feature_group ("access")
     | Type of party, such as `PERSON`, `ORGANISATION`, etc. Role name, e.g. general practitioner
     | , nurse , private citizen . Taken from inherited `name` attribute.
     | 
-    func type:DV_TEXT
+    func type: DV_TEXT
         ;
 
     | 
     | References to relationships in which this Party takes part as target.
     | 
-    func reverse_relationships:List<LOCATABLE_REF>
+    func reverse_relationships: List<LOCATABLE_REF>
         ;
 
 invariant
     type_valid: type = name;
     contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
-    relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
+    relationships_validity: ¬ relationships.is_empty() ⇒ r.source ∧ relationships.for_all(self);
     reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);
     is_archetype_root: is_archetype_root;
     uid_mandatory: ∃ uid;

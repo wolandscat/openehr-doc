@@ -6,49 +6,22 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class INTERVAL_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_interval_event]] {
-        .. access ..
-        sample_count: Integer
-        interval_start_time:DV_DATE_TIME
+abstract class ITEM [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item]] {
 }
 
-INTERVAL_EVENT -[#gray]up-|> EVENT  
+ITEM -[#gray]up-|> LOCATABLE  
 
 
-INTERVAL_EVENT *--> "1 width" DV_DURATION
-
-INTERVAL_EVENT *--> "1 math_function" DV_CODED_TEXT
-
-abstract class PARTY_PROXY [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_proxy]] {
+class ELEMENT [[/openehr-doc/latest/representation/data_structures-gen.html#_class_element]] {
         .. access ..
+        value: DATA_VALUE
+        null_flavour: DV_CODED_TEXT
+        null_reason: DV_TEXT
+        is_null: Boolean
 }
 
+ELEMENT -[#gray]up-|> ITEM  
 
-PARTY_PROXY *--> "0..1 external_ref" PARTY_REF
-
-class ITEM_SINGLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_single]] {
-        .. access ..
-        as_hierarchy:ELEMENT
-}
-
-ITEM_SINGLE -[#gray]up-|> ITEM_STRUCTURE  
-
-
-ITEM_SINGLE *--> "1 item" ELEMENT
-
-class ITEM_LIST [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_list]] {
-        .. access ..
-        item_count:Integer
-        names:List<DV_TEXT>
-        named_item(a_name: String):ELEMENT
-        ith_item(i: Integer):ELEMENT
-        as_hierarchy:CLUSTER
-}
-
-ITEM_LIST -[#gray]up-|> ITEM_STRUCTURE  
-
-
-ITEM_LIST *--> "0..* items" ELEMENT
 
 class CLUSTER [[/openehr-doc/latest/representation/data_structures-gen.html#_class_cluster]] {
         .. access ..
@@ -59,92 +32,11 @@ CLUSTER -[#gray]up-|> ITEM
 
 CLUSTER *--> "0..* items" ITEM
 
-class PARTY_RELATED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_related]] {
-        .. access ..
-}
-
-PARTY_RELATED -[#gray]up-|> PARTY_IDENTIFIED  
-
-
-PARTY_RELATED *--> "1 relationship" DV_CODED_TEXT
-
-class HISTORY<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_history]] {
-        .. access ..
-        events: List<EVENT<T>>
-        is_periodic:Boolean
-}
-
-HISTORY -[#gray]up-|> DATA_STRUCTURE  
-
-
-HISTORY *--> "1 origin" DV_DATE_TIME
-
-HISTORY *--> "0..1 period" DV_DURATION
-
-HISTORY *--> "0..1 duration" DV_DURATION
-
-HISTORY *--> "0..1 summary" ITEM_STRUCTURE
-
-class PARTY_IDENTIFIED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_identified]] {
-        .. access ..
-        name: String
-}
-
-PARTY_IDENTIFIED -[#gray]up-|> PARTY_PROXY  
-
-
-PARTY_IDENTIFIED *--> "0..* identifiers" DV_IDENTIFIER
-
-abstract class EVENT<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_event]] {
-        .. access ..
-        data: T
-        offset:DV_DURATION
-}
-
-EVENT -[#gray]up-|> LOCATABLE  
-
-
-EVENT *--> "1 time" DV_DATE_TIME
-
-EVENT *--> "0..1 state" ITEM_STRUCTURE
-
-class POINT_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_point_event]] {
-}
-
-POINT_EVENT -[#gray]up-|> EVENT  
-
-
-abstract class ITEM_STRUCTURE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_structure]] {
-}
-
-ITEM_STRUCTURE -[#gray]up-|> DATA_STRUCTURE  
-
-
-class ELEMENT [[/openehr-doc/latest/representation/data_structures-gen.html#_class_element]] {
-        .. access ..
-        is_null:Boolean
-}
-
-ELEMENT -[#gray]up-|> ITEM  
-
-
-ELEMENT *--> "0..1 value" DATA_VALUE
-
-ELEMENT *--> "0..1 null_flavour" DV_CODED_TEXT
-
-ELEMENT *--> "0..1 null_reason" DV_TEXT
-
-abstract class ITEM [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item]] {
-}
-
-ITEM -[#gray]up-|> LOCATABLE  
-
-
 class ITEM_TREE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_tree]] {
         .. access ..
-        has_element_path(a_path: String):Boolean
-        element_at_path(a_path: String):ELEMENT
-        as_hierarchy:CLUSTER
+        has_element_path(a_path: String): Boolean
+        element_at_path(a_path: String): ELEMENT
+        as_hierarchy: CLUSTER
 }
 
 ITEM_TREE -[#gray]up-|> ITEM_STRUCTURE  
@@ -152,26 +44,117 @@ ITEM_TREE -[#gray]up-|> ITEM_STRUCTURE
 
 ITEM_TREE *--> "0..* items" ITEM
 
+abstract class DATA_STRUCTURE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_data_structure]] {
+        .. access ..
+        as_hierarchy: ITEM
+}
+
+DATA_STRUCTURE -[#gray]up-|> LOCATABLE  
+
+
+abstract class EVENT<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_event]] {
+        .. access ..
+        time: DV_DATE_TIME
+        data: T
+        offset: DV_DURATION
+}
+
+EVENT -[#gray]up-|> LOCATABLE  
+
+
+EVENT *--> "0..1 state" ITEM_STRUCTURE
+
+class ITEM_SINGLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_single]] {
+        .. access ..
+        as_hierarchy: ELEMENT
+}
+
+ITEM_SINGLE -[#gray]up-|> ITEM_STRUCTURE  
+
+
+ITEM_SINGLE *--> "1 item" ELEMENT
+
+class PARTY_IDENTIFIED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_identified]] {
+        .. access ..
+        name: String
+        identifiers: List<DV_IDENTIFIER>
+}
+
+PARTY_IDENTIFIED -[#gray]up-|> PARTY_PROXY  
+
+
+class POINT_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_point_event]] {
+}
+
+POINT_EVENT -[#gray]up-|> EVENT  
+
+
 class PARTY_SELF [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_self]] {
 }
 
 PARTY_SELF -[#gray]up-|> PARTY_PROXY  
 
 
+class INTERVAL_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_interval_event]] {
+        .. access ..
+        width: DV_DURATION
+        sample_count: Integer
+        math_function: DV_CODED_TEXT
+        interval_start_time: DV_DATE_TIME
+}
+
+INTERVAL_EVENT -[#gray]up-|> EVENT  
+
+
+class ITEM_LIST [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_list]] {
+        .. access ..
+        item_count: Integer
+        names: List<DV_TEXT>
+        named_item(a_name: String): ELEMENT
+        ith_item(i: Integer): ELEMENT
+        as_hierarchy: CLUSTER
+}
+
+ITEM_LIST -[#gray]up-|> ITEM_STRUCTURE  
+
+
+ITEM_LIST *--> "0..* items" ELEMENT
+
+class HISTORY<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_history]] {
+        .. access ..
+        origin: DV_DATE_TIME
+        period: DV_DURATION
+        duration: DV_DURATION
+        is_periodic: Boolean
+}
+
+HISTORY -[#gray]up-|> DATA_STRUCTURE  
+
+
+HISTORY *--> "0..1 summary" ITEM_STRUCTURE
+
+HISTORY *--> "0..* events" EVENT
+
+abstract class PARTY_PROXY [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_proxy]] {
+        .. access ..
+        external_ref: PARTY_REF
+}
+
+
 class ITEM_TABLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_table]] {
         .. access ..
-        row_count:Integer
-        column_count:Integer
-        row_names:List<DV_TEXT>
-        column_names:List<DV_TEXT>
-        ith_row(i: Integer):CLUSTER
-        has_row_with_name(a_name: String):Boolean
-        has_column_with_name(a_name: String):Boolean
-        named_row(a_name: String):CLUSTER
-        has_row_with_key(keys: List<String>):Boolean
-        row_with_key(keys: List<String>):CLUSTER
-        element_at_cell_ij(i: Integer, ...):ELEMENT
-        as_hierarchy:CLUSTER
+        row_count: Integer
+        column_count: Integer
+        row_names: List<DV_TEXT>
+        column_names: List<DV_TEXT>
+        ith_row(i: Integer): CLUSTER
+        has_row_with_name(a_name: String): Boolean
+        has_column_with_name(a_name: String): Boolean
+        named_row(a_name: String): CLUSTER
+        has_row_with_key(keys: List<String>): Boolean
+        row_with_key(keys: List<String>): CLUSTER
+        element_at_cell_ij(i: Integer, ...): ELEMENT
+        as_hierarchy: CLUSTER
 }
 
 ITEM_TABLE -[#gray]up-|> ITEM_STRUCTURE  
@@ -179,12 +162,18 @@ ITEM_TABLE -[#gray]up-|> ITEM_STRUCTURE
 
 ITEM_TABLE *--> "0..* rows" CLUSTER
 
-abstract class DATA_STRUCTURE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_data_structure]] {
+class PARTY_RELATED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_related]] {
         .. access ..
-        as_hierarchy:ITEM
+        relationship: DV_CODED_TEXT
 }
 
-DATA_STRUCTURE -[#gray]up-|> LOCATABLE  
+PARTY_RELATED -[#gray]up-|> PARTY_IDENTIFIED  
+
+
+abstract class ITEM_STRUCTURE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_structure]] {
+}
+
+ITEM_STRUCTURE -[#gray]up-|> DATA_STRUCTURE  
 
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }

@@ -20,13 +20,13 @@ feature_group ("access")
     | recursing into the structure until classes are obtained from child packages. Recurse into
     | each child only far enough to find the first level of classes.
     | 
-    func root_classes:List<BMM_CLASS>
+    func root_classes: List<BMM_CLASS>
         ;
 
     | 
     | Full path of this package back to root package.
     | 
-    func path:String
+    func path: String
         ;
 
 

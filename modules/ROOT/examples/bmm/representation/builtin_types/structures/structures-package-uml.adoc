@@ -12,30 +12,30 @@ class Array<T:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_
 Array -[#gray]up-|> Container  
 
 
-abstract class Container<T:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_container]] {
-        .. access ..
-        has:Boolean
-        count:Integer
-        is_empty:Boolean
-}
-
-
 class List<T:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_list]] {
         .. access ..
-        first:T
-        last:T
+        first: T
+        last: T
 }
 
 List -[#gray]up-|> Container  
 
 
-class Map<K:Ordered,V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_map]] {
+class Map<K:Ordered, V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_map]] {
         .. access ..
-        has_key:Boolean
-        item:V
+        has_key: Boolean
+        item: V
 }
 
 Map -[#gray]up-|> Container  
+
+
+abstract class Container<T:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_container]] {
+        .. access ..
+        has: Boolean
+        count: Integer
+        is_empty: Boolean
+}
 
 
 class Set<T:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_set]] {
