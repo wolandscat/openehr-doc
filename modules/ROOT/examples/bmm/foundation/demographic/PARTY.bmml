@@ -54,8 +54,8 @@ feature_group ("access")
 invariant
     type_valid: type = name;
     contacts_valid: ∃ contacts ⇒ ¬ contacts.is_empty();
-    relationships_validity: ¬ relationships.is_empty() ⇒ r.source ∧ relationships.for_all(self);
-    reverse_relationships_validity: ¬ reverse_relationships.empty ⇒ repository("demographics").all_party_relationships.has_object(r) ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.object(r).target = self);
+    relationships_validity: ∃ relationships ⇒ ¬ relationships.is_empty() ∧ relationships.for_all(r.source = self);
+    reverse_relationships_validity: ∃ reverse_relationships ⇒ ¬ reverse_relationships.empty ∧ reverse_relationships.for_all(repository("demographics").all_party_relationships.has_object(r) ∧ repository("demographics").all_party_relationships.object(r).target = self);
     is_archetype_root: is_archetype_root;
     uid_mandatory: ∃ uid;
 

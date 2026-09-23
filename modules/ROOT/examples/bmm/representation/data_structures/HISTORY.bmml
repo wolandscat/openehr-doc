@@ -52,6 +52,6 @@ feature_group ("access")
 invariant
     events_valid: (∃ events ∧ ¬ events.is_empty) ∨ ∃ summary;
     periodic_validity: is_periodic ⊻ ¬ ∃ period;
-    period_consistency: e.offset.to_seconds.mod(period.to_seconds) ⇒ events.for_all(0);
+    period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
 
 end

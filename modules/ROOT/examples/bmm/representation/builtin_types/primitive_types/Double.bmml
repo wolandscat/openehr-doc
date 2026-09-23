@@ -21,7 +21,7 @@ feature_group ("operators")
     | 
     func add(other: Double): Double
         alias
-            +;
+            "+";
         ;
 
     | 
@@ -29,7 +29,7 @@ feature_group ("operators")
     | 
     func subtract(other: Double): Double
         alias
-            -;
+            "-";
         ;
 
     | 
@@ -37,7 +37,7 @@ feature_group ("operators")
     | 
     func multiply(other: Double): Double
         alias
-            *;
+            "*";
         ;
 
     | 
@@ -45,7 +45,7 @@ feature_group ("operators")
     | 
     func divide(other: Double): Double
         alias
-            /;
+            "/";
         ;
 
     | 
@@ -53,7 +53,7 @@ feature_group ("operators")
     | 
     func exponent(other: Double): Double
         alias
-            ^;
+            "^";
         ;
 
     | 
@@ -61,7 +61,7 @@ feature_group ("operators")
     | 
     func less_than(other: Double): Boolean
         alias
-            <;
+            "<";
         ;
 
     | 
@@ -69,7 +69,7 @@ feature_group ("operators")
     | 
     func negative: Double
         alias
-            -;
+            "-";
         ;
 
 

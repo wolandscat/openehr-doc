@@ -90,7 +90,7 @@ h|
 2+a|inv_constructors: creators.for_all(procedures.has(p));
 
 h|
-2+a|inv_converters: converters.for_all(p.arity() = 1);
+2+a|inv_converters: converters.for_all(creators.has(p) ∧ p.arity() = 1);
 
 
 |===

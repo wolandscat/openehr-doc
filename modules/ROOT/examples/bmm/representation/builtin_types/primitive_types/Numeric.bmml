@@ -14,7 +14,7 @@ feature_group ("operators")
     | 
     func add(other: Numeric): Numeric
         alias
-            +;
+            "+";
         ;
 
     | 
@@ -23,7 +23,7 @@ feature_group ("operators")
     | 
     func subtract(other: Numeric): Numeric
         alias
-            -;
+            "-";
         ;
 
     | 
@@ -31,7 +31,7 @@ feature_group ("operators")
     | 
     func multiply(other: Numeric): Numeric
         alias
-            *;
+            "*";
         ;
 
     | 
@@ -39,7 +39,7 @@ feature_group ("operators")
     | 
     func divide(other: Numeric): Numeric
         alias
-            /;
+            "/";
         ;
 
     | 
@@ -47,7 +47,7 @@ feature_group ("operators")
     | 
     func exponent(other: Numeric): Numeric
         alias
-            ^;
+            "^";
         ;
 
     | 
@@ -55,7 +55,7 @@ feature_group ("operators")
     | 
     func negative: Numeric
         alias
-            -;
+            "-";
         ;
 
 

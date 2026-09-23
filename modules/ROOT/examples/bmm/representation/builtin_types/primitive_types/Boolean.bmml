@@ -12,7 +12,7 @@ feature_group ("operators")
     | 
     func conjunction(other: Boolean): Boolean
         alias
-            and, ∧;
+            "and", "∧";
         post_cond
             non_contradiction: Result = ¬ (¬ self ∨ ¬ other);
             valid_result: Result = (other ∧ self);
@@ -23,7 +23,7 @@ feature_group ("operators")
     | 
     func semistrict_conjunction(other: Boolean): Boolean
         alias
-            and then;
+            "and then";
         post_cond
             valid_result: Result = ¬ (¬ self ∨ ¬ other);
         ;
@@ -33,7 +33,7 @@ feature_group ("operators")
     | 
     func disjunction(other: Boolean): Boolean
         alias
-            or, ∨;
+            "or", "∨";
         post_cond
             non_contradiction: Result = ¬ (¬ self ∧ ¬ other);
             valid_result: Result = (other ∨ self);
@@ -45,7 +45,7 @@ feature_group ("operators")
     | 
     func semistrict_disjunction(other: Boolean): Boolean
         alias
-            or else;
+            "or else";
         post_cond
             valid_result: Result = ¬ (¬ self ∧ ¬ other);
         ;
@@ -55,7 +55,7 @@ feature_group ("operators")
     | 
     func exclusive_disjunction(other: Boolean): Boolean
         alias
-            xor, ⊻;
+            "xor", "⊻";
         post_cond
             valid_result: Result = ((self ∨ other) ∧ ¬ (self ∧ other));
         ;
@@ -65,7 +65,7 @@ feature_group ("operators")
     | 
     func implication(other: Boolean): Boolean
         alias
-            implies, ⇒;
+            "implies", "⇒";
         post_cond
             valid_result: Result = (¬ self ∨ other);
         ;
@@ -75,7 +75,7 @@ feature_group ("operators")
     | 
     func negation: Boolean
         alias
-            not, ¬;
+            "not", "¬";
         ;
 
 invariant

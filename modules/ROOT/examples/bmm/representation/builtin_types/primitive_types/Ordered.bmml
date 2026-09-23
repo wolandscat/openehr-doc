@@ -17,7 +17,7 @@ feature_group ("operators")
     | 
     func less_than(other: Ordered): Boolean
         alias
-            <;
+            "<";
         ;
 
     | 
@@ -25,7 +25,7 @@ feature_group ("operators")
     | 
     func less_than_or_equal(other: Ordered): Boolean
         alias
-            <=, ≤;
+            "<=", "≤";
         post_cond
             valid_result: ¬ (other < self);
         ;
@@ -35,7 +35,7 @@ feature_group ("operators")
     | 
     func greater_than(other: Ordered): Boolean
         alias
-            >;
+            ">";
         post_cond
             valid_result: Result = (other < self);
         ;
@@ -45,7 +45,7 @@ feature_group ("operators")
     | 
     func greater_than_or_equal(other: Ordered): Boolean
         alias
-            >=, ≥;
+            ">=", "≥";
         post_cond
             valid_result: Result = (other <= self);
         ;

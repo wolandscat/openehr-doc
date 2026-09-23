@@ -91,6 +91,6 @@ feature_group ("access")
 
 invariant
     inv_constructors: creators.for_all(procedures.has(p));
-    inv_converters: converters.for_all(p.arity() = 1);
+    inv_converters: converters.for_all(creators.has(p) ∧ p.arity() = 1);
 
 end

@@ -39,7 +39,7 @@ feature_group ("operators")
     | 
     func append(other: String): String
         alias
-            +;
+            "+";
         ;
 
     | 
@@ -47,7 +47,7 @@ feature_group ("operators")
     | 
     func less_than(other: String): Boolean
         alias
-            <;
+            "<";
         ;
 
 

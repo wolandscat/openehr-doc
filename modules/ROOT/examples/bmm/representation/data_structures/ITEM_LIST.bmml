@@ -51,6 +51,6 @@ feature_group ("access")
         ;
 
 invariant
-    valid_structure: items.for_all("ELEMENT");
+    valid_structure: items.for_all(i.type = "ELEMENT");
 
 end
