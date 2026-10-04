@@ -1,13 +1,23 @@
+import org.openehr:representation ;
+
 | 
 | Enumeration of visibility settings for model elements.
 | 
 
-enum VISIBILITY_TYPE
+enumeration VISIBILITY_TYPE
     base_type String
 
-        vt_hide (hide)
+feature_group ("values")
 
-        vt_show (show)
+    | 
+    | Indicates to a tool to hide the model element to which this marker is attached.
+    | 
+    vt_hide ("hide");
+
+    | 
+    | Indicates to a tool to show the model element to which this marker is attached.
+    | 
+    vt_show ("show");
 
 
 end

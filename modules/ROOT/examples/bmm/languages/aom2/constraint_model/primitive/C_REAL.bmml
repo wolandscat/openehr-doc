@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances of Real.
 | 
@@ -12,18 +14,18 @@ feature_group ("access")
     | 
     | To represent no constraint, use an empty list.
     | 
-    prop constraint: List<Interval<Real>>;
+    prop constraint :? List<Interval<Real>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Real;
+    prop default_value :? Real;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: Real;
+    prop assumed_value :? Real;
 
 
 end

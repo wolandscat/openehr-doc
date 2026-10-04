@@ -1,3 +1,4 @@
+
 | 
 | Abstract concept of a proxy description of a party, including an optional link to data for
 | this party in a demographic or other identity management system. Sub- typed into
@@ -5,7 +6,6 @@
 | 
 
 abstract class PARTY_PROXY
-    is_a Any
 
 feature_group ("access")
 
@@ -13,7 +13,7 @@ feature_group ("access")
     | Optional reference to more detailed demographic or identification information for this
     | party, in an external system.
     | 
-    prop external_ref: PARTY_REF;
+    prop external_ref :? PARTY_REF;
 
 
 end

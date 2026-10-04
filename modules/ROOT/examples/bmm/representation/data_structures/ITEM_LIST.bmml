@@ -1,3 +1,4 @@
+
 | 
 | Logical list data structure, where each item has a value and can be referred to by a name
 | and a positional index in the list. The list may be empty.
@@ -17,7 +18,7 @@ feature_group ("access")
     | 
     | Physical representation of the list.
     | 
-    prop items: List<ELEMENT>;
+    prop items :? List<ELEMENT>;
 
     | 
     | Count of all items.
@@ -51,6 +52,6 @@ feature_group ("access")
         ;
 
 invariant
-    valid_structure: items.for_all(i.type = "ELEMENT");
+    valid_structure: ∀ i:items ¦ i.type = "ELEMENT";
 
 end

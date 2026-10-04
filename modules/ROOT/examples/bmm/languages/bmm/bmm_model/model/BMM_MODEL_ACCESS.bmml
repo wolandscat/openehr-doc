@@ -1,26 +1,27 @@
+import org.openehr:representation ;
+
 | 
 | Access to BMM models that have been loaded and validated from one or more schema sets.
 | 
 
 class BMM_MODEL_ACCESS
-    is_a Any
 
 feature_group ("access")
 
     | 
     | List of directories where all the schemas loaded here are found.
     | 
-    prop schema_directories: List<String>;
+    prop schema_directories :? List<String>;
 
     | 
     | All schemas found and loaded from `schema_directory`. Keyed by `schema_id`.
     | 
-    prop all_schemas: List<String>;
+    prop all_schemas :? List<String>;
 
     | 
     | Top-level (root) models in use, keyed by `model_id`.
     | 
-    prop bmm_models: Map<String,BMM_MODEL>;
+    prop bmm_models :? Map<String,BMM_MODEL>;
 
     | 
     | Validated models, keyed by `model_id()` and any shorter forms of id, with some or no
@@ -28,7 +29,7 @@ feature_group ("access")
     | `"openEHR_EHR_1"`, and `"openEHR_EHR"` will all match the `"openEHR_EHR_1.0.4"` model,
     | assuming it is the most recent version available.
     | 
-    prop matching_bmm_models: List<String>;
+    prop matching_bmm_models :? List<String>;
 
     | 
     | Return model containing the model key which is a `model_id` or any shorter form e.g.

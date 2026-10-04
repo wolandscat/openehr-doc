@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Definitions related to `C_TEMPORAL` constraints.
 | 
 
 class C_TEMPORAL_DEFINITIONS
-    is_a Any
 
 feature_group ("values")
 
@@ -24,7 +25,7 @@ feature_group ("values")
         "YYYY-??-??": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-MM-XX", "YYYY-MM-DD", "YYYY-MM-??"),
         "YYYY-??-XX": ("YYYY-XX-XX", "YYYY-MM-XX"),
         "YYYY-XX-XX": ("YYYY-XX-XX", "YYYY-MM-XX"),
-        }]
+        ]}
         ;
 
     | 
@@ -42,7 +43,7 @@ feature_group ("values")
         "HH:MM:XX": ("HH:MM:XX", "HH:MM:SS"),
         "HH-??-??": ("HH:??:XX", "HH:MM:XX", "HH:MM:SS", "HH:MM:??"),
         "HH-??-XX": ("HH:MM:XX"),
-        }]
+        ]}
         ;
 
     | 
@@ -61,7 +62,7 @@ feature_group ("values")
         "YYYY-MM-DDTHH:??:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS", "YYYY-MM-DDTHH:??:XX"),
         "YYYY-MM-DDTHH:??:XX": ("YYYY-MM-DDTHH:MM:XX"),
         "YYYY-??-??T??:??:??": ("YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"),
-        }]
+        ]}
         ;
 
 feature_group ("access")

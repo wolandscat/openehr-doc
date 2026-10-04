@@ -19,7 +19,7 @@ h|*Inherit*
 2+|xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE],xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -73,7 +73,7 @@ a|Value is in the normal range, determined by comparison of the value to `normal
 present, or by the `normal_status` marker if present.
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*less_than_or_equal* ( +

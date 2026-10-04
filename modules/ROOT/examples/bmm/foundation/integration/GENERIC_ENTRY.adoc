@@ -13,7 +13,7 @@ h|*Inherit*
 2+|xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

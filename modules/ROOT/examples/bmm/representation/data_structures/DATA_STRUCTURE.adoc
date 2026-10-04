@@ -15,7 +15,7 @@ h|*Inherit*
 2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*as_hierarchy* : xref:representation:data_structures-gen.adoc#_class_item[ITEM]

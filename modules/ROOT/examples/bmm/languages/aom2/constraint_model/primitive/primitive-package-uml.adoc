@@ -8,9 +8,9 @@ skinparam citedClassColor #FDFDFD
 
 class C_BOOLEAN [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_boolean]] {
         .. access ..
-        constraint: List<Boolean>
-        assumed_value: Boolean
-        default_value: Boolean
+        constraint :? List<Boolean>
+        assumed_value :? Boolean
+        default_value :? Boolean
         prototype_value: Boolean
         any_allowed: Boolean
         c_value_conforms_to(other: C_BOOLEAN): Boolean
@@ -22,9 +22,9 @@ C_BOOLEAN -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 class C_REAL [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_real]] {
         .. access ..
-        constraint: List<Interval<Real>>
-        default_value: Real
-        assumed_value: Real
+        constraint :? List<Interval<Real>>
+        default_value :? Real
+        assumed_value :? Real
 }
 
 C_REAL -[#gray]up-|> C_ORDERED  
@@ -32,7 +32,7 @@ C_REAL -[#gray]up-|> C_ORDERED
 
 abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal]] {
         .. access ..
-        pattern_constraint: String
+        pattern_constraint :? String
         valid_pattern_constraint(a_pattern: String): Boolean
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
         any_allowed: Boolean
@@ -59,12 +59,11 @@ class C_TEMPORAL_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_clas
         valid_iso8601_duration_constraint_pattern(s: String): Boolean
 }
 
-
 class C_DURATION [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_duration]] {
         .. access ..
-        constraint: List<Interval<Iso8601_duration>>
-        default_value: Iso8601_duration
-        assumed_value: Iso8601_duration
+        constraint :? List<Interval<Iso8601_duration>>
+        default_value :? Iso8601_duration
+        assumed_value :? Iso8601_duration
         years_allowed: Boolean
         months_allowed: Boolean
         weeks_allowed: Boolean
@@ -81,9 +80,9 @@ C_DURATION -[#gray]up-|> C_TEMPORAL
 
 class C_DATE_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date_time]] {
         .. access ..
-        constraint: List<Interval<Iso8601_date_time>>
-        default_value: Iso8601_date_time
-        assumed_value: Iso8601_date_time
+        constraint :? List<Interval<Iso8601_date_time>>
+        default_value :? Iso8601_date_time
+        assumed_value :? Iso8601_date_time
         valid_pattern_constraint(a_pattern: String): Boolean
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
         month_validity: VALIDITY_KIND
@@ -99,9 +98,9 @@ C_DATE_TIME -[#gray]up-|> C_TEMPORAL
 
 class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
         .. access ..
-        constraint: List<Interval<Iso8601_date>>
-        default_value: Iso8601_date
-        assumed_value: Iso8601_date
+        constraint :? List<Interval<Iso8601_date>>
+        default_value :? Iso8601_date
+        assumed_value :? Iso8601_date
         month_validity: VALIDITY_KIND
         day_validity: VALIDITY_KIND
         valid_pattern_constraint(a_pattern: String): Boolean
@@ -124,9 +123,9 @@ C_PRIMITIVE_TUPLE *--> "0..* members" C_PRIMITIVE_OBJECT
 
 class C_INTEGER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_integer]] {
         .. access ..
-        constraint: List<Interval<Integer>>
-        default_value: Integer
-        assumed_value: Integer
+        constraint :? List<Interval<Integer>>
+        default_value :? Integer
+        assumed_value :? Integer
 }
 
 C_INTEGER -[#gray]up-|> C_ORDERED  
@@ -134,9 +133,9 @@ C_INTEGER -[#gray]up-|> C_ORDERED
 
 class C_STRING [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_string]] {
         .. access ..
-        constraint: List<String>
-        default_value: String
-        assumed_value: String
+        constraint :? List<String>
+        default_value :? String
+        assumed_value :? String
         prototype_value: String
         valid_value(a_value: String): Boolean
         any_allowed: Boolean
@@ -149,9 +148,9 @@ C_STRING -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
         .. access ..
-        constraint: List<Interval<Iso8601_time>>
-        default_value: Iso8601_time
-        assumed_value: Iso8601_time
+        constraint :? List<Interval<Iso8601_time>>
+        default_value :? Iso8601_time
+        assumed_value :? Iso8601_time
         minute_validity: VALIDITY_KIND
         second_validity: VALIDITY_KIND
         millisecond_validity: VALIDITY_KIND
@@ -165,9 +164,9 @@ C_TIME -[#gray]up-|> C_TEMPORAL
 
 abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_object]] {
         .. access ..
-        assumed_value: Any
-        is_enumerated_type_constraint: Boolean
-        constraint: Any
+        assumed_value :? Any
+        is_enumerated_type_constraint :? Boolean
+        constraint : Any
         has_assumed_value: Boolean
         constrained_typename: String
         c_conforms_to(other: C_PRIMITIVE_OBJECT, ...): Boolean
@@ -181,9 +180,9 @@ C_PRIMITIVE_OBJECT -[#gray]up-|> C_DEFINED_OBJECT
 
 abstract class C_ORDERED<T:Ordered> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_ordered]] {
         .. access ..
-        constraint: List<Interval<T>>
-        default_value: T
-        assumed_value: T
+        constraint :? List<Interval<T>>
+        default_value :? T
+        assumed_value :? T
         any_allowed: Boolean
         c_value_conforms_to(other: C_ORDERED<T>): Boolean
         c_value_congruent_to(other: C_ORDERED<T>): Boolean
@@ -194,9 +193,9 @@ C_ORDERED -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_terminology_code]] {
         .. access ..
-        constraint: String
-        assumed_value: Terminology_code
-        default_value: Terminology_code
+        constraint : String
+        assumed_value :? Terminology_code
+        default_value :? Terminology_code
         constraint_required: Boolean
         effective_constraint_status: Integer
         value_set_expanded: List<String>

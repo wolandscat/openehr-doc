@@ -1,3 +1,4 @@
+
 | 
 | Identifier for parties in a demographic or identity service. There are typically a number
 | of subtypes of the `PARTY` class, including `PERSON`, `ORGANISATION`, etc. Abstract

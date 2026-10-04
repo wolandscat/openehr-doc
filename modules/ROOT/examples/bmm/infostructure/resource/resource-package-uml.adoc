@@ -8,52 +8,48 @@ skinparam citedClassColor #FDFDFD
 
 class RESOURCE_DESCRIPTION_ITEM [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description_item]] {
         .. access ..
-        language: Terminology_code «iso.iso_639-1»
-        purpose: String
-        keywords: List<String>
-        use: String
-        misuse: String
-        original_resource_uri: Map<String,String>
-        other_details: Map<String,String>
+        language : Terminology_code «iso.iso_639-1»
+        purpose : String
+        keywords :? List<String>
+        use :? String
+        misuse :? String
+        original_resource_uri :? Map<String,String>
+        other_details :? Map<String,String>
 }
-
 
 class TRANSLATION_DETAILS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_translation_details]] {
         .. access ..
-        language: Terminology_code «iso.iso_639-1»
-        author: Map<String,String>
-        accreditation: String
-        version_last_translated: String
-        other_contributors: List<String>
-        other_details: Map<String,String>
+        language : Terminology_code «iso.iso_639-1»
+        author : Map<String,String>
+        accreditation :? String
+        version_last_translated :? String
+        other_contributors :? List<String>
+        other_details :? Map<String,String>
 }
-
 
 class RESOURCE_ANNOTATIONS [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_annotations]] {
         .. access ..
-        documentation: Map<String, Map<String, Map<String, String>>>
+        documentation : Map<String, Map<String, Map<String, String>>>
 }
-
 
 class RESOURCE_DESCRIPTION [[/openehr-doc/latest/infostructure/resource-gen.html#_class_resource_description]] {
         .. access ..
-        title: String
-        original_author: Map<String,String>
-        original_namespace: String
-        original_publisher: String
-        other_contributors: List<String>
-        lifecycle_state: String
-        custodian_namespace: String
-        custodian_organisation: String
-        copyright: String
-        licence: String
-        ip_acknowledgements: Map<String,String>
-        references: Map<String,String>
-        resource_package_uri: String
-        conversion_details: Map<String,String>
-        other_details: Map<String,String>
+        title :? String
+        original_author : Map<String,String>
+        original_namespace :? String
+        original_publisher :? String
+        other_contributors :? List<String>
+        lifecycle_state : String
+        custodian_namespace :? String
+        custodian_organisation :? String
+        copyright :? String
+        licence :? String
+        ip_acknowledgements :? Map<String,String>
+        references :? Map<String,String>
+        resource_package_uri :? String
+        conversion_details :? Map<String,String>
+        other_details :? Map<String,String>
 }
-
 
 RESOURCE_DESCRIPTION *--> "1 parent_resource" AUTHORED_RESOURCE
 
@@ -61,12 +57,11 @@ RESOURCE_DESCRIPTION *--> "0..* details" RESOURCE_DESCRIPTION_ITEM
 
 abstract class AUTHORED_RESOURCE [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] {
         .. access ..
-        uid: UUID
-        original_language: Terminology_code «iso.iso_639-1»
-        is_controlled: Boolean
+        uid :? UUID
+        original_language : Terminology_code «iso.iso_639-1»
+        is_controlled :? Boolean
         languages_available: List<String>
 }
-
 
 AUTHORED_RESOURCE *--> "0..1 description" RESOURCE_DESCRIPTION
 

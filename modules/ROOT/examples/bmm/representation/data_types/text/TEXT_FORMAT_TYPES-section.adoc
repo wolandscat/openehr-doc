@@ -1,5 +1,5 @@
 
-=== Enum TEXT_FORMAT_TYPES
+=== Enumeration TEXT_FORMAT_TYPES
 
 [tabs]
 ======

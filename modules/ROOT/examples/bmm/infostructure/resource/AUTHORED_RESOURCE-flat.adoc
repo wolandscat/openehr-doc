@@ -7,11 +7,8 @@
 h|*Description*
 2+a|Abstract idea of an online resource created by a human author.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -70,7 +67,7 @@ h|
 2+a|translations_valid: ∃ translations ⇒ ¬ translations.is_empty() ∧ ¬ translations.has(orginal_language.code_string);
 
 h|
-2+a|description_valid: ∃ translations ⇒ description.details.for_all(translations.has_key(d.language.code_string));
+2+a|description_valid: ∃ translations ⇒ ∀ d:description.details ¦ translations.has_key(d.language.code_string);
 
 h|
 2+a|languages_available_valid: languages_available.has(original_language);

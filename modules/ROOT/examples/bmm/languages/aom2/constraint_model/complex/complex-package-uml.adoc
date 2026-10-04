@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class C_ATTRIBUTE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_attribute_tuple]] {
         .. access ..
-        c_conforms_to(other: C_ATTRIBUTE_TUPLE): Boolean
+        c_conforms_to(other: C_ATTRIBUTE_TUPLE, ...): Boolean
         c_congruent_to(other: C_SECOND_ORDER): Boolean
 }
 
@@ -21,7 +21,7 @@ C_ATTRIBUTE_TUPLE *--> "0..* members" C_ATTRIBUTE
 
 abstract class C_DEFINED_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_defined_object]] {
         .. access ..
-        default_value: Any
+        default_value :? Any
         any_allowed: Boolean
         valid_value(a_value: Any): Boolean
         prototype_value: Any
@@ -33,7 +33,7 @@ C_DEFINED_OBJECT -[#gray]up-|> C_OBJECT
 
 class C_ARCHETYPE_ROOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_archetype_root]] {
         .. access ..
-        archetype_ref: String
+        archetype_ref : String
 }
 
 C_ARCHETYPE_ROOT -[#gray]up-|> C_COMPLEX_OBJECT  
@@ -41,10 +41,9 @@ C_ARCHETYPE_ROOT -[#gray]up-|> C_COMPLEX_OBJECT
 
 abstract class C_SECOND_ORDER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_second_order]] {
         .. access ..
-        c_conforms_to(other: C_SECOND_ORDER): Boolean
+        c_conforms_to(other: C_SECOND_ORDER, ...): Boolean
         c_congruent_to(other: C_SECOND_ORDER): Boolean
 }
-
 
 C_SECOND_ORDER *--> "0..* members" ARCHETYPE_CONSTRAINT
 
@@ -66,12 +65,11 @@ class ARCHETYPE_ID_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.html#_cla
         .. access ..
 }
 
-
 ARCHETYPE_ID_CONSTRAINT *--> "1 constraint" C_STRING
 
 class C_COMPLEX_OBJECT_PROXY [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_complex_object_proxy]] {
         .. access ..
-        target_path: String
+        target_path : String
         use_target_occurrences: Boolean
         occurrences_conforms_to(other: C_OBJECT): Boolean
 }
@@ -81,15 +79,15 @@ C_COMPLEX_OBJECT_PROXY -[#gray]up-|> C_OBJECT
 
 enum CONSTRAINT_STATUS [[/openehr-doc/latest/languages/aom2-gen.html#_class_constraint_status]] {
         .. values ..
-        required = 0
-        extensible = 1
-        preferred = 2
-        example = 3
+        required
+        extensible
+        preferred
+        example
 }
 
 class ARCHETYPE_SLOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_slot]] {
         .. access ..
-        is_closed: Boolean
+        is_closed : Boolean
         any_allowed: Boolean
 }
 
@@ -102,19 +100,18 @@ ARCHETYPE_SLOT *--> "0..* excludes" ASSERTION
 
 class SIBLING_ORDER [[/openehr-doc/latest/languages/aom2-gen.html#_class_sibling_order]] {
         .. access ..
-        is_before: Boolean
-        sibling_node_id: String
+        is_before : Boolean
+        sibling_node_id : String
         is_after: Boolean
 }
 
-
 abstract class C_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_object]] {
         .. access ..
-        rm_type_name: String
-        occurrences: Multiplicity_interval
-        node_id: String
-        alternative_ids: List<String>
-        is_deprecated: Boolean
+        rm_type_name : String
+        occurrences :? Multiplicity_interval
+        node_id : String
+        alternative_ids :? List<String>
+        is_deprecated :? Boolean
         specialisation_depth: Integer
         effective_occurrences(rm_prop_mult: (String, ...): Multiplicity_interval
         c_conforms_to(other: C_OBJECT, ...): Boolean
@@ -131,11 +128,11 @@ C_OBJECT *--> "0..1 sibling_order" SIBLING_ORDER
 
 class C_ATTRIBUTE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_attribute]] {
         .. access ..
-        rm_attribute_name: String
-        existence: Multiplicity_interval
-        differential_path: String
-        cardinality: Cardinality
-        is_multiple: Boolean
+        rm_attribute_name : String
+        existence :? Multiplicity_interval
+        differential_path :? String
+        cardinality :? Cardinality
+        is_multiple : Boolean
         any_allowed: Boolean
         is_mandatory: Boolean
         rm_attribute_path: String

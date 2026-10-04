@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum TREND_KIND*
+3+^h|  *enumeration TREND_KIND*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*increase* = increase

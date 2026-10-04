@@ -1,3 +1,4 @@
+
 | 
 | Quantitified type representing scientific quantities, i.e. quantities expressed as a
 | magnitude and units. Units are expressed in the UCUM syntax
@@ -18,7 +19,7 @@ feature_group ("access")
     | 
     | Numeric magnitude of the quantity.
     | 
-    prop magnitude: Real;
+    prop magnitude : Real;
 
     | 
     | Quantity units, expressed as a code or syntax string from either UCUM (the default) or the
@@ -34,14 +35,14 @@ feature_group ("access")
     | 
     | Example values from UCUM: "kg/m^2", "mm[Hg]", "ms-1", "km/h".
     | 
-    prop units: String;
+    prop units : String;
 
     | 
     | Precision to which the value of the quantity is expressed, in terms of number of decimal
     | places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any
     | number of decimal places.
     | 
-    prop precision: Integer;
+    prop precision :? Integer;
 
     | 
     | Optional field used to specify a units system from which codes in `units` are defined.
@@ -50,7 +51,7 @@ feature_group ("access")
     | 
     | If not set, the UCUM standard (case-sensitive codes) is assumed as the units system.
     | 
-    prop units_system: String;
+    prop units_system :? String;
 
     | 
     | Optional field containing the displayable form of the `units` field, e.g. `'°C'`.
@@ -61,18 +62,18 @@ feature_group ("access")
     | units. For this reason, it is not recommended to add unit display names to archetypes,
     | only to templates (for localisation purposes).
     | 
-    prop units_display_name: String;
+    prop units_display_name :? String;
 
     | 
     | Optional normal range.
     | 
-    prop normal_range: DV_INTERVAL<DV_QUANTITY>;
+    prop normal_range :? DV_INTERVAL<DV_QUANTITY>;
 
     | 
     | Optional tagged other reference ranges for this value in its particular measurement
     | context.
     | 
-    prop other_reference_ranges: List<REFERENCE_RANGE<DV_QUANTITY>>;
+    prop other_reference_ranges :? List<REFERENCE_RANGE<DV_QUANTITY>>;
 
     | 
     | True if `precision` = 0, meaning that the `magnitude` is a whole number.

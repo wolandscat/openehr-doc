@@ -18,7 +18,7 @@ h|*Inherit*
 2+|xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

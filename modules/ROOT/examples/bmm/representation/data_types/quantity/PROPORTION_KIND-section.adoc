@@ -1,5 +1,5 @@
 
-=== Enum PROPORTION_KIND
+=== Enumeration PROPORTION_KIND
 
 [tabs]
 ======

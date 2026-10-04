@@ -16,35 +16,34 @@ class BASIC_DEFINITIONS [[/openehr-doc/latest/representation/definitions-gen.htm
         None_type_name:String
 }
 
-
 enum TREND_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_trend_kind]] {
         .. values ..
-        increase = increase
-        decrease = decrease
-        change = change
+        increase
+        decrease
+        change
 }
 
 enum TASK_STATUS [[/openehr-doc/latest/representation/definitions-gen.html#_class_task_status]] {
         .. values ..
-        planned = planned
-        in_progress = in_progress
-        on_hold = on_hold
-        completed = completed
-        abandoned = abandoned
+        planned
+        in_progress
+        on_hold
+        completed
+        abandoned
 }
 
 enum MATH_FUNCTION_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_math_function_kind]] {
         .. values ..
-        actual = actual
-        minimum = minimum
-        maximum = maximum
-        mean = mean
-        mode = mode
-        median = median
-        increase = increase
-        decrease = decrease
-        change = change
-        total = total
+        actual
+        minimum
+        maximum
+        mean
+        mode
+        median
+        increase
+        decrease
+        change
+        total
 }
 
 class OPENEHR_DEFINITIONS [[/openehr-doc/latest/representation/definitions-gen.html#_class_openehr_definitions]] {
@@ -57,10 +56,10 @@ OPENEHR_DEFINITIONS -[#gray]up-|> BASIC_DEFINITIONS
 
 enum VALIDITY_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_validity_kind]] {
         .. values ..
-        mandatory = mandatory
-        optional = optional
-        prohibited = prohibited
-        disallowed = disallowed
+        mandatory
+        optional
+        prohibited
+        disallowed
 }
 
 class Time_Definitions [[/openehr-doc/latest/representation/definitions-gen.html#_class_time_definitions]] {
@@ -82,14 +81,13 @@ class Time_Definitions [[/openehr-doc/latest/representation/definitions-gen.html
         Max_timezone_hour:Integer
 }
 
-
 enum VERSION_STATUS [[/openehr-doc/latest/representation/definitions-gen.html#_class_version_status]] {
         .. values ..
-        alpha = alpha
-        beta = beta
-        release_candidate = release_candidate
-        released = released
-        build = build
+        alpha
+        beta
+        release_candidate
+        released
+        build
 }
 
 ....

@@ -16,13 +16,12 @@ abstract class PATHABLE [[/openehr-doc/latest/representation/data_marking-gen.ht
         path_of_item(a_loc: PATHABLE): String
 }
 
-
 abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] {
         .. infrastructure ..
-        uid: UID_BASED_ID
-        archetype_node_id: String
+        uid :? UID_BASED_ID
+        archetype_node_id : String
         .. access ..
-        name: DV_TEXT
+        name : DV_TEXT
         concept: DV_TEXT
         is_archetype_root: Boolean
 }
@@ -38,41 +37,37 @@ LOCATABLE *--> "0..1 feeder_audit" FEEDER_AUDIT
 
 class ITEM_TAG [[/openehr-doc/latest/representation/data_marking-gen.html#_class_item_tag]] {
         .. access ..
-        key: String
-        value: String
-        target: UID_BASED_ID
-        target_path: String
-        owner_id: OBJECT_REF
+        key : String
+        value :? String
+        target : UID_BASED_ID
+        target_path :? String
+        owner_id : OBJECT_REF
 }
-
 
 class LINK [[/openehr-doc/latest/representation/data_marking-gen.html#_class_link]] {
         .. access ..
-        meaning: DV_TEXT
-        type: DV_TEXT
-        target: DV_EHR_URI
+        meaning : DV_TEXT
+        type : DV_TEXT
+        target : DV_EHR_URI
 }
-
 
 class FEEDER_AUDIT_DETAILS [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit_details]] {
         .. access ..
-        system_id: String
-        location: PARTY_IDENTIFIED
-        subject: PARTY_PROXY
-        provider: PARTY_IDENTIFIED
-        time: DV_DATE_TIME
-        version_id: String
-        other_details: ITEM_STRUCTURE
+        system_id : String
+        location :? PARTY_IDENTIFIED
+        subject :? PARTY_PROXY
+        provider :? PARTY_IDENTIFIED
+        time :? DV_DATE_TIME
+        version_id :? String
+        other_details :? ITEM_STRUCTURE
 }
-
 
 class FEEDER_AUDIT [[/openehr-doc/latest/representation/data_marking-gen.html#_class_feeder_audit]] {
         .. access ..
-        originating_system_item_ids: List<DV_IDENTIFIER>
-        feeder_system_item_ids: List<DV_IDENTIFIER>
-        original_content: DV_ENCAPSULATED
+        originating_system_item_ids :? List<DV_IDENTIFIER>
+        feeder_system_item_ids :? List<DV_IDENTIFIER>
+        original_content :? DV_ENCAPSULATED
 }
-
 
 FEEDER_AUDIT *--> "1 originating_system_audit" FEEDER_AUDIT_DETAILS
 
@@ -80,10 +75,9 @@ FEEDER_AUDIT *--> "0..1 feeder_system_audit" FEEDER_AUDIT_DETAILS
 
 class ARCHETYPED [[/openehr-doc/latest/representation/data_marking-gen.html#_class_archetyped]] {
         .. infrastructure ..
-        archetype_id: ARCHETYPE_ID
-        template_id: TEMPLATE_ID
-        rm_version: String
+        archetype_id : ARCHETYPE_ID
+        template_id :? TEMPLATE_ID
+        rm_version : String
 }
-
 
 ....

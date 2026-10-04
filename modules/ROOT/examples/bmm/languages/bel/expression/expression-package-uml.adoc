@@ -17,7 +17,7 @@ EXPR_UNARY_OPERATOR *--> "1 operand" EXPRESSION
 
 class EXPR_LITERAL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_literal]] {
         .. access ..
-        item: Any
+        item : Any
 }
 
 EXPR_LITERAL -[#gray]up-|> EXPR_LEAF  
@@ -25,26 +25,26 @@ EXPR_LITERAL -[#gray]up-|> EXPR_LEAF
 
 enum OPERATOR_KIND [[/openehr-doc/latest/languages/bel-gen.html#_class_operator_kind]] {
         .. values ..
-        op_eq = eq
-        op_ne = ne
-        op_lt = lt
-        op_le = le
-        op_gt = gt
-        op_ge = ge
-        op_matches = matches
-        op_not = not
-        op_and = and
-        op_or = or
-        op_xor = xor
-        op_implies = implies
-        op_for_all = for_all
-        op_exists = exists
-        op_plus = plus
-        op_minus = minus
-        op_multiply = multiply
-        op_divide = divide
-        op_modulo = modulo
-        op_exponent = exponent
+        op_eq
+        op_ne
+        op_lt
+        op_le
+        op_gt
+        op_ge
+        op_matches
+        op_not
+        op_and
+        op_or
+        op_xor
+        op_implies
+        op_for_all
+        op_exists
+        op_plus
+        op_minus
+        op_multiply
+        op_divide
+        op_modulo
+        op_exponent
 }
 
 class EXPR_VARIABLE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_variable_ref]] {
@@ -72,7 +72,6 @@ abstract class EXPR_VALUE [[/openehr-doc/latest/languages/bel-gen.html#_class_ex
         value: Any
 }
 
-
 abstract class EXPRESSION [[/openehr-doc/latest/languages/bel-gen.html#_class_expression]] {
         .. access ..
         type: EXPR_TYPE_DEF
@@ -83,7 +82,7 @@ EXPRESSION -[#gray]up-|> EXPR_VALUE
 
 abstract class EXPR_LEAF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_leaf]] {
         .. access ..
-        item: Any
+        item :? Any
 }
 
 EXPR_LEAF -[#gray]up-|> EXPRESSION  
@@ -91,8 +90,8 @@ EXPR_LEAF -[#gray]up-|> EXPRESSION
 
 abstract class EXPR_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_operator]] {
         .. access ..
-        precedence_overridden: Boolean
-        symbol: String
+        precedence_overridden :? Boolean
+        symbol :? String
 }
 
 EXPR_OPERATOR -[#gray]up-|> EXPRESSION  
@@ -113,9 +112,9 @@ EXPR_BINARY_OPERATOR *--> "1 right_operand" EXPRESSION
 
 class EXTERNAL_QUERY [[/openehr-doc/latest/languages/bel-gen.html#_class_external_query]] {
         .. access ..
-        context: String
-        query_id: String
-        query_args: List<String>
+        context : String
+        query_id : String
+        query_args :? List<String>
 }
 
 EXTERNAL_QUERY -[#gray]up-|> EXPR_VALUE  

@@ -1,3 +1,4 @@
+
 | 
 | A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes
 | further metadata relating to multimedia types which are not applicable to other subtypes
@@ -12,51 +13,51 @@ feature_group ("access")
     | 
     | Text to display in lieu of multimedia display/replay.
     | 
-    prop alternate_text: String;
+    prop alternate_text :? String;
 
     | 
     | URI reference to electronic information stored outside the record as a file, database
     | entry etc, if supplied as a reference.
     | 
-    prop uri: DV_URI;
+    prop uri :? DV_URI;
 
     | 
     | The actual data found at `uri`, if supplied inline.
     | 
-    prop data: Array<Octet>;
+    prop data :? Array<Octet>;
 
     | 
     | Data media type coded from openEHR code set media types (interface for the IANA MIME types
     | code set).
     | 
-    prop media_type: CODE_PHRASE «iana.media-types»;
+    prop media_type : CODE_PHRASE «iana.media-types»;
 
     | 
     | Compression type, a coded value from the openEHR Integrity check code set. Void means no
     | compression.
     | 
-    prop compression_algorithm: CODE_PHRASE «iana.compression-algorithms»;
+    prop compression_algorithm :? CODE_PHRASE «iana.compression-algorithms»;
 
     | 
     | Binary cryptographic integrity checksum.
     | 
-    prop integrity_check: Array<Octet>;
+    prop integrity_check :? Array<Octet>;
 
     | 
     | Type of integrity check, a coded value from the openEHR `Integrity check` code set.
     | 
-    prop integrity_check_algorithm: CODE_PHRASE «iana.integrity-check-algorithms»;
+    prop integrity_check_algorithm :? CODE_PHRASE «iana.integrity-check-algorithms»;
 
     | 
     | The thumbnail for this item, if one exists; mainly for graphics formats.
     | 
-    prop thumbnail: DV_MULTIMEDIA;
+    prop thumbnail :? DV_MULTIMEDIA;
 
     | 
     | Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64,
     | hexadecimal etc do not change the value of this attribute.
     | 
-    prop size: Integer;
+    prop size : Integer;
 
     | 
     | Computed from the value of the `uri` attribute: True if the data is stored externally to

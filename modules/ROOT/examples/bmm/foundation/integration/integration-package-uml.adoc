@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class GENERIC_ENTRY [[/openehr-doc/latest/foundation/integration-gen.html#_class_generic_entry]] {
         .. access ..
-        data: ITEM
+        data : ITEM
 }
 
 GENERIC_ENTRY -[#gray]up-|> CONTENT_ITEM  

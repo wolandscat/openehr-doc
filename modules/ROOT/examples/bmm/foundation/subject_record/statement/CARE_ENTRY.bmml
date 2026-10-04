@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | The abstract parent of all clinical `ENTRY` subtypes. A `CARE_ENTRY` defines protocol and
 | guideline attributes for all clinical Entry subtypes.
@@ -16,12 +18,12 @@ feature_group ("access")
     | executable; knowledge references such as a paper in Medline; clinical reasons within a
     | larger care process.
     | 
-    prop protocol: ITEM_STRUCTURE;
+    prop protocol :? ITEM_STRUCTURE;
 
     | 
     | Optional external identifier of guideline creating this Entry if relevant.
     | 
-    prop guideline_id: OBJECT_REF;
+    prop guideline_id :? OBJECT_REF;
 
 
 end

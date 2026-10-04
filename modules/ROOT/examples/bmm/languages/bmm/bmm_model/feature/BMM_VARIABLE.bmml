@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A routine-scoped formal element.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Routine within which variable is defined.
     | 
-    prop scope: BMM_ROUTINE;
+    prop scope : BMM_ROUTINE;
 
 
 end

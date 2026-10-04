@@ -1,3 +1,4 @@
+
 | 
 | Represents a coded term mapped to a `DV_TEXT`, and the relative match of the target term
 | with respect to the mapped item. Plain or coded text items may appear in the EHR for which
@@ -10,7 +11,6 @@
 | 
 
 class TERM_MAPPING
-    is_a Any
 
 feature_group ("access")
 
@@ -29,17 +29,17 @@ feature_group ("access")
     | development of monolingual thesauri) and 5964 (Guide to Establishment and development of
     | multilingual thesauri).
     | 
-    prop match: Character;
+    prop match : Character;
 
     | 
     | Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'.
     | 
-    prop purpose: DV_CODED_TEXT;
+    prop purpose :? DV_CODED_TEXT;
 
     | 
     | The target term of the mapping.
     | 
-    prop target: CODE_PHRASE;
+    prop target : CODE_PHRASE;
 
     | 
     | The mapping is to a narrower term.

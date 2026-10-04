@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Specification of what versions should be included in an Extract. By default, only latest
 | versions are included in the Extract, in which case this part of the Extract specification
@@ -8,14 +11,13 @@
 | 
 
 class EXTRACT_VERSION_SPEC
-    is_a Any
 
 feature_group ("access")
 
     | 
     | True if all versions of each item in the Extract are included.
     | 
-    prop include_all_versions: Boolean;
+    prop include_all_versions : Boolean;
 
     | 
     | Specifies commit time interval of items to source repository to include in Extract. By
@@ -23,13 +25,13 @@ feature_group ("access")
     | include_all_versions is True, then the range includes all versions committed within the
     | interval.
     | 
-    prop commit_time_interval: DV_INTERVAL<DV_DATE_TIME>;
+    prop commit_time_interval :? DV_INTERVAL<DV_DATE_TIME>;
 
     | 
     | True if revision histories of the items in the Extract are included. If included, it is
     | always the full revision history.
     | 
-    prop include_revision_history: Boolean;
+    prop include_revision_history : Boolean;
 
     | 
     | `True` if the data of items matched by the content spec should be included. This is the
@@ -39,7 +41,7 @@ feature_group ("access")
     | having to look at any content data. In other systems it may or may not have a sensible
     | meaning.
     | 
-    prop include_data: Boolean;
+    prop include_data : Boolean;
 
 invariant
     includes_revision_history_valid: ¬ include_data ⇒ include_revision_history;

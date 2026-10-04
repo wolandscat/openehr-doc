@@ -1,3 +1,4 @@
+
 | 
 | Root object of a linear history, i.e. time series structure. This is a generic class whose
 | type parameter must be a descendant of `ITEM_STRUCTURE`, ensuring that each Event in the
@@ -9,7 +10,7 @@
 | Event. Missing events in a period History are however allowed.
 | 
 
-class HISTORY
+class HISTORY<T:ITEM_STRUCTURE>
     is_a DATA_STRUCTURE
 
 feature_group ("access")
@@ -17,31 +18,31 @@ feature_group ("access")
     | 
     | Time origin of this event history. The first event is not necessarily at the origin point.
     | 
-    prop origin: DV_DATE_TIME;
+    prop origin : DV_DATE_TIME;
 
     | 
     | Period between samples in this segment if periodic.
     | 
-    prop period: DV_DURATION;
+    prop period :? DV_DURATION;
 
     | 
     | Duration of the entire History; either corresponds to the duration of all the events,
     | and/or the duration represented by the summary, if it exists.
     | 
-    prop duration: DV_DURATION;
+    prop duration :? DV_DURATION;
 
     | 
     | Optional summary data that aggregates, organizes, reduces and transforms the event series.
     | This may be a text or image that presents a graphical presentation, or some data that
     | assists with the interpretation of the data.
     | 
-    prop summary: ITEM_STRUCTURE;
+    prop summary :? ITEM_STRUCTURE;
 
     | 
     | The events in the series. This attribute is of a generic type whose parameter must be a
     | descendant of `ITEM_SUTRUCTURE`.
     | 
-    prop events: List<EVENT<T>>;
+    prop events :? List<EVENT<T>>;
 
     | 
     | Indicates whether history is periodic.
@@ -52,6 +53,6 @@ feature_group ("access")
 invariant
     events_valid: (∃ events ∧ ¬ events.is_empty) ∨ ∃ summary;
     periodic_validity: is_periodic ⊻ ¬ ∃ period;
-    period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
+    period_consistency: is_periodic ⇒ ∀ e:events ¦ e.offset.to_seconds.mod(period.to_seconds) = 0;
 
 end

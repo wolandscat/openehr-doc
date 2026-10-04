@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Specification of the how the request should be processed by server. The request can be
 | persisted in the server, meaning that a) it can be re-activated by the requesting system
@@ -12,19 +15,18 @@
 | 
 
 class EXTRACT_UPDATE_SPEC
-    is_a Any
 
 feature_group ("access")
 
     | 
     | If True, this Request is persisted in the server until further notice.
     | 
-    prop persist_in_server: Boolean;
+    prop persist_in_server : Boolean;
 
     | 
     | Period for resending update Extracts in response to original Request.
     | 
-    prop repeat_period: DV_DURATION;
+    prop repeat_period :? DV_DURATION;
 
     | 
     | Set of Event names that will cause sending of update Extracts. Event types include:
@@ -37,13 +39,13 @@ feature_group ("access")
     | 
     | Coded by openEHR Terminology group 'extract update trigger event type'.
     | 
-    prop trigger_events: List<DV_CODED_TEXT>;
+    prop trigger_events :? List<DV_CODED_TEXT>;
 
     | 
     | Indicate mode of update. Can be: send only items that are changed (including logical
     | deletions) or new since last send. For `persist_in_server` Requests only.
     | 
-    prop update_method: CODE_PHRASE;
+    prop update_method : CODE_PHRASE;
 
 invariant
     overall_validity: ∃ repeat_period ∨ ∃ trigger_events;

@@ -9,11 +9,8 @@ h|*Description*
 Consists of `AUDIT_DETAILS` instances with revision identifier of the revision to which
 the `AUDIT_DETAILS` instance belongs.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

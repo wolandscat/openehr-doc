@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Definition of a variable whose value is derived from a query run on a data context in the
 | operational environment. Typical uses of this kind of variable are to obtain values like
@@ -15,17 +17,17 @@ feature_group ("access")
     | sophisticated environments. Possible values might be "patient", "medications" and so on.
     | Not yet standardised.
     | 
-    prop context: String;
+    prop context : String;
 
     | 
     | Identifier of query in the external context, e.g. "date_of_birth". Not yet standardised.
     | 
-    prop query_id: String;
+    prop query_id : String;
 
     | 
     | Optional arguments to query. Not yet standardised.
     | 
-    prop query_args: List<String>;
+    prop query_args :? List<String>;
 
 
 end

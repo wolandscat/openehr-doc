@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract meta-type of BMM declared model elements. A _declaration_ is a an element of a
 | model within a context, which defines the _scope_ of the element. Thus, a class definition
@@ -6,14 +8,13 @@
 | 
 
 abstract class BMM_MODEL_ELEMENT
-    is_a Any
 
 feature_group ("access")
 
     | 
     | Name of this model element.
     | 
-    prop name: String;
+    prop name : String;
 
     | 
     | Optional documentation of this element, as a keyed list.
@@ -29,17 +30,17 @@ feature_group ("access")
     | 
     | Other keys and value types may be freely added.
     | 
-    prop documentation: Map<String,Any>;
+    prop documentation :? Map<String,Any>;
 
     | 
     | Model element within which an element is declared.
     | 
-    prop scope: BMM_MODEL_ELEMENT;
+    prop scope : BMM_MODEL_ELEMENT;
 
     | 
     | Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
     | 
-    prop extensions: Map<String,Any>;
+    prop extensions :? Map<String,Any>;
 
     | 
     | True if this model element is the root of a model structure hierarchy.

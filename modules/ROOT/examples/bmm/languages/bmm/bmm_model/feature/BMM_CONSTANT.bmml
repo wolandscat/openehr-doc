@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | An immutable, static value-returning element scoped to a class. The `value` is the
 | result of the evaluation of the `generator`, which may be as simple as a literal value,
@@ -12,7 +14,7 @@ feature_group ("access")
     | 
     | Literal value of the constant.
     | 
-    prop generator: BMM_LITERAL_VALUE<BMM_TYPE>;
+    prop generator : BMM_LITERAL_VALUE<BMM_TYPE>;
 
 
 end

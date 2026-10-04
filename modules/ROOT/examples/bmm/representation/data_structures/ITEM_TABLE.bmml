@@ -1,3 +1,4 @@
+
 | 
 | Logical relational database style table data structure, in which columns are named and
 | ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row
@@ -24,7 +25,7 @@ feature_group ("access")
     | Physical representation of the table as a list of `CLUSTERs`, each containing the data of
     | one row of the table.
     | 
-    prop rows: List<CLUSTER>;
+    prop rows :? List<CLUSTER>;
 
     | 
     | Number of rows in the table.

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A group is a real world group of parties which is created by another party, usually
 | an organisation, for some specific purpose. A typical clinical example is that of the

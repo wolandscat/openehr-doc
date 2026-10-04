@@ -33,9 +33,8 @@ EL_TERMINAL -[#gray]up-|> EL_EXPRESSION
 
 class EL_TUPLE_ITEM [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple_item]] {
         .. access ..
-        name: String
+        name :? String
 }
-
 
 EL_TUPLE_ITEM *--> "0..1 item" EL_EXPRESSION
 
@@ -79,8 +78,8 @@ EL_CONSTRAINED *--> "1 base_expression" EL_EXPRESSION
 
 abstract class EL_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_operator]] {
         .. access ..
-        precedence_overridden: Boolean
-        symbol: String
+        precedence_overridden :? Boolean
+        symbol :? String
         operator_definition: BMM_OPERATOR
         equivalent_call: EL_FUNCTION_CALL
 }
@@ -102,8 +101,8 @@ EL_PREDICATE *--> "1 operand" EL_VALUE_GENERATOR
 
 abstract class EL_VALUE_GENERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_value_generator]] {
         .. access ..
-        is_writable: Boolean
-        name: String
+        is_writable : Boolean
+        name : String
         reference: String
 }
 
@@ -121,7 +120,6 @@ abstract class EL_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class
         eval_type: BMM_TYPE
         is_boolean: Boolean
 }
-
 
 class EL_ATTACHED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_attached]] {
 }

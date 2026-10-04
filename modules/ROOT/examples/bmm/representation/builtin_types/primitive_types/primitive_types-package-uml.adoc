@@ -90,7 +90,6 @@ class Boolean [[/openehr-doc/latest/representation/builtin_types-gen.html#_class
         negation: Boolean
 }
 
-
 abstract class Ordered_Numeric [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_ordered_numeric]] {
 }
 
@@ -123,7 +122,6 @@ abstract class Ordered [[/openehr-doc/latest/representation/builtin_types-gen.ht
         greater_than_or_equal(other: Ordered): Boolean
 }
 
-
 abstract class Numeric [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_numeric]] {
         .. operators ..
         add(other: Numeric): Numeric
@@ -133,7 +131,6 @@ abstract class Numeric [[/openehr-doc/latest/representation/builtin_types-gen.ht
         exponent(other: Numeric): Numeric
         negative: Numeric
 }
-
 
 class Octet [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_octet]] {
 }

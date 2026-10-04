@@ -7,7 +7,4 @@
 h|*Description*
 2+a|Abstract ancestor of routine body meta-types.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 |===

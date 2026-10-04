@@ -14,7 +14,7 @@ h|*Inherit*
 2+|xref:foundation:demographic-gen.adoc#_class_actor[ACTOR]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -86,7 +86,7 @@ h| func
 a|True if this node is the root of an archetyped structure.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1

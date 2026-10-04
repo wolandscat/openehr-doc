@@ -68,7 +68,7 @@ Iso8601_timezone -[#gray]up-|> Iso8601_type
 
 abstract class Iso8601_type [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_iso8601_type]] {
         .. access ..
-        value: String
+        value : String
         is_partial: Boolean
         is_extended: Boolean
 }

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint describing a 'slot' where another archetype can occur.
 | 
@@ -12,21 +14,21 @@ feature_group ("access")
     | Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
     | matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
     | 
-    prop includes: List<ASSERTION>;
+    prop includes :? List<ASSERTION>;
 
     | 
     | List of constraints defining other archetypes that cannot be included at this point.
     | Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
     | matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
     | 
-    prop excludes: List<ASSERTION>;
+    prop excludes :? List<ASSERTION>;
 
     | 
     | True if this slot specification in this artefact is closed to further filling either in
     | further specialisations or at runtime. Default value False, i.e. unless explicitly set, a
     | slot remains open.
     | 
-    prop is_closed: Boolean;
+    prop is_closed : Boolean;
 
     | 
     | True if no constraints stated, and slot is not closed.

@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_el_terminal[EL_TERMINAL]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]

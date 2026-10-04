@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum VALIDITY_KIND*
+3+^h|  *enumeration VALIDITY_KIND*
 
 h|*Description*
 2+a|An enumeration of three values that may commonly occur in constraint models.
@@ -15,7 +15,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*mandatory* = mandatory

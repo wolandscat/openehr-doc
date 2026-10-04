@@ -8,31 +8,28 @@ skinparam citedClassColor #FDFDFD
 
 class AOM_PROFILE [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_profile]] {
         .. access ..
-        profile_name: String
-        archetype_parent_class: String
-        archetype_data_value_parent_class: String
-        archetype_visualise_descendants_of: String
-        aom_rm_type_substitutions: Map<String,String>
-        aom_lifecycle_mappings: Map<String,String>
-        rm_primitive_type_equivalences: Map<String,String>
+        profile_name : String
+        archetype_parent_class :? String
+        archetype_data_value_parent_class :? String
+        archetype_visualise_descendants_of :? String
+        aom_rm_type_substitutions :? Map<String,String>
+        aom_lifecycle_mappings :? Map<String,String>
+        rm_primitive_type_equivalences :? Map<String,String>
 }
-
 
 AOM_PROFILE *--> "0..* aom_rm_type_mappings" AOM_TYPE_MAPPING
 
 class AOM_PROPERTY_MAPPING [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_property_mapping]] {
         .. access ..
-        source_property_name: String
-        target_property_name: String
+        source_property_name : String
+        target_property_name : String
 }
-
 
 class AOM_TYPE_MAPPING [[/openehr-doc/latest/languages/aom2-gen.html#_class_aom_type_mapping]] {
         .. access ..
-        source_class_name: String
-        target_class_name: String
+        source_class_name : String
+        target_class_name : String
 }
-
 
 AOM_TYPE_MAPPING *--> "0..* property_mappings" AOM_PROPERTY_MAPPING
 

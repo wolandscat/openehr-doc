@@ -1,10 +1,10 @@
+
 | 
 | Abstract parent class of numeric types, which have arithmetic and comparison
 | operators defined.
 | 
 
-builtin abstract class Numeric
-    is_a Any
+abstract builtin class Numeric
 
 feature_group ("operators")
 

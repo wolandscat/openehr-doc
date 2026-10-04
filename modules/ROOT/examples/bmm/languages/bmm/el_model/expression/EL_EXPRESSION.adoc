@@ -7,11 +7,8 @@
 h|*Description*
 2+a|Abstract parent of all typed expression meta-types.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]

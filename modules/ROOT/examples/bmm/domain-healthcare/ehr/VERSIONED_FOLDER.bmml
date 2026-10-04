@@ -1,3 +1,7 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+import org.openehr:infostructure ;
+
 | 
 | A version-controlled hierarchy of `FOLDERs` giving the effect of a directory.
 | 

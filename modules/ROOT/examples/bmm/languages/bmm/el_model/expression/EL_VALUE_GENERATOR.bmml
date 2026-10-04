@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type representing a value-generating simple expression.
 | 
@@ -8,12 +10,12 @@ abstract class EL_VALUE_GENERATOR
 feature_group ("access")
 
     | 
-    prop is_writable: Boolean;
+    prop is_writable : Boolean;
 
     | 
     | Name used to represent the reference or other entity.
     | 
-    prop name: String;
+    prop name : String;
 
     | 
     | Generated full reference name, based on constituent parts of the entity. Default version

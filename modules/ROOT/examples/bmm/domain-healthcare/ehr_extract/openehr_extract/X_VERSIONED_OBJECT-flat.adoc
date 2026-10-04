@@ -8,11 +8,8 @@ h|*Description*
 2+a|Variety of Extract content that consists is a sharable data-oriented version of
 `VERSIONED_OBJECT<T>`.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

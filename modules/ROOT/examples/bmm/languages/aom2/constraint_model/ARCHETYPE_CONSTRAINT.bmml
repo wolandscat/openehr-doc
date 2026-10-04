@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract parent of all constraint model types. Defines conformance and congruence function
 | signatures.
@@ -12,10 +14,10 @@ feature_group ("access")
     | Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
     | archetype definition.
     | 
-    prop parent: ARCHETYPE_CONSTRAINT;
+    prop parent :? ARCHETYPE_CONSTRAINT;
 
     | 
-    prop soc_parent: C_SECOND_ORDER;
+    prop soc_parent :? C_SECOND_ORDER;
 
     | 
     | True if this node is prohibited. Implemented in subtypes.

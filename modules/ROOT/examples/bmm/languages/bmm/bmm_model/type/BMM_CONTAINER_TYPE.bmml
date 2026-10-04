@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type that specifies linear containers with a generic parameter corresponding to the
 | type of contained item, and whose container type is a generic type such as `List<T>`,
@@ -12,25 +14,25 @@ feature_group ("access")
     | 
     | The type of the container. This converts to the `root_type` in `BMM_GENERIC_TYPE`.
     | 
-    prop container_class: BMM_GENERIC_CLASS;
+    prop container_class : BMM_GENERIC_CLASS;
 
     | 
     | The container item type.
     | 
-    prop item_type: BMM_UNITARY_TYPE;
+    prop item_type : BMM_UNITARY_TYPE;
 
     | 
     | True indicates that order of the items in the container attribute is considered
     | significant and must be preserved, e.g. across sessions, serialisation, deserialisation
     | etc. Otherwise known as 'list' semantics.
     | 
-    prop is_ordered: Boolean;
+    prop is_ordered :? Boolean;
 
     | 
     | True indicates that only unique instances of items in the container are allowed. Otherwise
     | known as 'set' semantics.
     | 
-    prop is_unique: Boolean;
+    prop is_unique :? Boolean;
 
     | 
     | Return full type name, e.g. `List<ELEMENT>`.

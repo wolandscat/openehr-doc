@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A reference that is scoped by a containing entity and requires a context qualifier if it
 | is not the currently scoping entity.
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | Scoping expression, which must be a `EL_VALUE_GENERATOR`.
     | 
-    prop scoper: EL_VALUE_GENERATOR;
+    prop scoper :? EL_VALUE_GENERATOR;
 
     | 
     | Generated full reference name, consisting of scoping elements and `name` concatenated

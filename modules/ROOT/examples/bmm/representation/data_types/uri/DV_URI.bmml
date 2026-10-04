@@ -1,3 +1,4 @@
+
 | 
 | A reference to an object which structurally conforms to the Universal Resource Identifier
 | (URI) RFC-3986 standard. The reference is contained in the `value` attribute, which is a
@@ -15,7 +16,7 @@ feature_group ("access")
     | Value of URI as a String. 'Plain-text' URIs are allowed, enabling better readability, but
     | must be RFC-3986 encoded in use.
     | 
-    prop value: String;
+    prop value : String;
 
     | 
     | A distributed information 'space' in which information objects exist. The scheme

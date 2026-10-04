@@ -16,7 +16,7 @@ BMM_SIMPLE_CLASS -[#gray]up-|> BMM_CLASS
 
 class BMM_ENUMERATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration]] {
         .. access ..
-        item_names: List<String>
+        item_names :? List<String>
 }
 
 BMM_ENUMERATION -[#gray]up-|> BMM_SIMPLE_CLASS  
@@ -35,10 +35,9 @@ BMM_ENUMERATION_STRING *--> "0..* item_values" BMM_STRING_VALUE
 
 class BMM_FEATURE_GROUP [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_feature_group]] {
         .. access ..
-        name: String
-        properties: Map<String,String>
+        name : String
+        properties : Map<String,String>
 }
-
 
 BMM_FEATURE_GROUP *--> "0..* features" BMM_FEATURE
 
@@ -55,18 +54,17 @@ BMM_ENUMERATION_INTEGER *--> "0..* item_values" BMM_INTEGER_VALUE
 
 class BMM_VALUE_SET_SPEC [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_value_set_spec]] {
         .. access ..
-        resource_id: String
-        value_set_id: String
+        resource_id : String
+        value_set_id : String
 }
-
 
 abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_class]] {
         .. access ..
-        ancestors: List<String>
-        source_schema_id: String
-        is_override: Boolean
-        is_primitive: Boolean
-        is_abstract: Boolean
+        ancestors :? List<String>
+        source_schema_id : String
+        is_override : Boolean
+        is_primitive :? Boolean
+        is_abstract :? Boolean
         type: BMM_MODEL_TYPE
         all_ancestors: List<String>
         all_descendants: List<String>

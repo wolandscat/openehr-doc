@@ -1,46 +1,46 @@
+
 | 
 | Interval abstraction, featuring upper and lower limits that may be open or closed,
 | included or not included. Interval of ordered items.
 | 
 
-abstract class Interval
-    is_a Any
+abstract class Interval<T:Ordered>
 
 feature_group ("access")
 
     | 
     | Lower bound. lower bound.
     | 
-    prop lower: T;
+    prop lower :? T;
 
     | 
     | Upper bound. Upper bound.
     | 
-    prop upper: T;
+    prop upper :? T;
 
     | 
     | True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
     | -infinity)
     | 
-    prop lower_unbounded: Boolean;
+    prop lower_unbounded : Boolean;
 
     | 
     | True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
     | +infinity)
     | 
-    prop upper_unbounded: Boolean;
+    prop upper_unbounded : Boolean;
 
     | 
     | True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
     | boundary value included in range if not lower_unbounded.
     | 
-    prop lower_included: Boolean;
+    prop lower_included : Boolean;
 
     | 
     | True if `upper` boundary value included in range if `not _upper_unbounded`. upper
     | boundary value included in range if not upper_unbounded.
     | 
-    prop upper_included: Boolean;
+    prop upper_included : Boolean;
 
     | 
     | True if the value `e` is properly contained in this Interval. True if (lower_unbounded or

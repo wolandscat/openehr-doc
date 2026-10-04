@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for a literal String value, for which `type` is fixed to the `BMM_TYPE`
 | representing `String` and `value` is of type `String`.
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | Native String value.
     | 
-    prop value: String;
+    prop value : String;
 
 
 end

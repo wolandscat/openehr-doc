@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on complex objects, i.e. any object that consists of other object constraints.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | List of constraints on attributes of the reference model type represented by this object.
     | 
-    prop attributes: List<C_ATTRIBUTE>;
+    prop attributes :? List<C_ATTRIBUTE>;
 
     | 
     | List of attribute tuple constraints under this object constraint, if any.
     | 
-    prop attribute_tuples: List<C_ATTRIBUTE_TUPLE>;
+    prop attribute_tuples :? List<C_ATTRIBUTE_TUPLE>;
 
     | 
     | True if any value (i.e. instance) of the reference model type would be allowed. Redefined

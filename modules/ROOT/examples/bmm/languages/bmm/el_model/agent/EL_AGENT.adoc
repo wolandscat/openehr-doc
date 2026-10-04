@@ -19,7 +19,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_el_feature_ref[EL_FEATURE_REF]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

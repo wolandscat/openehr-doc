@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum MAGNITUDE_STATUS*
+3+^h|  *enumeration MAGNITUDE_STATUS*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*eq* = =

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Class representing a single object tuple instance in a tuple constraint. Each such
 | instance is a vector of object constraints, where each member (each `C_PRIMITIVE_OBJECT`)
@@ -12,7 +14,7 @@ feature_group ("access")
     | 
     | Object constraint members of this tuple group.
     | 
-    prop members: List<C_PRIMITIVE_OBJECT>;
+    prop members : List<C_PRIMITIVE_OBJECT>;
 
     | 
     | True if constraints represented by this node, ignoring any sub-parts, are narrower or the

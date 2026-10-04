@@ -8,19 +8,18 @@ skinparam citedClassColor #FDFDFD
 
 class AUDIT_DETAILS [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_audit_details]] {
         .. access ..
-        system_id: String
-        time_committed: DV_DATE_TIME
-        change_type: DV_CODED_TEXT
-        description: DV_TEXT
-        committer: PARTY_PROXY
+        system_id : String
+        time_committed : DV_DATE_TIME
+        change_type : DV_CODED_TEXT
+        description :? DV_TEXT
+        committer : PARTY_PROXY
 }
-
 
 class VERSIONED_OBJECT<T> [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_versioned_object]] {
         .. access ..
-        uid: HIER_OBJECT_ID
-        owner_id: OBJECT_REF
-        time_created: DV_DATE_TIME
+        uid : HIER_OBJECT_ID
+        owner_id : OBJECT_REF
+        time_created : DV_DATE_TIME
         version_count: Integer
         all_version_ids: List<OBJECT_VERSION_ID>
         all_versions: List<VERSION<T>>
@@ -35,14 +34,13 @@ class VERSIONED_OBJECT<T> [[/openehr-doc/latest/infostructure/versioning-gen.htm
         trunk_lifecycle_state: DV_CODED_TEXT
 }
 
-
 class ORIGINAL_VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_original_version]] {
         .. access ..
-        uid: OBJECT_VERSION_ID
-        preceding_version_uid: OBJECT_VERSION_ID
-        other_input_version_uids: List<OBJECT_VERSION_ID>
-        lifecycle_state: DV_CODED_TEXT
-        data: T
+        uid : OBJECT_VERSION_ID
+        preceding_version_uid :? OBJECT_VERSION_ID
+        other_input_version_uids :? List<OBJECT_VERSION_ID>
+        lifecycle_state : DV_CODED_TEXT
+        data :? T
         is_merged: Boolean
 }
 
@@ -66,18 +64,16 @@ IMPORTED_VERSION *--> "1 item" ORIGINAL_VERSION
 
 class REVISION_HISTORY_ITEM [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_revision_history_item]] {
         .. access ..
-        version_id: OBJECT_VERSION_ID
+        version_id : OBJECT_VERSION_ID
 }
-
 
 REVISION_HISTORY_ITEM *--> "0..* audits" AUDIT_DETAILS
 
 class CONTRIBUTION [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_contribution]] {
         .. access ..
-        uid: HIER_OBJECT_ID
-        versions: List<OBJECT_REF>
+        uid : HIER_OBJECT_ID
+        versions : List<OBJECT_REF>
 }
-
 
 CONTRIBUTION *--> "1 audit" AUDIT_DETAILS
 
@@ -87,13 +83,12 @@ class REVISION_HISTORY [[/openehr-doc/latest/infostructure/versioning-gen.html#_
         most_recent_version_time_committed: String
 }
 
-
 REVISION_HISTORY *--> "0..* items" REVISION_HISTORY_ITEM
 
 abstract class VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_version]] {
         .. access ..
-        contribution: OBJECT_REF
-        signature: String
+        contribution : OBJECT_REF
+        signature :? String
         uid: OBJECT_VERSION_ID
         preceding_version_uid: OBJECT_VERSION_ID
         data: T
@@ -103,16 +98,15 @@ abstract class VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.htm
         is_branch: Boolean
 }
 
-
 VERSION *--> "1 commit_audit" AUDIT_DETAILS
 
 class ATTESTATION [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_attestation]] {
         .. access ..
-        attested_view: DV_MULTIMEDIA
-        proof: String
-        items: List<DV_EHR_URI>
-        reason: DV_TEXT
-        is_pending: Boolean
+        attested_view :? DV_MULTIMEDIA
+        proof :? String
+        items :? List<DV_EHR_URI>
+        reason : DV_TEXT
+        is_pending : Boolean
 }
 
 ATTESTATION -[#gray]up-|> AUDIT_DETAILS  

@@ -1,5 +1,5 @@
 
-=== Enum CONSTRAINT_STATUS
+=== Enumeration CONSTRAINT_STATUS
 
 [tabs]
 ======

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A formal element having a name, type and a type-based signature.
 | 
@@ -10,13 +12,13 @@ feature_group ("access")
     | 
     | Declared or inferred static type of the entity.
     | 
-    prop type: BMM_TYPE;
+    prop type : BMM_TYPE;
 
     | 
     | True if this element can be null (Void) at execution time. May be interpreted as
     | optionality in subtypes..
     | 
-    prop is_nullable: Boolean;
+    prop is_nullable : Boolean;
 
     | 
     | Formal signature of this element, in the form:

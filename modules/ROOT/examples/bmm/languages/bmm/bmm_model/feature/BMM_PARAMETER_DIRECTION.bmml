@@ -1,15 +1,28 @@
+import org.openehr:representation ;
+
 | 
 | Enumeration of parameter read/write direction values.
 | 
 
-enum BMM_PARAMETER_DIRECTION
+enumeration BMM_PARAMETER_DIRECTION
     base_type String
 
-        pd_in (in)
+feature_group ("values")
 
-        pd_out (out)
+    | 
+    | Parameter is an input parameter, and treated as readonly by the receiving routine.
+    | 
+    pd_in ("in");
 
-        pd_in_out (in_out)
+    | 
+    | Parameter is an output parameter, treated as a reference to a writeable entity.
+    | 
+    pd_out ("out");
+
+    | 
+    | Parameter is an input and output parameter, treated as a readable and writeable reference.
+    | 
+    pd_in_out ("in_out");
 
 
 end

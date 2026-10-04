@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances representing duration, which is assumed to have the same parts as
 | the ISO 8601 duration string. Thus, constraints are of the form `"PWD"` (weeks and/or
@@ -25,18 +27,18 @@ feature_group ("access")
     | 
     | For a pattern constraint or no constraint, use an empty list.
     | 
-    prop constraint: List<Interval<Iso8601_duration>>;
+    prop constraint :? List<Interval<Iso8601_duration>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Iso8601_duration;
+    prop default_value :? Iso8601_duration;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: Iso8601_duration;
+    prop assumed_value :? Iso8601_duration;
 
     | 
     | True if years are allowed in the constrained Duration.

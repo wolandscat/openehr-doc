@@ -1,3 +1,4 @@
+
 | 
 | For representing state values which obey a defined state machine, such as a variable
 | representing the states of an instruction or care process.
@@ -17,13 +18,13 @@ feature_group ("access")
     | and coded using openEHR Terminology or local archetype terms, as specified by the
     | archetype.
     | 
-    prop value: DV_CODED_TEXT;
+    prop value : DV_CODED_TEXT;
 
     | 
     | Indicates whether this state is a terminal state, such as "aborted", "completed" etc. from
     | which no further transitions are possible.
     | 
-    prop is_terminal: Boolean;
+    prop is_terminal : Boolean;
 
 
 end

@@ -15,7 +15,7 @@ h|*Inherit*
 2+|xref:representation:data_types-gen.adoc#_class_dv_time_specification[DV_TIME_SPECIFICATION]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*period* : xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]

@@ -13,7 +13,7 @@ h|*Inherit*
 2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_item[EXTRACT_ITEM]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -35,7 +35,7 @@ of requestor.
 
 h|prop +
   0..1
-|*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+|*item*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Content object.
 
 h|prop +
@@ -67,7 +67,7 @@ h| func
 a|True if this node is the root of an archetyped structure.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1

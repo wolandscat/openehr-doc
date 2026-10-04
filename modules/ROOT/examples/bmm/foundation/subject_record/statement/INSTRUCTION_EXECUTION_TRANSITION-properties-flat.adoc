@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum INSTRUCTION_EXECUTION_TRANSITION*
+3+^h|  *enumeration INSTRUCTION_EXECUTION_TRANSITION*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*ism_t_initiate* = initiate

@@ -7,7 +7,4 @@
 h|*Description*
 2+a|Abstract parent of statement types representing a locally defined routine body.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 |===

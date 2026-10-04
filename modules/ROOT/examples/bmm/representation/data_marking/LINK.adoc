@@ -20,11 +20,8 @@ complete domain concepts because relationships between sub-elements of whole con
 not necessarily meaningful, and may be downright confusing. Sensible links only exist
 between whole `ENTRYs`, `SECTIONs`, `COMPOSITIONs` and so on.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:definitions-gen.adoc#_class_basic_definitions[BASIC_DEFINITIONS]
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|const +
   

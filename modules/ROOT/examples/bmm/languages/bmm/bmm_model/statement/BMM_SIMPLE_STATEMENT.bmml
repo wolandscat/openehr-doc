@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Simple statement, i.e. statement with one logical element - a single expression, procedure
 | call etc.

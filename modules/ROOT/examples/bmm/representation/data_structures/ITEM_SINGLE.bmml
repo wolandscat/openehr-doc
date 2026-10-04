@@ -1,3 +1,4 @@
+
 | 
 | Logical single value data structure. Used to represent any data which is logically a
 | single value, such as a person's height or weight.
@@ -9,7 +10,7 @@ class ITEM_SINGLE
 feature_group ("access")
 
     | 
-    prop item: ELEMENT;
+    prop item : ELEMENT;
 
     | 
     | Generate a CEN EN13606-compatible hierarchy consisting of a single `ELEMENT`.

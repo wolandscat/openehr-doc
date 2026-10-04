@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | One content chapter of an Extract; contains information relating to only one entity.
 | 
@@ -10,7 +13,7 @@ feature_group ("access")
     | 
     | The information content of this chapter.
     | 
-    prop items: List<EXTRACT_ITEM>;
+    prop items :? List<EXTRACT_ITEM>;
 
 
 end

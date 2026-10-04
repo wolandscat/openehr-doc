@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type based on a non-container generic class, e.g. `Packet<Header>`.
 | 
@@ -12,12 +14,12 @@ feature_group ("access")
     | order of the owning class's formal generic parameter declarations, and the types may be
     | defined types or formal parameter types.
     | 
-    prop generic_parameters: List<BMM_UNITARY_TYPE>;
+    prop generic_parameters : List<BMM_UNITARY_TYPE>;
 
     | 
     | Defining generic class of this type.
     | 
-    prop base_class: BMM_GENERIC_CLASS;
+    prop base_class : BMM_GENERIC_CLASS;
 
     | 
     | Return the full name of the type including generic parameters, e.g. `DV_INTERVAL<T>`,

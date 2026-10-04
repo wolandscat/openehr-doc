@@ -1,5 +1,5 @@
 
-=== Enum BMM_PARAMETER_DIRECTION
+=== Enumeration BMM_PARAMETER_DIRECTION
 
 [tabs]
 ======

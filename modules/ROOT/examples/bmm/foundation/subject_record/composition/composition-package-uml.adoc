@@ -10,12 +10,12 @@ LOCATABLE -[#gray]up-|> PATHABLE
 
 class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_event_context]] {
         .. access ..
-        start_time: DV_DATE_TIME
-        end_time: DV_DATE_TIME
-        location: String
-        setting: DV_CODED_TEXT
-        other_context: ITEM_STRUCTURE
-        health_care_facility: PARTY_IDENTIFIED
+        start_time : DV_DATE_TIME
+        end_time :? DV_DATE_TIME
+        location :? String
+        setting : DV_CODED_TEXT
+        other_context :? ITEM_STRUCTURE
+        health_care_facility :? PARTY_IDENTIFIED
 }
 
 EVENT_CONTEXT -[#gray]up-|> PATHABLE  
@@ -40,10 +40,10 @@ SECTION *--> "0..* items" CONTENT_ITEM
 
 class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_composition]] {
         .. access ..
-        language: CODE_PHRASE «iso.iso_639-1»
-        territory: CODE_PHRASE «iso.iso_3166-1-alpha2»
-        category: DV_CODED_TEXT
-        composer: PARTY_PROXY
+        language : CODE_PHRASE «iso.iso_639-1»
+        territory : CODE_PHRASE «iso.iso_3166-1-alpha2»
+        category : DV_CODED_TEXT
+        composer : PARTY_PROXY
         is_persistent: Boolean
 }
 

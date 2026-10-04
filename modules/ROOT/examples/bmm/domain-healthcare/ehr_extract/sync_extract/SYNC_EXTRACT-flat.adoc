@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_message_content[MESSAGE_CONTENT]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -52,7 +52,7 @@ h| func
 a|True if this node is the root of an archetyped structure.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1

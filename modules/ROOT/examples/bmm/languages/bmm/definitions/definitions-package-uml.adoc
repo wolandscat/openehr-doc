@@ -34,7 +34,6 @@ class BMM_DEFINITIONS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_de
         create_schema_id(a_model_publisher: String, ...): String
 }
 
-
 BMM_DEFINITIONS *--> "1 Any_class" BMM_SIMPLE_CLASS
 
 ....

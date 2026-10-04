@@ -15,10 +15,8 @@ PROCEDURE -[#gray]up-|> ROUTINE
 class ROUTINE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_routine]] {
 }
 
-
 class TUPLE [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple]] {
 }
-
 
 class FUNCTION<V:TUPLE, R:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_function]] {
 }

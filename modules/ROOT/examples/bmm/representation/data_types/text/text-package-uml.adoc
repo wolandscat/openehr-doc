@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class TERM_MAPPING [[/openehr-doc/latest/representation/data_types-gen.html#_class_term_mapping]] {
         .. access ..
-        match: Character
+        match : Character
         narrower: Boolean
         broader: Boolean
         equivalent: Boolean
@@ -16,23 +16,22 @@ class TERM_MAPPING [[/openehr-doc/latest/representation/data_types-gen.html#_cla
         is_valid_match_code(c: Character): Boolean
 }
 
-
 TERM_MAPPING *--> "0..1 purpose" DV_CODED_TEXT
 
 TERM_MAPPING *--> "1 target" CODE_PHRASE
 
 enum TEXT_FORMAT_TYPES [[/openehr-doc/latest/representation/data_types-gen.html#_class_text_format_types]] {
         .. values ..
-        plain = 0
-        plain_no_newlines = 1
-        markdown = 2
+        plain
+        plain_no_newlines
+        markdown
 }
 
 class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_text]] {
         .. access ..
-        value: String
-        hyperlink: DV_URI
-        formatting: String
+        value : String
+        hyperlink :? DV_URI
+        formatting :? String
 }
 
 DV_TEXT -[#gray]up-|> DATA_VALUE  
@@ -46,11 +45,10 @@ DV_TEXT *--> "0..1 encoding" CODE_PHRASE
 
 class CODE_PHRASE [[/openehr-doc/latest/representation/data_types-gen.html#_class_code_phrase]] {
         .. access ..
-        terminology_id: TERMINOLOGY_ID
-        code_string: String
-        preferred_term: String
+        terminology_id : TERMINOLOGY_ID
+        code_string : String
+        preferred_term :? String
 }
-
 
 class DV_CODED_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_coded_text]] {
         .. access ..

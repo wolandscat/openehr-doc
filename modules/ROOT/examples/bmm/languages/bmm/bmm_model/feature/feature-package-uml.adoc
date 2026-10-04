@@ -25,7 +25,6 @@ BMM_READONLY_VARIABLE -[#gray]up-|> BMM_VARIABLE
 abstract class BMM_VISIBILITY [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_visibility]] {
 }
 
-
 abstract class BMM_ROUTINE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_routine]] {
         .. access ..
         arity: Integer
@@ -45,7 +44,6 @@ BMM_ROUTINE *--> "0..1 definition" BMM_ROUTINE_DEFINITION
 abstract class BMM_FEATURE_EXTENSION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_feature_extension]] {
 }
 
-
 abstract class BMM_INSTANTIABLE_FEATURE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_instantiable_feature]] {
 }
 
@@ -54,16 +52,15 @@ BMM_INSTANTIABLE_FEATURE -[#gray]up-|> BMM_FEATURE
 
 enum BMM_OPERATOR_POSITION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_operator_position]] {
         .. values ..
-        prefix = prefix
-        infix = infix
+        prefix
+        infix
 }
 
 class BMM_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_operator]] {
         .. access ..
-        symbols: List<String>
-        name: String
+        symbols : List<String>
+        name : String
 }
-
 
 BMM_OPERATOR *--> "1 position" BMM_OPERATOR_POSITION
 
@@ -84,7 +81,7 @@ BMM_WRITABLE_VARIABLE -[#gray]up-|> BMM_VARIABLE
 
 class BMM_CONTAINER_PROPERTY [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_container_property]] {
         .. access ..
-        cardinality: Multiplicity_interval
+        cardinality :? Multiplicity_interval
         display_name: String
 }
 
@@ -105,7 +102,7 @@ BMM_INDEXED_CONTAINER_PROPERTY *--> "1 type" BMM_INDEXED_CONTAINER_TYPE
 
 class BMM_RESULT [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_result]] {
         .. access ..
-        name: String
+        name : String
 }
 
 BMM_RESULT -[#gray]up-|> BMM_WRITABLE_VARIABLE  
@@ -122,7 +119,7 @@ BMM_SINGLETON *--> "1 generator" BMM_ROUTINE_DEFINITION
 
 abstract class BMM_FEATURE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_feature]] {
         .. access ..
-        is_synthesised_generic: Boolean
+        is_synthesised_generic :? Boolean
 }
 
 BMM_FEATURE -[#gray]up-|> BMM_FORMAL_ELEMENT  
@@ -142,7 +139,7 @@ BMM_STATIC -[#gray]up-|> BMM_INSTANTIABLE_FEATURE
 
 class BMM_SELF [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_self]] {
         .. access ..
-        name: String
+        name : String
 }
 
 BMM_SELF -[#gray]up-|> BMM_READONLY_VARIABLE  
@@ -170,9 +167,9 @@ BMM_FUNCTION *--> "1 result" BMM_RESULT
 
 enum BMM_PARAMETER_DIRECTION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_parameter_direction]] {
         .. values ..
-        pd_in = in
-        pd_out = out
-        pd_in_out = in_out
+        pd_in
+        pd_out
+        pd_in_out
 }
 
 class BMM_LOCAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_local]] {
@@ -183,9 +180,9 @@ BMM_LOCAL -[#gray]up-|> BMM_WRITABLE_VARIABLE
 
 abstract class BMM_PROPERTY [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_property]] {
         .. access ..
-        is_im_runtime: Boolean
-        is_im_infrastructure: Boolean
-        is_composition: Boolean
+        is_im_runtime :? Boolean
+        is_im_infrastructure :? Boolean
+        is_composition :? Boolean
         existence: Multiplicity_interval
         display_name: String
 }

@@ -14,7 +14,7 @@ DV_EHR_URI -[#gray]up-|> DV_URI
 
 class DV_URI [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_uri]] {
         .. access ..
-        value: String
+        value : String
         scheme: String
         path: String
         fragment_id: String

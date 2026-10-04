@@ -14,13 +14,12 @@ Point_interval -[#gray]up-|> Interval
 
 class Cardinality [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_cardinality]] {
         .. access ..
-        is_ordered: Boolean
-        is_unique: Boolean
+        is_ordered : Boolean
+        is_unique : Boolean
         is_bag: Boolean
         is_list: Boolean
         is_set: Boolean
 }
-
 
 Cardinality *--> "1 interval" Multiplicity_interval
 
@@ -43,16 +42,15 @@ Multiplicity_interval -[#gray]up-|> Proper_interval
 
 abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_interval]] {
         .. access ..
-        lower: T
-        upper: T
-        lower_unbounded: Boolean
-        upper_unbounded: Boolean
-        lower_included: Boolean
-        upper_included: Boolean
+        lower :? T
+        upper :? T
+        lower_unbounded : Boolean
+        upper_unbounded : Boolean
+        lower_included : Boolean
+        upper_included : Boolean
         has: Boolean
         intersects: Boolean
         contains: Boolean
 }
-
 
 ....

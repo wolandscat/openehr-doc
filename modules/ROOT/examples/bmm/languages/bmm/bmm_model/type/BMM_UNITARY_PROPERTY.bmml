@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type of for properties of unitary type.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Declared or inferred static type of the entity.
     | 
-    prop type: BMM_UNITARY_TYPE;
+    prop type : BMM_UNITARY_TYPE;
 
 
 end

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Rules meta-type representing the type Object_ref, which is assumed to be the type
 | of any non-primitive reference target within a rule.

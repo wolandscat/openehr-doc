@@ -1,3 +1,4 @@
+
 | 
 | The grouping variant of `ITEM`, which may contain further instances of `ITEM`, in an
 | ordered list.
@@ -11,7 +12,7 @@ feature_group ("access")
     | 
     | Ordered list of items - `CLUSTER` or `ELEMENT` objects - under this `CLUSTER`.
     | 
-    prop items: List<ITEM>;
+    prop items : List<ITEM>;
 
 
 end

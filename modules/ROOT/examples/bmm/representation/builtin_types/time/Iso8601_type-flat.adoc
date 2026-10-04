@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_temporal[Temporal],xref:representation:definitions-gen.adoc#_class_time_definitions[Time_Definitions]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -30,7 +30,7 @@ a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / o
 separators. This is the preferred format.
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*less_than* ( +
@@ -78,7 +78,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 a|True if current object greater than or equal to `other`.
 
 h|
-2+^h|*Feature Group "definitions"*
+2+^h|*definitions*
 
 h|const +
   

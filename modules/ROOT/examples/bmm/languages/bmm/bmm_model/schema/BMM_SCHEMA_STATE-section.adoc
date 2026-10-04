@@ -1,5 +1,5 @@
 
-=== Enum BMM_SCHEMA_STATE
+=== Enumeration BMM_SCHEMA_STATE
 
 [tabs]
 ======

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Declaration of a writable variable, associating a name with a type.
 | 
@@ -8,15 +10,15 @@ class BMM_DECLARATION
 feature_group ("access")
 
     | 
-    prop name: String;
+    prop name : String;
 
     | 
-    prop result: EL_WRITABLE_VARIABLE;
+    prop result : EL_WRITABLE_VARIABLE;
 
     | 
     | The declared type of the variable.
     | 
-    prop type: BMM_TYPE;
+    prop type : BMM_TYPE;
 
 
 end

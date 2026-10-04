@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_bmm_variable[BMM_VARIABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

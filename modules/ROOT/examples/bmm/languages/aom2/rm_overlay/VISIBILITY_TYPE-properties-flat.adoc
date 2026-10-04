@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum VISIBILITY_TYPE*
+3+^h|  *enumeration VISIBILITY_TYPE*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*vt_hide* = hide

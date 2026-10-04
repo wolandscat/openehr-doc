@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A routine parameter variable (read-only).
 | 
@@ -11,7 +13,7 @@ feature_group ("access")
     | Optional read/write direction of the parameter. If none-supplied, the parameter is treated
     | as `in`, i.e. readable.
     | 
-    prop direction: BMM_PARAMETER_DIRECTION;
+    prop direction :? BMM_PARAMETER_DIRECTION;
 
 
 end

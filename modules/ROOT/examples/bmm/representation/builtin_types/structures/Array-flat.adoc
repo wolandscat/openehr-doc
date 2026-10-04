@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|builtin   *class Array<T:Any>*
+3+^h|builtin   *class Array<V:Any>*
 
 h|*Description*
 2+a|Container whose storage is assumed to be contiguous.
@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_container[Container]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

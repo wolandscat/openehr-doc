@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract ancestor of all concrete content types.
 | 

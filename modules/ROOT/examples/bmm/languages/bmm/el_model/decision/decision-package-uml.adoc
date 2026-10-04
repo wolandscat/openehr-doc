@@ -37,9 +37,8 @@ EL_CASE_TABLE *--> "1 test_value" EL_VALUE_GENERATOR
 
 abstract class EL_DECISION_BRANCH<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_branch]] {
         .. access ..
-        result: T
+        result : T
 }
-
 
 class EL_CONDITIONAL_EXPRESSION<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_conditional_expression]] {
         .. access ..
@@ -52,7 +51,7 @@ EL_CONDITIONAL_EXPRESSION *--> "1 condition" EL_EXPRESSION
 
 abstract class EL_DECISION_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_decision_table]] {
         .. access ..
-        else: T
+        else : T
 }
 
 EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL  

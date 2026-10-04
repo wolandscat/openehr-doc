@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Container object for archetype statements relating to RM attributes, which may be directly
 | on objects constrained within the archetype, or at deeper non-constrained RM paths from an
@@ -5,7 +7,6 @@
 | 
 
 class RM_OVERLAY
-    is_a Any
 
 feature_group ("access")
 
@@ -15,7 +16,7 @@ feature_group ("access")
     | archetyped node concatenated with a further pure RM attribute path; may also refer to a
     | non-archetyped attribute.
     | 
-    prop rm_visibility: Map<String,RM_ATTRIBUTE_VISIBILITY>;
+    prop rm_visibility :? Map<String,RM_ATTRIBUTE_VISIBILITY>;
 
 
 end

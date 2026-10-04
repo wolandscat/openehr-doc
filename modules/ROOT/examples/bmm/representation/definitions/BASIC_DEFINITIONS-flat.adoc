@@ -7,11 +7,8 @@
 h|*Description*
 2+a|Defines globally used constant values.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|const +
   

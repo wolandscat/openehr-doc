@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Representation of a flat value set within the archetype terminology.
 | 

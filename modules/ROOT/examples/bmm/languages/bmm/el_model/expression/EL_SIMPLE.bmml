@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Simple terminal, i.e. logically atomic expression element.
 | 

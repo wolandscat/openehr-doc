@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Expression tree leaf item representing a reference to a value found in data at a location
 | specified by a path in the archetype definition.
@@ -17,12 +19,12 @@ feature_group ("access")
     | 
     | The path to the archetype node.
     | 
-    prop path: String;
+    prop path : String;
 
     | 
     | Resolved reference to archetype element.
     | 
-    prop item: ARCHETYPE_CONSTRAINT;
+    prop item : ARCHETYPE_CONSTRAINT;
 
 
 end

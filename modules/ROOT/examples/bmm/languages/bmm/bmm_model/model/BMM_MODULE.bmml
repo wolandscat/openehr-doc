@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type defining a generalised module concept. Descendants define actual structure and
 | contents.
@@ -11,17 +13,17 @@ feature_group ("access")
     | 
     | Model within which module is defined.
     | 
-    prop scope: BMM_MODEL;
+    prop scope : BMM_MODEL;
 
     | 
     | List of feature groups in this class.
     | 
-    prop feature_groups: List<BMM_FEATURE_GROUP>;
+    prop feature_groups :? List<BMM_FEATURE_GROUP>;
 
     | 
     | Features of this module.
     | 
-    prop features: List<BMM_FORMAL_ELEMENT>;
+    prop features :? List<BMM_FORMAL_ELEMENT>;
 
 
 end

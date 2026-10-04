@@ -74,9 +74,8 @@ TYPE_DEF_TIME -[#gray]up-|> EXPR_TYPE_DEF
 
 abstract class EXPR_TYPE_DEF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_type_def]] {
         .. access ..
-        type_name: String
-        type_anchor: Any
+        type_name : String
+        type_anchor : Any
 }
-
 
 ....

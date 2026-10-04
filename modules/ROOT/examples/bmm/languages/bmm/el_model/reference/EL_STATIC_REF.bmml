@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Reference to a writable property, either a constant or computed.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | Constant definition (within class).
     | 
-    prop definition: BMM_STATIC;
+    prop definition : BMM_STATIC;
 
     | 
     | Defined to return False.
     | 
-    prop is_writable: Boolean;
+    prop is_writable : Boolean;
 
 
 end

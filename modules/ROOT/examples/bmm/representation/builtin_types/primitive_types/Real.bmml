@@ -1,3 +1,4 @@
+
 | 
 | Type used to represent decimal numbers. Corresponds to a single-precision
 | floating point value in most languages.

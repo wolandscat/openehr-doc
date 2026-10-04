@@ -1,3 +1,4 @@
+
 | 
 | Items which are truly boolean data, such as true/false or yes/no answers. For such data,
 | it is important to devise the meanings (usually questions in subjective data) carefully,
@@ -16,7 +17,7 @@ feature_group ("access")
     | 
     | Boolean value of this item. Actual values may be language or implementation dependent.
     | 
-    prop value: Boolean;
+    prop value : Boolean;
 
 
 end

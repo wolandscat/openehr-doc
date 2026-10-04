@@ -1,5 +1,5 @@
 
-=== Enum INSTRUCTION_EXECUTION_STATE
+=== Enumeration INSTRUCTION_EXECUTION_STATE
 
 [tabs]
 ======

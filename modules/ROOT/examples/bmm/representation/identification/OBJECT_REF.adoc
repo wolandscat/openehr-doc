@@ -11,11 +11,8 @@ e.g. available in a LAN (including on the same host) or the internet via Corba, 
 some other distributed protocol. However, in small systems they may be part of the same
 executable as the data containing the Id.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

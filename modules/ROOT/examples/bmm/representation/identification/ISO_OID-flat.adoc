@@ -14,7 +14,7 @@ h|*Inherit*
 2+|xref:representation:identification-gen.adoc#_class_uid[UID]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

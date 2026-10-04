@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Type of request designed for synchronisation of Contributions between openEHR servers.
 | 
@@ -10,7 +13,7 @@ feature_group ("access")
     | 
     | Details of specification of synchronisation request.
     | 
-    prop specification: SYNC_EXTRACT_SPEC;
+    prop specification : SYNC_EXTRACT_SPEC;
 
 
 end

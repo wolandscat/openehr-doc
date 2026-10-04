@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Model of a transition in the Instruction State Machine, caused by a careflow step.
 | The attributes document the careflow step as well as the ISM transition.
@@ -11,13 +13,13 @@ feature_group ("access")
     | 
     | The ISM current state. Coded by openEHR terminology group Instruction states.
     | 
-    prop current_state: DV_CODED_TEXT;
+    prop current_state : DV_CODED_TEXT;
 
     | 
     | The ISM transition which occurred to arrive in the current_state. Coded by openEHR
     | terminology group Instruction transitions.
     | 
-    prop transition: DV_CODED_TEXT;
+    prop transition :? DV_CODED_TEXT;
 
     | 
     | The step in the careflow process which occurred as part of generating this action, e.g.
@@ -25,13 +27,13 @@ feature_group ("access")
     | activity, as opposed to current_state which represents the state machine (ISM) computable
     | form. Defined in archetype.
     | 
-    prop careflow_step: DV_CODED_TEXT;
+    prop careflow_step :? DV_CODED_TEXT;
 
     | 
     | Optional possibility of adding one or more reasons for this careflow step having been
     | taken. Multiple reasons may occur in medication management for example.
     | 
-    prop reason: List<DV_TEXT>;
+    prop reason :? List<DV_TEXT>;
 
 invariant
     current_state_valid: terminology(Terminology_id_openehr).has_code_for_group_id(Group_id_instruction_states, current_state.defining_code);

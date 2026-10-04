@@ -16,7 +16,7 @@ h|*Inherit*
 2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -61,7 +61,7 @@ and often the patient (but not the latter if the clinical session is a pathology
 example).
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h| func
 |*parent* : xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]

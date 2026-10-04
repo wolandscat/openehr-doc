@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Expression tree leaf item representing a constraint on an archetype identifier.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | A C_STRING representing a regular expression for matching Archetype identifiers.
     | 
-    prop item: C_STRING;
+    prop item : C_STRING;
 
 
 end

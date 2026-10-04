@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Abstract parent of feature extensions.
 | 
 
 abstract class BMM_FEATURE_EXTENSION
-    is_a Any
 
 
 end

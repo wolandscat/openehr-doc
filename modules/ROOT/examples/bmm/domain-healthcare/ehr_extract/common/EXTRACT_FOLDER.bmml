@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Folder in local Folder structure in an Extract. Empty Folders are allowed.
 | 
@@ -10,7 +13,7 @@ feature_group ("access")
     | 
     | List of Folders and content items in this Folder.
     | 
-    prop items: List<EXTRACT_ITEM>;
+    prop items :? List<EXTRACT_ITEM>;
 
 
 end

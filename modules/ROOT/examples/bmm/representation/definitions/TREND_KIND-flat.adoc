@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum TREND_KIND*
+3+^h|  *enumeration TREND_KIND*
 
 h|*Description*
 2+a|Enumeration of trend directions for DV_ORDINAL and similar ordered values.
@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*increase* = increase
@@ -26,7 +26,7 @@ h|
 a|
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
@@ -46,7 +46,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:r
 a|Return True if this String contains `other` (case-sensitive).
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*append* ( +

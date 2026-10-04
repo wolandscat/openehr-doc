@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for locally declared routine body.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | Local variables of the routine, if there is a body defined.
     | 
-    prop locals: List<BMM_LOCAL>;
+    prop locals :? List<BMM_LOCAL>;
 
     | 
     | Body of routine declaration.
     | 
-    prop body: BMM_STATEMENT_BLOCK;
+    prop body : BMM_STATEMENT_BLOCK;
 
 
 end

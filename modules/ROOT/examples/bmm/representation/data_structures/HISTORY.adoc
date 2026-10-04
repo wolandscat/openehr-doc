@@ -18,7 +18,7 @@ h|*Inherit*
 2+|xref:representation:data_structures-gen.adoc#_class_data_structure[DATA_STRUCTURE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -63,7 +63,7 @@ h|
 2+a|periodic_validity: is_periodic ⊻ ¬ ∃ period;
 
 h|
-2+a|period_consistency: is_periodic ⇒ events.for_all(e.offset.to_seconds.mod(period.to_seconds) = 0);
+2+a|period_consistency: is_periodic ⇒ ∀ e:events ¦ e.offset.to_seconds.mod(period.to_seconds) = 0;
 
 
 |===

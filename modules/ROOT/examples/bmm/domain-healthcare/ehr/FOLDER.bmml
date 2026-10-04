@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | The concept of a named folder.
 | 
@@ -16,17 +19,17 @@ feature_group ("access")
     | 
     | Sub-folders of this `FOLDER`.
     | 
-    prop folders: List<FOLDER>;
+    prop folders :? List<FOLDER>;
 
     | 
     | The list of references to other (usually) versioned objects logically in this folder.
     | 
-    prop items: List<OBJECT_REF>;
+    prop items :? List<OBJECT_REF>;
 
     | 
     | Archetypable meta-data for `FOLDER`.
     | 
-    prop details: ITEM_STRUCTURE;
+    prop details :? ITEM_STRUCTURE;
 
 invariant
     folders_valid: ¬ folders.is_empty();

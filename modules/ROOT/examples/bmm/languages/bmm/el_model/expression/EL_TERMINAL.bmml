@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Expression entities that are terminals (i.e. leaves) within operator expressions
 | or tuples.

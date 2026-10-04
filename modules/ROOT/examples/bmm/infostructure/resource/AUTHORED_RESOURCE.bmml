@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Abstract idea of an online resource created by a human author.
 | 
 
 abstract class AUTHORED_RESOURCE
-    is_a Any
 
 feature_group ("access")
 
@@ -11,7 +12,7 @@ feature_group ("access")
     | Unique identifier of the family of archetypes having the same interface identifier (same
     | major version).
     | 
-    prop uid: UUID;
+    prop uid :? UUID;
 
     | 
     | Language in which this resource was initially authored. Although there is no language
@@ -19,24 +20,24 @@ feature_group ("access")
     | natural language translations can preserve quality. Language is relevant in both the
     | description and ontology sections.
     | 
-    prop original_language: Terminology_code «iso.iso_639-1»;
+    prop original_language : Terminology_code «iso.iso_639-1»;
 
     | 
     | True if this resource is under any kind of change control (even file copying), in which
     | case revision history is created.
     | 
-    prop is_controlled: Boolean;
+    prop is_controlled :? Boolean;
 
     | 
     | Description and lifecycle information of the resource.
     | 
-    prop description: RESOURCE_DESCRIPTION;
+    prop description :? RESOURCE_DESCRIPTION;
 
     | 
     | Annotations on individual items within the resource, keyed by path. The inner table takes
     | the form of a Hash table of String values keyed by String tags.
     | 
-    prop annotations: RESOURCE_ANNOTATIONS;
+    prop annotations :? RESOURCE_ANNOTATIONS;
 
     | 
     | List of details for each natural translation made of this resource, keyed by language
@@ -44,7 +45,7 @@ feature_group ("access")
     | language-dependent parts of the resource. The `original_language` does not appear in
     | this list.
     | 
-    prop translations: Map<String,TRANSLATION_DETAILS>;
+    prop translations :? Map<String,TRANSLATION_DETAILS>;
 
     | 
     | Total list of languages available in this resource, derived from original_language and
@@ -57,7 +58,7 @@ invariant
     original_language_valid: code_set(Code_set_id_languages).has_code(original_language.as_string);
     current_revision_valid: (∃ current_revision ∧ ¬ is_controlled) ⇒ current_revision.is_equal("(uncontrolled)");
     translations_valid: ∃ translations ⇒ ¬ translations.is_empty() ∧ ¬ translations.has(orginal_language.code_string);
-    description_valid: ∃ translations ⇒ description.details.for_all(translations.has_key(d.language.code_string));
+    description_valid: ∃ translations ⇒ ∀ d:description.details ¦ translations.has_key(d.language.code_string);
     languages_available_valid: languages_available.has(original_language);
 
 end

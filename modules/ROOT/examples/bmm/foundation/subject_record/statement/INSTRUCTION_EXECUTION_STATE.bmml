@@ -1,28 +1,59 @@
+import org.openehr:representation ;
+
 | 
 | Enumeration of states in the Instruction State Machine (ISM) used to track the
 | lifecycle of an Instruction execution.
 | 
 
-enum INSTRUCTION_EXECUTION_STATE
+enumeration INSTRUCTION_EXECUTION_STATE
     base_type String
 
-        initial (initial)
+feature_group ("values")
 
-        planned (planned)
+    | 
+    | Instruction created but not yet activated.
+    | 
+    initial ("initial");
 
-        postponed (postponed)
+    | 
+    | Instruction has been planned.
+    | 
+    planned ("planned");
 
-        cancelled (cancelled)
+    | 
+    | Instruction execution has been postponed.
+    | 
+    postponed ("postponed");
 
-        active (active)
+    | 
+    | Instruction has been cancelled prior to start.
+    | 
+    cancelled ("cancelled");
 
-        suspended (suspended)
+    | 
+    | Instruction is currently being executed.
+    | 
+    active ("active");
 
-        completed (completed)
+    | 
+    | Instruction execution has been suspended.
+    | 
+    suspended ("suspended");
 
-        aborted (aborted)
+    | 
+    | Instruction has been completed.
+    | 
+    completed ("completed");
 
-        expired (expired)
+    | 
+    | Instruction execution has been aborted.
+    | 
+    aborted ("aborted");
+
+    | 
+    | Instruction has expired without completion.
+    | 
+    expired ("expired");
 
 
 end

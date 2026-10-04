@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for the notion of statement, which is a non-value-returning entity.
 | 
 
 abstract class STATEMENT
-    is_a Any
 
 
 end

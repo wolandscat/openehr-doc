@@ -14,7 +14,7 @@ h|*Inherit*
 2+|xref:languages:bel-gen.adoc#_class_expr_value[EXPR_VALUE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

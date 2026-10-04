@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class PARTY_IDENTITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_identity]] {
         .. access ..
-        details: ITEM_STRUCTURE
+        details : ITEM_STRUCTURE
         purpose: DV_TEXT
 }
 
@@ -29,8 +29,8 @@ VERSIONED_PARTY -[#gray]up-|> VERSIONED_OBJECT
 
 abstract class ACTOR [[/openehr-doc/latest/foundation/demographic-gen.html#_class_actor]] {
         .. access ..
-        languages: List<DV_TEXT>
-        roles: List<PARTY_REF>
+        languages :? List<DV_TEXT>
+        roles :? List<PARTY_REF>
 }
 
 ACTOR -[#gray]up-|> PARTY  
@@ -38,7 +38,7 @@ ACTOR -[#gray]up-|> PARTY
 
 class ADDRESS [[/openehr-doc/latest/foundation/demographic-gen.html#_class_address]] {
         .. access ..
-        details: ITEM_STRUCTURE
+        details : ITEM_STRUCTURE
         type: DV_TEXT
 }
 
@@ -47,8 +47,8 @@ ADDRESS -[#gray]up-|> LOCATABLE
 
 class CAPABILITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_capability]] {
         .. access ..
-        credentials: ITEM_STRUCTURE
-        time_validity: DV_INTERVAL<DV_DATE>
+        credentials : ITEM_STRUCTURE
+        time_validity :? DV_INTERVAL<DV_DATE>
 }
 
 CAPABILITY -[#gray]up-|> LOCATABLE  
@@ -56,7 +56,7 @@ CAPABILITY -[#gray]up-|> LOCATABLE
 
 abstract class PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party]] {
         .. access ..
-        details: ITEM_STRUCTURE
+        details :? ITEM_STRUCTURE
         type: DV_TEXT
         reverse_relationships: List<LOCATABLE_REF>
 }
@@ -78,8 +78,8 @@ AGENT -[#gray]up-|> ACTOR
 
 class ROLE [[/openehr-doc/latest/foundation/demographic-gen.html#_class_role]] {
         .. access ..
-        time_validity: DV_INTERVAL<DV_DATE>
-        performer: PARTY_REF
+        time_validity :? DV_INTERVAL<DV_DATE>
+        performer : PARTY_REF
 }
 
 ROLE -[#gray]up-|> PARTY  
@@ -89,7 +89,7 @@ ROLE *--> "0..* capabilities" CAPABILITY
 
 class CONTACT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_contact]] {
         .. access ..
-        time_validity: DV_INTERVAL<DV_DATE>
+        time_validity :? DV_INTERVAL<DV_DATE>
         purpose: DV_TEXT
 }
 
@@ -112,10 +112,10 @@ GROUP -[#gray]up-|> ACTOR
 
 class PARTY_RELATIONSHIP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_relationship]] {
         .. access ..
-        details: ITEM_STRUCTURE
-        target: PARTY_REF
-        time_validity: DV_INTERVAL<DV_DATE>
-        source: PARTY_REF
+        details :? ITEM_STRUCTURE
+        target : PARTY_REF
+        time_validity :? DV_INTERVAL<DV_DATE>
+        source : PARTY_REF
         type: DV_TEXT
 }
 
@@ -123,7 +123,7 @@ PARTY_RELATIONSHIP -[#gray]up-|> LOCATABLE
 
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
-class "infostructure.versioning.\nVERSIONED_OBJECT" as VERSIONED_OBJECT  [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_versioned_object]] #FDFDFD {
+class "infostructure.versioning.\nVERSIONED_OBJECT<T>" as VERSIONED_OBJECT<T>  [[/openehr-doc/latest/infostructure/versioning-gen.html#_class_versioned_object]] #FDFDFD {
 }
 
 ....

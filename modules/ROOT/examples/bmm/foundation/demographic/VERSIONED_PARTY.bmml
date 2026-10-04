@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Static type formed by binding generic parameter of `VERSIONED_OBJECT<T>` to `PARTY`.
 | 

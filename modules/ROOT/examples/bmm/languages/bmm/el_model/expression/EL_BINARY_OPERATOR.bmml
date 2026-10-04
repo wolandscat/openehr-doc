@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Binary operator expression node.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | Left operand node.
     | 
-    prop left_operand: EL_EXPRESSION;
+    prop left_operand : EL_EXPRESSION;
 
     | 
     | Right operand node.
     | 
-    prop right_operand: EL_EXPRESSION;
+    prop right_operand : EL_EXPRESSION;
 
 
 end

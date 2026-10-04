@@ -14,7 +14,7 @@ h|*Inherit*
 2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1
@@ -76,7 +76,7 @@ a_loc: xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]): xre
 a|The path to an item relative to the root of this archetyped structure.
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

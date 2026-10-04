@@ -6,7 +6,7 @@
 
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -28,7 +28,7 @@ a|Audit trail from non-openEHR system of original commit of information forming 
 of this node, or from a conversion gateway which has synthesised this node.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1

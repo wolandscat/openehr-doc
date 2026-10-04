@@ -1,3 +1,4 @@
+
 | 
 | Version tree identifier for one version. Lexical form:
 | 
@@ -5,14 +6,13 @@
 | 
 
 class VERSION_TREE_ID
-    is_a Any
 
 feature_group ("access")
 
     | 
     | String form of this identifier.
     | 
-    prop value: String;
+    prop value : String;
 
     | 
     | Trunk version number; numbering starts at 1.

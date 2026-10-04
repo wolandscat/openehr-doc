@@ -1,10 +1,11 @@
+
 | 
 | Defines the abstract notion of a single event in a series. This class is generic, allowing
 | types to be generated which are locked to particular spatial types, such as
 | `EVENT<ITEM_LIST>`. Subtypes express point or intveral data.
 | 
 
-abstract class EVENT
+abstract class EVENT<T:ITEM_STRUCTURE>
     is_a LOCATABLE
 
 feature_group ("access")
@@ -13,17 +14,17 @@ feature_group ("access")
     | Time of this event. If the width is non-zero, it is the time point of the trailing edge of
     | the event.
     | 
-    prop time: DV_DATE_TIME;
+    prop time : DV_DATE_TIME;
 
     | 
     | The data of this event.
     | 
-    prop data: T;
+    prop data : T;
 
     | 
     | Optional state data for this event.
     | 
-    prop state: ITEM_STRUCTURE;
+    prop state :? ITEM_STRUCTURE;
 
     | 
     | Offset of this event from origin, computed as time.diff(parent.origin).

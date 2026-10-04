@@ -1,3 +1,4 @@
+
 | 
 | The `PATHABLE` class defines the pathing capabilities used by nearly all classes in the
 | openEHR reference model, mostly via inheritance of `LOCATABLE`. The defining
@@ -7,7 +8,6 @@
 | 
 
 abstract class PATHABLE
-    is_a Any
 
 feature_group ("infrastructure")
 

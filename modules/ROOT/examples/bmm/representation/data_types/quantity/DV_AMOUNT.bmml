@@ -1,3 +1,4 @@
+
 | 
 | Abstract class defining the concept of relative quantified 'amounts'. For relative
 | quantities, the `+` and `-` operators are defined (unlike descendants of
@@ -16,13 +17,13 @@ feature_group ("access")
     | 
     | A value of `unknown_accuracy_value` means that accuracy was not recorded.
     | 
-    prop accuracy: Real;
+    prop accuracy :? Real;
 
     | 
     | If `True`, indicates that when this object was created, `accuracy` was recorded as a
     | percent value; if `False`, as an absolute quantity value.
     | 
-    prop accuracy_is_percent: Boolean;
+    prop accuracy_is_percent :? Boolean;
 
 invariant
     accuracy_is_percent_validity: accuracy = 0 ⇒ ¬ accuracy_is_percent;

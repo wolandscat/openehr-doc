@@ -1,9 +1,9 @@
+
 | 
 | Abstract ancestor of container types whose items are addressable in some way.
 | 
 
-builtin abstract class Container
-    is_a Any
+abstract builtin class Container<V:Any>
 
 feature_group ("access")
 

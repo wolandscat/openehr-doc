@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A statement 'block' corresponding to the programming language concept of the same name.
 | May be used to establish scope in specific languages.
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | Child blocks of the current block.
     | 
-    prop items: List<BMM_STATEMENT_ITEM>;
+    prop items :? List<BMM_STATEMENT_ITEM>;
 
 
 end

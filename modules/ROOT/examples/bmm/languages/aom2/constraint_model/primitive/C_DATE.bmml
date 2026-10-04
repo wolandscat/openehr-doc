@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances representing dates in the form either of a set of validity values,
 | or else date ranges based on the `C_ORDERED` list constraint.
@@ -18,18 +20,18 @@ feature_group ("access")
     | 
     | For a pattern constraint or no constraint, use an empty list.
     | 
-    prop constraint: List<Interval<Iso8601_date>>;
+    prop constraint :? List<Interval<Iso8601_date>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Iso8601_date;
+    prop default_value :? Iso8601_date;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: Iso8601_date;
+    prop assumed_value :? Iso8601_date;
 
     | 
     | Validity of month in constrained date.

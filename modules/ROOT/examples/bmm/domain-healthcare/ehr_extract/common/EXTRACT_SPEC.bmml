@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Specification of an Extract's contents. Subtypes can be used to add details specific to
 | the type of Extract. The specification consists of attributes specifying the directory,
@@ -10,7 +13,6 @@
 | 
 
 class EXTRACT_SPEC
-    is_a Any
 
 feature_group ("access")
 
@@ -19,12 +21,12 @@ feature_group ("access")
     | the default is latest versions only (which is reasonable for non-versioning systems as
     | well).
     | 
-    prop version_spec: EXTRACT_VERSION_SPEC;
+    prop version_spec :? EXTRACT_VERSION_SPEC;
 
     | 
     | Specification of entities (e.g. records) to include in the Extract.
     | 
-    prop manifest: EXTRACT_MANIFEST;
+    prop manifest : EXTRACT_MANIFEST;
 
     | 
     | Coded term indicating the type of content required, e.g.
@@ -36,13 +38,13 @@ feature_group ("access")
     | 
     | Coded by openEHR Terminology group `'extract content type'`.
     | 
-    prop extract_type: DV_CODED_TEXT;
+    prop extract_type : DV_CODED_TEXT;
 
     | 
     | Indicates whether in-line instances of `DV_MULTIMEDIA` in the source data are included or
     | not.
     | 
-    prop include_multimedia: Boolean;
+    prop include_multimedia : Boolean;
 
     | 
     | Requested priority of this request to be handled by server. Priority schemes are likely to
@@ -50,7 +52,7 @@ feature_group ("access")
     | 
     | TBD: alternative is standard coded terms
     | 
-    prop priority: Integer;
+    prop priority : Integer;
 
     | 
     | Degree of links to follow emanating from content items specified for inclusion. The kind
@@ -65,17 +67,17 @@ feature_group ("access")
     | * ....
     | * n = follow nth degree links
     | 
-    prop link_depth: Integer;
+    prop link_depth : Integer;
 
     | 
     | Queries specifying the contents of this Extract.
     | 
-    prop criteria: List<DV_CODED_TEXT>;
+    prop criteria :? List<DV_CODED_TEXT>;
 
     | 
     | Other specification items. Archetypable.
     | 
-    prop other_details: ITEM_STRUCTURE;
+    prop other_details :? ITEM_STRUCTURE;
 
 
 end

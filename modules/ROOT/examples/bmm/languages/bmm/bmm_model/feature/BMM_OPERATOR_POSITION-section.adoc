@@ -1,5 +1,5 @@
 
-=== Enum BMM_OPERATOR_POSITION
+=== Enumeration BMM_OPERATOR_POSITION
 
 [tabs]
 ======

@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum TEXT_FORMAT_TYPES*
+3+^h|  *enumeration TEXT_FORMAT_TYPES*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*plain* = 0

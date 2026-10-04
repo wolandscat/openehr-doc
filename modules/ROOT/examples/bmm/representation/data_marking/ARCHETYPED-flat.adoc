@@ -13,11 +13,8 @@ classes have the `archetype_details` attribute set.
 An instance of the class `ARCHETYPED` contains the relevant archetype identification
 information, allowing generating archetypes to be matched up with data instances.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   

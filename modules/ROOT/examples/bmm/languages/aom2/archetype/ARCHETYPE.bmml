@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | The `ARCHETYPE` class defines the core formal model of the root object of any archetype or
 | template. It includes only basic identification information, and otherwise provides the
@@ -7,7 +9,6 @@
 | 
 
 abstract class ARCHETYPE
-    is_a Any
 
 feature_group ("access")
 
@@ -16,37 +17,37 @@ feature_group ("access")
     | take the form of an archetype interface identifier, i.e. the identifier up to the major
     | version only, or may be a full archetype identifier.
     | 
-    prop parent_archetype_id: String;
+    prop parent_archetype_id :? String;
 
     | 
     | Identifier of this archetype.
     | 
-    prop archetype_id: ARCHETYPE_HRID;
+    prop archetype_id : ARCHETYPE_HRID;
 
     | 
     | Flag indicating whether this archetype is differential or flat in its contents. Top-level
     | source archetypes have this flag set to True.
     | 
-    prop is_differential: Boolean;
+    prop is_differential : Boolean;
 
     | 
     | Root node of the definition of this archetype.
     | 
-    prop definition: C_COMPLEX_OBJECT;
+    prop definition : C_COMPLEX_OBJECT;
 
     | 
     | The terminology of the archetype.
     | 
-    prop terminology: ARCHETYPE_TERMINOLOGY;
+    prop terminology : ARCHETYPE_TERMINOLOGY;
 
     | 
     | Rules relating to this archetype. Statements are expressed in first order predicate logic,
     | and usually refer to at least two attributes.
     | 
-    prop rules: List<STATEMENT_SET>;
+    prop rules :? List<STATEMENT_SET>;
 
     | 
-    prop rm_overlay: RM_OVERLAY;
+    prop rm_overlay :? RM_OVERLAY;
 
     | 
     | The concept code of the root object of the archetype, also standing for the concept of the

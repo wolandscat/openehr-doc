@@ -1,15 +1,18 @@
+
 | 
 | Enumeration of trend directions for DV_ORDINAL and similar ordered values.
 | 
 
-enum TREND_KIND
+enumeration TREND_KIND
     base_type String
 
-        increase (increase)
+feature_group ("values")
 
-        decrease (decrease)
+    increase ("increase");
 
-        change (change)
+    decrease ("decrease");
+
+    change ("change");
 
 
 end

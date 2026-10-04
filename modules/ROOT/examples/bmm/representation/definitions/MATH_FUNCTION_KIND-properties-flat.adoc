@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum MATH_FUNCTION_KIND*
+3+^h|  *enumeration MATH_FUNCTION_KIND*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*actual* = actual

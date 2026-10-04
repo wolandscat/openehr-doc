@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|builtin   *class List<T:Any>*
+3+^h|builtin   *class List<V:Any>*
 
 h|*Description*
 2+a|Ordered container that may contain duplicates.
@@ -11,14 +11,14 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_container[Container]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
-|*first* : T
+|*first* : V
 a|Return first element.
 
 h| func
-|*last* : T
+|*last* : V
 a|Return last element.
 
 h| func

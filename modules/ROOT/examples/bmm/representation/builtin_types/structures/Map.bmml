@@ -1,9 +1,10 @@
+
 | 
 | Type representing a keyed table of values. V is the value type and K the type
 | of the keys.
 | 
 
-builtin class Map
+builtin class Map<K:Ordered, V>
     is_a Container<V>
 
 feature_group ("access")

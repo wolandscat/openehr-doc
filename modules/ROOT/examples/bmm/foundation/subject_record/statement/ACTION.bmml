@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Used to record a clinical action that has been performed, which may have been ad hoc,
 | or due to the execution of an Activity in an Instruction workflow. Every Action
@@ -15,22 +17,22 @@ feature_group ("access")
     | time before which the Action is known to have occurred, e.g. data accession timestamp from
     | integration engine), and `magnitude_status` set to `<`.
     | 
-    prop time: DV_DATE_TIME;
+    prop time : DV_DATE_TIME;
 
     | 
     | Details of transition in the Instruction state machine caused by this Action.
     | 
-    prop ism_transition: ISM_TRANSITION;
+    prop ism_transition : ISM_TRANSITION;
 
     | 
     | Details of the Instruction that caused this Action to be performed, if there was one.
     | 
-    prop instruction_details: INSTRUCTION_DETAILS;
+    prop instruction_details :? INSTRUCTION_DETAILS;
 
     | 
     | Description of the action that has been performed, in the form of an archetyped structure.
     | 
-    prop description: ITEM_STRUCTURE;
+    prop description : ITEM_STRUCTURE;
 
 
 end

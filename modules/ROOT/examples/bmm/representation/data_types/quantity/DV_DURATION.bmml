@@ -1,3 +1,4 @@
+
 | 
 | Represents a period of time with respect to a notional point in time, which is not
 | specified. A sign may be used to indicate the duration is backwards in time rather than
@@ -24,7 +25,7 @@ feature_group ("access")
     | ISO8601 duration string, including described deviations to support negative values and
     | weeks.
     | 
-    prop value: String;
+    prop value : String;
 
     | 
     | Numeric value of the duration as a number of seconds. Computed using the method

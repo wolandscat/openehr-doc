@@ -1,3 +1,7 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+import org.openehr:infostructure ;
+
 | 
 | Version container for `EHR_ACCESS` instance.
 | 

@@ -1,3 +1,4 @@
+
 | 
 | Represents an absolute point in time, as measured on the Gregorian calendar, and specified
 | only to the day. Semantics defined by ISO 8601. Used for recording dates in real world
@@ -12,7 +13,7 @@ feature_group ("access")
     | 
     | ISO8601 date string.
     | 
-    prop value: String;
+    prop value : String;
 
     | 
     | Numeric value of the date as days since the calendar origin date `0001-01-01`.

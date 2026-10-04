@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum PROPORTION_KIND*
+3+^h|  *enumeration PROPORTION_KIND*
 
 h|*Description*
 2+a|Class of enumeration constants defining types of proportion for the `DV_PROPORTION` class.
@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*pk_ratio* = 0
@@ -34,7 +34,7 @@ h|
 a|
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*add* ( +

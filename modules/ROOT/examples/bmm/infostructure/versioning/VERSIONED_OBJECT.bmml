@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Version control abstraction, defining semantics for versioning one complex object.
 | 
 
-class VERSIONED_OBJECT
-    is_a Any
+class VERSIONED_OBJECT<T>
 
 feature_group ("access")
 
@@ -12,18 +13,18 @@ feature_group ("access")
     | id will be the same in all instances of the same container in a distributed environment,
     | meaning that it can be understood as the uid of the virtual version tree.
     | 
-    prop uid: HIER_OBJECT_ID;
+    prop uid : HIER_OBJECT_ID;
 
     | 
     | Reference to object to which this version container belongs, e.g. the id of the containing
     | EHR or other relevant owning entity.
     | 
-    prop owner_id: OBJECT_REF;
+    prop owner_id : OBJECT_REF;
 
     | 
     | Time of initial creation of this versioned object.
     | 
-    prop time_created: DV_DATE_TIME;
+    prop time_created : DV_DATE_TIME;
 
     | 
     | Return the total number of versions in this object.

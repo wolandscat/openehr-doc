@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum VALIDITY_KIND*
+3+^h|  *enumeration VALIDITY_KIND*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*mandatory* = mandatory

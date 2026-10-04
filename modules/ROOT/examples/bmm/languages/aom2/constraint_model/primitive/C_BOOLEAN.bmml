@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances of `Boolean`. Both attributes cannot be set to False, since this
 | would mean that the Boolean value being constrained cannot be `True` or `False`.
@@ -11,17 +13,17 @@ feature_group ("access")
     | 
     | Boolean constraint - a list of Boolean values.
     | 
-    prop constraint: List<Boolean>;
+    prop constraint :? List<Boolean>;
 
     | 
     | Assumed Boolean value.
     | 
-    prop assumed_value: Boolean;
+    prop assumed_value :? Boolean;
 
     | 
     | Default Boolean value.
     | 
-    prop default_value: Boolean;
+    prop default_value :? Boolean;
 
     | 
     | Prototype Boolean value.

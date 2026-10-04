@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract parent type of `C_OBJECT` subtypes that are defined by value, i.e. whose
 | definitions are actually in the archetype rather than being by reference.
@@ -12,7 +14,7 @@ feature_group ("access")
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Any;
+    prop default_value :? Any;
 
     | 
     | True if any value (i.e. instance) of the reference model type would be allowed. Redefined

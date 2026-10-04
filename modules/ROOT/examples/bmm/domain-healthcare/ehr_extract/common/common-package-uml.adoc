@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class EXTRACT_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_request]] {
         .. access ..
-        uid: HIER_OBJECT_ID
+        uid : HIER_OBJECT_ID
 }
 
 EXTRACT_REQUEST -[#gray]up-|> LOCATABLE  
@@ -29,19 +29,18 @@ EXTRACT_FOLDER *--> "0..* items" EXTRACT_ITEM
 
 class EXTRACT_ENTITY_MANIFEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_entity_manifest]] {
         .. access ..
-        extract_id_key: String
-        ehr_id: HIER_OBJECT_ID
-        subject_id: PARTY_REF
-        other_ids: List<OBJECT_REF>
-        item_list: List<OBJECT_REF>
+        extract_id_key : String
+        ehr_id :? HIER_OBJECT_ID
+        subject_id :? PARTY_REF
+        other_ids :? List<OBJECT_REF>
+        item_list :? List<OBJECT_REF>
 }
-
 
 class EXTRACT_ACTION_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_action_request]] {
         .. access ..
-        request_id: OBJECT_REF
-        action: DV_CODED_TEXT
-        uid: HIER_OBJECT_ID
+        request_id : OBJECT_REF
+        action : DV_CODED_TEXT
+        uid : HIER_OBJECT_ID
 }
 
 EXTRACT_ACTION_REQUEST -[#gray]up-|> LOCATABLE  
@@ -60,19 +59,17 @@ class EXTRACT_MANIFEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.h
         .. access ..
 }
 
-
 EXTRACT_MANIFEST *--> "0..* entities" EXTRACT_ENTITY_MANIFEST
 
 class EXTRACT_SPEC [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_spec]] {
         .. access ..
-        extract_type: DV_CODED_TEXT
-        include_multimedia: Boolean
-        priority: Integer
-        link_depth: Integer
-        criteria: List<DV_CODED_TEXT>
-        other_details: ITEM_STRUCTURE
+        extract_type : DV_CODED_TEXT
+        include_multimedia : Boolean
+        priority : Integer
+        link_depth : Integer
+        criteria :? List<DV_CODED_TEXT>
+        other_details :? ITEM_STRUCTURE
 }
-
 
 EXTRACT_SPEC *--> "0..1 version_spec" EXTRACT_VERSION_SPEC
 
@@ -80,25 +77,23 @@ EXTRACT_SPEC *--> "1 manifest" EXTRACT_MANIFEST
 
 class EXTRACT_PARTICIPATION [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_participation]] {
         .. access ..
-        time: DV_INTERVAL<DV_DATE_TIME>
-        function: DV_TEXT
-        mode: DV_CODED_TEXT
-        performer: String
+        time :? DV_INTERVAL<DV_DATE_TIME>
+        function : DV_TEXT
+        mode :? DV_CODED_TEXT
+        performer : String
 }
-
 
 class EXTRACT_VERSION_SPEC [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_version_spec]] {
         .. access ..
-        include_all_versions: Boolean
-        commit_time_interval: DV_INTERVAL<DV_DATE_TIME>
-        include_revision_history: Boolean
-        include_data: Boolean
+        include_all_versions : Boolean
+        commit_time_interval :? DV_INTERVAL<DV_DATE_TIME>
+        include_revision_history : Boolean
+        include_data : Boolean
 }
-
 
 class EXTRACT_ENTITY_CHAPTER [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_entity_chapter]] {
         .. access ..
-        extract_id_key: String
+        extract_id_key : String
 }
 
 EXTRACT_ENTITY_CHAPTER -[#gray]up-|> EXTRACT_CHAPTER  
@@ -106,10 +101,10 @@ EXTRACT_ENTITY_CHAPTER -[#gray]up-|> EXTRACT_CHAPTER
 
 abstract class EXTRACT_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] {
         .. access ..
-        is_primary: Boolean
-        is_changed: Boolean
-        is_masked: Boolean
-        item: LOCATABLE
+        is_primary : Boolean
+        is_changed :? Boolean
+        is_masked :? Boolean
+        item :? Any
 }
 
 EXTRACT_CONTENT_ITEM -[#gray]up-|> EXTRACT_ITEM  
@@ -123,10 +118,10 @@ EXTRACT_ITEM -[#gray]up-|> LOCATABLE
 
 class EXTRACT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract]] {
         .. access ..
-        request_id: OBJECT_REF
-        time_created: DV_DATE_TIME
-        system_id: HIER_OBJECT_ID
-        sequence_nr: Integer
+        request_id :? OBJECT_REF
+        time_created : DV_DATE_TIME
+        system_id : HIER_OBJECT_ID
+        sequence_nr : Integer
 }
 
 EXTRACT -[#gray]up-|> LOCATABLE  
@@ -140,12 +135,11 @@ EXTRACT *--> "0..* participations" EXTRACT_PARTICIPATION
 
 class EXTRACT_UPDATE_SPEC [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_update_spec]] {
         .. access ..
-        persist_in_server: Boolean
-        repeat_period: DV_DURATION
-        trigger_events: List<DV_CODED_TEXT>
-        update_method: CODE_PHRASE
+        persist_in_server : Boolean
+        repeat_period :? DV_DURATION
+        trigger_events :? List<DV_CODED_TEXT>
+        update_method : CODE_PHRASE
 }
-
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
 

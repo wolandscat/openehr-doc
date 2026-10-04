@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Defines the descriptive meta-data of a resource.
 | 
 
 class RESOURCE_DESCRIPTION
-    is_a Any
 
 feature_group ("access")
 
@@ -12,59 +13,59 @@ feature_group ("access")
     | occasionally in specialised archetypes where the root archetype/template name is not
     | descriptive enough to disambiguate from similar archetypes/templates.
     | 
-    prop title: String;
+    prop title :? String;
 
     | 
     | Original author of this resource, with all relevant details, including organisation.
     | 
-    prop original_author: Map<String,String>;
+    prop original_author : Map<String,String>;
 
     | 
     | Namespace of original author's organisation, in reverse internet form, if applicable.
     | 
-    prop original_namespace: String;
+    prop original_namespace :? String;
 
     | 
     | Plain text name of organisation that originally published this artefact, if any.
     | 
-    prop original_publisher: String;
+    prop original_publisher :? String;
 
     | 
     | Other contributors to the resource, each listed in "name <email>" form.
     | 
-    prop other_contributors: List<String>;
+    prop other_contributors :? List<String>;
 
     | 
     | Reference to owning resource.
     | 
-    prop parent_resource: AUTHORED_RESOURCE;
+    prop parent_resource : AUTHORED_RESOURCE;
 
     | 
     | Lifecycle state of the resource, typically using macro-states such as: unmanaged,
     | in_development, release_candidate, published, rejected, deprecated.
     | 
-    prop lifecycle_state: String;
+    prop lifecycle_state : String;
 
     | 
     | Namespace in reverse internet id form, of current custodian organisation.
     | 
-    prop custodian_namespace: String;
+    prop custodian_namespace :? String;
 
     | 
     | Plain text name of current custodian organisation.
     | 
-    prop custodian_organisation: String;
+    prop custodian_organisation :? String;
 
     | 
     | Optional copyright statement for the resource as a knowledge resource.
     | 
-    prop copyright: String;
+    prop copyright :? String;
 
     | 
     | Licence of current artefact, in format "short licence name <URL of licence>", e.g. "Apache
     | 2.0 License <http://www.apache.org/licenses/LICENSE-2.0.html>"
     | 
-    prop licence: String;
+    prop licence :? String;
 
     | 
     | List of acknowledgements of other IP directly referenced in this archetype, typically
@@ -80,18 +81,18 @@ feature_group ("access")
     | >
     | ----
     | 
-    prop ip_acknowledgements: Map<String,String>;
+    prop ip_acknowledgements :? Map<String,String>;
 
     | 
     | List of references of material on which this artefact is based, as a keyed list of
     | strings. The keys should be in a standard citation format.
     | 
-    prop references: Map<String,String>;
+    prop references :? Map<String,String>;
 
     | 
     | URI of package to which this resource belongs.
     | 
-    prop resource_package_uri: String;
+    prop resource_package_uri :? String;
 
     | 
     | Details related to conversion process that generated this model from an original, if
@@ -105,18 +106,18 @@ feature_group ("access")
     | >
     | ----
     | 
-    prop conversion_details: Map<String,String>;
+    prop conversion_details :? Map<String,String>;
 
     | 
     | Details of all parts of resource description that are natural language-dependent, keyed by
     | language code.
     | 
-    prop details: Map<String,RESOURCE_DESCRIPTION_ITEM>;
+    prop details :? Map<String,RESOURCE_DESCRIPTION_ITEM>;
 
     | 
     | Additional non-language-sensitive resource meta-data, as a list of name/value pairs.
     | 
-    prop other_details: Map<String,String>;
+    prop other_details :? Map<String,String>;
 
 
 end

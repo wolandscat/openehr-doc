@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Object representing annotations on an archetype. These can be of various forms, with a
 | documentation form defined so far, which has a multi-level tabular structure
@@ -21,14 +23,13 @@
 | 
 
 class RESOURCE_ANNOTATIONS
-    is_a Any
 
 feature_group ("access")
 
     | 
     | Documentary annotations in a multi-level keyed structure.
     | 
-    prop documentation: Map<String, Map<String, Map<String, String>>>;
+    prop documentation : Map<String, Map<String, Map<String, String>>>;
 
 
 end

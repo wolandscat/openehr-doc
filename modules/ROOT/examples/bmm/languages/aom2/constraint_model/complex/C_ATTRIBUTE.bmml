@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract model of constraint on any kind of attribute in a class model.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Reference model attribute within the enclosing type represented by a `C_OBJECT`.
     | 
-    prop rm_attribute_name: String;
+    prop rm_attribute_name : String;
 
     | 
     | Constraint settable on every attribute, regardless of whether it is singular or of a
@@ -18,14 +20,14 @@ feature_group ("access")
     | or not). Only set if it overrides the underlying reference model or parent archetype in
     | the case of specialised archetypes.
     | 
-    prop existence: Multiplicity_interval;
+    prop existence :? Multiplicity_interval;
 
     | 
     | Child `C_OBJECT` nodes. Each such node represents a constraint on the type of this
     | attribute in its reference model. Multiples occur both for multiple items in the case of
     | container attributes, and alternatives in the case of singular attributes.
     | 
-    prop children: List<C_OBJECT>;
+    prop children :? List<C_OBJECT>;
 
     | 
     | Path to the parent object of this attribute (i.e. doesn't include the name of this
@@ -33,18 +35,18 @@ feature_group ("access")
     | only the re-defined parts of a specialised archetype to be expressed, at the path where
     | they occur.
     | 
-    prop differential_path: String;
+    prop differential_path :? String;
 
     | 
     | Cardinality constraint of attribute, if a container attribute.
     | 
-    prop cardinality: Cardinality;
+    prop cardinality :? Cardinality;
 
     | 
     | Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued)
     | attribute.
     | 
-    prop is_multiple: Boolean;
+    prop is_multiple : Boolean;
 
     | 
     | True if there is no effective constraint on the children of the RM attribute to which this

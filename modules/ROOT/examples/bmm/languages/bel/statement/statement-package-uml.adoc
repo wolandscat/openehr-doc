@@ -9,20 +9,18 @@ skinparam citedClassColor #FDFDFD
 abstract class STATEMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_statement]] {
 }
 
-
 class STATEMENT_SET [[/openehr-doc/latest/languages/bel-gen.html#_class_statement_set]] {
         .. access ..
-        name: String
+        name :? String
         execution_result: Boolean
 }
-
 
 STATEMENT_SET *--> "0..* statement" STATEMENT
 
 class ASSERTION [[/openehr-doc/latest/languages/bel-gen.html#_class_assertion]] {
         .. access ..
-        tag: String
-        string_expression: String
+        tag :? String
+        string_expression :? String
 }
 
 ASSERTION -[#gray]up-|> STATEMENT  
@@ -43,7 +41,7 @@ ASSIGNMENT *--> "1 source" EXPR_VALUE
 
 class VARIABLE_DECLARATION [[/openehr-doc/latest/languages/bel-gen.html#_class_variable_declaration]] {
         .. access ..
-        name: String
+        name : String
 }
 
 VARIABLE_DECLARATION -[#gray]up-|> STATEMENT  

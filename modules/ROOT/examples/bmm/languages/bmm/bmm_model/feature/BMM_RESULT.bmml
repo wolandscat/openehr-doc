@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Automatically declared variable representing result of a Function call (writable).
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Name of this model element.
     | 
-    prop name: String;
+    prop name : String;
 
 
 end

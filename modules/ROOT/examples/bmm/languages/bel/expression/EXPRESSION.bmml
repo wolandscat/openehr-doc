@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract parent of all expression meta-types.
 | 

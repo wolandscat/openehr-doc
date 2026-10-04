@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum TEXT_FORMAT_TYPES*
+3+^h|  *enumeration TEXT_FORMAT_TYPES*
 
 h|*Description*
 2+a|Enumeration of text format types for the DV_TEXT formatting attribute.
@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*plain* = 0
@@ -26,7 +26,7 @@ h|
 a|
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*add* ( +

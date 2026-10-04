@@ -1,5 +1,5 @@
 
-=== Enum OPERATOR_KIND
+=== Enumeration OPERATOR_KIND
 
 [tabs]
 ======

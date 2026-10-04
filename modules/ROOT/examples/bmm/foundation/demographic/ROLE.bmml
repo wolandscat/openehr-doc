@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Generic description of a role performed by an Actor. The role corresponds to a
 | competency of the Party. Roles are used to define the responsibilities undertaken
@@ -13,17 +15,17 @@ feature_group ("access")
     | 
     | Valid time interval for this role.
     | 
-    prop time_validity: DV_INTERVAL<DV_DATE>;
+    prop time_validity :? DV_INTERVAL<DV_DATE>;
 
     | 
     | Reference to Version container of Actor playing the role.
     | 
-    prop performer: PARTY_REF;
+    prop performer : PARTY_REF;
 
     | 
     | The capabilities of this role.
     | 
-    prop capabilities: List<CAPABILITY>;
+    prop capabilities :? List<CAPABILITY>;
 
 invariant
     capabilities_valid: ∃ capabilities ⇒ ¬ capabilities.is_empty();

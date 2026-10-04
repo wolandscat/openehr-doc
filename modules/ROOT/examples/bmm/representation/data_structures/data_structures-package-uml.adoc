@@ -14,9 +14,9 @@ ITEM -[#gray]up-|> LOCATABLE
 
 class ELEMENT [[/openehr-doc/latest/representation/data_structures-gen.html#_class_element]] {
         .. access ..
-        value: DATA_VALUE
-        null_flavour: DV_CODED_TEXT
-        null_reason: DV_TEXT
+        value :? DATA_VALUE
+        null_flavour :? DV_CODED_TEXT
+        null_reason :? DV_TEXT
         is_null: Boolean
 }
 
@@ -54,8 +54,8 @@ DATA_STRUCTURE -[#gray]up-|> LOCATABLE
 
 abstract class EVENT<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_event]] {
         .. access ..
-        time: DV_DATE_TIME
-        data: T
+        time : DV_DATE_TIME
+        data : T
         offset: DV_DURATION
 }
 
@@ -76,8 +76,8 @@ ITEM_SINGLE *--> "1 item" ELEMENT
 
 class PARTY_IDENTIFIED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_identified]] {
         .. access ..
-        name: String
-        identifiers: List<DV_IDENTIFIER>
+        name :? String
+        identifiers :? List<DV_IDENTIFIER>
 }
 
 PARTY_IDENTIFIED -[#gray]up-|> PARTY_PROXY  
@@ -97,9 +97,9 @@ PARTY_SELF -[#gray]up-|> PARTY_PROXY
 
 class INTERVAL_EVENT<T> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_interval_event]] {
         .. access ..
-        width: DV_DURATION
-        sample_count: Integer
-        math_function: DV_CODED_TEXT
+        width : DV_DURATION
+        sample_count :? Integer
+        math_function : DV_CODED_TEXT
         interval_start_time: DV_DATE_TIME
 }
 
@@ -122,9 +122,9 @@ ITEM_LIST *--> "0..* items" ELEMENT
 
 class HISTORY<T:ITEM_STRUCTURE> [[/openehr-doc/latest/representation/data_structures-gen.html#_class_history]] {
         .. access ..
-        origin: DV_DATE_TIME
-        period: DV_DURATION
-        duration: DV_DURATION
+        origin : DV_DATE_TIME
+        period :? DV_DURATION
+        duration :? DV_DURATION
         is_periodic: Boolean
 }
 
@@ -137,9 +137,8 @@ HISTORY *--> "0..* events" EVENT
 
 abstract class PARTY_PROXY [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_proxy]] {
         .. access ..
-        external_ref: PARTY_REF
+        external_ref :? PARTY_REF
 }
-
 
 class ITEM_TABLE [[/openehr-doc/latest/representation/data_structures-gen.html#_class_item_table]] {
         .. access ..
@@ -164,7 +163,7 @@ ITEM_TABLE *--> "0..* rows" CLUSTER
 
 class PARTY_RELATED [[/openehr-doc/latest/representation/data_structures-gen.html#_class_party_related]] {
         .. access ..
-        relationship: DV_CODED_TEXT
+        relationship : DV_CODED_TEXT
 }
 
 PARTY_RELATED -[#gray]up-|> PARTY_IDENTIFIED  

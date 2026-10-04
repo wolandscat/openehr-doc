@@ -8,22 +8,20 @@ skinparam citedClassColor #FDFDFD
 
 class RM_ATTRIBUTE_VISIBILITY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_attribute_visibility]] {
         .. access ..
-        alias: Terminology_code
+        alias :? Terminology_code
 }
-
 
 RM_ATTRIBUTE_VISIBILITY *--> "0..1 visibility" VISIBILITY_TYPE
 
 enum VISIBILITY_TYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_visibility_type]] {
         .. values ..
-        vt_hide = hide
-        vt_show = show
+        vt_hide
+        vt_show
 }
 
 class RM_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_rm_overlay]] {
         .. access ..
 }
-
 
 RM_OVERLAY *--> "0..* rm_visibility" RM_ATTRIBUTE_VISIBILITY
 

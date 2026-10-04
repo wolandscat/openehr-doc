@@ -1,3 +1,4 @@
+
 | 
 | Abstract class defining the concept of quantified entities whose values are absolute with
 | respect to an origin. Dates and Times are the main example.
@@ -9,7 +10,7 @@ abstract class DV_ABSOLUTE_QUANTITY
 feature_group ("access")
 
     | 
-    prop accuracy: DV_AMOUNT;
+    prop accuracy :? DV_AMOUNT;
 
 
 end

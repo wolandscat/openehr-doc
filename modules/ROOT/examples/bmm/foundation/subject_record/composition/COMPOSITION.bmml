@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit
 | of modification of the record, the unit of transmission in record Extracts, and the unit
@@ -21,13 +23,13 @@ feature_group ("access")
     | from openEHR Code Set `languages`. The language of an Entry if different from the
     | Composition is indicated in `ENTRY._language`.
     | 
-    prop language: CODE_PHRASE «iso.iso_639-1»;
+    prop language : CODE_PHRASE «iso.iso_639-1»;
 
     | 
     | Name of territory in which this Composition was written. Coded from openEHR countries code
     | set, which is an expression of the ISO 3166 standard.
     | 
-    prop territory: CODE_PHRASE «iso.iso_3166-1-alpha2»;
+    prop territory : CODE_PHRASE «iso.iso_3166-1-alpha2»;
 
     | 
     | Temporal category of this Composition, i.e.
@@ -39,7 +41,7 @@ feature_group ("access")
     | 
     | or any other code defined in the openEHR terminology group 'category'.
     | 
-    prop category: DV_CODED_TEXT;
+    prop category : DV_CODED_TEXT;
 
     | 
     | The person primarily responsible for the content of the Composition (but not necessarily
@@ -47,18 +49,18 @@ feature_group ("access")
     | screen. It may or may not be the person who entered the data. When it is the patient, the
     | special self instance of `PARTY_PROXY` will be used.
     | 
-    prop composer: PARTY_PROXY;
+    prop composer : PARTY_PROXY;
 
     | 
     | The clinical session context of this Composition, i.e. the contextual attributes of the
     | clinical session.
     | 
-    prop context: EVENT_CONTEXT;
+    prop context :? EVENT_CONTEXT;
 
     | 
     | The content of this Composition.
     | 
-    prop content: List<CONTENT_ITEM>;
+    prop content :? List<CONTENT_ITEM>;
 
     | 
     | True if category is `431|persistent|`, False otherwise. Useful for finding

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Parent of built-in types, which are treated as being primitive and non-abstract.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Base name (built-in typename).
     | 
-    prop base_name: String;
+    prop base_name : String;
 
     | 
     | Return False.

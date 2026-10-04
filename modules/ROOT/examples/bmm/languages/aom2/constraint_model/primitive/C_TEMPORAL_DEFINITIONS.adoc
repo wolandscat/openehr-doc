@@ -7,11 +7,8 @@
 h|*Description*
 2+a|Definitions related to `C_TEMPORAL` constraints.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|const +
   
@@ -29,7 +26,7 @@ h|const +
 "YYYY-??-??": ("YYYY-XX-XX", "YYYY-??-XX", "YYYY-MM-XX", "YYYY-MM-DD", "YYYY-MM-??"), +
 "YYYY-??-XX": ("YYYY-XX-XX", "YYYY-MM-XX"), +
 "YYYY-XX-XX": ("YYYY-XX-XX", "YYYY-MM-XX"), +
-}] +
+]} +
 
 a|List of allowed date constraint replacements e.g. in specialised archetype. Contains the values:
 
@@ -50,7 +47,7 @@ h|const +
 "HH:MM:XX": ("HH:MM:XX", "HH:MM:SS"), +
 "HH-??-??": ("HH:??:XX", "HH:MM:XX", "HH:MM:SS", "HH:MM:??"), +
 "HH-??-XX": ("HH:MM:XX"), +
-}] +
+]} +
 
 a|List of allowed time constraint replacements e.g. in specialised archetype.
 An empty list value indicates no replacements possible.
@@ -71,13 +68,13 @@ h|const +
 "YYYY-MM-DDTHH:??:??": ("YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS", "YYYY-MM-DDTHH:??:XX"), +
 "YYYY-MM-DDTHH:??:XX": ("YYYY-MM-DDTHH:MM:XX"), +
 "YYYY-??-??T??:??:??": ("YYYY-MM-DDTHH:??:XX", "YYYY-MM-DDTHH:??:??", "YYYY-MM-DDTHH:MM:XX", "YYYY-MM-DDTHH:MM:??", "YYYY-MM-DDTHH:MM:SS"), +
-}] +
+]} +
 
 a|List of allowed date/time constraint replacements e.g. in specialised archetype.
 An empty list value indicates no replacements possible.
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*valid_duration_constraint_replacement* ( +

@@ -1,3 +1,4 @@
+
 | 
 | A data type that represents scale values, where there is:
 | 
@@ -29,12 +30,12 @@ feature_group ("access")
     | symbol will be a `DV-CODED_TEXT` including the `terminology_id` and a blank String value
     | for `code_string`.
     | 
-    prop symbol: DV_CODED_TEXT;
+    prop symbol : DV_CODED_TEXT;
 
     | 
     | Real number value of Scale item.
     | 
-    prop value: Real;
+    prop value : Real;
 
     | 
     | Test if this Scale value is strictly comparable to `other`.

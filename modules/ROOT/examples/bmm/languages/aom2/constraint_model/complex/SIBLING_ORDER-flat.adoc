@@ -12,11 +12,8 @@ higher specialisation level.
 Misuse: This type cannot be used on a `C_OBJECT` other than one within a container
 attribute in a specialised archetype.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

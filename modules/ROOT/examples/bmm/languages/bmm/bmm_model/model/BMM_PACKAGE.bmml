@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstraction of a package as a tree structure whose nodes can contain other packages and
 | classes.
@@ -13,7 +15,7 @@ feature_group ("access")
     | 
     | Member modules in this package.
     | 
-    prop members: List<BMM_MODULE>;
+    prop members :? List<BMM_MODULE>;
 
     | 
     | Obtain the set of top-level classes in this package, either from this package itself or by

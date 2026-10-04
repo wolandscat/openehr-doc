@@ -11,11 +11,8 @@ created. None of the attributes is defined as mandatory, however, in different s
 various combinations of attributes will usually be mandatory. This can be controlled by
 specifying feeder audit details in legacy archetypes.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

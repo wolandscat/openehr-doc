@@ -1,9 +1,9 @@
+
 | 
 | Abstract parent of ordered types, which includes all numeric and temporal types.
 | 
 
-builtin abstract class Ordered
-    is_a Any
+abstract builtin class Ordered
 
 feature_group ("operators")
 

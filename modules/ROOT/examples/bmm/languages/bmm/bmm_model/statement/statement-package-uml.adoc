@@ -25,7 +25,7 @@ BMM_SIMPLE_STATEMENT -[#gray]up-|> BMM_STATEMENT
 
 class BMM_ASSERTION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_assertion]] {
         .. access ..
-        tag: String
+        tag :? String
 }
 
 BMM_ASSERTION -[#gray]up-|> BMM_SIMPLE_STATEMENT  
@@ -36,11 +36,10 @@ BMM_ASSERTION *--> "1 expression" EL_BOOLEAN_EXPRESSION
 abstract class BMM_STATEMENT_ITEM [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement_item]] {
 }
 
-
 class BMM_EXTERNAL_ROUTINE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_external_routine]] {
         .. access ..
-        meta_data: Map<String,String>
-        argument_mapping: Map<String,String>
+        meta_data : Map<String,String>
+        argument_mapping :? Map<String,String>
 }
 
 BMM_EXTERNAL_ROUTINE -[#gray]up-|> BMM_ROUTINE_DEFINITION  
@@ -57,7 +56,6 @@ BMM_ACTION_TABLE *--> "1 decision_table" BMM_ACTION_DECISION_TABLE
 
 abstract class BMM_ROUTINE_DEFINITION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_routine_definition]] {
 }
-
 
 class BMM_STATEMENT_BLOCK [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_statement_block]] {
         .. access ..
@@ -76,7 +74,7 @@ BMM_STATEMENT -[#gray]up-|> BMM_STATEMENT_ITEM
 
 class BMM_DECLARATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_declaration]] {
         .. access ..
-        name: String
+        name : String
 }
 
 BMM_DECLARATION -[#gray]up-|> BMM_SIMPLE_STATEMENT  
@@ -99,6 +97,5 @@ BMM_ASSIGNMENT *--> "1 source" EL_EXPRESSION
 
 class BMM_ACTION_DECISION_TABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_action_decision_table]] {
 }
-
 
 ....

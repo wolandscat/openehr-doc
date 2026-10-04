@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A BMM model component that contains packages and classes.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Child packages; keys all in upper case for guaranteed matching.
     | 
-    prop packages: Map<String,BMM_PACKAGE>;
+    prop packages :? Map<String,BMM_PACKAGE>;
 
     | 
     | Package at the path `a_path`.

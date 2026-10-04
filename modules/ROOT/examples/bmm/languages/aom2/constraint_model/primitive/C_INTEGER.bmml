@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances of Integer.
 | 
@@ -12,18 +14,18 @@ feature_group ("access")
     | 
     | To represent no constraint, use an empty list.
     | 
-    prop constraint: List<Interval<Integer>>;
+    prop constraint :? List<Interval<Integer>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Integer;
+    prop default_value :? Integer;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: Integer;
+    prop assumed_value :? Integer;
 
 
 end

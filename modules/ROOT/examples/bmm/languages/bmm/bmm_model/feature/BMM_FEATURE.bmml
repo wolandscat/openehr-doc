@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A module-scoped formal element.
 | 
@@ -11,22 +13,22 @@ feature_group ("access")
     | True if this feature was synthesised due to generic substitution in an inherited type, or
     | further constraining of a formal generic parameter.
     | 
-    prop is_synthesised_generic: Boolean;
+    prop is_synthesised_generic :? Boolean;
 
     | 
     | Extensions to feature-level meta-types.
     | 
-    prop feature_extensions: List<BMM_FEATURE_EXTENSION>;
+    prop feature_extensions :? List<BMM_FEATURE_EXTENSION>;
 
     | 
     | Group containing this feature.
     | 
-    prop group: BMM_FEATURE_GROUP;
+    prop group : BMM_FEATURE_GROUP;
 
     | 
     | Model element within which an element is declared.
     | 
-    prop scope: BMM_CLASS;
+    prop scope : BMM_CLASS;
 
 
 end

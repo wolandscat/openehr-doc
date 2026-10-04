@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A specialisation of `C_COMPLEX_OBJECT` whose node_id attribute is an archetype identifier
 | rather than the normal internal node code (i.e. at-code/id-code).
@@ -29,7 +31,7 @@ feature_group ("access")
     | Reference to archetype is being used to fill a slot or redefine an external reference.
     | Typically an 'interface' archetype id, i.e. identifier with partial version information.
     | 
-    prop archetype_ref: String;
+    prop archetype_ref : String;
 
 
 end

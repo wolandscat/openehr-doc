@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Form of `EHR EXTRACT_ITEM` containing openEHR serialised `VERSIONED_OBJECTs`.
 | 
@@ -10,7 +13,7 @@ feature_group ("access")
     | 
     | Content object.
     | 
-    prop item: X_VERSIONED_OBJECT<LOCATABLE>;
+    prop item :? X_VERSIONED_OBJECT<LOCATABLE>;
 
 
 end

@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum VERSION_STATUS*
+3+^h|  *enumeration VERSION_STATUS*
 
 h|*Description*
 2+a|Status of a versioned artefact, as one of a number of possible values: uncontrolled,
@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*alpha* = alpha

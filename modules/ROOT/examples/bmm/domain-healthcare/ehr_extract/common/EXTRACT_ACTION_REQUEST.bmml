@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Generic model of a Request for an Extract, containing an Extract specification.
 | 
@@ -10,16 +13,16 @@ feature_group ("access")
     | 
     | Identifier of previous `EXTRACT_REQUEST`.
     | 
-    prop request_id: OBJECT_REF;
+    prop request_id : OBJECT_REF;
 
     | 
     | Requested action: `cancel | resend | send new`. Coded by openEHR Terminology
     | group `'extract action type'`.
     | 
-    prop action: DV_CODED_TEXT;
+    prop action : DV_CODED_TEXT;
 
     | 
-    prop uid: HIER_OBJECT_ID;
+    prop uid : HIER_OBJECT_ID;
 
 
 end

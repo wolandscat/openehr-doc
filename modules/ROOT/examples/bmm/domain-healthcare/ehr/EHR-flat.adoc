@@ -7,11 +7,8 @@
 h|*Description*
 2+a|The EHR object is the root object and access point of an EHR for a subject of care.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -74,7 +71,7 @@ h|*Invariants*
 2+a|
 
 h|
-2+a|contributions_valid: contributions.for_all(c.type.is_equal("CONTRIBUTION"));
+2+a|contributions_valid: ∀ c:contributions ¦ c.type.is_equal("CONTRIBUTION");
 
 h|
 2+a|ehr_access_valid: ehr_access.type.is_equal("VERSIONED_EHR_ACCESS");
@@ -83,13 +80,13 @@ h|
 2+a|ehr_status_valid: ehr_status.type.is_equal("VERSIONED_EHR_STATUS");
 
 h|
-2+a|compositions_valid: compositions.for_all(c.type.is_equal("VERSIONED_COMPOSITION"));
+2+a|compositions_valid: ∀ c:compositions ¦ c.type.is_equal("VERSIONED_COMPOSITION");
 
 h|
 2+a|directory_valid: ∃ directory ⇒ directory.type.is_equal("VERSIONED_FOLDER");
 
 h|
-2+a|folders_valid: ∃ folders ⇒ folders.for_all(f.type.is_equal("VERSIONED_FOLDER"));
+2+a|folders_valid: ∃ folders ⇒ ∀ f:folders ¦ f.type.is_equal("VERSIONED_FOLDER");
 
 h|
 2+a|directory_in_folders: ∃ folders ⇒ folders.item(1) = directory;

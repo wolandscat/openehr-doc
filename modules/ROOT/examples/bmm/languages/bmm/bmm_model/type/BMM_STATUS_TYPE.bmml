@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Built-in meta-type representing action status, e.g. result of a call invocation.
 | 

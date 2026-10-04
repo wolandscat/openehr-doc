@@ -16,11 +16,8 @@ candidate items to be sent each time are the result of re-evaluating the content
 versioning parts of the specification; what is actually sent is determined by the
 `send_changes_only` flag.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

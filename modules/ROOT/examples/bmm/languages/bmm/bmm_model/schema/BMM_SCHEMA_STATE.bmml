@@ -1,18 +1,34 @@
+import org.openehr:representation ;
+
 | 
 | Enumeration of processing states of a `BMM_SCHEMA` used by creation and validation
 | routines in `BMM_SCHEMA`.
 | 
 
-enum BMM_SCHEMA_STATE
+enumeration BMM_SCHEMA_STATE
     base_type String
 
-        state_created (State_created)
+feature_group ("values")
 
-        state_validated_created (State_validated_created)
+    | 
+    | Initial state directly after instantiation of schema.
+    | 
+    state_created ("State_created");
 
-        state_includes_pending (State_includes_pending)
+    | 
+    | Initial validation pass after instantiation.
+    | 
+    state_validated_created ("State_validated_created");
 
-        state_includes_processed (State_includes_processed)
+    | 
+    | State of schema processing if there are still included schemas to process.
+    | 
+    state_includes_pending ("State_includes_pending");
+
+    | 
+    | State when all included schemas have been processed.
+    | 
+    state_includes_processed ("State_includes_processed");
 
 
 end

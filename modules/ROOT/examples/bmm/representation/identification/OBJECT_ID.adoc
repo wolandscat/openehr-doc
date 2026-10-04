@@ -13,11 +13,8 @@ Object ids are used inside an object to identify that object. To identify anothe
 in another service, use an `OBJECT_REF`, or else use a UID for local objects identified by
 UID. If none of the subtypes is suitable, direct instances of this class may be used.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

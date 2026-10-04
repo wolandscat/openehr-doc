@@ -1,9 +1,10 @@
+
 | 
 | Container whose storage is assumed to be contiguous.
 | 
 
-builtin class Array
-    is_a Container<T>
+builtin class Array<V:Any>
+    is_a Container<V>
 
 
 end

@@ -19,7 +19,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_iso8601_type[Iso8601_type]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*hour* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]

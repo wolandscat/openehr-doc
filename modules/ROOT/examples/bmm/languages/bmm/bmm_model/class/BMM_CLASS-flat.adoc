@@ -17,7 +17,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -136,10 +136,10 @@ h|*Invariants*
 2+a|
 
 h|
-2+a|inv_constructors: creators.for_all(procedures.has(p));
+2+a|inv_constructors: ∀ p:creators ¦ procedures.has(p);
 
 h|
-2+a|inv_converters: converters.for_all(creators.has(p) ∧ p.arity() = 1);
+2+a|inv_converters: ∀ p:converters ¦ creators.has(p) ∧ p.arity() = 1;
 
 
 |===

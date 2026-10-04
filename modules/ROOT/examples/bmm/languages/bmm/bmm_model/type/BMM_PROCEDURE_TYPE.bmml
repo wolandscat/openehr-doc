@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Form of routine specific to procedure object signatures, with `result_type` being the
 | special Status meta-type
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | Result type of a procedure.
     | 
-    prop result_type: BMM_STATUS_TYPE;
+    prop result_type :? BMM_STATUS_TYPE;
 
 
 end

@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type representing the assignment statement, which associates a named variable with an
 | expression, and produces no value.
@@ -11,12 +13,12 @@ feature_group ("access")
     | 
     | The target variable on the notional left-hand side of this assignment.
     | 
-    prop target: VARIABLE_DECLARATION;
+    prop target : VARIABLE_DECLARATION;
 
     | 
     | Source right hand side) of the assignment.
     | 
-    prop source: EXPR_VALUE;
+    prop source : EXPR_VALUE;
 
 
 end

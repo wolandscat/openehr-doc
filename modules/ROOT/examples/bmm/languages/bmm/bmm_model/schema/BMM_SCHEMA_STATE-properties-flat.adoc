@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum BMM_SCHEMA_STATE*
+3+^h|  *enumeration BMM_SCHEMA_STATE*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*state_created* = State_created

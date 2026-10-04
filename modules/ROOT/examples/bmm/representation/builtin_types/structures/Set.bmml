@@ -1,9 +1,10 @@
+
 | 
 | Unordered container that may not contain duplicates.
 | 
 
-builtin class Set
-    is_a Container<T>
+builtin class Set<V:Any>
+    is_a Container<V>
 
 
 end

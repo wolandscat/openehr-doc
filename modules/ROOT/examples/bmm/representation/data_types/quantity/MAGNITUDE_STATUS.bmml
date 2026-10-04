@@ -1,19 +1,22 @@
+
 | 
 | Enumeration of magnitude status indicators: =, <, >, <=, >=.
 | 
 
-enum MAGNITUDE_STATUS
+enumeration MAGNITUDE_STATUS
     base_type String
 
-        eq (=)
+feature_group ("values")
 
-        lt (<)
+    eq ("=");
 
-        gt (>)
+    lt ("<");
 
-        le (<=)
+    gt (">");
 
-        ge (>=)
+    le ("<=");
+
+    ge (">=");
 
 
 end

@@ -1,3 +1,4 @@
+
 | 
 | The `LINK` type defines a logical relationship between two items, such as two `ENTRYs` or
 | an `ENTRY` and a `COMPOSITION`. Links can be used across compositions, and across EHRs.
@@ -16,7 +17,6 @@
 | 
 
 class LINK
-    is_a Any
 
 feature_group ("access")
 
@@ -28,7 +28,7 @@ feature_group ("access")
     | the categories of generic , documenting and reporting , organisational , clinical ,
     | circumstancial , and view management .
     | 
-    prop meaning: DV_TEXT;
+    prop meaning : DV_TEXT;
 
     | 
     | The type attribute is used to indicate a clinical or domain-level meaning for the kind of
@@ -36,13 +36,13 @@ feature_group ("access")
     | be used by the requestor of EHR extracts to categorise links which must be followed and
     | which can be broken when the extract is created.
     | 
-    prop type: DV_TEXT;
+    prop type : DV_TEXT;
 
     | 
     | The logical to object in the link relation, as per the linguistic sense of the meaning
     | attribute.
     | 
-    prop target: DV_EHR_URI;
+    prop target : DV_EHR_URI;
 
 
 end

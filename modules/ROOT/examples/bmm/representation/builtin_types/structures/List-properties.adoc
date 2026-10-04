@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|builtin   *class List<T:Any>*
+3+^h|builtin   *class List<V:Any>*
 
 
 |===

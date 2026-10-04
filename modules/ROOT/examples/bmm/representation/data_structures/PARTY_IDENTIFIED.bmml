@@ -1,3 +1,4 @@
+
 | 
 | Proxy data for an identified party other than the subject of the record, minimally
 | consisting of human-readable identifier(s), such as name, formal (and possibly computable)
@@ -19,12 +20,12 @@ feature_group ("access")
     | 
     | Optional human-readable name (in String form).
     | 
-    prop name: String;
+    prop name :? String;
 
     | 
     | One or more formal identifiers (possibly computable).
     | 
-    prop identifiers: List<DV_IDENTIFIER>;
+    prop identifiers :? List<DV_IDENTIFIER>;
 
 invariant
     basic_validity: ∃ name ∨ ∃ identifiers ∨ ∃ external_ref;

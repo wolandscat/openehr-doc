@@ -8,11 +8,10 @@ skinparam citedClassColor #FDFDFD
 
 class PARTICIPATION [[/openehr-doc/latest/foundation/physical_entity-gen.html#_class_participation]] {
         .. access ..
-        function: DV_TEXT «openehr.Participation_function»
-        mode: DV_CODED_TEXT «openehr.Participation_mode»
-        time: DV_INTERVAL<DV_DATE_TIME>
-        performer: PARTY_PROXY
+        function : DV_TEXT «openehr.Participation_function»
+        mode :? DV_CODED_TEXT «openehr.Participation_mode»
+        time :? DV_INTERVAL<DV_DATE_TIME>
+        performer : PARTY_PROXY
 }
-
 
 ....

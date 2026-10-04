@@ -1,3 +1,4 @@
+
 | 
 | Represents an absolute point in time, specified to the second. Semantics defined by ISO
 | 8601.
@@ -14,7 +15,7 @@ feature_group ("access")
     | 
     | ISO8601 date/time string.
     | 
-    prop value: String;
+    prop value : String;
 
     | 
     | Numeric value of the date/time as seconds since the calendar origin date/time

@@ -1,3 +1,4 @@
+
 | 
 | Abstract class defining the concept of true quantified values, i.e. values which are not
 | only ordered, but which have a precise magnitude.
@@ -20,12 +21,12 @@ feature_group ("access")
     | 
     | If not present, assumed meaning is `"="` .
     | 
-    prop magnitude_status: String;
+    prop magnitude_status :? String;
 
     | 
     | Accuracy of measurement. Exact form of expression determined in descendants.
     | 
-    prop accuracy: Any;
+    prop accuracy :? Any;
 
     | 
     func magnitude: Ordered_Numeric

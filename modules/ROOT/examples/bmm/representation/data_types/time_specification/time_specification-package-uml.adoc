@@ -8,7 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 abstract class DV_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_time_specification]] {
         .. access ..
-        value: DV_PARSABLE
+        value : DV_PARSABLE
         calendar_alignment: String
         event_alignment: String
         institution_specified: Boolean

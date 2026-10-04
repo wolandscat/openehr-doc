@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Integer-based enumeration meta-type.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Optional list of specific values. Must be 1:1 with `item_names` list.
     | 
-    prop item_values: List<BMM_INTEGER_VALUE>;
+    prop item_values :? List<BMM_INTEGER_VALUE>;
 
 
 end

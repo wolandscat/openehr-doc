@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type of writable variables, including routine locals and the special variable
 | 'Result'.
@@ -11,12 +13,12 @@ feature_group ("access")
     | 
     | Variable definition to which this reference refers.
     | 
-    prop definition: BMM_WRITABLE_VARIABLE;
+    prop definition : BMM_WRITABLE_VARIABLE;
 
     | 
     | Defined to return True in all cases.
     | 
-    prop is_writable: Boolean;
+    prop is_writable : Boolean;
 
 
 end

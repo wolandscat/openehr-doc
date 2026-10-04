@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Abstract parent of primitive constrainer classes based on `Ordered` base types, i.e. types
 | like `Integer`, `Real`, and the Date/Time types. The model constraint is a List of
@@ -13,7 +15,7 @@
 | intervals.
 | 
 
-abstract class C_ORDERED
+abstract class C_ORDERED<T:Ordered>
     is_a C_PRIMITIVE_OBJECT
 
 feature_group ("access")
@@ -22,18 +24,18 @@ feature_group ("access")
     | Constraint in the form of a List of Intervals of the parameter type T. Concrete types
     | generated in descendants via template binding.
     | 
-    prop constraint: List<Interval<T>>;
+    prop constraint :? List<Interval<T>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: T;
+    prop default_value :? T;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: T;
+    prop assumed_value :? T;
 
     | 
     | True if any value (i.e. instance) of the reference model type would be allowed. Redefined

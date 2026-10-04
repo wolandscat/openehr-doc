@@ -1,3 +1,6 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Extract designed for synchronisation of Contributions between openEHR servers.
 | 
@@ -10,12 +13,12 @@ feature_group ("access")
     | 
     | Details of specification of this Extract.
     | 
-    prop specification: SYNC_EXTRACT_SPEC;
+    prop specification : SYNC_EXTRACT_SPEC;
 
     | 
     | Content, in the form of a serialised Contributions.
     | 
-    prop items: List<X_CONTRIBUTION>;
+    prop items :? List<X_CONTRIBUTION>;
 
 
 end

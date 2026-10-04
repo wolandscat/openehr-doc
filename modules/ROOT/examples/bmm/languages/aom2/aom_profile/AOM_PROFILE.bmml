@@ -1,10 +1,11 @@
+import org.openehr:representation ;
+
 | 
 | Profile of common settings relating to use of reference model(s) and terminology for a
 | given archetype developing organisation.
 | 
 
 class AOM_PROFILE
-    is_a Any
 
 feature_group ("access")
 
@@ -12,7 +13,7 @@ feature_group ("access")
     | Name of this profile, usually based on the publisher it pertains to e.g. "openEHR",
     | "CDISC", etc.
     | 
-    prop profile_name: String;
+    prop profile_name : String;
 
     | 
     | States a class from the Reference Model that provides archetyping capability in RM data
@@ -20,7 +21,7 @@ feature_group ("access")
     | Defining it here has the effect in tools that the class tree under which archetypes are
     | arranged contains only RM classes inheriting from this class.
     | 
-    prop archetype_parent_class: String;
+    prop archetype_parent_class :? String;
 
     | 
     | This attribute defines a base class from the Reference Model whose descendants are
@@ -28,19 +29,19 @@ feature_group ("access")
     | primitive types String, Integer etc. This attribute is optional, even if the RM does have
     | such a class, and is only used to help tooling to provide more intelligent display.
     | 
-    prop archetype_data_value_parent_class: String;
+    prop archetype_data_value_parent_class :? String;
 
     | 
     | If `archetype_parent_class` is not set, designate a class whose descendants should be
     | made visible in tree and grid renderings of the archetype definition.
     | 
-    prop archetype_visualise_descendants_of: String;
+    prop archetype_visualise_descendants_of :? String;
 
     | 
     | Mappings from AOM built-in types to actual types in RM: whenever the type name is
     | encountered in an archetype, it is mapped to a specific RM type.
     | 
-    prop aom_rm_type_mappings: Map<String,AOM_TYPE_MAPPING>;
+    prop aom_rm_type_mappings :? Map<String,AOM_TYPE_MAPPING>;
 
     | 
     | Allowed type substitutions: Actual RM type names keyed by AOM built-in types which can
@@ -48,7 +49,7 @@ feature_group ("access")
     | that if RM property `TYPE._some_property` is of type `String`, an `ISO8601_DATE` is
     | allowed at that position in the archetype.
     | 
-    prop aom_rm_type_substitutions: Map<String,String>;
+    prop aom_rm_type_substitutions :? Map<String,String>;
 
     | 
     | List of mappings of lifecycle state names used in archetypes to AOM lifecycle state names:
@@ -56,7 +57,7 @@ feature_group ("access")
     | * key = source lifecycle state;
     | * value = AOM lifecycle state.
     | 
-    prop aom_lifecycle_mappings: Map<String,String>;
+    prop aom_lifecycle_mappings :? Map<String,String>;
 
     | 
     | Equivalences of RM primitive types to in-built set of primitive types. Used to determine
@@ -66,7 +67,7 @@ feature_group ("access")
     | * "Real"        "Double"
     | * "Integer"     "Integer64"
     | 
-    prop rm_primitive_type_equivalences: Map<String,String>;
+    prop rm_primitive_type_equivalences :? Map<String,String>;
 
 
 end

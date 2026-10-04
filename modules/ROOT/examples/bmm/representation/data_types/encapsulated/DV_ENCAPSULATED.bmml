@@ -1,3 +1,4 @@
+
 | 
 | Abstract class defining the common meta-data of all types of encapsulated data.
 | 
@@ -12,13 +13,13 @@ feature_group ("access")
     | Set character sets . Unicode is the default assumption in openEHR, with UTF-8 being the
     | assumed encoding. This attribute allows for variations from these assumptions.
     | 
-    prop charset: CODE_PHRASE «iana.character-sets»;
+    prop charset :? CODE_PHRASE «iana.character-sets»;
 
     | 
     | Optional indicator of the localised language in which the data is written, if relevant.
     | Coded from openEHR Code Set `languages`.
     | 
-    prop language: CODE_PHRASE «iso.iso_639-1»;
+    prop language :? CODE_PHRASE «iso.iso_639-1»;
 
 invariant
     language_valid: ∃ language ⇒ code_set(Code_set_id_languages).has_code(language);

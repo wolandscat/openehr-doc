@@ -8,10 +8,9 @@ skinparam citedClassColor #FDFDFD
 
 class OBJECT_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_object_ref]] {
         .. access ..
-        namespace: String
-        type: String
+        namespace : String
+        type : String
 }
-
 
 OBJECT_REF *--> "1 id" OBJECT_ID
 
@@ -23,20 +22,18 @@ INTERNET_ID -[#gray]up-|> UID
 
 abstract class UID [[/openehr-doc/latest/representation/identification-gen.html#_class_uid]] {
         .. access ..
-        value: String
+        value : String
 }
-
 
 class VERSION_TREE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_version_tree_id]] {
         .. access ..
-        value: String
+        value : String
         trunk_version: String
         is_branch: Boolean
         is_first: Boolean
         branch_number: String
         branch_version: String
 }
-
 
 abstract class TEMPLATE_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_template_id]] {
         .. access ..
@@ -85,7 +82,7 @@ ARCHETYPE_ID -[#gray]up-|> OBJECT_ID
 
 class GENERIC_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_generic_id]] {
         .. access ..
-        scheme: String
+        scheme : String
 }
 
 GENERIC_ID -[#gray]up-|> OBJECT_ID  
@@ -110,9 +107,8 @@ TERMINOLOGY_ID -[#gray]up-|> OBJECT_ID
 
 abstract class OBJECT_ID [[/openehr-doc/latest/representation/identification-gen.html#_class_object_id]] {
         .. access ..
-        value: String
+        value : String
 }
-
 
 class PARTY_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_party_ref]] {
 }
@@ -128,7 +124,7 @@ UUID -[#gray]up-|> UID
 
 class LOCATABLE_REF [[/openehr-doc/latest/representation/identification-gen.html#_class_locatable_ref]] {
         .. access ..
-        path: String
+        path :? String
         as_uri: String
 }
 

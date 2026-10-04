@@ -6,7 +6,7 @@
 
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -28,7 +28,7 @@ of requestor.
 
 h|prop +
   0..1
-|*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
+|*item*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Content object.
 
 |===

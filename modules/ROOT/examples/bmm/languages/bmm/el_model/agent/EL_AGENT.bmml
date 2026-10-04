@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A delayed routine call, whose arguments may be open, partially closed or closed. Generated
 | by special reference to a routine, usually via a dedicated keyword, such as 'lambda' or
@@ -18,27 +20,27 @@ feature_group ("access")
     | 
     | Name of the routine being called.
     | 
-    prop name: String;
+    prop name : String;
 
     | 
     | Closed arguments of a routine call as a tuple of objects.
     | 
-    prop closed_args: EL_TUPLE;
+    prop closed_args :? EL_TUPLE;
 
     | 
     | Optional list of names of open arguments of the call. If not provided, and the `name`
     | refers to a routine with more arguments than supplied in `closed_args`, the missing
     | arguments are inferred from the `definition`.
     | 
-    prop open_args: List<String>;
+    prop open_args :? List<String>;
 
     | 
     | Reference to definition of a routine for which this is an agent, if one exists.
     | 
-    prop definition: BMM_ROUTINE;
+    prop definition :? BMM_ROUTINE;
 
     | 
-    prop is_writable: Boolean;
+    prop is_writable : Boolean;
 
     | 
     | Eval type is the signature corresponding to the (remaining) open arguments and return

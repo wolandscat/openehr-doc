@@ -11,11 +11,8 @@ structural connections from the Archetype to its constituent parts, i.e. definit
 `C_COMPLEX_OBJECT`), terminology (`ARCHEYTPE_TERMINOLOGY`) and so on. It is the parent
 class of all concrete types of archetype.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

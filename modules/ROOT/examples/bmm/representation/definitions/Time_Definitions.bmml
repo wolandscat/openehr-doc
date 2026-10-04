@@ -1,3 +1,4 @@
+
 | 
 | Definitions for date/time classes. Note that the timezone limits are set by
 | where the international dateline is. Thus, time in New Zealand is quoted
@@ -5,7 +6,6 @@
 | 
 
 builtin class Time_Definitions
-    is_a Any
 
 feature_group ("definitions")
 

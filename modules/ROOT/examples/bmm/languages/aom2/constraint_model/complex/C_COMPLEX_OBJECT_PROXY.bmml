@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A constraint defined by proxy, using a reference to an object constraint defined elsewhere
 | in the same archetype. Note that since this object refers to another node, there are two
@@ -17,7 +19,7 @@ feature_group ("access")
     | 
     | Reference to an object node using archetype path notation.
     | 
-    prop target_path: String;
+    prop target_path : String;
 
     | 
     | True if target occurrences are to be used as the value of occurrences in this object; by

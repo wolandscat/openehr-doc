@@ -18,9 +18,9 @@ EL_FUNCTION_AGENT *--> "0..1 definition" BMM_FUNCTION
 
 abstract class EL_AGENT [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_agent]] {
         .. access ..
-        name: String
-        open_args: List<String>
-        is_writable: Boolean
+        name : String
+        open_args :? List<String>
+        is_writable : Boolean
         eval_type: BMM_ROUTINE_TYPE
         is_callable: Boolean
         reference: String

@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*unitary_type* : xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]

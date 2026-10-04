@@ -1,3 +1,4 @@
+
 | 
 | An enumeration of three values that may commonly occur in constraint models.
 | 
@@ -6,16 +7,18 @@
 | fields.
 | 
 
-enum VALIDITY_KIND
+enumeration VALIDITY_KIND
     base_type String
 
-        mandatory (mandatory)
+feature_group ("values")
 
-        optional (optional)
+    mandatory ("mandatory");
 
-        prohibited (prohibited)
+    optional ("optional");
 
-        disallowed (disallowed)
+    prohibited ("prohibited");
+
+    disallowed ("disallowed");
 
 
 end

@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum BMM_PARAMETER_DIRECTION*
+3+^h|  *enumeration BMM_PARAMETER_DIRECTION*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*pd_in* = in

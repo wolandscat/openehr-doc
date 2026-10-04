@@ -1,26 +1,28 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | Serialised form of Contribution for an Extract.
 | 
 
 class X_CONTRIBUTION
-    is_a Any
 
 feature_group ("access")
 
     | 
     | Uid of Contribution in source system.
     | 
-    prop uid: HIER_OBJECT_ID;
+    prop uid : HIER_OBJECT_ID;
 
     | 
     | Audit of Contribution in source system.
     | 
-    prop audit: AUDIT_DETAILS;
+    prop audit : AUDIT_DETAILS;
 
     | 
     | Serialised Versions from Contribution in source system.
     | 
-    prop versions: List<VERSION<LOCATABLE>>;
+    prop versions :? List<VERSION<LOCATABLE>>;
 
 
 end

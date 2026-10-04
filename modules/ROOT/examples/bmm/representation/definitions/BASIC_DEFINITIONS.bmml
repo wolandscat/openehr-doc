@@ -1,9 +1,9 @@
+
 | 
 | Defines globally used constant values.
 | 
 
 class BASIC_DEFINITIONS
-    is_a Any
 
 feature_group ("infrastructure")
 

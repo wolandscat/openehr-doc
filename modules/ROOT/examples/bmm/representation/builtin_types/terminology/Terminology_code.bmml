@@ -1,3 +1,4 @@
+
 | 
 | Primitive type representing a standalone reference to a terminology concept, in the form
 | of a terminology identifier, optional version, and a code or code string from the
@@ -5,7 +6,6 @@
 | 
 
 class Terminology_code
-    is_a Any
 
 feature_group ("access")
 
@@ -14,26 +14,26 @@ feature_group ("access")
     | value like `"snomed_ct"` that is mapped elsewhere to the full URI identifying the
     | terminology.
     | 
-    prop terminology_id: String;
+    prop terminology_id : String;
 
     | 
     | Optional string value representing terminology version, typically a date or dotted
     | numeric.
     | 
-    prop terminology_version: String;
+    prop terminology_version :? String;
 
     | 
     | A terminology code or post-coordinated code expression, if supported by the terminology.
     | The code may refer to a single term, a value set consisting of multiple terms, or some
     | other entity representable within the terminology.
     | 
-    prop code_string: String;
+    prop code_string : String;
 
     | 
     | The URI reference that may be used as a concrete key into a notional terminology service
     | for queries that can obtain the term text, definition, and other associated elements.
     | 
-    prop uri: Uri;
+    prop uri :? Uri;
 
 
 end

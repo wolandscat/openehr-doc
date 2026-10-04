@@ -7,11 +7,8 @@
 h|*Description*
 2+a|Definitions used by all BMM packages.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "definitions"*
+2+^h|*definitions*
 
 h|const +
   
@@ -151,7 +148,7 @@ h|singleton +
 a|Built-in type definition corresponding to the top `Any` type.
 
 h|
-2+^h|*Feature Group "factory"*
+2+^h|*factory*
 
 h| func
 |*create_schema_id* ( +

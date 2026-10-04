@@ -1,3 +1,4 @@
+
 | 
 | Type representing minimal interface of built-in String type, used to represent
 | textual data in any natural or formal language.

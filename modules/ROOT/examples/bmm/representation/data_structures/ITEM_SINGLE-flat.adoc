@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -52,7 +52,7 @@ h| func
 a|True if this node is the root of an archetyped structure.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h|prop +
   0..1

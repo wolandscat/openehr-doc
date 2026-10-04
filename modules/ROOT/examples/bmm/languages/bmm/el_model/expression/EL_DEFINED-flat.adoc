@@ -14,7 +14,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_el_predicate[EL_PREDICATE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

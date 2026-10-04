@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | A type that is defined by a class (or classes) in the model.
 | 
@@ -8,12 +10,12 @@ abstract class BMM_MODEL_TYPE
 feature_group ("access")
 
     | 
-    prop value_constraint: BMM_VALUE_SET_SPEC;
+    prop value_constraint :? BMM_VALUE_SET_SPEC;
 
     | 
     | Base class of this type.
     | 
-    prop base_class: BMM_CLASS;
+    prop base_class : BMM_CLASS;
 
     | 
     | Result = `base_class.name`.

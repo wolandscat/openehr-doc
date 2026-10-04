@@ -9,11 +9,8 @@ h|*Description*
 entities in a durable way. UIDs only ever identify one IE in time or space and are never
 re-used.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

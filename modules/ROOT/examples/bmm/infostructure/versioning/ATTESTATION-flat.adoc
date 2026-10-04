@@ -19,7 +19,7 @@ h|*Inherit*
 2+|xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

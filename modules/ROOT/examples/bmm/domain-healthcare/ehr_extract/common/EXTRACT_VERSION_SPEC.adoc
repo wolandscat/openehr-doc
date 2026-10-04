@@ -12,11 +12,8 @@ are used to modify this; the former forces all versions to be included; the latt
 the versions to be those latest versions committed in the time interval, or if
 `include_all_versions` is `True`, all versions committed in the time interval.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

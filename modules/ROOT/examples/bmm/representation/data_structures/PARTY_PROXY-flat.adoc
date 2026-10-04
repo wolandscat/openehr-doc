@@ -9,11 +9,8 @@ h|*Description*
 this party in a demographic or other identity management system. Sub- typed into
 `PARTY_IDENTIFIED` and `PARTY_SELF`.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

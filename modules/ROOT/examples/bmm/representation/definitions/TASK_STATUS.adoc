@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum TASK_STATUS*
+3+^h|  *enumeration TASK_STATUS*
 
 h|*Description*
 2+a|Enumeration of lifecycle status values for tasks.
@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*planned* = planned

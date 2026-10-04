@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum INSTRUCTION_EXECUTION_STATE*
+3+^h|  *enumeration INSTRUCTION_EXECUTION_STATE*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*initial* = initial

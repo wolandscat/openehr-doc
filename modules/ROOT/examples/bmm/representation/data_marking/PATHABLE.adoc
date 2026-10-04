@@ -11,11 +11,8 @@ characteristics of `PATHABLE` objects are that they can locate child objects usi
 and they know their parent object in a compositional hierarchy. The parent feature is
 defined as abstract in the model, and may be implemented in any way convenient.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h| func
 |*parent* : xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]

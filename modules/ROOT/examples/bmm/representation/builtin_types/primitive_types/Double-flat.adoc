@@ -12,14 +12,14 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_ordered_numeric[Ordered_Numeric]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*floor* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return the greatest integer no greater than the value of this object.
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*add* ( +

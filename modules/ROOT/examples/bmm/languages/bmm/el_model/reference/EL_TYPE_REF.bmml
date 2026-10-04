@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for reference to a non-abstract type as an object. Assumed to be accessible at
 | run-time. Typically represented syntactically as `TypeName`.
@@ -13,10 +15,10 @@ feature_group ("access")
     | 
     | Type, directly from the name of the reference, e.g. `SOME_TYPE`.
     | 
-    prop type: BMM_TYPE;
+    prop type : BMM_TYPE;
 
     | 
-    prop is_mutable: Boolean;
+    prop is_mutable : Boolean;
 
     | 
     | Return `type`.

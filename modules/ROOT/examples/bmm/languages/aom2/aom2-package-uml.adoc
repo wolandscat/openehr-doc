@@ -27,7 +27,6 @@ class ADL_CODE_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_class_
         code_exists_at_level(a_code: String, ...): Boolean
 }
 
-
 package archetype {
 }
 

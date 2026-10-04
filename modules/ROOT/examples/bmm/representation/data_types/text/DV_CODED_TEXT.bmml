@@ -1,3 +1,4 @@
+
 | 
 | A text item whose value must be the rubric from a controlled terminology, the key (i.e.
 | the 'code') of which is the `defining_code` attribute. In other words: a `DV_CODED_TEXT`
@@ -21,7 +22,7 @@ feature_group ("access")
     | 
     | The term of which the `value` attribute is the textual rendition (i.e. rubric).
     | 
-    prop defining_code: CODE_PHRASE;
+    prop defining_code : CODE_PHRASE;
 
 
 end

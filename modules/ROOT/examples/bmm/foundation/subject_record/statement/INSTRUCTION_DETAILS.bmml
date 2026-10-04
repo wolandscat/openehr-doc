@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Used to record details of the Instruction causing an Action.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | Reference to causing Instruction.
     | 
-    prop instruction_id: LOCATABLE_REF;
+    prop instruction_id : LOCATABLE_REF;
 
     | 
     | Identifier of Activity within Instruction, in the form of its archetype path.
     | 
-    prop activity_id: String;
+    prop activity_id : String;
 
     | 
     | Various workflow engine state details, potentially including such things as:
@@ -28,7 +30,7 @@ feature_group ("access")
     | This specification does not currently define the actual structure or semantics of this
     | field.
     | 
-    prop wf_details: ITEM_STRUCTURE;
+    prop wf_details :? ITEM_STRUCTURE;
 
 invariant
     activity_path_valid: ¬ activity_id.is_empty();

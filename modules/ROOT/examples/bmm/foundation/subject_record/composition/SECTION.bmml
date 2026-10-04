@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Represents a heading in a heading structure, or section tree. Created according to
 | archetyped structures for typical headings such as SOAP, physical examination, but also
@@ -16,7 +18,7 @@ feature_group ("access")
     | * more `SECTIONs`;
     | * `ENTRYs`.
     | 
-    prop items: List<CONTENT_ITEM>;
+    prop items :? List<CONTENT_ITEM>;
 
 invariant
     items_valid: ∃ items ⇒ ¬ items.is_empty();

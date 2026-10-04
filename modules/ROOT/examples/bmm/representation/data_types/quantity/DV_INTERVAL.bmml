@@ -1,3 +1,4 @@
+
 | 
 | Generic class defining an interval (i.e. range) of a comparable type. An interval is a
 | contiguous subrange of a comparable base type. Used to define intervals of dates, times,
@@ -13,7 +14,7 @@
 | The basic semantics are derived from the class `Interval<T>`, described in the support RM.
 | 
 
-class DV_INTERVAL
+class DV_INTERVAL<T:DV_ORDERED>
     is_a DATA_VALUE, Interval<T>
 
 invariant

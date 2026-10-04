@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Expression tree leaf item representing a constraint on a primitive type, expressed
 | in the form of a concrete subtype of C_PRIMITIVE_OBJECT.
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | The constraint.
     | 
-    prop item: C_PRIMITIVE_OBJECT;
+    prop item : C_PRIMITIVE_OBJECT;
 
 
 end

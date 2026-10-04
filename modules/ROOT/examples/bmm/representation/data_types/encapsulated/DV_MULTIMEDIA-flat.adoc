@@ -13,7 +13,7 @@ h|*Inherit*
 2+|xref:representation:data_types-gen.adoc#_class_dv_encapsulated[DV_ENCAPSULATED]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

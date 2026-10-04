@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Definition of a generic parameter in a class definition of a generic type.
 | 
@@ -10,17 +12,17 @@ feature_group ("access")
     | 
     | Name of the parameter, e.g. 'T' etc. The name is limited to 1 character and upper-case.
     | 
-    prop name: String;
+    prop name : String;
 
     | 
     | Optional conformance constraint that must be the name of a defined type.
     | 
-    prop type_constraint: BMM_EFFECTIVE_TYPE;
+    prop type_constraint :? BMM_EFFECTIVE_TYPE;
 
     | 
     | If set, is the corresponding generic parameter definition in an ancestor class.
     | 
-    prop inheritance_precursor: BMM_PARAMETER_TYPE;
+    prop inheritance_precursor :? BMM_PARAMETER_TYPE;
 
     | 
     | Result is either `conforms_to_type` or

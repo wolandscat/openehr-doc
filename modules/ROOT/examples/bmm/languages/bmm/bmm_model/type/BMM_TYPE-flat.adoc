@@ -10,11 +10,8 @@ class. A type specification is essentially a reference of some kind, that define
 of an attribute, or function result or argument. It may include generic parameters that
 might or might not be bound. See subtypes.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]

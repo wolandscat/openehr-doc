@@ -13,7 +13,7 @@ h|*Inherit*
 2+|xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -27,11 +27,10 @@ a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
 
 h| func
 |*c_conforms_to* ( +
-other: xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
-same as other. Typically used during validation of specialised archetype nodes.
-
-.Parameters + [horizontal] `rmcc`:: RM conformance checker agent.
+other: xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE], +
+rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|.Parameters +
+`rmcc`:: RM conformance checker agent.
 
 h| func
 |*c_congruent_to* ( +

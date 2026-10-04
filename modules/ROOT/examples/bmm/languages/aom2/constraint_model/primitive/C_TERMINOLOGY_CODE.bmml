@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constrainer type for instances of `Terminology_code`. The constraint attribute can
 | contain:
@@ -26,15 +28,15 @@ feature_group ("access")
     | 
     | Use an empty string for no constraint.
     | 
-    prop constraint: String;
+    prop constraint : String;
 
     | 
     | Assumed Terminology code value.
     | 
-    prop assumed_value: Terminology_code;
+    prop assumed_value :? Terminology_code;
 
     | 
-    prop default_value: Terminology_code;
+    prop default_value :? Terminology_code;
 
     | 
     | Constraint status of this terminology constraint. If Void, the meaning is as follows:
@@ -49,7 +51,7 @@ feature_group ("access")
     | * Void if it was Void in the parent;
     | * otherwise, it will carry the same value as in the parent.
     | 
-    prop constraint_status: CONSTRAINT_STATUS;
+    prop constraint_status :? CONSTRAINT_STATUS;
 
     | 
     | True if `constraint_status` is defined and equals `required` OR if Void. I.e. in

@@ -14,8 +14,8 @@ CONTENT_ITEM -[#gray]up-|> LOCATABLE
 
 class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_observation]] {
         .. access ..
-        data: HISTORY<ITEM_STRUCTURE>
-        state: HISTORY<ITEM_STRUCTURE>
+        data : HISTORY<ITEM_STRUCTURE>
+        state :? HISTORY<ITEM_STRUCTURE>
 }
 
 OBSERVATION -[#gray]up-|> CARE_ENTRY  
@@ -23,10 +23,10 @@ OBSERVATION -[#gray]up-|> CARE_ENTRY
 
 class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_ism_transition]] {
         .. access ..
-        current_state: DV_CODED_TEXT
-        transition: DV_CODED_TEXT
-        careflow_step: DV_CODED_TEXT
-        reason: List<DV_TEXT>
+        current_state : DV_CODED_TEXT
+        transition :? DV_CODED_TEXT
+        careflow_step :? DV_CODED_TEXT
+        reason :? List<DV_TEXT>
 }
 
 ISM_TRANSITION -[#gray]up-|> PATHABLE  
@@ -34,9 +34,9 @@ ISM_TRANSITION -[#gray]up-|> PATHABLE
 
 class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_activity]] {
         .. access ..
-        description: ITEM_STRUCTURE
-        timing: DV_PARSABLE
-        action_archetype_id: String
+        description : ITEM_STRUCTURE
+        timing :? DV_PARSABLE
+        action_archetype_id : String
 }
 
 ACTIVITY -[#gray]up-|> LOCATABLE  
@@ -44,22 +44,22 @@ ACTIVITY -[#gray]up-|> LOCATABLE
 
 enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
         .. values ..
-        initial = initial
-        planned = planned
-        postponed = postponed
-        cancelled = cancelled
-        active = active
-        suspended = suspended
-        completed = completed
-        aborted = aborted
-        expired = expired
+        initial
+        planned
+        postponed
+        cancelled
+        active
+        suspended
+        completed
+        aborted
+        expired
 }
 
 class INSTRUCTION_DETAILS [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_details]] {
         .. access ..
-        instruction_id: LOCATABLE_REF
-        activity_id: String
-        wf_details: ITEM_STRUCTURE
+        instruction_id : LOCATABLE_REF
+        activity_id : String
+        wf_details :? ITEM_STRUCTURE
 }
 
 INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE  
@@ -67,29 +67,29 @@ INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE
 
 enum INSTRUCTION_EXECUTION_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_transition]] {
         .. values ..
-        ism_t_initiate = initiate
-        ism_t_start = start
-        ism_t_schedule = schedule
-        ism_t_plan_step = plan_step
-        ism_t_cancel = cancel
-        ism_t_do = do
-        ism_t_resume = resume
-        ism_t_suspend = suspend
-        ism_t_suspended_step = suspended_step
-        ism_t_active_step = active_step
-        ism_t_scheduled_step = scheduled_step
-        ism_t_postponed_step = postponed_step
-        ism_t_abort = abort
-        ism_t_restore = restore
-        ism_t_postpone = postpone
-        ism_t_time_out = time_out
-        ism_t_notify_completed = notify_completed
-        ism_t_notify_aborted = notify_aborted
+        ism_t_initiate
+        ism_t_start
+        ism_t_schedule
+        ism_t_plan_step
+        ism_t_cancel
+        ism_t_do
+        ism_t_resume
+        ism_t_suspend
+        ism_t_suspended_step
+        ism_t_active_step
+        ism_t_scheduled_step
+        ism_t_postponed_step
+        ism_t_abort
+        ism_t_restore
+        ism_t_postpone
+        ism_t_time_out
+        ism_t_notify_completed
+        ism_t_notify_aborted
 }
 
 class EVALUATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_evaluation]] {
         .. access ..
-        data: ITEM_STRUCTURE
+        data : ITEM_STRUCTURE
 }
 
 EVALUATION -[#gray]up-|> CARE_ENTRY  
@@ -97,8 +97,8 @@ EVALUATION -[#gray]up-|> CARE_ENTRY
 
 abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_care_entry]] {
         .. access ..
-        protocol: ITEM_STRUCTURE
-        guideline_id: OBJECT_REF
+        protocol :? ITEM_STRUCTURE
+        guideline_id :? OBJECT_REF
 }
 
 CARE_ENTRY -[#gray]up-|> ENTRY  
@@ -106,11 +106,11 @@ CARE_ENTRY -[#gray]up-|> ENTRY
 
 abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
         .. access ..
-        subject: PARTY_PROXY
-        provider: PARTY_PROXY
-        language: CODE_PHRASE «iso.iso_639-1»
-        encoding: CODE_PHRASE «iana.character-sets»
-        workflow_id: OBJECT_REF
+        subject : PARTY_PROXY
+        provider :? PARTY_PROXY
+        language : CODE_PHRASE «iso.iso_639-1»
+        encoding : CODE_PHRASE «iana.character-sets»
+        workflow_id :? OBJECT_REF
         subject_is_self: Boolean
 }
 
@@ -121,9 +121,9 @@ ENTRY *--> "0..* other_participations" PARTICIPATION
 
 class INSTRUCTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction]] {
         .. access ..
-        narrative: DV_TEXT
-        expiry_time: DV_DATE_TIME
-        wf_definition: DV_PARSABLE
+        narrative : DV_TEXT
+        expiry_time :? DV_DATE_TIME
+        wf_definition :? DV_PARSABLE
 }
 
 INSTRUCTION -[#gray]up-|> CARE_ENTRY  
@@ -133,8 +133,8 @@ INSTRUCTION *--> "0..* activities" ACTIVITY
 
 class ACTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_action]] {
         .. access ..
-        time: DV_DATE_TIME
-        description: ITEM_STRUCTURE
+        time : DV_DATE_TIME
+        description : ITEM_STRUCTURE
 }
 
 ACTION -[#gray]up-|> CARE_ENTRY  
@@ -146,7 +146,7 @@ ACTION *--> "0..1 instruction_details" INSTRUCTION_DETAILS
 
 class ADMIN_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_admin_entry]] {
         .. access ..
-        data: ITEM_STRUCTURE
+        data : ITEM_STRUCTURE
 }
 
 ADMIN_ENTRY -[#gray]up-|> ENTRY  

@@ -2,11 +2,11 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *enum BMM_OPERATOR_POSITION*
+3+^h|  *enumeration BMM_OPERATOR_POSITION*
 
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|
 |*prefix* = prefix

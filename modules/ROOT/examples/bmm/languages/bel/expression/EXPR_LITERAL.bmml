@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Literal value expression tree leaf item. This can represent a literal value of any
 | primitive type included in the `PRIMITIVE_TYPE` enumeration.
@@ -11,7 +13,7 @@ feature_group ("access")
     | 
     | A statically set constant value of a primitive type.
     | 
-    prop item: Any;
+    prop item : Any;
 
 
 end

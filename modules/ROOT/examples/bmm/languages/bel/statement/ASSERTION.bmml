@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for a first order predicate logic expression with a Boolean result.
 | 
@@ -10,18 +12,18 @@ feature_group ("access")
     | 
     | Expression tag, used for differentiating multiple assertions.
     | 
-    prop tag: String;
+    prop tag :? String;
 
     | 
     | String form of expression, in case an expression evaluator taking String expressions is
     | used for evaluation.
     | 
-    prop string_expression: String;
+    prop string_expression :? String;
 
     | 
     | Root of expression tree.
     | 
-    prop expression: EXPRESSION;
+    prop expression : EXPRESSION;
 
 
 end

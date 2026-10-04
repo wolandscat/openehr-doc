@@ -9,11 +9,8 @@ h|*Description*
 another language environment, each `RESOURCE_DESCRIPTION_ITEM` needs to be copied and
 translated into the new language.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

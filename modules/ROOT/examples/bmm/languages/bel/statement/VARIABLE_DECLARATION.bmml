@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for the declaration of a named variable that can be used in an expression.
 | 
@@ -10,12 +12,12 @@ feature_group ("access")
     | 
     | Name of the variable.
     | 
-    prop name: String;
+    prop name : String;
 
     | 
     | Primitive type of the variable, enabling its use to be type-checked in expressions.
     | 
-    prop type: EXPR_TYPE_DEF;
+    prop type : EXPR_TYPE_DEF;
 
 
 end

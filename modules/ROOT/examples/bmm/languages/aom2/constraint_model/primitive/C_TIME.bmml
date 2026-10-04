@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Constraint on instances representing times in the form either of a set of validity values,
 | or else time ranges based on the `C_ORDERED` list constraint.
@@ -18,18 +20,18 @@ feature_group ("access")
     | 
     | For a pattern constraint or no constraint, use an empty list.
     | 
-    prop constraint: List<Interval<Iso8601_time>>;
+    prop constraint :? List<Interval<Iso8601_time>>;
 
     | 
     | Default value set in a template, and present in an operational template. Generally limited
     | to leaf and near-leaf nodes.
     | 
-    prop default_value: Iso8601_time;
+    prop default_value :? Iso8601_time;
 
     | 
     | Value to be assumed if none sent in data.
     | 
-    prop assumed_value: Iso8601_time;
+    prop assumed_value :? Iso8601_time;
 
     | 
     | Validity of minute in constrained time.

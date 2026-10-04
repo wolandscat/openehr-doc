@@ -29,7 +29,7 @@ h|*Inherit*
 2+|xref:languages:aom2-gen.adoc#_class_c_complex_object[C_COMPLEX_OBJECT]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -290,7 +290,7 @@ specialised part corresponding to specialisation below `a_level`, and then any t
 real node from `a_level` or higher.
 
 h|
-2+^h|*Feature Group "values"*
+2+^h|*values*
 
 h|const +
   

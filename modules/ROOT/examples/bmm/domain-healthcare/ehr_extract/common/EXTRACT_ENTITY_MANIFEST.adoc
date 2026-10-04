@@ -16,11 +16,8 @@ system to locate the entity. The `extract_id_key` attribute is used to record th
 identifier that will be used throughout the Extract for this entity, including in
 instances of `EXTRACT_ENTITY_IDENTIFIER`.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

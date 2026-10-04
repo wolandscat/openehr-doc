@@ -1,8 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type for literals whose concrete type is a primitive type.
 | 
 
-class BMM_PRIMITIVE_VALUE
+class BMM_PRIMITIVE_VALUE<T:BMM_UNITARY_TYPE>
     is_a BMM_UNITARY_VALUE<T>
 
 feature_group ("access")
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Concrete type of this literal.
     | 
-    prop type: BMM_SIMPLE_TYPE;
+    prop type : BMM_SIMPLE_TYPE;
 
 
 end

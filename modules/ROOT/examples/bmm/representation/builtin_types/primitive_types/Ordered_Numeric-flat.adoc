@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered],xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]
 
 h|
-2+^h|*Feature Group "operators"*
+2+^h|*operators*
 
 h| func
 |*less_than* ( +

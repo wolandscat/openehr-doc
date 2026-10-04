@@ -1,3 +1,4 @@
+
 | 
 | Express constraints on the cardinality of container objects which are the values of
 | multiply-valued attributes, including uniqueness and ordering, providing the means to
@@ -5,26 +6,25 @@
 | 
 
 class Cardinality
-    is_a Any
 
 feature_group ("access")
 
     | 
     | The interval of this cardinality.
     | 
-    prop interval: Multiplicity_interval;
+    prop interval : Multiplicity_interval;
 
     | 
     | True if the members of the container attribute to which this cardinality refers are
     | ordered.
     | 
-    prop is_ordered: Boolean;
+    prop is_ordered : Boolean;
 
     | 
     | True if the members of the container attribute to which this cardinality refers are
     | unique.
     | 
-    prop is_unique: Boolean;
+    prop is_unique : Boolean;
 
     | 
     | True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique

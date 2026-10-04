@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Type reference to a single type i.e. not generic or container type.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | Defining class of this type.
     | 
-    prop base_class: BMM_SIMPLE_CLASS;
+    prop base_class : BMM_SIMPLE_CLASS;
 
     | 
     | Result is `base_class.name`.

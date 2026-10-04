@@ -18,7 +18,7 @@ h|*Inherit*
 2+|xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
@@ -52,7 +52,7 @@ h|*Invariants*
 2+a|
 
 h|
-2+a|valid_structure: items.for_all(i.type = "ELEMENT");
+2+a|valid_structure: ∀ i:items ¦ i.type = "ELEMENT";
 
 
 |===

@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_el_feature_ref[EL_FEATURE_REF],xref:languages:bmm-gen.adoc#_class_el_agent_call[EL_AGENT_CALL]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

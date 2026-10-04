@@ -11,11 +11,8 @@ assisting nurse. Can be used to record past or future participations.
 
 Should not be used in place of more permanent relationships between demographic entities.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

@@ -23,7 +23,7 @@ h|*Inherit*
 2+|xref:languages:aom2-gen.adoc#_class_c_temporal[C_TEMPORAL]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

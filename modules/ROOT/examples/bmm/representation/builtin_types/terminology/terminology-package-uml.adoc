@@ -8,18 +8,16 @@ skinparam citedClassColor #FDFDFD
 
 class Terminology_code [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_terminology_code]] {
         .. access ..
-        terminology_id: String
-        terminology_version: String
-        code_string: String
-        uri: Uri
+        terminology_id : String
+        terminology_version :? String
+        code_string : String
+        uri :? Uri
 }
-
 
 class Terminology_term [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_terminology_term]] {
         .. access ..
-        text: String
+        text : String
 }
-
 
 Terminology_term *--> "1 concept" Terminology_code
 

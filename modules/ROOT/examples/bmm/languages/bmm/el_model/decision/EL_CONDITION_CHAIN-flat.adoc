@@ -19,7 +19,7 @@ h|*Inherit*
 2+|xref:languages:bmm-gen.adoc#_class_el_decision_table[EL_DECISION_TABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

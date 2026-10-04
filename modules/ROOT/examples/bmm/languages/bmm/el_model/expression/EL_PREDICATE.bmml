@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Parent type of predicate of any object reference.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | The target instance of this predicate.
     | 
-    prop operand: EL_VALUE_GENERATOR;
+    prop operand : EL_VALUE_GENERATOR;
 
     | 
     | Return `{BMM_MODEL}._boolean_type_definition_()`.

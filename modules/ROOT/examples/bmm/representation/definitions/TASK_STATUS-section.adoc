@@ -1,5 +1,5 @@
 
-=== Enum TASK_STATUS
+=== Enumeration TASK_STATUS
 
 [tabs]
 ======

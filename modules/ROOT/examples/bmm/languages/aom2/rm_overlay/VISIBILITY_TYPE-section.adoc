@@ -1,5 +1,5 @@
 
-=== Enum VISIBILITY_TYPE
+=== Enumeration VISIBILITY_TYPE
 
 [tabs]
 ======

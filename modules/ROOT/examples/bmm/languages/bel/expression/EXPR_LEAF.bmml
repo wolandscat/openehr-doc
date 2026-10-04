@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Meta-type representing one of:
 | 
@@ -15,7 +17,7 @@ feature_group ("access")
     | 
     | The reference item from which the value of this node can be computed.
     | 
-    prop item: Any;
+    prop item :? Any;
 
 
 end

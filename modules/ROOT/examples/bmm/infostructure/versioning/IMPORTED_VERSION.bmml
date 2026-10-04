@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Versions whose content is an `ORIGINAL_VERSION` copied from another location; this class
 | inherits `commit_audit` and `contribution` from `VERSION<T>`, providing imported
@@ -5,7 +7,7 @@
 | `ORIGINAL_VERSION`.
 | 
 
-class IMPORTED_VERSION
+class IMPORTED_VERSION<T>
     is_a VERSION<T>
 
 feature_group ("access")
@@ -13,7 +15,7 @@ feature_group ("access")
     | 
     | The `ORIGINAL_VERSION` object that was imported.
     | 
-    prop item: ORIGINAL_VERSION<T>;
+    prop item : ORIGINAL_VERSION<T>;
 
     | 
     | Computed version of inheritance precursor, derived as `item.uid`.

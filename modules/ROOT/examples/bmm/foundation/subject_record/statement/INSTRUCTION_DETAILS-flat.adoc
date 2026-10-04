@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   
@@ -37,7 +37,7 @@ This specification does not currently define the actual structure or semantics o
 field.
 
 h|
-2+^h|*Feature Group "infrastructure"*
+2+^h|*infrastructure*
 
 h| func
 |*parent* : xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]

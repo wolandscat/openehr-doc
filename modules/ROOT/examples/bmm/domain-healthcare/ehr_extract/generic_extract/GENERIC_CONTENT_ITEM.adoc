@@ -11,7 +11,7 @@ h|*Inherit*
 2+|xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_content_item[EXTRACT_CONTENT_ITEM]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1

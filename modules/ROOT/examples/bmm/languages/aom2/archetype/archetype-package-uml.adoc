@@ -26,13 +26,13 @@ OPERATIONAL_TEMPLATE *--> "0..* terminology_extracts" ARCHETYPE_TERMINOLOGY
 
 class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_hrid]] {
         .. access ..
-        namespace: String
-        rm_publisher: String
-        rm_package: String
-        rm_class: String
-        concept_id: String
-        release_version: String
-        build_count: String
+        namespace :? String
+        rm_publisher : String
+        rm_package : String
+        rm_class : String
+        concept_id : String
+        release_version : String
+        build_count : String
         semantic_id: String
         physical_id: String
         version_id: String
@@ -40,7 +40,6 @@ class ARCHETYPE_HRID [[/openehr-doc/latest/languages/aom2-gen.html#_class_archet
         minor_version: String
         patch_version: String
 }
-
 
 ARCHETYPE_HRID *--> "1 version_status" VERSION_STATUS
 
@@ -55,15 +54,14 @@ TEMPLATE *--> "0..* overlays" TEMPLATE_OVERLAY
 
 abstract class ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype]] {
         .. access ..
-        parent_archetype_id: String
-        is_differential: Boolean
+        parent_archetype_id :? String
+        is_differential : Boolean
         concept_code: String
         physical_paths: List<String>
         logical_paths(a_lang: String): List<String>
         specialisation_depth: Integer
         is_specialised: Boolean
 }
-
 
 ARCHETYPE *--> "1 archetype_id" ARCHETYPE_HRID
 
@@ -77,11 +75,11 @@ ARCHETYPE *--> "0..1 rm_overlay" RM_OVERLAY
 
 class AUTHORED_ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_authored_archetype]] {
         .. access ..
-        adl_version: String
-        build_uid: UUID
-        rm_release: String
-        is_generated: Boolean
-        other_meta_data: Map<String,String>
+        adl_version :? String
+        build_uid : UUID
+        rm_release : String
+        is_generated : Boolean
+        other_meta_data : Map<String,String>
 }
 
 AUTHORED_ARCHETYPE -[#gray]up-|> ARCHETYPE  

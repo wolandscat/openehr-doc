@@ -1,27 +1,29 @@
+import org.openehr:representation ;
+import org.openehr:foundation ;
+
 | 
 | The concept of a message addressed to nominated recipients.
 | 
 
 class ADDRESSED_MESSAGE
-    is_a Any
 
 feature_group ("access")
 
     | 
     | Party sending the message.
     | 
-    prop sender: String;
+    prop sender : String;
 
     | 
     | Identification of message used by sender. This will be the same no matter how many times
     | this message is sent to these recipients.
     | 
-    prop sender_reference: String;
+    prop sender_reference : String;
 
     | 
     | Intended recipients, in the form of internet addresses.
     | 
-    prop addressees: List<String>;
+    prop addressees : List<String>;
 
     | 
     | Urgency with which destination should deal with message:
@@ -30,12 +32,12 @@ feature_group ("access")
     | * 0 - normal
     | * 1 - high
     | 
-    prop urgency: Integer;
+    prop urgency :? Integer;
 
     | 
     | The content of the message.
     | 
-    prop message: MESSAGE;
+    prop message : MESSAGE;
 
 
 end

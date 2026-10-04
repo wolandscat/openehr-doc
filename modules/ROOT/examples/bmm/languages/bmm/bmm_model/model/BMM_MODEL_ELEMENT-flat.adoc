@@ -10,11 +10,8 @@ model within a context, which defines the _scope_ of the element. Thus, a class 
 and its property and routine definitions are model elements, but Types are not, since they
 are derived from model elements.
 
-h|*Inherit*
-2+|xref:representation:builtin_types-gen.adoc#_class_any[Any]
-
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   

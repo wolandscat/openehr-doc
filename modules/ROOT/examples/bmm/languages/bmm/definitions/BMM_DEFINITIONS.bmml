@@ -1,9 +1,10 @@
+import org.openehr:representation ;
+
 | 
 | Definitions used by all BMM packages.
 | 
 
 class BMM_DEFINITIONS
-    is_a Any
 
 feature_group ("definitions")
 

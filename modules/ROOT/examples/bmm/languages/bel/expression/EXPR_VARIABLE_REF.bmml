@@ -1,3 +1,5 @@
+import org.openehr:representation ;
+
 | 
 | Expression tree leaf item representing a reference to a declared variable.
 | 
@@ -10,7 +12,7 @@ feature_group ("access")
     | 
     | The variable referred to.
     | 
-    prop item: VARIABLE_DECLARATION;
+    prop item : VARIABLE_DECLARATION;
 
 
 end

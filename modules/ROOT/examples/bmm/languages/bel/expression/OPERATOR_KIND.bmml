@@ -1,49 +1,113 @@
+import org.openehr:representation ;
+
 | 
 | Enumeration representing operators.
 | 
 
-enum OPERATOR_KIND
+enumeration OPERATOR_KIND
     base_type String
 
-        op_eq (eq)
+feature_group ("values")
 
-        op_ne (ne)
+    | 
+    | Equality (equals) operator.
+    | 
+    op_eq ("eq");
 
-        op_lt (lt)
+    | 
+    | Inequality (not-equals) operator.
+    | 
+    op_ne ("ne");
 
-        op_le (le)
+    | 
+    | Less than operator.
+    | 
+    op_lt ("lt");
 
-        op_gt (gt)
+    | 
+    | Less than or equals operator.
+    | 
+    op_le ("le");
 
-        op_ge (ge)
+    | 
+    | Greater than operator.
+    | 
+    op_gt ("gt");
 
-        op_matches (matches)
+    | 
+    | Greater than or equals operator.
+    | 
+    op_ge ("ge");
 
-        op_not (not)
+    | 
+    | Matches operator.
+    | 
+    op_matches ("matches");
 
-        op_and (and)
+    | 
+    | Logical negation (not) operator.
+    | 
+    op_not ("not");
 
-        op_or (or)
+    | 
+    | Logical conjunction (and) operator.
+    | 
+    op_and ("and");
 
-        op_xor (xor)
+    | 
+    | Logical inclusive disjunction (or) operator.
+    | 
+    op_or ("or");
 
-        op_implies (implies)
+    | 
+    | Logical exclusive disjunction (exclusive or) operator.
+    | 
+    op_xor ("xor");
 
-        op_for_all (for_all)
+    | 
+    | Logical implication (implies) operator.
+    | 
+    op_implies ("implies");
 
-        op_exists (exists)
+    | 
+    | Universal quantification operator.
+    | 
+    op_for_all ("for_all");
 
-        op_plus (plus)
+    | 
+    | Existential quantification operator.
+    | 
+    op_exists ("exists");
 
-        op_minus (minus)
+    | 
+    | Arithmetic addition (plus) operator.
+    | 
+    op_plus ("plus");
 
-        op_multiply (multiply)
+    | 
+    | Arithmetic subtraction (minus) operator.
+    | 
+    op_minus ("minus");
 
-        op_divide (divide)
+    | 
+    | Arithmetic multiplication (times) operator.
+    | 
+    op_multiply ("multiply");
 
-        op_modulo (modulo)
+    | 
+    | Arithmetic division (divided-by) operator.
+    | 
+    op_divide ("divide");
 
-        op_exponent (exponent)
+    | 
+    | Arithmetic modulo operator.
+    | 
+    op_modulo ("modulo");
+
+    | 
+    | Arithmetic exponent (to the power of) operator.
+    | 
+    op_exponent ("exponent");
 
 
 end

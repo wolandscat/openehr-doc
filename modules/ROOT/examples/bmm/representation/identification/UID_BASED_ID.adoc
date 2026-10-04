@@ -12,7 +12,7 @@ h|*Inherit*
 2+|xref:representation:identification-gen.adoc#_class_object_id[OBJECT_ID]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h| func
 |*root* : xref:representation:identification-gen.adoc#_class_uid[UID]
@@ -33,7 +33,7 @@ h|*Invariants*
 2+a|
 
 h|
-2+a|has_extension_valid: extension.is_empty() ⊻ has_extension;
+2+a|has_extension_valid: extension().is_empty() ⊻ has_extension();
 
 
 |===

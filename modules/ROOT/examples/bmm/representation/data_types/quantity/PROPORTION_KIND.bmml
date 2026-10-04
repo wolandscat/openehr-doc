@@ -1,19 +1,22 @@
+
 | 
 | Class of enumeration constants defining types of proportion for the `DV_PROPORTION` class.
 | 
 
-enum PROPORTION_KIND
+enumeration PROPORTION_KIND
     base_type Integer
 
-        pk_ratio (0)
+feature_group ("values")
 
-        pk_unitary (1)
+    pk_ratio (0);
 
-        pk_percent (2)
+    pk_unitary (1);
 
-        pk_fraction (3)
+    pk_percent (2);
 
-        pk_integer_fraction (4)
+    pk_fraction (3);
+
+    pk_integer_fraction (4);
 
 
 end

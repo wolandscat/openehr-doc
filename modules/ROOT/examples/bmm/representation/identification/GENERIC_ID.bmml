@@ -1,3 +1,4 @@
+
 | 
 | Generic identifier type for identifiers whose format is otherwise unknown to openEHR.
 | Includes an attribute for naming the identification scheme (which may well be local).
@@ -13,7 +14,7 @@ feature_group ("access")
     | recognisable globally but realistically it may be a local ad hoc scheme whose name is not
     | controlled or standardised in any way.
     | 
-    prop scheme: String;
+    prop scheme : String;
 
 
 end

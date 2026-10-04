@@ -13,7 +13,7 @@ h|*Inherit*
 2+|xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 
 h|
-2+^h|*Feature Group "access"*
+2+^h|*access*
 
 h|prop +
   0..1
