@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*protocol*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Description of the method (i.e. how) the information in this entry was arrived at. For
 `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`,
@@ -18,8 +17,7 @@ This may take the form of references to guidelines, including manually followed 
 executable; knowledge references such as a paper in Medline; clinical reasons within a
 larger care process.
 
-h|prop +
-  0..1
+h|0..1
 |*guideline_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Optional external identifier of guideline creating this Entry if relevant.
 

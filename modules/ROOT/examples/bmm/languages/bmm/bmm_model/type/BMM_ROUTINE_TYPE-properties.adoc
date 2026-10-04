@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*argument_types*: xref:languages:bmm-gen.adoc#_class_bmm_tuple_type[BMM_TUPLE_TYPE]
 a|Type of arguments in the signature, if any; represented as a type-tuple (list of arbitrary
 types).

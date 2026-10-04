@@ -8,24 +8,20 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*identities*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_party_identity[PARTY_IDENTITY]>
 a|Identities used by the party to identify itself, such as legal name, stage names, aliases,
 nicknames and so on.
 
-h|prop +
-  0..1
+h|0..1
 |*contacts*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_contact[CONTACT]>
 a|Contacts for this party.
 
-h|prop +
-  0..1
+h|0..1
 |*details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|All other details for this Party.
 
-h|prop +
-  0..1
+h|0..1
 |*relationships*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_party_relationship[PARTY_RELATIONSHIP]>
 a|Relationships in which this Party takes part as source.
 

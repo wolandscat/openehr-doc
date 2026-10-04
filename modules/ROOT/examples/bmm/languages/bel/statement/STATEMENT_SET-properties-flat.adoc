@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*statement*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bel-gen.adoc#_class_statement[STATEMENT]>
 a|The member statements of this statement set.
 
-h|prop +
-  0..1
+h|0..1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional name of this rule set.
 

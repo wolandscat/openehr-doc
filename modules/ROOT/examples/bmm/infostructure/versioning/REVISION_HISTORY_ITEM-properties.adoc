@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*version_id*: xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Version identifier for this revision.
 
-h|prop +
-  
+h|1
 |*audits*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]>
 a|The audits for this revision; there will always be at least one commit audit (which may
 itself be an `ATTESTATION`), there may also be further attestations.

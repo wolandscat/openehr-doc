@@ -8,31 +8,26 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*schema_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Schema id, formed by the meta-data items:
   <model_publisher>_<schema_name>_<model_release>
 e.g. `openehr_rm_1.0.3`, `openehr_test_1.0.1`, `iso_13606_1_2008_2.1.2`.
 
-h|prop +
-  
+h|1
 |*meta_data*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Table of `{key, value}` of schema meta-data, keys are string values defined by
 `BMM_DEFINITIONS.Metadata_*` constants.
 
-h|prop +
-  0..1
+h|0..1
 |*bmm_schema*: xref:languages:bmm-gen.adoc#_class_bmm_schema[BMM_SCHEMA]
 a|Persistent form of model.
 
-h|prop +
-  0..1
+h|0..1
 |*bmm_model*: xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
 a|Computable form of model.
 
-h|prop +
-  0..1
+h|0..1
 |*includes*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Identifiers of schemas included by this schema.
 

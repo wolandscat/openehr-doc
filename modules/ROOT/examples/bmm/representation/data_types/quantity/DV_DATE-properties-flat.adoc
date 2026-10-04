@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 date string.
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy*: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Time accuracy, expressed as a duration.
 
-h|prop +
-  0..1
+h|0..1
 |*magnitude_status*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional status of magnitude with values:
 
@@ -32,21 +29,18 @@ a|Optional status of magnitude with values:
 
 If not present, assumed meaning is `"="` .
 
-h|prop +
-  0..1
+h|0..1
 |*normal_status*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Optional normal status indicator of value with respect to normal range for this value.
 Often included by lab, even if the normal range itself is not included. Coded by ordinals
 in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group
 `normal_status`.
 
-h|prop +
-  0..1
+h|0..1
 |*normal_range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>
 a|Optional normal range.
 
-h|prop +
-  0..1
+h|0..1
 |*other_reference_ranges*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]>>
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.

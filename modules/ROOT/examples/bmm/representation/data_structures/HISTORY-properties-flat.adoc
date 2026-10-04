@@ -8,50 +8,42 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*origin*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Time origin of this event history. The first event is not necessarily at the origin point.
 
-h|prop +
-  0..1
+h|0..1
 |*period*: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Period between samples in this segment if periodic.
 
-h|prop +
-  0..1
+h|0..1
 |*duration*: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Duration of the entire History; either corresponds to the duration of all the events,
 and/or the duration represented by the summary, if it exists.
 
-h|prop +
-  0..1
+h|0..1
 |*summary*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Optional summary data that aggregates, organizes, reduces and transforms the event series.
 This may be a text or image that presents a graphical presentation, or some data that
 assists with the interpretation of the data.
 
-h|prop +
-  0..1
+h|0..1
 |*events*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_structures-gen.adoc#_class_event[EVENT]<T>>
 a|The events in the series. This attribute is of a generic type whose parameter must be a
 descendant of `ITEM_SUTRUCTURE`.
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
 a clinical application or batch process to name this EHR construct: its retention in the
 EHR faithfully preserves the original label by which this entry was known to end users.
 
-h|prop +
-  0..1
+h|0..1
 |*links*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_marking-gen.adoc#_class_link[LINK]>
 a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
 such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
 
-h|prop +
-  0..1
+h|0..1
 |*feeder_audit*: xref:representation:data_marking-gen.adoc#_class_feeder_audit[FEEDER_AUDIT]
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
@@ -59,13 +51,11 @@ of this node, or from a conversion gateway which has synthesised this node.
 h|
 2+^h|*infrastructure*
 
-h|prop +
-  0..1
+h|0..1
 |*uid*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 a|Optional globally unique object identifier for root points of archetyped structures.
 
-h|prop +
-  
+h|1
 |*archetype_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Design-time archetype identifier of this node taken from its generating archetype; used to
 build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
@@ -75,8 +65,7 @@ archetype local terminology.
 At an archetype root point, the value of this attribute is always the stringified form of
 the `archetype_id` found in the `archetype_details` object.
 
-h|prop +
-  0..1
+h|0..1
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 

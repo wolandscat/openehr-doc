@@ -8,15 +8,13 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The path to an instance, as an absolute path with respect to the object found at
 `VERSION._data`. An empty path means that the object referred to by `id` is being
 specified.
 
-h|prop +
-  
+h|1
 |*id*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 a|Globally unique id of an object, regardless of where it is stored.
 

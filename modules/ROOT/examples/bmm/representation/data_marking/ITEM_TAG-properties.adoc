@@ -8,29 +8,24 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*key*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The tag key. May not be empty or contain leading or trailing whitespace.
 
-h|prop +
-  0..1
+h|0..1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The value. If set, may not be empty.
 
-h|prop +
-  
+h|1
 |*target*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 a|Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.
 
-h|prop +
-  0..1
+h|0..1
 |*target_path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional archetype (i.e. AQL) or RM path within `target`, used to tag a fine-grained
 element.
 
-h|prop +
-  
+h|1
 |*owner_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of owner object, such as EHR.
 

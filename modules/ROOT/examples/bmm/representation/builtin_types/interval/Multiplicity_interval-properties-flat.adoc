@@ -8,36 +8,30 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*lower*: T
 a|Lower bound. lower bound.
 
-h|prop +
-  0..1
+h|0..1
 |*upper*: T
 a|Upper bound. Upper bound.
 
-h|prop +
-  
+h|1
 |*lower_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary open (i.e. = `-infinity`). lower boundary open (i.e. =
 -infinity)
 
-h|prop +
-  
+h|1
 |*upper_unbounded*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary open (i.e. = `+infinity`). upper boundary open (i.e. =
 +infinity)
 
-h|prop +
-  
+h|1
 |*lower_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `lower` boundary value included in range, if `not _lower_unbounded`. lower
 boundary value included in range if not lower_unbounded.
 
-h|prop +
-  
+h|1
 |*upper_included*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.

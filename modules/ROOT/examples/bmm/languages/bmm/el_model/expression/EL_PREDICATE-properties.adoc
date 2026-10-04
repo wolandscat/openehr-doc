@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*operand*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|The target instance of this predicate.
 

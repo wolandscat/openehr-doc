@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*condition*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Boolean expression defining the condition of this decision branch.
 
-h|prop +
-  
+h|1
 |*result*: T
 a|Result expression of conditional, if its `condition` evaluates to True.
 

@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*constraint*: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]
 a|Right hand side of the constraint expression, in the form of a `C_STRING`, i.e. string
 value constrainer.

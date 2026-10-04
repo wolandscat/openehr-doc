@@ -8,28 +8,23 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*scope*: xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
 a|Model within which module is defined.
 
-h|prop +
-  0..1
+h|0..1
 |*feature_groups*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]>
 a|List of feature groups in this class.
 
-h|prop +
-  0..1
+h|0..1
 |*features*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_formal_element[BMM_FORMAL_ELEMENT]>
 a|Features of this module.
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of this model element.
 
-h|prop +
-  0..1
+h|0..1
 |*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional documentation of this element, as a keyed list.
 
@@ -44,8 +39,7 @@ purposes:
 
 Other keys and value types may be freely added.
 
-h|prop +
-  0..1
+h|0..1
 |*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 

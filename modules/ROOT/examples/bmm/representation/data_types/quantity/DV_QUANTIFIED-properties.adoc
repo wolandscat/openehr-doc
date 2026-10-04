@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*magnitude_status*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional status of magnitude with values:
 
@@ -22,8 +21,7 @@ a|Optional status of magnitude with values:
 
 If not present, assumed meaning is `"="` .
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Accuracy of measurement. Exact form of expression determined in descendants.
 

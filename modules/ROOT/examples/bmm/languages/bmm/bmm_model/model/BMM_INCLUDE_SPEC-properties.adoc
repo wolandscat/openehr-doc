@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Full identifier of the included schema, e.g. `"openehr_primitive_types_1.0.2"`.
 

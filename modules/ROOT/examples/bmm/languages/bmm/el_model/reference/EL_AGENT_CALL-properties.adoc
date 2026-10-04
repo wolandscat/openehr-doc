@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*agent*: xref:languages:bmm-gen.adoc#_class_el_agent[EL_AGENT]
 a|The agent being called.
 

@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Code of source term of this relation.
 
-h|prop +
-  
+h|1
 |*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of target terms in this relation.
 

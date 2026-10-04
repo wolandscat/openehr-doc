@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*symbol*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Coded textual representation of this value in the scale range, which may be strings made
 from symbols or other enumerations of terms such as `no breathlessness`, `very very
@@ -19,8 +18,7 @@ In some cases, a scale may include values that have no code/symbol. In this case
 symbol will be a `DV-CODED_TEXT` including the `terminology_id` and a blank String value
 for `code_string`.
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Real number value of Scale item.
 

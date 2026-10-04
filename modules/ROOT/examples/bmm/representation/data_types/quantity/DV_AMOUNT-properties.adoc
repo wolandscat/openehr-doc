@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Accuracy of measurement, expressed either as a half-range percent value
 (`accuracy_is_percent` = `True`) or a half-range quantity. A value of `0` means that
@@ -17,8 +16,7 @@ accuracy is 100%, i.e. no error.
 
 A value of `unknown_accuracy_value` means that accuracy was not recorded.
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy_is_percent*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|If `True`, indicates that when this object was created, `accuracy` was recorded as a
 percent value; if `False`, as an absolute quantity value.

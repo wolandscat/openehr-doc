@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*archetype_ref*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Reference to archetype is being used to fill a slot or redefine an external reference.
 Typically an 'interface' archetype id, i.e. identifier with partial version information.

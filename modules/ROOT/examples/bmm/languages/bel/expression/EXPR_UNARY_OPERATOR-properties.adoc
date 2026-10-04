@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*operand*: xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]
 a|Operand node.
 

@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_el_conditional_expression[EL_CONDITIONAL_EXPRESSION]<T>>
 a|Members of the chain, equivalent to branches in an if/then/else chain and cases in a case
 statement.
 
-h|prop +
-  
+h|1
 |*else*: T
 a|Result expression of conditional, if its `condition` evaluates to True.
 

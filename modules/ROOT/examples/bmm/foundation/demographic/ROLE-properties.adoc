@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*time_validity*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]>
 a|Valid time interval for this role.
 
-h|prop +
-  
+h|1
 |*performer*: xref:representation:identification-gen.adoc#_class_party_ref[PARTY_REF]
 a|Reference to Version container of Actor playing the role.
 
-h|prop +
-  0..1
+h|0..1
 |*capabilities*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_capability[CAPABILITY]>
 a|The capabilities of this role.
 

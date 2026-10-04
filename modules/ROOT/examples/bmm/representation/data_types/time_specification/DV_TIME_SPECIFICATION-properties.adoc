@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:data_types-gen.adoc#_class_dv_parsable[DV_PARSABLE]
 a|The specification, in the HL7v3 syntax for `PIVL` or `EIVL` types.
 

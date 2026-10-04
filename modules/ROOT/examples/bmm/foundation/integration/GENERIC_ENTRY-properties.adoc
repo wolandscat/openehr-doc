@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*data*: xref:representation:data_structures-gen.adoc#_class_item[ITEM]
 a|The data from the source message or record. May be recorded in any structural openEHR
 representation.

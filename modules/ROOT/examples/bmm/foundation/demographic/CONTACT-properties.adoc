@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*addresses*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_address[ADDRESS]>
 a|A set of address alternatives for this contact purpose and time validity combination.
 
-h|prop +
-  0..1
+h|0..1
 |*time_validity*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]>
 a|Valid time interval for this contact descriptor.
 

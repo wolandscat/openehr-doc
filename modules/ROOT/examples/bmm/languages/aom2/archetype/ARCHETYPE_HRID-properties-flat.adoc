@@ -8,39 +8,32 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*namespace*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Reverse domain name namespace identifier.
 
-h|prop +
-  
+h|1
 |*rm_publisher*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the Reference Model publisher.
 
-h|prop +
-  
+h|1
 |*rm_package*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the package in whose reachability graph the `rm_class` class is found (there can
 be more than one possibility in many reference models).
 
-h|prop +
-  
+h|1
 |*rm_class*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the root class of this archetype.
 
-h|prop +
-  
+h|1
 |*concept_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The short concept name of the archetype as used in the multi-axial `archetype_hrid`.
 
-h|prop +
-  
+h|1
 |*release_version*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The full numeric version of this archetype consisting of 3 parts, e.g. `"1.8.2"`.
 
-h|prop +
-  
+h|1
 |*version_status*: xref:representation:definitions-gen.adoc#_class_version_status[VERSION_STATUS]
 a|The status of the version, i.e.:
 
@@ -49,8 +42,7 @@ a|The status of the version, i.e.:
 * alpha: `"alpha"`
 * beta: `"beta"`
 
-h|prop +
-  
+h|1
 |*build_count*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The build count since last increment of any version part.
 

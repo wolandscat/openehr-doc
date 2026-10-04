@@ -8,23 +8,19 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*item*: xref:infostructure:versioning-gen.adoc#_class_original_version[ORIGINAL_VERSION]<T>
 a|The `ORIGINAL_VERSION` object that was imported.
 
-h|prop +
-  
+h|1
 |*contribution*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Contribution in which this version was added.
 
-h|prop +
-  0..1
+h|0..1
 |*signature*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|OpenPGP digital signature or digest of content committed in this Version.
 
-h|prop +
-  
+h|1
 |*commit_audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 

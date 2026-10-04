@@ -8,21 +8,18 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iso.iso_639-1»
 a|Mandatory indicator of the localised language in which this Composition is written. Coded
 from openEHR Code Set `languages`. The language of an Entry if different from the
 Composition is indicated in `ENTRY._language`.
 
-h|prop +
-  
+h|1
 |*territory*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iso.iso_3166-1-alpha2»
 a|Name of territory in which this Composition was written. Coded from openEHR countries code
 set, which is an expression of the ISO 3166 standard.
 
-h|prop +
-  
+h|1
 |*category*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Temporal category of this Composition, i.e.
 
@@ -33,22 +30,19 @@ subsequent clinical assessment).
 
 or any other code defined in the openEHR terminology group 'category'.
 
-h|prop +
-  
+h|1
 |*composer*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|The person primarily responsible for the content of the Composition (but not necessarily
 its committal into the EHR system). This is the identifier which should appear on the
 screen. It may or may not be the person who entered the data. When it is the patient, the
 special self instance of `PARTY_PROXY` will be used.
 
-h|prop +
-  0..1
+h|0..1
 |*context*: xref:foundation:subject_record-gen.adoc#_class_event_context[EVENT_CONTEXT]
 a|The clinical session context of this Composition, i.e. the contextual attributes of the
 clinical session.
 
-h|prop +
-  0..1
+h|0..1
 |*content*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]>
 a|The content of this Composition.
 

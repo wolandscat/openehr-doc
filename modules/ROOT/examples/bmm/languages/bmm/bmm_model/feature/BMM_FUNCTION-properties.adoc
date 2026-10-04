@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*operator_definition*: xref:languages:bmm-gen.adoc#_class_bmm_operator[BMM_OPERATOR]
 a|Optional details enabling a function to be represented as an operator in a syntactic
 representation.
 
-h|prop +
-  
+h|1
 |*result*: xref:languages:bmm-gen.adoc#_class_bmm_result[BMM_RESULT]
 a|Automatically created Result variable, usable in body and post-condition.
 

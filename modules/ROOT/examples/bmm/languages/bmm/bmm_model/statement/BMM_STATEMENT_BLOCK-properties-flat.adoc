@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_statement_item[BMM_STATEMENT_ITEM]>
 a|Child blocks of the current block.
 

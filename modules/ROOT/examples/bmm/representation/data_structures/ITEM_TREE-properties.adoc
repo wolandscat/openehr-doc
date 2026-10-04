@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_structures-gen.adoc#_class_item[ITEM]>
 a|The items comprising the `ITEM_TREE`. Can include 0 or more `CLUSTERs` and/or 0 or more
 individual `ELEMENTs`.

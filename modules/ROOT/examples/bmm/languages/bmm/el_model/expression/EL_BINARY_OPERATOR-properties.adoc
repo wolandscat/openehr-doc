@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*left_operand*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Left operand node.
 
-h|prop +
-  
+h|1
 |*right_operand*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Right operand node.
 

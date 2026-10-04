@@ -8,19 +8,16 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*interval*: xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
 a|The interval of this cardinality.
 
-h|prop +
-  
+h|1
 |*is_ordered*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the members of the container attribute to which this cardinality refers are
 ordered.
 
-h|prop +
-  
+h|1
 |*is_unique*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the members of the container attribute to which this cardinality refers are
 unique.

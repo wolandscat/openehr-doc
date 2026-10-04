@@ -8,29 +8,25 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*time*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]>
 a|The time interval during which the participation took place, if it is used in an
 observational context (i.e. recording facts about the past); or the intended time interval
 of the participation when used in future contexts, such as EHR Instructions.
 
-h|prop +
-  
+h|1
 |*function*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|The function of the Party in this participation (note that a given party might participate
 in more than one way in a particular activity). This attribute should be coded, but cannot
 be limited to the HL7v3:ParticipationFunction vocabulary, since it is too limited and
 hospital-oriented.
 
-h|prop +
-  0..1
+h|0..1
 |*mode*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|The mode of the performer / activity interaction, e.g. present, by telephone, by email
 etc.
 
-h|prop +
-  
+h|1
 |*performer*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Uid of demographic entity within Extract who performed this participation.
 

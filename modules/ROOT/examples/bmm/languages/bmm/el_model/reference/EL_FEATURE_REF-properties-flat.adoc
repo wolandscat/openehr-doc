@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*scoper*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
 
-h|prop +
-  
+h|1
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 

@@ -8,24 +8,20 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*magnitude*: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]
 a|
 
-h|prop +
-  0..1
+h|0..1
 |*normal_range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_count[DV_COUNT]>
 a|Optional normal range.
 
-h|prop +
-  0..1
+h|0..1
 |*other_reference_ranges*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_count[DV_COUNT]>>
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Accuracy of measurement, expressed either as a half-range percent value
 (`accuracy_is_percent` = `True`) or a half-range quantity. A value of `0` means that
@@ -33,14 +29,12 @@ accuracy is 100%, i.e. no error.
 
 A value of `unknown_accuracy_value` means that accuracy was not recorded.
 
-h|prop +
-  0..1
+h|0..1
 |*accuracy_is_percent*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|If `True`, indicates that when this object was created, `accuracy` was recorded as a
 percent value; if `False`, as an absolute quantity value.
 
-h|prop +
-  0..1
+h|0..1
 |*magnitude_status*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional status of magnitude with values:
 
@@ -53,8 +47,7 @@ a|Optional status of magnitude with values:
 
 If not present, assumed meaning is `"="` .
 
-h|prop +
-  0..1
+h|0..1
 |*normal_status*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|Optional normal status indicator of value with respect to normal range for this value.
 Often included by lab, even if the normal range itself is not included. Coded by ordinals

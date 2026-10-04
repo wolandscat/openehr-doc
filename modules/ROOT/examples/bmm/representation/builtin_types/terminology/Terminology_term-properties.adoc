@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*concept*: xref:representation:builtin_types-gen.adoc#_class_terminology_code[Terminology_code]
 a|Reference to the terminology concept formally representing this term.
 
-h|prop +
-  
+h|1
 |*text*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Text of term.
 

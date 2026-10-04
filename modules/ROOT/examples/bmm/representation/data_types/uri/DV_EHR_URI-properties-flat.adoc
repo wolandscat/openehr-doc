@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Value of URI as a String. 'Plain-text' URIs are allowed, enabling better readability, but
 must be RFC-3986 encoded in use.

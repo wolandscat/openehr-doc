@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*generic_parameters*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_parameter_type[BMM_PARAMETER_TYPE]>
 a|List of formal generic parameters, keyed by name. These are defined either directly on
 this class or by the inclusion of an ancestor class which is generic.

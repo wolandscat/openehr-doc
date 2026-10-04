@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the variable.
 
-h|prop +
-  
+h|1
 |*type*: xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
 a|Primitive type of the variable, enabling its use to be type-checked in expressions.
 

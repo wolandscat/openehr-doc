@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*result_type*: xref:languages:bmm-gen.adoc#_class_bmm_status_type[BMM_STATUS_TYPE]
 a|Result type of a procedure.
 

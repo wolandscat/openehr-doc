@@ -119,9 +119,14 @@ feature_group ("definitions")
     const Metadata_schema_path:String = "schema_path";
 
     | 
-    | Built-in type definition corresponding to the top `Any` type.
+    | Built-in class definition corresponding to the top `Any` class.
     | 
     singleton Any_class:BMM_SIMPLE_CLASS;
+
+    | 
+    | Built-in type definition corresponding to the top `Any` type.
+    | 
+    singleton Any_type:BMM_SIMPLE_TYPE;
 
 feature_group ("factory")
 

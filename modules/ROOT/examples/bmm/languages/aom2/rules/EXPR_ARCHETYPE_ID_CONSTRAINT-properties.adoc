@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*item*: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]
 a|A C_STRING representing a regular expression for matching Archetype identifiers.
 

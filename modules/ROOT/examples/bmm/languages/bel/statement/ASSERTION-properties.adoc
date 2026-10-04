@@ -8,19 +8,16 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*tag*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Expression tag, used for differentiating multiple assertions.
 
-h|prop +
-  0..1
+h|0..1
 |*string_expression*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|String form of expression, in case an expression evaluator taking String expressions is
 used for evaluation.
 
-h|prop +
-  
+h|1
 |*expression*: xref:languages:bel-gen.adoc#_class_expression[EXPRESSION]
 a|Root of expression tree.
 

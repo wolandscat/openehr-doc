@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*protocol*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Description of the method (i.e. how) the information in this entry was arrived at. For
 `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`,
@@ -18,13 +17,11 @@ This may take the form of references to guidelines, including manually followed 
 executable; knowledge references such as a paper in Medline; clinical reasons within a
 larger care process.
 
-h|prop +
-  0..1
+h|0..1
 |*guideline_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Optional external identifier of guideline creating this Entry if relevant.
 
-h|prop +
-  
+h|1
 |*subject*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Id of human subject of this `ENTRY`, e.g.:
 
@@ -33,8 +30,7 @@ a|Id of human subject of this `ENTRY`, e.g.:
 * a family member
 * another clinically relevant person.
 
-h|prop +
-  0..1
+h|0..1
 |*provider*: xref:representation:data_structures-gen.adoc#_class_party_proxy[PARTY_PROXY]
 a|Optional identification of provider of the information in this `ENTRY`, which might be:
 
@@ -46,44 +42,37 @@ a|Optional identification of provider of the information in this `ENTRY`, which 
 Generally only used when the recorder needs to make it explicit. Otherwise, Composition
 composer and other participants are assumed.
 
-h|prop +
-  
+h|1
 |*language*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iso.iso_639-1»
 a|Mandatory indicator of the localised language in which this Entry is written. Coded from
 openEHR Code Set languages .
 
-h|prop +
-  
+h|1
 |*encoding*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE] «iana.character-sets»
 a|Name of character set in which text values in this Entry are encoded. Coded from openEHR
 Code Set character sets.
 
-h|prop +
-  0..1
+h|0..1
 |*other_participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:physical_entity-gen.adoc#_class_participation[PARTICIPATION]>
 a|Other participations at `ENTRY` level.
 
-h|prop +
-  0..1
+h|0..1
 |*workflow_id*: xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]
 a|Identifier of externally held workflow engine data for this workflow execution, for this
 subject of care.
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Runtime name of this fragment, used to build runtime paths. This is the term provided via
 a clinical application or batch process to name this EHR construct: its retention in the
 EHR faithfully preserves the original label by which this entry was known to end users.
 
-h|prop +
-  0..1
+h|0..1
 |*links*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_marking-gen.adoc#_class_link[LINK]>
 a|Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`,
 such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.
 
-h|prop +
-  0..1
+h|0..1
 |*feeder_audit*: xref:representation:data_marking-gen.adoc#_class_feeder_audit[FEEDER_AUDIT]
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
@@ -91,13 +80,11 @@ of this node, or from a conversion gateway which has synthesised this node.
 h|
 2+^h|*infrastructure*
 
-h|prop +
-  0..1
+h|0..1
 |*uid*: xref:representation:identification-gen.adoc#_class_uid_based_id[UID_BASED_ID]
 a|Optional globally unique object identifier for root points of archetyped structures.
 
-h|prop +
-  
+h|1
 |*archetype_node_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Design-time archetype identifier of this node taken from its generating archetype; used to
 build archetype paths. Always in the form of an at-code, e.g. `at0005`. This value enables
@@ -107,8 +94,7 @@ archetype local terminology.
 At an archetype root point, the value of this attribute is always the stringified form of
 the `archetype_id` found in the `archetype_details` object.
 
-h|prop +
-  0..1
+h|0..1
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 

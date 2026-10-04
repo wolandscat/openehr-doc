@@ -8,36 +8,30 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_function[BMM_FUNCTION]
 a|Reference to definition of a routine for which this is a direct call instance, if one
 exists.
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the routine being called.
 
-h|prop +
-  0..1
+h|0..1
 |*closed_args*: xref:languages:bmm-gen.adoc#_class_el_tuple[EL_TUPLE]
 a|Closed arguments of a routine call as a tuple of objects.
 
-h|prop +
-  0..1
+h|0..1
 |*open_args*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Optional list of names of open arguments of the call. If not provided, and the `name`
 refers to a routine with more arguments than supplied in `closed_args`, the missing
 arguments are inferred from the `definition`.
 
-h|prop +
-  
+h|1
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h|prop +
-  0..1
+h|0..1
 |*scoper*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
 

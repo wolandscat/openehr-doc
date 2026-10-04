@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_item[EXTRACT_ITEM]>
 a|List of Folders and content items in this Folder.
 

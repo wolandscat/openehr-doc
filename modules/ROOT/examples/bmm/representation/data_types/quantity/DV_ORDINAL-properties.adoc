@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Value in ordered enumeration of values. Any integer value can be used.
 
-h|prop +
-  
+h|1
 |*symbol*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Coded textual representation of this value in the enumeration, which may be strings made
 from + symbols, or other enumerations of terms such as `mild`, `moderate`, `severe`, or

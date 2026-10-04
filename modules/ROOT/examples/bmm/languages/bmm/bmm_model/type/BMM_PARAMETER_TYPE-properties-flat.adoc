@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the parameter, e.g. 'T' etc. The name is limited to 1 character and upper-case.
 
-h|prop +
-  0..1
+h|0..1
 |*type_constraint*: xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 a|Optional conformance constraint that must be the name of a defined type.
 
-h|prop +
-  0..1
+h|0..1
 |*inheritance_precursor*: xref:languages:bmm-gen.adoc#_class_bmm_parameter_type[BMM_PARAMETER_TYPE]
 a|If set, is the corresponding generic parameter definition in an ancestor class.
 

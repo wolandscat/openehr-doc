@@ -8,20 +8,17 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*version_spec*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_version_spec[EXTRACT_VERSION_SPEC]
 a|Specification of which versions of information items to include in the Extract. If Void,
 the default is latest versions only (which is reasonable for non-versioning systems as
 well).
 
-h|prop +
-  
+h|1
 |*manifest*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_extract_manifest[EXTRACT_MANIFEST]
 a|Specification of entities (e.g. records) to include in the Extract.
 
-h|prop +
-  
+h|1
 |*extract_type*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Coded term indicating the type of content required, e.g.
 
@@ -32,22 +29,19 @@ a|Coded term indicating the type of content required, e.g.
 
 Coded by openEHR Terminology group `'extract content type'`.
 
-h|prop +
-  
+h|1
 |*include_multimedia*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether in-line instances of `DV_MULTIMEDIA` in the source data are included or
 not.
 
-h|prop +
-  
+h|1
 |*priority*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Requested priority of this request to be handled by server. Priority schemes are likely to
 be local, and use values agreed by both ends.
 
 TBD: alternative is standard coded terms
 
-h|prop +
-  
+h|1
 |*link_depth*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Degree of links to follow emanating from content items specified for inclusion. The kind
 of links to follow is dependent on the type of Extract.
@@ -61,13 +55,11 @@ extract; `EXTRACT_CONTENT_ITEM._is_primary` is used to differentiate.
 * ....
 * n = follow nth degree links
 
-h|prop +
-  0..1
+h|0..1
 |*criteria*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]>
 a|Queries specifying the contents of this Extract.
 
-h|prop +
-  0..1
+h|0..1
 |*other_details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Other specification items. Archetypable.
 

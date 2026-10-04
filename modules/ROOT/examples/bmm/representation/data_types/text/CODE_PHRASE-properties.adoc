@@ -8,21 +8,18 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*terminology_id*: xref:representation:identification-gen.adoc#_class_terminology_id[TERMINOLOGY_ID]
 a|Identifier of the distinct terminology from which the code_string (or its elements) was
 extracted.
 
-h|prop +
-  
+h|1
 |*code_string*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The key used by the terminology service to identify a concept or coordination of concepts.
 This string is most likely parsable inside the terminology service, but nothing can be
 assumed about its syntax outside that context.
 
-h|prop +
-  0..1
+h|0..1
 |*preferred_term*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional attribute to carry preferred term corresponding to the code or expression in
 `code_string`. Typical use in integration situations which create mappings, and

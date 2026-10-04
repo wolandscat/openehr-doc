@@ -8,34 +8,28 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*uid*: xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Stored version of inheritance precursor.
 
-h|prop +
-  0..1
+h|0..1
 |*preceding_version_uid*: xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Stored version of inheritance precursor.
 
-h|prop +
-  0..1
+h|0..1
 |*other_input_version_uids*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]>
 a|Identifiers of other versions whose content was merged into this version, if any.
 
-h|prop +
-  
+h|1
 |*lifecycle_state*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Lifecycle state of the content item in this version; coded by openEHR vocabulary `version
 lifecycle state`.
 
-h|prop +
-  0..1
+h|0..1
 |*attestations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:infostructure:versioning-gen.adoc#_class_attestation[ATTESTATION]>
 a|Set of attestations relating to this version.
 
-h|prop +
-  0..1
+h|0..1
 |*data*: T
 a|Data content of this Version.
 

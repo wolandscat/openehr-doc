@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_procedure[BMM_PROCEDURE]
 a|Reference to definition of routine for which this is a call instance.
 

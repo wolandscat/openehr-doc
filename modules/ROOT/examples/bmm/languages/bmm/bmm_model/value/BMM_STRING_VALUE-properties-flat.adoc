@@ -8,23 +8,19 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Native String value.
 
-h|prop +
-  
+h|1
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
 a|Concrete type of this literal.
 
-h|prop +
-  
+h|1
 |*value_literal*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|A serial representation of the value.
 
-h|prop +
-  0..1
+h|0..1
 |*syntax*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional specification of formalism of the `value_literal` attribute for complex values.
 Value may be any of `json \|; json5 \|; yawl \|; xml \|; odin \|; rdf` or

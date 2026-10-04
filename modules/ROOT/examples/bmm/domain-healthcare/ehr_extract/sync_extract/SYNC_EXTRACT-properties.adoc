@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*specification*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_sync_extract_spec[SYNC_EXTRACT_SPEC]
 a|Details of specification of this Extract.
 
-h|prop +
-  0..1
+h|0..1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:domain-healthcare:ehr_extract-gen.adoc#_class_x_contribution[X_CONTRIBUTION]>
 a|Content, in the form of a serialised Contributions.
 

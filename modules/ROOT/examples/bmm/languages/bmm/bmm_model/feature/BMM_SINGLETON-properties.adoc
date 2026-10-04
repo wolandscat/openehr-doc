@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*generator*: xref:languages:bmm-gen.adoc#_class_bmm_routine_definition[BMM_ROUTINE_DEFINITION]
 a|Generator of the value of this static property.
 

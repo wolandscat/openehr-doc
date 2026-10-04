@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_structures-gen.adoc#_class_item[ITEM]>
 a|Ordered list of items - `CLUSTER` or `ELEMENT` objects - under this `CLUSTER`.
 

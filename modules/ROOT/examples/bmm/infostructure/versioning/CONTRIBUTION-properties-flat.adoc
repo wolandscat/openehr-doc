@@ -8,20 +8,17 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*uid*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
 a|Unique identifier for this Contribution.
 
-h|prop +
-  
+h|1
 |*versions*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_object_ref[OBJECT_REF]>
 a|Set of references to Versions causing changes to this EHR. Each contribution contains a
 list of versions, which may include paths pointing to any number of versionable items,
 i.e. items of types such as `COMPOSITION` and `FOLDER`.
 
-h|prop +
-  
+h|1
 |*audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this Contribution.
 

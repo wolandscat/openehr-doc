@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*result*: T
 a|Result expression of conditional, if its `condition` evaluates to True.
 

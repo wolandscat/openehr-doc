@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*meaning*: xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Term whose value indicates the meaning of this range, e.g. normal, critical, therapeutic
 etc.
 
-h|prop +
-  
+h|1
 |*range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<T>
 a|The data range for this meaning, e.g. critical etc.
 

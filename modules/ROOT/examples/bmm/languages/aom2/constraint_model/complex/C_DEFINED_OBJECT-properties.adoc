@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*default_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.

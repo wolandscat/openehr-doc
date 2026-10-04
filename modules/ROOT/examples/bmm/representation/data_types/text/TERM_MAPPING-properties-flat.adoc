@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*match*: xref:representation:builtin_types-gen.adoc#_class_character[Character]
 a|The relative match of the target term with respect to the mapped text item. Result
 meanings:
@@ -25,13 +24,11 @@ The first three values are taken from the ISO standards 2788 ( Guide to Establis
 development of monolingual thesauri) and 5964 (Guide to Establishment and development of
 multilingual thesauri).
 
-h|prop +
-  0..1
+h|0..1
 |*purpose*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Purpose of the mapping e.g. 'automated data mining', 'billing', 'interoperability'.
 
-h|prop +
-  
+h|1
 |*target*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|The target term of the mapping.
 

@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*overlays*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_template_overlay[TEMPLATE_OVERLAY]>
 a|Overlay archetypes, i.e. partial archetypes that include full definition and terminology,
 but logically derive all their meta-data from the owning template.

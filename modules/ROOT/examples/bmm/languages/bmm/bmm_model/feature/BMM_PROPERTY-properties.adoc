@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*is_im_runtime*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this property is marked with info model `im_runtime` property.
 
-h|prop +
-  0..1
+h|0..1
 |*is_im_infrastructure*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this property was marked with info model `im_infrastructure` flag.
 
-h|prop +
-  0..1
+h|0..1
 |*is_composition*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this property instance is a compositional sub-part of the owning class instance.
 Equivalent to 'composition' in UML associations (but missing from UML properties without

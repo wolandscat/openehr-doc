@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*type_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Natural language type name of this type as used in abstract rules syntax variable
 declarations.
 
-h|prop +
-  
+h|1
 |*type_anchor*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Attribute of the openEHR primitive type (or Any) corresponding to this type definition
 meta-type.

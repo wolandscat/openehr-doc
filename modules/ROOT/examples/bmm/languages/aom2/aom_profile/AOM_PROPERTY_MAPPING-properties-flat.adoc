@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*source_property_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of property in source class.
 
-h|prop +
-  
+h|1
 |*target_property_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of property in target class.
 

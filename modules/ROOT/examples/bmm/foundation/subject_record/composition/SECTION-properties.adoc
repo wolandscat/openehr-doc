@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]>
 a|Ordered list of content items under this section, which may include:
 

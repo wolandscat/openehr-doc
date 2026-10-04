@@ -36,4 +36,6 @@ class BMM_DEFINITIONS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_de
 
 BMM_DEFINITIONS *--> "1 Any_class" BMM_SIMPLE_CLASS
 
+BMM_DEFINITIONS *--> "1 Any_type" BMM_SIMPLE_TYPE
+
 ....

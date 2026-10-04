@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*parent*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
 a|Parent node, except in the case of the top of a tree, i.e. root `C_COMPLEX_OBJECT` of an
 archetype definition.
 
-h|prop +
-  0..1
+h|0..1
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 

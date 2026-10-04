@@ -8,43 +8,36 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*start_time*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Start time of the clinical session or other kind of event during which a provider performs
 a service of any kind for the patient.
 
-h|prop +
-  0..1
+h|0..1
 |*end_time*: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Optional end time of the clinical session.
 
-h|prop +
-  0..1
+h|0..1
 |*location*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The actual location where the session occurred, e.g. 'microbiology lab 2', 'home', 'ward
 A3' and so on.
 
-h|prop +
-  
+h|1
 |*setting*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|The setting in which the clinical session took place. Coded using the openEHR Terminology,
 setting group.
 
-h|prop +
-  0..1
+h|0..1
 |*other_context*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Other optional context which will be archetyped.
 
-h|prop +
-  0..1
+h|0..1
 |*health_care_facility*: xref:representation:data_structures-gen.adoc#_class_party_identified[PARTY_IDENTIFIED]
 a|The health care facility under whose care the event took place. This is the most specific
 workgroup or delivery unit within a care delivery enterprise that has an official
 identifier in the health system, and can be used to ensure medico-legal accountability.
 
-h|prop +
-  0..1
+h|0..1
 |*participations*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:physical_entity-gen.adoc#_class_participation[PARTICIPATION]>
 a|Parties involved in the healthcare event. These would normally include the physician(s)
 and often the patient (but not the latter if the clinical session is a pathology test for

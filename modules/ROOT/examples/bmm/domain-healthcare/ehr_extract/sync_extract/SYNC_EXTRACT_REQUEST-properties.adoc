@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*specification*: xref:domain-healthcare:ehr_extract-gen.adoc#_class_sync_extract_spec[SYNC_EXTRACT_SPEC]
 a|Details of specification of synchronisation request.
 

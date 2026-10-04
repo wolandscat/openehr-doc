@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*item*: xref:infostructure:versioning-gen.adoc#_class_original_version[ORIGINAL_VERSION]<T>
 a|The `ORIGINAL_VERSION` object that was imported.
 

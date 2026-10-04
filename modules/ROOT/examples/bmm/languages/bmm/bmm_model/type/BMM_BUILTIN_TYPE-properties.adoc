@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*base_name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Base name (built-in typename).
 

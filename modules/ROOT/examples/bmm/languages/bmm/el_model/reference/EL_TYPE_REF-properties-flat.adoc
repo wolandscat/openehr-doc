@@ -8,23 +8,19 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Type, directly from the name of the reference, e.g. `SOME_TYPE`.
 
-h|prop +
-  
+h|1
 |*is_mutable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h|prop +
-  
+h|1
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 

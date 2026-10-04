@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*condition*: xref:languages:bel-gen.adoc#_class_assertion[ASSERTION]
 a|Boolean condition that returns True or False when applied to a member of the operand of a
 `for_all` operator.
 
-h|prop +
-  
+h|1
 |*operand*: xref:languages:bel-gen.adoc#_class_expr_value_ref[EXPR_VALUE_REF]
 a|Reference to collection / container object to which the `for_all` operator is to be
 applied.

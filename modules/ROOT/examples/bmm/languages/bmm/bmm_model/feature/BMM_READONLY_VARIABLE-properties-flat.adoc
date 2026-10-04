@@ -8,29 +8,24 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*scope*: xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
 a|Routine within which variable is defined.
 
-h|prop +
-  
+h|1
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Declared or inferred static type of the entity.
 
-h|prop +
-  
+h|1
 |*is_nullable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this element can be null (Void) at execution time. May be interpreted as
 optionality in subtypes..
 
-h|prop +
-  
+h|1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of this model element.
 
-h|prop +
-  0..1
+h|0..1
 |*documentation*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional documentation of this element, as a keyed list.
 
@@ -45,8 +40,7 @@ purposes:
 
 Other keys and value types may be freely added.
 
-h|prop +
-  0..1
+h|0..1
 |*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 

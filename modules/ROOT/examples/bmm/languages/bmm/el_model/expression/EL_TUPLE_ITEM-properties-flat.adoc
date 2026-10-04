@@ -8,14 +8,12 @@
 h|
 2+^h|*access*
 
-h|prop +
-  0..1
+h|0..1
 |*item*: xref:languages:bmm-gen.adoc#_class_el_expression[EL_EXPRESSION]
 a|Reference to value entity. If Void, this indicates that the item in this position is Void,
 e.g. within a routine call parameter list.
 
-h|prop +
-  0..1
+h|0..1
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional name of tuple item.
 

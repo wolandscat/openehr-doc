@@ -8,18 +8,15 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*instruction_id*: xref:representation:identification-gen.adoc#_class_locatable_ref[LOCATABLE_REF]
 a|Reference to causing Instruction.
 
-h|prop +
-  
+h|1
 |*activity_id*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Identifier of Activity within Instruction, in the form of its archetype path.
 
-h|prop +
-  0..1
+h|0..1
 |*wf_details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Various workflow engine state details, potentially including such things as:
 

@@ -8,13 +8,11 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*agent*: xref:languages:bmm-gen.adoc#_class_el_function_agent[EL_FUNCTION_AGENT]
 a|The function agent being called.
 
-h|prop +
-  
+h|1
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Defined to return False.
 

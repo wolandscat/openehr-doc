@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*extract_id_key*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Reference to entity, usually a demographic entity such as a patient that the content of
 this chapter relates to.

@@ -8,8 +8,7 @@
 h|
 2+^h|*access*
 
-h|prop +
-  
+h|1
 |*defining_code*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|The term of which the `value` attribute is the textual rendition (i.e. rubric).
 
