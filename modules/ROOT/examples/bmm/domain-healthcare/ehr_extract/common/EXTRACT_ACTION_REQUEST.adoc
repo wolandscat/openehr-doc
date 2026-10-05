@@ -24,7 +24,7 @@ h|prop +
 a|Requested action: `cancel \| resend \| send new`. Coded by openEHR Terminology
 group `'extract action type'`.
 
-h|prop +
+h|override prop +
   
 |*uid*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
 a|

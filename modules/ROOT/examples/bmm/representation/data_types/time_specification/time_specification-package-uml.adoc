@@ -14,7 +14,7 @@ abstract class DV_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_t
         institution_specified: Boolean
 }
 
-DV_TIME_SPECIFICATION -[#gray]up-|> DATA_VALUE  
+DV_TIME_SPECIFICATION -[#gray]up-|> DATA_VALUE
 
 
 class DV_GENERAL_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_general_time_specification]] {
@@ -24,7 +24,7 @@ class DV_GENERAL_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_ty
         institution_specified: Boolean
 }
 
-DV_GENERAL_TIME_SPECIFICATION -[#gray]up-|> DV_TIME_SPECIFICATION  
+DV_GENERAL_TIME_SPECIFICATION -[#gray]up-|> DV_TIME_SPECIFICATION
 
 
 class DV_PERIODIC_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_periodic_time_specification]] {
@@ -35,7 +35,7 @@ class DV_PERIODIC_TIME_SPECIFICATION [[/openehr-doc/latest/representation/data_t
         institution_specified: Boolean
 }
 
-DV_PERIODIC_TIME_SPECIFICATION -[#gray]up-|> DV_TIME_SPECIFICATION  
+DV_PERIODIC_TIME_SPECIFICATION -[#gray]up-|> DV_TIME_SPECIFICATION
 
 abstract class "representation.data_types.\nDATA_VALUE" as DATA_VALUE  [[/openehr-doc/latest/representation/data_types-gen.html#_class_data_value]] #FDFDFD {
 }

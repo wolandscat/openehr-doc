@@ -23,7 +23,7 @@ h|prop +
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 
-h| func
+h|func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, based on constituent parts of the entity. Default version
 outputs `name` field.

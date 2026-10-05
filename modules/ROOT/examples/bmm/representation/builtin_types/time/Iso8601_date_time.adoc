@@ -26,11 +26,11 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*year* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the year part of the date as an Integer.
 
-h| func
+h|func
 |*month* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -38,7 +38,7 @@ h| func
 
 a|Extract the month part of the date/time as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*day* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -46,7 +46,7 @@ h| func
 
 a|Extract the day part of the date/time as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*hour* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -54,7 +54,7 @@ h| func
 
 a|Extract the hour part of the date/time as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*minute* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -62,7 +62,7 @@ h| func
 
 a|Extract the minute part of the date/time as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*second* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -71,16 +71,16 @@ h| func
 a|Extract the integral seconds part of the date/time (i.e. prior to any decimal sign) as an
 Integer, or return 0 if not present.
 
-h| func
+h|func
 |*fractional_second* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Extract the fractional seconds part of the date/time (i.e. following to any decimal sign)
 as a Real, or return 0.0 if not present.
 
-h| func
+h|func
 |*timezone* : xref:representation:builtin_types-gen.adoc#_class_iso8601_timezone[Iso8601_timezone]
 a|Timezone; may be Void.
 
-h| func
+h|func
 |*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return the string value in extended format.
 

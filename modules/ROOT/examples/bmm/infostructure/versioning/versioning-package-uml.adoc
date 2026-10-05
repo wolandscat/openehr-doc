@@ -44,7 +44,7 @@ class ORIGINAL_VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.htm
         is_merged: Boolean
 }
 
-ORIGINAL_VERSION -[#gray]up-|> VERSION  
+ORIGINAL_VERSION -[#gray]up-|> VERSION
 
 
 ORIGINAL_VERSION *--> "0..* attestations" ATTESTATION
@@ -57,7 +57,7 @@ class IMPORTED_VERSION<T> [[/openehr-doc/latest/infostructure/versioning-gen.htm
         data: T
 }
 
-IMPORTED_VERSION -[#gray]up-|> VERSION  
+IMPORTED_VERSION -[#gray]up-|> VERSION
 
 
 IMPORTED_VERSION *--> "1 item" ORIGINAL_VERSION
@@ -109,7 +109,7 @@ class ATTESTATION [[/openehr-doc/latest/infostructure/versioning-gen.html#_class
         is_pending : Boolean
 }
 
-ATTESTATION -[#gray]up-|> AUDIT_DETAILS  
+ATTESTATION -[#gray]up-|> AUDIT_DETAILS
 
 
 ....

@@ -18,11 +18,11 @@ h|prop +
 |*operand*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|The target instance of this predicate.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
 a|Return `{BMM_MODEL}._boolean_type_definition_()`.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

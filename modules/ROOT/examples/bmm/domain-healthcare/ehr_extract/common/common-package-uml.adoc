@@ -11,7 +11,7 @@ class EXTRACT_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.ht
         uid : HIER_OBJECT_ID
 }
 
-EXTRACT_REQUEST -[#gray]up-|> LOCATABLE  
+EXTRACT_REQUEST -[#gray]up-|> LOCATABLE
 
 
 EXTRACT_REQUEST *--> "1 extract_spec" EXTRACT_SPEC
@@ -22,7 +22,7 @@ class EXTRACT_FOLDER [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.htm
         .. access ..
 }
 
-EXTRACT_FOLDER -[#gray]up-|> EXTRACT_ITEM  
+EXTRACT_FOLDER -[#gray]up-|> EXTRACT_ITEM
 
 
 EXTRACT_FOLDER *--> "0..* items" EXTRACT_ITEM
@@ -43,14 +43,14 @@ class EXTRACT_ACTION_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract
         uid : HIER_OBJECT_ID
 }
 
-EXTRACT_ACTION_REQUEST -[#gray]up-|> LOCATABLE  
+EXTRACT_ACTION_REQUEST -[#gray]up-|> LOCATABLE
 
 
 class EXTRACT_CHAPTER [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_chapter]] {
         .. access ..
 }
 
-EXTRACT_CHAPTER -[#gray]up-|> LOCATABLE  
+EXTRACT_CHAPTER -[#gray]up-|> LOCATABLE
 
 
 EXTRACT_CHAPTER *--> "0..* items" EXTRACT_ITEM
@@ -96,7 +96,7 @@ class EXTRACT_ENTITY_CHAPTER [[/openehr-doc/latest/domain-healthcare/ehr_extract
         extract_id_key : String
 }
 
-EXTRACT_ENTITY_CHAPTER -[#gray]up-|> EXTRACT_CHAPTER  
+EXTRACT_ENTITY_CHAPTER -[#gray]up-|> EXTRACT_CHAPTER
 
 
 abstract class EXTRACT_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] {
@@ -107,13 +107,13 @@ abstract class EXTRACT_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_
         item :? Any
 }
 
-EXTRACT_CONTENT_ITEM -[#gray]up-|> EXTRACT_ITEM  
+EXTRACT_CONTENT_ITEM -[#gray]up-|> EXTRACT_ITEM
 
 
 abstract class EXTRACT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_item]] {
 }
 
-EXTRACT_ITEM -[#gray]up-|> LOCATABLE  
+EXTRACT_ITEM -[#gray]up-|> LOCATABLE
 
 
 class EXTRACT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract]] {
@@ -124,7 +124,7 @@ class EXTRACT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_clas
         sequence_nr : Integer
 }
 
-EXTRACT -[#gray]up-|> LOCATABLE  
+EXTRACT -[#gray]up-|> LOCATABLE
 
 
 EXTRACT *--> "0..* chapters" EXTRACT_CHAPTER

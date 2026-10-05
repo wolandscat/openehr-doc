@@ -18,12 +18,12 @@ h|prop +
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_property[BMM_PROPERTY]
 a|Property definition (within class).
 
-h|prop +
+h|override prop +
   
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Defined to return True.
 
-h| func
+h|override func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Type definition (i.e. BMM meta-type definition object) of the constant, property or
 variable, inferred by inspection of the current scoping instance. Return

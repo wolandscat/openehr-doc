@@ -32,11 +32,11 @@ a|True if this property instance is a compositional sub-part of the owning class
 Equivalent to 'composition' in UML associations (but missing from UML properties without
 associations) and also 'cascade-delete' semantics in ER schemas.
 
-h| func
+h|func
 |*existence* : xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
 a|Interval form of `0..1`, `1..1` etc, derived from `is_nullable`.
 
-h| func
+h|func
 |*display_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of this property to display in UI.
 

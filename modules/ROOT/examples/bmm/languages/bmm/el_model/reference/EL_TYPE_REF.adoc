@@ -26,7 +26,7 @@ h|prop +
 |*is_mutable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h| func
+h|override func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Return `type`.
 

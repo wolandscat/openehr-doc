@@ -18,7 +18,7 @@ h|prop +
 |*details*: xref:representation:data_structures-gen.adoc#_class_item_structure[ITEM_STRUCTURE]
 a|Archetypable structured address.
 
-h| func
+h|func
 |*type* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Type of address, e.g. electronic, locality. Taken from value of inherited `name`
 attribute.

@@ -24,7 +24,7 @@ h|prop +
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_tuple_type[BMM_TUPLE_TYPE]
 a|Static type inferred from literal value.
 
-h| func
+h|override func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Return `type`.
 

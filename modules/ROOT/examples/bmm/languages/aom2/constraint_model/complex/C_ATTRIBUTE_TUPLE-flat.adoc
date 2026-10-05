@@ -25,14 +25,14 @@ h|prop +
 |*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]>
 a|List of `C_ATTRIBUTEs` forming the definition of the tuple.
 
-h| func
+h|func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_attribute_tuple[C_ATTRIBUTE_TUPLE], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|.Parameters +
 `rmcc`:: RM conformance checker agent.
 
-h| func
+h|func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if constraints represented by this node contain no further redefinitions with respect

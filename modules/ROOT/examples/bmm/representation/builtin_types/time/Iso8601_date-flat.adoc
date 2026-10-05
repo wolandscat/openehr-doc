@@ -19,11 +19,11 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*year* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the year part of the date as an Integer.
 
-h| func
+h|func
 |*month* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -31,7 +31,7 @@ h| func
 
 a|Extract the month part of the date as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*day* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *pre_cond* +
@@ -39,20 +39,20 @@ h| func
 
 a|Extract the day part of the date as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*timezone* : xref:representation:builtin_types-gen.adoc#_class_iso8601_timezone[Iso8601_timezone]
 a|Timezone; may be Void.
 
-h| func
+h|func
 |*month_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether month in year is unknown. If so, the date is of the form `"YYYY"`.
 
-h| func
+h|func
 |*day_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether day in month is unknown. If so, and month is known, the date is of the
 form `"YYYY-MM"` or `"YYYYMM"`.
 
-h| func
+h|func
 |*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return string value in extended format.
 
@@ -61,12 +61,12 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Representation of all descendants is a single String.
 
-h| func
+h|func
 |*is_partial* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
 missing.
 
-h| func
+h|func
 |*is_extended* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
 separators. This is the preferred format.
@@ -74,7 +74,7 @@ separators. This is the preferred format.
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
@@ -86,7 +86,7 @@ semantics for concrete types.
 In conjunction with `=`, enables the definition of the related functions
 `greater_than_()` etc.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -97,7 +97,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -108,7 +108,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

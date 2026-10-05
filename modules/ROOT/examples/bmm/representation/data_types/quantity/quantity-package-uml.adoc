@@ -16,7 +16,7 @@ class DV_DURATION [[/openehr-doc/latest/representation/data_types-gen.html#_clas
         negative: DV_DURATION
 }
 
-DV_DURATION -[#gray]up-|> DV_AMOUNT  
+DV_DURATION -[#gray]up-|> DV_AMOUNT
 
 
 class REFERENCE_RANGE<T> [[/openehr-doc/latest/representation/data_types-gen.html#_class_reference_range]] {
@@ -36,12 +36,8 @@ class DV_QUANTITY [[/openehr-doc/latest/representation/data_types-gen.html#_clas
         is_integral: Boolean
 }
 
-DV_QUANTITY -[#gray]up-|> DV_AMOUNT  
+DV_QUANTITY -[#gray]up-|> DV_AMOUNT
 
-
-DV_QUANTITY *--> "0..1 normal_range" DV_INTERVAL
-
-DV_QUANTITY *--> "0..* other_reference_ranges" REFERENCE_RANGE
 
 class DV_ORDINAL [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_ordinal]] {
         .. access ..
@@ -49,7 +45,7 @@ class DV_ORDINAL [[/openehr-doc/latest/representation/data_types-gen.html#_class
         symbol : DV_CODED_TEXT
 }
 
-DV_ORDINAL -[#gray]up-|> DV_ORDERED  
+DV_ORDINAL -[#gray]up-|> DV_ORDERED
 
 
 abstract class DV_AMOUNT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_amount]] {
@@ -58,7 +54,7 @@ abstract class DV_AMOUNT [[/openehr-doc/latest/representation/data_types-gen.htm
         accuracy_is_percent :? Boolean
 }
 
-DV_AMOUNT -[#gray]up-|> DV_QUANTIFIED  
+DV_AMOUNT -[#gray]up-|> DV_QUANTIFIED
 
 
 class DV_COUNT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_count]] {
@@ -66,12 +62,8 @@ class DV_COUNT [[/openehr-doc/latest/representation/data_types-gen.html#_class_d
         magnitude : Integer64
 }
 
-DV_COUNT -[#gray]up-|> DV_AMOUNT  
+DV_COUNT -[#gray]up-|> DV_AMOUNT
 
-
-DV_COUNT *--> "0..1 normal_range" DV_INTERVAL
-
-DV_COUNT *--> "0..* other_reference_ranges" REFERENCE_RANGE
 
 class DV_DATE_TIME [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_date_time]] {
         .. access ..
@@ -82,7 +74,7 @@ class DV_DATE_TIME [[/openehr-doc/latest/representation/data_types-gen.html#_cla
         diff(other: DV_DATE_TIME): DV_DURATION
 }
 
-DV_DATE_TIME -[#gray]up-|> DV_TEMPORAL  
+DV_DATE_TIME -[#gray]up-|> DV_TEMPORAL
 
 
 class DV_TIME [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_time]] {
@@ -94,7 +86,7 @@ class DV_TIME [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv
         diff(other: DV_TIME): DV_DURATION
 }
 
-DV_TIME -[#gray]up-|> DV_TEMPORAL  
+DV_TIME -[#gray]up-|> DV_TEMPORAL
 
 
 class DV_SCALE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_scale]] {
@@ -104,7 +96,7 @@ class DV_SCALE [[/openehr-doc/latest/representation/data_types-gen.html#_class_d
         is_strictly_comparable_to(other: DV_SCALE): Boolean
 }
 
-DV_SCALE -[#gray]up-|> DV_ORDERED  
+DV_SCALE -[#gray]up-|> DV_ORDERED
 
 
 class DV_DATE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_date]] {
@@ -116,17 +108,15 @@ class DV_DATE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv
         diff(other: DV_DATE): DV_DURATION
 }
 
-DV_DATE -[#gray]up-|> DV_TEMPORAL  
+DV_DATE -[#gray]up-|> DV_TEMPORAL
 
 
 abstract class DV_TEMPORAL [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_temporal]] {
         .. access ..
 }
 
-DV_TEMPORAL -[#gray]up-|> DV_ABSOLUTE_QUANTITY  
+DV_TEMPORAL -[#gray]up-|> DV_ABSOLUTE_QUANTITY
 
-
-DV_TEMPORAL *--> "0..1 accuracy" DV_DURATION
 
 abstract class DV_ORDERED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_ordered]] {
         .. access ..
@@ -137,10 +127,10 @@ abstract class DV_ORDERED [[/openehr-doc/latest/representation/data_types-gen.ht
         is_normal: Boolean
 }
 
-DV_ORDERED -[#gray]up-|> DATA_VALUE  
+DV_ORDERED -[#gray]up-|> DATA_VALUE
 
 
-DV_ORDERED -[#gray]up-|> Ordered  
+DV_ORDERED -[#gray]up-|> Ordered
 
 
 DV_ORDERED *--> "0..1 normal_range" DV_INTERVAL
@@ -160,18 +150,16 @@ abstract class DV_ABSOLUTE_QUANTITY [[/openehr-doc/latest/representation/data_ty
         .. access ..
 }
 
-DV_ABSOLUTE_QUANTITY -[#gray]up-|> DV_QUANTIFIED  
+DV_ABSOLUTE_QUANTITY -[#gray]up-|> DV_QUANTIFIED
 
-
-DV_ABSOLUTE_QUANTITY *--> "0..1 accuracy" DV_AMOUNT
 
 class DV_INTERVAL<T:DV_ORDERED> [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_interval]] {
 }
 
-DV_INTERVAL -[#gray]up-|> DATA_VALUE  
+DV_INTERVAL -[#gray]up-|> DATA_VALUE
 
 
-DV_INTERVAL -[#gray]up-|> Interval  
+DV_INTERVAL -[#gray]up-|> Interval
 
 
 abstract class DV_QUANTIFIED [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_quantified]] {
@@ -182,7 +170,7 @@ abstract class DV_QUANTIFIED [[/openehr-doc/latest/representation/data_types-gen
         accuracy_unknown: Boolean
 }
 
-DV_QUANTIFIED -[#gray]up-|> DV_ORDERED  
+DV_QUANTIFIED -[#gray]up-|> DV_ORDERED
 
 
 class DV_PROPORTION [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_proportion]] {
@@ -195,12 +183,8 @@ class DV_PROPORTION [[/openehr-doc/latest/representation/data_types-gen.html#_cl
         is_integral: Boolean
 }
 
-DV_PROPORTION -[#gray]up-|> DV_AMOUNT  
+DV_PROPORTION -[#gray]up-|> DV_AMOUNT
 
-
-DV_PROPORTION *--> "0..1 normal_range" DV_INTERVAL
-
-DV_PROPORTION *--> "0..* other_reference_ranges" REFERENCE_RANGE
 
 enum PROPORTION_KIND [[/openehr-doc/latest/representation/data_types-gen.html#_class_proportion_kind]] {
         .. values ..

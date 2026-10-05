@@ -23,7 +23,7 @@ h|prop +
 |*item_types*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]>
 a|List of types of the items of the tuple, keyed by purpose in the tuple.
 
-h| func
+h|override func
 |*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Return the logical set (i.e. unique types) from the merge of `flattened_type_list_()`
 called on each member of `item_types`.

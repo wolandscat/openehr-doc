@@ -13,13 +13,13 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Meta-type of expression entity used in type-checking and evaluation.
 
 Effected in descendants.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

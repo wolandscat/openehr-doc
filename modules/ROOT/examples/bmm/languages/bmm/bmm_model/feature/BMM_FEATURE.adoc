@@ -29,7 +29,7 @@ h|prop +
 |*group*: xref:languages:bmm-gen.adoc#_class_bmm_feature_group[BMM_FEATURE_GROUP]
 a|Group containing this feature.
 
-h|prop +
+h|override prop +
   
 |*scope*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
 a|Model element within which an element is declared.

@@ -12,7 +12,7 @@ abstract class DV_ENCAPSULATED [[/openehr-doc/latest/representation/data_types-g
         language :? CODE_PHRASE «iso.iso_639-1»
 }
 
-DV_ENCAPSULATED -[#gray]up-|> DATA_VALUE  
+DV_ENCAPSULATED -[#gray]up-|> DATA_VALUE
 
 
 class DV_PARSABLE [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_parsable]] {
@@ -22,7 +22,7 @@ class DV_PARSABLE [[/openehr-doc/latest/representation/data_types-gen.html#_clas
         size: Integer
 }
 
-DV_PARSABLE -[#gray]up-|> DV_ENCAPSULATED  
+DV_PARSABLE -[#gray]up-|> DV_ENCAPSULATED
 
 
 class DV_MULTIMEDIA [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_multimedia]] {
@@ -41,7 +41,7 @@ class DV_MULTIMEDIA [[/openehr-doc/latest/representation/data_types-gen.html#_cl
         has_integrity_check: Boolean
 }
 
-DV_MULTIMEDIA -[#gray]up-|> DV_ENCAPSULATED  
+DV_MULTIMEDIA -[#gray]up-|> DV_ENCAPSULATED
 
 
 DV_MULTIMEDIA *--> "0..1 thumbnail" DV_MULTIMEDIA

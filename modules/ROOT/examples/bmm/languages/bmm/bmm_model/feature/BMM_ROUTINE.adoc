@@ -39,7 +39,7 @@ h|prop +
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_routine_definition[BMM_ROUTINE_DEFINITION]
 a|Body of a routine, i.e. executable program.
 
-h| func
+h|func
 |*arity* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return number of arguments of this routine.
 

@@ -6,7 +6,7 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-LOCATABLE -[#gray]up-|> PATHABLE  
+LOCATABLE -[#gray]up-|> PATHABLE
 
 class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_event_context]] {
         .. access ..
@@ -18,7 +18,7 @@ class EVENT_CONTEXT [[/openehr-doc/latest/foundation/subject_record-gen.html#_cl
         health_care_facility :? PARTY_IDENTIFIED
 }
 
-EVENT_CONTEXT -[#gray]up-|> PATHABLE  
+EVENT_CONTEXT -[#gray]up-|> PATHABLE
 
 
 EVENT_CONTEXT *--> "0..* participations" PARTICIPATION
@@ -26,14 +26,14 @@ EVENT_CONTEXT *--> "0..* participations" PARTICIPATION
 abstract class CONTENT_ITEM [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] {
 }
 
-CONTENT_ITEM -[#gray]up-|> LOCATABLE  
+CONTENT_ITEM -[#gray]up-|> LOCATABLE
 
 
 class SECTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_section]] {
         .. access ..
 }
 
-SECTION -[#gray]up-|> CONTENT_ITEM  
+SECTION -[#gray]up-|> CONTENT_ITEM
 
 
 SECTION *--> "0..* items" CONTENT_ITEM
@@ -47,7 +47,7 @@ class COMPOSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         is_persistent: Boolean
 }
 
-COMPOSITION -[#gray]up-|> LOCATABLE  
+COMPOSITION -[#gray]up-|> LOCATABLE
 
 
 COMPOSITION *--> "0..1 context" EVENT_CONTEXT

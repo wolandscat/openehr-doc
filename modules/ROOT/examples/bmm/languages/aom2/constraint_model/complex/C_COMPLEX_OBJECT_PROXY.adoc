@@ -25,7 +25,7 @@ h|prop +
 |*target_path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Reference to an object node using archetype path notation.
 
-h| func
+h|func
 |*use_target_occurrences* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -34,7 +34,7 @@ h| func
 a|True if target occurrences are to be used as the value of occurrences in this object; by
 the time of runtime use, the target occurrences value has to be set into this object.
 
-h| func
+h|override func
 |*occurrences_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node occurrences conforms to `other.occurrences`; `other` is assumed to

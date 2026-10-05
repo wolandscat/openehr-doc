@@ -14,24 +14,53 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*has_key* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test for presence of `a_key`.
 
-h| func
+h|func
 |*item* : V
 a|Return item for key `a_key`.
 
-h| func
-|*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+h|func
+|*has* ( +
+v: V): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test for membership of a value.
 
-h| func
+h|func
 |*count* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of items in container.
 
-h| func
+h|func
 |*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if container is empty.
+
+h|
+2+^h|*comparison*
+
+h|func
+|*there_exists* ( +
+test: (V) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* there exists, ∃
+
+a|Existential quantifier applied to container, taking one agent argument test whose signature is (v:T): Boolean.
+
+h|func
+|*for_all* ( +
+test: (V) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+  *alias* for all, ∀
+
+a|Universal quantifier applied to container, taking one agent argument test whose signature is (v:T): Boolean.
+
+h|func
+|*matching* ( +
+test: (V) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_list[List]<V>
+a|Return a List all items matching the predicate function test which has signature (v:T): Boolean.
+If no matches, an empty List is returned.
+
+h|func
+|*select* ( +
+test: (V) -> Boolean): V
+a|Return first item matching the predicate function test which has signature (v:T): Boolean, or Void if no match.
 
 |===

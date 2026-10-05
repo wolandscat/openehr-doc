@@ -22,7 +22,7 @@ class GENERIC_CONTENT_ITEM [[/openehr-doc/latest/domain-healthcare/ehr_extract-g
         item :? LOCATABLE
 }
 
-GENERIC_CONTENT_ITEM -[#gray]up-|> EXTRACT_CONTENT_ITEM  
+GENERIC_CONTENT_ITEM -[#gray]up-|> EXTRACT_CONTENT_ITEM
 
 abstract class "domain-healthcare.ehr_extract.common.\nEXTRACT_CONTENT_ITEM" as EXTRACT_CONTENT_ITEM  [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_content_item]] #FDFDFD {
 }

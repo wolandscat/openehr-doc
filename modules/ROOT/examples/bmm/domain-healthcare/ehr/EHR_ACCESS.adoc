@@ -26,7 +26,7 @@ h|prop +
 a|Access control settings for the EHR. Instance is a subtype of the type
 `ACCESS_CONTROL_SETTINGS`, allowing for the use of different access control schemes.
 
-h| func
+h|func
 |*scheme* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The name of the access control scheme in use; corresponds to the concrete instance of the
 settings attribute.

@@ -21,13 +21,13 @@ h|prop +
 |*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_module[BMM_MODULE]>
 a|Member modules in this package.
 
-h| func
+h|func
 |*root_classes* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]>
 a|Obtain the set of top-level classes in this package, either from this package itself or by
 recursing into the structure until classes are obtained from child packages. Recurse into
 each child only far enough to find the first level of classes.
 
-h| func
+h|func
 |*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Full path of this package back to root package.
 
@@ -36,12 +36,12 @@ h|prop +
 |*packages*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]>
 a|Child packages; keys all in upper case for guaranteed matching.
 
-h| func
+h|func
 |*package_at_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_package[BMM_PACKAGE]
 a|Package at the path `a_path`.
 
-h| func
+h|func
 |*has_package_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is a package at the path `a_path`; paths are delimited with delimiter
@@ -78,7 +78,7 @@ h|prop +
 |*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
-h| func
+h|func
 |*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

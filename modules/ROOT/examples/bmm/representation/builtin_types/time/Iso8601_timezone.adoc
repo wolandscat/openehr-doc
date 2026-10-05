@@ -21,27 +21,27 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*hour* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the hour part of timezone, as an Integer in the range `00 - 14`.
 
-h| func
+h|func
 |*minute* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the hour part of timezone, as an Integer, usually either 0 or 30.
 
-h| func
+h|func
 |*sign* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Direction of timezone expresssed as +1 or -1.
 
-h| func
+h|func
 |*minute_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether minute part known.
 
-h| func
+h|func
 |*is_gmt* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if timezone is UTC, i.e. `+0000`.
 
-h| func
+h|func
 |*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return timezone string in extended format.
 

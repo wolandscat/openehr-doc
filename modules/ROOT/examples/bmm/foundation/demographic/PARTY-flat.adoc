@@ -44,12 +44,12 @@ h|prop +
 |*relationships*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:demographic-gen.adoc#_class_party_relationship[PARTY_RELATIONSHIP]>
 a|Relationships in which this Party takes part as source.
 
-h| func
+h|func
 |*type* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Type of party, such as `PERSON`, `ORGANISATION`, etc. Role name, e.g. general practitioner
 , nurse , private citizen . Taken from inherited `name` attribute.
 
-h| func
+h|func
 |*reverse_relationships* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:identification-gen.adoc#_class_locatable_ref[LOCATABLE_REF]>
 a|References to relationships in which this Party takes part as target.
 
@@ -72,12 +72,12 @@ h|prop +
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
 
-h| func
+h|func
 |*concept* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the
 root node)
 
-h| func
+h|func
 |*is_archetype_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of an archetyped structure.
 
@@ -105,11 +105,11 @@ h|prop +
 |*archetype_details*: xref:representation:data_marking-gen.adoc#_class_archetyped[ARCHETYPED]
 a|Details of archetyping used on this node.
 
-h| func
+h|func
 |*parent* : xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]
 a|Parent of this node in a compositional hierarchy.
 
-h| func
+h|func
 |*item_at_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_any[Any] +
  +
@@ -119,12 +119,12 @@ a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 a|The item at a path (relative to this item); only valid for unique paths, i.e. paths that
 resolve to a single item.
 
-h| func
+h|func
 |*items_at_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|List of items corresponding to a non-unique path.
 
-h| func
+h|func
 |*path_exists* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -133,12 +133,12 @@ a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if the path exists in the data with respect to the current item.
 
-h| func
+h|func
 |*path_unique* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the path corresponds to a single item in the data.
 
-h| func
+h|func
 |*path_of_item* ( +
 a_loc: xref:representation:data_marking-gen.adoc#_class_pathable[PATHABLE]): xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The path to an item relative to the root of this archetyped structure.

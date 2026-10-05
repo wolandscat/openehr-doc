@@ -11,7 +11,7 @@ class GENERIC_ENTRY [[/openehr-doc/latest/foundation/integration-gen.html#_class
         data : ITEM
 }
 
-GENERIC_ENTRY -[#gray]up-|> CONTENT_ITEM  
+GENERIC_ENTRY -[#gray]up-|> CONTENT_ITEM
 
 abstract class "foundation.subject_record.composition.\nCONTENT_ITEM" as CONTENT_ITEM  [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_content_item]] #FDFDFD {
 }

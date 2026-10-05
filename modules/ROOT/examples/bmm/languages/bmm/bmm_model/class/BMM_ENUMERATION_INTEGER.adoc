@@ -13,7 +13,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   0..1
 |*item_values*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_integer_value[BMM_INTEGER_VALUE]>
 a|Optional list of specific values. Must be 1:1 with `item_names` list.

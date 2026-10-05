@@ -20,39 +20,39 @@ a|Generic parameters of the `root_type` in this type specifier. The order must m
 order of the owning class's formal generic parameter declarations, and the types may be
 defined types or formal parameter types.
 
-h|prop +
+h|override prop +
   
 |*base_class*: xref:languages:bmm-gen.adoc#_class_bmm_generic_class[BMM_GENERIC_CLASS]
 a|Defining generic class of this type.
 
-h| func
+h|override func
 |*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return the full name of the type including generic parameters, e.g. `DV_INTERVAL<T>`,
 `TABLE<List<THING>,String>`.
 
-h| func
+h|override func
 |*type_signature* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Signature form of the type, which for generics includes generic parameter constrainer
 types E.g. `Interval<T:Ordered>`.
 
-h| func
+h|override func
 |*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `base_class.is_abstract` or if any (non-open) parameter type is abstract.
 
-h| func
+h|override func
 |*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Result is `base_class.name` followed by names of all generic parameter type names, which
 may be open or closed.
 
-h| func
+h|func
 |*is_partially_closed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Returns True if there is any substituted generic parameter.
 
-h| func
+h|func
 |*effective_base_class* : xref:languages:bmm-gen.adoc#_class_bmm_generic_class[BMM_GENERIC_CLASS]
 a|Effective underlying class for this type, abstracting away any container type.
 
-h| func
+h|func
 |*is_open* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if all generic parameters from ancestor generic types have been substituted in this
 type.

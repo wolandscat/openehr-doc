@@ -10,16 +10,14 @@ class EL_CONDITION_CHAIN<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.
         .. access ..
 }
 
-EL_CONDITION_CHAIN -[#gray]up-|> EL_DECISION_TABLE  
+EL_CONDITION_CHAIN -[#gray]up-|> EL_DECISION_TABLE
 
-
-EL_CONDITION_CHAIN *--> "0..* items" EL_CONDITIONAL_EXPRESSION
 
 class EL_CASE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_case]] {
         .. access ..
 }
 
-EL_CASE -[#gray]up-|> EL_DECISION_BRANCH  
+EL_CASE -[#gray]up-|> EL_DECISION_BRANCH
 
 
 EL_CASE *--> "1 value_constraint" C_OBJECT
@@ -28,10 +26,8 @@ class EL_CASE_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/bmm-gen.html#
         .. access ..
 }
 
-EL_CASE_TABLE -[#gray]up-|> EL_DECISION_TABLE  
+EL_CASE_TABLE -[#gray]up-|> EL_DECISION_TABLE
 
-
-EL_CASE_TABLE *--> "0..* items" EL_CASE
 
 EL_CASE_TABLE *--> "1 test_value" EL_VALUE_GENERATOR
 
@@ -44,7 +40,7 @@ class EL_CONDITIONAL_EXPRESSION<T:EL_TERMINAL> [[/openehr-doc/latest/languages/b
         .. access ..
 }
 
-EL_CONDITIONAL_EXPRESSION -[#gray]up-|> EL_DECISION_BRANCH  
+EL_CONDITIONAL_EXPRESSION -[#gray]up-|> EL_DECISION_BRANCH
 
 
 EL_CONDITIONAL_EXPRESSION *--> "1 condition" EL_EXPRESSION
@@ -54,7 +50,7 @@ abstract class EL_DECISION_TABLE<T:EL_TERMINAL> [[/openehr-doc/latest/languages/
         else : T
 }
 
-EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL  
+EL_DECISION_TABLE -[#gray]up-|> EL_TERMINAL
 
 
 EL_DECISION_TABLE *--> "0..* items" EL_DECISION_BRANCH

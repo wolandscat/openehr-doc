@@ -20,22 +20,22 @@ h|prop +
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.
 
-h| func
+h|func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
-h| func
+h|func
 |*valid_value* ( +
 a_value: xref:representation:builtin_types-gen.adoc#_class_any[Any]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_value` is valid with respect to constraint expressed in concrete instance of
 this type.
 
-h| func
+h|func
 |*prototype_value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Generate a prototype value from this constraint object.
 
-h| func
+h|func
 |*has_default_value* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is an assumed value.
 
@@ -85,7 +85,7 @@ a|Optional indicator of order of this node with respect to another sibling. Only
 in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
 True`.
 
-h| func
+h|func
 |*specialisation_depth* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Level of specialisation of this archetype node, based on its `node_id`. The value 0
 corresponds to non-specialised, 1 to first-level specialisation and so on. The level is
@@ -93,7 +93,7 @@ the same as the number of '.' characters in the node_id code. If `node_id` is no
 the return value is -1, signifying that the specialisation level should be determined from
 the nearest parent `C_OBJECT` node having a node_id.
 
-h| func
+h|func
 |*effective_occurrences* ( +
 rm_prop_mult: (String, String) -> Multiplicity_interval): xref:representation:builtin_types-gen.adoc#_class_multiplicity_interval[Multiplicity_interval]
 a|Compute effective occurrences, where no local occurrences constraint set. If the owning
@@ -102,7 +102,7 @@ owning attribute.
 
 If local `occurrences` not set, always assume 0 as the lower bound.
 
-h| func
+h|func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
@@ -112,7 +112,7 @@ same as other. Typically used during validation of specialised archetype nodes.
 Parameters
   `rmcc`:: Reference Model conformance checker agent (lambda).
 
-h| func
+h|func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if constraints represented by this node contain no further redefinitions with respect
@@ -120,7 +120,7 @@ to the node `other`, with the exception of `node_id` redefinition in `C_OBJECT` 
 
 Typically used to test if an inherited node locally contains any constraints.
 
-h| func
+h|func
 |*occurrences_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node `occurrences` conforms to `other.occurrences`; `other` is assumed to
@@ -128,7 +128,7 @@ be in a flat archetype.
 
 .Parameters + [horizontal] `other`:: `C_OBJECT` from a flat parent archetype.
 
-h| func
+h|func
 |*node_id_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -138,7 +138,7 @@ other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representat
 a|True if this node id conforms to `other.node_id`, which includes the ids being
 identical; `other` is assumed to be in a flat archetype.
 
-h| func
+h|func
 |*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -157,16 +157,16 @@ h|prop +
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 
-h| func
+h|func
 |*has_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the relative path `a_path` exists at this node.
 
-h| func
+h|func
 |*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Path of this node relative to root of archetype.
 
-h| func
+h|func
 |*is_second_order_constrained* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -174,22 +174,22 @@ h| func
 
 a|True if there is a second order constraint such as a tuple constraint on this node.
 
-h| func
+h|func
 |*is_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of the tree.
 
-h| func
+h|func
 |*is_leaf* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is a terminal node in the tree structure, i.e. having no child nodes.
 
-h| func
+h|func
 |*codes_conformant* ( +
 a_child_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_parent_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_child_code` conforms to `a_parent_code` in the sense of specialisation,
 i.e. is `a_child_code` the same as or more specialised than `a_parent_code`?
 
-h| func
+h|func
 |*is_adl_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -198,7 +198,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is any kind of ADL archetype local code.
 
-h| func
+h|func
 |*is_at_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -207,7 +207,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code.
 
-h| func
+h|func
 |*is_id_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -216,7 +216,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'id' code.
 
-h| func
+h|func
 |*is_value_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -225,7 +225,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code representing a single terminology item.
 
-h| func
+h|func
 |*is_value_set_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -234,7 +234,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'ac' code, i.e. a code referring to a terminology value set.
 
-h| func
+h|func
 |*is_redefined_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|A code has been specialised if there is a non-zero code index anywhere above the last
@@ -243,7 +243,7 @@ index e.g.
 * `at0.0.1` -> False
 * `at1.0.1` -> True
 
-h| func
+h|func
 |*code_exists_at_level* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_level: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

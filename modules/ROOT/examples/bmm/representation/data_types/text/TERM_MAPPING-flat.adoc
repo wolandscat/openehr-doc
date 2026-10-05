@@ -44,7 +44,7 @@ h|prop +
 |*target*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
 a|The target term of the mapping.
 
-h| func
+h|func
 |*narrower* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -52,7 +52,7 @@ h| func
 
 a|The mapping is to a narrower term.
 
-h| func
+h|func
 |*broader* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -60,11 +60,11 @@ h| func
 
 a|The mapping is to a broader term.
 
-h| func
+h|func
 |*equivalent* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|The mapping is to an equivalent term.
 
-h| func
+h|func
 |*unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -72,7 +72,7 @@ h| func
 
 a|The kind of mapping is unknown.
 
-h| func
+h|func
 |*is_valid_match_code* ( +
 c: xref:representation:builtin_types-gen.adoc#_class_character[Character]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +

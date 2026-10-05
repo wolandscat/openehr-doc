@@ -17,25 +17,25 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|String form of this identifier.
 
-h| func
+h|func
 |*trunk_version* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Trunk version number; numbering starts at 1.
 
-h| func
+h|func
 |*is_branch* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this version identifier represents a branch, i.e. has `branch_number()` and
 `branch_version()` parts.
 
-h| func
+h|func
 |*is_first* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this version identifier corresponds to the first version, i.e. `trunk_version`
 is 1.
 
-h| func
+h|func
 |*branch_number* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Number of branch from the trunk point; numbering starts at 1.
 
-h| func
+h|func
 |*branch_version* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Version of the branch; numbering starts at 1.
 

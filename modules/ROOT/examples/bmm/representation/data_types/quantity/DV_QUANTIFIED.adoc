@@ -33,11 +33,11 @@ h|prop +
 |*accuracy*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Accuracy of measurement. Exact form of expression determined in descendants.
 
-h| func
+h|func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_ordered_numeric[Ordered_Numeric]
 a|
 
-h| func
+h|func
 |*accuracy_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if accuracy is not known, e.g. due to not being recorded or discernable.
 

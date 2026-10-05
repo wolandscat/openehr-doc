@@ -62,14 +62,14 @@ a|Code id used for C_PRIMITIVE_OBJECT nodes on creation.
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*codes_conformant* ( +
 a_child_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_parent_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_child_code` conforms to `a_parent_code` in the sense of specialisation,
 i.e. is `a_child_code` the same as or more specialised than `a_parent_code`?
 
-h| func
+h|func
 |*is_adl_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -78,7 +78,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is any kind of ADL archetype local code.
 
-h| func
+h|func
 |*is_at_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -87,7 +87,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code.
 
-h| func
+h|func
 |*is_id_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -96,7 +96,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'id' code.
 
-h| func
+h|func
 |*is_value_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -105,7 +105,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code representing a single terminology item.
 
-h| func
+h|func
 |*is_value_set_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -114,7 +114,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'ac' code, i.e. a code referring to a terminology value set.
 
-h| func
+h|func
 |*is_redefined_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|A code has been specialised if there is a non-zero code index anywhere above the last
@@ -123,7 +123,7 @@ index e.g.
 * `at0.0.1` -> False
 * `at1.0.1` -> True
 
-h| func
+h|func
 |*code_exists_at_level* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_level: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

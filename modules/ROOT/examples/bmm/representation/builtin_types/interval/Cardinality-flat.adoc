@@ -29,17 +29,17 @@ h|prop +
 a|True if the members of the container attribute to which this cardinality refers are
 unique.
 
-h| func
+h|func
 |*is_bag* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the semantics of this cardinality represent a bag, i.e. unordered, non-unique
 membership.
 
-h| func
+h|func
 |*is_list* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the semantics of this cardinality represent a list, i.e. ordered, non-unique
 membership.
 
-h| func
+h|func
 |*is_set* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the semantics of this cardinality represent a set, i.e. unordered, unique
 membership.

@@ -58,27 +58,27 @@ h|prop +
 a|True if this class is marked as abstract, i.e. direct instances cannot be created from its
 direct type.
 
-h| func
+h|func
 |*type* : xref:languages:bmm-gen.adoc#_class_bmm_model_type[BMM_MODEL_TYPE]
 a|Generate a type object that represents the type for which this class is the definer.
 
-h| func
+h|func
 |*all_ancestors* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of all inheritance parent class names, recursively.
 
-h| func
+h|func
 |*all_descendants* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Compute all descendants by following `immediate_descendants`.
 
-h| func
+h|func
 |*flat_properties* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:bmm-gen.adoc#_class_bmm_property[BMM_PROPERTY]>
 a|List of all properties due to current and ancestor classes, keyed by property name.
 
-h| func
+h|func
 |*package_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Fully qualified package name, of form: `package.package`.
 
-h| func
+h|func
 |*class_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Fully qualified class name, of form: `package.package.CLASS` with package path in lower-
 case and class in original case.
@@ -124,7 +124,7 @@ h|prop +
 |*extensions*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_any[Any]>
 a|Optional meta-data of this element, as a keyed list. May be used to extend the meta-model.
 
-h| func
+h|func
 |*is_root_scope* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

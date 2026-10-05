@@ -28,7 +28,7 @@ h|prop +
 |*scoper*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
 
-h| func
+h|func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, consisting of scoping elements and `name` concatenated
 using dot notation.
@@ -38,13 +38,13 @@ h|prop +
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Meta-type of expression entity used in type-checking and evaluation.
 
 Effected in descendants.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

@@ -15,7 +15,7 @@ package bmm_model.schema {
 package bmm_model.model {
 }
 
-package bmm_model.type {
+package bmm_model.type.builtin {
 }
 
 package bmm_model.class {

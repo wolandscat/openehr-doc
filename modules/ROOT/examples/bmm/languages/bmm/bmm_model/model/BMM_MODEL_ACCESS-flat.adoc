@@ -33,7 +33,7 @@ versioning information. For example, the keys `"openEHR_EHR_1.0.4"`, `"openEHR_E
 `"openEHR_EHR_1"`, and `"openEHR_EHR"` will all match the `"openEHR_EHR_1.0.4"` model,
 assuming it is the most recent version available.
 
-h| func
+h|func
 |*bmm_model* ( +
 a_model_key: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:bmm-gen.adoc#_class_bmm_model[BMM_MODEL]
 a|Return model containing the model key which is a `model_id` or any shorter form e.g.
@@ -41,7 +41,7 @@ model id minus the version. If a shorter key is used, the `BMM_MODEL` with the m
 version will be selected. Uses `matching_bmm_models` table to find matches if partial
 version information is supplied in key.
 
-h| func
+h|func
 |*has_bmm_model* ( +
 a_model_key: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if a model for a `model_key` is available. A model key is a `model_id` or any

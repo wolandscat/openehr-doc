@@ -22,20 +22,20 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*hour* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the hour part of the date/time as an Integer.
 
-h| func
+h|func
 |*minute* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the minute part of the time as an Integer, or return 0 if not present.
 
-h| func
+h|func
 |*second* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Extract the integral seconds part of the time (i.e. prior to any decimal sign) as an
 Integer, or return 0 if not present.
 
-h| func
+h|func
 |*fractional_second* : xref:representation:builtin_types-gen.adoc#_class_real[Real] +
  +
   *pre_cond* +
@@ -44,20 +44,20 @@ h| func
 a|Extract the fractional seconds part of the time (i.e. following to any decimal sign) as a
 Real, or return 0.0 if not present.
 
-h| func
+h|func
 |*timezone* : xref:representation:builtin_types-gen.adoc#_class_iso8601_timezone[Iso8601_timezone]
 a|Timezone; may be Void.
 
-h| func
+h|func
 |*minute_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether minute is unknown. If so, the time is of the form "hh".
 
-h| func
+h|func
 |*second_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether second is unknown. If so and month is known, the time is of the form
 `"hh:mm"` or `"hhmm"`.
 
-h| func
+h|func
 |*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return string value in extended format.
 

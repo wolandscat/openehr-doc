@@ -10,7 +10,7 @@ h|*Description*
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
@@ -22,7 +22,7 @@ semantics for concrete types.
 In conjunction with `=`, enables the definition of the related functions
 `greater_than_()` etc.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -33,7 +33,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -44,7 +44,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

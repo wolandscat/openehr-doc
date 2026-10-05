@@ -24,11 +24,11 @@ h|prop +
 |*type*: xref:languages:bmm-gen.adoc#_class_bmm_tuple_type[BMM_TUPLE_TYPE]
 a|Static type inferred from literal value.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Return `type`.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

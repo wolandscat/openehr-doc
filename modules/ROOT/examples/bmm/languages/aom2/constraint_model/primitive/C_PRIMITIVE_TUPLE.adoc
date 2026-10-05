@@ -15,12 +15,12 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   
 |*members*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:languages:aom2-gen.adoc#_class_c_primitive_object[C_PRIMITIVE_OBJECT]>
 a|Object constraint members of this tuple group.
 
-h| func
+h|override func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_primitive_tuple[C_PRIMITIVE_TUPLE], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
@@ -30,7 +30,7 @@ same as other. Typically used during validation of specialised archetype nodes.
 Parameters
   `rmcc`:: Reference Model conformance checker lambda.
 
-h| func
+h|override func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if constraints represented by this node contain no further redefinitions with respect

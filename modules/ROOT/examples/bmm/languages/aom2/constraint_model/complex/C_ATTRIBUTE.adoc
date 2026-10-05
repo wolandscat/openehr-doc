@@ -52,7 +52,7 @@ h|prop +
 a|Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued)
 attribute.
 
-h| func
+h|func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -61,7 +61,7 @@ h| func
 a|True if there is no effective constraint on the children of the RM attribute to which this
 `C_ATTRIBUTE` refers.
 
-h| func
+h|func
 |*is_mandatory* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -69,17 +69,17 @@ h| func
 
 a|True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i.e. mandation.
 
-h| func
+h|func
 |*rm_attribute_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Path of this attribute with respect to owning `C_OBJECT`, including differential path
 where applicable.
 
-h| func
+h|func
 |*is_single* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node logically represents a single-valued attribute. Evaluated as not
 `is_multiple`.
 
-h| func
+h|override func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -91,7 +91,7 @@ to the node other, with the exception of `node_id` redefinition in `C_OBJECT` no
 
 Typically used to test if an inherited node locally contains any constraints.
 
-h| func
+h|override func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
@@ -102,7 +102,7 @@ rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
 same as other. Typically used during validation of specialised archetype nodes.
 
-h| func
+h|override func
 |*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -110,12 +110,12 @@ h| func
 
 a|True if this `C_ATTRIBUTE` has an existence constraint of `0..0`, i.e. prohibition.
 
-h| func
+h|func
 |*existence_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the existence of this node conforms to other.existence
 
-h| func
+h|func
 |*cardinality_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the cardinality of this node conforms to other.cardinality, if it exists

@@ -28,38 +28,38 @@ h|prop +
 |*inheritance_precursor*: xref:languages:bmm-gen.adoc#_class_bmm_parameter_type[BMM_PARAMETER_TYPE]
 a|If set, is the corresponding generic parameter definition in an ancestor class.
 
-h| func
+h|func
 |*flattened_conforms_to_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 a|Result is either `conforms_to_type` or
 `inheritance_precursor.flattened_conforms_to_type`.
 
-h| func
+h|func
 |*type_signature* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Signature form of the open type, including constrainer type if there is one, e.g.
 `T:Ordered`.
 
-h| func
+h|func
 |*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Result = `False` - generic parameters are understood by definition to be non-primitive.
 
-h| func
+h|func
 |*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Result = `False` - generic parameters are understood by definition to be non-abstract.
 
-h| func
+h|func
 |*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return `name`.
 
-h| func
+h|func
 |*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Result is either `flattened_conforms_to_type.flattened_type_list` or the `Any` type.
 
-h| func
+h|func
 |*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 a|Generate ultimate conformance type, which is either `flattened_conforms_to_type` or if
 not set, `'Any'`.
 
-h| func
+h|func
 |*unitary_type* : xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
 a|Result = self.
 

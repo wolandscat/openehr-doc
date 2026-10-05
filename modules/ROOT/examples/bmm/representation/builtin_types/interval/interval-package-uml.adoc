@@ -9,7 +9,7 @@ skinparam citedClassColor #FDFDFD
 class Point_interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_point_interval]] {
 }
 
-Point_interval -[#gray]up-|> Interval  
+Point_interval -[#gray]up-|> Interval
 
 
 class Cardinality [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_cardinality]] {
@@ -26,7 +26,7 @@ Cardinality *--> "1 interval" Multiplicity_interval
 class Proper_interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_proper_interval]] {
 }
 
-Proper_interval -[#gray]up-|> Interval  
+Proper_interval -[#gray]up-|> Interval
 
 
 class Multiplicity_interval [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_multiplicity_interval]] {
@@ -37,7 +37,7 @@ class Multiplicity_interval [[/openehr-doc/latest/representation/builtin_types-g
         is_prohibited: Boolean
 }
 
-Multiplicity_interval -[#gray]up-|> Proper_interval  
+Multiplicity_interval -[#gray]up-|> Proper_interval
 
 
 abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_interval]] {
@@ -48,9 +48,10 @@ abstract class Interval<T:Ordered> [[/openehr-doc/latest/representation/builtin_
         upper_unbounded : Boolean
         lower_included : Boolean
         upper_included : Boolean
-        has: Boolean
-        intersects: Boolean
-        contains: Boolean
+        has(e: T): Boolean
+        intersects(other: Interval<T>): Boolean
+        contains(other: Interval<T>): Boolean
+        is_equal(other: Any): Boolean
 }
 
 ....

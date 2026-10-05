@@ -13,56 +13,56 @@ h|*Inherit*
 h|
 2+^h|*operators*
 
-h| func
+h|override func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* +
 
 a|Large integer addition.
 
-h| func
+h|override func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* -
 
 a|Large integer subtraction.
 
-h| func
+h|override func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* *
 
 a|Large integer multiplication.
 
-h| func
+h|override func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* /
 
 a|Large integer division.
 
-h| func
+h|override func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* ^
 
 a|Large integer exponentiation.
 
-h| func
+h|func
 |*modulo* ( +
 mod: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* mod
 
 a|Large integer modulus.
 
-h| func
+h|override func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Returns True if current Integer is less than `other`.
 
-h| func
+h|override func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* -
 

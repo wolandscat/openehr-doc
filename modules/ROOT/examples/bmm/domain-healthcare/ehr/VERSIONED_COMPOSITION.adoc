@@ -14,7 +14,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*is_persistent* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether this composition set is persistent; derived from first version.
 

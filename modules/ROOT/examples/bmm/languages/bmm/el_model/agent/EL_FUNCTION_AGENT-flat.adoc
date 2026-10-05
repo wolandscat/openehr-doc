@@ -19,7 +19,7 @@ h|prop +
 a|Reference to definition of a routine for which this is a direct call instance, if one
 exists.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_function_type[BMM_FUNCTION_TYPE] +
  +
   *post_cond* +
@@ -50,7 +50,7 @@ h|prop +
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h| func
+h|func
 |*is_callable* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -58,7 +58,7 @@ h| func
 
 a|True if there are no open arguments.
 
-h| func
+h|func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, including scoping elements.
 
@@ -67,7 +67,7 @@ h|prop +
 |*scoper*: xref:languages:bmm-gen.adoc#_class_el_value_generator[EL_VALUE_GENERATOR]
 a|Scoping expression, which must be a `EL_VALUE_GENERATOR`.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

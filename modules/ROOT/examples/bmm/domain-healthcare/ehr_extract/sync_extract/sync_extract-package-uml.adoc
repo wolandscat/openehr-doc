@@ -10,7 +10,7 @@ class SYNC_EXTRACT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#
         .. access ..
 }
 
-SYNC_EXTRACT -[#gray]up-|> MESSAGE_CONTENT  
+SYNC_EXTRACT -[#gray]up-|> MESSAGE_CONTENT
 
 
 SYNC_EXTRACT *--> "1 specification" SYNC_EXTRACT_SPEC
@@ -21,7 +21,7 @@ class SYNC_EXTRACT_REQUEST [[/openehr-doc/latest/domain-healthcare/ehr_extract-g
         .. access ..
 }
 
-SYNC_EXTRACT_REQUEST -[#gray]up-|> MESSAGE_CONTENT  
+SYNC_EXTRACT_REQUEST -[#gray]up-|> MESSAGE_CONTENT
 
 
 SYNC_EXTRACT_REQUEST *--> "1 specification" SYNC_EXTRACT_SPEC

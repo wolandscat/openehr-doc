@@ -32,7 +32,7 @@ a|Mathematical function of the data of this event, e.g. maximum, mean etc. Coded
 R vocabulary `event math function`]. Default value `640\|actual\|`, meaning
 'actual value'.
 
-h| func
+h|func
 |*interval_start_time* : xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Start time of the interval of this event.
 

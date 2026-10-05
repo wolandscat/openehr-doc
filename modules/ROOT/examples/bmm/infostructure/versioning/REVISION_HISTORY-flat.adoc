@@ -16,7 +16,7 @@ h|prop +
 |*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:infostructure:versioning-gen.adoc#_class_revision_history_item[REVISION_HISTORY_ITEM]>
 a|The items in this history in most-recent-last order.
 
-h| func
+h|func
 |*most_recent_version* : xref:representation:builtin_types-gen.adoc#_class_string[String] +
  +
   *post_cond* +
@@ -24,7 +24,7 @@ h| func
 
 a|The version id of the most recent item, as a String.
 
-h| func
+h|func
 |*most_recent_version_time_committed* : xref:representation:builtin_types-gen.adoc#_class_string[String] +
  +
   *post_cond* +

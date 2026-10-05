@@ -13,62 +13,62 @@ h|*Inherit*
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* +
 
 a|Large integer addition.
 
-h| func
+h|func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* -
 
 a|Large integer subtraction.
 
-h| func
+h|func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* *
 
 a|Large integer multiplication.
 
-h| func
+h|func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* /
 
 a|Large integer division.
 
-h| func
+h|func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* ^
 
 a|Large integer exponentiation.
 
-h| func
+h|func
 |*modulo* ( +
 mod: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* mod
 
 a|Large integer modulus.
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Returns True if current Integer is less than `other`.
 
-h| func
+h|func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_integer64[Integer64] +
   *alias* -
 
 a|Generate negative of current Integer value.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -79,7 +79,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -90,7 +90,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

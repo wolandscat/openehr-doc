@@ -38,11 +38,11 @@ h|prop +
 a|True indicates that only unique instances of items in the container are allowed. Otherwise
 known as 'set' semantics.
 
-h| func
+h|override func
 |*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return full type name, e.g. `List<ELEMENT>`.
 
-h| func
+h|override func
 |*is_abstract* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -50,7 +50,7 @@ h| func
 
 a|True if the container class is abstract.
 
-h| func
+h|override func
 |*flattened_type_list* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]> +
  +
   *post_cond* +
@@ -58,11 +58,11 @@ h| func
 
 a|Flattened list of type names of `item_type`, i.e. `item_type.flattened_type_list_()`.
 
-h| func
+h|override func
 |*unitary_type* : xref:languages:bmm-gen.adoc#_class_bmm_unitary_type[BMM_UNITARY_TYPE]
 a|Return `item_type`.
 
-h| func
+h|override func
 |*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -70,7 +70,7 @@ h| func
 
 a|True if `item_type` is primitive.
 
-h| func
+h|override func
 |*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 a|Return `item_type.effective_type_()`.
 

@@ -14,26 +14,26 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   0..1
 |*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]>
 a|Boolean constraint - a list of Boolean values.
 
-h|prop +
+h|override prop +
   0..1
 |*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Assumed Boolean value.
 
-h|prop +
+h|override prop +
   0..1
 |*default_value*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Default Boolean value.
 
-h| func
+h|override func
 |*prototype_value* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Prototype Boolean value.
 
-h| func
+h|override func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -42,13 +42,13 @@ h| func
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
-h| func
+h|override func
 |*c_value_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_boolean[C_BOOLEAN]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `other.any_allowed` or else every constraint in the `constraint` list exists
 in the `other.constraint`.
 
-h| func
+h|override func
 |*c_value_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_boolean[C_BOOLEAN]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the items in `constraint` are equal in number and identical pair-wise with those

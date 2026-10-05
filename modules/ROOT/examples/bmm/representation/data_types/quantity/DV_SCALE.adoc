@@ -42,7 +42,7 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Real number value of Scale item.
 
-h| func
+h|override func
 |*is_strictly_comparable_to* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_scale[DV_SCALE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test if this Scale value is strictly comparable to `other`.

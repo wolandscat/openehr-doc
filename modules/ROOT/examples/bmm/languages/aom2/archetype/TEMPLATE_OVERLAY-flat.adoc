@@ -54,7 +54,7 @@ h|prop +
 |*rm_overlay*: xref:languages:aom2-gen.adoc#_class_rm_overlay[RM_OVERLAY]
 a|
 
-h| func
+h|func
 |*concept_code* : xref:representation:builtin_types-gen.adoc#_class_string[String] +
  +
   *post_cond* +
@@ -63,19 +63,19 @@ h| func
 a|The concept code of the root object of the archetype, also standing for the concept of the
 archetype as a whole.
 
-h| func
+h|func
 |*physical_paths* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Set of language-independent paths extracted from archetype. Paths obey Xpath-like syntax
 and are formed from alternations of `C_OBJECT._node_id` and
 `C_ATTRIBUTE._rm_attribute_name` values.
 
-h| func
+h|func
 |*logical_paths* ( +
 a_lang: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Set of language-dependent paths extracted from archetype. Paths obey the same syntax as
 physical_paths, but with node_ids replaced by their meanings from the terminology.
 
-h| func
+h|func
 |*specialisation_depth* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
  +
   *post_cond* +
@@ -84,7 +84,7 @@ h| func
 a|Specialisation depth of this archetype; larger than 0 if this archetype has a parent.
 Derived from terminology.specialisation_depth.
 
-h| func
+h|func
 |*is_specialised* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

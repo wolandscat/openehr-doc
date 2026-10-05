@@ -40,12 +40,12 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h| func
+h|func
 |*is_strictly_comparable_to* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test if two instances are strictly comparable. Effected in descendants.
 
-h| func
+h|override func
 |*less_than* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -54,11 +54,11 @@ other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): x
 
 a|True if this Ordered object is less than `other`. Redefined in descendants.
 
-h| func
+h|func
 |*is_simple* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this quantity has no reference ranges.
 
-h| func
+h|func
 |*is_normal* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +

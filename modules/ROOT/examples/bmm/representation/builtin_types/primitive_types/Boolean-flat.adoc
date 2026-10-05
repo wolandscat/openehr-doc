@@ -10,7 +10,7 @@ h|*Description*
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*conjunction* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* and, ∧
@@ -22,7 +22,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Logical conjunction of this with `other`.
 
-h| func
+h|func
 |*semistrict_conjunction* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* and then
@@ -33,7 +33,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Boolean semi-strict conjunction with `other`.
 
-h| func
+h|func
 |*disjunction* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* or, ∨
@@ -46,7 +46,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Boolean disjunction with `other`.
 
-h| func
+h|func
 |*semistrict_disjunction* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* or else
@@ -57,7 +57,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Boolean semi-strict disjunction with `other`.
 
-h| func
+h|func
 |*exclusive_disjunction* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* xor, ⊻
@@ -68,7 +68,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Boolean exclusive or with `other`.
 
-h| func
+h|func
 |*implication* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* implies, ⇒
@@ -79,7 +79,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]): xref
 
 a|Boolean implication of `other` (semi-strict)
 
-h| func
+h|func
 |*negation* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* not, ¬
 

@@ -21,7 +21,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the routine being called.
@@ -43,12 +43,12 @@ h|prop +
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_routine[BMM_ROUTINE]
 a|Reference to definition of a routine for which this is an agent, if one exists.
 
-h|prop +
+h|override prop +
   
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|
 
-h| func
+h|override func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_routine_type[BMM_ROUTINE_TYPE] +
  +
   *post_cond* +
@@ -57,7 +57,7 @@ h| func
 a|Eval type is the signature corresponding to the (remaining) open arguments and return
 type, if any.
 
-h| func
+h|func
 |*is_callable* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -65,7 +65,7 @@ h| func
 
 a|True if there are no open arguments.
 
-h| func
+h|override func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, including scoping elements.
 

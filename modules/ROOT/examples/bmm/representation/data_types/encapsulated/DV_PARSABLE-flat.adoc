@@ -26,7 +26,7 @@ h|prop +
 |*formalism*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of the formalism, e.g. GLIF 1.0 , Proforma etc.
 
-h| func
+h|func
 |*size* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Size in bytes of value.
 

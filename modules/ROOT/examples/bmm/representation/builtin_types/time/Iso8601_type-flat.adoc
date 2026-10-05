@@ -19,12 +19,12 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Representation of all descendants is a single String.
 
-h| func
+h|func
 |*is_partial* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this date time is partial, i.e. if trailing end (right hand) value(s) is/are
 missing.
 
-h| func
+h|func
 |*is_extended* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this ISO8601 string is in the 'extended' form, i.e. uses `'-'` and / or `':'`
 separators. This is the preferred format.
@@ -32,7 +32,7 @@ separators. This is the preferred format.
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
@@ -44,7 +44,7 @@ semantics for concrete types.
 In conjunction with `=`, enables the definition of the related functions
 `greater_than_()` etc.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -55,7 +55,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -66,7 +66,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

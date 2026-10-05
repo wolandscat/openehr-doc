@@ -36,7 +36,7 @@ package bmm.bmm_model.schema {
 package bmm.bmm_model.model {
 }
 
-package bmm.bmm_model.type {
+package bmm.bmm_model.type.builtin {
 }
 
 package bmm.bmm_model.class {

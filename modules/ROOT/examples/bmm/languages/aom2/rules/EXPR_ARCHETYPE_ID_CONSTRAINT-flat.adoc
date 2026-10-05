@@ -18,12 +18,12 @@ h|prop +
 |*item*: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]
 a|A C_STRING representing a regular expression for matching Archetype identifiers.
 
-h| func
+h|func
 |*type* : xref:languages:bel-gen.adoc#_class_expr_type_def[EXPR_TYPE_DEF]
 a|The primitive type of this node, which must be determined by redefinitions in concrete
 classes.
 
-h| func
+h|func
 |*value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|The computed value of this node as a result of the nodes below it, for operator nodes, or
 else statically set or otherwise derived values.

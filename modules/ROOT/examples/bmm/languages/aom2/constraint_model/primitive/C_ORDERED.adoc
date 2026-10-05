@@ -24,24 +24,24 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   0..1
 |*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<T>>
 a|Constraint in the form of a List of Intervals of the parameter type T. Concrete types
 generated in descendants via template binding.
 
-h|prop +
+h|override prop +
   0..1
 |*default_value*: T
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.
 
-h|prop +
+h|override prop +
   0..1
 |*assumed_value*: T
 a|Value to be assumed if none sent in data.
 
-h| func
+h|override func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -50,13 +50,13 @@ h| func
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
-h| func
+h|override func
 |*c_value_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `other.any_allowed` or else for every constraint in the `constraint` list
 there is a constraint in `other.constraint` that contains it.
 
-h| func
+h|override func
 |*c_value_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the items in `constraint` are equal in number and identical pair-wise with those

@@ -20,21 +20,21 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 date string.
 
-h| func
+h|override func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Numeric value of the date as days since the calendar origin date `0001-01-01`.
 
-h| func
+h|func
 |*add* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]
 a|Addition of a Duration to this Date.
 
-h| func
+h|func
 |*subtract* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]
 a|Subtract a Duration from this Date.
 
-h| func
+h|func
 |*diff* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_date[DV_DATE]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Date and `other`.

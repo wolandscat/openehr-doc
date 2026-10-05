@@ -14,7 +14,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   
 |*agent*: xref:languages:bmm-gen.adoc#_class_el_procedure_agent[EL_PROCEDURE_AGENT]
 a|The procedure agent being called.

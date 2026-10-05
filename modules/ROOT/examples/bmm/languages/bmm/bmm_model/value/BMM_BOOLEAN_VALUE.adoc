@@ -14,7 +14,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   
 |*value*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Native Boolean value.

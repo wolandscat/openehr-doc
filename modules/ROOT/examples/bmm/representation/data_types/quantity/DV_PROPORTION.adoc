@@ -47,22 +47,22 @@ a|Precision to which the `numerator` and `denominator` values of the proportion 
 expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
 The value -1 implies no limit, i.e. any number of decimal places.
 
-h|prop +
+h|override prop +
   0..1
 |*normal_range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_proportion[DV_PROPORTION]>
 a|Optional normal range.
 
-h|prop +
+h|override prop +
   0..1
 |*other_reference_ranges*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_reference_range[REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_proportion[DV_PROPORTION]>>
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h| func
+h|override func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Effective magnitude represented by ratio.
 
-h| func
+h|func
 |*is_integral* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the `numerator` and `denominator` values are integers, i.e. if `precision`
 is 0.

@@ -12,12 +12,10 @@ class C_ATTRIBUTE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_a
         c_congruent_to(other: C_SECOND_ORDER): Boolean
 }
 
-C_ATTRIBUTE_TUPLE -[#gray]up-|> C_SECOND_ORDER  
+C_ATTRIBUTE_TUPLE -[#gray]up-|> C_SECOND_ORDER
 
 
 C_ATTRIBUTE_TUPLE *--> "0..* tuples" C_PRIMITIVE_TUPLE
-
-C_ATTRIBUTE_TUPLE *--> "0..* members" C_ATTRIBUTE
 
 abstract class C_DEFINED_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_defined_object]] {
         .. access ..
@@ -28,7 +26,7 @@ abstract class C_DEFINED_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_c
         has_default_value: Boolean
 }
 
-C_DEFINED_OBJECT -[#gray]up-|> C_OBJECT  
+C_DEFINED_OBJECT -[#gray]up-|> C_OBJECT
 
 
 class C_ARCHETYPE_ROOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_archetype_root]] {
@@ -36,7 +34,7 @@ class C_ARCHETYPE_ROOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_ar
         archetype_ref : String
 }
 
-C_ARCHETYPE_ROOT -[#gray]up-|> C_COMPLEX_OBJECT  
+C_ARCHETYPE_ROOT -[#gray]up-|> C_COMPLEX_OBJECT
 
 
 abstract class C_SECOND_ORDER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_second_order]] {
@@ -54,7 +52,7 @@ class C_COMPLEX_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_co
         c_congruent_to(other: C_COMPLEX_OBJECT): Boolean
 }
 
-C_COMPLEX_OBJECT -[#gray]up-|> C_DEFINED_OBJECT  
+C_COMPLEX_OBJECT -[#gray]up-|> C_DEFINED_OBJECT
 
 
 C_COMPLEX_OBJECT *--> "0..* attributes" C_ATTRIBUTE
@@ -74,7 +72,7 @@ class C_COMPLEX_OBJECT_PROXY [[/openehr-doc/latest/languages/aom2-gen.html#_clas
         occurrences_conforms_to(other: C_OBJECT): Boolean
 }
 
-C_COMPLEX_OBJECT_PROXY -[#gray]up-|> C_OBJECT  
+C_COMPLEX_OBJECT_PROXY -[#gray]up-|> C_OBJECT
 
 
 enum CONSTRAINT_STATUS [[/openehr-doc/latest/languages/aom2-gen.html#_class_constraint_status]] {
@@ -91,7 +89,7 @@ class ARCHETYPE_SLOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archet
         any_allowed: Boolean
 }
 
-ARCHETYPE_SLOT -[#gray]up-|> C_OBJECT  
+ARCHETYPE_SLOT -[#gray]up-|> C_OBJECT
 
 
 ARCHETYPE_SLOT *--> "0..* includes" ASSERTION
@@ -121,7 +119,7 @@ abstract class C_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_o
         is_prohibited: Boolean
 }
 
-C_OBJECT -[#gray]up-|> ARCHETYPE_CONSTRAINT  
+C_OBJECT -[#gray]up-|> ARCHETYPE_CONSTRAINT
 
 
 C_OBJECT *--> "0..1 sibling_order" SIBLING_ORDER
@@ -144,7 +142,7 @@ class C_ATTRIBUTE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_attribu
         cardinality_conforms_to(other: C_ATTRIBUTE): Boolean
 }
 
-C_ATTRIBUTE -[#gray]up-|> ARCHETYPE_CONSTRAINT  
+C_ATTRIBUTE -[#gray]up-|> ARCHETYPE_CONSTRAINT
 
 
 C_ATTRIBUTE *--> "0..* children" C_OBJECT

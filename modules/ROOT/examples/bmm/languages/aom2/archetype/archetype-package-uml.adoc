@@ -9,7 +9,7 @@ skinparam citedClassColor #FDFDFD
 class TEMPLATE_OVERLAY [[/openehr-doc/latest/languages/aom2-gen.html#_class_template_overlay]] {
 }
 
-TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE  
+TEMPLATE_OVERLAY -[#gray]up-|> ARCHETYPE
 
 
 class OPERATIONAL_TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_operational_template]] {
@@ -17,7 +17,7 @@ class OPERATIONAL_TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_
         component_terminology(an_id: String): ARCHETYPE_TERMINOLOGY
 }
 
-OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
+OPERATIONAL_TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE
 
 
 OPERATIONAL_TEMPLATE *--> "0..* component_terminologies" ARCHETYPE_TERMINOLOGY
@@ -47,7 +47,7 @@ class TEMPLATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_template]] {
         .. access ..
 }
 
-TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE  
+TEMPLATE -[#gray]up-|> AUTHORED_ARCHETYPE
 
 
 TEMPLATE *--> "0..* overlays" TEMPLATE_OVERLAY
@@ -82,10 +82,10 @@ class AUTHORED_ARCHETYPE [[/openehr-doc/latest/languages/aom2-gen.html#_class_au
         other_meta_data : Map<String,String>
 }
 
-AUTHORED_ARCHETYPE -[#gray]up-|> ARCHETYPE  
+AUTHORED_ARCHETYPE -[#gray]up-|> ARCHETYPE
 
 
-AUTHORED_ARCHETYPE -[#gray]up-|> AUTHORED_RESOURCE  
+AUTHORED_ARCHETYPE -[#gray]up-|> AUTHORED_RESOURCE
 
 abstract class "infostructure.resource.\nAUTHORED_RESOURCE" as AUTHORED_RESOURCE  [[/openehr-doc/latest/infostructure/resource-gen.html#_class_authored_resource]] #FDFDFD {
 }

@@ -12,7 +12,7 @@ class DV_STATE [[/openehr-doc/latest/representation/data_types-gen.html#_class_d
         is_terminal : Boolean
 }
 
-DV_STATE -[#gray]up-|> DATA_VALUE  
+DV_STATE -[#gray]up-|> DATA_VALUE
 
 
 class DV_IDENTIFIER [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_identifier]] {
@@ -23,7 +23,7 @@ class DV_IDENTIFIER [[/openehr-doc/latest/representation/data_types-gen.html#_cl
         type :? String
 }
 
-DV_IDENTIFIER -[#gray]up-|> DATA_VALUE  
+DV_IDENTIFIER -[#gray]up-|> DATA_VALUE
 
 
 class DV_BOOLEAN [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv_boolean]] {
@@ -31,7 +31,7 @@ class DV_BOOLEAN [[/openehr-doc/latest/representation/data_types-gen.html#_class
         value : Boolean
 }
 
-DV_BOOLEAN -[#gray]up-|> DATA_VALUE  
+DV_BOOLEAN -[#gray]up-|> DATA_VALUE
 
 
 abstract class DATA_VALUE [[/openehr-doc/latest/representation/data_types-gen.html#_class_data_value]] {

@@ -13,20 +13,20 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h|prop +
+h|override prop +
   0..1
 |*constraint*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<xref:representation:builtin_types-gen.adoc#_class_integer[Integer]>>
 a|Formal constraint on `Integer`, in the form of one or more `Interval<Integer>`.
 
 To represent no constraint, use an empty list.
 
-h|prop +
+h|override prop +
   0..1
 |*default_value*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.
 
-h|prop +
+h|override prop +
   0..1
 |*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Value to be assumed if none sent in data.

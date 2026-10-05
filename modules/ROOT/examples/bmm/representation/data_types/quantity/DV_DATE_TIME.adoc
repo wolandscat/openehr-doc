@@ -22,22 +22,22 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 date/time string.
 
-h| func
+h|override func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_double[Double]
 a|Numeric value of the date/time as seconds since the calendar origin date/time
 `0001-01-01T00:00:00Z`.
 
-h| func
+h|func
 |*add* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Addition of a Duration to this Date/time.
 
-h| func
+h|func
 |*subtract* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Subtract a Duration from this Date/time.
 
-h| func
+h|func
 |*diff* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Date/time and `other`.

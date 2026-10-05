@@ -20,7 +20,7 @@ h|prop +
 a|Type of the element index, typically `String` or `Integer`, but may be a numeric type or
 indeed any type from which a hash value can be derived.
 
-h| func
+h|override func
 |*type_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return full type name, e.g. `HashMap<String, ELEMENT>`.
 

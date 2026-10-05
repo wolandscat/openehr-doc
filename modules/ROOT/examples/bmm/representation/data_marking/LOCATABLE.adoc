@@ -59,12 +59,12 @@ h|prop +
 a|Audit trail from non-openEHR system of original commit of information forming the content
 of this node, or from a conversion gateway which has synthesised this node.
 
-h| func
+h|func
 |*concept* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Clinical concept of the archetype as a whole (= derived from the archetype_node_id' of the
 root node)
 
-h| func
+h|func
 |*is_archetype_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of an archetyped structure.
 

@@ -23,7 +23,7 @@ class ASSERTION [[/openehr-doc/latest/languages/bel-gen.html#_class_assertion]] 
         string_expression :? String
 }
 
-ASSERTION -[#gray]up-|> STATEMENT  
+ASSERTION -[#gray]up-|> STATEMENT
 
 
 ASSERTION *--> "1 expression" EXPRESSION
@@ -32,7 +32,7 @@ class ASSIGNMENT [[/openehr-doc/latest/languages/bel-gen.html#_class_assignment]
         .. access ..
 }
 
-ASSIGNMENT -[#gray]up-|> STATEMENT  
+ASSIGNMENT -[#gray]up-|> STATEMENT
 
 
 ASSIGNMENT *--> "1 target" VARIABLE_DECLARATION
@@ -44,7 +44,7 @@ class VARIABLE_DECLARATION [[/openehr-doc/latest/languages/bel-gen.html#_class_v
         name : String
 }
 
-VARIABLE_DECLARATION -[#gray]up-|> STATEMENT  
+VARIABLE_DECLARATION -[#gray]up-|> STATEMENT
 
 
 VARIABLE_DECLARATION *--> "1 type" EXPR_TYPE_DEF

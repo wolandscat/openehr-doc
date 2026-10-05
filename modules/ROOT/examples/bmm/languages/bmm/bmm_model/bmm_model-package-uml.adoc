@@ -12,7 +12,7 @@ package schema {
 package model {
 }
 
-package type {
+package type.builtin {
 }
 
 package class {

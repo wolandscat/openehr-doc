@@ -14,11 +14,11 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|override func
 |*effective_type* : xref:languages:bmm-gen.adoc#_class_bmm_effective_type[BMM_EFFECTIVE_TYPE]
 a|Result = self.
 
-h| func
+h|func
 |*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name of base generator type, i.e. excluding any generic parts if present.
 

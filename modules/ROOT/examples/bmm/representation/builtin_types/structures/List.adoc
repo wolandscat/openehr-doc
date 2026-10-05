@@ -13,11 +13,11 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*first* : V
 a|Return first element.
 
-h| func
+h|func
 |*last* : V
 a|Return last element.
 

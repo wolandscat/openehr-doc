@@ -32,27 +32,27 @@ h|prop +
 a|ISO8601 duration string, including described deviations to support negative values and
 weeks.
 
-h| func
+h|override func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_double[Double]
 a|Numeric value of the duration as a number of seconds. Computed using the method
 `to_seconds()` inherited from `Iso8601_duration`.
 
-h| func
+h|func
 |*add* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Sum of this Duration and `other`.
 
-h| func
+h|func
 |*subtract* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference of this Duration and `other`.
 
-h| func
+h|func
 |*multiply* ( +
 factor: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Product of this Duration and `factor`.
 
-h| func
+h|func
 |*negative* : xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Negated version of current duration.
 

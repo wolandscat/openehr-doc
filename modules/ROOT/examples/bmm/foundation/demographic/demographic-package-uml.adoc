@@ -12,19 +12,19 @@ class PARTY_IDENTITY [[/openehr-doc/latest/foundation/demographic-gen.html#_clas
         purpose: DV_TEXT
 }
 
-PARTY_IDENTITY -[#gray]up-|> LOCATABLE  
+PARTY_IDENTITY -[#gray]up-|> LOCATABLE
 
 
 class PERSON [[/openehr-doc/latest/foundation/demographic-gen.html#_class_person]] {
 }
 
-PERSON -[#gray]up-|> ACTOR  
+PERSON -[#gray]up-|> ACTOR
 
 
 class VERSIONED_PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_versioned_party]] {
 }
 
-VERSIONED_PARTY -[#gray]up-|> VERSIONED_OBJECT  
+VERSIONED_PARTY -[#gray]up-|> VERSIONED_OBJECT
 
 
 abstract class ACTOR [[/openehr-doc/latest/foundation/demographic-gen.html#_class_actor]] {
@@ -33,7 +33,7 @@ abstract class ACTOR [[/openehr-doc/latest/foundation/demographic-gen.html#_clas
         roles :? List<PARTY_REF>
 }
 
-ACTOR -[#gray]up-|> PARTY  
+ACTOR -[#gray]up-|> PARTY
 
 
 class ADDRESS [[/openehr-doc/latest/foundation/demographic-gen.html#_class_address]] {
@@ -42,7 +42,7 @@ class ADDRESS [[/openehr-doc/latest/foundation/demographic-gen.html#_class_addre
         type: DV_TEXT
 }
 
-ADDRESS -[#gray]up-|> LOCATABLE  
+ADDRESS -[#gray]up-|> LOCATABLE
 
 
 class CAPABILITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_capability]] {
@@ -51,7 +51,7 @@ class CAPABILITY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_ca
         time_validity :? DV_INTERVAL<DV_DATE>
 }
 
-CAPABILITY -[#gray]up-|> LOCATABLE  
+CAPABILITY -[#gray]up-|> LOCATABLE
 
 
 abstract class PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party]] {
@@ -61,7 +61,7 @@ abstract class PARTY [[/openehr-doc/latest/foundation/demographic-gen.html#_clas
         reverse_relationships: List<LOCATABLE_REF>
 }
 
-PARTY -[#gray]up-|> LOCATABLE  
+PARTY -[#gray]up-|> LOCATABLE
 
 
 PARTY *--> "0..* identities" PARTY_IDENTITY
@@ -73,7 +73,7 @@ PARTY *--> "0..* relationships" PARTY_RELATIONSHIP
 class AGENT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_agent]] {
 }
 
-AGENT -[#gray]up-|> ACTOR  
+AGENT -[#gray]up-|> ACTOR
 
 
 class ROLE [[/openehr-doc/latest/foundation/demographic-gen.html#_class_role]] {
@@ -82,7 +82,7 @@ class ROLE [[/openehr-doc/latest/foundation/demographic-gen.html#_class_role]] {
         performer : PARTY_REF
 }
 
-ROLE -[#gray]up-|> PARTY  
+ROLE -[#gray]up-|> PARTY
 
 
 ROLE *--> "0..* capabilities" CAPABILITY
@@ -93,7 +93,7 @@ class CONTACT [[/openehr-doc/latest/foundation/demographic-gen.html#_class_conta
         purpose: DV_TEXT
 }
 
-CONTACT -[#gray]up-|> LOCATABLE  
+CONTACT -[#gray]up-|> LOCATABLE
 
 
 CONTACT *--> "0..* addresses" ADDRESS
@@ -101,13 +101,13 @@ CONTACT *--> "0..* addresses" ADDRESS
 class ORGANISATION [[/openehr-doc/latest/foundation/demographic-gen.html#_class_organisation]] {
 }
 
-ORGANISATION -[#gray]up-|> ACTOR  
+ORGANISATION -[#gray]up-|> ACTOR
 
 
 class GROUP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_group]] {
 }
 
-GROUP -[#gray]up-|> ACTOR  
+GROUP -[#gray]up-|> ACTOR
 
 
 class PARTY_RELATIONSHIP [[/openehr-doc/latest/foundation/demographic-gen.html#_class_party_relationship]] {
@@ -119,7 +119,7 @@ class PARTY_RELATIONSHIP [[/openehr-doc/latest/foundation/demographic-gen.html#_
         type: DV_TEXT
 }
 
-PARTY_RELATIONSHIP -[#gray]up-|> LOCATABLE  
+PARTY_RELATIONSHIP -[#gray]up-|> LOCATABLE
 
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }

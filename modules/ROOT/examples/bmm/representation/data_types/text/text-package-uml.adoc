@@ -34,7 +34,7 @@ class DV_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_class_dv
         formatting :? String
 }
 
-DV_TEXT -[#gray]up-|> DATA_VALUE  
+DV_TEXT -[#gray]up-|> DATA_VALUE
 
 
 DV_TEXT *--> "0..* mappings" TERM_MAPPING
@@ -54,7 +54,7 @@ class DV_CODED_TEXT [[/openehr-doc/latest/representation/data_types-gen.html#_cl
         .. access ..
 }
 
-DV_CODED_TEXT -[#gray]up-|> DV_TEXT  
+DV_CODED_TEXT -[#gray]up-|> DV_TEXT
 
 
 DV_CODED_TEXT *--> "1 defining_code" CODE_PHRASE
@@ -63,7 +63,7 @@ class DV_PARAGRAPH [[/openehr-doc/latest/representation/data_types-gen.html#_cla
         .. access ..
 }
 
-DV_PARAGRAPH -[#gray]up-|> DATA_VALUE  
+DV_PARAGRAPH -[#gray]up-|> DATA_VALUE
 
 
 DV_PARAGRAPH *--> "0..* items" DV_TEXT

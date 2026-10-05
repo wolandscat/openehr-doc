@@ -18,7 +18,7 @@ abstract class ARCHETYPE_CONSTRAINT [[/openehr-doc/latest/languages/aom2-gen.htm
         is_leaf: Boolean
 }
 
-ARCHETYPE_CONSTRAINT -[#gray]up-|> ADL_CODE_DEFINITIONS  
+ARCHETYPE_CONSTRAINT -[#gray]up-|> ADL_CODE_DEFINITIONS
 
 
 ARCHETYPE_CONSTRAINT *--> "0..1 parent" ARCHETYPE_CONSTRAINT

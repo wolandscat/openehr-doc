@@ -9,7 +9,7 @@ skinparam citedClassColor #FDFDFD
 abstract class MESSAGE_CONTENT [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_message_content]] {
 }
 
-MESSAGE_CONTENT -[#gray]up-|> LOCATABLE  
+MESSAGE_CONTENT -[#gray]up-|> LOCATABLE
 
 
 class ADDRESSED_MESSAGE [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_addressed_message]] {

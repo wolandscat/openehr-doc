@@ -24,21 +24,21 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 time string
 
-h| func
+h|override func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Numeric value of the time as seconds since the start of day, i.e. `00:00:00`.
 
-h| func
+h|func
 |*add* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]
 a|Addition of a Duration to this Time.
 
-h| func
+h|func
 |*subtract* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]
 a|Subtract a Duration from this Time.
 
-h| func
+h|func
 |*diff* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_time[DV_TIME]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Time and `other`.

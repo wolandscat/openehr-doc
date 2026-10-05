@@ -20,7 +20,7 @@ h|prop +
 a|The value of the identity. This will often taken the form of a parseable string or a small
 structure of strings.
 
-h| func
+h|func
 |*purpose* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Purpose of identity, e.g. legal , stagename, nickname, tribal name, trading name. Taken
 from value of inherited `name` attribute.

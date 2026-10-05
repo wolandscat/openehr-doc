@@ -32,7 +32,7 @@ h|prop +
 a|Compendium of flattened terminology extracts (i.e. from external terminologies) from
 archetypes referenced from this template, keyed by archetype identifier.
 
-h| func
+h|func
 |*component_terminology* ( +
 an_id: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:aom2-gen.adoc#_class_archetype_terminology[ARCHETYPE_TERMINOLOGY]
 a|Return the component terminology for the archetype with identifier an_id.

@@ -29,18 +29,18 @@ h|prop +
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 
-h| func
+h|func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, based on constituent parts of the entity. Default version
 outputs `name` field.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Meta-type of expression entity used in type-checking and evaluation.
 
 Effected in descendants.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

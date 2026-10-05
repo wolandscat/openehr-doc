@@ -30,19 +30,19 @@ Indicates to a tool to show the model element to which this marker is attached.
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*is_empty* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string is empty, i.e. equal to "".
 
-h| func
+h|func
 |*is_integer* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string can be parsed as an integer.
 
-h| func
+h|func
 |*as_integer* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return the integer corresponding to the integer value represented in this string.
 
-h| func
+h|func
 |*contains* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return True if this String contains `other` (case-sensitive).
@@ -50,21 +50,21 @@ a|Return True if this String contains `other` (case-sensitive).
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*append* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_string[String] +
   *alias* +
 
 a|Concatenation operator - causes `other` to be appended to this string.
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Lexical comparison of string content based on ordering in relevant character set.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -75,7 +75,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -86,7 +86,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

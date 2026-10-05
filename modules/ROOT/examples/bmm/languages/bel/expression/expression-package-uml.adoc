@@ -10,7 +10,7 @@ class EXPR_UNARY_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_ex
         .. access ..
 }
 
-EXPR_UNARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR  
+EXPR_UNARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR
 
 
 EXPR_UNARY_OPERATOR *--> "1 operand" EXPRESSION
@@ -20,7 +20,7 @@ class EXPR_LITERAL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_lite
         item : Any
 }
 
-EXPR_LITERAL -[#gray]up-|> EXPR_LEAF  
+EXPR_LITERAL -[#gray]up-|> EXPR_LEAF
 
 
 enum OPERATOR_KIND [[/openehr-doc/latest/languages/bel-gen.html#_class_operator_kind]] {
@@ -51,16 +51,14 @@ class EXPR_VARIABLE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr
         .. access ..
 }
 
-EXPR_VARIABLE_REF -[#gray]up-|> EXPR_LEAF  
+EXPR_VARIABLE_REF -[#gray]up-|> EXPR_LEAF
 
-
-EXPR_VARIABLE_REF *--> "1 item" VARIABLE_DECLARATION
 
 class EXPR_FOR_ALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_for_all]] {
         .. access ..
 }
 
-EXPR_FOR_ALL -[#gray]up-|> EXPR_OPERATOR  
+EXPR_FOR_ALL -[#gray]up-|> EXPR_OPERATOR
 
 
 EXPR_FOR_ALL *--> "1 condition" ASSERTION
@@ -77,7 +75,7 @@ abstract class EXPRESSION [[/openehr-doc/latest/languages/bel-gen.html#_class_ex
         type: EXPR_TYPE_DEF
 }
 
-EXPRESSION -[#gray]up-|> EXPR_VALUE  
+EXPRESSION -[#gray]up-|> EXPR_VALUE
 
 
 abstract class EXPR_LEAF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_leaf]] {
@@ -85,7 +83,7 @@ abstract class EXPR_LEAF [[/openehr-doc/latest/languages/bel-gen.html#_class_exp
         item :? Any
 }
 
-EXPR_LEAF -[#gray]up-|> EXPRESSION  
+EXPR_LEAF -[#gray]up-|> EXPRESSION
 
 
 abstract class EXPR_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_operator]] {
@@ -94,7 +92,7 @@ abstract class EXPR_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class
         symbol :? String
 }
 
-EXPR_OPERATOR -[#gray]up-|> EXPRESSION  
+EXPR_OPERATOR -[#gray]up-|> EXPRESSION
 
 
 EXPR_OPERATOR *--> "1 operator" OPERATOR_KIND
@@ -103,7 +101,7 @@ class EXPR_BINARY_OPERATOR [[/openehr-doc/latest/languages/bel-gen.html#_class_e
         .. access ..
 }
 
-EXPR_BINARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR  
+EXPR_BINARY_OPERATOR -[#gray]up-|> EXPR_OPERATOR
 
 
 EXPR_BINARY_OPERATOR *--> "1 left_operand" EXPRESSION
@@ -117,20 +115,20 @@ class EXTERNAL_QUERY [[/openehr-doc/latest/languages/bel-gen.html#_class_externa
         query_args :? List<String>
 }
 
-EXTERNAL_QUERY -[#gray]up-|> EXPR_VALUE  
+EXTERNAL_QUERY -[#gray]up-|> EXPR_VALUE
 
 
 class EXPR_VALUE_REF [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_value_ref]] {
 }
 
-EXPR_VALUE_REF -[#gray]up-|> EXPR_LEAF  
+EXPR_VALUE_REF -[#gray]up-|> EXPR_LEAF
 
 
 class EXPR_FUNCTION_CALL [[/openehr-doc/latest/languages/bel-gen.html#_class_expr_function_call]] {
         .. access ..
 }
 
-EXPR_FUNCTION_CALL -[#gray]up-|> EXPR_LEAF  
+EXPR_FUNCTION_CALL -[#gray]up-|> EXPR_LEAF
 
 
 EXPR_FUNCTION_CALL *--> "0..* arguments" EXPRESSION

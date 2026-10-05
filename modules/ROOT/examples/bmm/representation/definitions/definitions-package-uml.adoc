@@ -51,7 +51,7 @@ class OPENEHR_DEFINITIONS [[/openehr-doc/latest/representation/definitions-gen.h
         Local_terminology_id:String
 }
 
-OPENEHR_DEFINITIONS -[#gray]up-|> BASIC_DEFINITIONS  
+OPENEHR_DEFINITIONS -[#gray]up-|> BASIC_DEFINITIONS
 
 
 enum VALIDITY_KIND [[/openehr-doc/latest/representation/definitions-gen.html#_class_validity_kind]] {

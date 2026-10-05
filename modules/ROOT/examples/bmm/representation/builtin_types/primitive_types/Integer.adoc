@@ -13,56 +13,56 @@ h|*Inherit*
 h|
 2+^h|*operators*
 
-h| func
+h|override func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
   *alias* +
 
 a|Integer addition.
 
-h| func
+h|override func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
   *alias* -
 
 a|Integer subtraction.
 
-h| func
+h|override func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
   *alias* *
 
 a|Integer multiplication.
 
-h| func
+h|override func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* /
 
 a|Integer division.
 
-h| func
+h|override func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* ^
 
 a|Integer exponentiation.
 
-h| func
+h|func
 |*modulo* ( +
 mod: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
   *alias* mod
 
 a|Return self modulo other.
 
-h| func
+h|override func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Returns True if current Integer is less than `other`.
 
-h| func
+h|override func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer] +
   *alias* -
 

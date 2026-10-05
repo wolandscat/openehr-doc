@@ -49,7 +49,7 @@ code. For each translation listed here, there must be corresponding sections in 
 language-dependent parts of the resource. The `original_language` does not appear in
 this list.
 
-h| func
+h|func
 |*languages_available* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Total list of languages available in this resource, derived from original_language and
 translations.

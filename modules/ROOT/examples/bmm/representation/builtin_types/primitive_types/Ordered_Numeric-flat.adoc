@@ -14,7 +14,7 @@ h|*Inherit*
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
@@ -26,7 +26,7 @@ semantics for concrete types.
 In conjunction with `=`, enables the definition of the related functions
 `greater_than_()` etc.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -37,7 +37,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -48,7 +48,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥
@@ -59,7 +59,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than or equal to `other`.
 
-h| func
+h|func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* +
@@ -67,7 +67,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref
 a|Sum with `other` (commutative). Actual type of result depends on arithmetic balancing
 rules.
 
-h| func
+h|func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* -
@@ -75,28 +75,28 @@ other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref
 a|Result of subtracting `other`. Actual type of result depends on arithmetic balancing
 rules.
 
-h| func
+h|func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* *
 
 a|Product by `other`. Actual type of result depends on arithmetic balancing rules.
 
-h| func
+h|func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* /
 
 a|Divide by`other`. Actual type of result depends on arithmetic balancing rules.
 
-h| func
+h|func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric]): xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* ^
 
 a|Expontiation of this by `other`.
 
-h| func
+h|func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_numeric[Numeric] +
   *alias* -
 

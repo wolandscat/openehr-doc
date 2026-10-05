@@ -10,13 +10,11 @@ class BMM_PROCEDURE_CALL [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
         .. access ..
 }
 
-BMM_PROCEDURE_CALL -[#gray]up-|> EL_AGENT_CALL  
+BMM_PROCEDURE_CALL -[#gray]up-|> EL_AGENT_CALL
 
 
-BMM_PROCEDURE_CALL -[#gray]up-|> BMM_SIMPLE_STATEMENT  
+BMM_PROCEDURE_CALL -[#gray]up-|> BMM_SIMPLE_STATEMENT
 
-
-BMM_PROCEDURE_CALL *--> "1 agent" EL_PROCEDURE_AGENT
 
 class EL_FUNCTION_CALL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_function_call]] {
         .. access ..
@@ -25,13 +23,11 @@ class EL_FUNCTION_CALL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_fu
         reference: String
 }
 
-EL_FUNCTION_CALL -[#gray]up-|> EL_FEATURE_REF  
+EL_FUNCTION_CALL -[#gray]up-|> EL_FEATURE_REF
 
 
-EL_FUNCTION_CALL -[#gray]up-|> EL_AGENT_CALL  
+EL_FUNCTION_CALL -[#gray]up-|> EL_AGENT_CALL
 
-
-EL_FUNCTION_CALL *--> "1 agent" EL_FUNCTION_AGENT
 
 class EL_PROPERTY_REF [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_property_ref]] {
         .. access ..
@@ -39,7 +35,7 @@ class EL_PROPERTY_REF [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_pro
         eval_type: BMM_TYPE
 }
 
-EL_PROPERTY_REF -[#gray]up-|> EL_FEATURE_REF  
+EL_PROPERTY_REF -[#gray]up-|> EL_FEATURE_REF
 
 
 EL_PROPERTY_REF *--> "1 definition" BMM_PROPERTY
@@ -50,7 +46,7 @@ class EL_TYPE_REF [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_type_re
         eval_type: BMM_TYPE
 }
 
-EL_TYPE_REF -[#gray]up-|> EL_VALUE_GENERATOR  
+EL_TYPE_REF -[#gray]up-|> EL_VALUE_GENERATOR
 
 
 EL_TYPE_REF *--> "1 type" BMM_TYPE
@@ -60,7 +56,7 @@ class EL_WRITABLE_VARIABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_e
         is_writable : Boolean
 }
 
-EL_WRITABLE_VARIABLE -[#gray]up-|> EL_VARIABLE  
+EL_WRITABLE_VARIABLE -[#gray]up-|> EL_VARIABLE
 
 
 EL_WRITABLE_VARIABLE *--> "1 definition" BMM_WRITABLE_VARIABLE
@@ -68,7 +64,7 @@ EL_WRITABLE_VARIABLE *--> "1 definition" BMM_WRITABLE_VARIABLE
 abstract class EL_VARIABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_variable]] {
 }
 
-EL_VARIABLE -[#gray]up-|> EL_VALUE_GENERATOR  
+EL_VARIABLE -[#gray]up-|> EL_VALUE_GENERATOR
 
 
 class EL_READONLY_VARIABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_readonly_variable]] {
@@ -76,7 +72,7 @@ class EL_READONLY_VARIABLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_e
         is_writable : Boolean
 }
 
-EL_READONLY_VARIABLE -[#gray]up-|> EL_VARIABLE  
+EL_READONLY_VARIABLE -[#gray]up-|> EL_VARIABLE
 
 
 EL_READONLY_VARIABLE *--> "1 definition" BMM_READONLY_VARIABLE
@@ -86,7 +82,7 @@ abstract class EL_FEATURE_REF [[/openehr-doc/latest/languages/bmm-gen.html#_clas
         reference: String
 }
 
-EL_FEATURE_REF -[#gray]up-|> EL_VALUE_GENERATOR  
+EL_FEATURE_REF -[#gray]up-|> EL_VALUE_GENERATOR
 
 
 EL_FEATURE_REF *--> "0..1 scoper" EL_VALUE_GENERATOR
@@ -102,7 +98,7 @@ class EL_STATIC_REF [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_stati
         is_writable : Boolean
 }
 
-EL_STATIC_REF -[#gray]up-|> EL_FEATURE_REF  
+EL_STATIC_REF -[#gray]up-|> EL_FEATURE_REF
 
 
 EL_STATIC_REF *--> "1 definition" BMM_STATIC

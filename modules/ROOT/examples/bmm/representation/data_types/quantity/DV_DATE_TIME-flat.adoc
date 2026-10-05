@@ -22,22 +22,22 @@ h|prop +
 |*value*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|ISO8601 date/time string.
 
-h| func
+h|func
 |*magnitude* : xref:representation:builtin_types-gen.adoc#_class_double[Double]
 a|Numeric value of the date/time as seconds since the calendar origin date/time
 `0001-01-01T00:00:00Z`.
 
-h| func
+h|func
 |*add* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Addition of a Duration to this Date/time.
 
-h| func
+h|func
 |*subtract* ( +
 a_diff: xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]): xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]
 a|Subtract a Duration from this Date/time.
 
-h| func
+h|func
 |*diff* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_date_time[DV_DATE_TIME]): xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|Difference between this Date/time and `other`.
@@ -61,7 +61,7 @@ a|Optional status of magnitude with values:
 
 If not present, assumed meaning is `"="` .
 
-h| func
+h|func
 |*accuracy_unknown* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if accuracy is not known, e.g. due to not being recorded or discernable.
 
@@ -84,12 +84,12 @@ h|prop +
 a|Optional tagged other reference ranges for this value in its particular measurement
 context.
 
-h| func
+h|func
 |*is_strictly_comparable_to* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test if two instances are strictly comparable. Effected in descendants.
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -98,11 +98,11 @@ other: xref:representation:data_types-gen.adoc#_class_dv_ordered[DV_ORDERED]): x
 
 a|True if this Ordered object is less than `other`. Redefined in descendants.
 
-h| func
+h|func
 |*is_simple* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this quantity has no reference ranges.
 
-h| func
+h|func
 |*is_normal* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *pre_cond* +
@@ -119,7 +119,7 @@ present, or by the `normal_status` marker if present.
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -130,7 +130,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -141,7 +141,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

@@ -9,7 +9,7 @@ skinparam citedClassColor #FDFDFD
 class PROCEDURE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_procedure]] {
 }
 
-PROCEDURE -[#gray]up-|> ROUTINE  
+PROCEDURE -[#gray]up-|> ROUTINE
 
 
 class ROUTINE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_routine]] {
@@ -21,19 +21,19 @@ class TUPLE [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_t
 class FUNCTION<V:TUPLE, R:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_function]] {
 }
 
-FUNCTION -[#gray]up-|> ROUTINE  
+FUNCTION -[#gray]up-|> ROUTINE
 
 
 class TUPLE2<A:Any, B:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple2]] {
 }
 
-TUPLE2 -[#gray]up-|> TUPLE  
+TUPLE2 -[#gray]up-|> TUPLE
 
 
 class TUPLE1<A:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple1]] {
 }
 
-TUPLE1 -[#gray]up-|> TUPLE  
+TUPLE1 -[#gray]up-|> TUPLE
 
 
 ....

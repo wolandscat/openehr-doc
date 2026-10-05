@@ -33,7 +33,7 @@ h|prop +
 |*source*: xref:representation:identification-gen.adoc#_class_party_ref[PARTY_REF]
 a|Source of relationship.
 
-h| func
+h|func
 |*type* : xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]
 a|Type of relationship, such as employment, authority, health provision
 

@@ -12,7 +12,7 @@ class FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_folder]
         details :? ITEM_STRUCTURE
 }
 
-FOLDER -[#gray]up-|> LOCATABLE  
+FOLDER -[#gray]up-|> LOCATABLE
 
 
 FOLDER *--> "0..* folders" FOLDER
@@ -20,7 +20,7 @@ FOLDER *--> "0..* folders" FOLDER
 class VERSIONED_EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_status]] {
 }
 
-VERSIONED_EHR_STATUS -[#gray]up-|> VERSIONED_OBJECT  
+VERSIONED_EHR_STATUS -[#gray]up-|> VERSIONED_OBJECT
 
 
 class VERSIONED_COMPOSITION [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_composition]] {
@@ -28,13 +28,13 @@ class VERSIONED_COMPOSITION [[/openehr-doc/latest/domain-healthcare/ehr-gen.html
         is_persistent: Boolean
 }
 
-VERSIONED_COMPOSITION -[#gray]up-|> VERSIONED_OBJECT  
+VERSIONED_COMPOSITION -[#gray]up-|> VERSIONED_OBJECT
 
 
 class VERSIONED_FOLDER [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_folder]] {
 }
 
-VERSIONED_FOLDER -[#gray]up-|> VERSIONED_OBJECT  
+VERSIONED_FOLDER -[#gray]up-|> VERSIONED_OBJECT
 
 
 class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr_status]] {
@@ -45,13 +45,13 @@ class EHR_STATUS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr
         other_details :? ITEM_STRUCTURE
 }
 
-EHR_STATUS -[#gray]up-|> LOCATABLE  
+EHR_STATUS -[#gray]up-|> LOCATABLE
 
 
 class VERSIONED_EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_versioned_ehr_access]] {
 }
 
-VERSIONED_EHR_ACCESS -[#gray]up-|> VERSIONED_OBJECT  
+VERSIONED_EHR_ACCESS -[#gray]up-|> VERSIONED_OBJECT
 
 
 class EHR [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr]] {
@@ -73,7 +73,7 @@ class EHR_ACCESS [[/openehr-doc/latest/domain-healthcare/ehr-gen.html#_class_ehr
         scheme: String
 }
 
-EHR_ACCESS -[#gray]up-|> LOCATABLE  
+EHR_ACCESS -[#gray]up-|> LOCATABLE
 
 
 EHR_ACCESS *--> "0..1 settings" ACCESS_CONTROL_SETTINGS

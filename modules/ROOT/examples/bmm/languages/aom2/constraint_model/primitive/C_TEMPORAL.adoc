@@ -19,19 +19,19 @@ h|prop +
 a|Optional alternative constraint in the form of a pattern based on ISO8601. See descendants
 for details.
 
-h| func
+h|func
 |*valid_pattern_constraint* ( +
 a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_pattern` is a valid constraint. Define in concrete descendants.
 
-h| func
+h|func
 |*valid_pattern_constraint_replacement* ( +
 a_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 an_other_pattern: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return True if `a_pattern` can be replaced by `an_other_pattern` in a specialised
 constraint. Define in concrete subtypes.
 
-h| func
+h|override func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -40,13 +40,13 @@ h| func
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
-h| func
+h|override func
 |*c_value_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `precursor()` or else `other.pattern_constraint` is empty, or else
 `pattern_constraint` is a valid (narrower) replacement for `other.pattern_constraint`.
 
-h| func
+h|override func
 |*c_value_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `precursor (other)` and `pattern_constraint_ ~ _other.pattern_constraint`, i.e.

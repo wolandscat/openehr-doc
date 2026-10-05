@@ -14,18 +14,18 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*root* : xref:representation:identification-gen.adoc#_class_uid[UID]
 a|The identifier of the conceptual namespace in which the object exists, within the
 identification scheme. Returns the part to the left of the first '::' separator, if any,
 or else the whole string.
 
-h| func
+h|func
 |*extension* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Optional local identifier of the object within the context of the root identifier. Returns
 the part to the right of the first '::' separator if any, or else any empty String.
 
-h| func
+h|func
 |*has_extension* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if not `extension_.is_empty()`.
 

@@ -17,7 +17,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*as_hierarchy* : xref:representation:data_structures-gen.adoc#_class_item[ITEM]
 a|Hierarchical equivalent of the physical representation of each subtype, compatible with
 CEN EN 13606 structures.

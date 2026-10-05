@@ -34,7 +34,7 @@ a|True if this slot specification in this artefact is closed to further filling 
 further specialisations or at runtime. Default value False, i.e. unless explicitly set, a
 slot remains open.
 
-h| func
+h|func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if no constraints stated, and slot is not closed.
 

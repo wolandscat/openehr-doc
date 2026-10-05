@@ -33,7 +33,7 @@ abstract class BMM_SCHEMA [[/openehr-doc/latest/languages/bmm-gen.html#_class_bm
         read_to_validate: Boolean
 }
 
-BMM_SCHEMA -[#gray]up-|> BMM_MODEL_METADATA  
+BMM_SCHEMA -[#gray]up-|> BMM_MODEL_METADATA
 
 
 BMM_SCHEMA *--> "1 state" BMM_SCHEMA_STATE

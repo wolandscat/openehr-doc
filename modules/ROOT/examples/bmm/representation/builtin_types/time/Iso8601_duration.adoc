@@ -19,52 +19,52 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*years* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of years in the `value`, i.e. the number preceding the `'Y'` in the `'YMD'` part,
 if one exists.
 
-h| func
+h|func
 |*months* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of months in the `value`, i.e. the value preceding the `'M'` in the `'YMD'` part,
 if one exists.
 
-h| func
+h|func
 |*weeks* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of weeks in the `value`, i.e. the value preceding the `W`, if one exists.
 
-h| func
+h|func
 |*days* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of days in the `value`, i.e. the number preceding the `'D'` in the `'YMD'` part,
 if one exists.
 
-h| func
+h|func
 |*hours* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of hours in the `value`, i.e. the number preceding the `'H'` in the `'HMS'` part,
 if one exists.
 
-h| func
+h|func
 |*minutes* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of minutes in the `value`, i.e. the number preceding the `'M'` in the `'HMS'`
 part, if one exists.
 
-h| func
+h|func
 |*seconds* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of seconds in the `value`, i.e. the integer number preceding the `'S'` in the
 `'HMS'` part, if one exists.
 
-h| func
+h|func
 |*fractional_seconds* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Fractional seconds in the `value`, i.e. the decimal part of the number preceding the
 `'S'` in the `'HMS'` part, if one exists.
 
-h| func
+h|func
 |*to_seconds* : xref:representation:builtin_types-gen.adoc#_class_real[Real]
 a|Total number of seconds equivalent (including fractional) of entire duration. Where non-
 definite elements such as year and month (i.e. 'Y' and 'M') are included, the
 corresponding 'average' durations from `Time_definitions` are used to compute the result.
 
-h| func
+h|func
 |*as_string* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Return the duration string value.
 

@@ -75,7 +75,7 @@ h|prop +
 |*other_details*: xref:representation:builtin_types-gen.adoc#_class_map[Map]<xref:representation:builtin_types-gen.adoc#_class_string[String],xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|Other details about the content item.
 
-h|prop +
+h|override prop +
   0..1
 |*item*: xref:representation:data_marking-gen.adoc#_class_locatable[LOCATABLE]
 a|Content object.

@@ -14,56 +14,56 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*floor* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return the greatest integer no greater than the value of this object.
 
 h|
 2+^h|*operators*
 
-h| func
+h|override func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* +
 
 a|Double-precision real number addition.
 
-h| func
+h|override func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* -
 
 a|Double-precision real number subtraction.
 
-h| func
+h|override func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* *
 
 a|Double-precision real number multiplication.
 
-h| func
+h|override func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* /
 
 a|Double-precision real number division.
 
-h| func
+h|override func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* ^
 
 a|Double-precision real number exponentiation.
 
-h| func
+h|override func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Returns True if current Double is less than `other`.
 
-h| func
+h|override func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* -
 

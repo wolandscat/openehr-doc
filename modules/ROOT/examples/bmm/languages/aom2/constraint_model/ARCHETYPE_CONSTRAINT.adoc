@@ -25,20 +25,20 @@ h|prop +
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 
-h| func
+h|func
 |*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is prohibited. Implemented in subtypes.
 
-h| func
+h|func
 |*has_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the relative path `a_path` exists at this node.
 
-h| func
+h|func
 |*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Path of this node relative to root of archetype.
 
-h| func
+h|func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
@@ -52,7 +52,7 @@ Parameters
       `rm_type_name` of the current node and the `rm_type_name` of the node being redefined
       in a specialisation parent archetype.
 
-h| func
+h|func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if constraints represented by this node contain no further redefinitions with respect
@@ -60,7 +60,7 @@ to the node other, with the exception of `node_id` redefinition in `C_OBJECT` no
 
 Typically used to test if an inherited node locally contains any constraints.
 
-h| func
+h|func
 |*is_second_order_constrained* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -68,11 +68,11 @@ h| func
 
 a|True if there is a second order constraint such as a tuple constraint on this node.
 
-h| func
+h|func
 |*is_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of the tree.
 
-h| func
+h|func
 |*is_leaf* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is a terminal node in the tree structure, i.e. having no child nodes.
 

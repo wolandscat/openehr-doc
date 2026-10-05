@@ -17,20 +17,20 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*period* : xref:representation:data_types-gen.adoc#_class_dv_duration[DV_DURATION]
 a|The period of the repetition, computationally derived from the syntax representation.
 Extracted from the value' attribute.
 
-h| func
+h|override func
 |*calendar_alignment* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Calendar alignment extracted from value.
 
-h| func
+h|override func
 |*event_alignment* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Event alignment extracted from value.
 
-h| func
+h|override func
 |*institution_specified* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Extracted from value.
 

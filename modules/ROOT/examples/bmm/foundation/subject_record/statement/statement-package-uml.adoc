@@ -8,9 +8,9 @@ skinparam citedClassColor #FDFDFD
 abstract class "representation.data_marking.\nLOCATABLE" as LOCATABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_locatable]] #FDFDFD {
 }
 
-LOCATABLE -[#gray]up-|> PATHABLE  
+LOCATABLE -[#gray]up-|> PATHABLE
 
-CONTENT_ITEM -[#gray]up-|> LOCATABLE  
+CONTENT_ITEM -[#gray]up-|> LOCATABLE
 
 class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_observation]] {
         .. access ..
@@ -18,7 +18,7 @@ class OBSERVATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         state :? HISTORY<ITEM_STRUCTURE>
 }
 
-OBSERVATION -[#gray]up-|> CARE_ENTRY  
+OBSERVATION -[#gray]up-|> CARE_ENTRY
 
 
 class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_ism_transition]] {
@@ -29,7 +29,7 @@ class ISM_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_c
         reason :? List<DV_TEXT>
 }
 
-ISM_TRANSITION -[#gray]up-|> PATHABLE  
+ISM_TRANSITION -[#gray]up-|> PATHABLE
 
 
 class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_activity]] {
@@ -39,7 +39,7 @@ class ACTIVITY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_a
         action_archetype_id : String
 }
 
-ACTIVITY -[#gray]up-|> LOCATABLE  
+ACTIVITY -[#gray]up-|> LOCATABLE
 
 
 enum INSTRUCTION_EXECUTION_STATE [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_state]] {
@@ -62,7 +62,7 @@ class INSTRUCTION_DETAILS [[/openehr-doc/latest/foundation/subject_record-gen.ht
         wf_details :? ITEM_STRUCTURE
 }
 
-INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE  
+INSTRUCTION_DETAILS -[#gray]up-|> PATHABLE
 
 
 enum INSTRUCTION_EXECUTION_TRANSITION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_instruction_execution_transition]] {
@@ -92,7 +92,7 @@ class EVALUATION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class
         data : ITEM_STRUCTURE
 }
 
-EVALUATION -[#gray]up-|> CARE_ENTRY  
+EVALUATION -[#gray]up-|> CARE_ENTRY
 
 
 abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_care_entry]] {
@@ -101,7 +101,7 @@ abstract class CARE_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.ht
         guideline_id :? OBJECT_REF
 }
 
-CARE_ENTRY -[#gray]up-|> ENTRY  
+CARE_ENTRY -[#gray]up-|> ENTRY
 
 
 abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_entry]] {
@@ -114,7 +114,7 @@ abstract class ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_c
         subject_is_self: Boolean
 }
 
-ENTRY -[#gray]up-|> CONTENT_ITEM  
+ENTRY -[#gray]up-|> CONTENT_ITEM
 
 
 ENTRY *--> "0..* other_participations" PARTICIPATION
@@ -126,7 +126,7 @@ class INSTRUCTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         wf_definition :? DV_PARSABLE
 }
 
-INSTRUCTION -[#gray]up-|> CARE_ENTRY  
+INSTRUCTION -[#gray]up-|> CARE_ENTRY
 
 
 INSTRUCTION *--> "0..* activities" ACTIVITY
@@ -137,7 +137,7 @@ class ACTION [[/openehr-doc/latest/foundation/subject_record-gen.html#_class_act
         description : ITEM_STRUCTURE
 }
 
-ACTION -[#gray]up-|> CARE_ENTRY  
+ACTION -[#gray]up-|> CARE_ENTRY
 
 
 ACTION *--> "1 ism_transition" ISM_TRANSITION
@@ -149,7 +149,7 @@ class ADMIN_ENTRY [[/openehr-doc/latest/foundation/subject_record-gen.html#_clas
         data : ITEM_STRUCTURE
 }
 
-ADMIN_ENTRY -[#gray]up-|> ENTRY  
+ADMIN_ENTRY -[#gray]up-|> ENTRY
 
 abstract class "representation.data_marking.\nPATHABLE" as PATHABLE  [[/openehr-doc/latest/representation/data_marking-gen.html#_class_pathable]] #FDFDFD {
 }

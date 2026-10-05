@@ -52,7 +52,7 @@ h|prop +
 a|Flag indicating whether this attribute constraint is on a container (i.e. multiply-valued)
 attribute.
 
-h| func
+h|func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -61,7 +61,7 @@ h| func
 a|True if there is no effective constraint on the children of the RM attribute to which this
 `C_ATTRIBUTE` refers.
 
-h| func
+h|func
 |*is_mandatory* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -69,17 +69,17 @@ h| func
 
 a|True if this `C_ATTRIBUTE` has an existence constraint of 1..1, i.e. mandation.
 
-h| func
+h|func
 |*rm_attribute_path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Path of this attribute with respect to owning `C_OBJECT`, including differential path
 where applicable.
 
-h| func
+h|func
 |*is_single* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node logically represents a single-valued attribute. Evaluated as not
 `is_multiple`.
 
-h| func
+h|func
 |*c_congruent_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -91,7 +91,7 @@ to the node other, with the exception of `node_id` redefinition in `C_OBJECT` no
 
 Typically used to test if an inherited node locally contains any constraints.
 
-h| func
+h|func
 |*c_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT], +
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
@@ -102,7 +102,7 @@ rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
 same as other. Typically used during validation of specialised archetype nodes.
 
-h| func
+h|func
 |*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -110,12 +110,12 @@ h| func
 
 a|True if this `C_ATTRIBUTE` has an existence constraint of `0..0`, i.e. prohibition.
 
-h| func
+h|func
 |*existence_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the existence of this node conforms to other.existence
 
-h| func
+h|func
 |*cardinality_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_attribute[C_ATTRIBUTE]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the cardinality of this node conforms to other.cardinality, if it exists
@@ -131,16 +131,16 @@ h|prop +
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
 
-h| func
+h|func
 |*has_path* ( +
 a_path: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the relative path `a_path` exists at this node.
 
-h| func
+h|func
 |*path* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Path of this node relative to root of archetype.
 
-h| func
+h|func
 |*is_second_order_constrained* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
@@ -148,22 +148,22 @@ h| func
 
 a|True if there is a second order constraint such as a tuple constraint on this node.
 
-h| func
+h|func
 |*is_root* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is the root of the tree.
 
-h| func
+h|func
 |*is_leaf* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this node is a terminal node in the tree structure, i.e. having no child nodes.
 
-h| func
+h|func
 |*codes_conformant* ( +
 a_child_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_parent_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_child_code` conforms to `a_parent_code` in the sense of specialisation,
 i.e. is `a_child_code` the same as or more specialised than `a_parent_code`?
 
-h| func
+h|func
 |*is_adl_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -172,7 +172,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is any kind of ADL archetype local code.
 
-h| func
+h|func
 |*is_at_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -181,7 +181,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code.
 
-h| func
+h|func
 |*is_id_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -190,7 +190,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'id' code.
 
-h| func
+h|func
 |*is_value_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -199,7 +199,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'at' code representing a single terminology item.
 
-h| func
+h|func
 |*is_value_set_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -208,7 +208,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|True if `a_code` is an 'ac' code, i.e. a code referring to a terminology value set.
 
-h| func
+h|func
 |*is_redefined_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|A code has been specialised if there is a non-zero code index anywhere above the last
@@ -217,7 +217,7 @@ index e.g.
 * `at0.0.1` -> False
 * `at1.0.1` -> True
 
-h| func
+h|func
 |*code_exists_at_level* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_level: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

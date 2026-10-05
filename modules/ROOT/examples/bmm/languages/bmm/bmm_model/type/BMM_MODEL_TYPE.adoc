@@ -23,11 +23,11 @@ h|prop +
 |*base_class*: xref:languages:bmm-gen.adoc#_class_bmm_class[BMM_CLASS]
 a|Base class of this type.
 
-h| func
+h|override func
 |*type_base_name* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Result = `base_class.name`.
 
-h| func
+h|override func
 |*is_primitive* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Result = `base_class.is_primitive`.
 

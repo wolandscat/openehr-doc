@@ -42,21 +42,21 @@ h|prop +
 a|Function call equivalent to this operator expression, inferred by matching operator
 against functions defined in interface of principal operand.
 
-h| func
+h|func
 |*operator_definition* : xref:languages:bmm-gen.adoc#_class_bmm_operator[BMM_OPERATOR]
 a|Operator definition derived from `definition.operator_definition()`.
 
-h| func
+h|func
 |*equivalent_call* : xref:languages:bmm-gen.adoc#_class_el_function_call[EL_FUNCTION_CALL]
 a|Function call equivalent to this operator.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Meta-type of expression entity used in type-checking and evaluation.
 
 Effected in descendants.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

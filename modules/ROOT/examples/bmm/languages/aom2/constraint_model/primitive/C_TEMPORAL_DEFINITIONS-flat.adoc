@@ -76,7 +76,7 @@ An empty list value indicates no replacements possible.
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*valid_duration_constraint_replacement* ( +
 a_dur: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 other_dur: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
@@ -84,25 +84,25 @@ a|True if ISO8601 duration string `other_dur` contains every character element i
 `a_dur`. For example: 'PYD' (period with year and days only) conforms to 'PYMD', but
 doesn't conform to 'PY'.
 
-h| func
+h|func
 |*valid_iso8601_date_constraint_pattern* ( +
 s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string literal like `"yyyy-MM-dd"` containing `"XX"` or `"??"` in `MM` or `dd`
 slots in pattern constraint is in `valid_date_constraint_patterns`.
 
-h| func
+h|func
 |*valid_iso8601_time_constraint_pattern* ( +
 s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string literal like `"hh:mm:ss[.ssss]"` containing `"XX"` or `"??"` in `mm` or
 `ss` slots in pattern constraint is in `valid_time_constraint_patterns`.
 
-h| func
+h|func
 |*valid_iso8601_date_time_constraint_pattern* ( +
 s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string literal in form `"yyyy-MM-dd hh:mm:ss[.ssss]"` containing `"XX"` or `"??"`
 in variable slots in pattern constraint is in `valid_date_time_constraint_patterns`.
 
-h| func
+h|func
 |*valid_iso8601_duration_constraint_pattern* ( +
 s: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if string in form P[Y][M][W][D][T[H][M][S]] is a valid ISO 8601 duration

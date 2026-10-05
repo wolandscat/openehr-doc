@@ -49,7 +49,7 @@ h|prop +
 a|The events in the series. This attribute is of a generic type whose parameter must be a
 descendant of `ITEM_SUTRUCTURE`.
 
-h| func
+h|func
 |*is_periodic* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Indicates whether history is periodic.
 

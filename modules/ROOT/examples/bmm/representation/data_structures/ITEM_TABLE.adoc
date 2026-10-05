@@ -32,59 +32,59 @@ h|prop +
 a|Physical representation of the table as a list of `CLUSTERs`, each containing the data of
 one row of the table.
 
-h| func
+h|func
 |*row_count* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Number of rows in the table.
 
-h| func
+h|func
 |*column_count* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return number of columns in the table.
 
-h| func
+h|func
 |*row_names* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]>
 a|Return set of row names.
 
-h| func
+h|func
 |*column_names* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_text[DV_TEXT]>
 a|Return set of column names.
 
-h| func
+h|func
 |*ith_row* ( +
 i: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:data_structures-gen.adoc#_class_cluster[CLUSTER]
 a|Return i-th row.
 
-h| func
+h|func
 |*has_row_with_name* ( +
 a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return `True` if there is a column with name = `a_key`.
 
-h| func
+h|func
 |*has_column_with_name* ( +
 a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return `True` if there is a column with name = `a_key`.
 
-h| func
+h|func
 |*named_row* ( +
 a_name: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:data_structures-gen.adoc#_class_cluster[CLUSTER]
 a|Return row with name = `a_key`.
 
-h| func
+h|func
 |*has_row_with_key* ( +
 keys: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Return `True` if there is a row with key `keys`.
 
-h| func
+h|func
 |*row_with_key* ( +
 keys: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>): xref:representation:data_structures-gen.adoc#_class_cluster[CLUSTER]
 a|Return rows with particular keys.
 
-h| func
+h|func
 |*element_at_cell_ij* ( +
 i: xref:representation:builtin_types-gen.adoc#_class_integer[Integer], +
 j: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]): xref:representation:data_structures-gen.adoc#_class_element[ELEMENT]
 a|Return cell at a particular location.
 
-h| func
+h|override func
 |*as_hierarchy* : xref:representation:data_structures-gen.adoc#_class_cluster[CLUSTER]
 a|Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing
 the `CLUSTERs` representing the columns of this table.

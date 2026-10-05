@@ -19,10 +19,10 @@ class BMM_MODEL [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_model]] 
         is_descendant_of(a_class_name: String, ...): Boolean
 }
 
-BMM_MODEL -[#gray]up-|> BMM_PACKAGE_CONTAINER  
+BMM_MODEL -[#gray]up-|> BMM_PACKAGE_CONTAINER
 
 
-BMM_MODEL -[#gray]up-|> BMM_MODEL_METADATA  
+BMM_MODEL -[#gray]up-|> BMM_MODEL_METADATA
 
 
 BMM_MODEL *--> "0..* used_models" BMM_MODEL
@@ -56,7 +56,7 @@ abstract class BMM_PACKAGE_CONTAINER [[/openehr-doc/latest/languages/bmm-gen.htm
         has_package_path(a_path: String): Boolean
 }
 
-BMM_PACKAGE_CONTAINER -[#gray]up-|> BMM_MODEL_ELEMENT  
+BMM_PACKAGE_CONTAINER -[#gray]up-|> BMM_MODEL_ELEMENT
 
 
 BMM_PACKAGE_CONTAINER *--> "0..* packages" BMM_PACKAGE
@@ -68,7 +68,7 @@ abstract class BMM_FORMAL_ELEMENT [[/openehr-doc/latest/languages/bmm-gen.html#_
         is_boolean: Boolean
 }
 
-BMM_FORMAL_ELEMENT -[#gray]up-|> BMM_MODEL_ELEMENT  
+BMM_FORMAL_ELEMENT -[#gray]up-|> BMM_MODEL_ELEMENT
 
 
 BMM_FORMAL_ELEMENT *--> "1 type" BMM_TYPE
@@ -79,7 +79,7 @@ class BMM_PACKAGE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_packag
         path: String
 }
 
-BMM_PACKAGE -[#gray]up-|> BMM_PACKAGE_CONTAINER  
+BMM_PACKAGE -[#gray]up-|> BMM_PACKAGE_CONTAINER
 
 
 BMM_PACKAGE *--> "0..* members" BMM_MODULE
@@ -99,10 +99,8 @@ abstract class BMM_MODULE [[/openehr-doc/latest/languages/bmm-gen.html#_class_bm
         .. access ..
 }
 
-BMM_MODULE -[#gray]up-|> BMM_MODEL_ELEMENT  
+BMM_MODULE -[#gray]up-|> BMM_MODEL_ELEMENT
 
-
-BMM_MODULE *--> "1 scope" BMM_MODEL
 
 BMM_MODULE *--> "0..* feature_groups" BMM_FEATURE_GROUP
 

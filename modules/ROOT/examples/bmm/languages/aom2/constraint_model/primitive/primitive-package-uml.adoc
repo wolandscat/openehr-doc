@@ -17,7 +17,7 @@ class C_BOOLEAN [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_boolean]]
         c_value_congruent_to(other: C_BOOLEAN): Boolean
 }
 
-C_BOOLEAN -[#gray]up-|> C_PRIMITIVE_OBJECT  
+C_BOOLEAN -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 
 class C_REAL [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_real]] {
@@ -27,7 +27,7 @@ class C_REAL [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_real]] {
         assumed_value :? Real
 }
 
-C_REAL -[#gray]up-|> C_ORDERED  
+C_REAL -[#gray]up-|> C_ORDERED
 
 
 abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal]] {
@@ -40,7 +40,7 @@ abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.h
         c_value_congruent_to(other: C_ORDERED<T>): Boolean
 }
 
-C_TEMPORAL -[#gray]up-|> C_ORDERED  
+C_TEMPORAL -[#gray]up-|> C_ORDERED
 
 
 class C_TEMPORAL_DEFINITIONS [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal_definitions]] {
@@ -75,7 +75,7 @@ class C_DURATION [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_duration
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
 }
 
-C_DURATION -[#gray]up-|> C_TEMPORAL  
+C_DURATION -[#gray]up-|> C_TEMPORAL
 
 
 class C_DATE_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date_time]] {
@@ -93,7 +93,7 @@ class C_DATE_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date_ti
         timezone_validity: VALIDITY_KIND
 }
 
-C_DATE_TIME -[#gray]up-|> C_TEMPORAL  
+C_DATE_TIME -[#gray]up-|> C_TEMPORAL
 
 
 class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
@@ -107,7 +107,7 @@ class C_DATE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_date]] {
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
 }
 
-C_DATE -[#gray]up-|> C_TEMPORAL  
+C_DATE -[#gray]up-|> C_TEMPORAL
 
 
 class C_PRIMITIVE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_tuple]] {
@@ -116,10 +116,8 @@ class C_PRIMITIVE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_p
         c_congruent_to(other: C_SECOND_ORDER): Boolean
 }
 
-C_PRIMITIVE_TUPLE -[#gray]up-|> C_SECOND_ORDER  
+C_PRIMITIVE_TUPLE -[#gray]up-|> C_SECOND_ORDER
 
-
-C_PRIMITIVE_TUPLE *--> "0..* members" C_PRIMITIVE_OBJECT
 
 class C_INTEGER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_integer]] {
         .. access ..
@@ -128,7 +126,7 @@ class C_INTEGER [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_integer]]
         assumed_value :? Integer
 }
 
-C_INTEGER -[#gray]up-|> C_ORDERED  
+C_INTEGER -[#gray]up-|> C_ORDERED
 
 
 class C_STRING [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_string]] {
@@ -143,7 +141,7 @@ class C_STRING [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_string]] {
         c_value_congruent_to(other: C_STRING): Boolean
 }
 
-C_STRING -[#gray]up-|> C_PRIMITIVE_OBJECT  
+C_STRING -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 
 class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
@@ -159,7 +157,7 @@ class C_TIME [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_time]] {
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
 }
 
-C_TIME -[#gray]up-|> C_TEMPORAL  
+C_TIME -[#gray]up-|> C_TEMPORAL
 
 
 abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_object]] {
@@ -175,7 +173,7 @@ abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#
         c_value_congruent_to(other: C_PRIMITIVE_OBJECT): Boolean
 }
 
-C_PRIMITIVE_OBJECT -[#gray]up-|> C_DEFINED_OBJECT  
+C_PRIMITIVE_OBJECT -[#gray]up-|> C_DEFINED_OBJECT
 
 
 abstract class C_ORDERED<T:Ordered> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_ordered]] {
@@ -188,7 +186,7 @@ abstract class C_ORDERED<T:Ordered> [[/openehr-doc/latest/languages/aom2-gen.htm
         c_value_congruent_to(other: C_ORDERED<T>): Boolean
 }
 
-C_ORDERED -[#gray]up-|> C_PRIMITIVE_OBJECT  
+C_ORDERED -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 
 class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_terminology_code]] {
@@ -208,7 +206,7 @@ class C_TERMINOLOGY_CODE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_
         c_value_congruent_to(other: C_TERMINOLOGY_CODE): Boolean
 }
 
-C_TERMINOLOGY_CODE -[#gray]up-|> C_PRIMITIVE_OBJECT  
+C_TERMINOLOGY_CODE -[#gray]up-|> C_PRIMITIVE_OBJECT
 
 
 C_TERMINOLOGY_CODE *--> "0..1 constraint_status" CONSTRAINT_STATUS

@@ -67,7 +67,7 @@ h|prop +
 a|Identifier of externally held workflow engine data for this workflow execution, for this
 subject of care.
 
-h| func
+h|func
 |*subject_is_self* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

@@ -17,7 +17,7 @@ class ARCHETYPE_TERM [[/openehr-doc/latest/languages/aom2-gen.html#_class_archet
 class VALUE_SET [[/openehr-doc/latest/languages/aom2-gen.html#_class_value_set]] {
 }
 
-VALUE_SET -[#gray]up-|> TERMINOLOGY_RELATION  
+VALUE_SET -[#gray]up-|> TERMINOLOGY_RELATION
 
 
 abstract class TERMINOLOGY_RELATION [[/openehr-doc/latest/languages/aom2-gen.html#_class_terminology_relation]] {

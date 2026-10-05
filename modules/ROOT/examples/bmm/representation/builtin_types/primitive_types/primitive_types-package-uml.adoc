@@ -19,13 +19,13 @@ class Double [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_
         negative: Double
 }
 
-Double -[#gray]up-|> Ordered_Numeric  
+Double -[#gray]up-|> Ordered_Numeric
 
 
 class Character [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_character]] {
 }
 
-Character -[#gray]up-|> Ordered  
+Character -[#gray]up-|> Ordered
 
 
 class String [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_string]] {
@@ -39,13 +39,13 @@ class String [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_
         less_than(other: String): Boolean
 }
 
-String -[#gray]up-|> Ordered  
+String -[#gray]up-|> Ordered
 
 
 class Uri [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_uri]] {
 }
 
-Uri -[#gray]up-|> String  
+Uri -[#gray]up-|> String
 
 
 class Real [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_real]] {
@@ -61,7 +61,7 @@ class Real [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_re
         negative: Real
 }
 
-Real -[#gray]up-|> Ordered_Numeric  
+Real -[#gray]up-|> Ordered_Numeric
 
 
 class Integer [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_integer]] {
@@ -76,7 +76,7 @@ class Integer [[/openehr-doc/latest/representation/builtin_types-gen.html#_class
         negative: Integer
 }
 
-Integer -[#gray]up-|> Ordered_Numeric  
+Integer -[#gray]up-|> Ordered_Numeric
 
 
 class Boolean [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_boolean]] {
@@ -93,10 +93,10 @@ class Boolean [[/openehr-doc/latest/representation/builtin_types-gen.html#_class
 abstract class Ordered_Numeric [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_ordered_numeric]] {
 }
 
-Ordered_Numeric -[#gray]up-|> Ordered  
+Ordered_Numeric -[#gray]up-|> Ordered
 
 
-Ordered_Numeric -[#gray]up-|> Numeric  
+Ordered_Numeric -[#gray]up-|> Numeric
 
 
 class Integer64 [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_integer64]] {
@@ -111,7 +111,7 @@ class Integer64 [[/openehr-doc/latest/representation/builtin_types-gen.html#_cla
         negative: Integer64
 }
 
-Integer64 -[#gray]up-|> Ordered_Numeric  
+Integer64 -[#gray]up-|> Ordered_Numeric
 
 
 abstract class Ordered [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_ordered]] {
@@ -135,7 +135,7 @@ abstract class Numeric [[/openehr-doc/latest/representation/builtin_types-gen.ht
 class Octet [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_octet]] {
 }
 
-Octet -[#gray]up-|> Ordered  
+Octet -[#gray]up-|> Ordered
 
 
 ....

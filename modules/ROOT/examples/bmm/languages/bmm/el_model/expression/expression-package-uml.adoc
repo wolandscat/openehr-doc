@@ -10,7 +10,7 @@ class EL_UNARY_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_u
         .. access ..
 }
 
-EL_UNARY_OPERATOR -[#gray]up-|> EL_OPERATOR  
+EL_UNARY_OPERATOR -[#gray]up-|> EL_OPERATOR
 
 
 EL_UNARY_OPERATOR *--> "1 operand" EL_EXPRESSION
@@ -20,7 +20,7 @@ class EL_LITERAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_literal]
         eval_type: BMM_TYPE
 }
 
-EL_LITERAL -[#gray]up-|> EL_SIMPLE  
+EL_LITERAL -[#gray]up-|> EL_SIMPLE
 
 
 EL_LITERAL *--> "1 value" BMM_LITERAL_VALUE
@@ -28,7 +28,7 @@ EL_LITERAL *--> "1 value" BMM_LITERAL_VALUE
 abstract class EL_TERMINAL [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_terminal]] {
 }
 
-EL_TERMINAL -[#gray]up-|> EL_EXPRESSION  
+EL_TERMINAL -[#gray]up-|> EL_EXPRESSION
 
 
 class EL_TUPLE_ITEM [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple_item]] {
@@ -42,7 +42,7 @@ class EL_BINARY_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_
         .. access ..
 }
 
-EL_BINARY_OPERATOR -[#gray]up-|> EL_OPERATOR  
+EL_BINARY_OPERATOR -[#gray]up-|> EL_OPERATOR
 
 
 EL_BINARY_OPERATOR *--> "1 left_operand" EL_EXPRESSION
@@ -54,7 +54,7 @@ class EL_TUPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_tuple]] {
         eval_type: BMM_TYPE
 }
 
-EL_TUPLE -[#gray]up-|> EL_EXPRESSION  
+EL_TUPLE -[#gray]up-|> EL_EXPRESSION
 
 
 EL_TUPLE *--> "0..* items" EL_TUPLE_ITEM
@@ -64,14 +64,14 @@ EL_TUPLE *--> "1 type" BMM_TUPLE_TYPE
 abstract class EL_SIMPLE [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_simple]] {
 }
 
-EL_SIMPLE -[#gray]up-|> EL_TERMINAL  
+EL_SIMPLE -[#gray]up-|> EL_TERMINAL
 
 
 abstract class EL_CONSTRAINED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_constrained]] {
         .. access ..
 }
 
-EL_CONSTRAINED -[#gray]up-|> EL_EXPRESSION  
+EL_CONSTRAINED -[#gray]up-|> EL_EXPRESSION
 
 
 EL_CONSTRAINED *--> "1 base_expression" EL_EXPRESSION
@@ -84,7 +84,7 @@ abstract class EL_OPERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_class_e
         equivalent_call: EL_FUNCTION_CALL
 }
 
-EL_OPERATOR -[#gray]up-|> EL_EXPRESSION  
+EL_OPERATOR -[#gray]up-|> EL_EXPRESSION
 
 
 EL_OPERATOR *--> "1 call" EL_FUNCTION_CALL
@@ -94,7 +94,7 @@ abstract class EL_PREDICATE [[/openehr-doc/latest/languages/bmm-gen.html#_class_
         eval_type: BMM_SIMPLE_TYPE
 }
 
-EL_PREDICATE -[#gray]up-|> EL_SIMPLE  
+EL_PREDICATE -[#gray]up-|> EL_SIMPLE
 
 
 EL_PREDICATE *--> "1 operand" EL_VALUE_GENERATOR
@@ -106,13 +106,13 @@ abstract class EL_VALUE_GENERATOR [[/openehr-doc/latest/languages/bmm-gen.html#_
         reference: String
 }
 
-EL_VALUE_GENERATOR -[#gray]up-|> EL_SIMPLE  
+EL_VALUE_GENERATOR -[#gray]up-|> EL_SIMPLE
 
 
 class EL_DEFINED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_defined]] {
 }
 
-EL_DEFINED -[#gray]up-|> EL_PREDICATE  
+EL_DEFINED -[#gray]up-|> EL_PREDICATE
 
 
 abstract class EL_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_expression]] {
@@ -124,13 +124,13 @@ abstract class EL_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class
 class EL_ATTACHED [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_attached]] {
 }
 
-EL_ATTACHED -[#gray]up-|> EL_PREDICATE  
+EL_ATTACHED -[#gray]up-|> EL_PREDICATE
 
 
 class EL_BOOLEAN_EXPRESSION [[/openehr-doc/latest/languages/bmm-gen.html#_class_el_boolean_expression]] {
 }
 
-EL_BOOLEAN_EXPRESSION -[#gray]up-|> EL_CONSTRAINED  
+EL_BOOLEAN_EXPRESSION -[#gray]up-|> EL_CONSTRAINED
 
 
 ....

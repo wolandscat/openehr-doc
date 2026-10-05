@@ -63,45 +63,45 @@ a|Directory of extracts of external terminologies, as a two-level table. The out
 are terminology ids, e.g. `"SNOMED_CT"`, while the inner hash keys are term codes or code-
 phrases from the relevant terminology, e.g. `"10094842"`.
 
-h| func
+h|func
 |*specialisation_depth* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Specialisation depth of this artefact. Unspecialised artefacts have depth 0, with each
 additional level of specialisation adding 1 to the specialisation_depth.
 
-h| func
+h|func
 |*node_codes* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|For at-coded archetypes: list of all at codes in the terminology., i.e. the 'at' codes in
 an ADL archetype, which are the `node_id` values on `C_OBJECT` descendants. For id-coded
 archetypes: list of all id codes in the terminology., i.e. the 'id' codes in an ADL
 archetype, which are the `node_id` values on `C_OBJECT` descendants.
 
-h| func
+h|func
 |*value_codes* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of all value term codes in the terminology, i.e. the 'at' codes in an ADL archetype,
 which are used as possible values on terminological constrainer nodes.
 
-h| func
+h|func
 |*value_set_codes* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of all value set codes in the terminology defining value sets. These correspond to
 the 'ac' codes in an ADL archetype.
 
-h| func
+h|func
 |*has_language* ( +
 a_lang: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if language `a_lang` is present in archetype terminology.
 
-h| func
+h|func
 |*has_terminology* ( +
 a_terminology_id: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there are bindings to terminology `a_terminology_id` present. True if
 terminology `a_terminology' is present in archetype ontology.
 
-h| func
+h|func
 |*has_term_code* ( +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if code `a_code` defined in this terminology.
 
-h| func
+h|func
 |*term_definition* ( +
 a_lang: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM] +
@@ -111,7 +111,7 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|Term definition for a code, in a specified language.
 
-h| func
+h|func
 |*term_binding* ( +
 a_terminology: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_uri[Uri] +
@@ -122,12 +122,12 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 a|Binding of constraint corresponding to `a_code` in target external terminology
 `a_terminology_id`, as a string, which is usually a formal query expression.
 
-h| func
+h|func
 |*terminologies_available* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of terminologies to which term or constraint bindings exist in this terminology,
 computed from bindings.
 
-h| func
+h|func
 |*terminology_extract_term* ( +
 a_terminology_id: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:languages:aom2-gen.adoc#_class_archetype_term[ARCHETYPE_TERM] +
@@ -137,12 +137,12 @@ a_code: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:
 
 a|Return an `ARCHETYPE_TERM` from specified terminology extract, for specified term code.
 
-h| func
+h|func
 |*has_terminology_extract* ( +
 a_terminology_id: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is a provided terminology extract present.
 
-h| func
+h|func
 |*languages_available* : xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
 a|List of languages in which terms in this terminology are available.
 

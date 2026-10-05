@@ -31,7 +31,7 @@ h|prop +
 a|Optional specific reason for null value; if set, `null_flavour` must be set. Null reason
 may apply only to a minority of clinical data, commonly needed in reporting contexts.
 
-h| func
+h|func
 |*is_null* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if value logically not known, e.g. if indeterminate, not asked etc.
 

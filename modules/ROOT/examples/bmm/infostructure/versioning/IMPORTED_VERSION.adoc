@@ -21,7 +21,7 @@ h|prop +
 |*item*: xref:infostructure:versioning-gen.adoc#_class_original_version[ORIGINAL_VERSION]<T>
 a|The `ORIGINAL_VERSION` object that was imported.
 
-h| func
+h|override func
 |*uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID] +
  +
   *post_cond* +
@@ -29,7 +29,7 @@ h| func
 
 a|Computed version of inheritance precursor, derived as `item.uid`.
 
-h| func
+h|override func
 |*preceding_version_uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID] +
  +
   *post_cond* +
@@ -37,12 +37,12 @@ h| func
 
 a|Computed version of inheritance precursor, derived as `item.preceding_version_uid`.
 
-h| func
+h|override func
 |*lifecycle_state* : xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Lifecycle state of the content item in wrapped `ORIGINAL_VERSION`, derived as
 `item.lifecycle_state`; coded by openEHR vocabulary `version lifecycle state`.
 
-h| func
+h|override func
 |*data* : T
 a|Original content of this Version.
 

@@ -44,7 +44,7 @@ h|prop +
 |*data*: T
 a|Data content of this Version.
 
-h| func
+h|func
 |*is_merged* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this Version was created from more than just the preceding (checked out) version.
 
@@ -63,13 +63,13 @@ h|prop +
 |*commit_audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
-h| func
+h|func
 |*canonical_form* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|A canonical serial form of this Version, suitable for generating reliable hashes and
 signatures. Canonical form of Version object, created by serialising all attributes except
 signature.
 
-h| func
+h|func
 |*owner_id* : xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
  +
   *post_cond* +
@@ -78,7 +78,7 @@ h| func
 a|Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `uid`
 property's `object_id`.
 
-h| func
+h|func
 |*is_branch* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this Version represents a branch. Derived from `uid` attribute.
 

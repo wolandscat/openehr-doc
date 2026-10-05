@@ -18,7 +18,7 @@ h|prop +
 |*definition*: xref:languages:bmm-gen.adoc#_class_bmm_static[BMM_STATIC]
 a|Constant definition (within class).
 
-h|prop +
+h|override prop +
   
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Defined to return False.

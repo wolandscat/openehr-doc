@@ -25,7 +25,7 @@ h|prop +
 |*path*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|The path to the archetype node.
 
-h|prop +
+h|override prop +
   
 |*item*: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]
 a|Resolved reference to archetype element.

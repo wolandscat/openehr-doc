@@ -14,7 +14,7 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|override func
 |*type* : xref:languages:bmm-gen.adoc#_class_bmm_simple_type[BMM_SIMPLE_TYPE]
 a|Generate a type object that represents the type of this class. Can only be an instance of
 `BMM_SIMPLE_TYPE` or a descendant.

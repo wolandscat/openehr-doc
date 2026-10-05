@@ -14,11 +14,11 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*has_key* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Test for presence of `a_key`.
 
-h| func
+h|func
 |*item* : V
 a|Return item for key `a_key`.
 

@@ -14,62 +14,62 @@ h|*Inherit*
 h|
 2+^h|*access*
 
-h| func
+h|func
 |*floor* : xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
 a|Return the greatest integer no greater than the value of this object.
 
 h|
 2+^h|*operators*
 
-h| func
+h|func
 |*add* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:builtin_types-gen.adoc#_class_real[Real] +
   *alias* +
 
 a|Real number addition.
 
-h| func
+h|func
 |*subtract* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:builtin_types-gen.adoc#_class_real[Real] +
   *alias* -
 
 a|Real number subtraction.
 
-h| func
+h|func
 |*multiply* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:builtin_types-gen.adoc#_class_real[Real] +
   *alias* *
 
 a|Real number multiplication.
 
-h| func
+h|func
 |*divide* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* /
 
 a|Real number division.
 
-h| func
+h|func
 |*exponent* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_double[Double]): xref:representation:builtin_types-gen.adoc#_class_double[Double] +
   *alias* ^
 
 a|Real number exponentiation.
 
-h| func
+h|func
 |*less_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_real[Real]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <
 
 a|Returns True if current Real is less than `other`.
 
-h| func
+h|func
 |*negative* : xref:representation:builtin_types-gen.adoc#_class_real[Real] +
   *alias* -
 
 a|Generate negative of current Real value.
 
-h| func
+h|func
 |*less_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* <=, ≤
@@ -80,7 +80,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object less than or equal to `other`.
 
-h| func
+h|func
 |*greater_than* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >
@@ -91,7 +91,7 @@ other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref
 
 a|True if current object greater than `other`.
 
-h| func
+h|func
 |*greater_than_or_equal* ( +
 other: xref:representation:builtin_types-gen.adoc#_class_ordered[Ordered]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
   *alias* >=, ≥

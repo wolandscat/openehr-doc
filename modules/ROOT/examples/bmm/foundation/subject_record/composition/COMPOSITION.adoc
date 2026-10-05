@@ -66,7 +66,7 @@ h|prop +
 |*content*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:foundation:subject_record-gen.adoc#_class_content_item[CONTENT_ITEM]>
 a|The content of this Composition.
 
-h| func
+h|func
 |*is_persistent* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if category is `431\|persistent\|`, False otherwise. Useful for finding
 Compositions in an EHR which are guaranteed to be of interest to most users.

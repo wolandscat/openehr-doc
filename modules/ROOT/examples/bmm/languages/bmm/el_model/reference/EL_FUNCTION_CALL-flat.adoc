@@ -24,11 +24,11 @@ h|prop +
 |*is_writable*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|Defined to return False.
 
-h| func
+h|func
 |*eval_type* : xref:languages:bmm-gen.adoc#_class_bmm_type[BMM_TYPE]
 a|Return `agent.definition.type`.
 
-h| func
+h|func
 |*reference* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Generated full reference name, consisting of any scoping elements, function name and
 routine parameters enclosed in parentheses.
@@ -43,7 +43,7 @@ h|prop +
 |*name*: xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|Name used to represent the reference or other entity.
 
-h| func
+h|func
 |*is_boolean* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +

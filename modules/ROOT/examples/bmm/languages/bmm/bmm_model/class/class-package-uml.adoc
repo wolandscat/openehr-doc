@@ -11,7 +11,7 @@ class BMM_SIMPLE_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_s
         type: BMM_SIMPLE_TYPE
 }
 
-BMM_SIMPLE_CLASS -[#gray]up-|> BMM_CLASS  
+BMM_SIMPLE_CLASS -[#gray]up-|> BMM_CLASS
 
 
 class BMM_ENUMERATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_enumeration]] {
@@ -19,7 +19,7 @@ class BMM_ENUMERATION [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_en
         item_names :? List<String>
 }
 
-BMM_ENUMERATION -[#gray]up-|> BMM_SIMPLE_CLASS  
+BMM_ENUMERATION -[#gray]up-|> BMM_SIMPLE_CLASS
 
 
 BMM_ENUMERATION *--> "0..* item_values" BMM_PRIMITIVE_VALUE
@@ -28,10 +28,8 @@ class BMM_ENUMERATION_STRING [[/openehr-doc/latest/languages/bmm-gen.html#_class
         .. access ..
 }
 
-BMM_ENUMERATION_STRING -[#gray]up-|> BMM_ENUMERATION  
+BMM_ENUMERATION_STRING -[#gray]up-|> BMM_ENUMERATION
 
-
-BMM_ENUMERATION_STRING *--> "0..* item_values" BMM_STRING_VALUE
 
 class BMM_FEATURE_GROUP [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_feature_group]] {
         .. access ..
@@ -47,10 +45,8 @@ class BMM_ENUMERATION_INTEGER [[/openehr-doc/latest/languages/bmm-gen.html#_clas
         .. access ..
 }
 
-BMM_ENUMERATION_INTEGER -[#gray]up-|> BMM_ENUMERATION  
+BMM_ENUMERATION_INTEGER -[#gray]up-|> BMM_ENUMERATION
 
-
-BMM_ENUMERATION_INTEGER *--> "0..* item_values" BMM_INTEGER_VALUE
 
 class BMM_VALUE_SET_SPEC [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_value_set_spec]] {
         .. access ..
@@ -73,7 +69,7 @@ abstract class BMM_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm
         class_path: String
 }
 
-BMM_CLASS -[#gray]up-|> BMM_MODULE  
+BMM_CLASS -[#gray]up-|> BMM_MODULE
 
 
 BMM_CLASS *--> "1 package" BMM_PACKAGE
@@ -86,7 +82,7 @@ class BMM_GENERIC_CLASS [[/openehr-doc/latest/languages/bmm-gen.html#_class_bmm_
         generic_parameter_conformance_type(a_name: String): String
 }
 
-BMM_GENERIC_CLASS -[#gray]up-|> BMM_CLASS  
+BMM_GENERIC_CLASS -[#gray]up-|> BMM_CLASS
 
 
 BMM_GENERIC_CLASS *--> "0..* generic_parameters" BMM_PARAMETER_TYPE

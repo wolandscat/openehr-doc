@@ -20,22 +20,22 @@ h|prop +
 a|Default value set in a template, and present in an operational template. Generally limited
 to leaf and near-leaf nodes.
 
-h| func
+h|func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
-h| func
+h|func
 |*valid_value* ( +
 a_value: xref:representation:builtin_types-gen.adoc#_class_any[Any]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if `a_value` is valid with respect to constraint expressed in concrete instance of
 this type.
 
-h| func
+h|func
 |*prototype_value* : xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Generate a prototype value from this constraint object.
 
-h| func
+h|func
 |*has_default_value* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is an assumed value.
 

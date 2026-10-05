@@ -26,7 +26,7 @@ abstract class LOCATABLE [[/openehr-doc/latest/representation/data_marking-gen.h
         is_archetype_root: Boolean
 }
 
-LOCATABLE -[#gray]up-|> PATHABLE  
+LOCATABLE -[#gray]up-|> PATHABLE
 
 
 LOCATABLE *--> "0..1 archetype_details" ARCHETYPED

@@ -47,25 +47,33 @@ h|prop +
 a|True if `upper` boundary value included in range if `not _upper_unbounded`. upper
 boundary value included in range if not upper_unbounded.
 
-h| func
-|*has* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+h|func
+|*has* ( +
+e: T): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
-    valid_result: Result = (lower_unbounded ∨ lower_included ∧ v >= lower) ∨ v > lower ∧ (upper_unbounded ∨ upper_included ∧ v <= upper ∨ v < upper);
+    valid_result: Result = (lower_unbounded ∨ lower_included ∧ e >= lower) ∨ e > lower ∧ (upper_unbounded ∨ upper_included ∧ e <= upper ∨ e < upper);
 
 a|True if the value `e` is properly contained in this Interval. True if (lower_unbounded or
 ((lower_included and v >= lower) or v > lower)) and (upper_unbounded or ((upper_included
 and v <= upper or v < upper)))
 
-h| func
-|*intersects* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+h|func
+|*intersects* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if there is any overlap between intervals represented by Current and `other`. True
 if at least one limit of `other` is strictly inside the limits of this interval.
 
-h| func
-|*contains* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+h|func
+|*contains* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_interval[Interval]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if current interval properly contains `other`? True if all points of `other` are
 inside the current interval.
+
+h|func
+|*is_equal* ( +
+other: xref:representation:builtin_types-gen.adoc#_class_any[Any]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if current object’s interval is semantically same as other.
 
 h|*Invariants*
 2+a|

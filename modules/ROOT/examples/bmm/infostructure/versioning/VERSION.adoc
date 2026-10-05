@@ -26,32 +26,32 @@ h|prop +
 |*commit_audit*: xref:infostructure:versioning-gen.adoc#_class_audit_details[AUDIT_DETAILS]
 a|Audit trail corresponding to the committal of this version to the `VERSIONED_OBJECT`.
 
-h| func
+h|func
 |*uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Unique identifier of this `VERSION`, in the form of an `{object_id, a version_tree_id,
 creating_system_id}` triple, where the `object_id` has the same value as the containing
 `VERSIONED_OBJECT _uid`.
 
-h| func
+h|func
 |*preceding_version_uid* : xref:representation:identification-gen.adoc#_class_object_version_id[OBJECT_VERSION_ID]
 a|Unique identifier of the version of which this version is a modification; Void if this is
 the first version.
 
-h| func
+h|func
 |*data* : T
 a|The data of this Version. Original content of this Version.
 
-h| func
+h|func
 |*lifecycle_state* : xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
 a|Lifecycle state of this version; coded by openEHR vocabulary `version lifecycle state`.
 
-h| func
+h|func
 |*canonical_form* : xref:representation:builtin_types-gen.adoc#_class_string[String]
 a|A canonical serial form of this Version, suitable for generating reliable hashes and
 signatures. Canonical form of Version object, created by serialising all attributes except
 signature.
 
-h| func
+h|func
 |*owner_id* : xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID] +
  +
   *post_cond* +
@@ -60,7 +60,7 @@ h| func
 a|Copy of the owning `VERSIONED_OBJECT._uid` value; extracted from the local `uid`
 property's `object_id`.
 
-h| func
+h|func
 |*is_branch* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this Version represents a branch. Derived from `uid` attribute.
 

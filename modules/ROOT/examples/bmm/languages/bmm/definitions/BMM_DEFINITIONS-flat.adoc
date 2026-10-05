@@ -155,7 +155,7 @@ a|Built-in type definition corresponding to the top `Any` type.
 h|
 2+^h|*factory*
 
-h| func
+h|func
 |*create_schema_id* ( +
 a_model_publisher: xref:representation:builtin_types-gen.adoc#_class_string[String], +
 a_schema_name: xref:representation:builtin_types-gen.adoc#_class_string[String], +
