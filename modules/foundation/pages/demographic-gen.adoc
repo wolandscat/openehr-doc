@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Demographic Specification
 
+:sectnums:
+
 
 == Demographic Package
 

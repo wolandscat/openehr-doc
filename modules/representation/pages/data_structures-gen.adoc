@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Data_structures Specification
 
+:sectnums:
+
 
 == Data_structures Package
 

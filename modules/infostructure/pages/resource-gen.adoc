@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Resource Specification
 
+:sectnums:
+
 
 == Resource Package
 

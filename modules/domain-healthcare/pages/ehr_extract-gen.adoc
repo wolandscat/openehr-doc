@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Ehr_extract Specification
 
+:sectnums:
+
 
 == Ehr_extract Package
 

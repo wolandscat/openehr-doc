@@ -12,14 +12,17 @@ h|0..1
 |*assumed_value*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
 a|Value to be assumed if none sent in data.
 
+h|1
+|*constraint*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|Constraint represented by this object; redefine in descendants.
+
+h|
+2+^h|*status*
+
 h|0..1
 |*is_enumerated_type_constraint*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this object represents a constraint on an enumerated type from the reference
 model, where the latter is assumed to be based on a primitive type, generally Integer or
 String.
-
-h|1
-|*constraint*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
-a|Constraint represented by this object; redefine in descendants.
 
 |===

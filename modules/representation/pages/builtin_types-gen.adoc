@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Builtin_types Specification
 
+:sectnums:
+
 
 == Builtin_types Package
 

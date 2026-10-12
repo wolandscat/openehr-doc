@@ -50,6 +50,9 @@ h|override func
 a|True if any value (i.e. instance) of the reference model type would be allowed. Redefined
 in descendants.
 
+h|
+2+^h|*comparison*
+
 h|override func
 |*c_value_conforms_to* ( +
 other: xref:languages:aom2-gen.adoc#_class_c_ordered[C_ORDERED]<T>): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

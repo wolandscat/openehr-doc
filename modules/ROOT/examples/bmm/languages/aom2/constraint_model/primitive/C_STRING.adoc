@@ -42,6 +42,9 @@ a_value: xref:representation:builtin_types-gen.adoc#_class_string[String]): xref
 a|True if a_value is valid with respect to constraint expressed in concrete instance of this
 type.
 
+h|
+2+^h|*status*
+
 h|override func
 |*any_allowed* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
@@ -49,6 +52,9 @@ h|override func
     result_valid: Result = constraint.is_empty ∨ constraint.count = 1 ∧ constraint.first.is_equal(Regex_any_string);
 
 a|True if `constraint` is empty or else contains one String for the regex 'any' pattern.
+
+h|
+2+^h|*comparison*
 
 h|override func
 |*c_value_conforms_to* ( +
@@ -61,12 +67,5 @@ h|override func
 other: xref:languages:aom2-gen.adoc#_class_c_string[C_STRING]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if the items in `constraint` are equal in number and identical pair-wise with those
 in `other.constraint`.
-
-FIXME: Add the following when parser upgraded
-    do
-       Result := constraint.count = other.constraint.count ∧ then
-           constraint.for_all ( (i: Integer, it: String) ->
-               other.constraint.i_th (i).is_equal (it)
-           );
 
 |===

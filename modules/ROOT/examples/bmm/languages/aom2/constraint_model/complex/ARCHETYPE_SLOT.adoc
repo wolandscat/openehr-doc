@@ -27,6 +27,9 @@ a|List of constraints defining other archetypes that cannot be included at this 
 Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
 matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
+h|
+2+^h|*status*
+
 h|prop +
   
 |*is_closed*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]

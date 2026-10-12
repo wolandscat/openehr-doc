@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Physical_entity Specification
 
+:sectnums:
+
 
 == Physical_entity Package
 

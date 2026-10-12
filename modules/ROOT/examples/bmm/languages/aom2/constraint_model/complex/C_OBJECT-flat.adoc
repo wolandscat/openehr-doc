@@ -49,11 +49,6 @@ ids must be unique within the archetype.
 
 h|prop +
   0..1
-|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if this node and by implication all sub-nodes are deprecated for use.
-
-h|prop +
-  0..1
 |*sibling_order*: xref:languages:aom2-gen.adoc#_class_sibling_order[SIBLING_ORDER]
 a|Optional indicator of order of this node with respect to another sibling. Only meaningful
 in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
@@ -75,50 +70,6 @@ a|Compute effective occurrences, where no local occurrences constraint set. If t
 owning attribute.
 
 If local `occurrences` not set, always assume 0 as the lower bound.
-
-h|func
-|*c_conforms_to* ( +
-other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT], +
-rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
-same as other. Typically used during validation of specialised archetype nodes.
-
-Parameters
-  `rmcc`:: Reference Model conformance checker agent (lambda).
-
-h|func
-|*c_congruent_to* ( +
-other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if constraints represented by this node contain no further redefinitions with respect
-to the node `other`, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
-
-Typically used to test if an inherited node locally contains any constraints.
-
-h|func
-|*occurrences_conforms_to* ( +
-other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if this node `occurrences` conforms to `other.occurrences`; `other` is assumed to
-be in a flat archetype.
-
-.Parameters + [horizontal] `other`:: `C_OBJECT` from a flat parent archetype.
-
-h|func
-|*node_id_conforms_to* ( +
-other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
- +
-  *post_cond* +
-    result_valid: Result = codes_conformant(node_id, other.node_id);
-
-a|True if this node id conforms to `other.node_id`, which includes the ids being
-identical; `other` is assumed to be in a flat archetype.
-
-h|func
-|*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
- +
-  *post_cond* +
-    result_valid: Result = ∃ occurrences ∧ occurrences.is_prohibited;
-
-a|True if this `C_OBJECT` node is prohibited, i.e. if its `occurrences` is `0..0`.
 
 h|prop +
   0..1
@@ -225,6 +176,83 @@ a|Is `a_code` valid at level `a_level` or less, i.e. if we remove its trailing
 specialised part corresponding to specialisation below `a_level`, and then any trailing
 '.0' pieces, do we end up with a valid code? If so it means that the code corresponds to a
 real node from `a_level` or higher.
+
+h|
+2+^h|*status*
+
+h|prop +
+  0..1
+|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node and by implication all sub-nodes are deprecated for use.
+
+h|func
+|*is_prohibited* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = ∃ occurrences ∧ occurrences.is_prohibited;
+
+a|True if this `C_OBJECT` node is prohibited, i.e. if its `occurrences` is `0..0`.
+
+h|
+2+^h|*comparison*
+
+h|func
+|*c_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT], +
+rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
+same as other. Typically used during validation of specialised archetype nodes.
+
+Parameters
+  `rmcc`:: Reference Model conformance checker agent (lambda).
+
+Returns True when the following is True:
+  * rm_type_name is the same or a subtype of rm_type_name of other;
+  * node_id is the same, or redefined to a legal code at the level of the owning archetype
+  * is_root or else
+    parent.is_multiple or else -- we do the real check from the parent C_ATTRIBUTE
+    parent.is_single and
+    occurrences is same (= Void) or a sub-interval
+
+h|func
+|*c_congruent_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node on its own (ignoring any subparts) expresses no constraints in addition
+ to `other', other than possible redefinition of the node id, which doesn't matter, since
+ this won't get lost in a compressed path.
+ Current and `other' are typically from flat archetypes being compared to generate a diff.
+ Used to determine if path segments can be compressed.
+ Returns True if:
+	 * rm_type_name is identical
+	 * occurrences is Void or else identical to other.occurrences
+ 	 * sibling_order is Void or else identical to other.sibling_order
+	 * node_id is identical or else is the only child that overlays the parent node
+
+h|func
+|*occurrences_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node `occurrences` conforms to `other.occurrences`; `other` is assumed to
+be in a flat archetype. Only redefinitions of single-occurrence nodes can be dealt with here;
+redefinitions of multiply-occurrences nodesmust be evaluated at the owning attribute,
+according to VSONCO.
+
+.Parameters +
+`other`:: `C_OBJECT` from a flat parent archetype.
+
+h|func
+|*node_id_conforms_to* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
+ +
+  *post_cond* +
+    result_valid: Result = codes_conformant(node_id, other.node_id);
+
+a|True if this node id conforms to `other.node_id`, which includes the ids being
+identical; `other` is assumed to be in a flat archetype.
+
+h|func
+|*node_reuse_congruent* ( +
+other: xref:languages:aom2-gen.adoc#_class_c_object[C_OBJECT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node is the sole re-using node of the corresponding node in the flat.
 
 h|
 2+^h|*values*

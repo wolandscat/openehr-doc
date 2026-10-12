@@ -46,6 +46,8 @@ feature_group ("access")
             result_valid: Result = constraint.is_empty;
         ;
 
+feature_group ("comparison")
+
     | 
     | True if `other.any_allowed` or else for every constraint in the `constraint` list
     | there is a constraint in `other.constraint` that contains it.

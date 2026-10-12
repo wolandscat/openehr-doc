@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Bmm Specification
 
+:sectnums:
+
 
 == Bmm Package
 

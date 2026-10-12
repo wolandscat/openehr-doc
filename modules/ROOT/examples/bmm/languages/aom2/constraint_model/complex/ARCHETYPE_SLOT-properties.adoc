@@ -20,6 +20,9 @@ a|List of constraints defining other archetypes that cannot be included at this 
 Represented as an `ASSERTION` containing an expression of the form `EXPR_ARCHETYPE_REF
 matches EXPR_ARCHETYPE_ID_CONSTRAINT`.
 
+h|
+2+^h|*status*
+
 h|1
 |*is_closed*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
 a|True if this slot specification in this artefact is closed to further filling either in

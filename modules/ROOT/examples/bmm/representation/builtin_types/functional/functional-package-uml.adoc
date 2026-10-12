@@ -18,19 +18,19 @@ class ROUTINE<V:TUPLE> [[/openehr-doc/latest/representation/builtin_types-gen.ht
 class TUPLE [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple]] {
 }
 
-class FUNCTION<V:TUPLE, R:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_function]] {
+class FUNCTION<V:TUPLE, R> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_function]] {
 }
 
 FUNCTION -[#gray]up-|> ROUTINE
 
 
-class TUPLE2<A:Any, B:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple2]] {
+class TUPLE2<A, B> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple2]] {
 }
 
 TUPLE2 -[#gray]up-|> TUPLE
 
 
-class TUPLE1<A:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple1]] {
+class TUPLE1<A> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_tuple1]] {
 }
 
 TUPLE1 -[#gray]up-|> TUPLE

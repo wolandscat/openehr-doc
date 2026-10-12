@@ -4,7 +4,7 @@
 | represented as a TUPLE.
 | 
 
-class FUNCTION<V:TUPLE, R:Any>
+class FUNCTION<V:TUPLE, R>
     is_a ROUTINE<V>
 
 

@@ -41,6 +41,8 @@ feature_group ("access")
     func valid_value(a_value: String): Boolean
         ;
 
+feature_group ("status")
+
     | 
     | True if `constraint` is empty or else contains one String for the regex 'any' pattern.
     | 
@@ -48,6 +50,8 @@ feature_group ("access")
         post_cond
             result_valid: Result = constraint.is_empty ∨ constraint.count = 1 ∧ constraint.first.is_equal(Regex_any_string);
         ;
+
+feature_group ("comparison")
 
     | 
     | True if `other.any_allowed` or else every constraint in the `constraint` list exists
@@ -59,13 +63,6 @@ feature_group ("access")
     | 
     | True if the items in `constraint` are equal in number and identical pair-wise with those
     | in `other.constraint`.
-    | 
-    | FIXME: Add the following when parser upgraded
-    |     do
-    |        Result := constraint.count = other.constraint.count ∧ then
-    |            constraint.for_all ( (i: Integer, it: String) ->
-    |                other.constraint.i_th (i).is_equal (it)
-    |            );
     | 
     func c_value_congruent_to(other: C_STRING): Boolean
         ;

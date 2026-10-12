@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Data_types Specification
 
+:sectnums:
+
 
 == Data_types Package
 

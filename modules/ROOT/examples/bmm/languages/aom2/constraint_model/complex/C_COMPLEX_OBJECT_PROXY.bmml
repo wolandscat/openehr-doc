@@ -27,8 +27,10 @@ feature_group ("access")
     | 
     func use_target_occurrences: Boolean
         post_cond
-            valid_result: Result = (¬ ∃ occurrences);
+            valid_result: Result = ¬ ∃ occurrences;
         ;
+
+feature_group ("comparison")
 
     | 
     | True if this node occurrences conforms to `other.occurrences`; `other` is assumed to

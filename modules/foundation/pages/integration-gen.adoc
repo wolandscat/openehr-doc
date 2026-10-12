@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Integration Specification
 
+:sectnums:
+
 
 == Integration Package
 

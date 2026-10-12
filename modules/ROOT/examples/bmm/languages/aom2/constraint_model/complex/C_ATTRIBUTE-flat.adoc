@@ -84,7 +84,7 @@ h|func
 other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTRAINT]): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
-    valid_result: Result = ¬ ∃ existence ∧ ((is_single ∧ other.is_single) ∨ (is_multiple ∧ other.is_multiple ∧ ¬ ∃ cardinality));
+    valid_result: Result = ¬ ∃ existence ∧ (is_single ∧ other.is_single ∨ is_multiple ∧ other.is_multiple ∧ ¬ ∃ cardinality);
 
 a|True if constraints represented by this node contain no further redefinitions with respect
 to the node other, with the exception of `node_id` redefinition in `C_OBJECT` nodes.
@@ -97,7 +97,7 @@ other: xref:languages:aom2-gen.adoc#_class_archetype_constraint[ARCHETYPE_CONSTR
 rmcc: (String, String) -> Boolean): xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
-    valid_result: Result = existence_conforms_to(other) ∧ ((is_single ∧ other.is_single) ∨ (is_multiple ∧ cardinality_conforms_to(other)));
+    valid_result: Result = existence_conforms_to(other) ∧ (is_single ∧ other.is_single ∨ is_multiple ∧ cardinality_conforms_to(other));
 
 a|True if constraints represented by this node, ignoring any sub-parts, are narrower or the
 same as other. Typically used during validation of specialised archetype nodes.

@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Subject_record Specification
 
+:sectnums:
+
 
 == Subject_record Package
 

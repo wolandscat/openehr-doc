@@ -2,7 +2,7 @@
 [%autowidth.stretch]
 |===
 
-3+^h|  *class TUPLE1<A:Any>*
+3+^h|  *class TUPLE1<A>*
 
 h|*Description*
 2+a|A Tuple type used, among other things, for representing a single typed argument within a

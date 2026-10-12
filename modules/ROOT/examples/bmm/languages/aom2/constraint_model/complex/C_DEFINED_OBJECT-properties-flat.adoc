@@ -44,10 +44,6 @@ in this attribute and it can also carry human readable codes for future use. Alt
 ids must be unique within the archetype.
 
 h|0..1
-|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
-a|True if this node and by implication all sub-nodes are deprecated for use.
-
-h|0..1
 |*sibling_order*: xref:languages:aom2-gen.adoc#_class_sibling_order[SIBLING_ORDER]
 a|Optional indicator of order of this node with respect to another sibling. Only meaningful
 in a specialised archetype for a `C_OBJECT` within a `C_ATTRIBUTE` with `is_multiple_ =
@@ -61,5 +57,12 @@ archetype definition.
 h|0..1
 |*soc_parent*: xref:languages:aom2-gen.adoc#_class_c_second_order[C_SECOND_ORDER]
 a|
+
+h|
+2+^h|*status*
+
+h|0..1
+|*is_deprecated*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|True if this node and by implication all sub-nodes are deprecated for use.
 
 |===

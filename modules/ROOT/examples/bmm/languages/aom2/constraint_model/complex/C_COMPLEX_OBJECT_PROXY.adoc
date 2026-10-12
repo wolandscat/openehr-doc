@@ -29,10 +29,13 @@ h|func
 |*use_target_occurrences* : xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean] +
  +
   *post_cond* +
-    valid_result: Result = (¬ ∃ occurrences);
+    valid_result: Result = ¬ ∃ occurrences;
 
 a|True if target occurrences are to be used as the value of occurrences in this object; by
 the time of runtime use, the target occurrences value has to be set into this object.
+
+h|
+2+^h|*comparison*
 
 h|override func
 |*occurrences_conforms_to* ( +

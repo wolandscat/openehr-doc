@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Data_marking Specification
 
+:sectnums:
+
 
 == Data_marking Package
 

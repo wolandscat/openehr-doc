@@ -4,7 +4,7 @@
 | Routine signature.
 | 
 
-class TUPLE1<A:Any>
+class TUPLE1<A>
     is_a TUPLE
 
 

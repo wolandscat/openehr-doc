@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Versioning Specification
 
+:sectnums:
+
 
 == Versioning Package
 

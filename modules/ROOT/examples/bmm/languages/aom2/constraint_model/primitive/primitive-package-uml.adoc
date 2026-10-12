@@ -33,9 +33,12 @@ C_REAL -[#gray]up-|> C_ORDERED
 abstract class C_TEMPORAL<T:Temporal> [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_temporal]] {
         .. access ..
         pattern_constraint :? String
+        .. validation ..
         valid_pattern_constraint(a_pattern: String): Boolean
         valid_pattern_constraint_replacement(a_pattern: String, ...): Boolean
+        .. status ..
         any_allowed: Boolean
+        .. comparison ..
         c_value_conforms_to(other: C_ORDERED<T>): Boolean
         c_value_congruent_to(other: C_ORDERED<T>): Boolean
 }
@@ -136,7 +139,9 @@ class C_STRING [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_string]] {
         assumed_value :? String
         prototype_value: String
         valid_value(a_value: String): Boolean
+        .. status ..
         any_allowed: Boolean
+        .. comparison ..
         c_value_conforms_to(other: C_STRING): Boolean
         c_value_congruent_to(other: C_STRING): Boolean
 }
@@ -163,10 +168,12 @@ C_TIME -[#gray]up-|> C_TEMPORAL
 abstract class C_PRIMITIVE_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_primitive_object]] {
         .. access ..
         assumed_value :? Any
-        is_enumerated_type_constraint :? Boolean
         constraint : Any
-        has_assumed_value: Boolean
         constrained_typename: String
+        .. status ..
+        is_enumerated_type_constraint :? Boolean
+        has_assumed_value: Boolean
+        .. comparison ..
         c_conforms_to(other: C_PRIMITIVE_OBJECT, ...): Boolean
         c_value_conforms_to(other: C_PRIMITIVE_OBJECT): Boolean
         c_congruent_to(other: C_PRIMITIVE_OBJECT): Boolean
@@ -182,6 +189,7 @@ abstract class C_ORDERED<T:Ordered> [[/openehr-doc/latest/languages/aom2-gen.htm
         default_value :? T
         assumed_value :? T
         any_allowed: Boolean
+        .. comparison ..
         c_value_conforms_to(other: C_ORDERED<T>): Boolean
         c_value_congruent_to(other: C_ORDERED<T>): Boolean
 }

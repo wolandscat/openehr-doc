@@ -6,13 +6,13 @@ skinparam groupInheritance 2
 skinparam citedClassColor #FDFDFD
 
 
-class Array<V:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_array]] {
+class Array<V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_array]] {
 }
 
 Array -[#gray]up-|> Container
 
 
-class List<V:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_list]] {
+class List<V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_list]] {
         .. access ..
         first: V
         last: V
@@ -30,7 +30,7 @@ class Map<K:Ordered, V> [[/openehr-doc/latest/representation/builtin_types-gen.h
 Map -[#gray]up-|> Container
 
 
-abstract class Container<V:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_container]] {
+abstract class Container<V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_container]] {
         .. access ..
         has(v: V): Boolean
         count: Integer
@@ -42,7 +42,7 @@ abstract class Container<V:Any> [[/openehr-doc/latest/representation/builtin_typ
         select(test: (V) -> Boolean): V
 }
 
-class Set<V:Any> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_set]] {
+class Set<V> [[/openehr-doc/latest/representation/builtin_types-gen.html#_class_set]] {
 }
 
 Set -[#gray]up-|> Container

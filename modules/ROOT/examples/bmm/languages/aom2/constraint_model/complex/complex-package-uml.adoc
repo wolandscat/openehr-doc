@@ -8,6 +8,7 @@ skinparam citedClassColor #FDFDFD
 
 class C_ATTRIBUTE_TUPLE [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_attribute_tuple]] {
         .. access ..
+        .. comparison ..
         c_conforms_to(other: C_ATTRIBUTE_TUPLE, ...): Boolean
         c_congruent_to(other: C_SECOND_ORDER): Boolean
 }
@@ -20,10 +21,12 @@ C_ATTRIBUTE_TUPLE *--> "0..* tuples" C_PRIMITIVE_TUPLE
 abstract class C_DEFINED_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_defined_object]] {
         .. access ..
         default_value :? Any
-        any_allowed: Boolean
-        valid_value(a_value: Any): Boolean
         prototype_value: Any
+        .. status ..
+        any_allowed: Boolean
         has_default_value: Boolean
+        .. validation ..
+        valid_value(a_value: Any): Boolean
 }
 
 C_DEFINED_OBJECT -[#gray]up-|> C_OBJECT
@@ -47,9 +50,8 @@ C_SECOND_ORDER *--> "0..* members" ARCHETYPE_CONSTRAINT
 
 class C_COMPLEX_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_complex_object]] {
         .. access ..
+        .. status ..
         any_allowed: Boolean
-        c_conforms_to(other: C_COMPLEX_OBJECT, ...): Boolean
-        c_congruent_to(other: C_COMPLEX_OBJECT): Boolean
 }
 
 C_COMPLEX_OBJECT -[#gray]up-|> C_DEFINED_OBJECT
@@ -69,6 +71,7 @@ class C_COMPLEX_OBJECT_PROXY [[/openehr-doc/latest/languages/aom2-gen.html#_clas
         .. access ..
         target_path : String
         use_target_occurrences: Boolean
+        .. comparison ..
         occurrences_conforms_to(other: C_OBJECT): Boolean
 }
 
@@ -85,6 +88,7 @@ enum CONSTRAINT_STATUS [[/openehr-doc/latest/languages/aom2-gen.html#_class_cons
 
 class ARCHETYPE_SLOT [[/openehr-doc/latest/languages/aom2-gen.html#_class_archetype_slot]] {
         .. access ..
+        .. status ..
         is_closed : Boolean
         any_allowed: Boolean
 }
@@ -109,14 +113,17 @@ abstract class C_OBJECT [[/openehr-doc/latest/languages/aom2-gen.html#_class_c_o
         occurrences :? Multiplicity_interval
         node_id : String
         alternative_ids :? List<String>
-        is_deprecated :? Boolean
         specialisation_depth: Integer
         effective_occurrences(rm_prop_mult: (String, ...): Multiplicity_interval
+        .. status ..
+        is_deprecated :? Boolean
+        is_prohibited: Boolean
+        .. comparison ..
         c_conforms_to(other: C_OBJECT, ...): Boolean
         c_congruent_to(other: ARCHETYPE_CONSTRAINT): Boolean
         occurrences_conforms_to(other: C_OBJECT): Boolean
         node_id_conforms_to(other: C_OBJECT): Boolean
-        is_prohibited: Boolean
+        node_reuse_congruent(other: C_OBJECT): Boolean
 }
 
 C_OBJECT -[#gray]up-|> ARCHETYPE_CONSTRAINT

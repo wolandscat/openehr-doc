@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Aom2 Specification
 
+:sectnums:
+
 
 == Aom2 Package
 

@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Definitions Specification
 
+:sectnums:
+
 
 == Definitions Package
 

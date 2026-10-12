@@ -3,6 +3,8 @@ include::ROOT:partial$includes.adoc[]
 
 = Identification Specification
 
+:sectnums:
+
 
 == Identification Package
 
