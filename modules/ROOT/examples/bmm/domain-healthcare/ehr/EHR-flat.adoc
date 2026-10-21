@@ -8,7 +8,7 @@ h|*Description*
 2+a|The EHR object is the root object and access point of an EHR for a subject of care.
 
 h|
-2+^h|*access*
+2+^h|*runtime*
 
 h|prop +
   

@@ -76,11 +76,11 @@ EXTRACT_SPEC *--> "0..1 version_spec" EXTRACT_VERSION_SPEC
 EXTRACT_SPEC *--> "1 manifest" EXTRACT_MANIFEST
 
 class EXTRACT_PARTICIPATION [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_participation]] {
-        .. access ..
+        .. runtime ..
         time :? DV_INTERVAL<DV_DATE_TIME>
-        function : DV_TEXT
         mode :? DV_CODED_TEXT
         performer : String
+        function : DV_TEXT
 }
 
 class EXTRACT_VERSION_SPEC [[/openehr-doc/latest/domain-healthcare/ehr_extract-gen.html#_class_extract_version_spec]] {

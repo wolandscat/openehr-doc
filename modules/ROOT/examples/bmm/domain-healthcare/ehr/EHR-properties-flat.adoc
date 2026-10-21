@@ -6,7 +6,7 @@
 
 
 h|
-2+^h|*access*
+2+^h|*runtime*
 
 h|1
 |*system_id*: xref:representation:identification-gen.adoc#_class_hier_object_id[HIER_OBJECT_ID]
