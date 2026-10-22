@@ -1,0 +1,21 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class MIXED_GENERIC_PARAM_TYPE*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ODIN `EXAMPLE.bmm` reference schema.
+An unrealistic but legal extreme case of a property with multiple, mixed, nested
+generic parameters: a nested generic type, a simple type, a container of a simple
+type, and a container of a nested generic type.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*range*: xref:test:adl2_reference-gen.adoc#_class_test_reference_range[TEST_REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>, xref:representation:builtin_types-gen.adoc#_class_integer[Integer], xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>, xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>>>
+a|A generic property with four mixed generic parameters.
+
+|===

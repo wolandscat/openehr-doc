@@ -1,0 +1,8 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class CAR_BODY_PART*
+
+
+|===

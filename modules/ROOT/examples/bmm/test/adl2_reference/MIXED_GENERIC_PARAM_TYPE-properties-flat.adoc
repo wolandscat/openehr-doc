@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class MIXED_GENERIC_PARAM_TYPE*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*range*: xref:test:adl2_reference-gen.adoc#_class_test_reference_range[TEST_REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>, xref:representation:builtin_types-gen.adoc#_class_integer[Integer], xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>, xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>>>
+a|A generic property with four mixed generic parameters.
+
+|===

@@ -1,0 +1,20 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class RANGE_OF_INTERVAL_OF_QUANTITY*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ODIN `EXAMPLE.bmm` reference schema.
+Illustrates a property whose generic parameter is itself a nested generic type:
+`TEST_REFERENCE_RANGE<DV_INTERVAL<DV_QUANTITY>>`.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*range*: xref:test:adl2_reference-gen.adoc#_class_test_reference_range[TEST_REFERENCE_RANGE]<xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>>
+a|A generic property with a nested generic type parameter.
+
+|===

@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TEST_REFERENCE_RANGE<T:DV_ORDERED>*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*range*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<T>
+a|A mandatory single-valued property with a simple (non-generic) type reference.
+
+|===

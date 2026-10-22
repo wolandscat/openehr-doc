@@ -1,0 +1,17 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema.
+| 
+
+class ENGINE_PART_ITEM
+
+feature_group ("access")
+
+    prop model :? String;
+
+    prop type :? String;
+
+
+end

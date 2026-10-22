@@ -1,0 +1,17 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema. Inherits from `GENERIC_PARENT` with both generic parameters closed to
+| concrete types.
+| 
+
+class GENERIC_CHILD_CLOSED
+    is_a GENERIC_PARENT<SUPPLIER_A, SUPPLIER_B>
+
+feature_group ("access")
+
+    prop gen_child_closed_prop :? String;
+
+
+end

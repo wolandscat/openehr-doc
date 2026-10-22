@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class MULTIPLICITY_OBJECT*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*integer_list*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_integer[Integer]>
+a|
+
+h|0..1
+|*string_list*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:representation:builtin_types-gen.adoc#_class_string[String]>
+a|
+
+|===

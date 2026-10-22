@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class RIM*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*nuts*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*hubcap*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

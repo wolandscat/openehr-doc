@@ -1,0 +1,14 @@
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema.
+| 
+
+class ENGINE_PART
+
+feature_group ("access")
+
+    prop items :? List<ENGINE_PART_ITEM>;
+
+
+end

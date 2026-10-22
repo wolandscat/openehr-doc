@@ -1,0 +1,44 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TEST_ENTRY*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Illustrates a mix of single-valued and container properties, all optional.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*value*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|prop +
+  0..1
+|*coded_text_value*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|
+
+h|prop +
+  0..1
+|*ordinal_attr_1*: xref:representation:data_types-gen.adoc#_class_dv_ordinal[DV_ORDINAL]
+a|
+
+h|prop +
+  0..1
+|*element_attr*: xref:test:adl2_reference-gen.adoc#_class_test_element[TEST_ELEMENT]
+a|
+
+h|prop +
+  0..1
+|*element_attr_2*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_test_element[TEST_ELEMENT]>
+a|
+
+h|prop +
+  0..1
+|*item*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+|===

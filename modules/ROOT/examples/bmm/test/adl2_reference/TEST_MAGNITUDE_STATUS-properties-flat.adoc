@@ -1,0 +1,27 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enumeration TEST_MAGNITUDE_STATUS*
+
+
+h|
+2+^h|*values*
+
+h|
+|*le* = <=
+a|
+
+h|
+|*ge* = >=
+a|
+
+h|
+|*eq* = =
+a|
+
+h|
+|*approx_eq* = ~
+a|
+
+|===

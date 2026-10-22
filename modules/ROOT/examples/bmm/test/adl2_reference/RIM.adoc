@@ -1,0 +1,24 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class RIM*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*nuts*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|prop +
+  0..1
+|*hubcap*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

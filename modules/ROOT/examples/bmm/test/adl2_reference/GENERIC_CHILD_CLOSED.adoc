@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class GENERIC_CHILD_CLOSED*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Inherits from `GENERIC_PARENT` with both generic parameters closed to
+concrete types.
+
+h|*Inherit*
+2+|xref:test:adl2_reference-gen.adoc#_class_generic_parent[GENERIC_PARENT]
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*gen_child_closed_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

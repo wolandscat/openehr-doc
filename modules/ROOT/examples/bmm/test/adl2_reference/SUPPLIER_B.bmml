@@ -1,0 +1,18 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema.
+| 
+
+class SUPPLIER_B
+    is_a SUPPLIER
+
+feature_group ("access")
+
+    prop property : CODE_PHRASE;
+
+    prop precision :? Integer;
+
+
+end

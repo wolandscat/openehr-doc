@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SUPPLIER_B*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*property*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|0..1
+|*precision*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+|===

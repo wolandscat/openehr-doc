@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class CAR_BODY*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*model*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*description*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*parts*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_car_body_part[CAR_BODY_PART]>
+a|
+
+|===

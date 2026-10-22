@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class GENERIC_CHILD_OPEN_T<T:SUPPLIER>*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*gen_child_open_t_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*property_a*: T
+a|
+
+h|0..1
+|*property_b*: U
+a|
+
+|===

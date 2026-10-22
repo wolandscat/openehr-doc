@@ -1,0 +1,11 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class CAR_BODY_PART*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Deliberately empty: a leaf placeholder in the `CAR_BODY` composite.
+
+|===

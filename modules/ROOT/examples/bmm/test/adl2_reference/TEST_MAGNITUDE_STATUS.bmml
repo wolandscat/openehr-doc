@@ -1,0 +1,21 @@
+
+| 
+| Syntax-demonstration enumeration, converted from the ODIN `EXAMPLE.bmm` reference
+| schema. A String-based enumeration with explicit item values.
+| 
+
+enumeration TEST_MAGNITUDE_STATUS
+    base_type String
+
+feature_group ("values")
+
+    le ("<=");
+
+    ge (">=");
+
+    eq ("=");
+
+    approx_eq ("~");
+
+
+end

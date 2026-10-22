@@ -1,0 +1,33 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enumeration TEST_MAGNITUDE_STATUS*
+
+h|*Description*
+2+a|Syntax-demonstration enumeration, converted from the ODIN `EXAMPLE.bmm` reference
+schema. A String-based enumeration with explicit item values.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
+
+h|
+2+^h|*values*
+
+h|
+|*le* = <=
+a|
+
+h|
+|*ge* = >=
+a|
+
+h|
+|*eq* = =
+a|
+
+h|
+|*approx_eq* = ~
+a|
+
+|===

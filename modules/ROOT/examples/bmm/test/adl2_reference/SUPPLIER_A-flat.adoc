@@ -1,0 +1,32 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SUPPLIER_A*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema.
+
+h|*Inherit*
+2+|xref:test:adl2_reference-gen.adoc#_class_supplier[SUPPLIER]
+
+h|
+2+^h|*access*
+
+h|prop +
+  
+|*magnitude*: xref:representation:builtin_types-gen.adoc#_class_double[Double]
+a|
+
+h|prop +
+  
+|*units*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|prop +
+  0..1
+|*abstract_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

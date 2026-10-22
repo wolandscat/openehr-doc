@@ -1,0 +1,51 @@
+
+include::ROOT:partial$includes.adoc[]
+
+= Adl2_reference Specification
+
+:sectnums:
+
+
+== Adl2_reference Package
+
+=== Overview 
+
+include::ROOT:example$bmm/test//adl2_reference/adl2_reference-package-uml.adoc[]
+
+=== Classes
+
+
+include::ROOT:example$bmm/test/adl2_reference//GENERIC_CHILD_CLOSED-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//CAR-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//ENGINE_PART-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_ENTRY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//MIXED_GENERIC_PARAM_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//GENERIC_CHILD_OPEN_T-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//GENERIC_PARENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_ELEMENT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//BOOK-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//RANGE_OF_INTERVAL_OF_QUANTITY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//WHEEL-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//WHOLE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//CAR_BODY_PART-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_MAGNITUDE_STATUS-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//GENERIC_CHILD_OPEN_U-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//SOME_TYPE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//MULTIPLICITY_OBJECT-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_REFERENCE_RANGE-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//ENGINE_PART_ITEM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//SUPPLIER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//NAME_PART-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//SUPPLIER_B-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//RIM-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//TEST_CLUSTER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//CAR_BODY-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//CHAPTER-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//PROPORTION_KIND_2-section.adoc[leveloffset=+1]
+include::ROOT:example$bmm/test/adl2_reference//SUPPLIER_A-section.adoc[leveloffset=+1]
+
+
+
+
+

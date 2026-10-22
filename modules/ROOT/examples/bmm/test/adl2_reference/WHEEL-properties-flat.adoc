@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class WHEEL*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*description*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*parts*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_rim[RIM]>
+a|
+
+|===

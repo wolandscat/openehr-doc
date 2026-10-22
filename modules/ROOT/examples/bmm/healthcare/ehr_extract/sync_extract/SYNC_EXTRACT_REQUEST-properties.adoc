@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SYNC_EXTRACT_REQUEST*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*specification*: xref:healthcare:ehr_extract-gen.adoc#_class_sync_extract_spec[SYNC_EXTRACT_SPEC]
+a|Details of specification of synchronisation request.
+
+|===

@@ -1,0 +1,15 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema. Abstract root used as the generic-parameter constraint for `GENERIC_PARENT`.
+| 
+
+abstract class SUPPLIER
+
+feature_group ("access")
+
+    prop abstract_prop :? String;
+
+
+end

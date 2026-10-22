@@ -1,0 +1,33 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class GENERIC_CHILD_OPEN_T<T:SUPPLIER>*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Inherits from `GENERIC_PARENT`, leaving its first generic parameter open
+(re-declared here as `T`) while closing the second to `SUPPLIER_B`.
+
+h|*Inherit*
+2+|xref:test:adl2_reference-gen.adoc#_class_generic_parent[GENERIC_PARENT]
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*gen_child_open_t_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|prop +
+  0..1
+|*property_a*: T
+a|
+
+h|prop +
+  0..1
+|*property_b*: U
+a|
+
+|===

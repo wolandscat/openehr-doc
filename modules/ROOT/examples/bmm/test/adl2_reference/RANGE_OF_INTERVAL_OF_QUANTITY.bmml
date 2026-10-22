@@ -1,0 +1,19 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ODIN `EXAMPLE.bmm` reference schema.
+| Illustrates a property whose generic parameter is itself a nested generic type:
+| `TEST_REFERENCE_RANGE<DV_INTERVAL<DV_QUANTITY>>`.
+| 
+
+class RANGE_OF_INTERVAL_OF_QUANTITY
+
+feature_group ("access")
+
+    | 
+    | A generic property with a nested generic type parameter.
+    | 
+    prop range :? TEST_REFERENCE_RANGE<DV_INTERVAL<DV_QUANTITY>>;
+
+
+end

@@ -1,0 +1,19 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ODIN `EXAMPLE.bmm` reference schema.
+| Illustrates a generic class definition with one type parameter, `T`, constrained to
+| descend from `DV_ORDERED`.
+| 
+
+class TEST_REFERENCE_RANGE<T:DV_ORDERED>
+
+feature_group ("access")
+
+    | 
+    | A mandatory single-valued property with a simple (non-generic) type reference.
+    | 
+    prop range : DV_INTERVAL<T>;
+
+
+end

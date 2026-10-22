@@ -1,0 +1,20 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ODIN `EXAMPLE.bmm` reference schema.
+| An unrealistic but legal extreme case of a property with multiple, mixed, nested
+| generic parameters: a nested generic type, a simple type, a container of a simple
+| type, and a container of a nested generic type.
+| 
+
+class MIXED_GENERIC_PARAM_TYPE
+
+feature_group ("access")
+
+    | 
+    | A generic property with four mixed generic parameters.
+    | 
+    prop range :? TEST_REFERENCE_RANGE<DV_INTERVAL<DV_QUANTITY>, Integer, List<DV_QUANTITY>, List<DV_INTERVAL<DV_QUANTITY>>>;
+
+
+end

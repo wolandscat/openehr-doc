@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enumeration NAME_PART*
+
+
+h|
+2+^h|*values*
+
+h|
+|*first* = FIRST
+a|
+
+h|
+|*middle* = MIDDLE
+a|
+
+h|
+|*last* = LAST
+a|
+
+|===

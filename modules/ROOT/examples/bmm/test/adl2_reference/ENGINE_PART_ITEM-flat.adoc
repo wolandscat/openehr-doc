@@ -1,0 +1,24 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ENGINE_PART_ITEM*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*model*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|prop +
+  0..1
+|*type*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

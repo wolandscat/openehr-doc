@@ -1,0 +1,24 @@
+import org.openehr:representation ;
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema. Illustrates a mandatory and an optional single-valued property.
+| 
+
+class TEST_ELEMENT
+    is_a TEST_ITEM
+
+feature_group ("access")
+
+    | 
+    | Flavour of null value.
+    | 
+    prop null_flavour : DV_CODED_TEXT;
+
+    | 
+    | Leaf value object.
+    | 
+    prop value :? DATA_VALUE;
+
+
+end

@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ENGINE_PART_ITEM*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*model*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*type*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

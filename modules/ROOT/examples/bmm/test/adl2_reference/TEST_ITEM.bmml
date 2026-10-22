@@ -1,0 +1,10 @@
+
+| 
+| Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+| schema. Abstract root of the `TEST_CLUSTER`/`TEST_ELEMENT` validity-test hierarchy.
+| 
+
+abstract class TEST_ITEM
+
+
+end

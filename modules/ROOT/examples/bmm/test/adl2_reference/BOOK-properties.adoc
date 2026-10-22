@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class BOOK*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*author*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|1
+|*title*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*chapters*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_chapter[CHAPTER]>
+a|
+
+|===

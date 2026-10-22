@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class ENGINE_PART*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_engine_part_item[ENGINE_PART_ITEM]>
+a|
+
+|===

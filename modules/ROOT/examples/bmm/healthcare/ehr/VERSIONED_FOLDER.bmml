@@ -1,0 +1,11 @@
+import org.openehr:infostructure ;
+
+| 
+| A version-controlled hierarchy of `FOLDERs` giving the effect of a directory.
+| 
+
+class VERSIONED_FOLDER
+    is_a VERSIONED_OBJECT<FOLDER>
+
+
+end

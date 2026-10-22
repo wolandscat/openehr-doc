@@ -1,0 +1,471 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class WHOLE*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*string_attr1*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*string_attr2*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*string_attr3*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*string_attr4*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*string_attr5*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*boolean_attr1*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h|0..1
+|*boolean_attr2*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h|0..1
+|*boolean_attr3*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h|0..1
+|*boolean_attr4*: xref:representation:builtin_types-gen.adoc#_class_boolean[Boolean]
+a|
+
+h|0..1
+|*integer_attr1*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr2*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr3*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr4*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr5*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr6*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr7*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr8*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr9*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr10*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr11*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr12*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*integer_attr13*: xref:representation:builtin_types-gen.adoc#_class_integer[Integer]
+a|
+
+h|0..1
+|*real_attr1*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr2*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr3*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr4*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr5*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr6*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr7*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr8*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr9*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr10*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr11*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr12*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*real_attr13*: xref:representation:builtin_types-gen.adoc#_class_real[Real]
+a|
+
+h|0..1
+|*date_attr1*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr2*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr3*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr4*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr5*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr6*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr7*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr8*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr9*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr10*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr11*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*date_attr12*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date[Iso8601_date]
+a|
+
+h|0..1
+|*time_attr1*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr2*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr3*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr4*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr5*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr6*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr7*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr8*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr9*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr10*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr11*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr12*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*time_attr13*: xref:representation:builtin_types-gen.adoc#_class_iso8601_time[Iso8601_time]
+a|
+
+h|0..1
+|*date_time_attr1*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr2*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr3*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr4*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr5*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr6*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr7*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr8*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr9*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr10*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr11*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr12*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr13*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*date_time_attr14*: xref:representation:builtin_types-gen.adoc#_class_iso8601_date_time[Iso8601_date_time]
+a|
+
+h|0..1
+|*duration_attr1*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr2*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr3*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr4*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr5*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr6*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr7*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr8*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr9*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr10*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr11*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr12*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr13*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr14*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr15*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr16*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr17*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr18*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr19*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr20*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr21*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr22*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr23*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr24*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr25*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr26*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr27*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr28*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr29*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr30*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr31*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr32*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr33*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr34*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr35*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*duration_attr36*: xref:representation:builtin_types-gen.adoc#_class_iso8601_duration[Iso8601_duration]
+a|
+
+h|0..1
+|*any_attr_1*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|
+
+h|0..1
+|*any_attr_2*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|
+
+h|0..1
+|*any_attr_3*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|
+
+h|0..1
+|*any_attr_4*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|
+
+h|0..1
+|*any_attr_5*: xref:representation:builtin_types-gen.adoc#_class_any[Any]
+a|
+
+|===

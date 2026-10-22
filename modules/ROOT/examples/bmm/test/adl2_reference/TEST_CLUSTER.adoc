@@ -1,0 +1,22 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TEST_CLUSTER*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Illustrates a mandatory container property.
+
+h|*Inherit*
+2+|xref:test:adl2_reference-gen.adoc#_class_test_item[TEST_ITEM]
+
+h|
+2+^h|*access*
+
+h|prop +
+  
+|*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_test_item[TEST_ITEM]>
+a|List of contained `TEST_ITEM`s.
+
+|===

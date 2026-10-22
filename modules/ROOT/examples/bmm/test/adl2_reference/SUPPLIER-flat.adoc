@@ -1,0 +1,19 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class SUPPLIER*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Abstract root used as the generic-parameter constraint for `GENERIC_PARENT`.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*abstract_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

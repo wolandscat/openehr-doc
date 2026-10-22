@@ -1,0 +1,91 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SOME_TYPE*
+
+
+h|
+2+^h|*access*
+
+h|0..1
+|*standard_quantity_attr*: xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]
+a|
+
+h|0..1
+|*clinical_quantity_attr_1*: xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]
+a|
+
+h|0..1
+|*clinical_quantity_attr_2*: xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]
+a|
+
+h|0..1
+|*clinical_quantity_attr_3*: xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]
+a|
+
+h|0..1
+|*clinical_quantity_attr_4*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+h|0..1
+|*clinical_quantity_attr_5*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+h|0..1
+|*clinical_quantity_attr_6*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+h|0..1
+|*standard_ordinal_attr*: xref:representation:data_types-gen.adoc#_class_dv_ordinal[DV_ORDINAL]
+a|
+
+h|0..1
+|*clinical_ordinal_attr_1*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+h|0..1
+|*clinical_ordinal_attr_2*: xref:representation:data_types-gen.adoc#_class_data_value[DATA_VALUE]
+a|
+
+h|0..1
+|*clinical_coded_attr_1*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|0..1
+|*clinical_coded_attr_2*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|0..1
+|*clinical_coded_attr_3*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|0..1
+|*clinical_coded_attr_4*: xref:representation:data_types-gen.adoc#_class_code_phrase[CODE_PHRASE]
+a|
+
+h|0..1
+|*standard_coded_text_attr*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|
+
+h|0..1
+|*standard_coded_text_attr_2*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|
+
+h|0..1
+|*clinical_coded_text_attr_1*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|
+
+h|0..1
+|*clinical_coded_text_attr_2*: xref:representation:data_types-gen.adoc#_class_dv_coded_text[DV_CODED_TEXT]
+a|
+
+h|0..1
+|*qty_interval_attr_1*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>
+a|
+
+h|0..1
+|*qty_interval_attr_2*: xref:representation:data_types-gen.adoc#_class_dv_interval[DV_INTERVAL]<xref:representation:data_types-gen.adoc#_class_dv_quantity[DV_QUANTITY]>
+a|
+
+|===

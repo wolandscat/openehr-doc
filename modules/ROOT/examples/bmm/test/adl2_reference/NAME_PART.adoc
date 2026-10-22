@@ -1,0 +1,30 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *enumeration NAME_PART*
+
+h|*Description*
+2+a|Syntax-demonstration enumeration, converted from the ODIN `EXAMPLE.bmm` reference
+schema. A String-based enumeration whose source left item values unspecified, so
+each value defaults to its item name.
+
+h|*Inherit*
+2+|xref:representation:builtin_types-gen.adoc#_class_string[String]
+
+h|
+2+^h|*values*
+
+h|
+|*first* = FIRST
+a|
+
+h|
+|*middle* = MIDDLE
+a|
+
+h|
+|*last* = LAST
+a|
+
+|===

@@ -1,0 +1,29 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class CAR_BODY*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema.
+
+h|
+2+^h|*access*
+
+h|prop +
+  0..1
+|*model*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|prop +
+  0..1
+|*description*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|prop +
+  0..1
+|*parts*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_car_body_part[CAR_BODY_PART]>
+a|
+
+|===

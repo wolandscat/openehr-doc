@@ -1,0 +1,344 @@
+
+.adl2_reference Package
+[plantuml,opts=interactive,link=self]
+....
+skinparam groupInheritance 2
+skinparam citedClassColor #FDFDFD
+
+
+class GENERIC_CHILD_CLOSED [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_generic_child_closed]] {
+        .. access ..
+        gen_child_closed_prop :? String
+}
+
+GENERIC_CHILD_CLOSED -[#gray]up-|> GENERIC_PARENT
+
+
+class CAR [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_car]] {
+        .. access ..
+}
+
+CAR *--> "0..1 body" CAR_BODY
+
+CAR *--> "0..* engine_parts" ENGINE_PART
+
+CAR *--> "0..* wheels" WHEEL
+
+class ENGINE_PART [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_engine_part]] {
+        .. access ..
+}
+
+ENGINE_PART *--> "0..* items" ENGINE_PART_ITEM
+
+class TEST_ENTRY [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_entry]] {
+        .. access ..
+        value :? CODE_PHRASE
+        coded_text_value :? DV_CODED_TEXT
+        ordinal_attr_1 :? DV_ORDINAL
+        item :? DATA_VALUE
+}
+
+TEST_ENTRY *--> "0..1 element_attr" TEST_ELEMENT
+
+TEST_ENTRY *--> "0..* element_attr_2" TEST_ELEMENT
+
+class MIXED_GENERIC_PARAM_TYPE [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_mixed_generic_param_type]] {
+        .. access ..
+}
+
+MIXED_GENERIC_PARAM_TYPE *--> "0..1 range" TEST_REFERENCE_RANGE
+
+class GENERIC_CHILD_OPEN_T<T:SUPPLIER> [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_generic_child_open_t]] {
+        .. access ..
+        gen_child_open_t_prop :? String
+}
+
+GENERIC_CHILD_OPEN_T -[#gray]up-|> GENERIC_PARENT
+
+
+class GENERIC_PARENT<T:SUPPLIER, U:SUPPLIER> [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_generic_parent]] {
+        .. access ..
+        property_a :? T
+        property_b :? U
+}
+
+class TEST_ELEMENT [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_element]] {
+        .. access ..
+        null_flavour : DV_CODED_TEXT
+        value :? DATA_VALUE
+}
+
+TEST_ELEMENT -[#gray]up-|> TEST_ITEM
+
+
+abstract class TEST_ITEM [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_item]] {
+}
+
+class BOOK [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_book]] {
+        .. access ..
+        author : String
+        title : String
+}
+
+BOOK *--> "0..* chapters" CHAPTER
+
+class RANGE_OF_INTERVAL_OF_QUANTITY [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_range_of_interval_of_quantity]] {
+        .. access ..
+}
+
+RANGE_OF_INTERVAL_OF_QUANTITY *--> "0..1 range" TEST_REFERENCE_RANGE
+
+class WHEEL [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_wheel]] {
+        .. access ..
+        description :? String
+}
+
+WHEEL *--> "0..* parts" RIM
+
+class WHOLE [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_whole]] {
+        .. access ..
+        string_attr1 :? String
+        string_attr2 :? String
+        string_attr3 :? String
+        string_attr4 :? String
+        string_attr5 :? String
+        boolean_attr1 :? Boolean
+        boolean_attr2 :? Boolean
+        boolean_attr3 :? Boolean
+        boolean_attr4 :? Boolean
+        integer_attr1 :? Integer
+        integer_attr2 :? Integer
+        integer_attr3 :? Integer
+        integer_attr4 :? Integer
+        integer_attr5 :? Integer
+        integer_attr6 :? Integer
+        integer_attr7 :? Integer
+        integer_attr8 :? Integer
+        integer_attr9 :? Integer
+        integer_attr10 :? Integer
+        integer_attr11 :? Integer
+        integer_attr12 :? Integer
+        integer_attr13 :? Integer
+        real_attr1 :? Real
+        real_attr2 :? Real
+        real_attr3 :? Real
+        real_attr4 :? Real
+        real_attr5 :? Real
+        real_attr6 :? Real
+        real_attr7 :? Real
+        real_attr8 :? Real
+        real_attr9 :? Real
+        real_attr10 :? Real
+        real_attr11 :? Real
+        real_attr12 :? Real
+        real_attr13 :? Real
+        date_attr1 :? Iso8601_date
+        date_attr2 :? Iso8601_date
+        date_attr3 :? Iso8601_date
+        date_attr4 :? Iso8601_date
+        date_attr5 :? Iso8601_date
+        date_attr6 :? Iso8601_date
+        date_attr7 :? Iso8601_date
+        date_attr8 :? Iso8601_date
+        date_attr9 :? Iso8601_date
+        date_attr10 :? Iso8601_date
+        date_attr11 :? Iso8601_date
+        date_attr12 :? Iso8601_date
+        time_attr1 :? Iso8601_time
+        time_attr2 :? Iso8601_time
+        time_attr3 :? Iso8601_time
+        time_attr4 :? Iso8601_time
+        time_attr5 :? Iso8601_time
+        time_attr6 :? Iso8601_time
+        time_attr7 :? Iso8601_time
+        time_attr8 :? Iso8601_time
+        time_attr9 :? Iso8601_time
+        time_attr10 :? Iso8601_time
+        time_attr11 :? Iso8601_time
+        time_attr12 :? Iso8601_time
+        time_attr13 :? Iso8601_time
+        date_time_attr1 :? Iso8601_date_time
+        date_time_attr2 :? Iso8601_date_time
+        date_time_attr3 :? Iso8601_date_time
+        date_time_attr4 :? Iso8601_date_time
+        date_time_attr5 :? Iso8601_date_time
+        date_time_attr6 :? Iso8601_date_time
+        date_time_attr7 :? Iso8601_date_time
+        date_time_attr8 :? Iso8601_date_time
+        date_time_attr9 :? Iso8601_date_time
+        date_time_attr10 :? Iso8601_date_time
+        date_time_attr11 :? Iso8601_date_time
+        date_time_attr12 :? Iso8601_date_time
+        date_time_attr13 :? Iso8601_date_time
+        date_time_attr14 :? Iso8601_date_time
+        duration_attr1 :? Iso8601_duration
+        duration_attr2 :? Iso8601_duration
+        duration_attr3 :? Iso8601_duration
+        duration_attr4 :? Iso8601_duration
+        duration_attr5 :? Iso8601_duration
+        duration_attr6 :? Iso8601_duration
+        duration_attr7 :? Iso8601_duration
+        duration_attr8 :? Iso8601_duration
+        duration_attr9 :? Iso8601_duration
+        duration_attr10 :? Iso8601_duration
+        duration_attr11 :? Iso8601_duration
+        duration_attr12 :? Iso8601_duration
+        duration_attr13 :? Iso8601_duration
+        duration_attr14 :? Iso8601_duration
+        duration_attr15 :? Iso8601_duration
+        duration_attr16 :? Iso8601_duration
+        duration_attr17 :? Iso8601_duration
+        duration_attr18 :? Iso8601_duration
+        duration_attr19 :? Iso8601_duration
+        duration_attr20 :? Iso8601_duration
+        duration_attr21 :? Iso8601_duration
+        duration_attr22 :? Iso8601_duration
+        duration_attr23 :? Iso8601_duration
+        duration_attr24 :? Iso8601_duration
+        duration_attr25 :? Iso8601_duration
+        duration_attr26 :? Iso8601_duration
+        duration_attr27 :? Iso8601_duration
+        duration_attr28 :? Iso8601_duration
+        duration_attr29 :? Iso8601_duration
+        duration_attr30 :? Iso8601_duration
+        duration_attr31 :? Iso8601_duration
+        duration_attr32 :? Iso8601_duration
+        duration_attr33 :? Iso8601_duration
+        duration_attr34 :? Iso8601_duration
+        duration_attr35 :? Iso8601_duration
+        duration_attr36 :? Iso8601_duration
+        any_attr_1 :? Any
+        any_attr_2 :? Any
+        any_attr_3 :? Any
+        any_attr_4 :? Any
+        any_attr_5 :? Any
+}
+
+class CAR_BODY_PART [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_car_body_part]] {
+}
+
+enum TEST_MAGNITUDE_STATUS [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_magnitude_status]] {
+        .. values ..
+        le
+        ge
+        eq
+        approx_eq
+}
+
+class GENERIC_CHILD_OPEN_U<U:SUPPLIER> [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_generic_child_open_u]] {
+        .. access ..
+        gen_child_open_u_prop :? String
+}
+
+GENERIC_CHILD_OPEN_U -[#gray]up-|> GENERIC_PARENT
+
+
+class SOME_TYPE [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_some_type]] {
+        .. access ..
+        standard_quantity_attr :? DV_QUANTITY
+        clinical_quantity_attr_1 :? DV_QUANTITY
+        clinical_quantity_attr_2 :? DV_QUANTITY
+        clinical_quantity_attr_3 :? DV_QUANTITY
+        clinical_quantity_attr_4 :? DATA_VALUE
+        clinical_quantity_attr_5 :? DATA_VALUE
+        clinical_quantity_attr_6 :? DATA_VALUE
+        standard_ordinal_attr :? DV_ORDINAL
+        clinical_ordinal_attr_1 :? DATA_VALUE
+        clinical_ordinal_attr_2 :? DATA_VALUE
+        clinical_coded_attr_1 :? CODE_PHRASE
+        clinical_coded_attr_2 :? CODE_PHRASE
+        clinical_coded_attr_3 :? CODE_PHRASE
+        clinical_coded_attr_4 :? CODE_PHRASE
+        standard_coded_text_attr :? DV_CODED_TEXT
+        standard_coded_text_attr_2 :? DV_CODED_TEXT
+        clinical_coded_text_attr_1 :? DV_CODED_TEXT
+        clinical_coded_text_attr_2 :? DV_CODED_TEXT
+        qty_interval_attr_1 :? DV_INTERVAL<DV_QUANTITY>
+        qty_interval_attr_2 :? DV_INTERVAL<DV_QUANTITY>
+}
+
+class MULTIPLICITY_OBJECT [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_multiplicity_object]] {
+        .. access ..
+        integer_list :? List<Integer>
+        string_list :? List<String>
+}
+
+class TEST_REFERENCE_RANGE<T:DV_ORDERED> [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_reference_range]] {
+        .. access ..
+        range : DV_INTERVAL<T>
+}
+
+class ENGINE_PART_ITEM [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_engine_part_item]] {
+        .. access ..
+        model :? String
+        type :? String
+}
+
+abstract class SUPPLIER [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_supplier]] {
+        .. access ..
+        abstract_prop :? String
+}
+
+enum NAME_PART [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_name_part]] {
+        .. values ..
+        first
+        middle
+        last
+}
+
+class SUPPLIER_B [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_supplier_b]] {
+        .. access ..
+        property : CODE_PHRASE
+        precision :? Integer
+}
+
+SUPPLIER_B -[#gray]up-|> SUPPLIER
+
+
+class RIM [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_rim]] {
+        .. access ..
+        nuts :? Integer
+        hubcap :? String
+}
+
+class TEST_CLUSTER [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_test_cluster]] {
+        .. access ..
+}
+
+TEST_CLUSTER -[#gray]up-|> TEST_ITEM
+
+
+TEST_CLUSTER *--> "0..* items" TEST_ITEM
+
+class CAR_BODY [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_car_body]] {
+        .. access ..
+        model :? String
+        description :? String
+}
+
+CAR_BODY *--> "0..* parts" CAR_BODY_PART
+
+class CHAPTER [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_chapter]] {
+        .. access ..
+        title : String
+}
+
+enum PROPORTION_KIND_2 [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_proportion_kind_2]] {
+        .. values ..
+        pk_ratio
+        pk_unitary
+        pk_percent
+        pk_fraction
+        pk_integer_fraction
+}
+
+class SUPPLIER_A [[/openehr-doc/latest/test/adl2_reference-gen.html#_class_supplier_a]] {
+        .. access ..
+        magnitude : Double
+        units : String
+}
+
+SUPPLIER_A -[#gray]up-|> SUPPLIER
+
+
+....

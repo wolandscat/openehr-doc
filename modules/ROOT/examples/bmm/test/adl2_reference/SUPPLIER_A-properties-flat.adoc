@@ -1,0 +1,23 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class SUPPLIER_A*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*magnitude*: xref:representation:builtin_types-gen.adoc#_class_double[Double]
+a|
+
+h|1
+|*units*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+h|0..1
+|*abstract_prop*: xref:representation:builtin_types-gen.adoc#_class_string[String]
+a|
+
+|===

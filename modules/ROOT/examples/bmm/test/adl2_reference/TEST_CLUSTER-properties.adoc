@@ -1,0 +1,15 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h|  *class TEST_CLUSTER*
+
+
+h|
+2+^h|*access*
+
+h|1
+|*items*: xref:representation:builtin_types-gen.adoc#_class_list[List]<xref:test:adl2_reference-gen.adoc#_class_test_item[TEST_ITEM]>
+a|List of contained `TEST_ITEM`s.
+
+|===

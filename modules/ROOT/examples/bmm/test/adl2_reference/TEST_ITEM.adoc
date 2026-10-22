@@ -1,0 +1,11 @@
+
+[%autowidth.stretch]
+|===
+
+3+^h| abstract  *class TEST_ITEM*
+
+h|*Description*
+2+a|Syntax-demonstration class, converted from the ADLtest `openehr_adltest_100.bmm` ODIN
+schema. Abstract root of the `TEST_CLUSTER`/`TEST_ELEMENT` validity-test hierarchy.
+
+|===
